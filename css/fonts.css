@@ -1,0 +1,52 @@
+
+
+@font-face{
+	font-family: "ScadaRegular";
+	src: url("../fonts/scada/Scada-Regular.ttf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face{
+	font-family: "ScadaBold";
+	src: url("../fonts/scada/Scada-Bold.ttf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face{
+	font-family: "ScadaItalic";
+	src: url("../fonts/scada/Scada-Italic.ttf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* Amiro */
+
+
+
+@font-face{
+	font-family: "CuprumRegular";
+	src: url("../fonts/cuprum/Cuprum-Regular.ttf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face{
+	font-family: "CuprumBold";
+	src: url("../fonts/cuprum/Cuprum-Bold.ttf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face{
+	font-family: "CuprumItalic";
+	src: url("../fonts/cuprum/Cuprum-Italic.ttf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+
+/* Eng */
+
+
