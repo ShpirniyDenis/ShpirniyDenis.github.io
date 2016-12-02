@@ -112,7 +112,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   width: 100%;
-  font: 2.5em "CuprumRegular", sans-serif;
+  font: 2.8em "CuprumRegular", sans-serif;
   color: #2b2a29;
 }
 
@@ -120,7 +120,7 @@ body {
   text-align: center;
   margin-top: 1%;
   color: #cb2123;
-  font: 1.8em "CuprumBold", sans-serif;
+  font: 1.9em "CuprumBold", sans-serif;
 }
 
 #slider{
@@ -182,7 +182,7 @@ body {
 #footer{
   background: url(../img/bg-line.png) no-repeat right bottom;
   padding-top: 1%;
-  padding-bottom: 1.5%;
+  padding-bottom: 2%;
 }
 
 #footer .text{
