@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="libs/swiperjs/swiper.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head> 
-
+ 
 <body>
 
 <header>
@@ -170,7 +170,7 @@
               <div class="auction__card__documents">
                 <img src="img/document-icon.svg" alt=""><span>Документы подтверждены</span>
               </div>
-              <button class="auction__card__submit btn-main btn-orange">Участвовать в аукционе</button>
+              <button class="auction__card__submit btn-main btn-orange click-item" data-action="popup-open" data-label="#registration-popup">Участвовать в аукционе</button>
             </div>
             <div class="auction__similar">
               <div class="auction__container__heading">Другие аукционы этого производителя</div>
@@ -238,6 +238,27 @@
     </div>
   </div>
 </footer>
+
+<div id="registration-popup" class="popup_container click-obj">
+    <div class="popup_background click-item" data-action="popup-close"></div>
+    <div class="popup registration-popup">
+      <div class="popup_close click-item" data-action="popup-close">
+          <img src="img/close-icon.svg" alt="" />
+        </div>
+      <div class="registration-popup__content">
+        <div class="registration-popup__text">
+          <p>Поздравляем, вы приняли участие в аукционе</p>
+          <span>Первые 5 участий — бесплатные</span>
+        </div>
+        <div class="registration-popup__nav">
+          <a href="auction-start.html" class="btn-main btn-orange">Перейти к аукциону</a>
+          <a href="#" class="cancel click-item" data-action="popup-close">Отменить участие</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="js/main.js"></script>
 
 
 </body>
