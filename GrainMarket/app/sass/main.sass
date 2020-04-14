@@ -108,7 +108,7 @@ body
 
 // For HOME-page
 header
-  position: absolute
+  position: fixed
   top: 0
   left: 0
   z-index: 20
@@ -120,6 +120,7 @@ header
   justify-content: space-between
   align-items: center
 .header__nav
+  margin-right: 80px
   li
     display: inline-block
     a
@@ -137,6 +138,10 @@ header
     &:last-child
       a
         padding-right: 0
+.header__content
+  display: flex
+  justify-content: space-between
+  align-items: center
 .header__personal
   .btn-main
     padding: 11px 31px
@@ -149,6 +154,132 @@ header
     transition: all 0.2s
     &:hover
       color: $color_black
+.header__burger
+  display: none
+  width: 40px
+  height: 40px
+  background: linear-gradient(127.48deg, #FFC643 0.03%, #FF9800 99.97%)
+  border-radius: 3px
+  border: none
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  padding: 0
+  &:focus
+    outline: none
+  span
+    height: 3px
+    width: 24px
+    display: block
+    background-color: #fff
+    margin-bottom: 5px
+    &:last-child
+      margin-bottom: 0
+
+
+header
+  @media screen and (max-width: 1200px)
+    .header__nav li a
+      padding: 26px 8px
+    .header__personal .btn-main
+      padding: 11px 16px
+    .header__personal .header__login
+      font-size: 15px
+      margin-left: 12px
+    .header__nav
+      margin-right: 30px
+  @media screen and (max-width: 992px)
+    height: 80px
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1)
+    overflow: hidden
+    &.active
+      background: #F4FCFB
+      box-shadow: none
+      height: 100%
+      z-index: 1000
+      overflow: auto
+      transition: all .6s
+      .header__burger
+        position: relative
+        span
+          position: absolute
+          left: 20%
+          margin-bottom: 0
+          transform: rotate(0deg)
+          transition: all 0.6s
+          &:nth-child(1)
+            transform: rotate(-45deg)
+          &:nth-child(2)
+            transform: rotate(45deg)
+          &:last-child
+            display: none
+    &.default
+      height: 80px
+      transition: all .6s
+      .header__burger
+        span
+          transition: all 0.6s
+          &:nth-child(1)
+            transform: rotate(0)
+          &:nth-child(2)
+            transform: rotate(0)
+    .mainContainer
+      padding: 0
+    .header__wrapp
+      display: block
+    .header__toggler
+      height: 80px
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1)
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 0 20px
+      background-color: #fff
+      border-bottom: 1px solid #E9F4F3
+    .header__burger
+      display: flex
+    .header__content
+      display: block
+      background: #F4FCFB
+    .header__nav
+      margin-right: 0
+      margin-bottom: 20px
+      li
+        display: block
+        border-bottom: 1px solid #E9F4F3
+        a
+          display: block
+          width: 100%
+          padding: 20px 16px
+          font-size: 20px
+          line-height: 29px
+          color: #A5BBBE
+      &:first-child a, &:last-child a
+        padding-left: 16px
+        padding-right: 16px
+    .header__personal
+      a
+        display: block
+        width: 100%
+        &.btn-main
+          width: 80%
+          margin: 0 auto
+          margin-bottom: 20px
+      .header__login
+        padding: 20px 
+        border-top: 1px solid #E9F4F3
+        text-align: center
+        font-size: 18px
+        line-height: 24px
+        margin-left: 0
+  @media screen and (max-width: 768px)
+    .header__personal a.btn-main
+      width: 90%
+  @media screen and (max-width: 360px)
+    .header__nav li a
+      font-size: 18px
+      padding-top: 14px
+      padding-bottom: 14px
 
 
 
@@ -999,7 +1130,7 @@ footer
     .page-container__content
       width: 100%
   @media screen and (max-width: 768px)
-    padding-top: 65px
+    padding-top: 70px
     padding-bottom: 40px
     .page-container__heading
       font-size: 28px
@@ -1010,6 +1141,7 @@ footer
       &:last-child
         margin-bottom: 0
     .page-breadcrumbs
+      top: 18px
       .page-breadcrumbs__list
         overflow: hidden
         white-space: nowrap
@@ -2323,10 +2455,6 @@ footer
   @media screen and (max-width: 768px)
     .registration-popup__content
       padding: 50px 30px 50px 30px
-
-@media screen and (max-width: 1200px)
-  header
-    display: none
 
 
 
