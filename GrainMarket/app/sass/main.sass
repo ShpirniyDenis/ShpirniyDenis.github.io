@@ -51,9 +51,12 @@ body
 .text-center
   text-align: center
 
+.hidden
+  display: none !important
+
 .tabs-toogler
   margin-bottom: 40px
-  button
+  button,a
     min-width: 200px
     height: 40px
     text-align: center
@@ -63,6 +66,8 @@ body
     font-family: $font_bold
     border: 1px solid $color_light
     padding: 0
+    display: inline-block
+    line-height: 40px
     transition: all 0.2s
     &:first-child
       border-top-left-radius: 50px
@@ -90,20 +95,34 @@ body
   line-height: inherit
   &:focus
     outline: none
-  &:hover
-    background: linear-gradient(164.15deg, #F35A48 0.03%, #FF9800 99.97%)
-    color: #FFFFFF
-    border-color: #FF9800
+  @media screen and (min-width: 992px)
+    &:hover
+      background: linear-gradient(164.15deg, #F35A48 0.03%, #FF9800 99.97%)
+      color: #FFFFFF
+      border-color: #FF9800
   &.btn-orange
     background: linear-gradient(164.15deg, #F35A48 0.03%, #FF9800 99.97%)
     color: #FFFFFF
     border-color: #FF9800
-    &:hover
-      background: linear-gradient(164.15deg, #ff2c13 0.93%, #ffeb00 99.97%)
-      border-color: #ffeb00
+    @media screen and (min-width: 992px)
+      &:hover
+        background: linear-gradient(164.15deg, #ff2c13 0.93%, #ffeb00 99.97%)
+        border-color: #ffeb00
   @media screen and (max-width: 360px)
     padding: 17.5px 20px
     font-size: 17px
+
+.tab-content
+  display: none
+  &.active
+    display: block
+    animation: show_tab_content 1s
+@keyframes show_tab_content
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
 
 
 // For HOME-page
@@ -730,7 +749,7 @@ header
     margin-bottom: 20px
   .tabs-toogler
     margin-bottom: 32px
-    button
+    button,a
       border-color: #fff
       color: #fff
       &.active
@@ -772,7 +791,7 @@ header
       width: 48%
   @media screen and (max-width: 768px)
     padding: 56px 0
-    .tabs-toogler button
+    .tabs-toogler button,a
       width: 49%
       font-size: 14px
       min-width: auto
@@ -792,7 +811,7 @@ header
       .btn-main
         width: 100%
   @media screen and (max-width: 360px)
-    .tabs-toogler button
+    .tabs-toogler button,a
       font-size: 12px
 
 // BENEFITS
@@ -842,7 +861,6 @@ header
 .seo-section
   padding: 80px 0
   &.bg-grey
-
     .seo-section__content
       &:after
         background: linear-gradient(0deg, #F4FCFB 0%, rgba(244, 252, 251, 0) 100%)
@@ -870,6 +888,12 @@ header
     bottom: 0
     background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)
     height: 39px
+  &.active
+    transition: all 0.5s
+    max-height: max-content
+    &:after
+      opacity: 0
+
 .seo-section__nav
   text-align: right
   button
@@ -1038,7 +1062,7 @@ footer
   border-radius: 5px
   padding: 15px 24px
   position: sticky
-  top: 20px
+  top: 100px
 .page-container__content
   width: 68.4%
   font-size: 18px
@@ -1197,7 +1221,7 @@ footer
   @media screen and (max-width: 768px)
     .tabs-toogler
       margin-bottom: 24px
-      button
+      button,a
         min-width: 49%
         width: 49%
         font-size: 14px
@@ -1438,6 +1462,8 @@ footer
     .blog-article__content
       width: 100%
       margin-bottom: 30px
+    .blog-article__other
+      display: none !important
   @media screen and (max-width: 768px)
     .page-container__heading
       font-size: 25px
@@ -1666,7 +1692,7 @@ footer
       margin-bottom: 40px
     .tabs-toogler
       margin-bottom: 24px
-      button
+      button,a
         min-width: auto
         width: 49%
     .btn-main
@@ -1681,7 +1707,7 @@ footer
       display: block
       width: max-content
   @media screen and (max-width: 360px)
-    .tabs-toogler button
+    .tabs-toogler button,a
       font-size: 14px
 
 
@@ -2002,8 +2028,9 @@ footer
     transition: all 0.2s
     &:focus
       outline: none
-    &:hover
-      background-color: #FF9800
+    @media screen and (min-width: 992px)
+      &:hover
+        background-color: #FF9800
   .value
     font-weight: bold
     font-size: 18px

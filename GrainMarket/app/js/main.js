@@ -47,4 +47,36 @@ function showHeader(){
 header_toggler.addEventListener('click', showHeader);
 
 
+//for seo-section
+let seoToggler = document.querySelector('.seo-toggler');
+if(seoToggler){
+  seoToggler.addEventListener('click',function(event){
+    let block = event.target.closest('.seo');
+    block.querySelector('.seo-content').classList.toggle('active');
+    this.classList.add('hidden');
+    //block.querySelectorAll('.seo_toggler').forEach(item => item.classList.toggle('hidden'));
+  });
+}
+
+// For tabs
+    let tabs = document.querySelectorAll(".tab");
+    let tabContent = document.querySelectorAll(".tab-content");
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        tabs.forEach(function (item) {
+          item.classList.remove("active");
+        });
+        this.classList.add("active");
+        let tabName = this.getAttribute("data-tab");
+        selectTabContent(tabName);
+      });
+
+      function selectTabContent(tabName) {
+        tabContent.forEach(function (item) {
+          item.classList.contains(tabName) ?
+            item.classList.add("active") :
+            item.classList.remove("active");
+        });
+      }
+    });
 

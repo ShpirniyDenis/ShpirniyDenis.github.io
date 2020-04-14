@@ -47,9 +47,12 @@ body {
 .text-center {
   text-align: center; }
 
+.hidden {
+  display: none !important; }
+
 .tabs-toogler {
   margin-bottom: 40px; }
-  .tabs-toogler button {
+  .tabs-toogler button, .tabs-toogler a {
     min-width: 200px;
     height: 40px;
     text-align: center;
@@ -59,16 +62,18 @@ body {
     font-family: "Circle Bold", Arial, sans-serif;
     border: 1px solid #92D0CC;
     padding: 0;
+    display: inline-block;
+    line-height: 40px;
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s; }
-    .tabs-toogler button:first-child {
+    .tabs-toogler button:first-child, .tabs-toogler a:first-child {
       border-top-left-radius: 50px;
       border-bottom-left-radius: 50px; }
-    .tabs-toogler button:last-child {
+    .tabs-toogler button:last-child, .tabs-toogler a:last-child {
       border-top-right-radius: 50px;
       border-bottom-right-radius: 50px; }
-    .tabs-toogler button.active {
+    .tabs-toogler button.active, .tabs-toogler a.active {
       background: -o-linear-gradient(284.62deg, #F35A48 0.03%, #FF9800 99.97%);
       background: linear-gradient(165.38deg, #F35A48 0.03%, #FF9800 99.97%);
       border-color: #FF9800;
@@ -92,24 +97,45 @@ body {
   line-height: inherit; }
   .btn-main:focus {
     outline: none; }
-  .btn-main:hover {
-    background: -o-linear-gradient(285.85deg, #F35A48 0.03%, #FF9800 99.97%);
-    background: linear-gradient(164.15deg, #F35A48 0.03%, #FF9800 99.97%);
-    color: #FFFFFF;
-    border-color: #FF9800; }
+  @media screen and (min-width: 992px) {
+    .btn-main:hover {
+      background: -o-linear-gradient(285.85deg, #F35A48 0.03%, #FF9800 99.97%);
+      background: linear-gradient(164.15deg, #F35A48 0.03%, #FF9800 99.97%);
+      color: #FFFFFF;
+      border-color: #FF9800; } }
   .btn-main.btn-orange {
     background: -o-linear-gradient(285.85deg, #F35A48 0.03%, #FF9800 99.97%);
     background: linear-gradient(164.15deg, #F35A48 0.03%, #FF9800 99.97%);
     color: #FFFFFF;
     border-color: #FF9800; }
-    .btn-main.btn-orange:hover {
-      background: -o-linear-gradient(285.85deg, #ff2c13 0.93%, #ffeb00 99.97%);
-      background: linear-gradient(164.15deg, #ff2c13 0.93%, #ffeb00 99.97%);
-      border-color: #ffeb00; }
+    @media screen and (min-width: 992px) {
+      .btn-main.btn-orange:hover {
+        background: -o-linear-gradient(285.85deg, #ff2c13 0.93%, #ffeb00 99.97%);
+        background: linear-gradient(164.15deg, #ff2c13 0.93%, #ffeb00 99.97%);
+        border-color: #ffeb00; } }
   @media screen and (max-width: 360px) {
     .btn-main {
       padding: 17.5px 20px;
       font-size: 17px; } }
+
+.tab-content {
+  display: none; }
+  .tab-content.active {
+    display: block;
+    -webkit-animation: show_tab_content 1s;
+            animation: show_tab_content 1s; }
+
+@-webkit-keyframes show_tab_content {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes show_tab_content {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 header {
   position: fixed;
@@ -901,10 +927,10 @@ header {
     margin-bottom: 20px; }
   .instruction .tabs-toogler {
     margin-bottom: 32px; }
-    .instruction .tabs-toogler button {
+    .instruction .tabs-toogler button, .instruction .tabs-toogler a {
       border-color: #fff;
       color: #fff; }
-      .instruction .tabs-toogler button.active {
+      .instruction .tabs-toogler button.active, .instruction .tabs-toogler a.active {
         border-color: #FF9800; }
 
 .instruction__list {
@@ -963,7 +989,7 @@ header {
 @media screen and (max-width: 768px) {
   .instruction {
     padding: 56px 0; }
-    .instruction .tabs-toogler button {
+    .instruction .tabs-toogler button, .instruction a {
       width: 49%;
       font-size: 14px;
       min-width: auto; }
@@ -984,7 +1010,7 @@ header {
         width: 100%; } }
 
 @media screen and (max-width: 360px) {
-  .instruction .tabs-toogler button {
+  .instruction .tabs-toogler button, .instruction a {
     font-size: 12px; } }
 
 .benefits {
@@ -1068,6 +1094,15 @@ header {
     background: -o-linear-gradient(bottom, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
     background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
     height: 39px; }
+  .seo-section__content.active {
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    max-height: -webkit-max-content;
+    max-height: -moz-max-content;
+    max-height: max-content; }
+    .seo-section__content.active:after {
+      opacity: 0; }
 
 .seo-section__nav {
   text-align: right; }
@@ -1277,7 +1312,7 @@ footer {
   padding: 15px 24px;
   position: -webkit-sticky;
   position: sticky;
-  top: 20px; }
+  top: 100px; }
 
 .page-container__content {
   width: 68.4%;
@@ -1454,7 +1489,7 @@ footer {
 @media screen and (max-width: 768px) {
   .principle .tabs-toogler {
     margin-bottom: 24px; }
-    .principle .tabs-toogler button {
+    .principle .tabs-toogler button, .principle .tabs-toogler a {
       min-width: 49%;
       width: 49%;
       font-size: 14px; }
@@ -1725,7 +1760,9 @@ footer {
             flex-wrap: wrap; }
   .blog-article .blog-article__content {
     width: 100%;
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+  .blog-article .blog-article__other {
+    display: none !important; } }
 
 @media screen and (max-width: 768px) {
   .blog-article .page-container__heading {
@@ -2047,7 +2084,7 @@ footer {
       margin-bottom: 40px; }
     .login__wrapp .tabs-toogler {
       margin-bottom: 24px; }
-      .login__wrapp .tabs-toogler button {
+      .login__wrapp .tabs-toogler button, .login__wrapp .tabs-toogler a {
         min-width: auto;
         width: 49%; }
     .login__wrapp .btn-main {
@@ -2065,7 +2102,7 @@ footer {
       width: max-content; } }
 
 @media screen and (max-width: 360px) {
-  .login__wrapp .tabs-toogler button {
+  .login__wrapp .tabs-toogler button, .login__wrapp a {
     font-size: 14px; } }
 
 .auction-page .page-container__heading {
@@ -2476,8 +2513,9 @@ footer {
     transition: all 0.2s; }
     .auction__wager__counter__list button:focus {
       outline: none; }
-    .auction__wager__counter__list button:hover {
-      background-color: #FF9800; }
+    @media screen and (min-width: 992px) {
+      .auction__wager__counter__list button:hover {
+        background-color: #FF9800; } }
   .auction__wager__counter__list .value {
     font-weight: bold;
     font-size: 18px;
