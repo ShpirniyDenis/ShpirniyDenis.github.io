@@ -1614,6 +1614,7 @@ footer
   &.manufacturer
     padding: 32px 100px 32px 32px
     margin-bottom: 40px
+    border-radius: 10px
 .auction__info__heading
   font-size: 20px
   line-height: 29px
@@ -2073,6 +2074,8 @@ footer
       display: block
     .auction__info__item
       margin-bottom: 12px
+      &:last-child
+        margin-bottom: 0
     .auction__content hr
       margin: 24px 0
     .auction__card__price b .old-bind
@@ -2106,6 +2109,53 @@ footer
     .auction__wager__counter
       justify-content: space-between
       margin-bottom: 14px
+    .auction__wager
+      margin-bottom: 24px
+    .auction__bidding__item
+      padding: 20px 20px 10px 20px
+      flex-wrap: wrap
+      margin-bottom: 16px
+    .auction__bidding__item span.user
+      width: 100%
+      margin-bottom: 2px
+      font-size: 18px
+      line-height: 27px
+      order: 0
+    .auction__bidding__item span.time
+      width: 100%
+      margin-bottom: 8px
+      text-align: left
+      order: 1
+    .auction__bidding__item span.amount
+      order: 2
+      width: 50%
+      text-align: left
+      font-size: 32px
+    .auction__bidding__item span.label
+      order: 3
+      width: auto
+      font-size: 10px
+      font-family: $font_bold
+      padding-left: 13px
+      padding-right: 15px
+    .auction__congratulation__wrapp
+      flex-wrap: wrap
+      padding: 32px 20px
+    .auction__congratulation__text
+      width: 100%
+      padding: 0
+      margin-bottom: 20px
+    .auction__congratulation__img
+      margin-top: 0
+      margin-right: 0
+    .auction__congratulation
+      margin-bottom: 32px
+    .auction__member__item
+      margin-bottom: 16px
+      padding: 20px
+    .auction__info.manufacturer
+      padding: 32px 20px
+      margin-bottom: 32px
   @media screen and (max-width: 360px)
     .auction__step__text b
       font-size: 14px
@@ -2122,6 +2172,25 @@ footer
     .auction__card__price b
       font-size: 36px
       line-height: 53px
+    .auction__card__price b .old-bind
+      font-size: 21px
+    .auction__wager__timer__numb span
+      font-size: 33px
+    .auction__wager__timer__numb
+      margin: 0 12px
+    .auction__wager__counter .btn-main
+      padding: 19.5px 20px
+    .auction__wager__info
+      font-size: 15px
+    .auction__bidding__item span.user
+      font-size: 16px
+    .auction__bidding__item span.amount
+      font-size: 28px
+    .auction__bidding__item span.label
+      font-size: 9px
+    .auction__member__item span.company
+      font-size: 15px
+
 
 
 
@@ -2192,6 +2261,10 @@ footer
     color: $color_light
     font-size: 16px
     line-height: 24px
+.registration-popup
+  @media screen and (max-width: 768px)
+    .registration-popup__content
+      padding: 50px 30px 50px 30px
 
 @media screen and (max-width: 1200px)
   header
