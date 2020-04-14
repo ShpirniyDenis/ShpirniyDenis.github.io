@@ -592,7 +592,54 @@ header {
 
 @media screen and (max-width: 992px) {
   .catalog .catalog__nav {
-    display: none; } }
+    display: none; }
+  .catalog .catalog__list-wrapp {
+    width: 100%; }
+  .catalog .catalog__list {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px; }
+  .catalog .catalog__item__timer__numb {
+    margin: 0 10px; }
+  .catalog .catalog__item__params {
+    display: block; }
+  .catalog .catalog__item__param {
+    width: 100%;
+    max-width: 100%; }
+    .catalog .catalog__item__param b {
+      font-size: 22px; }
+  .catalog .catalog__wrapp {
+    display: block; }
+  .catalog .catalog__item__info {
+    padding: 18px 15px; } }
+
+@media screen and (max-width: 768px) {
+  .catalog {
+    padding: 56px 0; }
+    .catalog .section-heading {
+      text-align: center;
+      margin-bottom: 22px; }
+    .catalog .catalog__list {
+      display: block; }
+    .catalog .catalog__item {
+      margin-bottom: 20px; }
+      .catalog .catalog__item:last-child {
+        margin-bottom: 0; }
+    .catalog .catalog__item__info {
+      padding: 24px 18px; }
+    .catalog .catalog__item__params {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .catalog .catalog__item__param {
+      width: 47%;
+      margin-bottom: 0; }
+    .catalog .catalog__item__timer__numb {
+      margin: 0 16px; }
+    .catalog .catalog__item__details {
+      padding: 24px 18px; }
+    .catalog .catalog__loadmore .btn-main {
+      width: 100%; } }
 
 .instruction {
   padding: 100px 0;
@@ -1065,6 +1112,37 @@ footer {
   .page-breadcrumbs__list li:hover a {
     color: #234048; }
 
+@media screen and (max-width: 1200px) {
+  .page-container .page-container__text {
+    line-height: 30px; }
+  .page-container .page-container__heading {
+    font-size: 36px;
+    line-height: 53px; }
+  .page-container .page-container__content {
+    font-size: 17px; } }
+
+@media screen and (max-width: 992px) {
+  .page-container .page-navbar {
+    display: none; }
+  .page-container .page-container__content {
+    width: 100%; } }
+
+@media screen and (max-width: 768px) {
+  .page-container {
+    padding-top: 65px;
+    padding-bottom: 40px; }
+    .page-container .page-container__heading {
+      font-size: 28px;
+      line-height: 41px;
+      margin-bottom: 20px; }
+    .page-container .page-container__text {
+      margin-bottom: 32px; }
+      .page-container .page-container__text:last-child {
+        margin-bottom: 0; }
+    .page-container .page-breadcrumbs .page-breadcrumbs__list {
+      overflow: hidden;
+      white-space: nowrap; } }
+
 .principle__steps {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1117,6 +1195,38 @@ footer {
 .principle__descr {
   margin-bottom: 32px; }
 
+@media screen and (max-width: 1200px) {
+  .principle .principle__step__text {
+    font-size: 14px;
+    line-height: 19px;
+    max-width: 90%; } }
+
+@media screen and (max-width: 768px) {
+  .principle .tabs-toogler {
+    margin-bottom: 24px; }
+    .principle .tabs-toogler button {
+      min-width: 49%;
+      width: 49%;
+      font-size: 14px; }
+  .principle .principle__steps {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin-bottom: 16px; }
+  .principle .principle__step {
+    width: 47%;
+    margin-bottom: 24px; }
+    .principle .principle__step:after {
+      display: none; }
+  .principle .principle__step__icon {
+    margin-bottom: 8px; }
+  .principle .principle__step__text {
+    font-size: 15px;
+    line-height: 20px;
+    max-width: 100%; }
+  .principle .btn-main {
+    width: 100%; } }
+
 .public-offering__descr {
   margin-bottom: 40px; }
 
@@ -1128,6 +1238,12 @@ footer {
 
 .public-offering__list li {
   margin-bottom: 30px; }
+
+@media screen and (max-width: 768px) {
+  .public-offering .public-offering__list li {
+    margin-bottom: 20px; }
+    .public-offering .public-offering__list li:last-child {
+      margin-bottom: 0; } }
 
 .contacts.page-container__text p {
   margin-bottom: 0; }
@@ -1153,6 +1269,13 @@ footer {
 
 .contacts__support {
   margin-bottom: 32px; }
+
+@media screen and (max-width: 768px) {
+  .contacts.page-container__text p {
+    margin-bottom: 10px;
+    line-height: 27px; }
+    .contacts.page-container__text p:last-child {
+      margin-bottom: 0; } }
 
 .catalog-page .page-container__heading {
   margin-bottom: 32px; }
@@ -1214,6 +1337,38 @@ footer {
   color: #234048;
   height: 87px;
   overflow: hidden; }
+
+@media screen and (max-width: 1200px) {
+  .blog .blog__list {
+    grid-gap: 25px; } }
+
+@media screen and (max-width: 992px) {
+  .blog .blog__list {
+    grid-template-columns: 1fr 1fr; } }
+
+@media screen and (max-width: 768px) {
+  .blog .blog__list {
+    display: block; }
+  .blog .blog__item {
+    margin-bottom: 16px; }
+  .blog .blog__item__info {
+    padding-bottom: 32px; }
+    .blog .blog__item__info .btn-main {
+      width: 100%; }
+  .blog .blog__item__text {
+    margin-bottom: 20px;
+    height: auto; }
+  .blog .catalog__loadmore .btn-main {
+    width: 100%; }
+  .blog .catalog__pagination__list li a {
+    padding: 10px 13px; } }
+
+@media screen and (max-width: 360px) {
+  .blog .blog__item__text {
+    font-size: 18px;
+    line-height: 26px; }
+  .blog .blog__item__img {
+    height: 160px; } }
 
 .blog-article .page-container__heading {
   margin-bottom: 32px; }
@@ -1313,10 +1468,69 @@ footer {
     .blog-article__send a:focus {
       outline: none; }
 
+@media screen and (max-width: 992px) {
+  .blog-article .blog-article__wrapp {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .blog-article .blog-article__content {
+    width: 100%;
+    margin-bottom: 30px; } }
+
+@media screen and (max-width: 768px) {
+  .blog-article .page-container__heading {
+    font-size: 25px;
+    line-height: 36px;
+    margin-bottom: 24px; }
+  .blog-article .blog-article__img {
+    height: 260px;
+    margin-bottom: 24px; }
+  .blog-article .blog-article__text {
+    margin-bottom: 32px; }
+    .blog-article .blog-article__text blockquote {
+      padding-right: 0; } }
+
+@media screen and (max-width: 360px) {
+  .blog-article .blog-article__img {
+    height: 230px; }
+  .blog-article .blog-article__text {
+    font-size: 16px;
+    line-height: 28px; }
+  .blog-article .blog-article__send a {
+    margin-right: 10px; }
+    .blog-article .blog-article__send a img {
+      width: 30px; } }
+
 .blog-similar {
   margin-bottom: 80px; }
   .blog-similar .section-heading {
     margin-bottom: 32px; }
+  @media screen and (max-width: 1200px) {
+    .blog-similar .blog__list {
+      grid-gap: 25px; } }
+  @media screen and (max-width: 992px) {
+    .blog-similar .blog__list {
+      grid-template-columns: 1fr 1fr; } }
+  @media screen and (max-width: 768px) {
+    .blog-similar {
+      margin-bottom: 40px; }
+      .blog-similar .blog__list {
+        display: block; }
+      .blog-similar .blog__item {
+        margin-bottom: 16px; }
+      .blog-similar .blog__item__info {
+        padding-bottom: 32px; }
+        .blog-similar .blog__item__info .btn-main {
+          width: 100%; }
+      .blog-similar .blog__item__text {
+        margin-bottom: 20px;
+        height: auto; } }
+  @media screen and (max-width: 360px) {
+    .blog-similar .blog__item__text {
+      font-size: 18px;
+      line-height: 26px; }
+    .blog-similar .blog__item__img {
+      height: 160px; } }
 
 .login__wrapp {
   display: -webkit-box;
@@ -1552,8 +1766,64 @@ footer {
   .login .login__form .reset-pass:hover {
     color: #234048; }
 
+@media screen and (max-width: 1200px) {
+  .login__wrapp .login__benefits {
+    width: 36%; }
+  .login__wrapp .login__benefits__list {
+    display: block; }
+  .login__wrapp .login__benefits__item {
+    width: 100%;
+    text-align: center; }
+  .login__wrapp .login__content {
+    width: 56%; } }
+
+@media screen and (max-width: 992px) {
+  .login__wrapp .login__benefits {
+    width: 32%;
+    padding: 28px 22px 18px 22px; }
+  .login__wrapp .login__benefits__heading {
+    text-align: center; }
+  .login__wrapp .login__content {
+    width: 60%; } }
+
+@media screen and (max-width: 768px) {
+  .login__wrapp {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    display: block; }
+    .login__wrapp .login__content {
+      width: 100%;
+      margin-bottom: 40px; }
+    .login__wrapp .tabs-toogler {
+      margin-bottom: 24px; }
+      .login__wrapp .tabs-toogler button {
+        min-width: auto;
+        width: 49%; }
+    .login__wrapp .btn-main {
+      width: 100%; }
+    .login__wrapp .login__benefits {
+      width: 100%; }
+    .login__wrapp .login__form .btn-group .reset-pass {
+      margin-left: 0;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 12px;
+      display: block;
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content; } }
+
+@media screen and (max-width: 360px) {
+  .login__wrapp .tabs-toogler button {
+    font-size: 14px; } }
+
 .auction-page .page-container__heading {
   margin-bottom: 33px; }
+
+@media screen and (max-width: 768px) {
+  .auction-page .page-container__heading {
+    margin-bottom: 20px; } }
 
 .auction__steps {
   display: -webkit-box;
@@ -1804,7 +2074,8 @@ footer {
     vertical-align: text-top; }
 
 .auction__card__submit {
-  margin-top: 24px; }
+  margin-top: 24px;
+  width: 100%; }
 
 .auction__similar .auction__container__heading {
   margin-bottom: 16px; }
@@ -2120,6 +2391,192 @@ footer {
   line-height: 29px;
   color: #234048;
   margin-bottom: 20px; }
+
+@media screen and (max-width: 1200px) {
+  .auction .auction__step__text b {
+    font-size: 16px; }
+  .auction .auction__step__text span {
+    font-size: 13px; }
+  .auction .auction__step__date {
+    font-size: 13px; }
+  .auction .auction__card {
+    padding: 30px; }
+  .auction .auction__card__documents {
+    font-size: 14px; }
+  .auction .auction__card__submit {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 16px; }
+  .auction .auction__wager__timer__numb {
+    margin: 0 12px; }
+  .auction .auction__wager__timer__numb span {
+    font-size: 36px; }
+  .auction .auction__wager__counter__list {
+    margin-right: 13px; }
+  .auction .auction__wager__counter__list .value {
+    font-size: 16px; }
+  .auction .auction__wager__counter__list button {
+    width: 30px; }
+  .auction .auction__card__price b {
+    font-size: 36px; }
+  .auction .auction__card__price b .old-bind {
+    font-size: 19px; }
+    .auction .auction__card__price b .old-bind:after {
+      top: 12px; }
+  .auction .auction__bidding__item {
+    padding-left: 20px;
+    padding-right: 20px; }
+  .auction .auction__bidding__item span.user {
+    font-size: 16px; }
+  .auction .auction__bidding__item span.amount {
+    font-size: 28px; }
+  .auction .auction__bidding__item span.label {
+    font-size: 9px; } }
+
+@media screen and (max-width: 992px) {
+  .auction .auction__wrapp {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .auction .auction__content {
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1; }
+  .auction .auction__aside {
+    -webkit-box-ordinal-group: 1;
+    -webkit-order: 0;
+        -ms-flex-order: 0;
+            order: 0;
+    width: 100%; }
+  .auction .auction__aside {
+    margin-bottom: 30px; }
+  .auction .auction__step__icon {
+    width: 42px;
+    height: 42px;
+    line-height: 42px; }
+  .auction .auction__step__text b {
+    font-size: 15px; }
+  .auction .auction__similar {
+    display: none; }
+  .auction .auction__aside {
+    margin-bottom: 0; } }
+
+@media screen and (max-width: 768px) {
+  .auction .auction__info__item {
+    display: block; }
+  .auction .auction__step {
+    width: 33%; }
+  .auction .auction__step__icon {
+    display: none; }
+  .auction .auction__step__info {
+    border: none;
+    border-radius: 0;
+    padding: 12px 4px;
+    min-height: 97px; }
+    .auction .auction__step__info:after {
+      display: none; }
+  .auction .auction__step:last-child .auction__step__info {
+    border-radius: 0px 5px 5px 0px; }
+  .auction .auction__step:first-child .auction__step__info {
+    border-radius: 5px 0px 0px 5px; }
+  .auction .auction__step__date {
+    padding-left: 0;
+    text-align: center;
+    padding: 0 10%; }
+  .auction .auction__step__text b {
+    margin-bottom: 4px;
+    font-size: 16px;
+    line-height: 24px; }
+  .auction .auction__step__text span {
+    font-size: 14px; }
+  .auction .auction .auction__step__date {
+    font-size: 14px; }
+  .auction .auction__steps {
+    margin-bottom: 32px; }
+  .auction .auction__card {
+    padding: 40px 20px; }
+  .auction .auction__card__price {
+    margin-bottom: 8px; }
+  .auction .auction__card__documents {
+    font-size: 16px; }
+  .auction .auction__card__submit {
+    font-size: 18px; }
+  .auction .auction__container__heading {
+    font-size: 18px;
+    margin-bottom: 13px; }
+  .auction .auction__similar__item span.product {
+    margin-bottom: 9px; }
+  .auction .auction__similar__list hr {
+    margin: 16px 0; }
+  .auction .auction__container__heading {
+    font-size: 20px;
+    margin-bottom: 12px; }
+  .auction .auction__info__item .name {
+    display: block;
+    margin-bottom: 8px; }
+  .auction .auction__info__item .delimiter {
+    display: none; }
+  .auction .auction__info__item .val {
+    display: block; }
+  .auction .auction__info__item {
+    margin-bottom: 12px; }
+  .auction .auction__content hr {
+    margin: 24px 0; }
+  .auction .auction__card__price b .old-bind {
+    font-size: 24px; }
+  .auction .auction__card__price b .old-bind:after {
+    top: 15px; }
+  .auction .auction__wager {
+    margin-top: -8px;
+    padding: 32px 20px 45px 20px; }
+  .auction .auction__wager__wrapp {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    display: block; }
+  .auction .auction__wager__timer {
+    width: 100%;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 32px; }
+  .auction .auction__wager__timer__heading {
+    margin-bottom: 12px; }
+  .auction .auction__wager__timer__numb {
+    margin: 0 16px; }
+    .auction .auction__wager__timer__numb span {
+      font-size: 40px; }
+    .auction .auction__wager__timer__numb:first-child {
+      margin-left: 0; }
+    .auction .auction__wager__timer__numb:last-child {
+      margin-right: 0; }
+  .auction .auction__wager__content {
+    width: 100%;
+    border-left: none; }
+  .auction .auction__wager__counter {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 14px; } }
+
+@media screen and (max-width: 360px) {
+  .auction .auction__step__text b {
+    font-size: 14px;
+    line-height: 19px; }
+  .auction .auction__step__text span {
+    font-size: 13px; }
+  .auction .auction__step__info {
+    min-height: 90px; }
+  .auction .auction__step__date {
+    font-size: 12px;
+    line-height: 19px; }
+  .auction .auction__card {
+    padding: 30px 20px; }
+  .auction .auction__card__price b {
+    font-size: 36px;
+    line-height: 53px; } }
 
 .popup_container {
   position: fixed;

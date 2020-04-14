@@ -4,7 +4,7 @@ $font_light: 'Circle Light', Arial, sans-serif
 $font_regular: 'Circle Regular', Arial, sans-serif 
 $color_bg: #fff
 $color_bg_second: #F4FCFB
-$color_white: #fff  
+$color_white: #fff
 $color_black: #234048
 $color_grey: #A5BBBE
 $color_light: #92D0CC 
@@ -485,6 +485,49 @@ header
   @media screen and (max-width: 992px)
     .catalog__nav
       display: none
+    .catalog__list-wrapp
+      width: 100%
+    .catalog__list
+      grid-template-columns: 1fr 1fr 1fr
+      grid-gap: 16px
+    .catalog__item__timer__numb
+      margin: 0 10px
+    .catalog__item__params
+      display: block
+    .catalog__item__param
+      width: 100%
+      max-width: 100%
+      b
+        font-size: 22px
+    .catalog__wrapp
+      display: block
+    .catalog__item__info
+      padding: 18px 15px
+  @media screen and (max-width: 768px)
+    padding: 56px 0
+    .section-heading
+      text-align: center
+      margin-bottom: 22px
+    .catalog__list
+      display: block
+    .catalog__item
+      margin-bottom: 20px
+      &:last-child
+        margin-bottom: 0
+    .catalog__item__info
+      padding: 24px 18px
+    .catalog__item__params
+      display: flex
+    .catalog__item__param
+      width: 47%
+      margin-bottom: 0
+    .catalog__item__timer__numb
+      margin: 0 16px
+    .catalog__item__details
+      padding: 24px 18px
+    .catalog__loadmore
+      .btn-main
+        width: 100%
 
 // INSTRUCTION
 .instruction
@@ -883,6 +926,36 @@ footer
       a
         color: $color_black
 
+.page-container
+  @media screen and (max-width: 1200px)
+    .page-container__text
+      line-height: 30px
+    .page-container__heading
+      font-size: 36px
+      line-height: 53px
+    .page-container__content
+      font-size: 17px
+  @media screen and (max-width: 992px)
+    .page-navbar
+      display: none
+    .page-container__content
+      width: 100%
+  @media screen and (max-width: 768px)
+    padding-top: 65px
+    padding-bottom: 40px
+    .page-container__heading
+      font-size: 28px
+      line-height: 41px
+      margin-bottom: 20px
+    .page-container__text
+      margin-bottom: 32px
+      &:last-child
+        margin-bottom: 0
+    .page-breadcrumbs
+      .page-breadcrumbs__list
+        overflow: hidden
+        white-space: nowrap
+
 
 // PRINCIPLE
 .principle__steps
@@ -925,6 +998,35 @@ footer
 .principle__descr
   margin-bottom: 32px
 
+.principle
+  @media screen and (max-width: 1200px)
+    .principle__step__text
+      font-size: 14px
+      line-height: 19px
+      max-width: 90%
+  @media screen and (max-width: 768px)
+    .tabs-toogler
+      margin-bottom: 24px
+      button
+        min-width: 49%
+        width: 49%
+        font-size: 14px
+    .principle__steps
+      flex-wrap: wrap
+      margin-bottom: 16px
+    .principle__step
+      width: 47%
+      margin-bottom: 24px
+      &:after
+        display: none
+    .principle__step__icon
+      margin-bottom: 8px
+    .principle__step__text
+      font-size: 15px
+      line-height: 20px
+      max-width: 100%
+    .btn-main
+      width: 100%
 
 // public-offering
 .public-offering__descr
@@ -937,6 +1039,13 @@ footer
     margin-bottom: 12px
   li
     margin-bottom: 30px
+
+.public-offering
+  @media screen and (max-width: 768px)
+    .public-offering__list li
+      margin-bottom: 20px
+      &:last-child
+        margin-bottom: 0
 
 // contacts
 .contacts
@@ -959,6 +1068,13 @@ footer
 .contacts__support
   margin-bottom: 32px
 
+.contacts
+  @media screen and (max-width: 768px)
+    &.page-container__text p
+      margin-bottom: 10px
+      line-height: 27px
+      &:last-child
+        margin-bottom: 0
 
 // catalog-page
 .catalog-page
@@ -1017,6 +1133,38 @@ footer
   color: $color_black
   height: 87px
   overflow: hidden
+
+.blog
+  @media screen and (max-width: 1200px)
+    .blog__list
+      grid-gap: 25px
+  @media screen and (max-width: 992px)
+    .blog__list
+      grid-template-columns: 1fr 1fr
+  @media screen and (max-width: 768px)
+    .blog__list
+      display: block
+    .blog__item
+      margin-bottom: 16px
+    .blog__item__info
+      padding-bottom: 32px
+      .btn-main
+        width: 100%
+    .blog__item__text
+      margin-bottom: 20px
+      height: auto
+    .catalog__loadmore
+      .btn-main
+        width: 100%
+    .catalog__pagination__list li a
+      padding: 10px 13px
+  @media screen and (max-width: 360px)
+    .blog__item__text
+      font-size: 18px
+      line-height: 26px
+    .blog__item__img
+      height: 160px
+
 
 // blog-article
 .blog-article
@@ -1093,11 +1241,66 @@ footer
       margin-right: 0 
     &:focus
       outline: none
+.blog-article
+  @media screen and (max-width: 992px)
+    .blog-article__wrapp
+      flex-wrap: wrap
+    .blog-article__content
+      width: 100%
+      margin-bottom: 30px
+  @media screen and (max-width: 768px)
+    .page-container__heading
+      font-size: 25px
+      line-height: 36px
+      margin-bottom: 24px
+    .blog-article__img
+      height: 260px
+      margin-bottom: 24px
+    .blog-article__text
+      margin-bottom: 32px
+      blockquote
+        padding-right: 0
+  @media screen and (max-width: 360px)
+    .blog-article__img
+      height: 230px
+    .blog-article__text
+      font-size: 16px
+      line-height: 28px
+    .blog-article__send a
+      margin-right: 10px
+      img
+        width: 30px
+
 
 .blog-similar
   margin-bottom: 80px
   .section-heading
     margin-bottom: 32px
+  @media screen and (max-width: 1200px)
+    .blog__list
+      grid-gap: 25px
+  @media screen and (max-width: 992px)
+    .blog__list
+      grid-template-columns: 1fr 1fr
+  @media screen and (max-width: 768px)
+    margin-bottom: 40px
+    .blog__list
+      display: block
+    .blog__item
+      margin-bottom: 16px
+    .blog__item__info
+      padding-bottom: 32px
+      .btn-main
+        width: 100%
+    .blog__item__text
+      margin-bottom: 20px
+      height: auto
+  @media screen and (max-width: 360px)
+    .blog__item__text
+      font-size: 18px
+      line-height: 26px
+    .blog__item__img
+      height: 160px
 
 
 // LOGIN-PAGE
@@ -1246,12 +1449,60 @@ footer
       &:hover
         color: $color_black
 
+.login__wrapp
+  @media screen and (max-width: 1200px)
+    .login__benefits
+      width: 36%
+    .login__benefits__list
+      display: block
+    .login__benefits__item
+      width: 100%
+      text-align: center
+    .login__content
+      width: 56%
+  @media screen and (max-width: 992px)
+    .login__benefits
+      width: 32%
+      padding: 28px 22px 18px 22px
+    .login__benefits__heading
+      text-align: center
+    .login__content
+      width: 60%
+  @media screen and (max-width: 768px)
+    flex-wrap: wrap
+    display: block
+    .login__content
+      width: 100%
+      margin-bottom: 40px
+    .tabs-toogler
+      margin-bottom: 24px
+      button
+        min-width: auto
+        width: 49%
+    .btn-main
+      width: 100%
+    .login__benefits
+      width: 100%
+    .login__form .btn-group .reset-pass
+      margin-left: 0
+      text-align: center
+      margin: 0 auto
+      margin-top: 12px
+      display: block
+      width: max-content
+  @media screen and (max-width: 360px)
+    .tabs-toogler button
+      font-size: 14px
+
 
 
 // AUCTION
 .auction-page
   .page-container__heading
     margin-bottom: 33px
+  @media screen and (max-width: 768px)
+    .page-container__heading
+      margin-bottom: 20px
 .auction__steps
   display: flex
   justify-content: space-between
@@ -1456,6 +1707,7 @@ footer
     vertical-align: text-top
 .auction__card__submit
   margin-top: 24px
+  width: 100%
 .auction__similar
   .auction__container__heading
       margin-bottom: 16px
@@ -1699,6 +1951,178 @@ footer
   line-height: 29px
   color: $color_black
   margin-bottom: 20px
+
+.auction
+  @media screen and (max-width: 1200px)
+    .auction__step__text b
+      font-size: 16px
+    .auction__step__text span
+      font-size: 13px
+    .auction__step__date
+      font-size: 13px
+    .auction__card
+      padding: 30px
+    .auction__card__documents
+      font-size: 14px
+    .auction__card__submit
+      padding-left: 10px
+      padding-right: 10px
+      font-size: 16px
+    .auction__wager__timer__numb
+      margin: 0 12px
+    .auction__wager__timer__numb span
+      font-size: 36px
+    .auction__wager__counter__list
+      margin-right: 13px
+    .auction__wager__counter__list .value
+      font-size: 16px
+    .auction__wager__counter__list button
+      width: 30px
+    .auction__card__price b
+      font-size: 36px
+    .auction__card__price b .old-bind
+      font-size: 19px
+      &:after
+        top: 12px
+    .auction__bidding__item
+      padding-left: 20px
+      padding-right: 20px
+    .auction__bidding__item span.user
+      font-size: 16px
+    .auction__bidding__item span.amount
+      font-size: 28px
+    .auction__bidding__item span.label
+      font-size: 9px
+  @media screen and (max-width: 992px)
+    .auction__wrapp
+      flex-wrap: wrap
+    .auction__content
+      width: 100%
+      order: 1
+    .auction__aside
+      order: 0
+      width: 100%
+    .auction__aside
+      margin-bottom: 30px
+    .auction__step__icon
+      width: 42px
+      height: 42px
+      line-height: 42px
+    .auction__step__text b
+      font-size: 15px
+    .auction__similar
+      display: none
+    .auction__aside
+      margin-bottom: 0
+  @media screen and (max-width: 768px)
+    .auction__info__item
+      display: block
+    .auction__step
+      width: 33%
+    .auction__step__icon
+      display: none
+    .auction__step__info
+      border: none
+      border-radius: 0
+      padding: 12px 4px
+      min-height: 97px
+      &:after
+        display: none
+    .auction__step:last-child .auction__step__info
+      border-radius: 0px 5px 5px 0px
+    .auction__step:first-child .auction__step__info
+      border-radius: 5px 0px 0px 5px
+    .auction__step__date
+      padding-left: 0
+      text-align: center
+      padding: 0 10%
+    .auction__step__text b
+      margin-bottom: 4px
+      font-size: 16px
+      line-height: 24px
+    .auction__step__text span
+      font-size: 14px
+    .auction .auction__step__date
+      font-size: 14px
+    .auction__steps
+      margin-bottom: 32px
+    .auction__card
+      padding: 40px 20px
+    .auction__card__price
+      margin-bottom: 8px
+    .auction__card__documents
+      font-size: 16px
+    .auction__card__submit
+      font-size: 18px
+    .auction__container__heading
+      font-size: 18px
+      margin-bottom: 13px
+    .auction__similar__item span.product
+      margin-bottom: 9px
+    .auction__similar__list hr
+      margin: 16px 0
+    .auction__container__heading
+      font-size: 20px
+      margin-bottom: 12px
+    .auction__info__item .name
+      display: block
+      margin-bottom: 8px
+    .auction__info__item .delimiter
+      display: none
+    .auction__info__item .val
+      display: block
+    .auction__info__item
+      margin-bottom: 12px
+    .auction__content hr
+      margin: 24px 0
+    .auction__card__price b .old-bind
+      font-size: 24px
+    .auction__card__price b .old-bind:after
+      top: 15px
+    .auction__wager
+      margin-top: -8px
+      padding: 32px 20px 45px 20px
+    .auction__wager__wrapp
+      flex-wrap: wrap
+      display: block
+    .auction__wager__timer
+      width: 100%
+      padding-bottom: 32px
+      border-bottom: 1px solid #fff
+      margin-bottom: 32px
+    .auction__wager__timer__heading
+      margin-bottom: 12px
+    .auction__wager__timer__numb
+      margin: 0 16px  
+      span
+        font-size: 40px
+      &:first-child
+        margin-left: 0
+      &:last-child
+        margin-right: 0
+    .auction__wager__content
+      width: 100%
+      border-left: none
+    .auction__wager__counter
+      justify-content: space-between
+      margin-bottom: 14px
+  @media screen and (max-width: 360px)
+    .auction__step__text b
+      font-size: 14px
+      line-height: 19px
+    .auction__step__text span
+      font-size: 13px
+    .auction__step__info
+      min-height: 90px
+    .auction__step__date
+      font-size: 12px
+      line-height: 19px
+    .auction__card
+      padding: 30px 20px
+    .auction__card__price b
+      font-size: 36px
+      line-height: 53px
+
 
 
 // POPUP
