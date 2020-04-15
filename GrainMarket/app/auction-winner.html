@@ -140,19 +140,19 @@
               <ul class="auction__documents__list">
                 <li class="auction__documents__item">
                   <p>Свидетельство про регистрацию предприятия</p>
-                  <a href="#" class="auction__documents__item__img">
+                  <a class="auction__documents__item__img click-item" onclick="pushModalDocumentImg('img/document1.jpg');" data-action="popup-open" data-label="#document-popup">
                     <img src="img/document1.jpg" alt="">
                   </a>
                 </li>
                 <li class="auction__documents__item">
                   <p>Свидетельство плательщика налогов</p>
-                  <a href="#" class="auction__documents__item__img">
+                  <a class="auction__documents__item__img click-item" onclick="pushModalDocumentImg('img/document2.jpg');" data-action="popup-open" data-label="#document-popup">
                     <img src="img/document2.jpg" alt="">
                   </a>
                 </li>
                 <li class="auction__documents__item">
                   <p>Подтверждение производителя и собственника товара</p>
-                  <a href="#" class="auction__documents__item__img">
+                  <a  class="auction__documents__item__img click-item" onclick="pushModalDocumentImg('img/document3.png');" data-action="popup-open" data-label="#document-popup">
                     <img src="img/document3.png" alt="">
                   </a>
                 </li>
@@ -325,7 +325,7 @@
     </div>
   </div>
   <div class="mainContainer">
-    <div class="footer__info">
+    <div class="footer__info"> 
       <p>© grainmarket.ua, 2020</p>
       <p>Аккредитованный участник электронной системы публичных закупок Украины</p>
     </div>
@@ -342,7 +342,26 @@
   </div>
 </footer>
 
+<div id="document-popup" class="popup_container click-obj">
+    <div class="popup_background click-item" data-action="popup-close"></div>
+    <div class="popup document-popup">
+      <div class="popup_close click-item" data-action="popup-close">
+          <img src="img/close-icon.svg" alt="" />
+        </div>
+      <div class="document-popup__content">
+        <img src="" alt="">
+      </div>
+    </div>
+  </div>
+
 <script src="js/main.js"></script>
+
+<script>
+  function pushModalDocumentImg(val){
+     let modalImg = document.querySelector('.document-popup__content img');
+      modalImg.setAttribute('src',val);
+  };  
+</script>
 
 </body>
 </html>
