@@ -786,6 +786,9 @@ header
 .instruction
   @media screen and (max-width: 1200px)
     padding: 60px 0
+    .instruction__item__text
+      br
+        display: none
   @media screen and (max-width: 992px)
     .instruction__item
       width: 48%
@@ -903,6 +906,7 @@ header
     border-bottom: 1px dashed #92D0CC
     background-color: transparent
     color: $color_light
+    font-family: $font_regular
     padding: 0
     padding-bottom: 3px
 
@@ -987,6 +991,7 @@ footer
   padding: 100px 0 80px 0
 .partners__slider__list
   align-items: center
+  flex-direction: row !important
 .partners__slider__item
   text-align: center
   img,svg
@@ -1007,45 +1012,55 @@ footer
   top: 21%
   width: 24px
   height: 24px
-  border: 2px solid #96AAAD
+  border: 1px solid #96AAAD
   border-radius: 50%
   z-index: 10
-  display: inline-block
+  display: flex
+  align-items: center
+  justify-content: center
   cursor: pointer
   transition: all 0.1s
   outline: none
-  background-color: transparent
-  &:after
-    content: ""
-    width: 9px
-    height: 9px
-    border: 2px solid #96AAAD
-    border-right: none
-    border-bottom: none
-    background-color: transparent
-    display: inline-block
-    transition: all 0.1s
+  background-color: #fff
+  padding: 0
+  img,svg
+    max-width: 100%
+    height: auto
+    transition: all 0.2s
+    path
+      transition: all 0.2s
   &.next
     right: 0px
     left: auto
-    transform: rotate(135deg)
   &.prev
     left: 0
     right: auto
-    transform: rotate(-45deg)
   &:hover
     background: #96AAAD
-    &:after
-      border-color: #fff
+    svg
+      path
+        stroke: #fff
+  &.swiper-button-disabled, &.swiper-button-disabled:hover
+    border-color: #dcdcdc
+    background-color: #fff
+    svg
+      path
+        stroke: #dcdcdc
 
 .partners
   @media screen and (max-width: 1200px)
     padding: 60px 0
   @media screen and (max-width: 768px)
-    padding: 52px 0
-    padding-bottom: 40px
+    padding: 40px 0
     .autopark__slider__nav
       display: none
+    .partners__slider__item
+      height: 68px
+      line-height: 68px
+      img,svg
+        max-height: 40px
+        max-width: 118px
+        width: auto
 
 // PAGE-CONTAINER
 .page-container

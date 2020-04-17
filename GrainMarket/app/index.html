@@ -94,7 +94,7 @@
 
   <section class="catalog">
     <div class="mainContainer">
-      <div class="section-heading"><h2>Поиск закупки</h2></div>
+      <div class="section-heading"><h2>Категории</h2></div>
       <div class="catalog__filters"></div>
       <div class="catalog__wrapp">
         <ul class="catalog__nav">
@@ -304,7 +304,7 @@
           </div>
           <div class="instruction__item__text">
             <b>Четвертый шаг</b>
-            <p>Дождитесь окончания аукциона и свяжитесь с победителем</p>
+            <p>Дождитесь окончания аукциона<br> и свяжитесь с победителем</p>
           </div>
         </article>
       </div>
@@ -397,19 +397,33 @@
             <img src="img/partner5.png" alt="">
           </div>
           <div class="partners__slider__item swiper-slide">
-            <img src="img/partner3.png" alt="">
+            <img src="img/partner1.png" alt="">
+          </div>
+          <div class="partners__slider__item swiper-slide">
+            <img src="img/partner2.png" alt="">
           </div>
           <div class="partners__slider__item swiper-slide">
             <img src="img/partner3.png" alt="">
           </div>
           <div class="partners__slider__item swiper-slide">
-            <img src="img/partner3.png" alt="">
+            <img src="img/partner4.png" alt="">
+          </div>
+          <div class="partners__slider__item swiper-slide">
+            <img src="img/partner5.png" alt="">
           </div>
         </div>
         <div class="partners__pagination swiper-pagination"></div>
         <div class="autopark__slider__nav">
-          <button class="partners__slider__btn prev"></button>
-          <button class="partners__slider__btn next"></button>
+          <button class="partners__slider__btn prev">
+            <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 1L2 5L6 9" stroke="#96AAAD" stroke-width="1.5"/>
+            </svg>
+          </button>
+          <button class="partners__slider__btn next">
+            <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L5 5L1 9" stroke="#96AAAD" stroke-width="1.5"/>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
@@ -528,7 +542,7 @@
     let mySwiper = new Swiper('.partners__slider', {
       direction: 'horizontal',
       slidesPerView: 1,
-      loop: true,
+      loop: false,
       watchSlidesProgress: true,
       watchSlidesVisibility: true,
 
@@ -546,10 +560,10 @@
         },
         768: {
           slidesPerView: 3,
-          slidesPerColumn: 1,
         },
         320:{
           slidesPerView: 2,
+          slidesPerColumn: 2,
         }
       },
     });
