@@ -20,18 +20,31 @@
   <div class="mainContainer">
     <div class="header__wrapp">
       <a href="#" class="header__logo">peachmodels</a>
-      <button class="header__burger"></button>
+      <button class="header__burger" id="header-burger">
+        <span></span>
+        <span></span>
+      </button>
     </div>
+    <ul class="header__nav">
+        <li><a href="#advantages-section">Кому подойдет</a></li>
+        <li><a href="#requirement-section">Что нужно</a></li>
+        <li><a href="#conditions-section">Преимущества</a></li>
+        <li><a href="#howstart-section">Как начать</a></li>
+        <li><a href="#reviews-section">Отзывы</a></li>
+        <li><a href="#faq-section">Вопросы</a></li>
+      </ul>
   </div>
 </header>
+
 <main>
+  <!-- BANNER section -->
   <section class="banner bg-container bg-left">
     <div class="mainContainer">
       <div class="banner__wrapp">
         <div class="banner__content">
           <h1>Наши <span class="gradient-span">веб-модели</span> зарабатывают<br> 50 000 грн/мес, не выходя<br> из дома. Хочешь также?</h1>
           <p>Внешность не имеет значения! Главное — коммуникабельность,<br> харизма и дружелюбность.</p>
-          <button class="btn-main">хочу 50 000 грн/мес</button>
+          <button class="btn-main click-item" data-action="popup-open" data-label="#request-popup">хочу 50 000 грн/мес</button>
         </div>
         <div class="banner__img" style="background-image: url('img/banner.jpg');"></div>
       </div>
@@ -39,9 +52,10 @@
     <div class="bg-element"></div>
   </section>
 
-  <section class="advantages section-container">
+  <!-- ADVANTAGES section -->
+  <section class="advantages section-container" id="advantages-section">
     <div class="mainContainer">
-      <div class="advantages__heading"><h2>Эта <span class="gradient-span">работа</span> для тебя, если ты:</h2></div>
+      <div class="heading-main"><h2>Эта <span class="gradient-span">работа</span> для тебя, если ты:</h2></div>
       <div class="advantages__list">
         <article class="advantages__item" style="background-image: url('img/advantages_it1.jpg')">
           <p>стремишься свободно распоряжаться собственным временем и работать в гибком графике</p>
@@ -59,12 +73,13 @@
     </div>
   </section>
 
-  <section class="requirement bg-container bg-right section-container">
+  <!-- REQUIREMENT section -->
+  <section class="requirement bg-container bg-right section-container" id="requirement-section">
     <div class="mainContainer">
       <div class="requirement__wrapp">
         <div class="requirement__img" style="background-image: url('img/requirement.jpg');"></div>
         <div class="requirement__content">
-          <div class="requirement__heading"><h2><span class="gradient-span">Измени</span> свою жизнь к лучшему</h2></div>
+          <div class="heading-main"><h2><span class="gradient-span">Измени</span> свою жизнь к лучшему</h2></div>
           <div class="requirement__descr">Зарабатывай от 500$ до 5000-6000$ в месяц, получая при этом<br> удовольствие от общения.</div>
           <div class="requirement__list__wrapp">
             <div class="requirement__list__heading">что нужно, чтобы начать зарабатывать?</div>
@@ -108,9 +123,10 @@
     <div class="bg-element"></div>
   </section>
 
-  <section class="we-know section-container">
+  <!-- WE-KNOW section -->
+  <section class="we-know section-container" id="weknow-section">
     <div class="mainContainer">
-      <div class="we-know__heading">
+      <div class="heading-main">
         <h2>Только <span class="gradient-span">мы</span> знаем:</h2>
       </div>
       <div class="we-know__list">
@@ -136,11 +152,12 @@
     </div>
   </section>
 
-  <section class="conditions bg-container bg-left section-container">
+  <!-- CONDITIONS section -->
+  <section class="conditions bg-container bg-left section-container" id="conditions-section">
     <div class="mainContainer">
       <div class="conditions__wrapp">
         <div class="conditions__content">
-          <div class="conditions__heading"><h2>Наши <span class="gradient-span">идеальные</span> условия</h2></div>
+          <div class="heading-main"><h2>Наши <span class="gradient-span">идеальные</span> условия</h2></div>
           <div class="conditions__list">
             <article class="conditions__item">
               <img src="img/conditions_it1.svg" alt="">
@@ -165,14 +182,15 @@
     <div class="bg-element"></div>
   </section>
 
-  <section class="how-start section-container">
+  <!-- HOW-START section -->
+  <section class="how-start section-container" id="howstart-section">
     <div class="mainContainer">
-      <div class="how-start__heading">Как начать <span class="gradient-span">работать</span></div>
+      <div class="heading-main">Как начать <span class="gradient-span">работать</span></div>
       <div class="how-start__list">
         <article class="how-start__item">
           <div class="how-start__item__img"><img src="img/how-start_it1.svg" alt=""></div>
           <span>заявка</span>
-          <button class="btn-main">подать заявку</button>
+          <button class="btn-main click-item" data-action="popup-open" data-label="#request-popup">подать заявку</button>
         </article>
         <article class="how-start__item">
           <div class="how-start__item__img"><img src="img/how-start_it2.svg" alt=""></div>
@@ -193,7 +211,8 @@
     </div>
   </section>
 
-  <section class="statistics section-container">
+  <!-- STATISTICS section -->
+  <section class="statistics section-container" id="statistics-section">
     <div class="mainContainer">
       <div class="statistics__list">
         <div class="statistics__item">
@@ -212,13 +231,13 @@
     </div>
   </section>
 
-  <section class="reviews section-container">
-      <div class="reviews__heading"><h2>Отзывы наших <span class="gradient-span">моделей</span></h2></div>
+  <!-- REVIEWS section -->
+  <section class="reviews section-container" id="reviews-section">
+      <div class="heading-main"><h2>Отзывы наших <span class="gradient-span">моделей</span></h2></div>
       <div class="reviews__wrapp swiper-container">
         <div class="mainContainer reviews__slider__nav__wrapp">
         <div class="reviews__slider__nav">
           <div class="reviews__slider__nav__fractial">
-            
           </div>
           <button class="reviews__slider__btn prev">
             <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -305,9 +324,10 @@
       </div>
   </section>
 
-  <section class="faq section-container">
+  <!-- FAQ section -->
+  <section class="faq section-container" id="faq-section">
     <div class="mainContainer">
-      <div class="faq__heading"><h2>Часто задаваемые <span class="gradient-span">вопросы</span></h2></div>
+      <div class="heading-main"><h2>Часто задаваемые <span class="gradient-span">вопросы</span></h2></div>
       <div class="faq__list">
         <div class="faq__item">
           <div class="faq__item__preview"><span>сколько часов нужно общаться в день?</span></div>
@@ -373,17 +393,24 @@
     </div>
   </section>
 
-  <section class="request section-container">
+  <!-- REQUEST section -->
+  <section class="request section-container" id="request-section">
     <div class="mainContainer">
       <div class="request__wrapp">
         <div class="request__img" style="background-image: url('img/request-bg.jpg');"></div>
         <div class="request__content">
-          <div class="request__content__heading"><h2>Подавай заявку, приводи подругу и получай за это <span class="gradient-span">приятный бонус</span></h2></div>
+          <div class="heading-main"><h2>Подавай заявку, приводи подругу и получай за это <span class="gradient-span">приятный бонус</span></h2></div>
           <div class="request__content__descr">Когда подруга заработает 150$, ты получишь 100$.<br> Единоразово. Мелочь, а приятно :)</div>
           <form action="" class="request__form">
             <input type="text" placeholder="имя" required>
             <input type="text" placeholder="телефон" required>
             <input type="text" placeholder="e-mail" required>
+            <div class="checkbox-group">
+              <input type="checkbox" id="ageCheck" required=>
+              <label for="ageCheck">
+                мне есть 18 лет
+              </label>
+            </div>
             <button class="btn-main">отправить</button>
           </form>
         </div>
@@ -391,9 +418,10 @@
     </div>
   </section>
 
-  <section class="bolg-catalog section-container">
+  <!-- BLOG section -->
+  <section class="bolg-catalog section-container" id="blog-section">
     <div class="mainContainer">
-      <div class="bolg-catalog__heading"><h2><span class="gradient-span">Рекомендуем</span> к прочтению</h2></div>
+      <div class="heading-main"><h2><span class="gradient-span">Рекомендуем</span> к прочтению</h2></div>
       <div class="bolg-catalog__list">
         <article class="bolg-catalog__item__wrapp">
           <a href="" target="blank" class="bolg-catalog__item" style="background-image: url('img/blog_it1.jpg');">
@@ -423,7 +451,7 @@
   <div class="mainContainer">
     <div class="footer__wrapp">
       <div class="footer__descr">© 2020 charmel.ua. все права защищены</div>
-      <div class="footer__scrollUp">
+      <div class="footer__scrollUp" id="scrollUp">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M30.5 30.5L30.5 1.5L1.5 1.5L1.5 30.5L30.5 30.5ZM32 32V30.5V1.5V0H30.5H1.5H0V1.5V30.5V32H1.5L30.5 32H32ZM21.2929 19.7071L16 14.4142L10.7071 19.7071L9.29289 18.2929L15.2929 12.2929L16 11.5858L16.7071 12.2929L22.7071 18.2929L21.2929 19.7071Z" fill="url(#paint0_linear)"/>
           <defs>
@@ -440,48 +468,34 @@
 </footer>
 
 
+<!-- REQUEST-POPUP -->
+<div id="request-popup" class="popup_container click-obj">
+    <div class="popup_background click-item" data-action="popup-close"></div>
+    <div class="popup request-popup">
+      <div class="popup_close click-item" data-action="popup-close">
+          <img src="img/popup-close.svg" alt="" />
+        </div>
+      <div class="request-popup__content">
+        <div class="request-popup__heading">
+          Подать заявку
+        </div>
+        <form action="" class="request-popup__form">
+          <input type="text" placeholder="имя" required>
+          <input type="text" placeholder="телефон" required>
+          <input type="text" placeholder="e-mail" required>
+          <button class="btn-main">отправить</button>
+        </form>
+      </div>
+      <div class="request-popup__success" style="display: none">
+        <b>Спасибо!</b>
+        <p>Заявка отправлена. Наш менеджер свяжется<br> с вами в течение 30 минут :)</p>
+      </div>
+    </div>
+  </div>
+
+
 <script src="libs/swiperjs/swiper.min.js"></script>
-  <script>
-    function updSwiperNumericPagination() {
-      this.el.querySelector( '.reviews__slider__nav__fractial' )
-        .innerHTML = '<span class="count">'+ (this.realIndex + 1) +'</span>/<span class="total">3</span>';
-    }
-
-    let mySwiper = new Swiper('.reviews__wrapp', {
-      direction: 'horizontal',
-      slidesPerView: 'auto',
-      loop: true,
-      centeredSlides: true,
-      spaceBetween: 96,
-      //watchSlidesProgress: true,
-      //watchSlidesVisibility: true,
-
-      navigation: {
-        nextEl: '.reviews__slider__btn.next',
-        prevEl: '.reviews__slider__btn.prev',
-      },
-      pagination: {
-        el: '.reviews__pagination',
-        clickable: true,
-      },
-      on: { 
-        init: updSwiperNumericPagination,
-        slideChange: updSwiperNumericPagination,
-      }
-
-    });
-  </script>
-<script>
-  let faqPreview = document.querySelectorAll('.faq__item');
-
-  function showFaq() {
-   this.closest('.faq__item').classList.toggle('active');
-  }
-
-  for(i=0; i<faqPreview.length; i++){
-    faqPreview[i].addEventListener('click', showFaq);
-  }
-</script>
+<script src="js/main.js"></script>
 
 </body>
 </html>

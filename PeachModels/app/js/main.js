@@ -1,4 +1,5 @@
 
+// For popup
 function clickItemHandler(event) {
   if (!event.target.closest('.click-item')) return;
   let item = event.target.closest('.click-item');
@@ -35,48 +36,91 @@ function clickItemHandler(event) {
 };
 document.addEventListener('click', clickItemHandler);
 
-// for header-mob
-let header_toggler = document.getElementById('header_burger');
-let header_block = document.querySelector('header');
 
-function showHeader(){
-  header_block.classList.toggle('active');
-  header_block.classList.toggle('default');
+// For reviews-slider
+function updSwiperNumericPagination() {
+  this.el.querySelector( '.reviews__slider__nav__fractial' )
+    .innerHTML = '<span class="count">'+ (this.realIndex + 1) +'</span>/<span class="total">3</span>';
+  }
+
+  let mySwiper = new Swiper('.reviews__wrapp', {
+    direction: 'horizontal',
+    slidesPerView: 'auto',
+    loop: true,
+    centeredSlides: true,
+    spaceBetween: 96,
+    //watchSlidesProgress: true,
+    //watchSlidesVisibility: true,
+    navigation: {
+      nextEl: '.reviews__slider__btn.next',
+      prevEl: '.reviews__slider__btn.prev',
+    },
+    pagination: {
+      el: '.reviews__pagination',
+      clickable: true,
+    },
+    on: { 
+      init: updSwiperNumericPagination,
+      slideChange: updSwiperNumericPagination,
+    }
+});
+
+
+// For faq-toogler
+let faqPreview = document.querySelectorAll('.faq__item');
+
+function showFaq() {
+  this.closest('.faq__item').classList.toggle('active');
 }
 
-header_toggler.addEventListener('click', showHeader);
-
-
-//for seo-section
-let seoToggler = document.querySelector('.seo-toggler');
-if(seoToggler){
-  seoToggler.addEventListener('click',function(event){
-    let block = event.target.closest('.seo');
-    block.querySelector('.seo-content').classList.toggle('active');
-    this.classList.add('hidden');
-    //block.querySelectorAll('.seo_toggler').forEach(item => item.classList.toggle('hidden'));
-  });
+for(i=0; i<faqPreview.length; i++){
+  faqPreview[i].addEventListener('click', showFaq);
 }
 
-// For tabs
-    let tabs = document.querySelectorAll(".tab");
-    let tabContent = document.querySelectorAll(".tab-content");
-    tabs.forEach(function (tab) {
-      tab.addEventListener("click", function () {
-        tabs.forEach(function (item) {
-          item.classList.remove("active");
-        });
-        this.classList.add("active");
-        let tabName = this.getAttribute("data-tab");
-        selectTabContent(tabName);
-      });
+// For scrollUp
+let toTop = document.getElementById("scrollUp");
 
-      function selectTabContent(tabName) {
-        tabContent.forEach(function (item) {
-          item.classList.contains(tabName) ?
-            item.classList.add("active") :
-            item.classList.remove("active");
-        });
+toTop.addEventListener("click", function(){
+  scrollToTop(700);
+});
+
+function scrollToTop(scrollDuration) {
+  var scrollStep = -window.scrollY / (scrollDuration / 15),
+    scrollInterval = setInterval(function(){
+      if ( window.scrollY != 0 ) {
+        window.scrollBy( 0, scrollStep );
       }
-    });
+      else clearInterval(scrollInterval); 
+  },15);
+}
 
+
+// for header
+let burgerBtn = document.getElementById('header-burger');
+let headerWrapp = document.querySelector('header');
+let menuLink = document.querySelectorAll('.header__nav li a');
+
+const menuToggle = function(){
+  headerWrapp.classList.toggle('active');
+}
+
+burgerBtn.addEventListener('click', menuToggle)
+
+for(i = 0; i < menuLink.length; i++){
+  let menuToggleTimeout = function(){
+    setTimeout(menuToggle, 1000);
+  }
+  menuLink[i].addEventListener('click',  menuToggleTimeout);
+}
+
+
+// for scrolling to anchor
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+            block: 'end'
+        });
+    });
+});

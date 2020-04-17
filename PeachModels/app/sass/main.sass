@@ -102,6 +102,14 @@ body
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
 
+.heading-main
+  font-size: 32px
+  line-height: 41px
+  color: #0D1C2F
+  font-family: $font_demi
+  margin-bottom: 24px
+  text-align: center
+
 
 header
   position: absolute
@@ -109,6 +117,55 @@ header
   left: 0
   width: 100%
   z-index: 10
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    width: 120vh
+    height: 140vh
+    background-color: #fffbfb
+    border-radius: 50%
+    transform-origin: top right
+    transform: translate3d(50vh,-50vh,0) scale3d(0,0,0)
+    transition: transform .3s ease-out
+    transform: translate3d(45%,-40%,0) scale3d(0,0,0)
+    width: 66.625rem
+    height: 66.625rem
+    z-index: 0
+  &.active
+    position: fixed
+    width: 100%
+    height: 100%
+    z-index: 100
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: rgba(0,0,0, 0.3)
+    &:after
+      transform: translate3d(45%,-40%,0) scaleX(1)
+      //transition-delay: .1s
+    .header__burger
+      z-index: 10
+      span
+        position: absolute
+        margin-bottom: 0
+        transform: rotate(0deg)
+        transition: all 0.6s
+        &:nth-child(1)
+          transform: rotate(-45deg)
+        &:nth-child(2)
+          transform: rotate(45deg)
+    .header__nav
+      display: flex
+      position: relative
+      z-index: 10
+      animation: showMenu 1s .5s
+      animation-fill-mode: both
 .header__wrapp
   display: flex
   justify-content: space-between
@@ -121,15 +178,55 @@ header
   font-family: $font_heavy
 .header__burger
   width: 32px
-  height: 11px
   background-color: transparent
   border: none
-  border-top: 1px solid #0D1C2F
-  border-bottom: 1px solid #0D1C2F
+  padding: 0
+  position: relative
+  span
+    width: 100%
+    display: block
+    height: 1px
+    background-color: #0D1C2F
+    margin-bottom: 10px
+    transition: all 0.6s
+    &:last-child
+      margin-bottom: 0
   &:focus
     outline: none
+.header__nav
+  opacity: 0
+  display: none
+  list-style: none
+  padding: 0
+  width: 100%
+  flex-direction: column
+  align-items: flex-end
+  padding-top: 10px
+  li
+    display: block
+    text-align: right
+    width: 40%
+    a
+      width: 100%
+      display: block
+      padding: 12px 49px
+      font-size: 32px
+      line-height: 41px
+      color: $color_font
+      transition: all .3s
+      &:focus
+        outline: none
+    &:hover
+      a
+        padding-right: 20px
 
+@keyframes showMenu
+  0%
+    opacity: 0
+  100%
+    opacity: 1
 
+//*** BANNER ***//
 .banner
   padding-top: 73px
   margin-bottom: 100px
@@ -138,7 +235,7 @@ header
   justify-content: space-between
   align-items: flex-start
 .banner__img
-  width: 560px
+  width: 46.7%
   height: 620px
   background-position: center center
   background-size: cover
@@ -146,6 +243,7 @@ header
 .banner__content
   color: $color_white
   padding-top: 110px
+  width: 50%
   h1
     font-size: 40px
     line-height: 51px
@@ -157,13 +255,7 @@ header
     margin-bottom: 32px
     font-family: $font_regular
 
-
-.advantages__heading
-  margin-bottom: 24px
-  font-size: 32px
-  line-height: 41px
-  text-align: center
-  font-family: $font_demi
+//*** ADVANTAGES ***//
 .advantages__list
   display: flex
   justify-content: space-between
@@ -197,26 +289,24 @@ header
     height: 59%
     background: linear-gradient(180deg, rgba(21, 26, 46, 0) 0%, #151A2E 100%)
 
-
+//*** REQUIREMENT ***//
 .requirement
   padding-top: 100px
+  .heading-main
+    text-align: left
+    color: #fff
+    margin-bottom: 14px
 .requirement__wrapp
   display: flex
   justify-content: space-between
 .requirement__img
-  width: 528px
+  width: 44%
   height: 470px
   background-position: center top
   background-size: cover
   background-repeat: no-repeat
 .requirement__content
   width: 50%
-.requirement__heading
-  margin-bottom: 12px
-  font-size: 32px
-  line-height: 41px
-  color: $color_white
-  font-family: $font_demi
 .requirement__descr
   font-size: 20px
   line-height: 26px
@@ -254,12 +344,10 @@ header
     max-height: 100%
     width: auto
 
-.we-know__heading
-  margin-bottom: 44px
-  font-size: 32px
-  line-height: 41px
-  text-align: center
-  font-family: $font_demi
+//*** WE-KNOW ***//
+.we-know
+  .heading-main
+    margin-bottom: 44px
 .we-know__list
   display: flex
   justify-content: space-between
@@ -294,23 +382,18 @@ header
     height: 43.3%
     background: linear-gradient(180deg, rgba(21, 26, 46, 0) 0%, #151A2E 100%)
 
-
-
-
+//*** CONDITIONS ***//
 .conditions
   padding-top: 100px
+  .heading-main
+    text-align: left
+    color: #fff
 .conditions__wrapp
   display: flex
   justify-content: space-between
   align-items: flex-start
 .conditions__content
   width: 50%
-.conditions__heading
-  font-size: 32px
-  line-height: 41px
-  color: #FFFFFF
-  font-family: $font_demi
-  margin-bottom: 24px
 .conditions__item
   margin-bottom: 32px
   color: #fff
@@ -330,20 +413,13 @@ header
     font-size: 18px
     line-height: 23px
 .conditions__img
-  width: 528px
+  width: 44%
   height: 630px 
-  background-color: cover
+  background-size: cover
   background-position: center top
   background-repeat: no-repeat
 
-
-
-.how-start__heading
-  text-align: center
-  font-family: $font_demi
-  font-size: 32px
-  line-height: 41px
-  margin-bottom: 24px
+//*** HOW-START ***//
 .how-start__list
   display: flex
   justify-content: space-between
@@ -380,9 +456,7 @@ header
 .how-start__item__img
   margin-bottom: 8px
 
-
-
-
+//*** STATISTICS ***//
 .statistics
   background-color: #0D1C2F
   padding: 49px 0
@@ -411,18 +485,12 @@ header
       margin-top: -17px
       position: relative
 
-
-
+//*** FAQ ***//
 .faq
   padding: 100px 0 60px 0
   background-color: #0D1C2F
-.faq__heading
-  margin-bottom: 24px
-  font-size: 32px
-  line-height: 41px
-  color: #FFFFFF
-  font-family: $font_demi
-  text-align: center
+  .heading-main
+    color: #fff
 .faq__list
   display: flex
   justify-content: space-between
@@ -469,26 +537,23 @@ header
   p
     margin-bottom: 20px
 
-
-
-
+//*** REQUEST ***//
+.request
+  .heading-main
+    margin-bottom: 12px
+    text-align: left
 .request__wrapp
   display: flex
   justify-content: space-between
   align-items: flex-start
 .request__img
-  width: 528px
+  width: 44%
   height: 533px
   background-size: cover
   background-position: center top
   background-repeat: no-repeat
 .request__content
   width: 46.6%
-.request__content__heading
-  margin-bottom: 12px
-  font-size: 32px
-  line-height: 41px
-  font-family: $font_demi
 .request__content__descr
   font-size: 20px
   line-height: 26px
@@ -508,6 +573,8 @@ header
     border-bottom: 1px solid #CADEF0
     transition: all 0.2s
     width: 100%
+    &:last-child
+      margin-bottom: 20px
     &::placeholder
       font-size: 12px
       font-family: $font_heavy
@@ -516,18 +583,68 @@ header
       outline: none
       &::placeholder
         color: #fff
+.checkbox-group
+  display: block
+  margin-bottom: 24px
+  input
+    padding: 0
+    height: initial
+    width: initial
+    margin: 0
+    display: none
+    cursor: pointer
+    &:checked+label
+      &:before
+        border-color: #CADEF0
+      &:after
+        opacity: 1
+  label
+    position: relative
+    cursor: pointer
+    width: 100%
+    display: block
+    font-size: 12px
+    line-height: 15px
+    text-transform: uppercase
+    font-family: $font_heavy
+    &:before
+      content: ''
+      -webkit-appearance: none
+      background: #fff
+      border: 2px solid #CADEF0
+      box-sizing: border-box
+      border-radius: 3px
+      width: 15px
+      height: 15px
+      display: inline-block
+      position: relative
+      vertical-align: middle
+      cursor: pointer
+      transition: all 0.2s
+      margin-right: 7px
+      margin-top: -3px
+    &:after
+      content: ""
+      background-color: transparent
+      position: absolute
+      left: 6px
+      top: 1px
+      width: 4px
+      border-bottom: 2px solid #0D1C2F
+      height: 10px
+      border-right: 2px solid #0D1C2F
+      transform: rotate(45deg)
+      display: inline-block
+      opacity: 0
+      transition: all .2s
 
+//*** BLOG-CATALOG ***//
 .bolg-catalog
   padding: 100px 0
   background-color: #0D1C2F
   margin-bottom: 0
-.bolg-catalog__heading
-  text-align: center
-  margin-bottom: 24px
-  font-size: 32px
-  line-height: 41px
-  font-family: $font_demi
-  color: #fff
+  .heading-main
+    color: #fff
 .bolg-catalog__list
   display: flex
   justify-content: space-between
@@ -573,7 +690,7 @@ header
     &:before
       background-color: rgba(21, 26, 46, 0.3)
 
-
+//*** FOOTER ***//
 .footer__wrapp
   display: flex
   justify-content: space-between
@@ -594,15 +711,10 @@ header
     margin-right: 10px
     vertical-align: middle
   
-
-.reviews__heading
-  margin-bottom: 34px
-  text-align: center
-  font-family: $font_demi
-  font-size: 32px
-  line-height: 41px
-
-
+//*** REVIEWS ***//
+.reviews
+  .heading-main
+    margin-bottom: 34px
 .reviews__item
   width: 909px
   position: relative
@@ -729,7 +841,6 @@ header
         opacity: 1
 .swiper-container-horizontal>.swiper-pagination-bullets.reviews__pagination
   bottom: 0
-
 .reviews__slider__nav__wrapp
   display: flex
   justify-content: center
@@ -759,11 +870,102 @@ header
     font-size: 32px
     vertical-align: sub
 
+// POPUP
+.popup_container
+  position: fixed
+  top: -200%
+  left: 0
+  z-index: 10000
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 100%
+  min-width: 100vw
+  min-height: 100vh
+  padding: 10px
+  opacity: 0
+  box-sizing: border-box
+  &.active
+    top: 0
+    opacity: 1
+    transition: top 0.2s ease-in-out, opacity 1s ease-in-out
+.popup_background
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 100
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.7)
+.popup
+  position: relative
+  z-index: 200
+  width: 100%
+  max-width: 447px
+  //padding: 56px 24px
+  margin: auto
+  background-color: #FFFFFF
+.popup_close
+  position: absolute
+  top: 24px
+  right: 24px
+  cursor: pointer
+  transition: all 0.2s ease-in-out
+  img
+    width: 16px
+    height: auto
 
-
-
-
-
+.request-popup__content
+  padding: 56px 40px 
+.request-popup__heading
+  text-align: center
+  font-size: 32px
+  line-height: 41px
+  margin-bottom: 15px
+  font-family: $font_demi
+.request-popup__form
+  width: 68%
+  margin: 0 auto
+  input
+    display: block
+    height: 37px
+    margin-bottom: 30px
+    font-size: 12px
+    text-transform: uppercase
+    font-family: $font_heavy
+    background-color: transparent
+    border: none
+    border-bottom: 1px solid #CADEF0
+    transition: all 0.2s
+    width: 100%
+    text-align: center
+    &:last-child
+      margin-bottom: 20px
+    &::placeholder
+      font-size: 12px
+      font-family: $font_heavy
+      color: #0D1C2F
+    &:focus
+      outline: none
+      &::placeholder
+        color: #fff
+  button
+    margin: 0 auto
+    display: block
+.request-popup__success
+  padding: 56px 40px
+  text-align: center
+  b
+    display: block
+    font-size: 32px
+    line-height: 41px
+    margin-bottom: 12px
+    font-family: $font_demi
+  p
+    font-size: 20px
+    line-height: 26px
+    font-family: $font_regular
 
 
 
