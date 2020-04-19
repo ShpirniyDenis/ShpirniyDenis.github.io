@@ -2190,7 +2190,10 @@ header {
       height: 396px; } } }
 
 .banner .banner__content {
-  opacity: 0; }
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+      -ms-transform: translateY(30px);
+          transform: translateY(30px); }
 
 .banner .bg-element:after {
   width: 100%; }
@@ -2209,15 +2212,23 @@ header {
 
 @-webkit-keyframes banner-content {
   0% {
-    opacity: 0; }
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px); }
   100% {
-    opacity: 1; } }
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
 
 @keyframes banner-content {
   0% {
-    opacity: 0; }
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px); }
   100% {
-    opacity: 1; } }
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
 
 @media screen and (min-width: 1500px) {
   @-webkit-keyframes banner-bg {

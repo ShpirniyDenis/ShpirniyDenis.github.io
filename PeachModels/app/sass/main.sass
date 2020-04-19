@@ -1677,6 +1677,7 @@ header
 .banner
   .banner__content
     opacity: 0
+    transform: translateY(30px)
   .bg-element
     &:after
       width: 100%
@@ -1688,8 +1689,10 @@ header
 @keyframes banner-content
   0%
     opacity: 0
+    transform: translateY(30px)
   100%
     opacity: 1
+    transform: translateY(0)
 @media screen and (min-width: 1500px)
   @keyframes banner-bg
     0%
