@@ -2253,3 +2253,59 @@ header {
       width: 100%; }
     100% {
       width: 22%; } } }
+
+.requirement .bg-element:after, .conditions .bg-element:after {
+  width: 100%; }
+
+.requirement .requirement__img, .requirement .requirement__content, .requirement .conditions__img, .requirement .conditions__content, .conditions .requirement__img, .conditions .requirement__content, .conditions .conditions__img, .conditions .conditions__content {
+  opacity: 0; }
+
+.requirement.active .bg-element:after, .conditions.active .bg-element:after {
+  -webkit-animation: bg-width 1s;
+          animation: bg-width 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+.requirement.active .requirement__img, .requirement.active .requirement__content, .requirement.active .conditions__img, .requirement.active .conditions__content, .conditions.active .requirement__img, .conditions.active .requirement__content, .conditions.active .conditions__img, .conditions.active .conditions__content {
+  -webkit-animation: image-opacity 1s;
+          animation: image-opacity 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s; }
+
+.requirement.active .requirement__content, .requirement.active .conditions__content, .conditions.active .requirement__content, .conditions.active .conditions__content {
+  -webkit-animation-delay: .6s;
+          animation-delay: .6s; }
+
+@-webkit-keyframes bg-width {
+  0% {
+    width: 100%; }
+  100% {
+    width: 16%; } }
+
+@keyframes bg-width {
+  0% {
+    width: 100%; }
+  100% {
+    width: 16%; } }
+
+@-webkit-keyframes image-opacity {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes image-opacity {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }

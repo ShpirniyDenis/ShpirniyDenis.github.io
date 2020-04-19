@@ -1706,6 +1706,35 @@ header
     100%
       width: 22% 
 
+.requirement, .conditions
+  .bg-element
+    &:after
+      width: 100%
+  .requirement__img, .requirement__content, .conditions__img, .conditions__content
+    opacity: 0
+  &.active
+    .bg-element
+      &:after
+        animation: bg-width 1s 
+        animation-fill-mode: both
+    .requirement__img, .requirement__content, .conditions__img, .conditions__content
+      animation: image-opacity 1s
+      animation-fill-mode: both
+      animation-delay: .3s
+    .requirement__content, .conditions__content
+      animation-delay: .6s
 
+@keyframes bg-width
+  0%
+    width: 100%
+  100%
+    width: 16%
+@keyframes image-opacity
+  0%
+    opacity: 0
+    transform: translateY(30px)
+  100%
+    opacity: 1
+    transform: translateY(0)
 
 
