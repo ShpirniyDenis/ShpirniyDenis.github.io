@@ -1194,7 +1194,12 @@ header {
     .request .request__form input {
       text-align: center; }
   .request .btn-main {
-    width: 100%; } }
+    width: 100%; }
+  .request .checkbox-group label {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0 auto; } }
 
 @media (max-width: 359px) {
   .request .heading-main {
@@ -1784,3 +1789,156 @@ header {
       width: 100%; }
   .request-popup .request-popup__success {
     padding: 56px 20px; } }
+
+.blog {
+  padding: 92px 0;
+  border-bottom: 1px solid #DBE3E8; }
+  .blog .bg-element {
+    height: 74px; }
+    .blog .bg-element:before {
+      display: none; }
+
+.blog__wrapp {
+  margin-top: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.blog__content {
+  width: 50%; }
+
+.blog__content__preview {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  margin-bottom: 24px; }
+
+.blog__content__text {
+  width: 100%;
+  font-size: 18px;
+  line-height: 29px;
+  font-family: "Futura Book", Arial, sans-serif; }
+  .blog__content__text p {
+    margin-bottom: 18px; }
+    .blog__content__text p:last-child {
+      margin-bottom: 0; }
+  .blog__content__text h3 {
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    margin-top: 37px;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: "Futura Heavy", Arial, sans-serif; }
+  .blog__content__text h1 {
+    margin-bottom: 32px;
+    font-size: 40px;
+    line-height: 51px;
+    font-family: "Futura Demi", Arial, sans-serif; }
+
+.blog__nav {
+  width: 40%;
+  padding-left: 55px;
+  border-left: 1px solid #DBE3E8;
+  margin-top: 35px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 30px; }
+  .blog__nav ul {
+    width: 100%;
+    padding: 0;
+    list-style: none; }
+    .blog__nav ul li {
+      display: block; }
+      .blog__nav ul li a {
+        width: 100%;
+        padding: 20px 0;
+        border-bottom: 1px solid #DBE3E8;
+        font-size: 18px;
+        line-height: 23px;
+        color: #0D1C2F;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        .blog__nav ul li a:after {
+          content: '';
+          display: inline-block;
+          width: 6px;
+          height: 12px;
+          background-image: url("../img/vc-right.svg");
+          background-position: center center;
+          background-size: auto;
+          background-repeat: no-repeat; }
+        .blog__nav ul li a span {
+          width: 96%; }
+      .blog__nav ul li:last-child a {
+        border-bottom: none;
+        padding-bottom: 10px; }
+
+.blog__heading {
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-family: "Futura Heavy", Arial, sans-serif; }
+
+.blog__bck {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #0D1C2F;
+  font-family: "Futura Heavy", Arial, sans-serif; }
+  .blog__bck svg, .blog__bck img {
+    margin-right: 8px;
+    vertical-align: middle; }
+
+@media (max-width: 992px) {
+  .blog .blog__wrapp {
+    display: block; }
+  .blog .blog__content {
+    width: 100%;
+    margin-bottom: 56px; }
+  .blog .blog__nav {
+    width: 100%;
+    margin-top: 0;
+    padding-left: 0;
+    border: none;
+    position: static; } }
+
+@media (max-width: 768px) {
+  .blog {
+    padding-bottom: 54px; }
+    .blog .blog__wrapp {
+      margin-top: 32px; }
+    .blog .blog__content__text h1 {
+      margin-bottom: 24px; }
+    .blog .blog__content__text h3 {
+      margin-top: 32px; }
+    .blog .blog__content__text p {
+      margin-bottom: 8px; }
+    .blog .blog__content__preview {
+      height: 234px;
+      margin-bottom: 20px; } }

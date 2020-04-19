@@ -118,9 +118,16 @@ for(i = 0; i < menuLink.length; i++){
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
+        if(window.screen.width > 992) {
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth',
             block: 'end'
-        });
+          });
+        }else{
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
     });
 });
