@@ -131,3 +131,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+
+// for preloader
+setTimeout(function () {
+  document.querySelector(".preloader").classList.add('closed');
+}, 3500)
+
+
+
+
+

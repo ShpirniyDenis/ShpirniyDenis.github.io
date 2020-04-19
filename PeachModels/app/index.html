@@ -14,7 +14,157 @@
   <link rel="stylesheet" href="css/main.css">
 </head> 
  
+ <style>
+   /**
+ * HINT- A CSS tooltip library
+ */
+
+.hint { position: relative; display: inline-block; }
+
+.hint:before, .hint:after {
+      position: absolute;
+      opacity: 0;
+      z-index: 1000000;
+      -webkit-transition: 0.3s ease;
+      -moz-transition: 0.3s ease;
+  pointer-events: none;
+}
+
+    
+.hint:hover:before, .hint:hover:after {
+  opacity: 1;
+}
+
+.hint:before {
+  content: '';
+  position: absolute;
+  background: transparent;
+  border: 6px solid transparent;
+  position: absolute;
+}
+    
+.hint:after {
+  content: attr(data-hint);
+  background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 8px 10px;
+      font-size: 12px;
+  white-space: nowrap;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* top */
+
+.hint--top:before {
+  bottom: 100%;
+  left: 50%;
+  margin: 0 0 -18px 0;
+  border-top-color: rgba(0, 0, 0, 0.8);
+}
+    
+.hint--top:after {
+  bottom: 100%;
+  left: 50%;
+  margin: 0 0 -6px -10px;
+}
+
+.hint--top:hover:before {
+  margin-bottom: -10px;
+}
+
+.hint--top:hover:after {
+  margin-bottom: 2px;
+}
+
+/* default: bottom */
+
+.hint--bottom:before {
+  top: 100%;
+  left: 50%;
+  margin: -14px 0 0 0;
+  border-bottom-color: rgba(0, 0, 0, 0.8);
+}
+    
+.hint--bottom:after {
+  top: 100%;
+  left: 50%;
+  margin: -2px 0 0 -10px;
+}
+
+.hint--bottom:hover:before {
+  margin-top: -6px;
+}
+
+.hint--bottom:hover:after {
+  margin-top: 6px;
+}
+
+/* right */
+
+.hint--right:before {
+  left: 100%;
+  bottom: 50%;
+  margin: 0 0 -4px -8px;
+  border-right-color: rgba(0,0,0,0.8);
+}
+    
+.hint--right:after {
+  left: 100%;
+  bottom: 50%;
+  margin: 0 0 -13px 4px;
+}
+
+.hint--right:hover:before {
+  margin: 0 0 -4px -0;
+}
+
+.hint--right:hover:after {
+  margin: 0 0 -13px 12px;
+}
+
+/* left */
+
+.hint--left:before {
+  right: 100%;
+  bottom: 50%;
+  margin: 0 -8px -4px 0;
+  border-left-color: rgba(0,0,0,0.8);
+}
+    
+.hint--left:after {
+  right: 100%;
+  bottom: 50%;
+  margin: 0 4px -13px 0;
+}
+
+.hint--left:hover:before {
+  margin: 0 0 -4px 0;
+}
+
+.hint--left:hover:after {
+  margin: 0 12px -13px 0;
+}
+ </style>
 <body>
+
+<div class="preloader">
+  <div class="preloader__content">
+    <div class="preloader__logo">
+      <div class="preloader__logo__letter">p</div>
+      <div class="preloader__logo__letter">e</div>
+      <div class="preloader__logo__letter">a</div>
+      <div class="preloader__logo__letter">c</div>
+      <div class="preloader__logo__letter">h</div>
+      <div class="preloader__logo__letter">m</div>
+      <div class="preloader__logo__letter">o</div>
+      <div class="preloader__logo__letter">d</div>
+      <div class="preloader__logo__letter">e</div>
+      <div class="preloader__logo__letter">l</div>
+      <div class="preloader__logo__letter">s</div>
+    </div>
+  </div>
+</div>
 
 <header>
   <div class="mainContainer">
@@ -38,6 +188,7 @@
 
 <main>
   <!-- BANNER section -->
+  <div class="preloader-img" style="background-image: url(img/preloader-img.jpeg);"></div>
   <section class="banner bg-container bg-left">
     <div class="mainContainer">
       <div class="banner__wrapp">
@@ -107,7 +258,7 @@
                   <img src="img/requirement_it4.svg" alt="">
                 </div>
                 <span>Документ
-                    <i>
+                    <i class="hint  hint--left" data-hint="Фотография документа и фото с пасом. На некоторых сайтах есть ещё требования (например фото с датой или никнеймом). Со всем поможем и подскажем :)">
                     <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="8" cy="8" r="7.5" fill="white" stroke="#CADEF0"/>
                         <path d="M7.772 4.848C7.18 4.848 6.688 5.104 6.296 5.616L5.48 4.692C5.704 4.324 6.028 4.028 6.452 3.804C6.876 3.58 7.344 3.468 7.856 3.468C8.64 3.468 9.252 3.672 9.692 4.08C10.148 4.48 10.376 4.98 10.376 5.58C10.376 6.108 10.272 6.536 10.064 6.864C9.856 7.184 9.564 7.496 9.188 7.8C9.14 7.84 9.076 7.892 8.996 7.956C8.924 8.02 8.864 8.072 8.816 8.112C8.776 8.144 8.72 8.192 8.648 8.256C8.584 8.32 8.536 8.372 8.504 8.412C8.472 8.444 8.428 8.496 8.372 8.568C8.324 8.632 8.292 8.688 8.276 8.736C8.26 8.784 8.236 8.848 8.204 8.928C8.18 9.008 8.172 9.08 8.18 9.144C8.196 9.208 8.204 9.288 8.204 9.384L6.944 9.396C6.896 9.1 6.892 8.84 6.932 8.616C6.98 8.384 7.08 8.176 7.232 7.992C7.392 7.8 7.52 7.664 7.616 7.584C7.72 7.496 7.884 7.368 8.108 7.2C8.636 6.832 8.9 6.392 8.9 5.88C8.9 5.592 8.792 5.348 8.576 5.148C8.36 4.948 8.092 4.848 7.772 4.848ZM6.68 11.1C6.68 10.868 6.768 10.664 6.944 10.488C7.128 10.304 7.356 10.212 7.628 10.212C7.876 10.212 8.084 10.304 8.252 10.488C8.428 10.664 8.516 10.868 8.516 11.1C8.516 11.364 8.432 11.592 8.264 11.784C8.096 11.968 7.884 12.06 7.628 12.06C7.356 12.06 7.128 11.968 6.944 11.784C6.768 11.592 6.68 11.364 6.68 11.1Z" fill="#CADEF0"/>
