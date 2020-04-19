@@ -1977,8 +1977,8 @@ header {
           animation-fill-mode: both; }
 
 .animation-start .banner .bg-element:after {
-  -webkit-animation: banner-bg 1s linear;
-          animation: banner-bg 1s linear;
+  -webkit-animation: banner-bg .9s linear;
+          animation: banner-bg .9s linear;
   -webkit-animation-delay: 4.6s;
           animation-delay: 4.6s;
   -webkit-animation-fill-mode: both;
