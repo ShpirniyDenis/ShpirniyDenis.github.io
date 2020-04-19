@@ -1531,10 +1531,31 @@ header
 
 
 // placeholder
+.animation-start
+  .preloader:after
+    //transition: transform .4s ease-in
+  .preloader.closed, .preloader:after
+    transform: scaleY(0)
+  .preloader__logo__letter
+    animation-name: logoAnim
+    transform: translate3d(0,15px,0)
+  .preloader-img
+    animation: preloader-img 1s
+    animation-delay: 4.4s
+    animation-fill-mode: both
+  .banner
+    .banner__content
+      animation: banner-content 1s
+      animation-delay: 5.7s
+      animation-fill-mode: both
+    .bg-element
+      &:after
+        animation: banner-bg 1s linear
+        animation-delay: 4.6s
+        animation-fill-mode: both
 .preloader 
   z-index: 998
   background-color: #fefefe
-  -webkit-transform-origin: top
   transform-origin: top
   overflow: hidden
 .preloader, .preloader:after
@@ -1548,24 +1569,14 @@ header
 .preloader:after
   content: ""
   z-index: 999
-  background-color: $color_bg
-  -webkit-transform-origin: bottom
+  background-color: #fff
   transform-origin: bottom
-  -webkit-transition: -webkit-transform .4s ease-in
-  transition: -webkit-transform .4s ease-in
-  transition: transform .4s ease-in
-  transition: transform .4s ease-in, -webkit-transform .4s ease-in
-.preloader.closed, .preloader:after
-  -webkit-transform: scaleY(0)
-  transform: scaleY(0)
 .preloader.closed
-  -webkit-transition: -webkit-transform .4s ease-in .4s
-  transition: -webkit-transform .4s ease-in .4s
   transition: transform .4s ease-in .4s
-  transition: transform .4s ease-in .4s, -webkit-transform .4s ease-in .4s
 .preloader.closed:after
-  -webkit-transform: scaleX(1)
+  background-color: $color_bg
   transform: scaleX(1)
+  transition: transform .4s ease-in
 .preloader__content
   display: flex
   justify-content: center
@@ -1584,12 +1595,10 @@ header
     letter-spacing: .10em
 .preloader__logo__letter
   display: inline-block
-  animation-name: logoAnim
   animation-duration: .5s
   animation-timing-function: linear
   animation-fill-mode: forwards
   opacity: 0
-  transform: translate3d(0,15px,0)
   text-transform: uppercase
   &:nth-child(1)
     animation-delay: 1s
@@ -1633,9 +1642,6 @@ header
   top: 0
   z-index: 9
   right: 0
-  animation: preloader-img 1s
-  animation-delay: 4.2s
-  animation-fill-mode: both
   @media (max-width: 1200px)
     background-position: 71%
 
@@ -1671,40 +1677,31 @@ header
 .banner
   .banner__content
     opacity: 0
-    animation: banner-content 1s
-    animation-delay: 5.5s
-    animation-fill-mode: both
   .bg-element
     &:after
       width: 100%
-      animation: banner-bg 1s
-      animation-delay: 4.3s
-      animation-fill-mode: both
+@keyframes banner-bg
+  0%
+    width: 100%
+  100%
+    width: 16%
+@keyframes banner-content
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+@media screen and (min-width: 1500px)
   @keyframes banner-bg
     0%
       width: 100%
     100%
-      width: 16%
-  @keyframes banner-content
+      width: 22%
+@media screen and (max-width: 768px)
+  @keyframes banner-bg
     0%
-      opacity: 0
+      width: 100%
     100%
-      opacity: 1
-  @media screen and (min-width: 1500px)
-    @keyframes banner-bg
-      0%
-        width: 100%
-      100%
-        width: 22%
-  @media screen and (max-width: 768px)
-    @keyframes banner-bg
-      0%
-        width: 100%
-      100%
-        width: 22% 
-
-
-
+      width: 22% 
 
 
 

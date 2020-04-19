@@ -1949,12 +1949,47 @@ header {
       height: 234px;
       margin-bottom: 20px; } }
 
+.animation-start .preloader.closed, .animation-start .preloader:after {
+  -webkit-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+          transform: scaleY(0); }
+
+.animation-start .preloader__logo__letter {
+  -webkit-animation-name: logoAnim;
+          animation-name: logoAnim;
+  -webkit-transform: translate3d(0, 15px, 0);
+          transform: translate3d(0, 15px, 0); }
+
+.animation-start .preloader-img {
+  -webkit-animation: preloader-img 1s;
+          animation: preloader-img 1s;
+  -webkit-animation-delay: 4.4s;
+          animation-delay: 4.4s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+.animation-start .banner .banner__content {
+  -webkit-animation: banner-content 1s;
+          animation: banner-content 1s;
+  -webkit-animation-delay: 5.7s;
+          animation-delay: 5.7s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+.animation-start .banner .bg-element:after {
+  -webkit-animation: banner-bg 1s linear;
+          animation: banner-bg 1s linear;
+  -webkit-animation-delay: 4.6s;
+          animation-delay: 4.6s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
 .preloader {
   z-index: 998;
   background-color: #fefefe;
   -webkit-transform-origin: top;
-  -ms-transform-origin: top;
-      transform-origin: top;
+      -ms-transform-origin: top;
+          transform-origin: top;
   overflow: hidden; }
 
 .preloader, .preloader:after {
@@ -1969,20 +2004,10 @@ header {
 .preloader:after {
   content: "";
   z-index: 999;
-  background-color: #0D1C2F;
+  background-color: #fff;
   -webkit-transform-origin: bottom;
-  -ms-transform-origin: bottom;
-      transform-origin: bottom;
-  -webkit-transition: -webkit-transform .4s ease-in;
-  transition: -webkit-transform .4s ease-in;
-  -o-transition: transform .4s ease-in;
-  transition: transform .4s ease-in;
-  transition: transform .4s ease-in, -webkit-transform .4s ease-in; }
-
-.preloader.closed, .preloader:after {
-  -webkit-transform: scaleY(0);
-  -ms-transform: scaleY(0);
-      transform: scaleY(0); }
+      -ms-transform-origin: bottom;
+          transform-origin: bottom; }
 
 .preloader.closed {
   -webkit-transition: -webkit-transform .4s ease-in .4s;
@@ -1992,9 +2017,15 @@ header {
   transition: transform .4s ease-in .4s, -webkit-transform .4s ease-in .4s; }
 
 .preloader.closed:after {
+  background-color: #0D1C2F;
   -webkit-transform: scaleX(1);
-  -ms-transform: scaleX(1);
-      transform: scaleX(1); }
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: -webkit-transform .4s ease-in;
+  transition: -webkit-transform .4s ease-in;
+  -o-transition: transform .4s ease-in;
+  transition: transform .4s ease-in;
+  transition: transform .4s ease-in, -webkit-transform .4s ease-in; }
 
 .preloader__content {
   display: -webkit-box;
@@ -2027,8 +2058,6 @@ header {
 
 .preloader__logo__letter {
   display: inline-block;
-  -webkit-animation-name: logoAnim;
-          animation-name: logoAnim;
   -webkit-animation-duration: .5s;
           animation-duration: .5s;
   -webkit-animation-timing-function: linear;
@@ -2036,8 +2065,6 @@ header {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
-  -webkit-transform: translate3d(0, 15px, 0);
-          transform: translate3d(0, 15px, 0);
   text-transform: uppercase; }
   .preloader__logo__letter:nth-child(1) {
     -webkit-animation-delay: 1s;
@@ -2101,13 +2128,7 @@ header {
   position: absolute;
   top: 0;
   z-index: 9;
-  right: 0;
-  -webkit-animation: preloader-img 1s;
-          animation: preloader-img 1s;
-  -webkit-animation-delay: 4.2s;
-          animation-delay: 4.2s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both; }
+  right: 0; }
   @media (max-width: 1200px) {
     .preloader-img {
       background-position: 71%; } }
@@ -2169,22 +2190,10 @@ header {
       height: 396px; } } }
 
 .banner .banner__content {
-  opacity: 0;
-  -webkit-animation: banner-content 1s;
-          animation: banner-content 1s;
-  -webkit-animation-delay: 5.5s;
-          animation-delay: 5.5s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both; }
+  opacity: 0; }
 
 .banner .bg-element:after {
-  width: 100%;
-  -webkit-animation: banner-bg 1s;
-          animation: banner-bg 1s;
-  -webkit-animation-delay: 4.3s;
-          animation-delay: 4.3s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both; }
+  width: 100%; }
 
 @-webkit-keyframes banner-bg {
   0% {
