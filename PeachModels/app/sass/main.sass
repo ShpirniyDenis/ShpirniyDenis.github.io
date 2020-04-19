@@ -1536,6 +1536,7 @@ header
   background-color: #fefefe
   -webkit-transform-origin: top
   transform-origin: top
+  overflow: hidden
 .preloader, .preloader:after
   position: fixed
   top: 0
@@ -1565,7 +1566,6 @@ header
 .preloader.closed:after
   -webkit-transform: scaleX(1)
   transform: scaleX(1)
-
 .preloader__content
   display: flex
   justify-content: center
@@ -1668,7 +1668,40 @@ header
       max-width: 100%
       height: 396px
 
-
+.banner
+  .banner__content
+    opacity: 0
+    animation: banner-content 1s
+    animation-delay: 5.5s
+    animation-fill-mode: both
+  .bg-element
+    &:after
+      width: 100%
+      animation: banner-bg 1s
+      animation-delay: 4.3s
+      animation-fill-mode: both
+  @keyframes banner-bg
+    0%
+      width: 100%
+    100%
+      width: 16%
+  @keyframes banner-content
+    0%
+      opacity: 0
+    100%
+      opacity: 1
+  @media screen and (min-width: 1500px)
+    @keyframes banner-bg
+      0%
+        width: 100%
+      100%
+        width: 22%
+  @media screen and (max-width: 768px)
+    @keyframes banner-bg
+      0%
+        width: 100%
+      100%
+        width: 22%
 
 
 
