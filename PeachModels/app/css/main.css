@@ -227,6 +227,8 @@ header {
 
 .header__burger {
   width: 32px;
+  height: 32px;
+  display: inline-block;
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1072,6 +1074,7 @@ header {
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
+    -webkit-appearance: none;
     width: 100%; }
     .request__form input:last-child {
       margin-bottom: 20px; }
@@ -1192,7 +1195,8 @@ header {
   .request .request__form {
     width: 100%; }
     .request .request__form input {
-      text-align: center; }
+      text-align: center;
+      -webkit-appearance: none; }
   .request .btn-main {
     width: 100%; }
   .request .checkbox-group label {
@@ -1727,7 +1731,8 @@ header {
     -o-transition: all 0.2s;
     transition: all 0.2s;
     width: 100%;
-    text-align: center; }
+    text-align: center;
+    -webkit-appearance: none; }
     .request-popup__form input:last-child {
       margin-bottom: 20px; }
     .request-popup__form input::-webkit-input-placeholder {
