@@ -2190,21 +2190,13 @@ header {
   0% {
     width: 100%; }
   100% {
-    width: 16%;
-    @media screen and (min-width: 1500px) {
-      width: 22%; }
-    @media screen and (max-width: 768px) {
-      width: 22%; } } }
+    width: 16%; } }
 
 @keyframes banner-bg {
   0% {
     width: 100%; }
   100% {
-    width: 16%;
-    @media screen and (min-width: 1500px) {
-      width: 22%; }
-    @media screen and (max-width: 768px) {
-      width: 22%; } } }
+    width: 16%; } }
 
 @-webkit-keyframes banner-content {
   0% {
@@ -2217,3 +2209,27 @@ header {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+@media screen and (min-width: 1500px) {
+  @-webkit-keyframes banner-bg {
+    0% {
+      width: 100%; }
+    100% {
+      width: 22%; } }
+  @keyframes banner-bg {
+    0% {
+      width: 100%; }
+    100% {
+      width: 22%; } } }
+
+@media screen and (max-width: 768px) {
+  @-webkit-keyframes banner-bg {
+    0% {
+      width: 100%; }
+    100% {
+      width: 22%; } }
+  @keyframes banner-bg {
+    0% {
+      width: 100%; }
+    100% {
+      width: 22%; } } }
