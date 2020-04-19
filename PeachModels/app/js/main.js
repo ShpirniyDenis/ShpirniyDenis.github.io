@@ -138,7 +138,7 @@ window.onload = function() {
   document.querySelector('body').classList.add('animation-start');
   setTimeout(function () {
     document.querySelector(".preloader").classList.add('closed');
-  }, 3500)
+  }, 3200)
 };
 
 
