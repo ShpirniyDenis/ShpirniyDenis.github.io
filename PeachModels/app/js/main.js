@@ -146,7 +146,7 @@ window.onload = function() {
   }
 };
 
-// for animation
+// for animations
 (function() {
   var elements;
   var windowHeight;
