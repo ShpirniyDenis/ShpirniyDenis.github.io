@@ -2254,27 +2254,38 @@ header {
     100% {
       width: 22%; } } }
 
-.requirement .bg-element:after, .conditions .bg-element:after {
+.requirement.animation-container .bg-element:after, .conditions.animation-container .bg-element:after {
   width: 100%; }
 
-.requirement .requirement__img, .requirement .requirement__content, .requirement .conditions__img, .requirement .conditions__content, .conditions .requirement__img, .conditions .requirement__content, .conditions .conditions__img, .conditions .conditions__content {
+.requirement.animation-container .requirement__img, .requirement.animation-container .requirement__content, .requirement.animation-container .conditions__img, .requirement.animation-container .conditions__content, .conditions.animation-container .requirement__img, .conditions.animation-container .requirement__content, .conditions.animation-container .conditions__img, .conditions.animation-container .conditions__content {
   opacity: 0; }
+  @media (max-width: 992px) {
+    .requirement.animation-container .requirement__img, .requirement.animation-container .requirement__content, .requirement.animation-container .conditions__img, .requirement.animation-container .conditions__content, .conditions.animation-container .requirement__img, .conditions.animation-container .requirement__content, .conditions.animation-container .conditions__img, .conditions.animation-container .conditions__content {
+      opacity: 1; } }
 
-.requirement.active .bg-element:after, .conditions.active .bg-element:after {
+.requirement.animation-container.active .bg-element:after, .conditions.animation-container.active .bg-element:after {
   -webkit-animation: bg-width 1s;
           animation: bg-width 1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
+  @media (max-width: 992px) {
+    .requirement.animation-container.active .bg-element:after, .conditions.animation-container.active .bg-element:after {
+      -webkit-animation: none;
+              animation: none; } }
 
-.requirement.active .requirement__img, .requirement.active .requirement__content, .requirement.active .conditions__img, .requirement.active .conditions__content, .conditions.active .requirement__img, .conditions.active .requirement__content, .conditions.active .conditions__img, .conditions.active .conditions__content {
+.requirement.animation-container.active .requirement__img, .requirement.animation-container.active .requirement__content, .requirement.animation-container.active .conditions__img, .requirement.animation-container.active .conditions__content, .conditions.animation-container.active .requirement__img, .conditions.animation-container.active .requirement__content, .conditions.animation-container.active .conditions__img, .conditions.animation-container.active .conditions__content {
   -webkit-animation: image-opacity 1s;
           animation: image-opacity 1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   -webkit-animation-delay: .3s;
           animation-delay: .3s; }
+  @media (max-width: 992px) {
+    .requirement.animation-container.active .requirement__img, .requirement.animation-container.active .requirement__content, .requirement.animation-container.active .conditions__img, .requirement.animation-container.active .conditions__content, .conditions.animation-container.active .requirement__img, .conditions.animation-container.active .requirement__content, .conditions.animation-container.active .conditions__img, .conditions.animation-container.active .conditions__content {
+      -webkit-animation: none;
+              animation: none; } }
 
-.requirement.active .requirement__content, .requirement.active .conditions__content, .conditions.active .requirement__content, .conditions.active .conditions__content {
+.requirement.animation-container.active .requirement__content, .requirement.animation-container.active .conditions__content, .conditions.animation-container.active .requirement__content, .conditions.animation-container.active .conditions__content {
   -webkit-animation-delay: .6s;
           animation-delay: .6s; }
 

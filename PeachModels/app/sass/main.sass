@@ -1706,21 +1706,27 @@ header
     100%
       width: 22% 
 
-.requirement, .conditions
+.requirement.animation-container, .conditions.animation-container
   .bg-element
     &:after
       width: 100%
   .requirement__img, .requirement__content, .conditions__img, .conditions__content
     opacity: 0
+    @media (max-width: 992px)
+      opacity: 1
   &.active
     .bg-element
       &:after
         animation: bg-width 1s 
         animation-fill-mode: both
+        @media (max-width: 992px)
+          animation: none
     .requirement__img, .requirement__content, .conditions__img, .conditions__content
       animation: image-opacity 1s
       animation-fill-mode: both
       animation-delay: .3s
+      @media (max-width: 992px)
+          animation: none
     .requirement__content, .conditions__content
       animation-delay: .6s
 
