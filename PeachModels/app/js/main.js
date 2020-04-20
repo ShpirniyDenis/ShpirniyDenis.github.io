@@ -117,7 +117,6 @@ for(i = 0; i < menuLink.length; i++){
   menuLink[i].addEventListener('click',  menuToggleTimeout);
 }
 
-
 // for scrolling to anchor
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -136,16 +135,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-
 // for preloader
+let preloader = document.querySelector(".preloader");
 window.onload = function() {
-  document.querySelector('body').classList.add('animation-start');
-  setTimeout(function () {
-    document.querySelector(".preloader").classList.add('closed');
-  }, 3200)
+  if(preloader){
+    document.querySelector('body').classList.add('animation-start');
+      setTimeout(function () {
+      preloader.classList.add('closed');
+    }, 3200)
+  }
 };
 
-
+// for animation
 (function() {
   var elements;
   var windowHeight;
