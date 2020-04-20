@@ -1710,229 +1710,230 @@ header
 
 
 //*** ANIMATIONS ***//
-.animation-container
-  .heading-main
-    opacity: 0
-    transform: translateY(30px)
-    transition: all .6s ease-out
-    transition-delay: .3s
-  &.active
+@media (min-width: 992px)
+  .animation-container
     .heading-main
-      opacity: 1
-      transform: translateY(0)
-  &.advantages
-    .advantages__item
-      transform: translateY(30px)
       opacity: 0
-      transition: opacity .3s ease-out,transform .3s ease-out
-      &:nth-child(1)
-        transition-delay: .6s
-      &:nth-child(2)
-        transition-delay: .8s
-      &:nth-child(3)
-        transition-delay: 1s
-      &:nth-child(4)
-        transition-delay: 1.20s
+      transform: translateY(30px)
+      transition: all .6s ease-out
+      transition-delay: .3s
     &.active
+      .heading-main
+        opacity: 1
+        transform: translateY(0)
+    &.advantages
       .advantages__item
-        transform: translateY(0)
-        opacity: 1
-  &.requirement
-    .requirement__img
-      width: 0%
-      transition: width .9s ease-out
-      transition-delay: .5s
-    .requirement__content
-      opacity: 0
-      transform: translateY(30px)
-      transition: all 1s ease-out
-      transition-delay: .8s
-    .bg-element
-      &:after
-        width: 100%
-        transition: all 1s ease-out
-    &.active
+        transform: translateY(30px)
+        opacity: 0
+        transition: opacity .3s ease-out,transform .3s ease-out
+        &:nth-child(1)
+          transition-delay: .6s
+        &:nth-child(2)
+          transition-delay: .8s
+        &:nth-child(3)
+          transition-delay: 1s
+        &:nth-child(4)
+          transition-delay: 1.20s
+      &.active
+        .advantages__item
+          transform: translateY(0)
+          opacity: 1
+    &.requirement
       .requirement__img
-        width: 44%
+        width: 0%
+        transition: width .9s ease-out
+        transition-delay: .5s
       .requirement__content
-        opacity: 1
-        transform: translateY(0)
-      .bg-element
-        &:after
-          width: 16%
-  &.we-know
-    .we-know__item
-      transform: translateY(30px)
-      opacity: 0
-      transition: opacity .3s ease-out,transform .3s ease-out
-      &:nth-child(1)
-        transition-delay: .6s
-      &:nth-child(2)
-        transition-delay: .8s
-      &:nth-child(3)
-        transition-delay: 1s
-      &:nth-child(4)
-        transition-delay: 1.20s
-      &:nth-child(5)
-        transition-delay: 1.40s
-      &:nth-child(6)
-        transition-delay: 1.60s
-    &.active
-      .we-know__item
-        transform: translateY(0)
-        opacity: 1
-  &.conditions
-    .bg-element
-      &:after
-        width: 100%
+        opacity: 0
+        transform: translateY(30px)
         transition: all 1s ease-out
-    .conditions__img
-      width: 0%
-      transition: width .9s ease-out
-      transition-delay: .5s
-    .conditions__item
-      opacity: 0
-      transform: translateY(30px)
-      transition: opacity .3s ease-out,transform .3s ease-out
-      &:nth-child(1)
-        transition-delay: .7s
-      &:nth-child(2)
-        transition-delay: .95s
-      &:nth-child(3)
-        transition-delay: 1.15s
-    &.active
+        transition-delay: .8s
       .bg-element
         &:after
-          width: 16%
-      .conditions__img
-        width: 44%
-      .conditions__item
-        opacity: 1
-        transform: translateY(0)
-  &.how-start
-    .how-start__item
-      opacity: 0
-      transform: translateY(30px)
-      transition: opacity .3s ease-out,transform .3s ease-out
-      &:nth-child(1)
-        transition-delay: .6s
-      &:nth-child(2)
-        transition-delay: .8s
-      &:nth-child(3)
-        transition-delay: 1s
-      &:nth-child(4)
-        transition-delay: 1.20s
-    &.active
-      .how-start__item
-        opacity: 1
-        transform: translateY(0)
-  &.statistics
-    .statistics__item
-      opacity: 0
-      transform: translateY(30px)
-      transition: opacity .3s ease-out,transform .3s ease-out
-      &:nth-child(1)
-        transition-delay: .6s
-      &:nth-child(2)
-        transition-delay: .8s
-      &:nth-child(3)
-        transition-delay: 1s
-    .bg-element
-      &:after
-        display: block
-        width: 100%
-        transition: all 1s ease-out
-    &.active
-      .bg-element
-        &:after
-          width: 0
-      .statistics__item
-        opacity: 1
-        transform: translateY(0)
-  &.reviews
-    .swiper-slide-active, .swiper-slide-prev, .swiper-slide-next
-      opacity: 0
-      transition: all .3s
-      animation-delay: .5s
-    .swiper-slide-prev, .swiper-slide-next
-      transition-delay: .8s
-    &.active
-      .swiper-slide-active, .swiper-slide-prev, .swiper-slide-next
-        opacity: 1
-  &.faq
-    .faq__item
-      opacity: 0
-      transition: all 0.3s
-      transform: translateY(30px)
-      &:nth-child(1)
-        transition-delay: .6s
-      &:nth-child(2)
-        transition-delay: .8s
-      &:nth-child(3)
-        transition-delay: 1s
-      &:nth-child(4)
-        transition-delay: 1.20s
-      &:nth-child(5)
-        transition-delay: 1.40s
-      &:nth-child(6)
-        transition-delay: 1.60s
-      &:nth-child(7)
-        transition-delay: 1.80s
-      &:nth-child(8)
-        transition-delay: 2s
-      &:nth-child(9)
-        transition-delay: 2.20s
-      &:nth-child(10)
-        transition-delay: 2.40s
-    &.active
-      .faq__item
-        opacity: 1
-        transform: translateY(0)
-  &.request
-    .request__img
-      width: 0
-      transition: width .9s ease-out
-      transition-delay: .7s
-    .request__content__descr
-      opacity: 0
-      transition: all 0.3s
-      transform: translateY(30px)
-      transition-delay: 1s
-    .request__form
-      opacity: 0
-      transition: all 0.3s
-      transform: translateY(30px)
-      transition-delay: 1.4s
-    &.active
-      .request__img
-        width: 44%
-      .request__content__descr, .request__form
-        opacity: 1
-        transform: translateY(0)
-  &.bolg-catalog
-    .bolg-catalog__item__wrapp
-      opacity: 0
-      transform: translateY(30px)
-      transition: all .3s
-      transition-delay: .6s
-      &.bolg-catalog__item__double
-        transition-delay: .8s
-        .bolg-catalog__item
-          opacity: 0
-          transform: translateY(20px)
-          transition: all .4s
-          &:nth-child(1)
-            transition-delay: 1s
-          &:nth-child(2)
-            transition-delay: 1.2s
-    &.active
-      .bolg-catalog__item__wrapp, .bolg-catalog__item__wrapp.bolg-catalog__item__double
-        opacity: 1
-        transform: translateY(0)
-      .bolg-catalog__item__wrapp.bolg-catalog__item__double
-        .bolg-catalog__item
+          width: 100%
+          transition: all 1s ease-out
+      &.active
+        .requirement__img
+          width: 44%
+        .requirement__content
           opacity: 1
           transform: translateY(0)
+        .bg-element
+          &:after
+            width: 16%
+    &.we-know
+      .we-know__item
+        transform: translateY(30px)
+        opacity: 0
+        transition: opacity .3s ease-out,transform .3s ease-out
+        &:nth-child(1)
+          transition-delay: .6s
+        &:nth-child(2)
+          transition-delay: .8s
+        &:nth-child(3)
+          transition-delay: 1s
+        &:nth-child(4)
+          transition-delay: 1.20s
+        &:nth-child(5)
+          transition-delay: 1.40s
+        &:nth-child(6)
+          transition-delay: 1.60s
+      &.active
+        .we-know__item
+          transform: translateY(0)
+          opacity: 1
+    &.conditions
+      .bg-element
+        &:after
+          width: 100%
+          transition: all 1s ease-out
+      .conditions__img
+        width: 0%
+        transition: width .9s ease-out
+        transition-delay: .5s
+      .conditions__item
+        opacity: 0
+        transform: translateY(30px)
+        transition: opacity .3s ease-out,transform .3s ease-out
+        &:nth-child(1)
+          transition-delay: .7s
+        &:nth-child(2)
+          transition-delay: .95s
+        &:nth-child(3)
+          transition-delay: 1.15s
+      &.active
+        .bg-element
+          &:after
+            width: 16%
+        .conditions__img
+          width: 44%
+        .conditions__item
+          opacity: 1
+          transform: translateY(0)
+    &.how-start
+      .how-start__item
+        opacity: 0
+        transform: translateY(30px)
+        transition: opacity .3s ease-out,transform .3s ease-out
+        &:nth-child(1)
+          transition-delay: .6s
+        &:nth-child(2)
+          transition-delay: .8s
+        &:nth-child(3)
+          transition-delay: 1s
+        &:nth-child(4)
+          transition-delay: 1.20s
+      &.active
+        .how-start__item
+          opacity: 1
+          transform: translateY(0)
+    &.statistics
+      .statistics__item
+        opacity: 0
+        transform: translateY(30px)
+        transition: opacity .3s ease-out,transform .3s ease-out
+        &:nth-child(1)
+          transition-delay: .6s
+        &:nth-child(2)
+          transition-delay: .8s
+        &:nth-child(3)
+          transition-delay: 1s
+      .bg-element
+        &:after
+          display: block
+          width: 100%
+          transition: all 1s ease-out
+      &.active
+        .bg-element
+          &:after
+            width: 0
+        .statistics__item
+          opacity: 1
+          transform: translateY(0)
+    &.reviews
+      .swiper-slide-active, .swiper-slide-prev, .swiper-slide-next
+        opacity: 0
+        transition: all .3s
+        animation-delay: .5s
+      .swiper-slide-prev, .swiper-slide-next
+        transition-delay: .8s
+      &.active
+        .swiper-slide-active, .swiper-slide-prev, .swiper-slide-next
+          opacity: 1
+    &.faq
+      .faq__item
+        opacity: 0
+        transition: all 0.3s
+        transform: translateY(30px)
+        &:nth-child(1)
+          transition-delay: .6s
+        &:nth-child(2)
+          transition-delay: .8s
+        &:nth-child(3)
+          transition-delay: 1s
+        &:nth-child(4)
+          transition-delay: 1.20s
+        &:nth-child(5)
+          transition-delay: 1.40s
+        &:nth-child(6)
+          transition-delay: 1.60s
+        &:nth-child(7)
+          transition-delay: 1.80s
+        &:nth-child(8)
+          transition-delay: 2s
+        &:nth-child(9)
+          transition-delay: 2.20s
+        &:nth-child(10)
+          transition-delay: 2.40s
+      &.active
+        .faq__item
+          opacity: 1
+          transform: translateY(0)
+    &.request
+      .request__img
+        width: 0
+        transition: width .9s ease-out
+        transition-delay: .7s
+      .request__content__descr
+        opacity: 0
+        transition: all 0.3s
+        transform: translateY(30px)
+        transition-delay: 1s
+      .request__form
+        opacity: 0
+        transition: all 0.3s
+        transform: translateY(30px)
+        transition-delay: 1.4s
+      &.active
+        .request__img
+          width: 44%
+        .request__content__descr, .request__form
+          opacity: 1
+          transform: translateY(0)
+    &.bolg-catalog
+      .bolg-catalog__item__wrapp
+        opacity: 0
+        transform: translateY(30px)
+        transition: all .3s
+        transition-delay: .6s
+        &.bolg-catalog__item__double
+          transition-delay: .8s
+          .bolg-catalog__item
+            opacity: 0
+            transform: translateY(20px)
+            transition: all .4s
+            &:nth-child(1)
+              transition-delay: 1s
+            &:nth-child(2)
+              transition-delay: 1.2s
+      &.active
+        .bolg-catalog__item__wrapp, .bolg-catalog__item__wrapp.bolg-catalog__item__double
+          opacity: 1
+          transform: translateY(0)
+        .bolg-catalog__item__wrapp.bolg-catalog__item__double
+          .bolg-catalog__item
+            opacity: 1
+            transform: translateY(0)
 
 
 
