@@ -108,7 +108,11 @@ burgerBtn.addEventListener('click', menuToggle)
 
 for(i = 0; i < menuLink.length; i++){
   let menuToggleTimeout = function(){
-    setTimeout(menuToggle, 1000);
+    if(window.screen.width > 992) {
+      setTimeout(menuToggle, 1000);
+    }else{
+      menuToggle();
+    }
   }
   menuLink[i].addEventListener('click',  menuToggleTimeout);
 }
