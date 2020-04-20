@@ -1985,6 +1985,15 @@ header {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
+.animation-start header {
+  opacity: 0;
+  -webkit-animation: banner-content 1s;
+          animation: banner-content 1s;
+  -webkit-animation-delay: 5.7s;
+          animation-delay: 5.7s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
 .preloader {
   z-index: 998;
   background-color: #fefefe;
