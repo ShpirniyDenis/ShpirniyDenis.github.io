@@ -161,8 +161,14 @@ window.onload = function() {
       var element = elements[i];
       var positionFromTop = elements[i].getBoundingClientRect().top;
 
-      if (positionFromTop+200 - windowHeight <= 0) {
-        element.classList.add('active');
+      if(window.screen.width > 992) {
+        if (positionFromTop+200 - windowHeight <= 0) {
+          element.classList.add('active');
+        }
+      }else{
+        if (positionFromTop+100 - windowHeight <= 0) {
+          element.classList.add('active');
+        }
       }
     }
   }
