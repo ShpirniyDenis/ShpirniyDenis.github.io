@@ -2337,7 +2337,7 @@ header {
   opacity: 1; }
 
 .animation-container.requirement .requirement__img {
-  width: 5%;
+  width: 0%;
   -webkit-transition: width .9s ease-out;
   -o-transition: width .9s ease-out;
   transition: width .9s ease-out;
@@ -2346,6 +2346,7 @@ header {
           transition-delay: .5s; }
   @media screen and (max-width: 768px) {
     .animation-container.requirement .requirement__img {
+      width: 5%;
       -webkit-transition-delay: .1s;
            -o-transition-delay: .1s;
               transition-delay: .1s; } }
