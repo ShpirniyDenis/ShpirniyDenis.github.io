@@ -1756,9 +1756,11 @@ header
         opacity: 1
   &.requirement
     .requirement__img
-      width: 0%
+      width: 5%
       transition: width .9s ease-out
       transition-delay: .5s
+      @media screen and (max-width: 768px)
+        transition-delay: .1s
     .requirement__content
       opacity: 0
       transform: translateY(30px)
@@ -1822,7 +1824,7 @@ header
       transition-delay: .5s
       @media screen and (max-width: 768px)
         width: 5%
-        transition-delay: .2
+        transition-delay: .1
     .conditions__item
       opacity: 0
       transform: translateY(30px)
@@ -1896,8 +1898,14 @@ header
       opacity: 0
       transition: all .3s
       animation-delay: .5s
+      @media screen and (max-width: 992px)
+        transition: none
+        opacity: 1
     .swiper-slide-prev, .swiper-slide-next
       transition-delay: .8s
+      @media screen and (max-width: 992px)
+        transition: none
+        opacity: 1
     &.active
       .swiper-slide-active, .swiper-slide-prev, .swiper-slide-next
         opacity: 1
