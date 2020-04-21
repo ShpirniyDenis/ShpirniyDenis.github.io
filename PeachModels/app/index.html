@@ -420,18 +420,25 @@
         <div class="request__content">
           <div class="heading-main"><h2>Подавай заявку, приводи подругу и получай за это <span class="gradient-span">приятный бонус</span></h2></div>
           <div class="request__content__descr">Когда подруга заработает 150$, ты получишь 100$.<br> Единоразово. Мелочь, а приятно :)</div>
-          <form action="" class="request__form">
-            <input type="text" placeholder="имя" required>
-            <input type="text" placeholder="телефон" required>
-            <input type="text" placeholder="e-mail" required>
+          <form id="request-content-form" class="request__form">
+            <input type="text" placeholder="имя" name="name" required>
+            <input type="text" placeholder="телефон" name="phone" required>
+            <input type="text" placeholder="e-mail" name="email" required>
             <div class="checkbox-group">
-              <input type="checkbox" id="ageCheck" required=>
+              <input type="checkbox" id="ageCheck" name="agree" required>
               <label for="ageCheck">
                 мне есть 18 лет
               </label>
             </div>
-            <button class="btn-main">отправить</button>
+            <button class="btn-main" type="submit">отправить</button>
           </form>
+          <div class="request__form__success" style="display: none">
+            <b>Спасибо!</b>
+            <p>Заявка отправлена. Наш менеджер свяжется<br> с вами в течение 30 минут :)</p>
+          </div>
+          <div class="request__form__spinner" style="display: none;">
+            <span class="spinner"></span> 
+          </div>
         </div>
       </div>
     </div>
@@ -498,10 +505,16 @@
         <div class="request-popup__heading">
           Подать заявку
         </div>
-        <form action="" class="request-popup__form">
-          <input type="text" placeholder="имя" required>
-          <input type="text" placeholder="телефон" required>
-          <input type="text" placeholder="e-mail" required>
+        <form class="request-popup__form" id="request-popup-form">
+          <input type="text" placeholder="имя" name="name" required>
+          <input type="text" placeholder="телефон" name="phone" required>
+          <input type="text" placeholder="e-mail" name="email" required>
+          <div class="checkbox-group">
+              <input type="checkbox" id="ageCheck2" name="agree" required>
+              <label for="ageCheck2">
+                мне есть 18 лет
+              </label>
+            </div>
           <button class="btn-main">отправить</button>
         </form>
       </div>
@@ -509,10 +522,14 @@
         <b>Спасибо!</b>
         <p>Заявка отправлена. Наш менеджер свяжется<br> с вами в течение 30 минут :)</p>
       </div>
+      <div class="request-popup__spinner" style="display: none;">
+        <span class="spinner"></span> 
+      </div>
     </div>
   </div>
 
 
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="libs/swiperjs/swiper.min.js"></script>
 <script src="js/main.js"></script>
 

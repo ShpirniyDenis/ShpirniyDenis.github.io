@@ -1055,6 +1055,26 @@ header {
 .request__content {
   width: 46.6%; }
 
+.request__form__success {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .request__form__success b {
+    display: block;
+    font-size: 36px;
+    margin-bottom: 20px; }
+  .request__form__success p {
+    font-family: "Futura Book", Arial, sans-serif;
+    font-size: 20px; }
+  @media (max-width: 768px) {
+    .request__form__success p br {
+      display: none; } }
+
+.request__form__spinner {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
 .request__content__descr {
   font-size: 20px;
   line-height: 26px;
@@ -1118,10 +1138,9 @@ header {
   margin-bottom: 24px; }
   .checkbox-group input {
     padding: 0;
-    height: initial;
-    width: initial;
+    height: 1px;
+    border: none;
     margin: 0;
-    display: none;
     cursor: pointer; }
     .checkbox-group input:checked + label:before {
       border-color: #CADEF0; }
@@ -1772,6 +1791,18 @@ header {
   .request-popup__form button {
     margin: 0 auto;
     display: block; }
+  .request-popup__form .checkbox-group {
+    margin: 0 auto;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin-bottom: 24px; }
+    .request-popup__form .checkbox-group input {
+      height: 1px;
+      padding: 0;
+      font-size: 0;
+      border: none;
+      margin: 0; }
 
 .request-popup__success {
   padding: 56px 40px;
@@ -2917,3 +2948,90 @@ header {
 
 .hint--left:hover:after {
   margin: 0 12px -13px 0; }
+
+.spinner, .spinner:after {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.request-popup__spinner {
+  padding: 56px 40px;
+  text-align: center; }
+  @media (max-width: 768px) {
+    .request-popup__spinner {
+      padding: 56px 20px; } }
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+  color: #c31afb; }
+
+.spinner:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  border: 4px solid currentColor;
+  border-bottom-color: transparent;
+  border-radius: 100%;
+  background: transparent;
+  -webkit-animation: rotate .75s linear infinite;
+          animation: rotate .75s linear infinite; }
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg); } }
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg); } }
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1, 250;
+    stroke-dashoffset: 0; }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35; }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -140; } }
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 250;
+    stroke-dashoffset: 0; }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35; }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -140; } }
+
+@-webkit-keyframes color {
+  0% {
+    stroke: #192a55; }
+  25% {
+    stroke: #ffeb3b; }
+  50% {
+    stroke: #192a55; }
+  75% {
+    stroke: #ffeb3b; }
+  100% {
+    stroke: #192a55; } }
+
+@keyframes color {
+  0% {
+    stroke: #192a55; }
+  25% {
+    stroke: #ffeb3b; }
+  50% {
+    stroke: #192a55; }
+  75% {
+    stroke: #ffeb3b; }
+  100% {
+    stroke: #192a55; } }
