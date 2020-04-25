@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="content_language" content="ru">
+  <meta name="description" content="Anti1"> 
+  <title>Anti1</title> 
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="libs/swiperjs/swiper.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head> 
+<body> 
+
+
+
+<header>
+  <div class="mainContainer">
+    <div class="header__wrapp">
+      <a href="" class="header__logo">
+        <img src="img/header-logo.svg" alt="logo">
+        <span>Анти<br>Один</span>
+      </a>
+      <ul class="header__nav">
+        <li><a href="#">Как сыграть в игру</a></li>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Преимущества</a></li>
+      </ul>
+      <button class="btn-main btn-green header__btn left-orientation">
+        <span class="btn-element-left">
+          <span class="btn-element-left__delimiter">
+            <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.732 23.7202C7.00977 22.8117 2.29018 20.036 0.00127792 19.1275L0 4.47546C3.50488 1.99759 5.29309 1.33682 9.58479 0.593464C16.3084 -0.562875 27.8245 -0.975853 33.1176 8.60524C37.6239 16.7822 23.962 25.7025 12.732 23.7202Z" fill="#E4B1F0"/>
+            </svg>
+            <svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.2341 17.7902C6.18509 17.1088 2.02075 15.027 0.00112724 14.3456L0 3.35659C3.09255 1.49819 4.67037 1.00262 8.45716 0.445098C14.3898 -0.422156 24.551 -0.73189 29.2214 6.45393C33.1975 12.5866 21.1429 19.2769 11.2341 17.7902Z" fill="white"/>
+            </svg>
+          </span>
+        </span>
+        <span class="btn-element-right click-item" data-action="popup-open" data-label="#request-popup">Регистрация</span>
+      </button>
+  </div>
+</header>
+
+<main>
+  <!-- BANNER section -->
+  <section class="banner">
+    <div class="mainContainer">
+      <div class="banner__wrapp">
+        <div class="banner__content">
+          <h1>Познакомься,<br> играй и получайте<br> приз вместе</h1>
+          <div class="banner__links">
+            <button class="btn-main">
+              <span class="btn-element-left">
+                <span class="btn-element-left__delimiter">
+                  <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.732 23.7202C7.00977 22.8117 2.29018 20.036 0.00127792 19.1275L0 4.47546C3.50488 1.99759 5.29309 1.33682 9.58479 0.593464C16.3084 -0.562875 27.8245 -0.975853 33.1176 8.60524C37.6239 16.7822 23.962 25.7025 12.732 23.7202Z" fill="#E4B1F0"/>
+                  </svg>
+                  <svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.2341 17.7902C6.18509 17.1088 2.02075 15.027 0.00112724 14.3456L0 3.35659C3.09255 1.49819 4.67037 1.00262 8.45716 0.445098C14.3898 -0.422156 24.551 -0.73189 29.2214 6.45393C33.1975 12.5866 21.1429 19.2769 11.2341 17.7902Z" fill="white"/>
+                  </svg>
+                </span>
+              </span>
+              <span class="btn-element-right click-item" data-action="popup-open" data-label="#request-popup">Ты играешь?</span>
+            </button>
+            <button class="btn-main btn-green left-orientation">
+              <span class="btn-element-left">
+                <span class="btn-element-left__delimiter">
+                  <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.732 23.7202C7.00977 22.8117 2.29018 20.036 0.00127792 19.1275L0 4.47546C3.50488 1.99759 5.29309 1.33682 9.58479 0.593464C16.3084 -0.562875 27.8245 -0.975853 33.1176 8.60524C37.6239 16.7822 23.962 25.7025 12.732 23.7202Z" fill="#E4B1F0"/>
+                  </svg>
+                  <svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.2341 17.7902C6.18509 17.1088 2.02075 15.027 0.00112724 14.3456L0 3.35659C3.09255 1.49819 4.67037 1.00262 8.45716 0.445098C14.3898 -0.422156 24.551 -0.73189 29.2214 6.45393C33.1975 12.5866 21.1429 19.2769 11.2341 17.7902Z" fill="white"/>
+                  </svg>
+                </span>
+              </span>
+              <span class="btn-element-right">Выбрать приз</span>
+            </button>
+          </div>
+        </div>
+        <div class="banner__img">
+          <img src="img/banner-img.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="bg-element"></div>
+  </section>
+
+  <!-- HOW-PLAY section -->
+  <section class="how-play section-container">
+    <div class="mainContainer">
+      <div class="how-play__wrapp">
+        <div class="how-play__slider swiper-container">
+          <div class="how-play__slider__list swiper-wrapper">
+            <div class="how-play__slider__item swiper-slide slide-one">
+              <div class="how-play__slider__heading"><h2>Как сыграть в игру</h2></div>
+              <div class="how-play__slider__content">
+                <div class="how-play__slider__step">1 шаг</div>
+                <div class="how-play__slider__img"><img src="img/how-play-img1.svg" alt=""></div>
+                <div class="how-play__slider__descr">Присоединяйся и получи<br> WOW-PUZZLE<br> бесплатно!</div>
+              </div>
+            </div>
+            <div class="how-play__slider__item swiper-slide slide-two">
+              <div class="how-play__slider__heading"><h2>Как сыграть в игру</h2></div>
+              <div class="how-play__slider__content">
+                <div class="how-play__slider__step">2 шаг</div>
+                <div class="how-play__slider__img"><img src="img/how-play-img2.svg" alt=""></div>
+                <div class="how-play__slider__descr">Выбери с кем хочешь<br> ВЫИГРАТЬ</div>
+              </div>
+            </div>
+            <div class="how-play__slider__item swiper-slide slide-three">
+              <div class="how-play__slider__heading"><h2>Как сыграть в игру</h2></div>
+              <div class="how-play__slider__content">
+                <div class="how-play__slider__step">3 шаг</div>
+                <div class="how-play__slider__img"><img src="img/how-play-img3.svg" alt=""></div>
+                <div class="how-play__slider__descr">Выбери, что хочешь<br> ВМЕСТЕ выиграть</div>
+              </div>
+            </div>
+            <div class="how-play__slider__item swiper-slide slide-for">
+              <div class="how-play__slider__heading"><h2>Как сыграть в игру</h2></div>
+              <div class="how-play__slider__content">
+                <div class="how-play__slider__step">4 шаг</div>
+                <div class="how-play__slider__img"><img src="img/how-play-img4.svg" alt=""></div>
+                <div class="how-play__slider__descr">Сыграй в ИГРУ</div>
+              </div>
+            </div>
+            <div class="how-play__slider__item swiper-slide slide-five">
+              <div class="how-play__slider__heading"><h2>Как сыграть в игру</h2></div>
+              <div class="how-play__slider__content">
+                <div class="how-play__slider__step">5 шаг</div>
+                <div class="how-play__slider__img"><img src="img/how-play-img5.svg" alt=""></div>
+                <div class="how-play__slider__descr">Ура, мы ВМЕСТЕ<br> ВЫИГРАЛИ</div>
+              </div>
+            </div>
+          </div>
+          <div class="how-play__pagination swiper-pagination"></div>
+          <div class="how-play__slider__nav">
+            <button class="how-play__slider__btn prev">
+              <svg width="35" height="20" viewBox="0 0 35 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M35 10H2M2 10L11 1M2 10L11 19" stroke="#D1A2F3" stroke-width="2"/>
+              </svg>
+            </button>
+            <button class="how-play__slider__btn next">
+              <svg width="35" height="20" viewBox="0 0 35 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 10H33M33 10L24 1M33 10L24 19" stroke="#D1A2F3" stroke-width="2"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT section -->
+  <section class="about section-container">
+    <div class="mainContainer">
+      <div class="about__heading">
+        <h2>Участники и призы</h2>
+        <p>Количество призов будет расти!</p>
+      </div>
+      <div class="about__sliders">
+        <div class="about__users">
+          <div class="about__slider swiper-container">
+            <div class="about__slider__heading">Счастливые совпадения</div>
+            <div class="swiper-wrapper">
+              <div class="about__slider__item swiper-slide">
+                <div class="about__slider__img">
+                  <img src="img/about_users1.svg" alt="">
+                </div>
+                <div class="about__slider__info">Стас (Киев, 24 года) + Настя (Харьков, 22 года)</div>
+              </div>
+              <div class="about__slider__item swiper-slide">
+                <div class="about__slider__img">
+                  <img src="img/about_users2.svg" alt="">
+                </div>
+                <div class="about__slider__info">Саша (Харьков, 28 лет) + Оля (Днепр, 23 года)</div>
+              </div>
+              <div class="about__slider__item swiper-slide">
+                <div class="about__slider__img">
+                  <img src="img/about_users3.svg" alt="">
+                </div>
+                <div class="about__slider__info">Олег (Львов, 25 лет) + Даша (Одесса, 27 лет)</div>
+              </div>
+              <div class="about__slider__item swiper-slide">
+                <div class="about__slider__img">
+                  <img src="img/about_users4.svg" alt="">
+                </div>
+                <div class="about__slider__info">Славик (Запорожье, 28 лет) + Оля (Харьков , 27 лет)</div>
+              </div>
+            </div>
+            <div class="about__slider__nav">
+              <button class="about__slider__btn prev">
+                <svg width="35" height="20" viewBox="0 0 35 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M35 10H2M2 10L11 1M2 10L11 19" stroke="#D1A2F3" stroke-width="2"/>
+                </svg>
+              </button>
+              <button class="about__slider__btn next">
+                <svg width="35" height="20" viewBox="0 0 35 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 10H33M33 10L24 1M33 10L24 19" stroke="#D1A2F3" stroke-width="2"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+      </div>
+      <div class="about__prizes">
+          <div class="about__slider swiper-container">
+            <div class="about__slider__heading">Какие подарки разыгрываются</div>
+            <div class="swiper-wrapper">
+              <div class="about__slider__item swiper-slide">
+                <div class="about__slider__img">
+                  <img src="img/about_prizes1.svg" alt="">
+                </div>
+                <div class="about__slider__info">Поездка в Венецию</div>
+              </div>
+              <div class="about__slider__item swiper-slide">
+                <div class="about__slider__img">
+                  <img src="img/about_prizes4.svg" alt="">
+                </div>
+                <div class="about__slider__info">Поездка в Париж</div>
+              </div>
+              <div class="about__slider__item swiper-slide">
+                <div class="about__slider__img">
+                  <img src="img/about_prizes5.svg" alt="">
+                </div>
+                <div class="about__slider__info">Поездка в Рим</div>
+              </div>
+              <div class="about__slider__item swiper-slide">
+                <div class="about__slider__img">
+                  <img src="img/about_prizes2.svg" alt="">
+                </div>
+                <div class="about__slider__info">Авто</div>
+              </div>
+              <div class="about__slider__item swiper-slide">
+                <div class="about__slider__img">
+                  <img src="img/about_prizes3.svg" alt="">
+                </div>
+                <div class="about__slider__info">iphone 11</div>
+              </div>
+            </div>
+            <div class="about__slider__nav">
+              <button class="about__slider__btn prev">
+                <svg width="35" height="20" viewBox="0 0 35 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M35 10H2M2 10L11 1M2 10L11 19" stroke="#D1A2F3" stroke-width="2"/>
+                </svg>
+              </button>
+              <button class="about__slider__btn next">
+                <svg width="35" height="20" viewBox="0 0 35 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 10H33M33 10L24 1M33 10L24 19" stroke="#D1A2F3" stroke-width="2"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="about__statistics">
+      <ul class="about__statistics__list">
+        <li>
+          <span>1289</span>
+          <p>людей присоединились к игре</p>
+        </li>
+        <li>
+          <span>26</span>
+          <p>пар сейчас в игре</p>
+        </li>
+        <li>
+          <span>118</span>
+          <p>пар уже выиграло</p>
+        </li>
+      </ul>
+    </div>
+    <div class="about__nav">
+      <button class="btn-main btn-green">
+        <span class="btn-element-left">
+          <span class="btn-element-left__delimiter">
+            <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.732 23.7202C7.00977 22.8117 2.29018 20.036 0.00127792 19.1275L0 4.47546C3.50488 1.99759 5.29309 1.33682 9.58479 0.593464C16.3084 -0.562875 27.8245 -0.975853 33.1176 8.60524C37.6239 16.7822 23.962 25.7025 12.732 23.7202Z" fill="#E4B1F0"/>
+            </svg>
+            <svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.2341 17.7902C6.18509 17.1088 2.02075 15.027 0.00112724 14.3456L0 3.35659C3.09255 1.49819 4.67037 1.00262 8.45716 0.445098C14.3898 -0.422156 24.551 -0.73189 29.2214 6.45393C33.1975 12.5866 21.1429 19.2769 11.2341 17.7902Z" fill="white"/>
+            </svg>
+          </span>
+        </span>
+        <span class="btn-element-right click-item" data-action="popup-open" data-label="#request-popup">ты играешь?</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ADVANTAGES section -->
+  <section class="advantages section-container">
+    <div class="mainContainer">
+      <div class="advantages__wrapp">
+        <div class="advantages__heading"><h2>Наши преимущества</h2></div>
+      <div class="advantages__list">
+        <div class="advantages__item">
+          <div class="advantages__img">
+            <img src="img/about_advantages1.svg" alt="">
+          </div>
+          <p>Регистрируйся сегодня<br> и играй бесплатно!</p>
+        </div>
+        <div class="advantages__item">
+          <div class="advantages__img">
+            <img src="img/about_advantages2.svg" alt="">
+          </div>
+          <p>Стесняешься знакомиться?<br> Мы поможем!</p>
+        </div>
+        <div class="advantages__item">
+          <div class="advantages__img">
+            <img src="img/about_advantages3.svg" alt="">
+          </div>
+          <p>Нет опыта знакомства?<br> Мы поможем!</p>
+        </div>
+        <div class="advantages__item">
+          <div class="advantages__img">
+            <img src="img/about_advantages4.svg" alt="">
+          </div>
+          <p>Ищешь новых впечатлений?<br> Тебе к нам!</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRATION section -->
+  <section class="registration section-container">
+    <div class="mainContainer">
+      <div class="registration__wrapp">
+        <div class="registration__img">
+          <img src="img/registration-bg2.svg" alt="">
+        </div>
+        <div class="registration__content">
+          <div class="registration__heading"><h2>Регистрируйся и играй</h2></div>
+          <div class="registration__socials">
+            <div class="registration__socials__list">
+            <a href="#">
+              <svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M38 0C39.1046 0 40 0.895431 40 2V15.1732C41.4059 14.4706 42.5509 14.1929 44.6123 13.8894C48.8499 13.2699 56.1079 13.0486 59.4439 18.1814C62.284 22.5619 53.6735 27.3406 46.5958 26.2787C43.9313 25.9191 41.6117 25.0135 40 24.3687V38C40 39.1046 39.1046 40 38 40H2C0.895431 40 0 39.1046 0 38V2C0 0.895431 0.895431 0 2 0H38Z" fill="#D1A2F3"/>
+                <path d="M21.8627 31.996V21.068H25.5493L26.0973 16.7893H21.8627V14.064C21.8627 12.8293 22.2067 11.984 23.9787 11.984H26.224V8.16931C25.1315 8.05224 24.0334 7.99571 22.9347 7.99998C19.676 7.99998 17.4387 9.98931 17.4387 13.6413V16.7813H13.776V21.06H17.4467V31.996H21.8627Z" fill="white"/>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M38 0C39.1046 0 40 0.895431 40 2V15.1732C41.4059 14.4706 42.5509 14.1929 44.6123 13.8894C48.8499 13.2699 56.1079 13.0486 59.4439 18.1814C62.284 22.5619 53.6735 27.3406 46.5958 26.2787C43.9313 25.9191 41.6117 25.0135 40 24.3687V38C40 39.1046 39.1046 40 38 40H2C0.895431 40 0 39.1046 0 38V2C0 0.895431 0.895431 0 2 0H38Z" fill="#D1A2F3"/>
+                <path d="M31.044 17.808H19.9413V22.4093H26.3307C25.736 25.3333 23.2467 27.0133 19.9413 27.0133C19.0165 27.0149 18.1004 26.8339 17.2456 26.4806C16.3908 26.1274 15.6142 25.6089 14.9603 24.9548C14.3063 24.3008 13.788 23.524 13.4349 22.6692C13.0818 21.8144 12.9009 20.8982 12.9027 19.9733C12.9011 19.0486 13.0821 18.1326 13.4353 17.2779C13.7884 16.4232 14.3068 15.6466 14.9607 14.9927C15.6147 14.3388 16.3912 13.8204 17.2459 13.4672C18.1006 13.1141 19.0166 12.9331 19.9413 12.9347C21.62 12.9347 23.1373 13.5307 24.328 14.5053L27.7947 11.04C25.6827 9.19867 22.9747 8.06267 19.9413 8.06267C18.3758 8.0581 16.8247 8.36309 15.3774 8.9601C13.9301 9.55711 12.6151 10.4344 11.5081 11.5414C10.401 12.6485 9.52379 13.9634 8.92678 15.4107C8.32976 16.858 8.02478 18.4091 8.02935 19.9747C8.0246 21.5403 8.32947 23.0914 8.92642 24.5388C9.52337 25.9862 10.4006 27.3013 11.5077 28.4083C12.6148 29.5154 13.9298 30.3927 15.3772 30.9896C16.8246 31.5866 18.3757 31.8914 19.9413 31.8867C25.8973 31.8867 31.3133 27.5547 31.3133 19.9747C31.3133 19.2707 31.2053 18.512 31.044 17.808Z" fill="white"/>
+              </svg>
+            </a>
+            </div>
+            <p>или</p>
+          </div>
+          <form action="" class="registration__form">
+            <div class="registration__form__heading">Введи данные</div>
+            <div class="registration__list">
+              <div class="form-group input">
+                <input type="text" name="name" required placeholder="Имя">
+              </div>
+              <div class="form-group input">
+                <input type="text" name="email" required placeholder="E-mail">
+              </div>
+              <div class="form-group input">
+                <input type="text" name="age" required placeholder="Возраст">
+              </div>
+              <div class="form-group radios">
+                <span class="radios__heading">Пол</span>
+                <ul>
+                  <li>
+                    <input type="radio" id="radio-male" name="gender" value="Мужской" required>
+                    <label for="radio-male">Мужской</label>
+                    <div class="check"></div>
+                  </li>
+                  <li>
+                    <input type="radio" id="radio-famale" name="gender" value="Женский" required>
+                    <label for="radio-famale">Женский</label>
+                    <div class="check"></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="registration__prizes">
+              <div class="registration__prizes__heading">Выбери желаемый приз</div>
+              <div class="registration__prizes__slider swiper-container">
+                <div class="swiper-wrapper">
+                <div class="registration__prizes__item swiper-slide">
+                    <input type="radio" id="radio-auto" name="prizes" value="авто" required>
+                    <label for="radio-auto"></label>
+                    <div class="registration__prizes__item__content">
+                      <div class="registration__prizes__item__img">
+                        <img src="img/prize-radio-auto.png" alt="">
+                      </div>
+                      <p>Авто</p>
+                    </div>
+                </div>
+                <div class="registration__prizes__item swiper-slide">
+                    <input type="radio" id="radio-paris" name="prizes" value="поездка в париж" required>
+                    <label for="radio-paris"></label>
+                    <div class="registration__prizes__item__content">
+                      <div class="registration__prizes__item__img">
+                        <img src="img/prize-radio-paris.svg" alt="">
+                      </div>
+                      <p>Поездка в Париж</p>
+                    </div>
+                </div>
+                <div class="registration__prizes__item swiper-slide swiper-slide">
+                    <input type="radio" id="radio-auto2" name="prizes" value="авто" required>
+                    <label for="radio-auto2"></label>
+                    <div class="registration__prizes__item__content">
+                      <div class="registration__prizes__item__img">
+                        <img src="img/prize-radio-auto.png" alt="">
+                      </div>
+                      <p>Авто</p>
+                    </div>
+                </div>
+                <div class="registration__prizes__item swiper-slide">
+                    <input type="radio" id="radio-paris2" name="prizes" value="поездка в париж" required>
+                    <label for="radio-paris2"></label>
+                    <div class="registration__prizes__item__content">
+                      <div class="registration__prizes__item__img">
+                        <img src="img/prize-radio-paris.svg" alt="">
+                      </div>
+                      <p>Поездка в Париж</p>
+                    </div>
+                </div>
+              </div>
+              <div class="registration__prizes__pagination"></div>
+              <div class="registration__prizes__nav">
+              <button type="button" class="registration__prizes__btn prev">
+                <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 4.5H2M2 4.5L5.54545 1M2 4.5L5.54545 8" stroke="#D1A2F3" stroke-width="1.5"/>
+                </svg>
+              </button>
+              <button type="button" class="registration__prizes__btn next">
+                <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 4.5H13M13 4.5L9.45455 1M13 4.5L9.45455 8" stroke="#D1A2F3" stroke-width="1.5"/>
+                </svg>
+              </button>
+            </div>
+              </div>
+            </div>
+            <button type="bubmit" class="btn-main btn-green">
+              <span class="btn-element-left">
+                <span class="btn-element-left__delimiter">
+                  <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.732 23.7202C7.00977 22.8117 2.29018 20.036 0.00127792 19.1275L0 4.47546C3.50488 1.99759 5.29309 1.33682 9.58479 0.593464C16.3084 -0.562875 27.8245 -0.975853 33.1176 8.60524C37.6239 16.7822 23.962 25.7025 12.732 23.7202Z" fill="#E4B1F0"/>
+                  </svg>
+                  <svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.2341 17.7902C6.18509 17.1088 2.02075 15.027 0.00112724 14.3456L0 3.35659C3.09255 1.49819 4.67037 1.00262 8.45716 0.445098C14.3898 -0.422156 24.551 -0.73189 29.2214 6.45393C33.1975 12.5866 21.1429 19.2769 11.2341 17.7902Z" fill="white"/>
+                  </svg>
+                </span>
+              </span>
+              <span class="btn-element-right">Играю</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="mainContainer">
+    <div class="footer__wrapp">
+      <div class="footer__info">
+        <span>Скачивай наше приложение:</span>
+        <a class="application_link app-store" href="#"></a>
+        <a class="application_link google-play" href="#"></a>
+      </div>
+      <div class="footer__contacts">
+        <a href="mailto:anti1.help@gmail.com">anti1.help@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- REQUEST-POPUP -->
+<div id="request-popup" class="popup_container click-obj">
+    <div class="popup_background click-item" data-action="popup-close"></div>
+    <div class="popup request-popup">
+      <div class="popup_close click-item" data-action="popup-close">
+          <img src="img/popup-close.svg" alt="" />
+        </div>
+      <div class="request-popup__content">
+        <div class="registration__content">
+          <div class="registration__heading"><h2>Я участник АнтиОдин</h2></div>
+          <div class="registration__socials">
+            <div class="registration__socials__list">
+            <a href="#">
+              <svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M38 0C39.1046 0 40 0.895431 40 2V15.1732C41.4059 14.4706 42.5509 14.1929 44.6123 13.8894C48.8499 13.2699 56.1079 13.0486 59.4439 18.1814C62.284 22.5619 53.6735 27.3406 46.5958 26.2787C43.9313 25.9191 41.6117 25.0135 40 24.3687V38C40 39.1046 39.1046 40 38 40H2C0.895431 40 0 39.1046 0 38V2C0 0.895431 0.895431 0 2 0H38Z" fill="#D1A2F3"/>
+                <path d="M21.8627 31.996V21.068H25.5493L26.0973 16.7893H21.8627V14.064C21.8627 12.8293 22.2067 11.984 23.9787 11.984H26.224V8.16931C25.1315 8.05224 24.0334 7.99571 22.9347 7.99998C19.676 7.99998 17.4387 9.98931 17.4387 13.6413V16.7813H13.776V21.06H17.4467V31.996H21.8627Z" fill="white"/>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M38 0C39.1046 0 40 0.895431 40 2V15.1732C41.4059 14.4706 42.5509 14.1929 44.6123 13.8894C48.8499 13.2699 56.1079 13.0486 59.4439 18.1814C62.284 22.5619 53.6735 27.3406 46.5958 26.2787C43.9313 25.9191 41.6117 25.0135 40 24.3687V38C40 39.1046 39.1046 40 38 40H2C0.895431 40 0 39.1046 0 38V2C0 0.895431 0.895431 0 2 0H38Z" fill="#D1A2F3"/>
+                <path d="M31.044 17.808H19.9413V22.4093H26.3307C25.736 25.3333 23.2467 27.0133 19.9413 27.0133C19.0165 27.0149 18.1004 26.8339 17.2456 26.4806C16.3908 26.1274 15.6142 25.6089 14.9603 24.9548C14.3063 24.3008 13.788 23.524 13.4349 22.6692C13.0818 21.8144 12.9009 20.8982 12.9027 19.9733C12.9011 19.0486 13.0821 18.1326 13.4353 17.2779C13.7884 16.4232 14.3068 15.6466 14.9607 14.9927C15.6147 14.3388 16.3912 13.8204 17.2459 13.4672C18.1006 13.1141 19.0166 12.9331 19.9413 12.9347C21.62 12.9347 23.1373 13.5307 24.328 14.5053L27.7947 11.04C25.6827 9.19867 22.9747 8.06267 19.9413 8.06267C18.3758 8.0581 16.8247 8.36309 15.3774 8.9601C13.9301 9.55711 12.6151 10.4344 11.5081 11.5414C10.401 12.6485 9.52379 13.9634 8.92678 15.4107C8.32976 16.858 8.02478 18.4091 8.02935 19.9747C8.0246 21.5403 8.32947 23.0914 8.92642 24.5388C9.52337 25.9862 10.4006 27.3013 11.5077 28.4083C12.6148 29.5154 13.9298 30.3927 15.3772 30.9896C16.8246 31.5866 18.3757 31.8914 19.9413 31.8867C25.8973 31.8867 31.3133 27.5547 31.3133 19.9747C31.3133 19.2707 31.2053 18.512 31.044 17.808Z" fill="white"/>
+              </svg>
+            </a>
+            </div>
+            <p>или</p>
+          </div>
+          <form action="" class="registration__form">
+            <div class="registration__list">
+              <div class="form-group input">
+                <input type="text" name="name" required placeholder="Имя">
+              </div>
+              <div class="form-group input">
+                <input type="text" name="email" required placeholder="E-mail">
+              </div>
+              <div class="form-group input">
+                <input type="text" name="age" required placeholder="Возраст">
+              </div>
+              <div class="form-group radios">
+                <span class="radios__heading">Пол</span>
+                <ul>
+                  <li>
+                    <input type="radio" id="modal-radio-male" name="gender" value="Мужской" required>
+                    <label for="modal-radio-male">Мужской</label>
+                    <div class="check"></div>
+                  </li>
+                  <li>
+                    <input type="radio" id="modal-radio-famale" name="gender" value="Женский" required>
+                    <label for="modal-radio-famale">Женский</label>
+                    <div class="check"></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="registration__prizes">
+              <div class="registration__prizes__heading">Выбери желаемый приз</div>
+              <div class="registration__prizes__slider swiper-container">
+                <div class="swiper-wrapper">
+                <div class="registration__prizes__item swiper-slide">
+                    <input type="radio" id="modal-radio-auto" name="prizes" value="авто" required>
+                    <label for="modal-radio-auto"></label>
+                    <div class="registration__prizes__item__content">
+                      <div class="registration__prizes__item__img">
+                        <img src="img/prize-radio-auto.png" alt="">
+                      </div>
+                      <p>Авто</p>
+                    </div>
+                </div>
+                <div class="registration__prizes__item swiper-slide">
+                    <input type="radio" id="modal-radio-paris" name="prizes" value="поездка в париж" required>
+                    <label for="modal-radio-paris"></label>
+                    <div class="registration__prizes__item__content">
+                      <div class="registration__prizes__item__img">
+                        <img src="img/prize-radio-paris.svg" alt="">
+                      </div>
+                      <p>Поездка в Париж</p>
+                    </div>
+                </div>
+                <div class="registration__prizes__item swiper-slide swiper-slide">
+                    <input type="radio" id="modal-radio-auto2" name="prizes" value="авто" required>
+                    <label for="modal-radio-auto2"></label>
+                    <div class="registration__prizes__item__content">
+                      <div class="registration__prizes__item__img">
+                        <img src="img/prize-radio-auto.png" alt="">
+                      </div>
+                      <p>Авто</p>
+                    </div>
+                </div>
+                <div class="registration__prizes__item swiper-slide">
+                    <input type="radio" id="modal-radio-paris2" name="prizes" value="поездка в париж" required>
+                    <label for="modal-radio-paris2"></label>
+                    <div class="registration__prizes__item__content">
+                      <div class="registration__prizes__item__img">
+                        <img src="img/prize-radio-paris.svg" alt="">
+                      </div>
+                      <p>Поездка в Париж</p>
+                    </div>
+                </div>
+              </div>
+              <div class="registration__prizes__pagination"></div>
+              <div class="registration__prizes__nav">
+              <button type="button" class="registration__prizes__btn prev">
+                <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 4.5H2M2 4.5L5.54545 1M2 4.5L5.54545 8" stroke="#D1A2F3" stroke-width="1.5"/>
+                </svg>
+              </button>
+              <button type="button" class="registration__prizes__btn next">
+                <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 4.5H13M13 4.5L9.45455 1M13 4.5L9.45455 8" stroke="#D1A2F3" stroke-width="1.5"/>
+                </svg>
+              </button>
+            </div>
+              </div>
+            </div>
+            <button type="bubmit" class="btn-main btn-green">
+              <span class="btn-element-left">
+                <span class="btn-element-left__delimiter">
+                  <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.732 23.7202C7.00977 22.8117 2.29018 20.036 0.00127792 19.1275L0 4.47546C3.50488 1.99759 5.29309 1.33682 9.58479 0.593464C16.3084 -0.562875 27.8245 -0.975853 33.1176 8.60524C37.6239 16.7822 23.962 25.7025 12.732 23.7202Z" fill="#E4B1F0"/>
+                  </svg>
+                  <svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.2341 17.7902C6.18509 17.1088 2.02075 15.027 0.00112724 14.3456L0 3.35659C3.09255 1.49819 4.67037 1.00262 8.45716 0.445098C14.3898 -0.422156 24.551 -0.73189 29.2214 6.45393C33.1975 12.5866 21.1429 19.2769 11.2341 17.7902Z" fill="white"/>
+                  </svg>
+                </span>
+              </span>
+              <span class="btn-element-right">Играю</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<script src="libs/swiperjs/swiper.min.js"></script>
+<script src="js/main.js"></script>
+  <script>
+    let howPlaySwiper = new Swiper('.how-play__slider', {
+      direction: 'horizontal',
+      slidesPerView: 1,
+      loop: false,
+      effect: 'fade',
+      watchSlidesProgress: true,
+      watchSlidesVisibility: true,
+
+      navigation: {
+        nextEl: '.how-play__slider__btn.next',
+        prevEl: '.how-play__slider__btn.prev',
+      },
+      pagination: {
+        el: '.how-play__pagination',
+        clickable: true,
+      },
+    });
+
+    let usersSwiper = new Swiper('.about__users .about__slider', {
+      direction: 'horizontal',
+      slidesPerView: 1,
+      loop: true,
+
+      navigation: {
+        nextEl: '.about__users .about__slider__btn.next',
+        prevEl: '.about__users .about__slider__btn.prev',
+      },
+    });
+
+    let prizesSwiper = new Swiper('.about__prizes .about__slider', {
+      direction: 'horizontal',
+      slidesPerView: 1,
+      loop: true,
+
+      navigation: {
+        nextEl: '.about__prizes .about__slider__btn.next',
+        prevEl: '.about__prizes .about__slider__btn.prev',
+      },
+    });
+
+    let registrationPrizesSwiper = new Swiper('.registration__prizes__slider', {
+      slidesPerView: 2,
+      loop: false,
+      spaceBetween: 20,
+      touchRatio: 0,
+
+      navigation: {
+        nextEl: '.registration__prizes__btn.next',
+        prevEl: '.registration__prizes__btn.prev',
+      },
+      pagination: {
+        el: '.registration__prizes__pagination',
+        clickable: true,
+      },
+    });
+  </script>
+
+</body>
+</html>
