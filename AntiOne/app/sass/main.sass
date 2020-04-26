@@ -166,6 +166,24 @@ body
         border-top-right-radius: 0
         border-bottom-right-radius: 0
 
+.btn-main
+  @media (max-width: 768px)
+    width: 100%
+    .btn-element-right
+      width: 100%
+      padding-left: 24px
+      padding-right: 24px
+      text-align: center
+    .btn-element-left
+      flex-shrink: 0
+    &.left-orientation .btn-element-right
+      width: 100%
+      padding-left: 24px
+      padding-right: 24px
+      text-align: center
+
+
+
 @keyframes click-btn
   0%
     opacity: 0.6
@@ -177,9 +195,7 @@ body
 .section-container
   margin: 120px 0
   @media (max-width: 992px)
-    margin: 65px 0 
-  @media (max-width: 768px)
-    margin: 56px 0 
+    margin: 72px 0 
 
 
 //*** HEADER ***//
@@ -221,6 +237,13 @@ header
   .btn-element-right
     text-transform: none
 
+header
+  @media (max-width: 1240px)
+    .header__nav li a
+      padding: 20px 20px
+  @media (max-width: 992px)
+    display: none
+
 //*** BANNER ***//
 .banner
   padding-top: 160px
@@ -242,6 +265,11 @@ header
 .banner__wrapp
   display: flex
   justify-content: flex-start
+.banner__img
+  width: 65.4%
+  img,svg
+    max-width: 100%
+    height: auto
 .banner__content
   flex-shrink: 0
   h1
@@ -263,6 +291,51 @@ header
           &:first-child
             path
               fill: #E4B1F0
+.banner__img__mob
+  display: none
+
+.banner
+  @media (max-width: 1240px)
+    .banner__content h1
+      font-size: 52px
+      line-height: 65px
+  @media (max-width: 992px)
+    .banner__content h1
+      font-size: 46px
+      line-height: 56px
+  @media (max-width: 768px)
+    padding-top: 120px
+    padding-bottom: 80px
+    .banner__img__mob
+      display: block
+    .banner__img
+      display: none
+    .bg-element
+      width: 100%
+      border-radius: 0px 0px 40px 0px
+      background: linear-gradient(256.13deg, #9574FF 0%, #FBC2EB 100%)
+    .banner__wrapp
+      display: block
+      text-align: center
+    .banner__content h1
+      font-size: 40px
+      line-height: 51px
+      margin-bottom: 20px
+      br
+        display: none
+    .banner__img__mob
+      text-align: center
+      margin-bottom: 34px
+      img,svg
+        max-width: 100%
+        height: auto
+    .btn-main.left-orientation .btn-element-left__delimiter svg:first-child path
+      fill: #BE94F7
+  @media (max-width: 360px)
+    .banner__content h1
+      font-size: 35px
+      line-height: 44px
+
 
 //*** HOW-PLAY ***//
 .how-play__wrapp
@@ -276,6 +349,7 @@ header
   background-size: cover
   background-position: center top
   background-repeat: no-repeat
+  height: initial
   &.slide-one
     background-image: linear-gradient(42.69deg, rgba(251, 194, 235, 0.9) 0%, rgba(149, 116, 255, 0.9) 100%), url('../img/how-play-bg1.jpg')
   &.slide-two
@@ -325,6 +399,7 @@ header
   width: 130px
   background-color: #fff
   border: none
+  padding: 0
   z-index: 2
   img,svg
     transition: all 0.2s
@@ -332,14 +407,16 @@ header
     left: -14px
     right: auto
     &:hover
-      img,svg
-        margin-right: 20px
+      @media (min-width: 768px)
+        img,svg
+          margin-right: 20px
   &.next
     right: -14px
     left: auto
     &:hover
-      img,svg
-        margin-left: 20px
+      @media (min-width: 768px)
+        img,svg
+          margin-left: 20px
 .how-play__wrapp
   .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction
     bottom: 23px
@@ -352,6 +429,73 @@ header
       background-color: #fff
       width: 12px
       height: 12px
+.how-play
+  @media (max-width: 1240px)
+    .how-play__slider__descr
+      br
+        display: none
+    .how-play__slider__step
+      font-size: 76px
+    .how-play__slider__item
+      padding-left: 120px
+      padding-right: 120px
+  @media (max-width: 992px)
+    .how-play__slider__item
+      padding-top: 50px
+    .how-play__slider__content
+      flex-wrap: wrap
+      flex-direction: column
+    .how-play__slider__img
+      order: 0
+    .how-play__slider__step
+      order: 1
+    .how-play__slider__descr
+      order: 2
+    .how-play__slider__step
+      width: 100%
+      text-align: center
+      line-height: normal
+      font-size: 69px
+    .how-play__slider__descr
+      width: 100%
+  @media (max-width: 768px)
+    .mainContainer
+      padding: 0
+    .how-play__slider__item
+      border-radius: 40px
+      padding: 40px 55px 65px 55px
+      &.slide-one
+        background-image: linear-gradient(72.84deg, rgba(251, 194, 235, 0.9) 0%, rgba(149, 116, 255, 0.9) 100%), url('../img/how-play-bg1.jpg')
+      &.slide-two
+        background-image: linear-gradient(72.84deg, rgba(251, 194, 235, 0.9) 0%, rgba(149, 116, 255, 0.9) 100%), url('../img/how-play-bg2.jpg')
+      &.slide-three
+        background-image: linear-gradient(72.84deg, rgba(251, 194, 235, 0.9) 0%, rgba(149, 116, 255, 0.9) 100%), url('../img/how-play-bg3.jpg')
+      &.slide-for
+        background-image: linear-gradient(72.84deg, rgba(251, 194, 235, 0.9) 0%, rgba(149, 116, 255, 0.9) 100%), url('../img/how-play-bg4.jpg')
+      &.slide-five
+        background-image: linear-gradient(72.84deg, rgba(251, 194, 235, 0.9) 0%, rgba(149, 116, 255, 0.9) 100%), url('../img/how-play-bg5.jpg')
+    .how-play__slider__heading
+      margin-bottom: 16px
+    .how-play__slider__img
+      width: 100%
+    .how-play__slider__step
+      font-size: 64px
+      line-height: 82px
+    .how-play__slider__descr
+      font-size: 20px
+      line-height: 26px
+    .how-play__slider__btn
+      top: 77%
+      padding: 0
+      margin-top: 0
+      width: 67px
+      height: 35px
+      svg,img
+        width: 24px
+  @media (max-width: 360px)
+    .how-play__slider__item
+      padding: 40px 35px 65px 35px
+
 
 //*** ABOUT ***//
 .about__heading
@@ -371,27 +515,31 @@ header
 .about__sliders
   display: flex
   justify-content: space-between
-  align-items: flex-start
+  align-items: stretch
   margin-bottom: 40px
 .about__users, .about__prizes
   width: 48%
+  height: initial
 .about__users
   .about__slider__img
     padding-left: 35px
     &:hover
-      img,svg
-        transform: scale(1.2) rotate(-7deg)
+      @media (min-width: 768px)
+        img,svg
+          transform: scale(1.2) rotate(-7deg)
 .about__prizes
   .about__slider__img
     padding-right: 35px
     &:hover
-      img,svg
-        transform: scale(1.2) rotate(7deg)
+      @media (min-width: 768px)
+        img,svg
+          transform: scale(1.2) rotate(7deg)
 .about__slider
   width: 100%
   background: linear-gradient(47.48deg, #9574FF 0%, #FBC2EB 100%)
   border-radius: 100px
   padding-top: 40px
+  height: 100%
 .about__slider__item
   padding: 24px 20px 24px 20px
   text-align: center
@@ -421,20 +569,23 @@ header
   border: none
   z-index: 2
   transition: all 0.2s
+  padding: 0
   img,svg
     transition: all 0.2s
   &.prev
     left: -17px
     right: auto
     &:hover
-      img,svg
-        margin-right: 20px
+      @media (min-width: 768px)
+        img,svg
+          margin-right: 20px
   &.next
     right: -17px
     left: auto
     &:hover
-      img,svg
-        margin-left: 20px
+      @media (min-width: 768px)
+        img,svg
+          margin-left: 20px
 
 .about__statistics
   margin-bottom: 32px
@@ -462,6 +613,65 @@ header
 .about__nav
   button
     margin: 0 auto
+
+.about
+  @media (max-width: 992px)
+    .about__sliders
+      display: block
+    .about__users, .about__prizes
+      width: 100%
+    .about__users
+      margin-bottom: 30px
+    .about__statistics__list
+      width: 100%
+      li span
+        font-size: 47px
+        line-height: 57px
+      li p
+        font-size: 17px
+        line-height: 20px
+  @media (max-width: 768px)
+    .about__heading
+      margin-bottom: 20px
+    .mainContainer
+      padding: 0
+    .about__slider
+      border-radius: 40px
+      background: linear-gradient(60.49deg, #9574FF 0%, #FBC2EB 100%)
+      padding-top: 32px
+    .about__slider__item
+      padding-top: 16px
+      padding-bottom: 32px
+      padding-left: 15px
+      padding-right: 15px
+    .about__slider__info
+      font-size: 24px
+      line-height: 31px
+    .about__slider__btn
+      padding: 0
+      width: 67px
+      height: 35px
+      margin-top: -13px
+      svg,img
+        width: 24px
+    .about__statistics
+      margin-bottom: 24px
+    .about__statistics__list
+      display: block
+      li
+        width: 100%
+        text-align: center
+        margin-bottom: 24px
+        &:last-child
+          margin-bottom: 0
+        span
+          font-size: 56px
+          line-height: normal
+        p
+          font-size: 20px
+          line-height: 26px
+    .about__nav
+      padding: 0 12px
 
 //*** ADVANTAGES ***//
 .advantages__wrapp
@@ -496,14 +706,15 @@ header
     .advantages__img
       padding-right: 45px
   &:hover
-    &:nth-child(odd)
-      .advantages__img
-        img,svg
-          transform: scale(1.2) rotate(-7deg)
-    &:nth-child(even)
-      .advantages__img
-        img,svg
-          transform: scale(1.2) rotate(7deg)
+    @media (min-width: 768px)
+      &:nth-child(odd)
+        .advantages__img
+          img,svg
+            transform: scale(1.2) rotate(-7deg)
+      &:nth-child(even)
+        .advantages__img
+          img,svg
+            transform: scale(1.2) rotate(7deg)
 .advantages__img
   margin-bottom: 12px
   img,svg
@@ -511,17 +722,50 @@ header
     height: auto
     transition: all 0.5s
 
+.advantages
+  @media (max-width: 992px)
+    .advantages__list
+      width: 80%
+  @media (max-width: 768px)
+    .advantages__wrapp
+      background: linear-gradient(80.55deg, #9574FF 0%, #FBC2EB 100%)
+      border-radius: 0px 0px 40px 0px
+      padding-top: 40px
+      padding-bottom: 48px
+    .mainContainer
+      padding: 0
+    .advantages__heading
+      margin-bottom: 16px
+    .advantages__list
+      display: block
+    .advantages__item
+      width: 100%
+      margin-bottom: 32px
+      &:last-child
+        margin-bottom: 0
+      br
+        display: none
+    .advantages__list
+      width: 95%
+
 //*** REGISTRATION ***//
 .registration__wrapp
   display: flex
   justify-content: space-between
+  .registration__sucess, .registration__done
+    display: flex
+    flex-direction: column
+    justify-content: center
+    height: 100%
 .registration__img
   width: 65.4%
   img,svg
     max-width: 100%
     height: auto
-.registration__content
+.request-container
   width: 30.4%
+.registration__content
+  width: 100%
 .registration__heading
   text-align: left
   font-size: 32px
@@ -777,6 +1021,69 @@ header
       background-color: #D1A2F3
       width: 12px
       height: 12px
+.registration__sucess
+  text-align: center
+  font-size: 20px
+  line-height: 26px
+  color: #D1A2F3
+  b
+    display: block
+    margin-bottom: 8px
+    font-size: 32px
+    line-height: 41px
+    background: linear-gradient(74.45deg, #FBC2EB 0%, #9574FF 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+.registration__done
+  text-align: center
+  b
+    display: block
+    margin-bottom: 8px
+    font-size: 32px
+    line-height: 41px
+    background: linear-gradient(74.45deg, #FBC2EB 0%, #9574FF 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+.registration
+  @media(max-width: 1240px)
+    .request-container
+      width: 40%
+    .registration__img
+      width: 55%
+  @media(max-width: 992px)
+    .request-container
+      width: 49%
+    .registration__img
+      width: 47%
+  @media(max-width: 768px)
+    .registration__wrapp
+      display: block
+    .registration__img
+      display: none
+    .request-container
+      width: 100%
+    .registration__heading
+      text-align: center
+      margin-bottom: 16px
+    .registration__form__heading
+      display: none
+    .registration__socials
+      padding-left: 0
+      margin: 0 auto
+      margin-bottom: 10px
+  @media(max-width: 360px)
+    .registration__heading
+      font-size: 28px
+    .registration__prizes__item__content
+      padding-left: 4px
+      padding-right: 4px
+    .registration__prizes__heading
+      text-align: center
+    .radios__heading
+      margin-right: 14px
+
+
 
 //*** FOOTER ***//
 footer
@@ -814,6 +1121,32 @@ footer
     margin-right: 20px
     &:hover
       background-image: url('../img/google-play-active.svg')
+
+footer
+  @media(max-width: 992px)
+    .footer__wrapp
+      display: block
+      padding: 24px
+    .footer__info span
+      margin-right: 0
+      width: 100%
+      display: block
+      margin-bottom: 16px
+    .footer__info
+      text-align: center
+      margin-bottom: 24px
+    .footer__contacts
+      text-align: center
+  @media(max-width: 768px)
+    .footer__wrapp
+      padding-left: 0
+      padding-right: 0
+  @media(max-width: 360px)
+    .application_link, .application_link.app-store, .application_link.google-play
+      display: block
+      margin-right: 0
+      margin: 0 auto
+      margin-bottom: 15px
 
 //*** POPUP ***//
 .popup_container
@@ -861,11 +1194,20 @@ footer
   img
     width: 16px
     height: auto
+.popup_container
+  overflow: auto
+.popup
+  @media(max-width: 768px)
+    border-radius: 40px
+    .popup_close
+      top: 22px
+      right: 27px
 
-.request-popup__content
+
+
+.request-popup__content.request-container
   padding: 64px 88px
-  .registration__content
-    width: 100%
+  width: 100%
   .registration__heading
     text-align: center
   .registration__socials
@@ -876,6 +1218,23 @@ footer
     text-align: center
   .btn-main
     margin: 0 auto
+
+.request-popup
+  @media(max-width: 768px)
+    .request-container
+      padding: 64px 12px 
+  @media(max-width: 360px)
+    .registration__heading
+      font-size: 28px
+    .registration__prizes__item__content
+      padding-left: 4px
+      padding-right: 4px
+    .registration__prizes__heading
+      text-align: center
+    .radios__heading
+      margin-right: 14px
+
+
 
 
 

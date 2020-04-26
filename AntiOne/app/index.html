@@ -53,6 +53,9 @@
       <div class="banner__wrapp">
         <div class="banner__content">
           <h1>Познакомься,<br> играй и получайте<br> приз вместе</h1>
+          <div class="banner__img__mob">
+            <img src="img/banner-img-mob.svg" alt="">
+          </div>
           <div class="banner__links">
             <button class="btn-main">
               <span class="btn-element-left">
@@ -100,7 +103,7 @@
               <div class="how-play__slider__heading"><h2>Как сыграть в игру</h2></div>
               <div class="how-play__slider__content">
                 <div class="how-play__slider__step">1 шаг</div>
-                <div class="how-play__slider__img"><img src="img/how-play-img1.svg" alt=""></div>
+                <div class="how-play__slider__img click-item" data-action="popup-open" data-label="#request-popup"><img src="img/how-play-img1.svg" alt=""></div>
                 <div class="how-play__slider__descr">Присоединяйся и получи<br> WOW-PUZZLE<br> бесплатно!</div>
               </div>
             </div>
@@ -108,7 +111,7 @@
               <div class="how-play__slider__heading"><h2>Как сыграть в игру</h2></div>
               <div class="how-play__slider__content">
                 <div class="how-play__slider__step">2 шаг</div>
-                <div class="how-play__slider__img"><img src="img/how-play-img2.svg" alt=""></div>
+                <div class="how-play__slider__img click-item" data-action="popup-open" data-label="#request-popup"><img src="img/how-play-img2.svg" alt=""></div>
                 <div class="how-play__slider__descr">Выбери с кем хочешь<br> ВЫИГРАТЬ</div>
               </div>
             </div>
@@ -116,7 +119,7 @@
               <div class="how-play__slider__heading"><h2>Как сыграть в игру</h2></div>
               <div class="how-play__slider__content">
                 <div class="how-play__slider__step">3 шаг</div>
-                <div class="how-play__slider__img"><img src="img/how-play-img3.svg" alt=""></div>
+                <div class="how-play__slider__img click-item" data-action="popup-open" data-label="#request-popup"><img src="img/how-play-img3.svg" alt=""></div>
                 <div class="how-play__slider__descr">Выбери, что хочешь<br> ВМЕСТЕ выиграть</div>
               </div>
             </div>
@@ -124,7 +127,7 @@
               <div class="how-play__slider__heading"><h2>Как сыграть в игру</h2></div>
               <div class="how-play__slider__content">
                 <div class="how-play__slider__step">4 шаг</div>
-                <div class="how-play__slider__img"><img src="img/how-play-img4.svg" alt=""></div>
+                <div class="how-play__slider__img click-item" data-action="popup-open" data-label="#request-popup"><img src="img/how-play-img4.svg" alt=""></div>
                 <div class="how-play__slider__descr">Сыграй в ИГРУ</div>
               </div>
             </div>
@@ -132,7 +135,7 @@
               <div class="how-play__slider__heading"><h2>Как сыграть в игру</h2></div>
               <div class="how-play__slider__content">
                 <div class="how-play__slider__step">5 шаг</div>
-                <div class="how-play__slider__img"><img src="img/how-play-img5.svg" alt=""></div>
+                <div class="how-play__slider__img click-item" data-action="popup-open" data-label="#request-popup"><img src="img/how-play-img5.svg" alt=""></div>
                 <div class="how-play__slider__descr">Ура, мы ВМЕСТЕ<br> ВЫИГРАЛИ</div>
               </div>
             </div>
@@ -331,6 +334,7 @@
         <div class="registration__img">
           <img src="img/registration-bg2.svg" alt="">
         </div>
+        <div class="request-container">
         <div class="registration__content">
           <div class="registration__heading"><h2>Регистрируйся и играй</h2></div>
           <div class="registration__socials">
@@ -453,6 +457,14 @@
             </button>
           </form>
         </div>
+        <div class="registration__sucess" style="display: none;">
+          <b>Спасибо!</b>
+          <p>Старт игры 01.07.2020 г. Ты получишь<br> уведомление о старте игры<br> на указанный email.</p>
+        </div>
+        <div class="registration__done" style="display: none;">
+          <b>Такой аккаунт<br> уже зарегистрирован</b>
+        </div>
+        </div>
       </div>
     </div>
   </section>
@@ -480,7 +492,7 @@
       <div class="popup_close click-item" data-action="popup-close">
           <img src="img/popup-close.svg" alt="" />
         </div>
-      <div class="request-popup__content">
+      <div class="request-popup__content request-container">
         <div class="registration__content">
           <div class="registration__heading"><h2>Я участник АнтиОдин</h2></div>
           <div class="registration__socials">
@@ -602,6 +614,13 @@
             </button>
           </form>
         </div>
+        <div class="registration__sucess" style="display: none;">
+          <b>Спасибо!</b>
+          <p>Старт игры 01.07.2020 г. Ты получишь<br> уведомление о старте игры<br> на указанный email.</p>
+        </div>
+        <div class="registration__done" style="display: none;">
+          <b>Такой аккаунт<br> уже зарегистрирован</b>
+        </div>
       </div>
     </div>
   </div>
@@ -654,7 +673,6 @@
       slidesPerView: 2,
       loop: false,
       spaceBetween: 20,
-      touchRatio: 0,
 
       navigation: {
         nextEl: '.registration__prizes__btn.next',
@@ -664,6 +682,11 @@
         el: '.registration__prizes__pagination',
         clickable: true,
       },
+      breakpoints: {
+        768: {
+          touchRatio: 0,
+        },
+      }
     });
   </script>
 
