@@ -25,10 +25,12 @@
         <img src="img/header-logo.svg" alt="logo">
         <span>Анти<br>Один</span>
       </a>
+      <button class="header__burger" id="header-burger"><span></span><span></span></button>
+      <div class="header__info">
       <ul class="header__nav">
-        <li><a href="#">Как сыграть в игру</a></li>
-        <li><a href="#">О нас</a></li>
-        <li><a href="#">Преимущества</a></li>
+        <li><a href="#how-play">Как сыграть в игру</a></li>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#advantages">Преимущества</a></li>
       </ul>
       <button class="btn-main btn-green header__btn left-orientation">
         <span class="btn-element-left">
@@ -43,6 +45,7 @@
         </span>
         <span class="btn-element-right click-item" data-action="popup-open" data-label="#request-popup">Регистрация</span>
       </button>
+      </div>
   </div>
 </header>
 
@@ -94,7 +97,7 @@
   </section>
 
   <!-- HOW-PLAY section -->
-  <section class="how-play section-container">
+  <section class="how-play section-container" id="how-play">
     <div class="mainContainer">
       <div class="how-play__wrapp">
         <div class="how-play__slider swiper-container">
@@ -159,7 +162,7 @@
   </section>
 
   <!-- ABOUT section -->
-  <section class="about section-container">
+  <section class="about section-container" id="about">
     <div class="mainContainer">
       <div class="about__heading">
         <h2>Участники и призы</h2>
@@ -293,7 +296,7 @@
   </section>
 
   <!-- ADVANTAGES section -->
-  <section class="advantages section-container">
+  <section class="advantages section-container" id="advantages">
     <div class="mainContainer">
       <div class="advantages__wrapp">
         <div class="advantages__heading"><h2>Наши преимущества</h2></div>

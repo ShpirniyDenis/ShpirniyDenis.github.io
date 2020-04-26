@@ -36,7 +36,45 @@ function clickItemHandler(event) {
 };
 document.addEventListener('click', clickItemHandler);
 
+// for header
+let burgerBtn = document.getElementById('header-burger');
+let headerWrapp = document.querySelector('header');
+let menuLink = document.querySelectorAll('.header__nav li a');
 
+const menuToggle = function(){
+  headerWrapp.classList.toggle('active');
+}
+
+burgerBtn.addEventListener('click', menuToggle);
+
+for(i = 0; i < menuLink.length; i++){
+  let menuToggleTimeout = function(){
+    if(window.screen.width > 992) {
+      setTimeout(menuToggle, 1000);
+    }else{
+      menuToggle();
+    }
+  }
+  menuLink[i].addEventListener('click',  menuToggleTimeout);
+}
+
+// for scrolling to anchor
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        if(window.screen.width > 992) {
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+            block: 'end'
+          });
+        }else{
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+    });
+});
 
 
 

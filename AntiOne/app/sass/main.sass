@@ -213,12 +213,17 @@ header
   align-items: center
   padding: 20px 33px 20px 16px
   margin-right: auto
+  flex-shrink: 0
   span
     margin-left: 12px
     font-size: 28px
     line-height: 28px
     color: #57C84B
     text-align: right
+.header__info
+  display: flex
+  justify-content: flex-end
+  align-items: center
 .header__wrapp
   display: flex
   justify-content: flex-end
@@ -236,13 +241,81 @@ header
   margin-left: 39px
   .btn-element-right
     text-transform: none
+.header__burger
+  width: 32px
+  height: 32px
+  display: inline-block
+  background-color: transparent
+  border: none
+  padding: 0
+  position: relative
+  display: none
+  span
+    width: 100%
+    display: block
+    height: 1px
+    background-color: #0D1C2F
+    margin-bottom: 10px
+    transition: all 0.6s
+    &:last-child
+      margin-bottom: 0
+  &:focus
+    outline: none
 
 header
   @media (max-width: 1240px)
     .header__nav li a
       padding: 20px 20px
   @media (max-width: 992px)
-    display: none
+    &.active
+      .header__burger
+        z-index: 15
+        display: block
+        span
+          position: absolute
+          margin-bottom: 0
+          transform: rotate(0deg)
+          transition: all 0.6s
+          &:nth-child(1)
+            transform: rotate(-45deg)
+          &:nth-child(2)
+            transform: rotate(45deg)
+      .header__info
+        display: block
+        z-index: 10
+        margin-top: 0
+    .header__burger
+      display: block
+    .header__info
+      position: absolute
+      left: 0
+      width: 100%
+      top: 0
+      background-color: #fff
+      border-radius: 0px 0px 50px 0px
+      padding: 48px 34px
+      display: block
+      margin-top: -100vh
+      transition: all 0.3s
+    .header__nav
+      margin-bottom: 32px
+      li
+        display: block
+        width: 100%
+        margin-bottom: 23px
+        &:last-child
+          margin-bottom: 0
+        a
+          color: #A580FB
+          font-size: 22px
+    .header__btn
+      margin-left: 0 
+  @media (max-width: 768px)
+    &.active
+      .header__burger span
+        background-color: #0D1C2F
+    .header__burger span
+      background-color: #fff
 
 //*** BANNER ***//
 .banner
