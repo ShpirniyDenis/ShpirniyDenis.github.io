@@ -73,7 +73,7 @@
               </span>
               <span class="btn-element-right click-item" data-action="popup-open" data-label="#request-popup">Ты играешь?</span>
             </button>
-            <button class="btn-main btn-green left-orientation">
+            <a href="#about" class="btn-main btn-green left-orientation">
               <span class="btn-element-left">
                 <span class="btn-element-left__delimiter">
                   <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +85,7 @@
                 </span>
               </span>
               <span class="btn-element-right">Выбрать приз</span>
-            </button>
+            </a>
           </div>
         </div>
         <div class="banner__img">
@@ -265,15 +265,15 @@
     <div class="about__statistics">
       <ul class="about__statistics__list">
         <li>
-          <span>1289</span>
+          <span id="peoplesStart">1289</span>
           <p>людей присоединились к игре</p>
         </li>
         <li>
-          <span>26</span>
+          <span id="peoplesOnline">26</span>
           <p>пар сейчас в игре</p>
         </li>
         <li>
-          <span>118</span>
+          <span id="peoplesWinner">118</span>
           <p>пар уже выиграло</p>
         </li>
       </ul>
@@ -331,7 +331,7 @@
   </section>
 
   <!-- REGISTRATION section -->
-  <section class="registration section-container">
+  <section class="registration section-container" id="registration-section">
     <div class="mainContainer">
       <div class="registration__wrapp">
         <div class="registration__img">
@@ -357,23 +357,23 @@
             </div>
             <p>или</p>
           </div>
-          <form action="" class="registration__form">
+          <form class="registration__form">
             <div class="registration__form__heading">Введи данные</div>
             <div class="registration__list">
               <div class="form-group input">
                 <input type="text" name="name" required placeholder="Имя">
               </div>
               <div class="form-group input">
-                <input type="text" name="email" required placeholder="E-mail">
+                <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Введите корректный e-mail" required placeholder="E-mail">
               </div>
               <div class="form-group input">
-                <input type="text" name="age" required placeholder="Возраст">
+                <input type="text" name="age" pattern="[0-9][0-9]" title="Введите 2 цифры" required placeholder="Возраст">
               </div>
               <div class="form-group radios">
                 <span class="radios__heading">Пол</span>
                 <ul>
                   <li>
-                    <input type="radio" id="radio-male" name="gender" value="Мужской" required>
+                    <input type="radio" id="radio-male" name="gender" value="Мужской" title="Выберите свой пол" required>
                     <label for="radio-male">Мужской</label>
                     <div class="check"></div>
                   </li>
@@ -390,7 +390,7 @@
               <div class="registration__prizes__slider swiper-container">
                 <div class="swiper-wrapper">
                 <div class="registration__prizes__item swiper-slide">
-                    <input type="radio" id="radio-auto" name="prizes" value="авто" required>
+                    <input type="radio" id="radio-auto" name="prizes" value="Автомобиль" title="Выберите желаемый приз" required>
                     <label for="radio-auto"></label>
                     <div class="registration__prizes__item__content">
                       <div class="registration__prizes__item__img">
@@ -400,7 +400,7 @@
                     </div>
                 </div>
                 <div class="registration__prizes__item swiper-slide">
-                    <input type="radio" id="radio-paris" name="prizes" value="поездка в париж" required>
+                    <input type="radio" id="radio-paris" name="prizes" value="Поездка в Париж" title="Выберите желаемый приз" required>
                     <label for="radio-paris"></label>
                     <div class="registration__prizes__item__content">
                       <div class="registration__prizes__item__img">
@@ -410,23 +410,33 @@
                     </div>
                 </div>
                 <div class="registration__prizes__item swiper-slide swiper-slide">
-                    <input type="radio" id="radio-auto2" name="prizes" value="авто" required>
-                    <label for="radio-auto2"></label>
+                    <input type="radio" id="radio-phone" name="prizes" value="Автомобиль" title="Выберите желаемый приз" required>
+                    <label for="radio-phone"></label>
                     <div class="registration__prizes__item__content">
                       <div class="registration__prizes__item__img">
                         <img src="img/prize-radio-auto.png" alt="">
                       </div>
-                      <p>Авто</p>
+                      <p>Телефон</p>
                     </div>
                 </div>
                 <div class="registration__prizes__item swiper-slide">
-                    <input type="radio" id="radio-paris2" name="prizes" value="поездка в париж" required>
-                    <label for="radio-paris2"></label>
+                    <input type="radio" id="radio-venetia" name="prizes" value="Поездка в Венецию" title="Выберите желаемый приз" required>
+                    <label for="radio-venetia"></label>
                     <div class="registration__prizes__item__content">
                       <div class="registration__prizes__item__img">
                         <img src="img/prize-radio-paris.svg" alt="">
                       </div>
-                      <p>Поездка в Париж</p>
+                      <p>Поездка в Венецию</p>
+                    </div>
+                </div>
+                <div class="registration__prizes__item swiper-slide">
+                    <input type="radio" id="radio-rome" name="prizes" value="Поездка в Рим" title="Выберите желаемый приз" required>
+                    <label for="radio-rome"></label>
+                    <div class="registration__prizes__item__content">
+                      <div class="registration__prizes__item__img">
+                        <img src="img/prize-radio-paris.svg" alt="">
+                      </div>
+                      <p>Поездка в Рим</p>
                     </div>
                 </div>
               </div>
@@ -445,7 +455,7 @@
             </div>
               </div>
             </div>
-            <button type="bubmit" class="btn-main btn-green">
+            <button type="submit" class="btn-main btn-green">
               <span class="btn-element-left">
                 <span class="btn-element-left__delimiter">
                   <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -464,6 +474,9 @@
           <b>Спасибо!</b>
           <p>Старт игры 01.07.2020 г. Ты получишь<br> уведомление о старте игры<br> на указанный email.</p>
         </div>
+        <div class="registration__spinner" style="display: none;">
+          <span class="spinner"></span> 
+        </div>
         <div class="registration__done" style="display: none;">
           <b>Такой аккаунт<br> уже зарегистрирован</b>
         </div>
@@ -478,8 +491,8 @@
     <div class="footer__wrapp">
       <div class="footer__info">
         <span>Скачивай наше приложение:</span>
-        <a class="application_link app-store" href="#"></a>
-        <a class="application_link google-play" href="#"></a>
+        <a class="application_link app-store click-item" data-action="popup-open" data-label="#request-popup" ></a>
+        <a class="application_link google-play click-item" data-action="popup-open" data-label="#request-popup" ></a>
       </div>
       <div class="footer__contacts">
         <a href="mailto:anti1.help@gmail.com">anti1.help@gmail.com</a>
@@ -487,6 +500,7 @@
     </div>
   </div>
 </footer>
+
 
 <!-- REQUEST-POPUP -->
 <div id="request-popup" class="popup_container click-obj">
@@ -515,28 +529,28 @@
             </div>
             <p>или</p>
           </div>
-          <form action="" class="registration__form">
+          <form class="registration__form">
             <div class="registration__list">
               <div class="form-group input">
                 <input type="text" name="name" required placeholder="Имя">
               </div>
               <div class="form-group input">
-                <input type="text" name="email" required placeholder="E-mail">
+                <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Введите корректный e-mail" required placeholder="E-mail">
               </div>
               <div class="form-group input">
-                <input type="text" name="age" required placeholder="Возраст">
+                <input type="text" name="age" pattern="[0-9][0-9]" title="Введите 2 цифры" required placeholder="Возраст">
               </div>
               <div class="form-group radios">
                 <span class="radios__heading">Пол</span>
                 <ul>
                   <li>
-                    <input type="radio" id="modal-radio-male" name="gender" value="Мужской" required>
-                    <label for="modal-radio-male">Мужской</label>
+                    <input type="radio" id="radio-male-modal" name="gender" value="Мужской" title="Выберите свой пол" required>
+                    <label for="radio-male-modal">Мужской</label>
                     <div class="check"></div>
                   </li>
                   <li>
-                    <input type="radio" id="modal-radio-famale" name="gender" value="Женский" required>
-                    <label for="modal-radio-famale">Женский</label>
+                    <input type="radio" id="radio-famale-modal" name="gender" value="Женский" required>
+                    <label for="radio-famale-modal">Женский</label>
                     <div class="check"></div>
                   </li>
                 </ul>
@@ -547,8 +561,8 @@
               <div class="registration__prizes__slider swiper-container">
                 <div class="swiper-wrapper">
                 <div class="registration__prizes__item swiper-slide">
-                    <input type="radio" id="modal-radio-auto" name="prizes" value="авто" required>
-                    <label for="modal-radio-auto"></label>
+                    <input type="radio" id="radio-auto-modal" name="prizes" value="Автомобиль" title="Выберите желаемый приз" required>
+                    <label for="radio-auto-modal"></label>
                     <div class="registration__prizes__item__content">
                       <div class="registration__prizes__item__img">
                         <img src="img/prize-radio-auto.png" alt="">
@@ -557,8 +571,8 @@
                     </div>
                 </div>
                 <div class="registration__prizes__item swiper-slide">
-                    <input type="radio" id="modal-radio-paris" name="prizes" value="поездка в париж" required>
-                    <label for="modal-radio-paris"></label>
+                    <input type="radio" id="radio-paris-modal" name="prizes" value="Поездка в Париж" title="Выберите желаемый приз" required>
+                    <label for="radio-paris-modal"></label>
                     <div class="registration__prizes__item__content">
                       <div class="registration__prizes__item__img">
                         <img src="img/prize-radio-paris.svg" alt="">
@@ -567,23 +581,33 @@
                     </div>
                 </div>
                 <div class="registration__prizes__item swiper-slide swiper-slide">
-                    <input type="radio" id="modal-radio-auto2" name="prizes" value="авто" required>
-                    <label for="modal-radio-auto2"></label>
+                    <input type="radio" id="radio-phone-modal" name="prizes" value="Автомобиль" title="Выберите желаемый приз" required>
+                    <label for="radio-phone-modal"></label>
                     <div class="registration__prizes__item__content">
                       <div class="registration__prizes__item__img">
                         <img src="img/prize-radio-auto.png" alt="">
                       </div>
-                      <p>Авто</p>
+                      <p>Телефон</p>
                     </div>
                 </div>
                 <div class="registration__prizes__item swiper-slide">
-                    <input type="radio" id="modal-radio-paris2" name="prizes" value="поездка в париж" required>
-                    <label for="modal-radio-paris2"></label>
+                    <input type="radio" id="radio-venetia-modal" name="prizes" value="Поездка в Венецию" title="Выберите желаемый приз" required>
+                    <label for="radio-venetia-modal"></label>
                     <div class="registration__prizes__item__content">
                       <div class="registration__prizes__item__img">
                         <img src="img/prize-radio-paris.svg" alt="">
                       </div>
-                      <p>Поездка в Париж</p>
+                      <p>Поездка в Венецию</p>
+                    </div>
+                </div>
+                <div class="registration__prizes__item swiper-slide">
+                    <input type="radio" id="radio-rome-modal" name="prizes" value="Поездка в Рим" title="Выберите желаемый приз" required>
+                    <label for="radio-rome-modal"></label>
+                    <div class="registration__prizes__item__content">
+                      <div class="registration__prizes__item__img">
+                        <img src="img/prize-radio-paris.svg" alt="">
+                      </div>
+                      <p>Поездка в Рим</p>
                     </div>
                 </div>
               </div>
@@ -602,7 +626,7 @@
             </div>
               </div>
             </div>
-            <button type="bubmit" class="btn-main btn-green">
+            <button type="submit" class="btn-main btn-green">
               <span class="btn-element-left">
                 <span class="btn-element-left__delimiter">
                   <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -621,6 +645,9 @@
           <b>Спасибо!</b>
           <p>Старт игры 01.07.2020 г. Ты получишь<br> уведомление о старте игры<br> на указанный email.</p>
         </div>
+        <div class="registration__spinner" style="display: none;">
+          <span class="spinner"></span> 
+        </div>
         <div class="registration__done" style="display: none;">
           <b>Такой аккаунт<br> уже зарегистрирован</b>
         </div>
@@ -629,6 +656,7 @@
   </div>
 
 
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="libs/swiperjs/swiper.min.js"></script>
 <script src="js/main.js"></script>
   <script>

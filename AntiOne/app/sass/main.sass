@@ -825,7 +825,7 @@ header
 .registration__wrapp
   display: flex
   justify-content: space-between
-  .registration__sucess, .registration__done
+  .registration__sucess, .registration__done, .registration__spinner
     display: flex
     flex-direction: column
     justify-content: center
@@ -935,6 +935,8 @@ header
   background-color: #fff
   color: #fff
   border: none
+  left: 0
+  bottom: 0
 .form-group.radios li label
   display: block
   position: relative
@@ -1018,6 +1020,8 @@ header
     background-color: #fff
     color: #fff
     border: none
+    bottom: 0
+    right: 0
   label
     position: absolute
     width: 100%
@@ -1145,6 +1149,12 @@ header
       padding-left: 0
       margin: 0 auto
       margin-bottom: 10px
+    .registration__heading
+      background: none
+      color: #A580FB
+      -webkit-text-fill-color: #A580FB
+    .registration__prizes__btn
+      display: none
   @media(max-width: 360px)
     .registration__heading
       font-size: 28px
@@ -1180,6 +1190,7 @@ footer
   background-zise: cover
   background-position: center center
   background-repeat: no-repeat
+  cursor: pointer
   &.app-store
     background-image: url('../img/app-store.svg')
     width: 120px
@@ -1241,6 +1252,8 @@ footer
     top: 0
     opacity: 1
     transition: top 0.2s ease-in-out, opacity 1s ease-in-out
+    .popup_background
+      position: fixed
 .popup_background
   position: absolute
   top: 0
@@ -1276,7 +1289,50 @@ footer
       top: 22px
       right: 27px
 
+.spinner
+  width: 60px
+  height: 60px
+  display: block
+  margin: 0 auto
+  color: #57C84B
 
+.spinner:after
+  content: ""
+  width: 100%
+  height: 100%
+  display: inline-block
+  border: 4px solid currentColor
+  border-bottom-color: transparent
+  border-radius: 100%
+  background: transparent
+  animation: rotate .75s linear infinite
+
+@keyframes rotate
+  100%
+    transform: rotate(359deg)
+
+@keyframes dash
+  0%
+    stroke-dasharray: 1, 250
+    stroke-dashoffset: 0
+  50%
+    stroke-dasharray: 89, 200
+    stroke-dashoffset: -35
+  100%
+    stroke-dasharray: 89, 200
+    stroke-dashoffset: -140
+
+@keyframes color
+  0%
+    stroke: #192a55
+  25%
+    stroke: #ffeb3b
+  50%
+    stroke: #192a55
+  75% 
+    stroke: #ffeb3b
+  100%
+    stroke: #192a55
 
 .request-popup__content.request-container
   padding: 64px 88px
@@ -1296,6 +1352,12 @@ footer
   @media(max-width: 768px)
     .request-container
       padding: 64px 12px 
+    .registration__heading
+      background: none
+      color: #A580FB
+      -webkit-text-fill-color: #A580FB
+    .registration__prizes__btn
+      display: none
   @media(max-width: 360px)
     .registration__heading
       font-size: 28px

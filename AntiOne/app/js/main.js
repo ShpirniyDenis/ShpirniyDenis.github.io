@@ -76,5 +76,49 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// for statistics
+function random(min, max) {
+  return Math.floor(min + Math.random() * (max - min));
+}
+let currentTime = new Date();
+let peoplesStart = 1289 + (new Date().getHours()*40);
+let peoplesWinner = 118 + (new Date().getHours()*7);
+function addFakeStatistics(){
+  document.getElementById('peoplesStart').innerHTML = peoplesStart;
+  document.getElementById('peoplesWinner').innerHTML = peoplesWinner;
+  document.getElementById('peoplesOnline').innerHTML = Number(random(25, 50));
+}
+addFakeStatistics();
+
+// for forms
+function registrationDone(){
+  localStorage.setItem('statusUser', 'true');
+    setTimeout(function () {
+    $('.registration__spinner').slideUp();
+    $('.registration__sucess').slideDown();
+    }, 100);
+}
+
+function checkUserStatus(){
+  if (localStorage.getItem("statusUser") !== null) {
+    $('.registration__content').remove();
+    $('.registration__done').show();
+  }
+}
+checkUserStatus();
+
+$(".registration__form").submit(function () {
+  $('.registration__spinner').slideDown();
+  $('.registration__content').slideUp();
+  let th = $(this);
+  $.ajax({
+    type: "POST",
+    url: "mail.php", 
+    data: th.serialize()
+  }).done(function () {
+    registrationDone();
+  });
+  return false;
+});
 
 

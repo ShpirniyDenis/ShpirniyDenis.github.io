@@ -1010,7 +1010,7 @@ header {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between; }
-  .registration__wrapp .registration__sucess, .registration__wrapp .registration__done {
+  .registration__wrapp .registration__sucess, .registration__wrapp .registration__done, .registration__wrapp .registration__spinner {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1185,7 +1185,9 @@ header {
   padding: 0;
   background-color: #fff;
   color: #fff;
-  border: none; }
+  border: none;
+  left: 0;
+  bottom: 0; }
 
 .form-group.radios li label {
   display: block;
@@ -1296,7 +1298,9 @@ header {
     padding: 0;
     background-color: #fff;
     color: #fff;
-    border: none; }
+    border: none;
+    bottom: 0;
+    right: 0; }
   .registration__prizes__item label {
     position: absolute;
     width: 100%;
@@ -1436,7 +1440,13 @@ header {
   .registration .registration__socials {
     padding-left: 0;
     margin: 0 auto;
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+  .registration .registration__heading {
+    background: none;
+    color: #A580FB;
+    -webkit-text-fill-color: #A580FB; }
+  .registration .registration__prizes__btn {
+    display: none; } }
 
 @media (max-width: 360px) {
   .registration .registration__heading {
@@ -1481,7 +1491,8 @@ footer {
   display: inline-block;
   background-zise: cover;
   background-position: center center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  cursor: pointer; }
   .application_link.app-store {
     background-image: url("../img/app-store.svg");
     width: 120px;
@@ -1555,6 +1566,8 @@ footer {
     -webkit-transition: top 0.2s ease-in-out, opacity 1s ease-in-out;
     -o-transition: top 0.2s ease-in-out, opacity 1s ease-in-out;
     transition: top 0.2s ease-in-out, opacity 1s ease-in-out; }
+    .popup_container.active .popup_background {
+      position: fixed; }
 
 .popup_background {
   position: absolute;
@@ -1596,6 +1609,81 @@ footer {
       top: 22px;
       right: 27px; } }
 
+.spinner {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+  color: #57C84B; }
+
+.spinner:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  border: 4px solid currentColor;
+  border-bottom-color: transparent;
+  border-radius: 100%;
+  background: transparent;
+  -webkit-animation: rotate .75s linear infinite;
+          animation: rotate .75s linear infinite; }
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg); } }
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg); } }
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1, 250;
+    stroke-dashoffset: 0; }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35; }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -140; } }
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 250;
+    stroke-dashoffset: 0; }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35; }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -140; } }
+
+@-webkit-keyframes color {
+  0% {
+    stroke: #192a55; }
+  25% {
+    stroke: #ffeb3b; }
+  50% {
+    stroke: #192a55; }
+  75% {
+    stroke: #ffeb3b; }
+  100% {
+    stroke: #192a55; } }
+
+@keyframes color {
+  0% {
+    stroke: #192a55; }
+  25% {
+    stroke: #ffeb3b; }
+  50% {
+    stroke: #192a55; }
+  75% {
+    stroke: #ffeb3b; }
+  100% {
+    stroke: #192a55; } }
+
 .request-popup__content.request-container {
   padding: 64px 88px;
   width: 100%; }
@@ -1612,7 +1700,13 @@ footer {
 
 @media (max-width: 768px) {
   .request-popup .request-container {
-    padding: 64px 12px; } }
+    padding: 64px 12px; }
+  .request-popup .registration__heading {
+    background: none;
+    color: #A580FB;
+    -webkit-text-fill-color: #A580FB; }
+  .request-popup .registration__prizes__btn {
+    display: none; } }
 
 @media (max-width: 360px) {
   .request-popup .registration__heading {
