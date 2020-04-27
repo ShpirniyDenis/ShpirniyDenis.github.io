@@ -166,6 +166,7 @@ body
         border-top-right-radius: 0
         border-bottom-right-radius: 0
 
+
 .btn-main
   @media (max-width: 768px)
     width: 100%
@@ -1035,8 +1036,9 @@ header
     line-height: 21px
     color: #A580FB
   &:hover
-    .registration__prizes__item__content
-      background-color: #FFF3FC
+    @media(min-width: 768px)
+      .registration__prizes__item__content
+        background-color: #FFF3FC
 .registration__prizes__item__img
   height: 40px
   margin-bottom: 3px
@@ -1197,14 +1199,16 @@ footer
     height: 40px
     margin-right: 20px
     &:hover
-      background-image: url('../img/app-store-acive.svg')
+      @media(min-width: 768px)
+        background-image: url('../img/app-store-acive.svg')
   &.google-play
     background-image: url('../img/google-play.svg')
     width: 136px
     height: 40px
     margin-right: 20px
     &:hover
-      background-image: url('../img/google-play-active.svg')
+      @media(min-width: 768px)
+        background-image: url('../img/google-play-active.svg')
 
 footer
   @media(max-width: 992px)

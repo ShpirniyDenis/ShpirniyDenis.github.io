@@ -1313,8 +1313,9 @@ header {
     font-size: 16px;
     line-height: 21px;
     color: #A580FB; }
-  .registration__prizes__item:hover .registration__prizes__item__content {
-    background-color: #FFF3FC; }
+  @media (min-width: 768px) {
+    .registration__prizes__item:hover .registration__prizes__item__content {
+      background-color: #FFF3FC; } }
 
 .registration__prizes__item__img {
   height: 40px;
@@ -1498,15 +1499,17 @@ footer {
     width: 120px;
     height: 40px;
     margin-right: 20px; }
-    .application_link.app-store:hover {
-      background-image: url("../img/app-store-acive.svg"); }
+    @media (min-width: 768px) {
+      .application_link.app-store:hover {
+        background-image: url("../img/app-store-acive.svg"); } }
   .application_link.google-play {
     background-image: url("../img/google-play.svg");
     width: 136px;
     height: 40px;
     margin-right: 20px; }
-    .application_link.google-play:hover {
-      background-image: url("../img/google-play-active.svg"); }
+    @media (min-width: 768px) {
+      .application_link.google-play:hover {
+        background-image: url("../img/google-play-active.svg"); } }
 
 @media (max-width: 992px) {
   footer .footer__wrapp {
