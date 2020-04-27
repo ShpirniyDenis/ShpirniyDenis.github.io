@@ -341,9 +341,18 @@ header
   justify-content: flex-start
 .banner__img
   width: 65.4%
+  position: relative
   img,svg
     max-width: 100%
     height: auto
+  video
+    width: 100%
+    -webkit-mask-box-image: url('../img/Group-331.svg')
+.banner__img-bgelement
+  position: absolute
+  z-index: 3
+  top: 7%
+  left: 30%
 .banner__content
   flex-shrink: 0
   h1
