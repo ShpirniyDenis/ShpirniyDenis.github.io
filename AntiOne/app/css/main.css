@@ -459,7 +459,14 @@ header {
     fill: #E4B1F0; }
 
 .banner__img__mob {
-  display: none; }
+  display: none;
+  position: relative; }
+  .banner__img__mob img, .banner__img__mob svg {
+    max-width: 100%;
+    height: auto; }
+  .banner__img__mob video {
+    width: 100%;
+    -webkit-mask-box-image: url("../img/Group-331.svg"); }
 
 @media (max-width: 1240px) {
   .banner .banner__content h1 {
