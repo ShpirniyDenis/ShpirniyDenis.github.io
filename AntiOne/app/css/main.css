@@ -430,7 +430,10 @@ header {
     height: auto; }
   .banner__img video {
     width: 100%;
-    -webkit-mask-box-image: url("../img/Group-331.svg"); }
+    -webkit-mask-image: url("../img/Group-331.svg");
+            mask-image: url("../img/Group-331.svg");
+    -webkit-mask-size: cover;
+            mask-size: cover; }
 
 .banner__img-bgelement {
   position: absolute;
@@ -466,7 +469,10 @@ header {
     height: auto; }
   .banner__img__mob video {
     width: 100%;
-    -webkit-mask-box-image: url("../img/Group-331.svg"); }
+    -webkit-mask-image: url("../img/Group-331.svg");
+            mask-image: url("../img/Group-331.svg");
+    -webkit-mask-size: cover;
+            mask-size: cover; }
 
 @media (max-width: 1240px) {
   .banner .banner__content h1 {

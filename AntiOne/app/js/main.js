@@ -17,7 +17,7 @@ function clickItemHandler(event) {
       if (!document.querySelector(target.dataset.label)) return;
       document.querySelector(target.dataset.label).classList.add('active');
     },
-
+ 
     'popup-close': function (target) {
       if (target.dataset.label) {
         document.querySelector(target.dataset.label).classList.remove('active')
@@ -59,22 +59,32 @@ for(i = 0; i < menuLink.length; i++){
 }
 
 // for scrolling to anchor
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        if(window.screen.width > 992) {
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth',
-            block: 'end'
-          });
-        }else{
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-    });
-});
+$('a[href*="#"]')
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    if ( 
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 700, function() {
+          var $target = $(target); 
+          if ($target.is(":focus")) { 
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); 
+          };
+        });
+      }
+    }
+  });
 
 // for statistics
 function random(min, max) {
@@ -107,18 +117,36 @@ function checkUserStatus(){
 }
 checkUserStatus();
 
+$.fn.serializeObject = function(){
+   let val = {};
+   let form = this.serializeArray();
+   $.each(form, function() {
+       if (val[this.name]) {
+           if (!val[this.name].push) {
+               val[this.name] = [value[this.name]];
+           }
+           val[this.name].push(this.value || '');
+       } else {
+           val[this.name] = this.value || '';
+       }
+   });
+   return val;
+};
+
 $(".registration__form").submit(function () {
   $('.registration__spinner').slideDown();
   $('.registration__content').slideUp();
   let th = $(this);
+  console.log(th.serializeObject());
   $.ajax({
     type: "POST",
     url: "mail.php", 
-    data: th.serialize()
+    data: th.serializeObject(),
   }).done(function () {
     registrationDone();
   });
   return false;
 });
+
 
 
