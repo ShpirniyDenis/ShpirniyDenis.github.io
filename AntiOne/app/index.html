@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="libs/swiperjs/swiper.min.css">
   <link rel="stylesheet" href="css/main.css">
-</head> 
+</head>  
 <body> 
 
  
@@ -201,7 +201,7 @@
                 <div class="about__slider__img">
                   <img src="img/about_users4.svg" alt="">
                 </div>
-                <div class="about__slider__info">Славик (Запорожье, 28 лет) + Оля (Харьков , 27 лет)</div>
+                <div class="about__slider__info">Славик (Львов, 28 лет) + Оля (Харьков , 27 лет)</div>
               </div>
             </div>
             <div class="about__slider__nav">
@@ -501,7 +501,7 @@
         <a class="application_link google-play click-item" data-action="popup-open" data-label="#request-popup" ></a>
       </div>
       <div class="footer__contacts">
-        <a href="mailto:anti1.help@gmail.com">anti1.help@gmail.com</a>
+        <a href="mailto:anti1.helps@gmail.com">anti1.helps@gmail.com</a>
       </div>
     </div>
   </div>
@@ -645,7 +645,6 @@
               </span>
               <span class="btn-element-right">Играю</span>
             </button>
-            <span id="trapa">trapa</span>
           </form>
         </div>
         <div class="registration__sucess" style="display: none;">
@@ -683,6 +682,11 @@
         el: '.how-play__pagination',
         clickable: true,
       },
+      breakpoints: {
+        768: {
+          touchRatio: 0,
+        },
+      }
     });
 
     let usersSwiper = new Swiper('.about__users .about__slider', {
@@ -694,6 +698,11 @@
         nextEl: '.about__users .about__slider__btn.next',
         prevEl: '.about__users .about__slider__btn.prev',
       },
+      breakpoints: {
+        768: {
+          touchRatio: 0,
+        },
+      }
     });
 
     let prizesSwiper = new Swiper('.about__prizes .about__slider', {
@@ -705,6 +714,11 @@
         nextEl: '.about__prizes .about__slider__btn.next',
         prevEl: '.about__prizes .about__slider__btn.prev',
       },
+      breakpoints: {
+        768: {
+          touchRatio: 0,
+        },
+      }
     });
 
     let registrationPrizesSwiper = new Swiper('.registration__prizes__slider', {
@@ -724,9 +738,11 @@
         768: {
           touchRatio: 0,
         },
-      }
+      },
     });
   </script>
+
+
 
 </body>
 </html>

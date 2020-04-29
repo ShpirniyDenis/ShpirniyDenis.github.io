@@ -297,9 +297,15 @@ header {
   .header__nav li a {
     padding: 20px 33px;
     font-size: 16px;
-    color: #fff; }
+    color: #fff;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s; }
     .header__nav li a:focus {
       outline: none; }
+    @media (min-width: 768px) {
+      .header__nav li a:hover {
+        color: #4aff37; } }
 
 .header__btn {
   margin-left: 39px; }
@@ -620,6 +626,8 @@ header {
     @media (min-width: 768px) {
       .how-play__slider__btn.next:hover img, .how-play__slider__btn.next:hover svg {
         margin-left: 20px; } }
+    .how-play__slider__btn.next.swiper-button-disabled {
+      opacity: 0; }
 
 .how-play__wrapp .swiper-container-horizontal > .swiper-pagination-bullets, .how-play__wrapp .swiper-pagination-custom, .how-play__wrapp .swiper-pagination-fraction {
   bottom: 23px; }
@@ -1396,6 +1404,8 @@ header {
   .registration__prizes__btn.next {
     right: -8px;
     left: auto; }
+  .registration__prizes__btn.swiper-button-disabled {
+    opacity: 0; }
 
 .registration__prizes__pagination {
   text-align: center;
