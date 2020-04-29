@@ -1744,3 +1744,43 @@ footer {
     text-align: center; }
   .request-popup .radios__heading {
     margin-right: 14px; } }
+
+.page-container main {
+  height: 100vh;
+  margin-bottom: -78px; }
+
+.page-container header {
+  padding-bottom: 20px;
+  background: -o-linear-gradient(216.79deg, #9574FF 0%, #FBC2EB 100%);
+  background: linear-gradient(233.21deg, #9574FF 0%, #FBC2EB 100%); }
+  .page-container header .btn-main .btn-element-left .btn-element-left__delimiter svg:first-child path {
+    fill: #9877FE; }
+
+.page-container .page-container__content {
+  padding-top: 170px; }
+  .page-container .page-container__content h1 {
+    background: -o-linear-gradient(15.55deg, #FBC2EB 0%, #9574FF 100%);
+    background: linear-gradient(74.45deg, #FBC2EB 0%, #9574FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
+    font-size: 37px;
+    font-family: "Futura Demi", Arial, sans-serif; }
+  .page-container .page-container__content .page-container__content__text {
+    font-family: "Futura Book", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 24px; }
+    .page-container .page-container__content .page-container__content__text p {
+      margin-bottom: 20px; }
+
+@media (max-width: 992px) {
+  .page-container main {
+    height: auto;
+    padding-bottom: 40px;
+    margin-bottom: 0; }
+  .page-container header .btn-main .btn-element-left .btn-element-left__delimiter svg:first-child path {
+    fill: #fff; }
+  .page-container .page-container__content {
+    padding-top: 150px; }
+    .page-container .page-container__content h1 {
+      font-size: 32px; } }

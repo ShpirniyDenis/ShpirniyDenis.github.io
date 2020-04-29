@@ -1393,6 +1393,46 @@ footer
       margin-right: 14px
 
 
+.page-container
+  main
+    height: 100vh
+    margin-bottom: -78px
+  header
+    padding-bottom: 20px
+    background: linear-gradient(233.21deg, #9574FF 0%, #FBC2EB 100%)
+    .btn-main
+      .btn-element-left .btn-element-left__delimiter svg:first-child
+        path
+          fill: #9877FE
+  .page-container__content
+    padding-top: 170px
+    h1
+      background: linear-gradient(74.45deg, #FBC2EB 0%, #9574FF 100%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      margin-bottom: 30px
+      font-size: 37px
+      font-family: $font_demi
+    .page-container__content__text
+      font-family: $font_regular
+      font-size: 15px
+      line-height: 24px
+      p
+        margin-bottom: 20px
+  @media (max-width: 992px)
+    main
+      height: auto
+      padding-bottom: 40px
+      margin-bottom: 0
+    header .btn-main
+      .btn-element-left .btn-element-left__delimiter svg:first-child
+        path
+          fill: #fff
+    .page-container__content
+      padding-top: 150px
+      h1
+        font-size: 32px
+
 
 
 
