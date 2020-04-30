@@ -163,7 +163,7 @@ header
       padding-top: 12px
       padding-bottom: 12px
       position: relative
-    .header__nav-item, .header__nav-search
+    .header__nav-item
       width: 40px
       height: 40px
       margin-left: 0
@@ -179,17 +179,17 @@ header
       left: 0
       top: 12px
       transition: all 0.2s
-      overflow: hidden
-      &:hover
-        width: 100%
-        background-color: #fff
+      max-width: 100%
       input
         background-color: transparent
         background-image: url('../img/search-icon-white.svg')
+        border: 1px solid #FFFFFF
+        border-radius: 5px
+        background-color: transparent
         &:hover
           width: 40px
         &:focus
-          width: 100%
+          width: 150%
           background-color: #fff
           background-image: url('../img/search-icon.svg')
     .header-favorits

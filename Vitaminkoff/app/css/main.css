@@ -214,14 +214,14 @@ header {
     padding-top: 12px;
     padding-bottom: 12px;
     position: relative; }
-  header .header__nav-item, header .header__nav-search {
+  header .header__nav-item {
     width: 40px;
     height: 40px;
     margin-left: 0;
     border: 1px solid #FFFFFF;
     border-radius: 5px;
     background-color: transparent; }
-    header .header__nav-item svg path, header .header__nav-item img path, header .header__nav-search svg path, header .header__nav-search img path {
+    header .header__nav-item svg path, header .header__nav-item img path {
       fill: #fff; }
   header .header__nav-search {
     -webkit-box-ordinal-group: 1;
@@ -234,17 +234,17 @@ header {
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
-    overflow: hidden; }
-    header .header__nav-search:hover {
-      width: 100%;
-      background-color: #fff; }
+    max-width: 100%; }
     header .header__nav-search input {
       background-color: transparent;
-      background-image: url("../img/search-icon-white.svg"); }
+      background-image: url("../img/search-icon-white.svg");
+      border: 1px solid #FFFFFF;
+      border-radius: 5px;
+      background-color: transparent; }
       header .header__nav-search input:hover {
         width: 40px; }
       header .header__nav-search input:focus {
-        width: 100%;
+        width: 150%;
         background-color: #fff;
         background-image: url("../img/search-icon.svg"); }
   header .header-favorits {
