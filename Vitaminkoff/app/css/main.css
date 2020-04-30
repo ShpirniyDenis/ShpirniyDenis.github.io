@@ -240,9 +240,9 @@ header {
       background-image: url("../img/search-icon-white.svg");
       border: 1px solid #FFFFFF;
       border-radius: 5px;
-      background-color: transparent; }
-      header .header__nav-search input:hover {
-        width: 40px; }
+      background-color: transparent;
+      width: 38px;
+      padding-left: 37px; }
       header .header__nav-search input:focus {
         width: 150%;
         background-color: #fff;
