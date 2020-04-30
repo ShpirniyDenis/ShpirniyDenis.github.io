@@ -1756,8 +1756,7 @@ footer {
     margin-right: 14px; } }
 
 .page-container main {
-  height: 100vh;
-  margin-bottom: -78px; }
+  padding-bottom: 50px; }
 
 .page-container header {
   padding-bottom: 20px;
@@ -1774,14 +1773,23 @@ footer {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 30px;
-    font-size: 37px;
+    font-size: 32px;
     font-family: "Futura Demi", Arial, sans-serif; }
+  .page-container .page-container__content h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-family: "Futura Demi", Arial, sans-serif;
+    display: block; }
   .page-container .page-container__content .page-container__content__text {
     font-family: "Futura Book", Arial, sans-serif;
     font-size: 15px;
     line-height: 24px; }
     .page-container .page-container__content .page-container__content__text p {
-      margin-bottom: 20px; }
+      margin-bottom: 10px; }
+    .page-container .page-container__content .page-container__content__text ul {
+      padding-left: 30px;
+      margin-bottom: 10px;
+      list-style: disc; }
 
 @media (max-width: 992px) {
   .page-container main {
@@ -1793,4 +1801,4 @@ footer {
   .page-container .page-container__content {
     padding-top: 150px; }
     .page-container .page-container__content h1 {
-      font-size: 32px; } }
+      font-size: 22px; } }

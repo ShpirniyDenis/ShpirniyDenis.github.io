@@ -14,7 +14,9 @@ body
   font-family: $font_medium   
   color: $color_font 
   overflow-x: hidden
- 
+  @media(max-width: 992px)
+    background-color: #fff
+  
 *, :after, :before 
   box-sizing: border-box
 
@@ -123,17 +125,86 @@ header
       transition: all .2s
   &:focus
     outline: none
-  &:hover
-    background-color: rgba(255, 255, 255, 0.3)
-    svg
-      path
-        fill: #fff
+  @media(min-width: 992px)
+    &:hover
+      background-color: rgba(255, 255, 255, 0.3)
+      svg
+        path
+          fill: #fff
 
 header
   @media(max-width: 1200px)
     .header__back:before
       width: 32px
       height: 32px
+  @media(max-width: 992px)
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2)
+    background-color: #4F8A86
+    .header__back
+      display: none
+    .header__wrapp
+      justify-content: flex-end
+      padding-bottom: 24px
+    .header__logo
+      margin-right: auto
+  @media(max-width: 768px)
+    .header__logo
+      max-width: 30%
+      width: 30%
+      margin-right: 0
+      img,svg
+        max-width: 100%
+        height: auto
+    .header__nav-search input
+      width: 40px
+      padding-left: 39px
+    .header__wrapp
+      justify-content: center
+      padding-top: 12px
+      padding-bottom: 12px
+      position: relative
+    .header__nav-item, .header__nav-search
+      width: 40px
+      height: 40px
+      margin-left: 0
+      border: 1px solid #FFFFFF
+      border-radius: 5px
+      background-color: transparent
+      svg,img
+        path
+          fill: #fff
+    .header__nav-search
+      order: 0
+      position: absolute
+      left: 0
+      top: 12px
+      transition: all 0.2s
+      overflow: hidden
+      &:hover
+        width: 100%
+        background-color: #fff
+      input
+        background-color: transparent
+        background-image: url('../img/search-icon-white.svg')
+        &:hover
+          width: 40px
+        &:focus
+          width: 100%
+          background-color: #fff
+          background-image: url('../img/search-icon.svg')
+    .header-favorits
+      order: 1
+      margin-right: auto
+      margin-left: 49px
+    .header__logo
+      order: 2
+    .header-user
+      order: 3
+      margin-left: auto
+    .header-buy
+      order: 4
+      margin-left: 8px
+
 
 
 .cabinet
@@ -190,9 +261,10 @@ header
       background: rgba(255, 255, 255, 0.3)
       opacity: 1
   &:hover
-    a
-      background: rgba(255, 255, 255, 0.3)
-      opacity: 1
+    @media(min-width: 992px)
+      a
+        background: rgba(255, 255, 255, 0.3)
+        opacity: 1
 .cabinet__nav__img
   width: 21px
   margin-right: 6px
@@ -225,14 +297,117 @@ header
   @media(max-width: 1200px)
     width: 100%
 
+.cabinet__out
+  display: none
+
 .cabinet
   @media(max-width: 1200px)
     .cabinet__info
       display: block
     .cabinet__content
       width: 77%
+      padding-bottom: 35px
     .cabinet__nav
       width: 21%
+    .cabinet__content__go-back
+      top: 70px
+  @media(max-width: 992px)
+    height: auto
+    min-height: auto
+    .cabinet__wrapp
+      display: block
+      height: auto
+      min-height: auto
+      padding-top: 78px
+    .cabinet__nav
+      width: auto
+      height: auto
+      min-height: auto
+      overflow: auto
+      padding-bottom: 0
+      padding-top: 30px
+      padding-bottom: 30px
+      padding-left: 16px
+      background-color: #4F8A86
+    .cabinet__nav__back
+      margin-top: 0
+    .cabinet__nav__list
+      height: auto
+      min-height: auto
+      flex-direction: row
+      width: max-content
+    .cabinet__nav__item
+      width: auto
+      margin-bottom: 0
+      margin-right: 8px
+    .cabinet__nav__item a
+      border: 1px solid #FFFFFF
+      opacity: 1
+      height: 40px
+      padding: 3px 12px 3px 8px
+    .cabinet__nav__item .count
+      margin-left: 10px
+    .mainContainer
+      padding: 0
+    .cabinet__content
+      width: 100%
+      border-radius: 0
+    .cabinet__nav__item.active a
+      background-color: #fff
+      color: #4F8A86
+      font-family: $font_medium
+      .cabinet__nav__img
+        svg
+          rect,path
+            fill: #4F8A86
+    .cabinet__nav__item.active
+      order: 0
+    .cabinet__nav__item
+      order: 1
+  @media(max-width: 768px)
+    .cabinet__content
+      padding: 16px
+    .cabinet__content__heading
+      display: none
+    .cabinet__content__go-back
+      top: 20px
+    .cabinet__wrapp
+      padding-bottom: 0
+      padding-top: 62px
+    .cabinet__nav
+      margin-bottom: 0
+      padding-bottom: 16px
+      padding-top: 18px
+    .cabinet__details
+      margin-bottom: 16px
+    .cabinet__nav__back
+      display: none
+    .cabinet__out
+      display: block
+      width: 100%
+      padding: 24px 16px
+      background-color: #4F8A86
+      a
+        display: block
+        width: 100%
+        height: 40px
+        line-height: 40px
+        color: #FFFFFF
+        font-size: 14px
+        font-family: $font_semibold
+        border: 1px solid #FFFFFF
+        border-radius: 5px
+        padding-left: 12px
+        padding-right: 12px
+        position: relative
+        text-align: center
+        svg,img
+          position: absolute
+          left: 12px
+          top: 12px
+    .cabinet__content__go-back
+      left: 16px
+
 
 .balance
   width: 32%
@@ -274,6 +449,13 @@ header
 .balance
   @media(max-width: 1200px)
     width: 100%
+  @media(max-width: 768px)
+    background: #FCB03E
+    margin-bottom: 16px
+    .balance__value b
+      color: #fff
+    .balance__value
+      margin-bottom: 24px
 
 .favorits-issue
   width: 32%
@@ -361,13 +543,19 @@ header
   background-size: auto
   transition: all .2s
   &:hover
-    background-color: #4F8A86
-    background-image: url('../img/icon-plus-white.svg')
+    @media(min-width: 992px)
+      background-color: #4F8A86
+      background-image: url('../img/icon-plus-white.svg')
 
 .favorits-issue
   @media(max-width: 1200px)
     width: 100%
     margin-bottom: 24px
+  @media(max-width: 768px)
+    margin-bottom: 16px
+    .favorits-issue__empty
+      padding-top: 24px
+      padding-bottom: 24px
 
 .orders-issue
   width: 32%
@@ -419,7 +607,8 @@ header
     &:after
       display: none
   &:hover
-    background-color: #F5F5F5
+    @media(min-width: 992px)
+      background-color: #F5F5F5
 .orders-issue__address
   font-family: $font_regular
   font-size: 14px
@@ -446,6 +635,11 @@ header
   @media(max-width: 1200px)
     width: 100%
     margin-bottom: 24px
+  @media(max-width: 768px)
+    margin-bottom: 16px
+    .orders-issue__empty
+      padding-top: 24px
+      padding-bottom: 24px
 
 
 .manager
@@ -491,7 +685,8 @@ header
   margin-bottom: 17px
   transition: all .2s
   &:hover
-    color: #356360
+    @media(min-width: 992px)
+      color: #356360
 .manager__link
   display: block
   margin: 0 auto
@@ -504,14 +699,17 @@ header
   font-family: $font_semibold
   transition: all .2s
   &:hover
-    background-color: #dc8400
+    @media(min-width: 992px)
+      background-color: #dc8400
 
 .manager
   @media(max-width: 1200px)
     width: 100%
     margin-bottom: 24px
+  @media(max-width: 768px)
+    margin-bottom: 0
 
-.cabinet__featured__empty, .cabinet__history__empty
+.favorits-issue__empty, .orders-issue__empty,
   padding-top: 54px
   text-align: center
   font-size: 14px
@@ -527,8 +725,9 @@ header
     font-family: $font_bold
     margin-top: 32px
     &:hover
-      background-color: #EB9F2D
-.cabinet__history__empty
+      @media(min-width: 992px)
+        background-color: #EB9F2D
+.favorits-issue__empty
   padding-top: 64px
 
 
@@ -603,8 +802,10 @@ header
         margin-left: 12px
       &:before
         background-color: #EB9F2D
-    &:hover
-      border-color: #EB9F2D
+    .orders__item
+      &:hover
+        @media(min-width: 992px)
+          border-color: #EB9F2D
 .orders__item
   width: 100%
   padding: 16px 16px 12px 16px
@@ -618,8 +819,9 @@ header
   border: 1px solid transparent
   transition: all .3s
   &:hover
-    border-color: #4F8A86
-    box-shadow: none
+    @media(min-width: 992px)
+      border-color: #4F8A86
+      box-shadow: none
   &:last-child
     margin-bottom: 0
 .orders__item__info
@@ -677,10 +879,11 @@ header
     path
       transition: all .2s
   &:hover
-    background-color: #EB9F2D
-    img,svg
-      path
-        fill: #fff
+    @media(min-width: 992px)
+      background-color: #EB9F2D
+      img,svg
+        path
+          fill: #fff
 
 .orders__issue__term
   width: 100%
@@ -724,7 +927,54 @@ header
 
 .orders
   @media(max-width: 1200px)
-    
+    .orders__issue
+      width: 90%
+  @media(max-width: 768px)
+    .orders__heading
+      display: none
+    .orders__nav
+      display: block
+      border-bottom: none
+      padding: 0
+      margin-bottom: 10px
+    .orders__sort
+      margin-bottom: 10px
+      button
+        width: 49%
+        margin: 0
+    .orders__filter
+      text-align: right
+    .orders__issue
+      width: 100%
+    .orders__item__addFavorite
+      display: none
+    .orders__item
+      padding: 16px 12px 12px 12px
+    .orders__item__date span
+      margin-right: 13px
+      &:last-child
+        margin-right: 0
+    .orders__item__price
+      font-size: 14px
+    .orders__item__bonus
+      font-size: 14px
+    .orders__item__details
+      width: 27%
+    .orders__item__info
+      width: 72%
+    .orders__issue__term
+      margin-bottom: 24px
+    .orders__issue__term span
+      margin-bottom: 0
+  @media(max-width: 369px)
+    .orders__item__date span
+      margin-right: 7px
+    .orders__item__info
+      font-size: 12px
+    .orders__item__price
+      font-size: 13px
+    .orders__item__bonus
+      font-size: 12px
 
 
 .cabinet__content__heading
@@ -806,11 +1056,13 @@ header
     &:focus
       outline: none
     &:hover
-      background-color: #159088
+      @media(min-width: 992px)
+        background-color: #159088
     &.to-pay
       background-color: #EB9F2D
       &:hover
-        background-color: #dc8400
+        @media(min-width: 992px)
+          background-color: #dc8400
     &.repeat
       width: 100%
       background-color: transparent
@@ -819,8 +1071,66 @@ header
       text-align: center
       color: #4F8A86
       &:hover
-        background-color: transparent
-        color: #159088
+        @media(min-width: 992px)
+          background-color: transparent
+          color: #159088
+
+.order
+  @media(max-width: 1200px)
+    width: 90%
+    padding-top: 25px
+  @media(max-width: 768px)
+    width: 100%
+    padding-top: 46px
+    padding-bottom: 20px
+    .orders__item
+      padding: 16px 12px 12px 12px
+      margin-left: -16px
+      width: calc(100% + 32px)
+      border-radius: 0
+    .orders__item__date span
+      margin-right: 13px
+      &:last-child
+        margin-right: 0
+    .orders__item__price
+      font-size: 14px
+    .orders__item__bonus
+      font-size: 14px
+    .orders__item__details
+      width: 27%
+    .orders__item__info
+      width: 72%
+    .orders__issue__term
+      margin-bottom: 24px
+    .orders__issue__term span
+      margin-bottom: 0
+    .orders__article.featured .orders__item__addFavorite
+      display: block
+      top: -58px
+      margin-top: 0
+      right: 0
+      border-radius: 10px
+      width: 40px
+      height: 40px
+    .order__item
+      margin: 0
+    .orders__article
+      margin-bottom: 4px
+    .order__item__info
+      width: 65%
+    .order__item__details
+      width: 33%
+    .order__item__price .old
+      margin-left: 3px
+    .order__method
+      margin-left: 0
+      margin-right: 0
+    .order__btns button
+      margin-bottom: 15px
+      &.to-pay
+        margin-bottom: 24px
+      &:last-child
+        margin-bottom: 0
 
 .cabinet__content__go-back
   font-size: 14px
@@ -830,11 +1140,12 @@ header
   top: 95px
   left: 24px
   &:hover
-    .cabinet__content__go-back__icon
-      background-color: #4F8A86
-      svg
-        path
-          fill: #fff
+    @media(min-width: 992px)
+      .cabinet__content__go-back__icon
+        background-color: #4F8A86
+        svg
+          path
+            fill: #fff
 .cabinet__content__go-back__icon
   display: inline-block
   width: 40px
@@ -880,10 +1191,11 @@ header
   &:focus
     outline: none
   &:hover
-    background-color: rgba(221, 0, 0, 0.8)
-    svg
-      path
-        fill: #fff
+    @media(min-width: 992px)
+      background-color: rgba(221, 0, 0, 0.8)
+      svg
+        path
+          fill: #fff
 .adress-history__issue
   margin-bottom: 24px
 .adress-history__btns
@@ -899,8 +1211,18 @@ header
     &:focus
       outline: none
     &:hover
-      color: #159088
+      @media(min-width: 992px)
+        color: #159088
 
+.address-history
+  @media (max-width: 1200px)
+    width: 90%
+  @media (max-width: 768px)
+    width: 100%
+    padding-bottom: 20px
+    .address-history__item
+      font-size: 14px
+      padding: 12px 0
 
 .cabinet-chat
   width: 54%
@@ -922,6 +1244,17 @@ header
     color: #C4C4C4
     margin-top: 30px
 
+.cabinet-chat
+  @media(max-width: 1200px)
+    width: 90%
+  @media(max-width: 768px)
+    width: 100%
+    min-height: 350px
+    img
+      max-width: 100%
+      height: auto
+
+
 
 .favorites__issue
   width: 54%
@@ -938,7 +1271,8 @@ header
       pointer-events: none
       cursor: not-allowed
       &:hover
-        background-color: #D8D8D8
+        @media(min-width: 992px)
+          background-color: #D8D8D8
 .favorites__item
   display: flex
   width: 100%
@@ -961,9 +1295,11 @@ header
   height: 100px
   line-height: 100px
   margin-right: 12px
+  text-align: center
   img,svg
     max-width: 100%
     height: auto
+    max-height: 100%
 .favorites__item__name
   line-height: 16px
   color: #2F2F2F
@@ -1008,7 +1344,8 @@ header
   background-color: #4F8A86
   border-radius: 5px
   &:hover
-    background-color: #EB9F2D
+    @media(min-width: 992px)
+      background-color: #EB9F2D
 
 .favorites__btn-delete
   background: rgba(221, 0, 0, 0.2)
@@ -1028,10 +1365,64 @@ header
   &:focus
     outline: none
   &:hover
-    background-color: rgba(221, 0, 0, 0.8)
-    svg
-      path
-        fill: #fff
+    @media(min-width: 992px)
+      background-color: rgba(221, 0, 0, 0.8)
+      svg
+        path
+          fill: #fff
+
+.favorites__issue
+  @media(max-width: 1200px)
+    width: 90%
+  @media(max-width: 768px)
+    width: 100%
+    .favorites__item
+      display: block
+      background: #F5F5F5
+      padding: 8px
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1)
+    .favorites__item__img
+      width: 100%
+      height: 116px
+      background: #FFFFFF
+      border: none
+      margin-bottom: 12px
+    .favorites__item__name
+      margin-bottom: 8px
+      width: 100%
+      order: 0
+      white-space: normal
+    .favorites__item__status
+      margin-bottom: 0
+      order: 2
+      padding: 1px 5px
+    .favorites__item__code
+      order: 1
+      margin-bottom: 0
+    .favorites__item__code span
+      margin-left: 2px
+    .favorites__item__status
+      font-size: 10px
+    .favorites__item__info__wrapp
+      display: flex
+      justify-content: space-between
+      align-items: center
+      flex-wrap: wrap
+    .favorites__item__info
+      display: block
+      width: 100%
+      margin-bottom: 8px
+    .favorites__item__details
+      text-align: left
+    .favorites__item__price
+      margin-bottom: 12px
+    .favorites__btn-delete
+      top: auto
+      bottom: 8px
+      right: 8px
+    .favorites__item__buy
+      padding: 8px 15px
+      width: 80%
 
 .cabinet-setting
   width: 70%
@@ -1095,7 +1486,8 @@ header
   &:focus
     outline: none
   &:hover
-    color: #159088
+    @media(min-width: 992px)
+      color: #159088
 .setting__phones
   margin-bottom: 55px
   .add
@@ -1160,7 +1552,35 @@ header
   &:focus
     outline: none
   &:hover
-    background-color: #EB9F2D
+    @media(min-width: 992px)
+      background-color: #EB9F2D
+
+.cabinet-setting
+  @media (max-width: 993px)
+    width: 90%
+  @media (max-width: 768px)
+    width: 100%
+    .setting__personal__descr
+      br
+        display: none
+    .setting__form-group input
+      width: 71%
+    .setting__phones__descr
+      font-size: 12px
+      line-height: 14px
+    .setting__user__form
+      .setting__form-group input
+        width: 100%
+    .setting__calendar__list
+      width: 100%
+    .setting__personal
+      margin-bottom: 32px
+    .setting__phones
+      margin-bottom: 32px
+    .setting__user__submit
+      margin: 0 auto
+      display: block
+      width: max-content
 
 
 

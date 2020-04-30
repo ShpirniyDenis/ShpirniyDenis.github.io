@@ -94,9 +94,15 @@ let currentTime = new Date();
 let peoplesStart = 1289 + (new Date().getHours()*40);
 let peoplesWinner = 118 + (new Date().getHours()*7);
 function addFakeStatistics(){
-  document.getElementById('peoplesStart').innerHTML = peoplesStart;
-  document.getElementById('peoplesWinner').innerHTML = peoplesWinner;
-  document.getElementById('peoplesOnline').innerHTML = Number(random(25, 50));
+  if(document.getElementById('peoplesStart') != null){
+    document.getElementById('peoplesStart').innerHTML = peoplesStart;
+  }
+  if(document.getElementById('peoplesWinner') != null){
+    document.getElementById('peoplesWinner').innerHTML = peoplesWinner;
+  }
+  if(document.getElementById('peoplesOnline') != null){
+    document.getElementById('peoplesOnline').innerHTML = Number(random(25, 50));
+  }
 }
 addFakeStatistics();
 
