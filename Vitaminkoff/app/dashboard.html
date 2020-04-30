@@ -88,7 +88,7 @@
                 <path d="M7 9.45C8.38796 9.45 9.5189 8.35 9.5189 7C9.5189 5.65 8.38796 4.55 7 4.55C5.60176 4.55 4.4811 5.65 4.4811 7C4.4811 8.35 5.60176 9.45 7 9.45ZM12.3462 7.68L13.8678 8.84C14.0015 8.95 14.0426 9.13 13.9501 9.29L12.5107 11.71C12.4182 11.86 12.2434 11.92 12.0686 11.86L10.2797 11.16C9.90958 11.44 9.49833 11.67 9.06652 11.85L8.78893 13.7C8.76837 13.87 8.61415 14 8.43937 14H5.56063C5.37557 14 5.23163 13.87 5.20079 13.7L4.93348 11.85C4.49139 11.67 4.09042 11.44 3.7203 11.16L1.92108 11.86C1.76687 11.92 1.57152 11.86 1.48927 11.71L0.0499035 9.29C-0.0426274 9.13 -0.00150262 8.95 0.132153 8.84L1.65377 7.68L1.60237 7L1.65377 6.31L0.132153 5.16C-0.00150262 5.05 -0.0426274 4.86 0.0499035 4.71L1.48927 2.29C1.57152 2.13 1.76687 2.07 1.92108 2.13L3.7203 2.84C4.09042 2.56 4.49139 2.32 4.93348 2.15L5.20079 0.29C5.23163 0.13 5.37557 0 5.56063 0H8.43937C8.61415 0 8.76837 0.13 8.78893 0.29L9.06652 2.15C9.49833 2.32 9.90958 2.56 10.2797 2.84L12.0686 2.13C12.2434 2.07 12.4182 2.13 12.5107 2.29L13.9501 4.71C14.0426 4.86 14.0015 5.05 13.8678 5.16L12.3462 6.31L12.3976 7L12.3462 7.68Z" fill="white"/>
               </svg>
             </span>Настройки</a></li>
-          <li class="cabinet__nav__item cabinet__nav__back"><a href="http://vitaminkoff.com.ua/">
+          <li class="cabinet__nav__item cabinet__nav__back"><a class="out click-item" data-action="popup-open" data-label="#out-popup">
             <span class="cabinet__nav__img">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14.2222 0H1.77778C0.791111 0 0 0.791111 0 1.77778V5.33333H1.77778V1.77778H14.2222V14.2222H1.77778V10.6667H0V14.2222C0 14.6937 0.187301 15.1459 0.520699 15.4793C0.854097 15.8127 1.30628 16 1.77778 16H14.2222C14.6937 16 15.1459 15.8127 15.4793 15.4793C15.8127 15.1459 16 14.6937 16 14.2222V1.77778C16 0.791111 15.2 0 14.2222 0ZM6.29333 11.1822L7.55556 12.4444L12 8L7.55556 3.55556L6.29333 4.80889L8.59556 7.11111H0V8.88889H8.59556L6.29333 11.1822Z" fill="white"/>
@@ -234,7 +234,7 @@
         </div>
       </div>
       <div class="cabinet__out">
-        <a href="http://vitaminkoff.com.ua/">
+        <a class="out click-item" data-action="popup-open" data-label="#out-popup">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14.2222 0H1.77778C0.791111 0 0 0.791111 0 1.77778V5.33333H1.77778V1.77778H14.2222V14.2222H1.77778V10.6667H0V14.2222C0 14.6937 0.187301 15.1459 0.520699 15.4793C0.854097 15.8127 1.30628 16 1.77778 16H14.2222C14.6937 16 15.1459 15.8127 15.4793 15.4793C15.8127 15.1459 16 14.6937 16 14.2222V1.77778C16 0.791111 15.2 0 14.2222 0ZM6.29333 11.1822L7.55556 12.4444L12 8L7.55556 3.55556L6.29333 4.80889L8.59556 7.11111H0V8.88889H8.59556L6.29333 11.1822Z" fill="white"/>
           </svg>
@@ -245,7 +245,26 @@
   </div>
 </main>
 
+<!-- OUT-CABINET-POPUP -->
+  <div id="out-popup" class="popup_container click-obj">
+    <div class="popup_background click-item" data-action="popup-close"></div>
+    <div class="popup out-popup">
+      <div class="popup_close click-item" data-action="popup-close">
+          <img src="img/popup-close.svg" alt="" />
+        </div>
+      <div class="cabinet-popup__content out-popup__content">
+        <div class="cabinet-popup__heading">
+          Вы действительно хотите выйти?
+        </div>
+        <div class="out-popup__nav">
+          <button class="no click-item" data-action="popup-close">Нет</button>
+          <a href="http://vitaminkoff.com.ua/" class="yes">Да</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
+<script src="js/main.js"></script>
 
 </body>
 </html>

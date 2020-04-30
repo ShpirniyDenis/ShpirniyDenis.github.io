@@ -272,6 +272,7 @@ header
   margin-right: 6px
 .cabinet__nav__back
   margin-top: auto
+  cursor: pointer
 
 .cabinet__content
   width: 83%
@@ -926,6 +927,19 @@ header
       pointer-events: none
       &:after
         display: none
+.favorites__nav
+  display: flex
+  justify-content: space-between
+  align-items: center
+  button
+    color: #4F8A86
+    background: transparent
+    font-size: 14px
+    line-height: 17px
+    font-family: $font_bold
+    border: none
+    &:focus 
+      outline: none
 
 .orders
   @media(max-width: 1200px)
@@ -1198,9 +1212,9 @@ header
       svg
         path
           fill: #fff
-.adress-history__issue
+.address-history__issue
   margin-bottom: 24px
-.adress-history__btns
+.address-history__btns
   text-align: center
   .add
     font-size: 14px
@@ -1583,6 +1597,248 @@ header
       margin: 0 auto
       display: block
       width: max-content
+
+
+//*** POPUP ***//
+.popup_container
+  position: fixed
+  top: -200%
+  left: 0
+  z-index: 10000
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 100%
+  min-width: 100vw
+  min-height: 100vh
+  padding: 10px
+  opacity: 0
+  box-sizing: border-box
+  &.active
+    top: 0
+    opacity: 1
+    transition: top 0.2s ease-in-out, opacity 1s ease-in-out
+.popup_background
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 100
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.7)
+.popup
+  position: relative
+  z-index: 200
+  width: 100%
+  max-width: 600px
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1)
+  border-radius: 20px
+  //padding: 56px 24px
+  margin: auto
+  background-color: #FFFFFF
+.popup_close
+  position: absolute
+  top: 21px
+  right: 21px
+  cursor: pointer
+  transition: all 0.2s ease-in-out
+  img,svg
+    width: 16px
+    height: auto
+.popup
+  @media(max-width: 768px)
+    .popup_close
+      top: 18px
+      right: 18px
+      img,svg
+        width: 13px
+
+.cabinet-popup__content
+  padding: 40px 38px 24px 38px
+  form
+    button
+      width: 184px
+      height: 40px
+      border: none
+      padding: 5px 15px
+      margin: 0 auto
+      display: block
+      background-color: #4F8A86
+      border-radius: 8px
+      color: #FFFFFF
+      font-size: 14px
+      font-family: $font_semibold
+      transition: all .2s
+      margin-top: 24px
+      &:hover
+        background-color: #EB9F2D
+      &:focus
+        outline: none
+.cabinet-popup__heading
+  text-align: center
+  font-size: 24px
+  line-height: 28px
+  color: #2F2F2F
+  margin-bottom: 24px
+.cabinet-popup__formgroup
+  width: 100%
+  margin-bottom: 8px
+  &:last-child
+    margin-bottom: 0
+  label
+    font-size: 12px
+    line-height: 20px
+    color: #2F2F2F
+    display: block
+    margin-bottom: 8px
+  input
+    width: 100%
+    background-color: transparent
+    border: 1px solid #EFEFEF
+    box-sizing: border-box
+    box-shadow: 0px 2px 5px rgba(229, 229, 229, 0.2)
+    border-radius: 10px
+    font-size: 14px
+    height: 40px
+    padding-left: 25px
+    font-family: $font_medium
+    &::placeholder
+      font-family: $font_regular
+
+.password-popup__descr
+  font-size: 12px
+  line-height: 14px
+  color: #2F2F2F
+  font-family: $font_regular
+  margin-top: 8px
+
+.cabinet-popup__formlist
+  display: flex
+  justify-content: space-between
+.address-popup__content
+  .cabinet-popup__formgroup
+    margin-bottom: 0
+    &:nth-child(1)
+      width: 50%
+    &:nth-child(2)
+      width: 22%
+    &:nth-child(3)
+      width: 22%
+.cabinet-popup__formlist
+  @media(max-width: 992px)
+    display: block
+.address-popup__content
+  @media(max-width: 992px)
+    .cabinet-popup__formgroup, .cabinet-popup__formgroup:nth-child(1), .cabinet-popup__formgroup:nth-child(2), .cabinet-popup__formgroup:nth-child(3)
+      width: 100%
+      margin-bottom: 16px
+      &:last-child
+        margin-bottom: 0
+.cabinet-popup__content
+  @media(max-width: 768px)
+    padding: 40px 12px 24px 12px
+    .cabinet-popup__heading
+      font-size: 18px
+      line-height: 21px
+    .out-popup__nav
+      display: block
+      button,a
+        width: 90%
+        margin: 0 auto
+        margin-bottom: 16px
+        &:last-child
+          margin-bottom: 0
+
+
+
+.out-popup__nav
+  text-align: center
+  padding-top: 8px
+  padding-bottom: 16px
+  button,a
+    width: 184px
+    height: 40px
+    line-height: 40px
+    border: none
+    color: #fff
+    font-size: 14px
+    font-family: $font_semibold
+    text-align: center
+    border-radius: 8px
+    background-color: #4F8A86
+    display: inline-block
+    margin: 0 12px
+    transition: all .2s
+    &:hover
+      @media(min-width: 992px)
+        background-color: #30807a
+    &:focus
+      outline: none
+    &.yes
+      background-color: #EB9F2D
+      &:hover
+        @media(min-width: 992px)
+          background-color: #de901a
+
+
+.notification
+  position: fixed
+  bottom: 0
+  right: 0
+  width: 100%
+  height: 100%
+  opacity: 0
+  z-index: 0
+  background-color: rgba(0, 0, 0, 0.7)
+  transition: all .4s
+  visibility: hidden
+  &.active
+    opacity: 1
+    z-index: 99
+    visibility: visible
+.notification__message
+  position: fixed
+  right: 10px
+  top: 10px
+  width: 316px
+  min-height: 64px
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  background: linear-gradient(119.97deg, #4F8A86 0%, #255855 100%)
+  border-radius: 10px
+  padding: 16px
+.notification__message__text
+  font-size: 14px
+  line-height: 16px
+  color: #FFFFFF
+.notification__message__close
+  position: absolute
+  top: 11px
+  right: 11px
+  opacity: 0.5
+  cursor: pointer
+  transition: all .2s
+  &:hover
+    opacity: 1
+
+.notification
+  @media(max-width: 768px)
+    .notification__message
+      width: 300px
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
