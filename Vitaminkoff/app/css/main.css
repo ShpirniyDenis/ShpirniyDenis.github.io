@@ -242,7 +242,9 @@ header {
       border-radius: 5px;
       background-color: transparent;
       width: 38px;
-      padding-left: 37px; }
+      padding-left: 36px; }
+      header .header__nav-search input:hover {
+        width: 38px; }
       header .header__nav-search input:focus {
         width: 150%;
         background-color: #fff;
