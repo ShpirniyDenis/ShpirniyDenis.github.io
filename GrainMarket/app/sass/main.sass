@@ -134,6 +134,59 @@ header
   width: 100%
   background-color: #fff
   border-bottom: 1px solid #E9F4F3
+  &.header-cabinet
+    .btn-main
+      padding: 11px 40px
+      font-size: 16px
+    .header__content
+      padding: 18px 0
+.header__cabinet__menu
+  position: relative
+  &.active
+    .header__cabinet__menu-content
+      display: block
+.header__cabinet__toggler
+  padding-left: 32px
+  margin-left: 32px
+  border-left: 1px solid #E9F4F3
+  cursor: pointer
+  span
+    vertical-align: baseline
+  img,svg
+    margin-right: 4px
+    vertical-align: baseline
+.header__cabinet__menu-content
+  position: absolute
+  display: none
+  top: 49px
+  right: 0px
+  background: #FFFFFF
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1)
+  width: 100%
+  padding: 22px
+  a
+    display: block
+    margin-bottom: 12px
+    font-size: 16px
+    line-height: 24px
+    text-align: right
+    color: #234048
+    img,svg
+      margin-right: 4px
+      vertical-align: sub
+.header__cabinet__balance
+  padding-left: 32px
+  margin-left: 32px
+  border-left: 1px solid #E9F4F3
+  font-size: 16px
+  line-height: 24px
+  color: #A5BBBE
+  span
+    margin-right: 16px
+  a
+    color: #92D0CC
+  span,a
+    vertical-align: baseline
 .header__wrapp
   display: flex
   justify-content: space-between
@@ -300,7 +353,53 @@ header
       padding-top: 14px
       padding-bottom: 14px
 
-
+.header-cabinet
+  @media screen and (max-width: 768px)
+    .btn-main
+      width: 93%
+      display: block
+      margin: 0 auto
+      margin-bottom: 20px
+    .header__cabinet__toggler
+      display: none
+    .header__cabinet__balance
+      padding: 20px 16px
+      margin-left: 0
+      border-left: none
+      border-top: 1px solid #E9F4F3
+      border-bottom: 1px solid #E9F4F3
+    .header__cabinet__menu-content
+      display: block
+    .header__cabinet__menu-content
+      position: static
+      background: transparent
+      box-shadow: none
+      padding: 0
+      a
+        text-align: left
+        margin: 0
+        font-size: 20px
+        line-height: 29px
+        color: #A5BBBE
+        padding: 20px 16px
+        border-top: 1px solid #E9F4F3
+        border-bottom: 1px solid #E9F4F3
+        &:last-child
+          border-bottom: none
+    .header__burger
+      background: transparent
+      width: auto
+      height: auto
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      flex-direction: row
+      svg
+        margin-left: 6px
+    &.active
+      .header__burger
+        svg
+          transform: rotate(180deg)
 
 // BANNER
 .banner
@@ -558,6 +657,21 @@ header
   background-position: center center
   background-size: cover
   background-repeat: no-repeat
+  position: relative
+.catalog__item__label
+  position: absolute
+  left: 12px
+  top: 12px
+  background: #96AAAD
+  display: block
+  border-radius: 100px
+  padding: 8px 16px
+  font-size: 10px
+  line-height: 15px
+  text-transform: uppercase
+  color: #FFFFFF
+  font-family: $font_bold
+
 .catalog__item__info
   padding: 24px 20px
 .catalog__item__name
@@ -679,7 +793,7 @@ header
       .btn-main
         width: 100%
 
-.catalog-page
+.catalog-page, .cabinet-catalog, .cabinet-catalog-offers
   @media screen and (max-width: 1200px)
     .catalog__list
       grid-template-columns: 1fr 1fr
@@ -1559,7 +1673,7 @@ footer
     margin-bottom: 8px
     order: 0
     transition: all 0.2s
-  input
+  input,select
     width: 100%
     display: block
     border: 1px solid #E9F4F3
@@ -1571,6 +1685,7 @@ footer
     height: 39px
     font-family: $font_regular
     order: 1
+    background-color: transparent
     &:focus
       outline: none
       border-color: $color_black
@@ -2505,6 +2620,688 @@ footer
   img
     max-width: 100%
     height: auto
+
+
+
+// CABINET
+.cabinet-header
+  padding: 88px 0
+  background: linear-gradient(180deg, #A1D8D4 0%, #EAF8E2 100%)
+  position: relative
+  h1
+    font-size: 40px
+    line-height: 59px
+    color: #FFFFFF 
+    font-family: $font_bold
+  .cabinet-header-back
+    position: absolute
+    left: 0
+    width: 100%
+    top: 25px
+    a
+      font-size: 16px
+      line-height: 24px
+      color: #FFFFFF
+      img,svg
+        margin-right: 6px
+.cabinet-header
+  @media(max-width: 1200px)
+    h1
+      font-size: 35px
+  @media(max-width: 768px)
+    padding: 66px 0
+    padding-bottom: 24px
+    h1
+      font-size: 28px
+      line-height: 41px
+    &.main
+      padding-bottom: 66px
+
+.cabinet-statistics
+  margin-top: -56px
+  position: relative
+.cabinet-statistics__wrapp
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+.cabinet-statistics__graphics
+  width: 56%
+  background: #F4FCFB
+  border-radius: 5px
+  overflow: hidden
+  height: 469px
+.cabinet-statistics__graphics__header
+  background: #FFFFFF
+  padding: 16px 24px 13px 24px
+  font-size: 18px
+  line-height: 27px
+  color: #234048
+.cabinet-statistics__price
+  width: 39%
+  background: #F4FCFB
+  border-radius: 5px
+  overflow: hidden
+.cabinet-statistics__price__heading
+  background: #FFFFFF
+  padding: 16px 24px 13px 24px
+  font-size: 18px
+  line-height: 27px
+  color: #234048
+.cabinet-statistics__price__list
+  padding: 20px 24px 28px 24px
+  li
+    display: flex
+    justify-content: space-between
+    align-items: center
+    font-size: 18px
+    line-height: 27px
+    color: #A5BBBE
+    margin-bottom: 16px
+    &:last-child
+      margin-bottom: 0
+    &.cabinet-statistics__price__nav
+      font-size: 14px
+      line-height: 21px
+  .name
+    width: 50%
+  .buy
+    width: 22%
+    text-align: right
+  .pay
+    width: 22%
+    text-align: right
+
+.cabinet-catalog
+  padding-top: 80px
+  .page-container__heading
+    font-size: 32px
+    line-height: 47px
+    color: #234048
+    margin-bottom: 32px
+  @media(max-width: 992px)
+      padding-top: 48px
+      .page-container__heading
+        font-size: 28px
+        line-height: 41px
+  @media(max-width: 768px)
+    .page-container__heading
+      text-align: center
+      font-size: 24px
+      line-height: 35px
+.cabinet-statistics
+  @media(max-width: 1200px)
+    .cabinet-statistics__price__list li
+      font-size: 15px
+    .cabinet-statistics__price__list li.cabinet-statistics__price__nav
+      font-size: 13px
+  @media(max-width: 992px)
+    .cabinet-statistics__graphics
+      display: none
+    .cabinet-statistics__wrapp
+      display: block
+    .cabinet-statistics__price
+      width: 100%
+  @media(max-width: 768px)
+    margin-top: -38px
+    .cabinet-statistics__price__list li.cabinet-statistics__price__nav
+      font-size: 12px
+    .cabinet-statistics__price__list li
+      font-size: 14px
+    .cabinet-statistics__price__heading
+      font-size: 16px
+  @media(max-width: 360px)
+    .cabinet-statistics__price__list
+      padding-left: 12px
+      padding-right: 12px
+      padding-top: 18px
+      padding-bottom: 18px
+    .cabinet-statistics__price__list li
+      font-size: 13px
+      line-height: 24px
+      margin-bottom: 10px
+    .cabinet-statistics__price__list li.cabinet-statistics__price__nav
+      font-size: 11px
+
+
+.cabinet-verification
+  padding-bottom: 80px
+  .mainContainer
+    position: relative
+.cabinet-verification__heading
+  font-size: 18px
+  line-height: 27px
+  color: #234048
+  font-family: $font_bold
+  margin-bottom: 16px
+.cabinet-verification__wrapp
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  flex-wrap: wrap
+  padding-top: 48px
+.cabinet-form__wrapp
+  &.disabled
+    opacity: 0.3
+    pointer-events: none
+.cabinet-verification__submit
+  width: 100%
+  text-align: center
+  margin-top: 40px
+.cabinet-verification__inputs
+  width: 42%
+.cabinet-verification__photos
+  width: 52%
+  .form-group__heading
+    font-size: 14px
+    line-height: 21px
+    color: #A5BBBE
+    margin-bottom: 8px
+  .form-group__list
+    display: flex
+    justify-content: flex-start
+    align-items: center
+  .form-group
+    margin-bottom: 20px
+  .form-group__heading
+    width: 100%
+  .form-group__wrapp
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    flex-wrap: wrap
+    .form-group__list
+      margin-right: 32px
+      margin-bottom: 24px
+      &:last-child
+        margin-bottom: 0
+.document-edit
+  width: 112px
+  height: 112px
+  background: #EBF4F5
+  border-radius: 5px
+  overflow: hidden
+  background-image: url('../img/verification-photo-icon.svg')
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: auto
+  position: relative
+  cursor: pointer
+  margin-right: 16px
+  &.bg-active
+    background-image: url('../img/document-checked-icon.svg')
+  input
+    position: absolute
+    height: 100%
+    width: 100%
+    left: 0
+    top: 0
+    border: none
+    opacity: 0
+    padding: 0
+    cursor: pointer
+    z-index: 10
+.document-example
+  p
+    font-size: 14px
+    line-height: 21px
+    color: #234048
+    margin-bottom: 6px
+.verification-success
+  width: 100%
+  position: relative
+  background: linear-gradient(350.83deg, #FFC643 19.86%, #FF9800 80.14%)
+  border-radius: 5px
+  padding: 10px 32px
+  font-size: 18px
+  line-height: 27px
+  color: #FFFFFF
+  font-family: $font_bold
+  margin-top: -25px
+  opacity: 0
+  &.active
+    opacity: 1
+  @media(max-width: 768px)
+    line-height: 0
+    padding: 0
+    margin-top: 0
+    &.active
+      margin-top: -35px
+      padding: 8px 22px
+      line-height: 27px
+      font-size: 15px
+
+
+.cabinet-verification
+  @media(max-width: 992px)
+    .cabinet-form__wrapp
+      padding-top: 22px
+  @media(max-width: 768px)
+    padding-bottom: 40px
+    .cabinet-form__wrapp
+      display: block
+    .cabinet-verification__inputs
+      width: 100%
+      margin-bottom: 32px
+    .cabinet-verification__photos
+      width: 100%
+    .btn-main
+      width: 100%
+    .cabinet-form__wrapp
+      padding-top: 32px
+
+.cabinet-change-pass
+  padding-bottom: 80px
+.cabinet-form__wrapp
+  padding-top: 48px
+  form
+    width: 43%
+    input
+      font-size: 30px
+      letter-spacing: 2px
+    button
+      margin-top: 10px
+.cabinet-change-pass__heading
+  font-size: 18px
+  line-height: 27px
+  color: #234048
+  font-family: $font_bold
+  margin-bottom: 16px
+.cabinet-change-pass
+  @media(max-width: 992px)
+    .cabinet-form__wrapp form
+      width: 61%
+  @media(max-width: 768px)
+    padding-bottom: 40px
+    .cabinet-form__wrapp
+      padding-top: 32px
+    .cabinet-form__wrapp form
+      width: 100%
+    .btn-main
+      width: 100%
+
+
+.cabinet-offer
+  padding-bottom: 80px
+.cabinet-offer__wrapp
+  padding-top: 48px
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  flex-wrap: wrap
+.cabinet-offer__info__heading
+  font-size: 18px
+  line-height: 27px
+  color: #234048
+  font-family: $font_bold
+  margin-bottom: 16px
+.cabinet-offer__info
+  width: 42%
+.cabinet-offer__descr
+  margin-top: 32px
+  background: #F4FCFB
+  border-radius: 5px
+  padding: 24px 20px
+  font-size: 16px
+  line-height: 24px
+  color: #234048
+.cabinet-offer__details
+  width: 43%
+.cabinet-offer__place-list
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+  margin-bottom: 32px
+.cabinet-offer__place-item
+  width: 16.4%
+  position: relative
+  height: 40px
+  overflow: hidden
+  input
+    position: absolute
+    width: 1px
+    height: 1px
+    left: 0
+    bottom: 0
+    opacity: 0
+    &:checked ~ label
+      background: linear-gradient(148.16deg, #F35A48 0.03%, #FF9800 99.97%)
+      border: 1px solid #FF9800
+      color: #fff
+  label
+    width: 100%
+    height: 100%
+    display: block
+    text-align: center
+    line-height: 40px
+    font-size: 16px
+    text-transform: uppercase
+    color: #92D0CC
+    font-family: $font_bold
+    border: 1px solid #92D0CC
+  &:first-child
+    label
+      border-radius: 80px 0px 0px 80px
+  &:last-child
+    label
+      border-radius: 0px 80px 80px 0px
+.cabinet-offer__type-list
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  margin-bottom: 16px
+.cabinet-offer__type-list li
+  color: #A5BBBE
+  display: block
+  position: relative
+  width: auto 
+  margin-right: 32px
+  &:last-child
+    margin-right: 0
+.cabinet-offer__type-list li input[type=radio]
+  position: absolute
+  height: 1px
+  width: 1px
+  opacity: 0
+  padding: 0
+  background-color: #fff
+  color: #fff
+  border: none
+  left: 0
+  bottom: 0
+.cabinet-offer__type-list li label
+  display: block
+  position: relative
+  font-size: 16px
+  line-height: 21px
+  color: #A5BBBE
+  padding: 7px 0 3px 26px
+  margin: 0
+  opacity: 1
+  height: auto
+  z-index: 9
+  cursor: pointer
+  -webkit-transition: all 0.25s linear
+.cabinet-offer__type-list li .check
+  display: block
+  position: absolute
+  border: 1px solid #A5BBBE
+  border-radius: 100%
+  height: 20px
+  width: 20px
+  top: 6px
+  left: 0
+  z-index: 5
+  transition: border .25s linear
+.cabinet-offer__type-list li .check::before 
+  display: block
+  position: absolute
+  content: ''
+  border-radius: 100%
+  height: 12px
+  width: 12px
+  top: 3px
+  left: 3px
+  margin: auto
+  transition: background 0.25s linear
+.cabinet-offer__type-list li .check::after
+  content: ''
+  border-radius: 50%
+  opacity: 0
+  position: absolute
+  bottom: -2px
+  left: -2px
+  height: 20px
+  width: 20px
+  background-color: #A1D8D4
+.cabinet-offer__type-list input[type=radio]:checked ~ .check
+  border: 1px solid #A1D8D4
+.cabinet-offer__type-list input[type=radio]:checked ~ .check::before
+  background: #A1D8D4
+.cabinet-offer__type-list input[type=radio]:checked ~ .check::after
+  animation: click-wave 0.75s
+.cabinet-offer__type-list input[type=radio]:checked ~ label 
+  color: #234048
+  font-family: $font_bold
+
+@keyframes click-wave
+  0%
+    opacity: 0.7
+    height: 20px
+    width: 20px
+  100%
+    height: 32px
+    width: 32px
+    opacity: 0
+    bottom: -6px
+    left: -6px
+
+.cabinet-offer__details__descr
+  font-size: 14px
+  line-height: 21px
+  color: #A5BBBE
+  margin-bottom: 40px
+.cabinet-offer__documents__heading
+  margin-bottom: 16px
+  font-size: 18px
+  line-height: 27px
+  color: #234048
+  font-family: $font_bold
+.cabinet-offer__documents
+  .form-group
+    margin-bottom: 20px
+  .form-group__heading
+    width: 100%
+    margin-bottom: 8px
+  .form-group__list
+    display: flex
+    justify-content: flex-start
+    align-items: center
+.cabinet-offer__submit
+  width: 100%
+  text-align: center
+  margin-top: 32px
+.cabinet-offer
+  @media(max-width: 992px)
+    .cabinet-offer__wrapp
+      display: block
+    .cabinet-offer__info
+      width: 100%
+      margin-bottom: 32px
+    .cabinet-offer__details
+      width: 100%
+  @media(max-width: 768px)
+    padding-bottom: 40px
+    .cabinet-offer__place-item label
+      font-size: 14px
+    .btn-main
+      width: 100%
+  @media(max-width: 360px)
+    .cabinet-offer__descr
+      font-size: 14px
+    .cabinet-offer__place-item label
+      font-size: 13px
+
+.cabinet-balance
+  padding-top: 48px
+  padding-bottom: 80px
+.cabinet-balance__info
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  margin-bottom: 48px
+.cabinet-balance__details
+  width: 30%
+.cabinet-balance__details__info
+  font-size: 18px
+  line-height: 27px
+  color: #234048
+  font-family: $font_bold
+  b
+    font-size: 40px
+    vertical-align: baseline
+    display: inline-block
+    margin-right: 8px
+  a
+    font-size: 16px
+    line-height: 24px
+    color: #92D0CC
+    font-family: $font_regular
+    border-bottom: 1px dashed #92D0CC
+.cabinet-balance__info__descr
+  width: 63% 
+  background: #F4FCFB
+  border-radius: 5px
+  padding: 40px 48px
+  font-size: 16px
+  line-height: 26px
+  color: #234048
+  b
+    display: block
+    margin-bottom: 8px
+    font-size: 20px
+    line-height: 29px
+    color: #234048
+.cabinet-balance__offers__heading
+  margin-bottom: 32px
+  font-size: 32px
+  line-height: 47px
+  color: #234048
+  font-family: $font_bold
+.cabinet-balance__offers__list
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+.cabinet-balance__offer
+  width: 31%
+  border: 1px solid #D8E1E8
+  border-radius: 5px
+.cabinet-balance__offer__heading
+  padding: 15px
+  color: #FFFFFF
+  font-size: 28px
+  line-height: 41px
+  background: linear-gradient(136deg, #FFC643 19.86%, #FF9800 80.14%)
+  text-align: center
+  b
+    font-family: $font_bold
+    font-size: 40px
+    display: inline-block
+    vertical-align: baseline
+    margin-right: 6px
+.cabinet-balance__offer__content
+  padding: 18px 24px 56px 24px
+  text-align: center
+.cabinet-balance__offer__discount
+  font-size: 24px
+  line-height: 35px
+  color: #A5BBBE
+  min-height: 35px
+  margin-bottom: 2px
+  text-decoration: line-through
+.cabinet-balance__offer__price
+  font-size: 64px
+  line-height: 74px
+  color: #234048
+  font-family: $font_bold
+  margin-bottom: 2px
+.cabinet-balance__offer__descr
+  margin-bottom: 16px
+.cabinet-balance
+  @media(max-width: 1200px)
+    .cabinet-balance__offer__price
+      font-size: 48px
+  @media(max-width: 992px)
+    .cabinet-balance__info
+      display: block
+    .cabinet-balance__details
+      width: 100%
+      margin-bottom: 32px
+    .cabinet-balance__info__descr
+      width: 100%
+  @media(max-width: 768px)
+    padding-bottom: 40px
+    .cabinet-balance__offers__list
+      display: block
+    .cabinet-balance__details__info a
+      display: block
+      width: max-content
+      margin-top: 6px
+    .cabinet-balance__info__descr
+      padding: 40px 20px
+    .cabinet-balance__info
+      margin-bottom: 32px
+    .cabinet-balance__offers__heading
+      text-align: center
+      font-size: 24px
+      line-height: 35px
+      margin-bottom: 20px
+    .cabinet-balance__offer
+      width: 100%
+      margin-bottom: 16px
+      &:last-child
+        margin-bottom: 0
+
+.cabinet-offer-change 
+  .form-group, .cabinet-offer__info__heading, .cabinet-offer__details
+    opacity: 0.2
+    pointer-events: none
+    &.active
+      opacity: 1
+      pointer-events: auto
+.cabinet-offer__warn
+  font-size: 16px
+  line-height: 24px
+  color: #234048
+  margin-top: -10px
+
+.catalog__item__change
+  padding: 0 32px
+.catalog__item__change__list
+  border-top: 1px solid #E9F4F3
+  padding: 20px 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+  button,a
+    background-color: transparent
+    border: none
+    font-size: 16px
+    line-height: 24px
+    font-family: $font_regular
+    color: #92D0CC
+    cursor: pointer
+    &:focus
+    outline: none
+    &.cancel
+      color: #E55166
+
+.cancel-popup__content
+  text-align: center
+  padding: 60px 40px
+.cancel-popup__text
+  margin-bottom: 24px
+  p
+    font-size: 20px
+    line-height: 29px
+    color: #234048
+    margin-bottom: 8px
+  span
+    font-size: 16px
+    line-height: 24px
+    color: #A5BBBE
+
+.cabinet-catalog__empty
+  padding-bottom: 170px
+  font-size: 18px
+  line-height: 27px
+  color: #234048
+  font-family: $font_bold
+  p
+    margin-bottom: 24px
+.cabinet-catalog-offers
+  padding-top: 48px
+
+
 
 
 

@@ -17,6 +17,10 @@ function clickItemHandler(event) {
       document.querySelector(target.dataset.label).classList.add('active');
     },
 
+    'menu-open': function (target) {
+      target.closest('.header__cabinet__menu').classList.toggle('active');
+    },
+
     'popup-close': function (target) {
       if (target.dataset.label) {
         document.querySelector(target.dataset.label).classList.remove('active')
@@ -79,4 +83,23 @@ if(seoToggler){
         });
       }
     });
+
+// for document-edit
+    function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            input.closest('.document-edit').classList.add('bg-active');
+            //input.closest('.document-edit').style.background = 'url('+e.target.result +')';
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+    }
+// for verification-form
+function verificationSuccess(e){
+  e.preventDefault();
+  document.querySelector('.verification-success').classList.add('active');
+  document.querySelector('.cabinet-form__wrapp').classList.add('disabled');
+  return false;
+}
 

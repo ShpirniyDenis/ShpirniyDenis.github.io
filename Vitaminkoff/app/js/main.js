@@ -11,13 +11,12 @@ function clickItemHandler(event) {
     },
 
     'notification-show': function (target) {
-      if(document.querySelector('.popup_container').classList.contains('active')){
+
       if (target.dataset.label) {
         document.querySelector(target.dataset.label).classList.remove('active')
-      } else {
-        target.closest('.popup_container').classList.remove('active');
+      }else {
+        target.closest('.popup_container.active').classList.remove('active');
       }
-    }
       document.querySelector('.notification').classList.add('active');
       setTimeout(function(){
         document.querySelector('.notification').classList.remove('active');
