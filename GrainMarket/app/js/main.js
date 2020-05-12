@@ -103,3 +103,36 @@ function verificationSuccess(e){
   return false;
 }
 
+
+// for catalog-mobile
+let catalog_nav_link = document.querySelectorAll('.catalog__nav li a');
+let catalog_nav_manu = document.querySelector('.catalog__nav');
+let catalog_nav_toggler = document.querySelector('.catalog__nav__toggler');
+
+const toggle_catalog_menu = function(){
+  catalog_nav_manu.classList.toggle('active');
+  catalog_nav_toggler.classList.toggle('active');
+}
+
+const duplicate_catalog_value = function(){
+  catalog_nav_toggler.innerText = this.textContent;
+  toggle_catalog_menu();
+}
+
+for(i=0; i<catalog_nav_link.length; i++){
+  catalog_nav_link[i].addEventListener('click', duplicate_catalog_value);
+}
+
+if(catalog_nav_toggler){
+  catalog_nav_toggler.addEventListener('click', toggle_catalog_menu);
+}
+
+
+
+
+
+
+
+
+
+

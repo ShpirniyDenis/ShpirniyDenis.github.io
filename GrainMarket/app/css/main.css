@@ -758,7 +758,8 @@ header {
       color: #A5BBBE;
       -webkit-transition: all 0.2s;
       -o-transition: all 0.2s;
-      transition: all 0.2s; }
+      transition: all 0.2s;
+      cursor: pointer; }
       .catalog__nav li a:before {
         content: '';
         display: inline-block;
@@ -779,9 +780,9 @@ header {
       padding-top: 0; }
     .catalog__nav li:last-child a {
       padding-bottom: 0; }
-    .catalog__nav li.active a {
+    .catalog__nav li.mixitup-control-active a {
       color: #234048; }
-      .catalog__nav li.active a:before {
+      .catalog__nav li.mixitup-control-active a:before {
         width: 16px;
         margin-right: 8px; }
     .catalog__nav li.all-link a {
@@ -937,7 +938,14 @@ header {
 
 @media screen and (max-width: 992px) {
   .catalog .catalog__nav {
-    display: none; }
+    display: none;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #E9F4F3;
+    border-radius: 24px;
+    padding: 24px; }
+    .catalog .catalog__nav.active {
+      display: block; }
   .catalog .catalog__list-wrapp {
     width: 100%; }
   .catalog .catalog__list {
@@ -996,7 +1004,14 @@ header {
 
 @media screen and (max-width: 992px) {
   .catalog-page .catalog__nav, .cabinet-catalog .catalog__nav, .cabinet-catalog-offers .catalog__nav {
-    display: none; }
+    display: none;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #E9F4F3;
+    border-radius: 24px;
+    padding: 24px; }
+    .catalog-page .catalog__nav.active, .cabinet-catalog .catalog__nav.active, .cabinet-catalog-offers .catalog__nav.active {
+      display: block; }
   .catalog-page .catalog__list-wrapp, .cabinet-catalog .catalog__list-wrapp, .cabinet-catalog-offers .catalog__list-wrapp {
     width: 100%; }
   .catalog-page .catalog__list, .cabinet-catalog .catalog__list, .cabinet-catalog-offers .catalog__list {
@@ -4124,3 +4139,37 @@ footer {
 
 .cabinet-offer__place-item .hint {
   margin-left: 1px; }
+
+.catalog__nav__toggler {
+  width: 100%;
+  border: 1px solid #E9F4F3;
+  border-radius: 100px;
+  padding-left: 16px;
+  height: 39px;
+  line-height: 39px;
+  position: relative;
+  font-size: 16px;
+  display: block;
+  color: #234048;
+  overflow: hidden;
+  display: none; }
+  .catalog__nav__toggler:after {
+    content: '';
+    position: absolute;
+    right: 16px;
+    top: 13px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url("../img/arrow-toggler.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain; }
+  .catalog__nav__toggler.active:after {
+    -webkit-transform: rotate(185deg);
+        -ms-transform: rotate(185deg);
+            transform: rotate(185deg); }
+  @media (max-width: 992px) {
+    .catalog__nav__toggler {
+      display: block;
+      margin-bottom: 24px; } }

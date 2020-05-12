@@ -90,14 +90,15 @@
         <a href="cabinet-offer.html" class="btn-main btn-orange">Создать</a>
       </div>
       <div class="catalog__wrapp">
+        <div class="catalog__nav__toggler">Все</div>
         <ul class="catalog__nav">
-          <li class="active"><a href="">Все</a></li>
-          <li><a href="">Горчица</a></li>
-          <li><a href="">Горох</a></li>
+          <li class="filter" data-filter="all"><a>Все</a></li>
+          <li class="filter" data-filter=".mustard"><a>Горчица</a></li>
+          <li class="filter" data-filter=".peas"><a>Горох</a></li>
         </ul>
         <div class="catalog__list-wrapp">
           <div class="catalog__list">
-            <article class="catalog__item">
+            <article class="catalog__item mix mustard">
               <a href="auction-registration.html" class="catalog__item__img" style="background-image: url('img/article-img1.jpg');"><span class="catalog__item__label">участвуете</span></a>
               <div class="catalog__item__info">
                 <div class="catalog__item__name"><a href="auction-registration.html">Пшеница 2 класс</a></div>
@@ -144,7 +145,7 @@
                 </div>
               </div>
             </article>
-            <article class="catalog__item">
+            <article class="catalog__item mix mustard">
               <a href="auction-registration.html" class="catalog__item__img" style="background-image: url('img/article-img2.jpg');"><span class="catalog__item__label">участвуете</span></a>
               <div class="catalog__item__info">
                 <div class="catalog__item__name"><a href="auction-registration.html">Кукуруза</a></div>
@@ -191,7 +192,7 @@
                 </div>
               </div>
             </article>
-            <article class="catalog__item">
+            <article class="catalog__item mix peas">
               <a href="auction-registration.html" class="catalog__item__img" style="background-image: url('img/article-img3.jpg');"><span class="catalog__item__label">участвуете</span></a>
               <div class="catalog__item__info">
                 <div class="catalog__item__name"><a href="auction-registration.html">Подсолнечник</a></div>
@@ -296,6 +297,16 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/mixitup.min.js"></script>
+<script>
+  let mixer = mixitup('.catalog__list', {
+      animation: {
+        effects: 'scale',
+        duration: 700
+      },
+    });
+    //mixer.filter('.category-1');
+</script>
 
 </body>
 </html>

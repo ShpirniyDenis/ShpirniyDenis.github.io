@@ -606,6 +606,7 @@ header
       line-height: 24px
       color: $color_grey
       transition: all 0.2s
+      cursor: pointer
       &:before
         content: ''
         display: inline-block
@@ -626,7 +627,7 @@ header
     &:last-child
       a
         padding-bottom: 0
-    &.active
+    &.mixitup-control-active
       a
         color: $color_black
         &:before
@@ -749,6 +750,13 @@ header
   @media screen and (max-width: 992px)
     .catalog__nav
       display: none
+      width: 100%
+      margin-bottom: 20px
+      border: 1px solid #E9F4F3
+      border-radius: 24px
+      padding: 24px
+      &.active
+        display: block
     .catalog__list-wrapp
       width: 100%
     .catalog__list
@@ -804,6 +812,13 @@ header
   @media screen and (max-width: 992px)
     .catalog__nav
       display: none
+      width: 100%
+      margin-bottom: 20px
+      border: 1px solid #E9F4F3
+      border-radius: 24px
+      padding: 24px
+      &.active
+        display: block
     .catalog__list-wrapp
       width: 100%
     .catalog__list
@@ -3342,6 +3357,38 @@ footer
     .hint
       margin-left: 1px
 
+
+.catalog__nav__toggler
+  width: 100%
+  border: 1px solid #E9F4F3
+  border-radius: 100px
+  padding-left: 16px
+  height: 39px
+  line-height: 39px
+  position: relative
+  font-size: 16px
+  display: block
+  color: #234048
+  overflow: hidden
+  display: none
+  &:after
+    content: ''
+    position: absolute
+    right: 16px 
+    top: 13px
+    display: inline-block
+    width: 12px
+    height: 12px
+    background-image: url('../img/arrow-toggler.svg')
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: contain
+  &.active
+    &:after
+      transform: rotate(185deg)
+  @media(max-width: 992px)
+    display: block
+    margin-bottom: 24px
 
 
 
