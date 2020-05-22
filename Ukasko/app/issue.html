@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="content_language" content="ru">
+  <meta name="description" content="смена пароля Физ лицо"> 
+  <title>смена пароля Физ лицо</title>
+  <link rel="stylesheet" href="https://ukasko.ua/css/app.css?id=247bd578904184f0f1dc">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+ 
+<body> 
+<header class="header">
+  <div class="container">
+    <div class="row header__wrapp">
+      <a href="history-individual.html" class="header__logo">
+        <div class="logo"></div>
+      </a>
+      <div class="header__info" style="display: none;">
+        <div class="header__nav">
+          <a href="#">Вход</a>
+          <a href="#" class="active">Регистрация</a>
+        </div>
+      </div>
+      <a href="#" class="header__create" style="display: none;">Создать страховку</a>
+      <ul class="header__balance">
+        <li>
+          <p>Бонусный</p>
+          <p><span>1 650</span> грн</p>
+        </li>
+        <li class="delimiter"></li>
+        <li>
+          <p>Основной</p>
+          <p><span>15 650</span> грн</p>
+        </li>
+      </ul>
+      <a href="index.html" class="header__exit">
+        Выход
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 0H2C0.89 0 0 0.89 0 2V6H2V2H16V16H2V12H0V16C0 16.5304 0.210714 17.0391 0.585786 17.4142C0.960859 17.7893 1.46957 18 2 18H16C16.5304 18 17.0391 17.7893 17.4142 17.4142C17.7893 17.0391 18 16.5304 18 16V2C18 0.89 17.1 0 16 0ZM7.08 12.58L8.5 14L13.5 9L8.5 4L7.08 5.41L9.67 8H0V10H9.67L7.08 12.58Z" fill="#9FA5AC"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
+<main>
+<div class="selectors osago-select osago-issue-page">
+   <div class="container">
+      <div class="row">
+         <div class="col-12">
+            <h1 class="car">Оформите ОСАГО онлайн за пару минут</h1>
+         </div>
+      </div>
+      <div class="row flex-lg-row-reverse">
+         <div class="col-lg-4">
+            <div class="policy">
+               <a href="#" data-toggle="modal" data-target="#modalOsagoInfo" class="change link">Изменить</a> 
+               <div class="title d-lg-block">Ваш полис</div>
+               <hr class="d-none d-lg-block">
+               <div class="specific">
+                  <b>Производитель</b> 
+                  <p>Volkswagen</p>
+               </div>
+               <div class="specific d-none d-lg-block">
+                  <b>Модель</b> 
+                  <p>Jetta</p>
+               </div>
+               <div class="specific d-none d-lg-block">
+                  <b>Город регистрации</b> 
+                  <p>Киев</p>
+               </div>
+               <div class="specific d-none d-lg-block">
+                  <b>Транспортное средство</b> 
+                  <p>Легковые автомобили</p>
+               </div>
+               <div class="specific d-none d-lg-block">
+                  <b>Объем двигателя</b> 
+                  <p>до 1600 см3</p>
+               </div>
+               <hr class="d-none d-lg-block">
+               <div class="text-center d-none d-lg-block"><a href="#" data-toggle="modal" data-target="#modalOsagoInfo" class="link">Это не мое транспортное средство</a></div>
+            </div>
+            <div class="sticky-wrapp">
+               <div class="warranty">
+                  <h2>Мы гарантируем</h2>
+                  <ul>
+                     <li class="accurate-price">Точные и выгодные цены</li>
+                     <li class="original-insurance">Оригинальную страховку</li>
+                     <li class="another-solution">Решение любого вопроса</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-8">
+            <div class="osago-filters__wrapp">
+               <div class="filter-content-wrapp">
+                  <div class="filter-content-wrapp__heading"><span>Фильтр</span> <button class="filter-content-close"></button></div>
+                  <div class="filter-row filter-row-franchise">
+                     <div class="filter-title">
+                        Франшиза <i data-placement="bottom" data-toggle="tooltip" title="" class="icon question" data-original-title="Сумма до которой виновник ДТП оплачивает пострадавшей стороне самостоятельно."></i>
+                     </div>
+                     <button class="osago-tabs-toggle"><span>Все франшизы</span></button> 
+                     <div class="filter-body">
+                        <div class="form-check radio form-check-inline franchise-radio"><input type="radio" name="franchise" id="allFranchiseRadio" class="form-check-input" value=""> <label for="allFranchiseRadio" class="form-check-label">Все франшизы</label></div>
+                        <div class="form-check radio form-check-inline franchise-radio"><input type="radio" name="franchise" id="franchiseRadio0" value="1000" class="form-check-input"> <label for="franchiseRadio0" class="form-check-label">1 000 грн</label></div>
+                        <div class="form-check radio form-check-inline franchise-radio"><input type="radio" name="franchise" id="franchiseRadio1" value="1500" class="form-check-input"> <label for="franchiseRadio1" class="form-check-label">1 500 грн</label></div>
+                        <div class="form-check radio form-check-inline franchise-radio"><input type="radio" name="franchise" id="franchiseRadio2" value="2000" class="form-check-input"> <label for="franchiseRadio2" class="form-check-label">2 000 грн</label></div>
+                        <div class="form-check radio form-check-inline franchise-radio"><input type="radio" name="franchise" id="franchiseRadio4" value="2500" class="form-check-input"> <label for="franchiseRadio4" class="form-check-label">2 500 грн</label></div>
+                        <div class="form-check radio form-check-inline franchise-radio"><input type="radio" name="franchise" id="franchiseRadio3" value="2600" class="form-check-input"> <label for="franchiseRadio3" class="form-check-label">2 600 грн</label></div>
+                     </div>
+                  </div>
+                  <div class="filter-row filter-row-help">
+                     <div class="filter-title">
+                        Помощь при ДТП
+                     </div>
+                     <button class="osago-tabs-toggle"><span>Выберите опции</span></button> 
+                     <div class="filter-body pl-0">
+                        <div class="row osago-filter-row">
+                           <div class="col large-checkbox_box">
+                              <div class="large-checkbox osago-filter">
+                                 <input type="checkbox" name="direct_settlement" id="direct_settlement"> 
+                                 <label for="direct_settlement">
+                                    <i class="icon icon-direct_settlement"></i> 
+                                    <div class="icon-text">Прямое урегулирование</div>
+                                 </label>
+                              </div>
+                           </div>
+                           <div class="col large-checkbox_box">
+                              <div class="large-checkbox osago-filter"><input type="checkbox" name="support_everytime" id="support_everytime"> <label for="support_everytime"><i class="icon icon-support_everytime"></i> Помощь 24/7
+                                 </label>
+                              </div>
+                           </div>
+                           <div class="col large-checkbox_box">
+                              <div class="large-checkbox osago-filter"><input type="checkbox" name="medicine_help" id="medicine_help"> <label for="medicine_help"><i class="icon icon-medicine_help"></i> Медицинская помощь
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="filter-row filter-row-help">
+                     <div class="filter-title"><span class="filter-title__heading">Компании <span class="lebel-new-sort">new</span></span></div>
+                     <button class="osago-tabs-toggle"><span>Отсортируйте компании</span></button> 
+                     <div class="filter-body pl-0">
+                        <div class="row osago-filter-row">
+                           <div class="col large-checkbox_box">
+                              <div class="large-checkbox osago-filter">
+                                 <input type="checkbox" name="Global Garant" id="Global Garant" value="Global Garant"> 
+                                 <label for="Global Garant">
+                                    <i class="icon icon-direct_settlement"></i> 
+                                    <div class="icon-text">Global Garant</div>
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <button class="filter-content-apply">Применить</button> <button class="filter-content-discard">Сбросить фильтра</button>
+               </div>
+               <div class="osago-filters__toggle">
+                  <button class="osago-filters__mobToggle__item">
+                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="1.25" width="20" height="2.5" rx="1.25" fill="#007BBB"></rect>
+                        <rect y="8.75" width="20" height="2.5" rx="1.25" fill="#007BBB"></rect>
+                        <rect y="16.25" width="20" height="2.5" rx="1.25" fill="#007BBB"></rect>
+                        <rect x="13.25" y="0.75" width="3.5" height="3.5" rx="1.25" fill="white" stroke="#007BBB" stroke-width="1.5"></rect>
+                        <rect x="12" y="15.75" width="3.5" height="3.5" rx="1.25" fill="white" stroke="#007BBB" stroke-width="1.5"></rect>
+                        <rect x="4.5" y="8.25" width="3.5" height="3.5" rx="1.25" fill="white" stroke="#007BBB" stroke-width="1.5"></rect>
+                     </svg>
+                     Фильтр
+                  </button>
+                  <div class="row align-items-center osago-sort-select">
+                     <div class="col-lg-6 ml-auto d-flex osago-sort-select__content">
+                        <p class="sort-type ml-lg-auto">
+                           <span class="lebel-new-sort">new</span> <span class="osago-sort-select__descr">Сортировка:</span> 
+                           <span class="osago-sort-select__toggleMob">
+                              <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <rect y="0.25" width="20" height="2.5" rx="1.25" fill="#007BBB"></rect>
+                                 <rect y="7.75" width="16" height="2.5" rx="1.25" fill="#007BBB"></rect>
+                                 <rect y="15.25" width="12" height="2.5" rx="1.25" fill="#007BBB"></rect>
+                              </svg>
+                              Сортировка
+                           </span>
+                           <select class="nice-select sort-select" style="display: none;">
+                              <option value="lowcost">Самые дешевые</option>
+                              <option value="optimal">Оптимальные</option>
+                              <option value="options">Опциональные</option>
+                              <option value="rating">По рейтингу</option>
+                              <option value="name">По названию компании</option>
+                           </select>
+                        </p>
+                     </div>
+                     <div class="osago-sort-view">
+                        <span>Вид:</span> 
+                        <button class="toggler-view-second">
+                           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect width="8" height="8" rx="2" fill="#999DA6"></rect>
+                              <rect x="10" width="8" height="8" rx="2" fill="#999DA6"></rect>
+                              <rect x="10" y="10" width="8" height="8" rx="2" fill="#999DA6"></rect>
+                              <rect y="10" width="8" height="8" rx="2" fill="#999DA6"></rect>
+                           </svg>
+                        </button>
+                        <button class="toggler-view-default active">
+                           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <line x1="8.74229e-08" y1="1" x2="18" y2="1" stroke="#999DA6" stroke-width="2"></line>
+                              <line x1="8.74229e-08" y1="9" x2="18" y2="9" stroke="#999DA6" stroke-width="2"></line>
+                              <line x1="8.74229e-08" y1="17" x2="18" y2="17" stroke="#999DA6" stroke-width="2"></line>
+                           </svg>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row results">
+               <!----> 
+               <div class="col-12 position-relative">
+                  <div class="results-fixed-header">
+                     <div class="row">
+                        <div class="col lg-col-6 osago-offers__title">
+                           <h3>Найдено <b>46</b> предложений</h3>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 result-list">
+                  <div class="result-article">
+                     <div class="result-item">
+                        <div class="row result-item__wrapp">
+                           <div class="col-12 result-item__info">
+                              <div class="brand-logo"><img src="http://ukasko.test/logos/company/usi.png" alt="USI"></div>
+                              <div class="result-item__name"><a href="" class="link ">
+                                 ФО - Зона 1,2,3,4,5 - Фр 2000 - БМ &gt;= 1
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="col-12 result-item__details">
+                              <div class="result-item__rating">
+                                 <div class="brand-name">
+                                    <h5>USI</h5>
+                                 </div>
+                                 <div class="rating"><i class="icon star-filled"></i><i class="icon star-filled"></i><i class="icon star-filled"></i><i class="icon star-filled"></i> <i class="icon star-empty"></i></div>
+                                 <div class="rating__link"><a href="http://ukasko.test/company/usi"><small>4 отзыва</small></a></div>
+                              </div>
+                              <div class="result-item__params">
+                                 <div class="result-item-param">
+                                    <b>2 опции</b> 
+                                    <p>Включено</p>
+                                 </div>
+                                 <div class="result-item-param">
+                                    <b>2&nbsp;000 <span>грн</span></b> <i data-placement="bottom" data-toggle="tooltip" title="" class="icon question" data-original-title="Сумма до которой виновник ДТП оплачивает пострадавшей стороне самостоятельно."></i> 
+                                    <p>Франшиза</p>
+                                 </div>
+                                 <div class="result-item-param result-item-param-discount">
+                                    <div>
+                                       <span class="result-item-price-old" data-original-title="Кешбек - это часть денег, которая возвращается Вам обратно на карту. Каждому, кто оформит ОСАГО с кешбеком, мы возвращаем 15% от цены полиса. Мы сразу посчитали сумму, которую вернем Вам на счет, чтобы Вам была понятней выгода. Зачисление средств происходит на карту любого банка Украины."><span>1&nbsp;244</span> <span class="currency">грн</span> <span class="percent">-23%</span></span> 
+                                       <b>
+                                          958 <span>грн</span> 
+                                       </b>
+                                       <p>Стоимость</p>
+                                    </div>
+                                 </div>
+                                 <!----> 
+                                 <div class="result-item__instructions">
+                                    <button data-toggle="modal" data-target="#modalOsagoVideo">
+                                       <span>Как оформить полис</span> 
+                                       <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M13.7078 1.62656C13.6281 1.32975 13.4719 1.05907 13.2547 0.841619C13.0375 0.624168 12.767 0.467571 12.4703 0.3875C11.3781 0.0937501 7 0.09375 7 0.09375C7 0.09375 2.62187 0.0937499 1.52969 0.385937C1.23284 0.465748 0.962226 0.622258 0.745009 0.83975C0.527792 1.05724 0.371624 1.32806 0.292187 1.625C-5.96046e-08 2.71875 0 5 0 5C0 5 -5.96046e-08 7.28125 0.292187 8.37344C0.453125 8.97656 0.928125 9.45156 1.52969 9.6125C2.62187 9.90625 7 9.90625 7 9.90625C7 9.90625 11.3781 9.90625 12.4703 9.6125C13.0734 9.45156 13.5469 8.97656 13.7078 8.37344C14 7.28125 14 5 14 5C14 5 14 2.71875 13.7078 1.62656ZM5.60938 7.09375V2.90625L9.23438 4.98438L5.60938 7.09375Z" fill="#E02A25"></path>
+                                       </svg>
+                                    </button>
+                                    <span class="delimiter"></span> 
+                                    <button data-toggle="modal">
+                                       <span>Пример полиса</span> 
+                                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M1.33333 0C0.593333 0 0 0.593333 0 1.33333V10.6667C0 11.4067 0.593333 12 1.33333 12H10.6667C11.4067 12 12 11.4067 12 10.6667V1.33333C12 0.593333 11.4067 0 10.6667 0H1.33333ZM1.33333 1.33333H10.6667V10.6667H1.33333V1.33333ZM2.66667 2.66667V4H9.33333V2.66667H2.66667ZM2.66667 5.33333V6.66667H9.33333V5.33333H2.66667ZM2.66667 8V9.33333H7.33333V8H2.66667Z" fill="#009BEB"></path>
+                                       </svg>
+                                    </button>
+                                 </div>
+                              </div>
+                              <a href="#" data-placement="bottom" selector="" class="btn btn-blue result-item__submit">
+                              Купить онлайн
+                              </a>
+                           </div>
+                        </div>
+                        <div id="brandMore-20" class="row details mb-3 collapse">
+                           <div class="col-12">
+                              <div class="details__wrapp">
+                                 <div class="details__params">
+                                    <div class="details__params__list">
+                                       <p>Базовые опции</p>
+                                       <ul>
+                                          <li>Покрытие ответственности по имуществу до 130 000 грн <i data-placement="top" data-toggle="tooltip" title="" class="icon question" data-original-title="Максимальная сумма, которую покроет страховая за вред, нанесенный имуществу пострадавших по вине застрахованного виновника ДТП. Если сумма выше указанной, разница покрывается виновником ДТП."></i></li>
+                                          <li>Покрытие ответственности по здоровью до 130 000 грн <i data-placement="top" data-toggle="tooltip" title="" class="icon question" data-original-title="Максимальная сумма, которую покроет страховая, за нанесенный вред здоровью пострадавших по вине застрахованного виновника ДТП. Если сумма выше указанной, разница покрывается виновником ДТП."></i></li>
+                                       </ul>
+                                    </div>
+                                    <div class="details__params__list">
+                                       <p>Дополнительно от страховой</p>
+                                       <ul>
+                                          <li class="disabled">Прямое урегулирование</li>
+                                          <li class="disabled">Помощь 24/7</li>
+                                          <li class="disabled">Медицинская помощь</li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div class="mtsbu-rating">
+                                    <div class="mtsbu-rating__heading">
+                                       <span>Рейтинг</span> <img src="http://ukasko.test/images/mtsbu-logo.png" alt="МТСБУ"> <i data-placement="bottom" data-toggle="tooltip" title="" class="icon question" data-original-title="На основе квартального отчета МТСБУ по ОСАГО"></i> 
+                                       <p>На основе квартального отчета МТСБУ по ОСАГО</p>
+                                    </div>
+                                    <ul class="mtsbu-rating__list">
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Общая оценка</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Качество урегулирования</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Уровень жалоб</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                    </ul>
+                                    <div class="mtsbu-rating__deadlines">
+                                       <span>65 дней</span> 
+                                       <p>скорость выплаты по ОСАГО</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row details-toggler">
+                           <div class="col-12 text-center"><a data-toggle="collapse" data-target="#brandMore-20" aria-expanded="false" aria-controls="brandMore-20" class="more">Подробнее</a></div>
+                        </div>
+                     </div>
+                     <!---->
+                  </div>
+                  <div class="result-article">
+                     <div class="result-item">
+                        <div class="row result-item__wrapp">
+                           <div class="col-12 result-item__info">
+                              <div class="brand-logo"><img src="http://ukasko.test/logos/company/usi.png" alt="USI"></div>
+                              <div class="result-item__name"><a href="" class="link ">
+                                 ФО - Зона 1,2,3,4,5 - Фр 2000 - БМ &gt;= 1
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="col-12 result-item__details">
+                              <div class="result-item__rating">
+                                 <div class="brand-name">
+                                    <h5>USI</h5>
+                                 </div>
+                                 <div class="rating"><i class="icon star-filled"></i><i class="icon star-filled"></i><i class="icon star-filled"></i><i class="icon star-filled"></i> <i class="icon star-empty"></i></div>
+                                 <div class="rating__link"><a href="http://ukasko.test/company/usi"><small>4 отзыва</small></a></div>
+                              </div>
+                              <div class="result-item__params">
+                                 <div class="result-item-param">
+                                    <b>2 опции</b> 
+                                    <p>Включено</p>
+                                 </div>
+                                 <div class="result-item-param">
+                                    <b>2&nbsp;000 <span>грн</span></b> <i data-placement="bottom" data-toggle="tooltip" title="" class="icon question" data-original-title="Сумма до которой виновник ДТП оплачивает пострадавшей стороне самостоятельно."></i> 
+                                    <p>Франшиза</p>
+                                 </div>
+                                 <div class="result-item-param result-item-param-discount">
+                                    <div>
+                                       <span class="result-item-price-old" data-original-title="Кешбек - это часть денег, которая возвращается Вам обратно на карту. Каждому, кто оформит ОСАГО с кешбеком, мы возвращаем 15% от цены полиса. Мы сразу посчитали сумму, которую вернем Вам на счет, чтобы Вам была понятней выгода. Зачисление средств происходит на карту любого банка Украины."><span>1&nbsp;244</span> <span class="currency">грн</span> <span class="percent">-23%</span></span> 
+                                       <b>
+                                          958 <span>грн</span> 
+                                       </b>
+                                       <p>Стоимость</p>
+                                    </div>
+                                 </div>
+                                 <!----> 
+                                 <div class="result-item__instructions">
+                                    <button data-toggle="modal" data-target="#modalOsagoVideo">
+                                       <span>Как оформить полис</span> 
+                                       <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M13.7078 1.62656C13.6281 1.32975 13.4719 1.05907 13.2547 0.841619C13.0375 0.624168 12.767 0.467571 12.4703 0.3875C11.3781 0.0937501 7 0.09375 7 0.09375C7 0.09375 2.62187 0.0937499 1.52969 0.385937C1.23284 0.465748 0.962226 0.622258 0.745009 0.83975C0.527792 1.05724 0.371624 1.32806 0.292187 1.625C-5.96046e-08 2.71875 0 5 0 5C0 5 -5.96046e-08 7.28125 0.292187 8.37344C0.453125 8.97656 0.928125 9.45156 1.52969 9.6125C2.62187 9.90625 7 9.90625 7 9.90625C7 9.90625 11.3781 9.90625 12.4703 9.6125C13.0734 9.45156 13.5469 8.97656 13.7078 8.37344C14 7.28125 14 5 14 5C14 5 14 2.71875 13.7078 1.62656ZM5.60938 7.09375V2.90625L9.23438 4.98438L5.60938 7.09375Z" fill="#E02A25"></path>
+                                       </svg>
+                                    </button>
+                                    <span class="delimiter"></span> 
+                                    <button data-toggle="modal">
+                                       <span>Пример полиса</span> 
+                                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M1.33333 0C0.593333 0 0 0.593333 0 1.33333V10.6667C0 11.4067 0.593333 12 1.33333 12H10.6667C11.4067 12 12 11.4067 12 10.6667V1.33333C12 0.593333 11.4067 0 10.6667 0H1.33333ZM1.33333 1.33333H10.6667V10.6667H1.33333V1.33333ZM2.66667 2.66667V4H9.33333V2.66667H2.66667ZM2.66667 5.33333V6.66667H9.33333V5.33333H2.66667ZM2.66667 8V9.33333H7.33333V8H2.66667Z" fill="#009BEB"></path>
+                                       </svg>
+                                    </button>
+                                 </div>
+                              </div>
+                              <a href="#" data-placement="bottom" selector="" class="btn btn-blue result-item__submit">
+                              Купить онлайн
+                              </a>
+                           </div>
+                        </div>
+                        <div id="brandMore-21" class="row details mb-3 collapse">
+                           <div class="col-12">
+                              <div class="details__wrapp">
+                                 <div class="details__params">
+                                    <div class="details__params__list">
+                                       <p>Базовые опции</p>
+                                       <ul>
+                                          <li>Покрытие ответственности по имуществу до 130 000 грн <i data-placement="top" data-toggle="tooltip" title="" class="icon question" data-original-title="Максимальная сумма, которую покроет страховая за вред, нанесенный имуществу пострадавших по вине застрахованного виновника ДТП. Если сумма выше указанной, разница покрывается виновником ДТП."></i></li>
+                                          <li>Покрытие ответственности по здоровью до 130 000 грн <i data-placement="top" data-toggle="tooltip" title="" class="icon question" data-original-title="Максимальная сумма, которую покроет страховая, за нанесенный вред здоровью пострадавших по вине застрахованного виновника ДТП. Если сумма выше указанной, разница покрывается виновником ДТП."></i></li>
+                                       </ul>
+                                    </div>
+                                    <div class="details__params__list">
+                                       <p>Дополнительно от страховой</p>
+                                       <ul>
+                                          <li class="disabled">Прямое урегулирование</li>
+                                          <li class="disabled">Помощь 24/7</li>
+                                          <li class="disabled">Медицинская помощь</li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div class="mtsbu-rating">
+                                    <div class="mtsbu-rating__heading">
+                                       <span>Рейтинг</span> <img src="http://ukasko.test/images/mtsbu-logo.png" alt="МТСБУ"> <i data-placement="bottom" data-toggle="tooltip" title="" class="icon question" data-original-title="На основе квартального отчета МТСБУ по ОСАГО"></i> 
+                                       <p>На основе квартального отчета МТСБУ по ОСАГО</p>
+                                    </div>
+                                    <ul class="mtsbu-rating__list">
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Общая оценка</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Качество урегулирования</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Уровень жалоб</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                    </ul>
+                                    <div class="mtsbu-rating__deadlines">
+                                       <span>65 дней</span> 
+                                       <p>скорость выплаты по ОСАГО</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row details-toggler">
+                           <div class="col-12 text-center"><a data-toggle="collapse" data-target="#brandMore-21" aria-expanded="false" aria-controls="brandMore-21" class="more">Подробнее</a></div>
+                        </div>
+                     </div>
+                     <!---->
+                  </div>
+                  <div class="result-article">
+                     <div class="result-item">
+                        <div class="row result-item__wrapp">
+                           <div class="col-12 result-item__info">
+                              <div class="brand-logo"><img src="http://ukasko.test/logos/company/usi.png" alt="USI"></div>
+                              <div class="result-item__name"><a href="" class="link ">
+                                 ФО - Зона 1,2,3,4,5 - Фр 2000 - БМ &gt;= 1
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="col-12 result-item__details">
+                              <div class="result-item__rating">
+                                 <div class="brand-name">
+                                    <h5>USI</h5>
+                                 </div>
+                                 <div class="rating"><i class="icon star-filled"></i><i class="icon star-filled"></i><i class="icon star-filled"></i><i class="icon star-filled"></i> <i class="icon star-empty"></i></div>
+                                 <div class="rating__link"><a href="http://ukasko.test/company/usi"><small>4 отзыва</small></a></div>
+                              </div>
+                              <div class="result-item__params">
+                                 <div class="result-item-param">
+                                    <b>2 опции</b> 
+                                    <p>Включено</p>
+                                 </div>
+                                 <div class="result-item-param">
+                                    <b>2&nbsp;000 <span>грн</span></b> <i data-placement="bottom" data-toggle="tooltip" title="" class="icon question" data-original-title="Сумма до которой виновник ДТП оплачивает пострадавшей стороне самостоятельно."></i> 
+                                    <p>Франшиза</p>
+                                 </div>
+                                 <div class="result-item-param result-item-param-discount">
+                                    <div>
+                                       <span class="result-item-price-old" data-original-title="Кешбек - это часть денег, которая возвращается Вам обратно на карту. Каждому, кто оформит ОСАГО с кешбеком, мы возвращаем 15% от цены полиса. Мы сразу посчитали сумму, которую вернем Вам на счет, чтобы Вам была понятней выгода. Зачисление средств происходит на карту любого банка Украины."><span>1&nbsp;244</span> <span class="currency">грн</span> <span class="percent">-23%</span></span> 
+                                       <b>
+                                          958 <span>грн</span> 
+                                       </b>
+                                       <p>Стоимость</p>
+                                    </div>
+                                 </div>
+                                 <!----> 
+                                 <div class="result-item__instructions">
+                                    <button data-toggle="modal" data-target="#modalOsagoVideo">
+                                       <span>Как оформить полис</span> 
+                                       <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M13.7078 1.62656C13.6281 1.32975 13.4719 1.05907 13.2547 0.841619C13.0375 0.624168 12.767 0.467571 12.4703 0.3875C11.3781 0.0937501 7 0.09375 7 0.09375C7 0.09375 2.62187 0.0937499 1.52969 0.385937C1.23284 0.465748 0.962226 0.622258 0.745009 0.83975C0.527792 1.05724 0.371624 1.32806 0.292187 1.625C-5.96046e-08 2.71875 0 5 0 5C0 5 -5.96046e-08 7.28125 0.292187 8.37344C0.453125 8.97656 0.928125 9.45156 1.52969 9.6125C2.62187 9.90625 7 9.90625 7 9.90625C7 9.90625 11.3781 9.90625 12.4703 9.6125C13.0734 9.45156 13.5469 8.97656 13.7078 8.37344C14 7.28125 14 5 14 5C14 5 14 2.71875 13.7078 1.62656ZM5.60938 7.09375V2.90625L9.23438 4.98438L5.60938 7.09375Z" fill="#E02A25"></path>
+                                       </svg>
+                                    </button>
+                                    <span class="delimiter"></span> 
+                                    <button data-toggle="modal">
+                                       <span>Пример полиса</span> 
+                                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M1.33333 0C0.593333 0 0 0.593333 0 1.33333V10.6667C0 11.4067 0.593333 12 1.33333 12H10.6667C11.4067 12 12 11.4067 12 10.6667V1.33333C12 0.593333 11.4067 0 10.6667 0H1.33333ZM1.33333 1.33333H10.6667V10.6667H1.33333V1.33333ZM2.66667 2.66667V4H9.33333V2.66667H2.66667ZM2.66667 5.33333V6.66667H9.33333V5.33333H2.66667ZM2.66667 8V9.33333H7.33333V8H2.66667Z" fill="#009BEB"></path>
+                                       </svg>
+                                    </button>
+                                 </div>
+                              </div>
+                              <a href="#" data-placement="bottom" selector="" class="btn btn-blue result-item__submit">
+                              Купить онлайн
+                              </a>
+                           </div>
+                        </div>
+                        <div id="brandMore-22" class="row details mb-3 collapse">
+                           <div class="col-12">
+                              <div class="details__wrapp">
+                                 <div class="details__params">
+                                    <div class="details__params__list">
+                                       <p>Базовые опции</p>
+                                       <ul>
+                                          <li>Покрытие ответственности по имуществу до 130 000 грн <i data-placement="top" data-toggle="tooltip" title="" class="icon question" data-original-title="Максимальная сумма, которую покроет страховая за вред, нанесенный имуществу пострадавших по вине застрахованного виновника ДТП. Если сумма выше указанной, разница покрывается виновником ДТП."></i></li>
+                                          <li>Покрытие ответственности по здоровью до 130 000 грн <i data-placement="top" data-toggle="tooltip" title="" class="icon question" data-original-title="Максимальная сумма, которую покроет страховая, за нанесенный вред здоровью пострадавших по вине застрахованного виновника ДТП. Если сумма выше указанной, разница покрывается виновником ДТП."></i></li>
+                                       </ul>
+                                    </div>
+                                    <div class="details__params__list">
+                                       <p>Дополнительно от страховой</p>
+                                       <ul>
+                                          <li class="disabled">Прямое урегулирование</li>
+                                          <li class="disabled">Помощь 24/7</li>
+                                          <li class="disabled">Медицинская помощь</li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div class="mtsbu-rating">
+                                    <div class="mtsbu-rating__heading">
+                                       <span>Рейтинг</span> <img src="http://ukasko.test/images/mtsbu-logo.png" alt="МТСБУ"> <i data-placement="bottom" data-toggle="tooltip" title="" class="icon question" data-original-title="На основе квартального отчета МТСБУ по ОСАГО"></i> 
+                                       <p>На основе квартального отчета МТСБУ по ОСАГО</p>
+                                    </div>
+                                    <ul class="mtsbu-rating__list">
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Общая оценка</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Качество урегулирования</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Уровень жалоб</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                    </ul>
+                                    <div class="mtsbu-rating__deadlines">
+                                       <span>65 дней</span> 
+                                       <p>скорость выплаты по ОСАГО</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row details-toggler">
+                           <div class="col-12 text-center"><a data-toggle="collapse" data-target="#brandMore-22" aria-expanded="false" aria-controls="brandMore-22" class="more">Подробнее</a></div>
+                        </div>
+                     </div>
+                     <!---->
+                  </div>
+                  <div class="result-article">
+                     <div class="result-item">
+                        <div class="row result-item__wrapp">
+                           <div class="col-12 result-item__info">
+                              <div class="brand-logo"><img src="http://ukasko.test/logos/company/usi.png" alt="USI"></div>
+                              <div class="result-item__name"><a href="" class="link ">
+                                 ФО - Зона 1,2,3,4,5 - Фр 2000 - БМ &gt;= 1
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="col-12 result-item__details">
+                              <div class="result-item__rating">
+                                 <div class="brand-name">
+                                    <h5>USI</h5>
+                                 </div>
+                                 <div class="rating"><i class="icon star-filled"></i><i class="icon star-filled"></i><i class="icon star-filled"></i><i class="icon star-filled"></i> <i class="icon star-empty"></i></div>
+                                 <div class="rating__link"><a href="http://ukasko.test/company/usi"><small>4 отзыва</small></a></div>
+                              </div>
+                              <div class="result-item__params">
+                                 <div class="result-item-param">
+                                    <b>2 опции</b> 
+                                    <p>Включено</p>
+                                 </div>
+                                 <div class="result-item-param">
+                                    <b>2&nbsp;000 <span>грн</span></b> <i data-placement="bottom" data-toggle="tooltip" title="" class="icon question" data-original-title="Сумма до которой виновник ДТП оплачивает пострадавшей стороне самостоятельно."></i> 
+                                    <p>Франшиза</p>
+                                 </div>
+                                 <div class="result-item-param result-item-param-discount">
+                                    <div>
+                                       <span class="result-item-price-old" data-original-title="Кешбек - это часть денег, которая возвращается Вам обратно на карту. Каждому, кто оформит ОСАГО с кешбеком, мы возвращаем 15% от цены полиса. Мы сразу посчитали сумму, которую вернем Вам на счет, чтобы Вам была понятней выгода. Зачисление средств происходит на карту любого банка Украины."><span>1&nbsp;244</span> <span class="currency">грн</span> <span class="percent">-23%</span></span> 
+                                       <b>
+                                          958 <span>грн</span> 
+                                       </b>
+                                       <p>Стоимость</p>
+                                    </div>
+                                 </div>
+                                 <!----> 
+                                 <div class="result-item__instructions">
+                                    <button data-toggle="modal" data-target="#modalOsagoVideo">
+                                       <span>Как оформить полис</span> 
+                                       <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M13.7078 1.62656C13.6281 1.32975 13.4719 1.05907 13.2547 0.841619C13.0375 0.624168 12.767 0.467571 12.4703 0.3875C11.3781 0.0937501 7 0.09375 7 0.09375C7 0.09375 2.62187 0.0937499 1.52969 0.385937C1.23284 0.465748 0.962226 0.622258 0.745009 0.83975C0.527792 1.05724 0.371624 1.32806 0.292187 1.625C-5.96046e-08 2.71875 0 5 0 5C0 5 -5.96046e-08 7.28125 0.292187 8.37344C0.453125 8.97656 0.928125 9.45156 1.52969 9.6125C2.62187 9.90625 7 9.90625 7 9.90625C7 9.90625 11.3781 9.90625 12.4703 9.6125C13.0734 9.45156 13.5469 8.97656 13.7078 8.37344C14 7.28125 14 5 14 5C14 5 14 2.71875 13.7078 1.62656ZM5.60938 7.09375V2.90625L9.23438 4.98438L5.60938 7.09375Z" fill="#E02A25"></path>
+                                       </svg>
+                                    </button>
+                                    <span class="delimiter"></span> 
+                                    <button data-toggle="modal">
+                                       <span>Пример полиса</span> 
+                                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M1.33333 0C0.593333 0 0 0.593333 0 1.33333V10.6667C0 11.4067 0.593333 12 1.33333 12H10.6667C11.4067 12 12 11.4067 12 10.6667V1.33333C12 0.593333 11.4067 0 10.6667 0H1.33333ZM1.33333 1.33333H10.6667V10.6667H1.33333V1.33333ZM2.66667 2.66667V4H9.33333V2.66667H2.66667ZM2.66667 5.33333V6.66667H9.33333V5.33333H2.66667ZM2.66667 8V9.33333H7.33333V8H2.66667Z" fill="#009BEB"></path>
+                                       </svg>
+                                    </button>
+                                 </div>
+                              </div>
+                              <a href="#" data-placement="bottom" selector="" class="btn btn-blue result-item__submit">
+                              Купить онлайн
+                              </a>
+                           </div>
+                        </div>
+                        <div id="brandMore-23" class="row details mb-3 collapse">
+                           <div class="col-12">
+                              <div class="details__wrapp">
+                                 <div class="details__params">
+                                    <div class="details__params__list">
+                                       <p>Базовые опции</p>
+                                       <ul>
+                                          <li>Покрытие ответственности по имуществу до 130 000 грн <i data-placement="top" data-toggle="tooltip" title="" class="icon question" data-original-title="Максимальная сумма, которую покроет страховая за вред, нанесенный имуществу пострадавших по вине застрахованного виновника ДТП. Если сумма выше указанной, разница покрывается виновником ДТП."></i></li>
+                                          <li>Покрытие ответственности по здоровью до 130 000 грн <i data-placement="top" data-toggle="tooltip" title="" class="icon question" data-original-title="Максимальная сумма, которую покроет страховая, за нанесенный вред здоровью пострадавших по вине застрахованного виновника ДТП. Если сумма выше указанной, разница покрывается виновником ДТП."></i></li>
+                                       </ul>
+                                    </div>
+                                    <div class="details__params__list">
+                                       <p>Дополнительно от страховой</p>
+                                       <ul>
+                                          <li class="disabled">Прямое урегулирование</li>
+                                          <li class="disabled">Помощь 24/7</li>
+                                          <li class="disabled">Медицинская помощь</li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div class="mtsbu-rating">
+                                    <div class="mtsbu-rating__heading">
+                                       <span>Рейтинг</span> <img src="http://ukasko.test/images/mtsbu-logo.png" alt="МТСБУ"> <i data-placement="bottom" data-toggle="tooltip" title="" class="icon question" data-original-title="На основе квартального отчета МТСБУ по ОСАГО"></i> 
+                                       <p>На основе квартального отчета МТСБУ по ОСАГО</p>
+                                    </div>
+                                    <ul class="mtsbu-rating__list">
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Общая оценка</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Качество урегулирования</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Уровень жалоб</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                    </ul>
+                                    <div class="mtsbu-rating__deadlines">
+                                       <span>65 дней</span> 
+                                       <p>скорость выплаты по ОСАГО</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row details-toggler">
+                           <div class="col-12 text-center"><a data-toggle="collapse" data-target="#brandMore-23" aria-expanded="false" aria-controls="brandMore-23" class="more">Подробнее</a></div>
+                        </div>
+                     </div>
+                     <!---->
+                  </div>
+                  <div class="result-article">
+                     <div class="result-item">
+                        <div class="row result-item__wrapp">
+                           <div class="col-12 result-item__info">
+                              <div class="brand-logo"><img src="http://ukasko.test/logos/company/usi.png" alt="USI"></div>
+                              <div class="result-item__name"><a href="" class="link ">
+                                 ФО - Зона 1,2,3,4,5 - Фр 2000 - БМ &gt;= 1
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="col-12 result-item__details">
+                              <div class="result-item__rating">
+                                 <div class="brand-name">
+                                    <h5>USI</h5>
+                                 </div>
+                                 <div class="rating"><i class="icon star-filled"></i><i class="icon star-filled"></i><i class="icon star-filled"></i><i class="icon star-filled"></i> <i class="icon star-empty"></i></div>
+                                 <div class="rating__link"><a href="http://ukasko.test/company/usi"><small>4 отзыва</small></a></div>
+                              </div>
+                              <div class="result-item__params">
+                                 <div class="result-item-param">
+                                    <b>2 опции</b> 
+                                    <p>Включено</p>
+                                 </div>
+                                 <div class="result-item-param">
+                                    <b>2&nbsp;000 <span>грн</span></b> <i data-placement="bottom" data-toggle="tooltip" title="" class="icon question" data-original-title="Сумма до которой виновник ДТП оплачивает пострадавшей стороне самостоятельно."></i> 
+                                    <p>Франшиза</p>
+                                 </div>
+                                 <div class="result-item-param result-item-param-discount">
+                                    <div>
+                                       <span class="result-item-price-old" data-original-title="Кешбек - это часть денег, которая возвращается Вам обратно на карту. Каждому, кто оформит ОСАГО с кешбеком, мы возвращаем 15% от цены полиса. Мы сразу посчитали сумму, которую вернем Вам на счет, чтобы Вам была понятней выгода. Зачисление средств происходит на карту любого банка Украины."><span>1&nbsp;244</span> <span class="currency">грн</span> <span class="percent">-23%</span></span> 
+                                       <b>
+                                          958 <span>грн</span> 
+                                       </b>
+                                       <p>Стоимость</p>
+                                    </div>
+                                 </div>
+                                 <!----> 
+                                 <div class="result-item__instructions">
+                                    <button data-toggle="modal" data-target="#modalOsagoVideo">
+                                       <span>Как оформить полис</span> 
+                                       <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M13.7078 1.62656C13.6281 1.32975 13.4719 1.05907 13.2547 0.841619C13.0375 0.624168 12.767 0.467571 12.4703 0.3875C11.3781 0.0937501 7 0.09375 7 0.09375C7 0.09375 2.62187 0.0937499 1.52969 0.385937C1.23284 0.465748 0.962226 0.622258 0.745009 0.83975C0.527792 1.05724 0.371624 1.32806 0.292187 1.625C-5.96046e-08 2.71875 0 5 0 5C0 5 -5.96046e-08 7.28125 0.292187 8.37344C0.453125 8.97656 0.928125 9.45156 1.52969 9.6125C2.62187 9.90625 7 9.90625 7 9.90625C7 9.90625 11.3781 9.90625 12.4703 9.6125C13.0734 9.45156 13.5469 8.97656 13.7078 8.37344C14 7.28125 14 5 14 5C14 5 14 2.71875 13.7078 1.62656ZM5.60938 7.09375V2.90625L9.23438 4.98438L5.60938 7.09375Z" fill="#E02A25"></path>
+                                       </svg>
+                                    </button>
+                                    <span class="delimiter"></span> 
+                                    <button data-toggle="modal">
+                                       <span>Пример полиса</span> 
+                                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M1.33333 0C0.593333 0 0 0.593333 0 1.33333V10.6667C0 11.4067 0.593333 12 1.33333 12H10.6667C11.4067 12 12 11.4067 12 10.6667V1.33333C12 0.593333 11.4067 0 10.6667 0H1.33333ZM1.33333 1.33333H10.6667V10.6667H1.33333V1.33333ZM2.66667 2.66667V4H9.33333V2.66667H2.66667ZM2.66667 5.33333V6.66667H9.33333V5.33333H2.66667ZM2.66667 8V9.33333H7.33333V8H2.66667Z" fill="#009BEB"></path>
+                                       </svg>
+                                    </button>
+                                 </div>
+                              </div>
+                              <a href="#" data-placement="bottom" selector="" class="btn btn-blue result-item__submit">
+                              Купить онлайн
+                              </a>
+                           </div>
+                        </div>
+                        <div id="brandMore-24" class="row details mb-3 collapse">
+                           <div class="col-12">
+                              <div class="details__wrapp">
+                                 <div class="details__params">
+                                    <div class="details__params__list">
+                                       <p>Базовые опции</p>
+                                       <ul>
+                                          <li>Покрытие ответственности по имуществу до 130 000 грн <i data-placement="top" data-toggle="tooltip" title="" class="icon question" data-original-title="Максимальная сумма, которую покроет страховая за вред, нанесенный имуществу пострадавших по вине застрахованного виновника ДТП. Если сумма выше указанной, разница покрывается виновником ДТП."></i></li>
+                                          <li>Покрытие ответственности по здоровью до 130 000 грн <i data-placement="top" data-toggle="tooltip" title="" class="icon question" data-original-title="Максимальная сумма, которую покроет страховая, за нанесенный вред здоровью пострадавших по вине застрахованного виновника ДТП. Если сумма выше указанной, разница покрывается виновником ДТП."></i></li>
+                                       </ul>
+                                    </div>
+                                    <div class="details__params__list">
+                                       <p>Дополнительно от страховой</p>
+                                       <ul>
+                                          <li class="disabled">Прямое урегулирование</li>
+                                          <li class="disabled">Помощь 24/7</li>
+                                          <li class="disabled">Медицинская помощь</li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div class="mtsbu-rating">
+                                    <div class="mtsbu-rating__heading">
+                                       <span>Рейтинг</span> <img src="http://ukasko.test/images/mtsbu-logo.png" alt="МТСБУ"> <i data-placement="bottom" data-toggle="tooltip" title="" class="icon question" data-original-title="На основе квартального отчета МТСБУ по ОСАГО"></i> 
+                                       <p>На основе квартального отчета МТСБУ по ОСАГО</p>
+                                    </div>
+                                    <ul class="mtsbu-rating__list">
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Общая оценка</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Качество урегулирования</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Уровень жалоб</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                    </ul>
+                                    <div class="mtsbu-rating__deadlines">
+                                       <span>65 дней</span> 
+                                       <p>скорость выплаты по ОСАГО</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row details-toggler">
+                           <div class="col-12 text-center"><a data-toggle="collapse" data-target="#brandMore-24" aria-expanded="false" aria-controls="brandMore-24" class="more">Подробнее</a></div>
+                        </div>
+                     </div>
+                     <!---->
+                  </div>
+                  <div class="result-article">
+                     <div class="result-item">
+                        <div class="row result-item__wrapp">
+                           <div class="col-12 result-item__info">
+                              <div class="brand-logo"><img src="http://ukasko.test/logos/company/usi.png" alt="USI"></div>
+                              <div class="result-item__name"><a href="" class="link ">
+                                 ФО - Зона 1,2,3,4,5 - Фр 2000 - БМ &gt;= 1
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="col-12 result-item__details">
+                              <div class="result-item__rating">
+                                 <div class="brand-name">
+                                    <h5>USI</h5>
+                                 </div>
+                                 <div class="rating"><i class="icon star-filled"></i><i class="icon star-filled"></i><i class="icon star-filled"></i><i class="icon star-filled"></i> <i class="icon star-empty"></i></div>
+                                 <div class="rating__link"><a href="http://ukasko.test/company/usi"><small>4 отзыва</small></a></div>
+                              </div>
+                              <div class="result-item__params">
+                                 <div class="result-item-param">
+                                    <b>2 опции</b> 
+                                    <p>Включено</p>
+                                 </div>
+                                 <div class="result-item-param">
+                                    <b>2&nbsp;000 <span>грн</span></b> <i data-placement="bottom" data-toggle="tooltip" title="" class="icon question" data-original-title="Сумма до которой виновник ДТП оплачивает пострадавшей стороне самостоятельно."></i> 
+                                    <p>Франшиза</p>
+                                 </div>
+                                 <div class="result-item-param result-item-param-discount">
+                                    <div>
+                                       <span class="result-item-price-old" data-original-title="Кешбек - это часть денег, которая возвращается Вам обратно на карту. Каждому, кто оформит ОСАГО с кешбеком, мы возвращаем 15% от цены полиса. Мы сразу посчитали сумму, которую вернем Вам на счет, чтобы Вам была понятней выгода. Зачисление средств происходит на карту любого банка Украины."><span>1&nbsp;244</span> <span class="currency">грн</span> <span class="percent">-23%</span></span> 
+                                       <b>
+                                          958 <span>грн</span> 
+                                       </b>
+                                       <p>Стоимость</p>
+                                    </div>
+                                 </div>
+                                 <!----> 
+                                 <div class="result-item__instructions">
+                                    <button data-toggle="modal" data-target="#modalOsagoVideo">
+                                       <span>Как оформить полис</span> 
+                                       <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M13.7078 1.62656C13.6281 1.32975 13.4719 1.05907 13.2547 0.841619C13.0375 0.624168 12.767 0.467571 12.4703 0.3875C11.3781 0.0937501 7 0.09375 7 0.09375C7 0.09375 2.62187 0.0937499 1.52969 0.385937C1.23284 0.465748 0.962226 0.622258 0.745009 0.83975C0.527792 1.05724 0.371624 1.32806 0.292187 1.625C-5.96046e-08 2.71875 0 5 0 5C0 5 -5.96046e-08 7.28125 0.292187 8.37344C0.453125 8.97656 0.928125 9.45156 1.52969 9.6125C2.62187 9.90625 7 9.90625 7 9.90625C7 9.90625 11.3781 9.90625 12.4703 9.6125C13.0734 9.45156 13.5469 8.97656 13.7078 8.37344C14 7.28125 14 5 14 5C14 5 14 2.71875 13.7078 1.62656ZM5.60938 7.09375V2.90625L9.23438 4.98438L5.60938 7.09375Z" fill="#E02A25"></path>
+                                       </svg>
+                                    </button>
+                                    <span class="delimiter"></span> 
+                                    <button data-toggle="modal">
+                                       <span>Пример полиса</span> 
+                                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M1.33333 0C0.593333 0 0 0.593333 0 1.33333V10.6667C0 11.4067 0.593333 12 1.33333 12H10.6667C11.4067 12 12 11.4067 12 10.6667V1.33333C12 0.593333 11.4067 0 10.6667 0H1.33333ZM1.33333 1.33333H10.6667V10.6667H1.33333V1.33333ZM2.66667 2.66667V4H9.33333V2.66667H2.66667ZM2.66667 5.33333V6.66667H9.33333V5.33333H2.66667ZM2.66667 8V9.33333H7.33333V8H2.66667Z" fill="#009BEB"></path>
+                                       </svg>
+                                    </button>
+                                 </div>
+                              </div>
+                              <a href="#" data-placement="bottom" selector="" class="btn btn-blue result-item__submit">
+                              Купить онлайн
+                              </a>
+                           </div>
+                        </div>
+                        <div id="brandMore-25" class="row details mb-3 collapse">
+                           <div class="col-12">
+                              <div class="details__wrapp">
+                                 <div class="details__params">
+                                    <div class="details__params__list">
+                                       <p>Базовые опции</p>
+                                       <ul>
+                                          <li>Покрытие ответственности по имуществу до 130 000 грн <i data-placement="top" data-toggle="tooltip" title="" class="icon question" data-original-title="Максимальная сумма, которую покроет страховая за вред, нанесенный имуществу пострадавших по вине застрахованного виновника ДТП. Если сумма выше указанной, разница покрывается виновником ДТП."></i></li>
+                                          <li>Покрытие ответственности по здоровью до 130 000 грн <i data-placement="top" data-toggle="tooltip" title="" class="icon question" data-original-title="Максимальная сумма, которую покроет страховая, за нанесенный вред здоровью пострадавших по вине застрахованного виновника ДТП. Если сумма выше указанной, разница покрывается виновником ДТП."></i></li>
+                                       </ul>
+                                    </div>
+                                    <div class="details__params__list">
+                                       <p>Дополнительно от страховой</p>
+                                       <ul>
+                                          <li class="disabled">Прямое урегулирование</li>
+                                          <li class="disabled">Помощь 24/7</li>
+                                          <li class="disabled">Медицинская помощь</li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div class="mtsbu-rating">
+                                    <div class="mtsbu-rating__heading">
+                                       <span>Рейтинг</span> <img src="http://ukasko.test/images/mtsbu-logo.png" alt="МТСБУ"> <i data-placement="bottom" data-toggle="tooltip" title="" class="icon question" data-original-title="На основе квартального отчета МТСБУ по ОСАГО"></i> 
+                                       <p>На основе квартального отчета МТСБУ по ОСАГО</p>
+                                    </div>
+                                    <ul class="mtsbu-rating__list">
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Общая оценка</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Качество урегулирования</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Уровень жалоб</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                    </ul>
+                                    <div class="mtsbu-rating__deadlines">
+                                       <span>65 дней</span> 
+                                       <p>скорость выплаты по ОСАГО</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row details-toggler">
+                           <div class="col-12 text-center"><a data-toggle="collapse" data-target="#brandMore-25" aria-expanded="false" aria-controls="brandMore-25" class="more">Подробнее</a></div>
+                        </div>
+                     </div>
+                     <!---->
+                  </div>
+                  <div class="result-article">
+                     <div class="result-item">
+                        <div class="row result-item__wrapp">
+                           <div class="col-12 result-item__info">
+                              <div class="brand-logo"><img src="http://ukasko.test/logos/company/usi.png" alt="USI"></div>
+                              <div class="result-item__name"><a href="" class="link ">
+                                 ФО - Зона 1,2,3,4,5 - Фр 2000 - БМ &gt;= 1
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="col-12 result-item__details">
+                              <div class="result-item__rating">
+                                 <div class="brand-name">
+                                    <h5>USI</h5>
+                                 </div>
+                                 <div class="rating"><i class="icon star-filled"></i><i class="icon star-filled"></i><i class="icon star-filled"></i><i class="icon star-filled"></i> <i class="icon star-empty"></i></div>
+                                 <div class="rating__link"><a href="http://ukasko.test/company/usi"><small>4 отзыва</small></a></div>
+                              </div>
+                              <div class="result-item__params">
+                                 <div class="result-item-param">
+                                    <b>2 опции</b> 
+                                    <p>Включено</p>
+                                 </div>
+                                 <div class="result-item-param">
+                                    <b>2&nbsp;000 <span>грн</span></b> <i data-placement="bottom" data-toggle="tooltip" title="" class="icon question" data-original-title="Сумма до которой виновник ДТП оплачивает пострадавшей стороне самостоятельно."></i> 
+                                    <p>Франшиза</p>
+                                 </div>
+                                 <div class="result-item-param result-item-param-discount">
+                                    <div>
+                                       <span class="result-item-price-old" data-original-title="Кешбек - это часть денег, которая возвращается Вам обратно на карту. Каждому, кто оформит ОСАГО с кешбеком, мы возвращаем 15% от цены полиса. Мы сразу посчитали сумму, которую вернем Вам на счет, чтобы Вам была понятней выгода. Зачисление средств происходит на карту любого банка Украины."><span>1&nbsp;244</span> <span class="currency">грн</span> <span class="percent">-23%</span></span> 
+                                       <b>
+                                          958 <span>грн</span> 
+                                       </b>
+                                       <p>Стоимость</p>
+                                    </div>
+                                 </div>
+                                 <!----> 
+                                 <div class="result-item__instructions">
+                                    <button data-toggle="modal" data-target="#modalOsagoVideo">
+                                       <span>Как оформить полис</span> 
+                                       <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M13.7078 1.62656C13.6281 1.32975 13.4719 1.05907 13.2547 0.841619C13.0375 0.624168 12.767 0.467571 12.4703 0.3875C11.3781 0.0937501 7 0.09375 7 0.09375C7 0.09375 2.62187 0.0937499 1.52969 0.385937C1.23284 0.465748 0.962226 0.622258 0.745009 0.83975C0.527792 1.05724 0.371624 1.32806 0.292187 1.625C-5.96046e-08 2.71875 0 5 0 5C0 5 -5.96046e-08 7.28125 0.292187 8.37344C0.453125 8.97656 0.928125 9.45156 1.52969 9.6125C2.62187 9.90625 7 9.90625 7 9.90625C7 9.90625 11.3781 9.90625 12.4703 9.6125C13.0734 9.45156 13.5469 8.97656 13.7078 8.37344C14 7.28125 14 5 14 5C14 5 14 2.71875 13.7078 1.62656ZM5.60938 7.09375V2.90625L9.23438 4.98438L5.60938 7.09375Z" fill="#E02A25"></path>
+                                       </svg>
+                                    </button>
+                                    <span class="delimiter"></span> 
+                                    <button data-toggle="modal">
+                                       <span>Пример полиса</span> 
+                                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M1.33333 0C0.593333 0 0 0.593333 0 1.33333V10.6667C0 11.4067 0.593333 12 1.33333 12H10.6667C11.4067 12 12 11.4067 12 10.6667V1.33333C12 0.593333 11.4067 0 10.6667 0H1.33333ZM1.33333 1.33333H10.6667V10.6667H1.33333V1.33333ZM2.66667 2.66667V4H9.33333V2.66667H2.66667ZM2.66667 5.33333V6.66667H9.33333V5.33333H2.66667ZM2.66667 8V9.33333H7.33333V8H2.66667Z" fill="#009BEB"></path>
+                                       </svg>
+                                    </button>
+                                 </div>
+                              </div>
+                              <a href="#" data-placement="bottom" selector="" class="btn btn-blue result-item__submit">
+                              Купить онлайн
+                              </a>
+                           </div>
+                        </div>
+                        <div id="brandMore-26" class="row details mb-3 collapse">
+                           <div class="col-12">
+                              <div class="details__wrapp">
+                                 <div class="details__params">
+                                    <div class="details__params__list">
+                                       <p>Базовые опции</p>
+                                       <ul>
+                                          <li>Покрытие ответственности по имуществу до 130 000 грн <i data-placement="top" data-toggle="tooltip" title="" class="icon question" data-original-title="Максимальная сумма, которую покроет страховая за вред, нанесенный имуществу пострадавших по вине застрахованного виновника ДТП. Если сумма выше указанной, разница покрывается виновником ДТП."></i></li>
+                                          <li>Покрытие ответственности по здоровью до 130 000 грн <i data-placement="top" data-toggle="tooltip" title="" class="icon question" data-original-title="Максимальная сумма, которую покроет страховая, за нанесенный вред здоровью пострадавших по вине застрахованного виновника ДТП. Если сумма выше указанной, разница покрывается виновником ДТП."></i></li>
+                                       </ul>
+                                    </div>
+                                    <div class="details__params__list">
+                                       <p>Дополнительно от страховой</p>
+                                       <ul>
+                                          <li class="disabled">Прямое урегулирование</li>
+                                          <li class="disabled">Помощь 24/7</li>
+                                          <li class="disabled">Медицинская помощь</li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div class="mtsbu-rating">
+                                    <div class="mtsbu-rating__heading">
+                                       <span>Рейтинг</span> <img src="http://ukasko.test/images/mtsbu-logo.png" alt="МТСБУ"> <i data-placement="bottom" data-toggle="tooltip" title="" class="icon question" data-original-title="На основе квартального отчета МТСБУ по ОСАГО"></i> 
+                                       <p>На основе квартального отчета МТСБУ по ОСАГО</p>
+                                    </div>
+                                    <ul class="mtsbu-rating__list">
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Общая оценка</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Качество урегулирования</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Уровень жалоб</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                    </ul>
+                                    <div class="mtsbu-rating__deadlines">
+                                       <span>65 дней</span> 
+                                       <p>скорость выплаты по ОСАГО</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row details-toggler">
+                           <div class="col-12 text-center"><a data-toggle="collapse" data-target="#brandMore-26" aria-expanded="false" aria-controls="brandMore-26" class="more">Подробнее</a></div>
+                        </div>
+                     </div>
+                     <!---->
+                  </div>
+                  <div class="result-article">
+                     <div class="result-item">
+                        <div class="row result-item__wrapp">
+                           <div class="col-12 result-item__info">
+                              <div class="brand-logo"><img src="http://ukasko.test/logos/company/usi.png" alt="USI"></div>
+                              <div class="result-item__name"><a href="" class="link ">
+                                 ФО - Зона 1,2,3,4,5 - Фр 2000 - БМ &gt;= 1
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="col-12 result-item__details">
+                              <div class="result-item__rating">
+                                 <div class="brand-name">
+                                    <h5>USI</h5>
+                                 </div>
+                                 <div class="rating"><i class="icon star-filled"></i><i class="icon star-filled"></i><i class="icon star-filled"></i><i class="icon star-filled"></i> <i class="icon star-empty"></i></div>
+                                 <div class="rating__link"><a href="http://ukasko.test/company/usi"><small>4 отзыва</small></a></div>
+                              </div>
+                              <div class="result-item__params">
+                                 <div class="result-item-param">
+                                    <b>2 опции</b> 
+                                    <p>Включено</p>
+                                 </div>
+                                 <div class="result-item-param">
+                                    <b>2&nbsp;000 <span>грн</span></b> <i data-placement="bottom" data-toggle="tooltip" title="" class="icon question" data-original-title="Сумма до которой виновник ДТП оплачивает пострадавшей стороне самостоятельно."></i> 
+                                    <p>Франшиза</p>
+                                 </div>
+                                 <div class="result-item-param result-item-param-discount">
+                                    <div>
+                                       <span class="result-item-price-old" data-original-title="Кешбек - это часть денег, которая возвращается Вам обратно на карту. Каждому, кто оформит ОСАГО с кешбеком, мы возвращаем 15% от цены полиса. Мы сразу посчитали сумму, которую вернем Вам на счет, чтобы Вам была понятней выгода. Зачисление средств происходит на карту любого банка Украины."><span>1&nbsp;244</span> <span class="currency">грн</span> <span class="percent">-23%</span></span> 
+                                       <b>
+                                          958 <span>грн</span> 
+                                       </b>
+                                       <p>Стоимость</p>
+                                    </div>
+                                 </div>
+                                 <!----> 
+                                 <div class="result-item__instructions">
+                                    <button data-toggle="modal" data-target="#modalOsagoVideo">
+                                       <span>Как оформить полис</span> 
+                                       <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M13.7078 1.62656C13.6281 1.32975 13.4719 1.05907 13.2547 0.841619C13.0375 0.624168 12.767 0.467571 12.4703 0.3875C11.3781 0.0937501 7 0.09375 7 0.09375C7 0.09375 2.62187 0.0937499 1.52969 0.385937C1.23284 0.465748 0.962226 0.622258 0.745009 0.83975C0.527792 1.05724 0.371624 1.32806 0.292187 1.625C-5.96046e-08 2.71875 0 5 0 5C0 5 -5.96046e-08 7.28125 0.292187 8.37344C0.453125 8.97656 0.928125 9.45156 1.52969 9.6125C2.62187 9.90625 7 9.90625 7 9.90625C7 9.90625 11.3781 9.90625 12.4703 9.6125C13.0734 9.45156 13.5469 8.97656 13.7078 8.37344C14 7.28125 14 5 14 5C14 5 14 2.71875 13.7078 1.62656ZM5.60938 7.09375V2.90625L9.23438 4.98438L5.60938 7.09375Z" fill="#E02A25"></path>
+                                       </svg>
+                                    </button>
+                                    <span class="delimiter"></span> 
+                                    <button data-toggle="modal">
+                                       <span>Пример полиса</span> 
+                                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M1.33333 0C0.593333 0 0 0.593333 0 1.33333V10.6667C0 11.4067 0.593333 12 1.33333 12H10.6667C11.4067 12 12 11.4067 12 10.6667V1.33333C12 0.593333 11.4067 0 10.6667 0H1.33333ZM1.33333 1.33333H10.6667V10.6667H1.33333V1.33333ZM2.66667 2.66667V4H9.33333V2.66667H2.66667ZM2.66667 5.33333V6.66667H9.33333V5.33333H2.66667ZM2.66667 8V9.33333H7.33333V8H2.66667Z" fill="#009BEB"></path>
+                                       </svg>
+                                    </button>
+                                 </div>
+                              </div>
+                              <a href="#" data-placement="bottom" selector="" class="btn btn-blue result-item__submit">
+                              Купить онлайн
+                              </a>
+                           </div>
+                        </div>
+                        <div id="brandMore-27" class="row details mb-3 collapse">
+                           <div class="col-12">
+                              <div class="details__wrapp">
+                                 <div class="details__params">
+                                    <div class="details__params__list">
+                                       <p>Базовые опции</p>
+                                       <ul>
+                                          <li>Покрытие ответственности по имуществу до 130 000 грн <i data-placement="top" data-toggle="tooltip" title="" class="icon question" data-original-title="Максимальная сумма, которую покроет страховая за вред, нанесенный имуществу пострадавших по вине застрахованного виновника ДТП. Если сумма выше указанной, разница покрывается виновником ДТП."></i></li>
+                                          <li>Покрытие ответственности по здоровью до 130 000 грн <i data-placement="top" data-toggle="tooltip" title="" class="icon question" data-original-title="Максимальная сумма, которую покроет страховая, за нанесенный вред здоровью пострадавших по вине застрахованного виновника ДТП. Если сумма выше указанной, разница покрывается виновником ДТП."></i></li>
+                                       </ul>
+                                    </div>
+                                    <div class="details__params__list">
+                                       <p>Дополнительно от страховой</p>
+                                       <ul>
+                                          <li class="disabled">Прямое урегулирование</li>
+                                          <li class="disabled">Помощь 24/7</li>
+                                          <li class="disabled">Медицинская помощь</li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div class="mtsbu-rating">
+                                    <div class="mtsbu-rating__heading">
+                                       <span>Рейтинг</span> <img src="http://ukasko.test/images/mtsbu-logo.png" alt="МТСБУ"> <i data-placement="bottom" data-toggle="tooltip" title="" class="icon question" data-original-title="На основе квартального отчета МТСБУ по ОСАГО"></i> 
+                                       <p>На основе квартального отчета МТСБУ по ОСАГО</p>
+                                    </div>
+                                    <ul class="mtsbu-rating__list">
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Общая оценка</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Качество урегулирования</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Уровень жалоб</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                    </ul>
+                                    <div class="mtsbu-rating__deadlines">
+                                       <span>65 дней</span> 
+                                       <p>скорость выплаты по ОСАГО</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row details-toggler">
+                           <div class="col-12 text-center"><a data-toggle="collapse" data-target="#brandMore-27" aria-expanded="false" aria-controls="brandMore-27" class="more">Подробнее</a></div>
+                        </div>
+                     </div>
+                     <!---->
+                  </div>
+                  <div class="result-article">
+                     <div class="result-item">
+                        <div class="row result-item__wrapp">
+                           <div class="col-12 result-item__info">
+                              <div class="brand-logo"><img src="http://ukasko.test/logos/company/usi.png" alt="USI"></div>
+                              <div class="result-item__name"><a href="" class="link ">
+                                 ФО - Зона 1,2,3,4,5 - Фр 2000 - БМ &gt;= 1
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="col-12 result-item__details">
+                              <div class="result-item__rating">
+                                 <div class="brand-name">
+                                    <h5>USI</h5>
+                                 </div>
+                                 <div class="rating"><i class="icon star-filled"></i><i class="icon star-filled"></i><i class="icon star-filled"></i><i class="icon star-filled"></i> <i class="icon star-empty"></i></div>
+                                 <div class="rating__link"><a href="http://ukasko.test/company/usi"><small>4 отзыва</small></a></div>
+                              </div>
+                              <div class="result-item__params">
+                                 <div class="result-item-param">
+                                    <b>2 опции</b> 
+                                    <p>Включено</p>
+                                 </div>
+                                 <div class="result-item-param">
+                                    <b>2&nbsp;000 <span>грн</span></b> <i data-placement="bottom" data-toggle="tooltip" title="" class="icon question" data-original-title="Сумма до которой виновник ДТП оплачивает пострадавшей стороне самостоятельно."></i> 
+                                    <p>Франшиза</p>
+                                 </div>
+                                 <div class="result-item-param result-item-param-discount">
+                                    <div>
+                                       <span class="result-item-price-old" data-original-title="Кешбек - это часть денег, которая возвращается Вам обратно на карту. Каждому, кто оформит ОСАГО с кешбеком, мы возвращаем 15% от цены полиса. Мы сразу посчитали сумму, которую вернем Вам на счет, чтобы Вам была понятней выгода. Зачисление средств происходит на карту любого банка Украины."><span>1&nbsp;244</span> <span class="currency">грн</span> <span class="percent">-23%</span></span> 
+                                       <b>
+                                          958 <span>грн</span> 
+                                       </b>
+                                       <p>Стоимость</p>
+                                    </div>
+                                 </div>
+                                 <!----> 
+                                 <div class="result-item__instructions">
+                                    <button data-toggle="modal" data-target="#modalOsagoVideo">
+                                       <span>Как оформить полис</span> 
+                                       <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M13.7078 1.62656C13.6281 1.32975 13.4719 1.05907 13.2547 0.841619C13.0375 0.624168 12.767 0.467571 12.4703 0.3875C11.3781 0.0937501 7 0.09375 7 0.09375C7 0.09375 2.62187 0.0937499 1.52969 0.385937C1.23284 0.465748 0.962226 0.622258 0.745009 0.83975C0.527792 1.05724 0.371624 1.32806 0.292187 1.625C-5.96046e-08 2.71875 0 5 0 5C0 5 -5.96046e-08 7.28125 0.292187 8.37344C0.453125 8.97656 0.928125 9.45156 1.52969 9.6125C2.62187 9.90625 7 9.90625 7 9.90625C7 9.90625 11.3781 9.90625 12.4703 9.6125C13.0734 9.45156 13.5469 8.97656 13.7078 8.37344C14 7.28125 14 5 14 5C14 5 14 2.71875 13.7078 1.62656ZM5.60938 7.09375V2.90625L9.23438 4.98438L5.60938 7.09375Z" fill="#E02A25"></path>
+                                       </svg>
+                                    </button>
+                                    <span class="delimiter"></span> 
+                                    <button data-toggle="modal">
+                                       <span>Пример полиса</span> 
+                                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M1.33333 0C0.593333 0 0 0.593333 0 1.33333V10.6667C0 11.4067 0.593333 12 1.33333 12H10.6667C11.4067 12 12 11.4067 12 10.6667V1.33333C12 0.593333 11.4067 0 10.6667 0H1.33333ZM1.33333 1.33333H10.6667V10.6667H1.33333V1.33333ZM2.66667 2.66667V4H9.33333V2.66667H2.66667ZM2.66667 5.33333V6.66667H9.33333V5.33333H2.66667ZM2.66667 8V9.33333H7.33333V8H2.66667Z" fill="#009BEB"></path>
+                                       </svg>
+                                    </button>
+                                 </div>
+                              </div>
+                              <a href="#" data-placement="bottom" selector="" class="btn btn-blue result-item__submit">
+                              Купить онлайн
+                              </a>
+                           </div>
+                        </div>
+                        <div id="brandMore-28" class="row details mb-3 collapse">
+                           <div class="col-12">
+                              <div class="details__wrapp">
+                                 <div class="details__params">
+                                    <div class="details__params__list">
+                                       <p>Базовые опции</p>
+                                       <ul>
+                                          <li>Покрытие ответственности по имуществу до 130 000 грн <i data-placement="top" data-toggle="tooltip" title="" class="icon question" data-original-title="Максимальная сумма, которую покроет страховая за вред, нанесенный имуществу пострадавших по вине застрахованного виновника ДТП. Если сумма выше указанной, разница покрывается виновником ДТП."></i></li>
+                                          <li>Покрытие ответственности по здоровью до 130 000 грн <i data-placement="top" data-toggle="tooltip" title="" class="icon question" data-original-title="Максимальная сумма, которую покроет страховая, за нанесенный вред здоровью пострадавших по вине застрахованного виновника ДТП. Если сумма выше указанной, разница покрывается виновником ДТП."></i></li>
+                                       </ul>
+                                    </div>
+                                    <div class="details__params__list">
+                                       <p>Дополнительно от страховой</p>
+                                       <ul>
+                                          <li class="disabled">Прямое урегулирование</li>
+                                          <li class="disabled">Помощь 24/7</li>
+                                          <li class="disabled">Медицинская помощь</li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div class="mtsbu-rating">
+                                    <div class="mtsbu-rating__heading">
+                                       <span>Рейтинг</span> <img src="http://ukasko.test/images/mtsbu-logo.png" alt="МТСБУ"> <i data-placement="bottom" data-toggle="tooltip" title="" class="icon question" data-original-title="На основе квартального отчета МТСБУ по ОСАГО"></i> 
+                                       <p>На основе квартального отчета МТСБУ по ОСАГО</p>
+                                    </div>
+                                    <ul class="mtsbu-rating__list">
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Общая оценка</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Качество урегулирования</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                       <li class="mtsbu-rating__item">
+                                          <span class="mtsbu-rating__name">Уровень жалоб</span> <span class="mtsbu-rating__value rating-good"><span>Хорошо</span></span> <!----> <!---->
+                                       </li>
+                                    </ul>
+                                    <div class="mtsbu-rating__deadlines">
+                                       <span>65 дней</span> 
+                                       <p>скорость выплаты по ОСАГО</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row details-toggler">
+                           <div class="col-12 text-center"><a data-toggle="collapse" data-target="#brandMore-28" aria-expanded="false" aria-controls="brandMore-28" class="more">Подробнее</a></div>
+                        </div>
+                     </div>
+                     <!---->
+                  </div>
+                  
+               
+               <div class="col-12 text-center"><button class="result-list__scrolltop"><span>Вернуться вверх списка</span></button></div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</main>
+
+<footer>
+   <div class="container">
+      <div class="row justify-content-end">
+         <div class="footer-left">
+            <div class="logo"></div>
+            <p>Платформа онлайн-страхования</p>
+            <div class="socials"><a href="https://ukasko.ua/go?to=https%3A%2F%2Fwww.facebook.com%2Fukasko.ua%2F" target="_blank" rel="nofollow"><i class="facebook"></i></a> <a href="https://ukasko.ua/go?to=https%3A%2F%2Fwww.instagram.com%2Fukasko_ua%2F" target="_blank" rel="nofollow"><i class="instagram"></i></a> <a href="https://ukasko.ua/go?to=https%3A%2F%2Fwww.linkedin.com%2Forganization-guest%2Fcompany%2Fukasko" target="_blank" rel="nofollow"><i class="linkedin"></i></a></div>
+         </div>
+         <div class="footer-right">
+            <div class="row">
+               <div class="footer-right_column footer-right_column-1">
+                  <a href="#" data-target="about" class="footer-nav-toggler">О компании</a> 
+                  <nav id="aboutFooterNav" class="footer-nav"><a href="https://ukasko.ua/contacts" class="nav-item nav-link">Контакты</a> <a href="https://ukasko.ua/partners" class="nav-item nav-link">Партнеры</a> <a href="https://ukasko.ua/agreement" class="nav-item nav-link">Пользовательское соглашение</a></nav>
+               </div>
+               <div class="footer-right_column footer-right_column-2">
+                  <a href="#" data-target="our" class="footer-nav-toggler">Наши предложения</a> 
+                  <nav id="ourFooterNav" class="footer-nav"><a href="https://ukasko.ua/insurance/osago" class="nav-item nav-link">Автогражданка ОСАГО Онлайн</a> <a href="https://ukasko.ua/insurance/tourism" class="nav-item nav-link">Онлайн туристическая страховка</a> <a href="https://ukasko.ua/credit" class="nav-item nav-link">Кредит на карту</a></nav>
+               </div>
+               <div class="footer-right_column footer-right_column-3">
+                  <a href="#" data-target="articles" class="footer-nav-toggler">Статьи</a> 
+                  <nav id="articlesFooterNav" class="footer-nav"><a href="https://ukasko.ua/blog" class="nav-item nav-link">Все статьи</a> <a href="https://ukasko.ua/blog?category=osago_statia" class="nav-item nav-link">ОСАГО</a> <a href="https://ukasko.ua/blog?category=turist_statia" class="nav-item nav-link">Туристическое</a> <a href="https://ukasko.ua/blog?category=Microloans" class="nav-item nav-link">Микрозаймы</a> <a href="https://ukasko.ua/blog?category=akcii" class="nav-item nav-link">Акции</a></nav>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="footer__payment">
+      <div class="container">
+         <div class="footer__payment__list">
+            <p>Можно оплатить с помощью:</p>
+            <img src="https://ukasko.ua/images/payments/visa.svg" alt="visa"> <img src="https://ukasko.ua/images/payments/mastercard.svg" alt="mastercard"> <img src="https://ukasko.ua/images/payments/liqpay.svg" alt="liqpay"> <img src="https://ukasko.ua/images/payments/wayforpay.png" alt="wayforpay">
+         </div>
+      </div>
+   </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="js/jquery.nice-select.min.js"></script>
+      <script src="js/scripts.js"></script>
+</body>
+</html>

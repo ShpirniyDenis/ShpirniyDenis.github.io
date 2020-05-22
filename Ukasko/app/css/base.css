@@ -1,0 +1,256 @@
+
+@media (max-width: 992px) {
+  body {
+    padding-top: 65px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 65px;
+  }
+}
+
+* {
+  outline: none;
+}
+
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+[type=text].form-control:focus,
+[type=password].form-control:focus,
+[type=email].form-control:focus,
+[type=tel].form-control:focus,
+[contenteditable].form-control:focus,
+.btn:focus {
+  box-shadow: none;
+}
+
+.responsive-block {
+  overflow: auto;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .responsive-block-x {
+    overflow-x: auto;
+  }
+
+  .responsive-block-x .row {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}
+
+.responsive-block-y {
+  overflow-y: auto;
+}
+
+.btn {
+  border-radius: 3px;
+}
+
+.btn-blue {
+  color: #fff;
+  background: #009beb;
+}
+
+.btn-blue:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-outline-blue {
+  color: #009beb;
+  background: transparent;
+  border-color: #009beb;
+}
+
+.btn-outline-blue:hover {
+  color: white;
+  background: #009beb;
+}
+
+.shadow-bg {
+  background: #000;
+  z-index: 1030;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  display: none;
+}
+
+.shadow-bg.show {
+  display: block;
+}
+
+h2 {
+  font-size: 25px;
+  color: #24282c;
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  margin: 10px 0;
+}
+
+.socials a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #dde2e5;
+  border-radius: 50%;
+  padding: 8px;
+  margin: 5px;
+}
+
+.socials a:first-child {
+  margin-left: 0;
+}
+
+.socials a:last-child {
+  margin-right: 0;
+}
+
+.socials a i {
+  display: block;
+  background: url("../images/icons/socials/facebook.svg") no-repeat center;
+  width: 16px;
+  height: 17px;
+}
+
+.socials a i.instagram {
+  background-image: url("../images/icons/socials/instagram.svg");
+  background-size: 100%;
+}
+
+.socials a i.twitter {
+  background-image: url("../images/icons/socials/twitter.svg");
+}
+
+.socials a i.linkedin {
+  background-image: url("../images/icons/socials/linkedin.svg");
+}
+
+@media (min-width: 992px) {
+  .fixed-sticky-top {
+    position: fixed;
+    background: #fff;
+    padding: 20px 0 0;
+    top: 0;
+    z-index: 10;
+  }
+
+  .fixed-sticky-top .nav {
+    box-shadow: 0 2px 15px -7px black;
+  }
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  background: #fff;
+  display: none;
+  /*.icon {
+        background: url("../images/preloader_logo_var2.svg") no-repeat center;
+        background-size: contain;
+        width: 200px;
+        height: 200px;
+        display: block;
+    }*/;
+}
+
+.preloader.loading {
+    /*display: flex;*/;
+}
+
+.preloader .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.privileges-block {
+  margin-top: -3rem !important;
+}
+
+@media (max-width: 992px) {
+  .privileges-block {
+    margin-top: auto;
+  }
+}
+
+.multiselect.form-control.is-invalid {
+  border-color: red !important;
+}
+
+.tooltip .tooltip-inner {
+  width: 100%;
+  max-width: 400px;
+}
+
+.maintenance-mode {
+  display: block;
+  background: #e22f2f;
+  color: #fff;
+  padding: 10px 10px;
+}
+
+.seo-bar {
+  display: block;
+  background: #1267ec;
+  color: #fff;
+  padding: 10px 10px;
+}
+
+.seo-bar p {
+  margin: 0;
+  color: #ffffffad;
+}
+
+.seo-bar p b {
+  color: #fff;
+}
+
+.seo-bar a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.bank-id {
+  display: flex;
+  width: 100%;
+  background: #f6f7fb;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  padding: 26px 20px;
+  margin-bottom: 30px;
+}
+
+.bank-id img {
+  margin-right: 18px;
+}
+
+.bank-id span {
+  font-size: 17px;
+  color: #24282c !important;
+  text-align: left;
+}
