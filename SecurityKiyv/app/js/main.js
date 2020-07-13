@@ -39,100 +39,48 @@ function clickItemHandler(event) {
 };
 document.addEventListener('click', clickItemHandler);
 
-// for header-mob
-let header_toggler = document.getElementById('header_burger');
-let header_block = document.querySelector('header');
+// For header-services
+let servicesToggle = document.querySelector('.header__nav__toggler a');
+let servicesDropdown = document.querySelector('.header__nav__dropdown')
 
-function showHeader(){
-  header_block.classList.toggle('active');
-  header_block.classList.toggle('default');
-}
-
-header_toggler.addEventListener('click', showHeader);
-
-
-//for seo-section
-let seoToggler = document.querySelector('.seo-toggler');
-if(seoToggler){
-  seoToggler.addEventListener('click',function(event){
-    let block = event.target.closest('.seo');
-    block.querySelector('.seo-content').classList.toggle('active');
-    this.classList.add('hidden');
-    //block.querySelectorAll('.seo_toggler').forEach(item => item.classList.toggle('hidden'));
-  });
-}
-
-// For tabs
-    let tabs = document.querySelectorAll(".tab");
-    let tabContent = document.querySelectorAll(".tab-content");
-    tabs.forEach(function (tab) {
-      tab.addEventListener("click", function () {
-        tabs.forEach(function (item) {
-          item.classList.remove("active");
-        });
-        this.classList.add("active");
-        let tabName = this.getAttribute("data-tab");
-        selectTabContent(tabName);
-      });
-
-      function selectTabContent(tabName) {
-        tabContent.forEach(function (item) {
-          item.classList.contains(tabName) ?
-            item.classList.add("active") :
-            item.classList.remove("active");
-        });
-      }
-    });
-
-// for document-edit
-    function readURL(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        reader.onload = function(e) {
-            input.closest('.document-edit').classList.add('bg-active');
-            //input.closest('.document-edit').style.background = 'url('+e.target.result +')';
-        }
-        reader.readAsDataURL(input.files[0]);
-    }
-    }
-// for verification-form
-function verificationSuccess(e){
+let toggleDropdownServices = function (e) {
   e.preventDefault();
-  document.querySelector('.verification-success').classList.add('active');
-  document.querySelector('.cabinet-form__wrapp').classList.add('disabled');
-  return false;
+  servicesDropdown.classList.toggle('show');
 }
 
-
-// for catalog-mobile
-let catalog_nav_link = document.querySelectorAll('.catalog__nav li a');
-let catalog_nav_manu = document.querySelector('.catalog__nav');
-let catalog_nav_toggler = document.querySelector('.catalog__nav__toggler');
-
-const toggle_catalog_menu = function(){
-  catalog_nav_manu.classList.toggle('active');
-  catalog_nav_toggler.classList.toggle('active');
+if (servicesToggle) {
+  servicesToggle.addEventListener('click', toggleDropdownServices);
 }
 
-const duplicate_catalog_value = function(){
-  catalog_nav_toggler.innerText = this.textContent;
-  toggle_catalog_menu();
+// For header-language
+let languageToggle = document.querySelector('.header__language__toggler');
+let languageContainer = document.querySelector('.header__language');
+let languageDropdown = document.querySelector('.header__language__dropdown')
+
+let toggleDropdownLanguage = function (e) {
+  e.preventDefault();
+  languageContainer.classList.toggle('active');
+  languageDropdown.classList.toggle('show');
 }
 
-for(i=0; i<catalog_nav_link.length; i++){
-  catalog_nav_link[i].addEventListener('click', duplicate_catalog_value);
+if (languageToggle) {
+  languageToggle.addEventListener('click', toggleDropdownLanguage);
 }
 
-if(catalog_nav_toggler){
-  catalog_nav_toggler.addEventListener('click', toggle_catalog_menu);
+// For header-contacts
+let contactsToggle = document.querySelector('.header__contacts__toggler');
+let contactsContainer = document.querySelector('.header__contacts__content');
+let contactsDropdown = document.querySelector('.header__contacts__dropdown')
+
+let toggleDropdownContacts = function (e) {
+  e.preventDefault();
+  contactsContainer.classList.toggle('active');
+  contactsDropdown.classList.toggle('show');
 }
 
-
-
-
-
-
-
+if (contactsToggle) {
+  contactsToggle.addEventListener('click', toggleDropdownContacts);
+}
 
 
 

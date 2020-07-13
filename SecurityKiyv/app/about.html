@@ -21,15 +21,26 @@
   <header>
     <div class="mainContainer">
       <div class="header__wrapp">
-        <a href="#" class="header__logo">
+        <a href="index.html" class="header__logo">
           <img src="img/logo.svg" alt="">
           <span>Система охраны по всей Украине</span>
         </a>
         <ul class="header__nav">
-          <li><a href="#">Услуги</a></li>
-          <li><a href="#">О нас</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li class="header__nav__toggler">
+            <a href="#">Услуги</a>
+            <div class="header__nav__dropdown">
+              <ul class="header__nav__dropdown__list">
+                <li><a href="service.html">Охрана объектов</a></li>
+                <li><a href="service.html">Личная охрана</a></li>
+                <li><a href="service.html">Подключение и установка систем охраны</a></li>
+                <li><a href="service.html">Группа быстрого реагирования</a></li>
+                <li><a href="service.html">Встреча с аэропорта</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
         </ul>
         <div class="header__info">
           <div class="header__contacts">
@@ -41,21 +52,36 @@
               </svg>
             </div>
             <div class="header__contacts__content">
-              <a href="">066 906 97 97
+              <a href="" class="header__contacts__toggler">066 906 97 97
                 <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M11.6 1.59998L7 6.19998L2.4 1.59998L1 2.99998L7 8.99998L13 2.99998L11.6 1.59998Z" fill="white" stroke="white" />
+                    d="M11.6 1.59998L7 6.19998L2.4 1.59998L1 2.99998L7 8.99998L13 2.99998L11.6 1.59998Z" fill="white"
+                    stroke="white" />
                 </svg>
               </a>
               <p>Бесплатная консультация</p>
+              <div class="header__contacts__dropdown">
+                <ul>
+                  <li><a href="tel:0669069797">066 906 97 97</a></li>
+                  <li><a href="tel:0669069797">066 906 97 97</a></li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="header__language">
-            <a href="#">ru</a>
+            <a href="#" class="header__language__toggler">ru</a>
             <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M11.6 1.59998L7 6.19998L2.4 1.59998L1 2.99998L7 8.99998L13 2.99998L11.6 1.59998Z" fill="white" stroke="white" />
+                d="M11.6 1.59998L7 6.19998L2.4 1.59998L1 2.99998L7 8.99998L13 2.99998L11.6 1.59998Z" fill="white"
+                stroke="white" />
             </svg>
+            <div class="header__language__dropdown">
+              <ul>
+                <li><a href="">en</a></li>
+                <li><a href="" class="current">ru</a></li>
+                <li><a href="">ua</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -78,7 +104,7 @@
 
   <div class="statistics">
     <div class="mainContainer">
-      <h2>Обслуживаем более 140 000 объектов</h2>
+      <div class="section-heading text-center font-bold"><h2>Обслуживаем более 140 000 объектов</h2></div>
       <div class="statistics__wrapp">
         <div class="statistics__circle">
           <div class="statistics__circle__logo">
@@ -167,7 +193,7 @@
           </svg>
         </div>
         <div class="work-area__content">
-          <h2>Зона реагирования</h2>
+          <div class="section-heading font-bold"><h2>Зона реагирования</h2></div>
           <div class="work-area__list">
             <div class="work-area__list__letter">
               к
@@ -211,7 +237,7 @@
 
   <section class="team bg-grey">
     <div class="mainContainer">
-      <h2>Команда “Киев-1”</h2>
+      <div class="section-heading text-center font-bold"><h2>Команда “Киев-1”</h2></div>
       <div class="team__photo">
         <img src="img/team.jpg" alt="">
       </div>
@@ -221,7 +247,7 @@
   <section class="sertification bg-black">
     <div class="mainContainer">
       <div class="sertification__heading">
-        <h2>Сертификаты и лицензии</h2>
+        <div class="section-heading text-center"><h2>Сертификаты и лицензии</h2></div>
         <div class="sertification__nav">
           <button class="prev">
             <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -293,7 +319,7 @@
     <div class="mainContainer">
       <div class="system-audit__wrapp">
         <form class="system-audit__form">
-          <h2>Получите бесплатный аудит системы</h2>
+          <div class="section-heading"><h2>Получите бесплатный аудит системы</h2></div>
           <div class="system-audit__descr">
             <p>Мы бесплатно проанализируем Вашу задачу, объект или маршрут, чтобы дать рекомендации по обеспечению безопасности.</p>
           </div>
@@ -303,12 +329,12 @@
           </div>
           <div class="system-audit__nav">
             <div class="checkbox-group">
-              <input type="checkbox" id="robotCheck">
+              <input type="checkbox" id="robotCheck" required>
               <label for="robotCheck">
                 Я не робот
               </label>
             </div>
-            <button type="button" class="btn-link">
+            <button class="btn-link">
               <span>Отправить</span>
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -364,37 +390,8 @@
 
 
 <script src="libs/swiperjs/swiper.min.js"></script>
+<script src="js/main.js"></script>
 <script>
-  var swiperServices = new Swiper('.services .swiper-container', {
-    slidesPerView: 'auto',
-    spaceBetween: 40,
-    //loop: true,
-    pagination: {
-      el: '.services .swiper-pagination',
-      clickable: true,
-      type: 'progressbar',
-    },
-    navigation: {
-      nextEl: '.services .next',
-      prevEl: '.services .prev',
-    },
-  });
-
-  var swiperReviews = new Swiper('.reviews .swiper-container', {
-      slidesPerView: 'auto',
-      spaceBetween: 24,
-      //loop: true,
-      pagination: {
-        el: '.reviews .swiper-pagination',
-        clickable: true,
-        type: 'progressbar',
-      },
-      navigation: {
-        nextEl: '.reviews .next',
-        prevEl: '.reviews .prev',
-      },
-    });
-
   var swiperSertification = new Swiper('.sertification .swiper-container', {
       slidesPerView: 'auto',
       spaceBetween: 24,

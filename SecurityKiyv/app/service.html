@@ -21,15 +21,26 @@
   <header>
     <div class="mainContainer">
       <div class="header__wrapp">
-        <a href="#" class="header__logo">
+        <a href="index.html" class="header__logo">
           <img src="img/logo.svg" alt="">
           <span>Система охраны по всей Украине</span>
         </a>
         <ul class="header__nav">
-          <li><a href="#">Услуги</a></li>
-          <li><a href="#">О нас</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li class="header__nav__toggler">
+            <a href="#">Услуги</a>
+            <div class="header__nav__dropdown">
+              <ul class="header__nav__dropdown__list">
+                <li><a href="service.html">Охрана объектов</a></li>
+                <li><a href="service.html">Личная охрана</a></li>
+                <li><a href="service.html">Подключение и установка систем охраны</a></li>
+                <li><a href="service.html">Группа быстрого реагирования</a></li>
+                <li><a href="service.html">Встреча с аэропорта</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
         </ul>
         <div class="header__info">
           <div class="header__contacts">
@@ -41,21 +52,36 @@
               </svg>
             </div>
             <div class="header__contacts__content">
-              <a href="">066 906 97 97
+              <a href="" class="header__contacts__toggler">066 906 97 97
                 <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M11.6 1.59998L7 6.19998L2.4 1.59998L1 2.99998L7 8.99998L13 2.99998L11.6 1.59998Z" fill="white" stroke="white" />
+                    d="M11.6 1.59998L7 6.19998L2.4 1.59998L1 2.99998L7 8.99998L13 2.99998L11.6 1.59998Z" fill="white"
+                    stroke="white" />
                 </svg>
               </a>
               <p>Бесплатная консультация</p>
+              <div class="header__contacts__dropdown">
+                <ul>
+                  <li><a href="tel:0669069797">066 906 97 97</a></li>
+                  <li><a href="tel:0669069797">066 906 97 97</a></li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="header__language">
-            <a href="#">ru</a>
+            <a href="#" class="header__language__toggler">ru</a>
             <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M11.6 1.59998L7 6.19998L2.4 1.59998L1 2.99998L7 8.99998L13 2.99998L11.6 1.59998Z" fill="white" stroke="white" />
+                d="M11.6 1.59998L7 6.19998L2.4 1.59998L1 2.99998L7 8.99998L13 2.99998L11.6 1.59998Z" fill="white"
+                stroke="white" />
             </svg>
+            <div class="header__language__dropdown">
+              <ul>
+                <li><a href="">en</a></li>
+                <li><a href="" class="current">ru</a></li>
+                <li><a href="">ua</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -69,7 +95,7 @@
           <h1>Личная охрана</h1>
           <p>Комплексная услуга, под которой подразумевается защита<br> безопасности клиента и его собственности, а иногда, защита<br> его
           жизни и здоровья в любых ситуациях.</p>
-          <a href="#" class="btn-link white">
+          <button class="btn-link white click-item" data-action="popup-open" data-label="#request-popup">
             <span>Заказать услугу</span>
             <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="13" cy="13" r="13" fill="#1E1E1E" />
@@ -77,7 +103,7 @@
                 d="M19.048 15.4317C19.363 14.6828 19.534 13.8811 19.534 13C19.534 12.3656 19.435 11.7577 19.264 11.1938C18.679 11.326 18.067 11.3965 17.428 11.3965C14.674 11.3965 12.235 10.0661 10.75 8.01322C9.949 9.9163 8.419 11.467 6.493 12.3128C6.457 12.533 6.457 12.7709 6.457 13C6.457 14.6988 7.14635 16.328 8.3734 17.5292C9.60045 18.7304 11.2647 19.4053 13 19.4053C13.945 19.4053 14.854 19.2026 15.673 18.8414C16.186 19.8018 16.42 20.2775 16.402 20.2775C14.926 20.7621 13.783 21 13 21C10.822 21 8.743 20.163 7.213 18.6564C6.277 17.7401 5.584 16.6211 5.197 15.4053H4V11.3965H4.981C5.737 7.7489 9.04 5 13 5C15.16 5 17.239 5.837 18.778 7.34361C19.921 8.45374 20.686 9.87225 21.001 11.3965H22V15.3524V15.37V15.4053H21.946L18.742 18.2863L13.972 17.7577V16.2863H18.319L19.048 15.4317ZM10.543 12.7974C10.813 12.7974 11.074 12.9031 11.263 13.0969C11.452 13.2819 11.56 13.5374 11.56 13.8018C11.56 14.0661 11.452 14.3216 11.263 14.5066C11.074 14.6916 10.813 14.7974 10.543 14.7974C9.976 14.7974 9.517 14.3568 9.517 13.8018C9.517 13.2467 9.976 12.7974 10.543 12.7974ZM15.448 12.7974C16.015 12.7974 16.465 13.2467 16.465 13.8018C16.465 14.3568 16.015 14.7974 15.448 14.7974C14.881 14.7974 14.422 14.3568 14.422 13.8018C14.422 13.5354 14.5301 13.2799 14.7225 13.0915C14.9149 12.9032 15.1759 12.7974 15.448 12.7974Z"
                 fill="white" />
             </svg>
-          </a>
+          </button>
         </div>
         <div class="service-banner__img" style="background-image: url(img/service-bg.jpg);"></div>
       </div>
@@ -86,7 +112,7 @@
 
   <section class="what-included bg-grey">
     <div class="mainContainer">
-      <h2>Что входит в услугу?</h2>
+      <div class="section-heading text-center font-bold"><h2>Что входит в услугу?</h2></div>
       <div class="what-included__list">
         <article class="what-included__item">
           <b>01.</b>
@@ -106,7 +132,7 @@
 
   <section class="company-features">
     <div class="mainContainer">
-      <h2>Особенности нашей компании</h2>
+      <div class="section-heading text-center"><h2>Особенности нашей компании</h2></div>
       <div class="company-features__list">
         <div class="company-features__img" style="background-image: url('img/features-company.jpg');"></div>
         <div class="company-features__content">
@@ -114,6 +140,14 @@
             <b>01. Оставьте заявку на сопровождение</b>
             <p>Перезвоните к нам в офис или заполните форму, нажав на кнопку ниже</p>
             <a href="tel:0669069797">066 906 97 97</a>
+            <a href="" class="company-features__link">
+              Оставить заявку
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.0001 0.666687C15.751 0.666687 17.4849 1.01156 19.1025 1.68163C20.7202 2.35169 22.1901 3.33382 23.4282 4.57193C24.6663 5.81004 25.6484 7.2799 26.3185 8.89757C26.9885 10.5152 27.3334 12.2491 27.3334 14C27.3334 17.5362 25.9287 20.9276 23.4282 23.4281C20.9277 25.9286 17.5363 27.3334 14.0001 27.3334C12.2491 27.3334 10.5153 26.9885 8.89764 26.3184C7.27996 25.6484 5.81011 24.6662 4.57199 23.4281C2.07151 20.9276 0.666748 17.5362 0.666748 14C0.666748 10.4638 2.07151 7.07242 4.57199 4.57193C7.07248 2.07144 10.4639 0.666687 14.0001 0.666687ZM8.66675 8.28002V12.7334L18.1867 14L8.66675 15.2667V19.72L22.0001 14L8.66675 8.28002Z"
+                  fill="#1E1E1E" />
+              </svg>
+            </a>
           </div>
           <div class="company-features__item">
             <b>02. Оказание услуги сопровождения</b>
@@ -137,7 +171,7 @@
 
   <section class="client-get bg-black">
     <div class="mainContainer">
-      <h2>Сотрудничая с нами вы получаете</h2>
+      <div class="section-heading text-center"><h2>Сотрудничая с нами вы получаете</h2></div>
       <div class="client-get__list">
         <article class="client-get__item">
           <img src="img/client-get-icon1.svg" alt="">
@@ -158,11 +192,97 @@
     </div>
   </section>
 
+  <section class="faq bg-grey">
+    <div class="mainContainer">
+      <div class="section-heading text-center">
+        <h2>Часто задаваемые вопросы</h2>
+      </div>
+      <div class="faq__list">
+        <div class="faq__item">
+          <div class="faq__item__preview">
+            <span>На какой минимальный срок можно заказать личную охрану?</span>
+          </div>
+          <div class="faq__item__content">
+            <p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем
+            один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением
+            покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим
+            художником, как в эти минуты.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <div class="faq__item__preview">
+            <span>Компания имеет лицензию на оказание охранных услуг?</span>
+          </div>
+          <div class="faq__item__content">
+            <p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я
+              совсем
+              один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен
+              ощущением
+              покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим
+              художником, как в эти минуты.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <div class="faq__item__preview">
+            <span>Охранник может провести минимальную экскурсию по городу?</span>
+          </div>
+          <div class="faq__item__content">
+            <p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я
+              совсем
+              один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен
+              ощущением
+              покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим
+              художником, как в эти минуты.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <div class="faq__item__preview">
+            <span>Охранник имеет при себе оружие?</span>
+          </div>
+          <div class="faq__item__content">
+            <p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я
+              совсем
+              один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен
+              ощущением
+              покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим
+              художником, как в эти минуты.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <div class="faq__item__preview">
+            <span>Какие спецсредства имеет при себе личная охрана?</span>
+          </div>
+          <div class="faq__item__content">
+            <p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я
+              совсем
+              один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен
+              ощущением
+              покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим
+              художником, как в эти минуты.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <div class="faq__item__preview">
+            <span>Как проходит подписание договора на данную услугу?</span>
+          </div>
+          <div class="faq__item__content">
+            <p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я
+              совсем
+              один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен
+              ощущением
+              покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим
+              художником, как в эти минуты.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="system-audit">
     <div class="mainContainer">
       <div class="system-audit__wrapp">
         <form class="system-audit__form">
-          <h2>Получите бесплатный аудит системы</h2>
+          <div class="section-heading"><h2>Получите бесплатный аудит системы</h2></div>
           <div class="system-audit__descr">
             <p>Мы бесплатно проанализируем Вашу задачу, объект или маршрут, чтобы дать рекомендации по обеспечению безопасности.</p>
           </div>
@@ -172,12 +292,12 @@
           </div>
           <div class="system-audit__nav">
             <div class="checkbox-group">
-              <input type="checkbox" id="robotCheck">
+              <input type="checkbox" id="robotCheck" required>
               <label for="robotCheck">
                 Я не робот
               </label>
             </div>
-            <button type="button" class="btn-link">
+            <button class="btn-link">
               <span>Отправить</span>
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -231,53 +351,45 @@
   </footer>
 </main>
 
+<!-- REQUEST-POPUP -->
+<div id="request-popup" class="popup_container click-obj">
+  <div class="popup_background click-item" data-action="popup-close"></div>
+  <div class="popup request-popup">
+    <div class="popup_close click-item" data-action="popup-close">
+      <img src="img/popup-close.svg" alt="" />
+    </div>
+    <div class="request-popup__content">
+      <div class="request-popup__heading">
+        Оставить заявку
+      </div>
+      <form class="request-popup__form" id="request-popup-form">
+        <input type="text" placeholder="Имя" name="name" required>
+        <input type="text" placeholder="Телефон" name="phone" required>
+        <div class="checkbox-group">
+          <input type="checkbox" id="robotCheckModal" name="robotCheckModal" required>
+          <label for="robotCheckModal">
+            Я не робот
+          </label>
+        </div>
+        <button class="btn-link">Отправить</button>
+      </form>
+    </div>
+  </div>
+</div>
 
-<script src="libs/swiperjs/swiper.min.js"></script>
+
+<script src="js/main.js"></script>
 <script>
-  var swiperServices = new Swiper('.services .swiper-container', {
-    slidesPerView: 'auto',
-    spaceBetween: 40,
-    //loop: true,
-    pagination: {
-      el: '.services .swiper-pagination',
-      clickable: true,
-      type: 'progressbar',
-    },
-    navigation: {
-      nextEl: '.services .next',
-      prevEl: '.services .prev',
-    },
-  });
+  // For faq-toogler
+  let faqPreview = document.querySelectorAll('.faq__item');
 
-  var swiperReviews = new Swiper('.reviews .swiper-container', {
-      slidesPerView: 'auto',
-      spaceBetween: 24,
-      //loop: true,
-      pagination: {
-        el: '.reviews .swiper-pagination',
-        clickable: true,
-        type: 'progressbar',
-      },
-      navigation: {
-        nextEl: '.reviews .next',
-        prevEl: '.reviews .prev',
-      },
-    });
+  function showFaq() {
+    this.closest('.faq__item').classList.toggle('active');
+  }
 
-  var swiperSertification = new Swiper('.sertification .swiper-container', {
-      slidesPerView: 'auto',
-      spaceBetween: 24,
-      //loop: true,
-      pagination: {
-        el: '.sertification .swiper-pagination',
-        clickable: true,
-        type: 'progressbar',
-      },
-      navigation: {
-        nextEl: '.sertification .next',
-        prevEl: '.sertification .prev',
-      },
-    });
+  for (i = 0; i < faqPreview.length; i++) {
+    faqPreview[i].addEventListener('click', showFaq);
+  }
 </script>
 </body>
 </html>

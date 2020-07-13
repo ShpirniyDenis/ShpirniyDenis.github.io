@@ -21,15 +21,26 @@
   <header>
     <div class="mainContainer">
       <div class="header__wrapp">
-        <a href="#" class="header__logo">
+        <a href="index.html" class="header__logo">
           <img src="img/logo.svg" alt="">
           <span>Система охраны по всей Украине</span>
         </a>
         <ul class="header__nav">
-          <li><a href="#">Услуги</a></li>
-          <li><a href="#">О нас</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li class="header__nav__toggler">
+            <a href="#">Услуги</a>
+            <div class="header__nav__dropdown">
+              <ul class="header__nav__dropdown__list">
+                <li><a href="service.html">Охрана объектов</a></li>
+                <li><a href="service.html">Личная охрана</a></li>
+                <li><a href="service.html">Подключение и установка систем охраны</a></li>
+                <li><a href="service.html">Группа быстрого реагирования</a></li>
+                <li><a href="service.html">Встреча с аэропорта</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
         </ul>
         <div class="header__info">
           <div class="header__contacts">
@@ -41,21 +52,34 @@
               </svg>
             </div>
             <div class="header__contacts__content">
-              <a href="">066 906 97 97
+              <a href="" class="header__contacts__toggler">066 906 97 97
                 <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M11.6 1.59998L7 6.19998L2.4 1.59998L1 2.99998L7 8.99998L13 2.99998L11.6 1.59998Z" fill="white" stroke="white" />
                 </svg>
               </a>
               <p>Бесплатная консультация</p>
+              <div class="header__contacts__dropdown">
+                <ul>
+                  <li><a href="tel:0669069797">066 906 97 97</a></li>
+                  <li><a href="tel:0669069797">066 906 97 97</a></li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="header__language">
-            <a href="#">ru</a>
+            <a href="#" class="header__language__toggler">ru</a>
             <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M11.6 1.59998L7 6.19998L2.4 1.59998L1 2.99998L7 8.99998L13 2.99998L11.6 1.59998Z" fill="white" stroke="white" />
             </svg>
+            <div class="header__language__dropdown">
+              <ul>
+                <li><a href="">en</a></li>
+                <li><a href="" class="current">ru</a></li>
+                <li><a href="">ua</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -68,14 +92,14 @@
         <div class="banner__content">
           <h1>Ваша безопасность —<br> Наша работа</h1>
           <p>Жизнь, здоровье, сохранность имущества, уверенность<br> и спокойствие клиента - главные ценности нашей работы.</p>
-          <a href="#" class="btn-link white">
+          <button class="btn-link white click-item" data-action="popup-open" data-label="#request-popup">
             <span>Оставить заявку</span>
             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M13.9998 0.666504C15.7508 0.666504 17.4846 1.01138 19.1023 1.68144C20.72 2.35151 22.1898 3.33363 23.4279 4.57175C24.666 5.80986 25.6482 7.27972 26.3182 8.89739C26.9883 10.5151 27.3332 12.2489 27.3332 13.9998C27.3332 17.5361 25.9284 20.9274 23.4279 23.4279C20.9274 25.9284 17.5361 27.3332 13.9998 27.3332C12.2489 27.3332 10.5151 26.9883 8.89739 26.3182C7.27972 25.6482 5.80986 24.666 4.57175 23.4279C2.07126 20.9274 0.666504 17.5361 0.666504 13.9998C0.666504 10.4636 2.07126 7.07223 4.57175 4.57175C7.07223 2.07126 10.4636 0.666504 13.9998 0.666504ZM8.6665 8.27984V12.7332L18.1865 13.9998L8.6665 15.2665V19.7198L21.9998 13.9998L8.6665 8.27984Z"
                 fill="white" />
             </svg>
-          </a>
+          </button>
         </div>
       </div>
     </div>
@@ -85,7 +109,7 @@
     <div class="mainContainer">
       <div class="about-company__wrapp">
         <div class="about-company__content">
-          <h2>“Киев-1” - надежная охранная компания</h2>
+          <div class="section-heading"><h2>“Киев-1” - надежная охранная компания</h2></div>
           <p>Как только Вы становитесь нашим клиентом, мы берем на себя все вопросы, которые прямо или косвенно касаются Вашей безопасности.</p>
           <ul>
             <li>01. Личная охрана;</li>
@@ -99,7 +123,7 @@
             <li>09. Встреча клиента с вокзала, аэропорта;</li>
             <li>10. Обеспечение безопасности на публичных выступлениях и массовых мероприятиях.</li>
           </ul>
-          <a href="#" class="btn-link">
+          <a href="about.html" class="btn-link">
             <span>Подробнее</span>
             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -118,7 +142,7 @@
   <section class="services">
     <div class="mainContainer">
       <div class="services__heading">
-        <h2>Услуги</h2>
+        <div class="section-heading text-center"><h2>Услуги</h2></div>
         <div class="services__nav">
           <button class="prev">
             <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -148,7 +172,7 @@
                   <b>Охрана объектов</b>
                   <p>Мы обеспечиваем полноценную охрану объектов, включая безопасность людей, сохранность имущества и обеспечение порядка входа-выхода.</p>
                 </div>
-                <a href="#" class="services__slide__link">
+                <a href="service.html" class="services__slide__link">
                   <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M16 0L14.6 1.4L20.2 7H0V9H20.2L14.6 14.6L16 16L24 8L16 0Z"
                       fill="black" />
@@ -165,7 +189,7 @@
                   <b>Личная охрана</b>
                   <p>Услуга включает охрану клиента в помещении, в дороге, на встрече или на публичном мероприятии.</p>
                 </div>
-                <a href="#" class="services__slide__link">
+                <a href="service.html" class="services__slide__link">
                   <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M16 0L14.6 1.4L20.2 7H0V9H20.2L14.6 14.6L16 16L24 8L16 0Z"
                       fill="black" />
@@ -199,7 +223,7 @@
                   <b>Группа быстрого реагирования</b>
                   <p>Полноценная поддержка клиента в любой ситуации, которая угрожает его безопасности.</p>
                 </div>
-                <a href="#" class="services__slide__link">
+                <a href="service.html" class="services__slide__link">
                   <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M16 0L14.6 1.4L20.2 7H0V9H20.2L14.6 14.6L16 16L24 8L16 0Z"
                       fill="black" />
@@ -217,7 +241,7 @@
                   <p>Мы обеспечиваем полноценную охрану объектов, включая безопасность людей, сохранность имущества и обеспечение
                     порядка входа-выхода.</p>
                 </div>
-                <a href="#" class="services__slide__link">
+                <a href="service.html" class="services__slide__link">
                   <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M16 0L14.6 1.4L20.2 7H0V9H20.2L14.6 14.6L16 16L24 8L16 0Z"
                       fill="black" />
@@ -234,7 +258,7 @@
                   <b>Личная охрана</b>
                   <p>Услуга включает охрану клиента в помещении, в дороге, на встрече или на публичном мероприятии.</p>
                 </div>
-                <a href="#" class="services__slide__link">
+                <a href="service.html" class="services__slide__link">
                   <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M16 0L14.6 1.4L20.2 7H0V9H20.2L14.6 14.6L16 16L24 8L16 0Z"
                       fill="black" />
@@ -251,7 +275,7 @@
                   <b>Подключение и установка систем охраны</b>
                   <p>Самые совершенные технологии мира в сфере безопасности и охраны всегда на службе у наших клиентов.</p>
                 </div>
-                <a href="#" class="services__slide__link">
+                <a href="service.html" class="services__slide__link">
                   <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M16 0L14.6 1.4L20.2 7H0V9H20.2L14.6 14.6L16 16L24 8L16 0Z"
                       fill="black" />
@@ -268,7 +292,7 @@
 
   <section class="work-algorithm bg-black">
     <div class="mainContainer">
-      <h2>Алгоритм работы</h2>
+      <div class="section-heading text-center"><h2>Алгоритм работы</h2></div>
       <div class="work-algorithm__list">
         <div class="work-algorithm__item">
           <div class="work-algorithm__item__picture">
@@ -381,7 +405,7 @@
 
   <section class="features bg-grey">
     <div class="mainContainer">
-      <h2>Особенности нашей компании</h2>
+      <div class="section-heading text-center"><h2>Особенности нашей компании</h2></div>
       <div class="features__wrapp">
         <div class="features__img" style="background-image: url('img/features-img.jpg');"></div>
         <div class="features__content">
@@ -417,7 +441,7 @@
   <section class="reviews">
     <div class="mainContainer">
       <div class="reviews__heading">
-        <h2>Отзывы</h2>
+        <div class="section-heading text-center"><h2>Отзывы</h2></div>
         <div class="reviews__nav">
           <button class="prev">
             <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -524,7 +548,7 @@
   <section class="sertification bg-black">
     <div class="mainContainer">
       <div class="sertification__heading">
-        <h2>Сертификаты и лицензии</h2>
+        <div class="section-heading text-center"><h2>Сертификаты и лицензии</h2></div>
         <div class="sertification__nav">
           <button class="prev">
             <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -596,7 +620,7 @@
     <div class="mainContainer">
       <div class="system-audit__wrapp">
         <form class="system-audit__form">
-          <h2>Получите бесплатный аудит системы</h2>
+          <div class="section-heading"><h2>Получите бесплатный аудит системы</h2></div>
           <div class="system-audit__descr">
             <p>Мы бесплатно проанализируем Вашу задачу, объект или маршрут, чтобы дать рекомендации по обеспечению безопасности.</p>
           </div>
@@ -665,8 +689,35 @@
   </footer>
 </main>
 
+<!-- REQUEST-POPUP -->
+<div id="request-popup" class="popup_container click-obj">
+  <div class="popup_background click-item" data-action="popup-close"></div>
+  <div class="popup request-popup">
+    <div class="popup_close click-item" data-action="popup-close">
+      <img src="img/popup-close.svg" alt="" />
+    </div>
+    <div class="request-popup__content">
+      <div class="request-popup__heading">
+        Оставить заявку
+      </div>
+      <form class="request-popup__form" id="request-popup-form">
+        <input type="text" placeholder="Имя" name="name" required>
+        <input type="text" placeholder="Телефон" name="phone" required>
+        <div class="checkbox-group">
+          <input type="checkbox" id="robotCheckModal" name="robotCheckModal" required>
+          <label for="robotCheckModal">
+            Я не робот
+          </label>
+        </div>
+        <button class="btn-link">Отправить</button>
+      </form>
+    </div>
+  </div>
+</div>
+
 
 <script src="libs/swiperjs/swiper.min.js"></script>
+<script src="js/main.js"></script>
 <script>
   var swiperServices = new Swiper('.services .swiper-container', {
     slidesPerView: 'auto',
