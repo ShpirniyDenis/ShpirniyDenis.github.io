@@ -9,7 +9,6 @@
   <meta name="description" content="Grain Market"> 
   <title>Киев-1</title>
   <link rel="stylesheet" href="css/reset.css"> 
-  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="libs/swiperjs/swiper.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head> 
@@ -631,12 +630,12 @@
           </div>
           <div class="system-audit__nav">
             <div class="checkbox-group">
-              <input type="checkbox" id="robotCheck">
+              <input type="checkbox" id="robotCheck" required>
               <label for="robotCheck">
                 Я не робот
               </label>
             </div>
-            <button type="button" class="btn-link">
+            <button class="btn-link">
               <span>Отправить</span>
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -722,7 +721,7 @@
 <script>
   var swiperServices = new Swiper('.services .swiper-container', {
     slidesPerView: 'auto',
-    spaceBetween: 40,
+    spaceBetween: 20,
     //loop: true,
     pagination: {
       el: '.services .swiper-pagination',
@@ -733,11 +732,16 @@
       nextEl: '.services .next',
       prevEl: '.services .prev',
     },
+    breakpoints: {
+      768: {
+        spaceBetween: 40,
+      },
+    }
   });
 
   var swiperReviews = new Swiper('.reviews .swiper-container', {
       slidesPerView: 'auto',
-      spaceBetween: 24,
+      spaceBetween: 20,
       //loop: true,
       pagination: {
         el: '.reviews .swiper-pagination',
@@ -748,11 +752,16 @@
         nextEl: '.reviews .next',
         prevEl: '.reviews .prev',
       },
+      breakpoints: {
+      768: {
+        spaceBetween: 24,
+      },
+    }
     });
 
   var swiperSertification = new Swiper('.sertification .swiper-container', {
       slidesPerView: 'auto',
-      spaceBetween: 24,
+      spaceBetween: 20,
       //loop: true,
       pagination: {
         el: '.sertification .swiper-pagination',
@@ -763,6 +772,11 @@
         nextEl: '.sertification .next',
         prevEl: '.sertification .prev',
       },
+      breakpoints: {
+      768: {
+        spaceBetween: 24,
+      },
+    }
     });
 </script>
 </body>
