@@ -89,12 +89,13 @@ input,button
     path
       transition: all 0.2s
   &:hover
-    background-color: rgba(30, 30, 30, 0.2)
-    color: #1E1E1E
-    border-color: rgba(30, 30, 30, 0.2)
-    svg
-      path
-        fill: #1E1E1E
+    @media screen and ( min-width:  993px)
+      background-color: rgba(30, 30, 30, 0.2)
+      color: #1E1E1E
+      border-color: rgba(30, 30, 30, 0.2)
+      svg
+        path
+          fill: #1E1E1E
   &.white
     background-color: #FFFFFF
     color: #1E1E1E
@@ -103,12 +104,13 @@ input,button
       path
         fill: #1E1E1E
     &:hover
-      background-color: #1E1E1E
-      color: #FFFFFF
-      border-color: #fff
-      svg
-        path
-          fill: #fff
+      @media screen and ( min-width:  993px)
+        background-color: #1E1E1E
+        color: #FFFFFF
+        border-color: #fff
+        svg
+          path
+            fill: #fff
       
 
 //*** BANNER ***//
@@ -229,11 +231,12 @@ input,button
     path
       fill: #fff
     &:hover
-      svg
-        circle
-          fill: #fff
-        path
-          fill: #000
+      @media screen and ( min-width:  993px)
+        svg
+          circle
+            fill: #fff
+          path
+            fill: #000
 .service-banner__wrapp
   padding: 110px 56px 56px 56px
   background-size: cover
@@ -462,9 +465,10 @@ input,button
   text-align: left
   transition: all 0.2s
   &:hover
-    background: #F5E25F
-    .services__slide__link
-      opacity: 1
+    @media screen and ( min-width:  993px)
+      background: #F5E25F
+      .services__slide__link
+        opacity: 1
 .services__slide__icon
   border: 1px solid rgba(30, 30, 30, 0.3)
   border-radius: 5px
@@ -515,7 +519,8 @@ input,button
     padding: 0
     transition: all 0.2s
     &:hover
-      border-color: #000
+      @media screen and ( min-width:  993px)
+        border-color: #000
     &.prev
       margin-right: 95px
     &.swiper-button-disabled
@@ -738,11 +743,12 @@ input,button
   text-align: left
   transition: all 0.2s
   &:hover
-    background: #1E1E1E
-    color: #FFFFFF
-    a
+    @media screen and ( min-width:  993px)
+      background: #1E1E1E
       color: #FFFFFF
-      border-color: #fff
+      a
+        color: #FFFFFF
+        border-color: #fff
 .reviews__slide__name
   font-weight: 600
   font-size: 18px
@@ -779,7 +785,8 @@ input,button
     padding: 0
     transition: all 0.2s
     &:hover
-      border-color: #000
+      @media screen and ( min-width:  993px)
+        border-color: #000
     &.prev
       margin-right: 95px
     &.swiper-button-disabled
@@ -872,11 +879,12 @@ input,button
   text-align: left
   transition: all 0.2s
   &:hover
-    background: #1E1E1E
-    color: #FFFFFF
-    a
+    @media screen and ( min-width:  993px)
+      background: #1E1E1E
       color: #FFFFFF
-      border-color: #fff
+      a
+        color: #FFFFFF
+        border-color: #fff
 .sertification__nav
   display: flex
   align-items: center
@@ -897,7 +905,8 @@ input,button
       path
         fill: #fff
     &:hover
-      border-color: #fff
+      @media screen and ( min-width:  993px)
+        border-color: #fff
     &.prev
       margin-right: 95px
     &.swiper-button-disabled
@@ -1121,7 +1130,8 @@ input,button
       line-height: 24px
       font-weight: 500
   &:hover
-    color: rgba(255, 255, 255, 0.5)
+    @media screen and ( min-width:  993px)
+      color: rgba(255, 255, 255, 0.5)
 .footer__about
   background: #131313
   text-align: center
@@ -1172,7 +1182,8 @@ header
         a
           color: #000
           &:hover
-            border-color: #000
+            @media screen and ( min-width:  993px)
+              border-color: #000
         &.header__nav__toggler
           .header__nav__dropdown
             background-color: #000
@@ -1245,7 +1256,8 @@ header
       transition: all 0.2s
       border-bottom: 2px solid transparent
       &:hover
-        border-color:#fff
+        @media screen and ( min-width:  993px)
+          border-color:#fff
       &:focus
         outline: none
     &:first-child
@@ -1281,9 +1293,10 @@ header
               border-radius: 10px
               border: none
               &:hover
-                background: #1E1E1E
-                color: #fff
-                border: none
+                @media screen and ( min-width:  993px)
+                  background: #1E1E1E
+                  color: #fff
+                  border: none
 .header__info
   margin-left: auto
   display: flex
@@ -1344,8 +1357,9 @@ header
       &:last-child
         margin-bottom: 0
       &:hover
-        background-color: #1E1E1E
-        color: #fff
+        @media screen and ( min-width:  993px)
+          background-color: #1E1E1E
+          color: #fff
   &.active
     img,svg
       transform: rotate(180deg)
@@ -1394,8 +1408,9 @@ header
       &:last-child
         margin-bottom: 0
       &:hover
-        background-color: #1E1E1E
-        color: #fff
+        @media screen and ( min-width:  993px)
+          background-color: #1E1E1E
+          color: #fff
 .header__burger
   display: none
   width: 40px
@@ -1776,7 +1791,8 @@ header
     display: inline-block
     transition: all 0.2s
     &:hover
-      border-color: #000
+      @media screen and ( min-width:  993px)
+        border-color: #000
 .pagination__list
   margin: 0 40px
   li
@@ -1788,7 +1804,8 @@ header
       font-size: 18px
       line-height: 29px
       &:hover
-        color: rgba(0, 0, 0, 0.8)
+        @media screen and ( min-width:  993px)
+          color: rgba(0, 0, 0, 0.8)
     &.active
       a
         color: #000
@@ -2204,8 +2221,9 @@ header
     &:last-child
       margin-right: -15px
     &:hover
-      span
-        border-color: #000
+      @media screen and ( min-width:  993px)
+        span
+          border-color: #000
     span
       height: 72px
       width: 72px
