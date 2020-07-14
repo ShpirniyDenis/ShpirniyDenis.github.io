@@ -1453,6 +1453,8 @@ header {
       background-color: #000000; }
       header.header-white .header__language .header__language__dropdown a {
         color: #fff; }
+    header.header-white .header__contacts__toggler svg path {
+      fill: #000; }
 
 .header__wrapp {
   padding: 12px 0;
@@ -1853,7 +1855,9 @@ header {
 
 @media screen and (max-width: 768px) {
   header .header__contacts__content p {
-    font-size: 9px; } }
+    font-size: 9px; }
+  header .header__logo {
+    width: 170px; } }
 
 .statistics {
   padding: 115px 0; }
