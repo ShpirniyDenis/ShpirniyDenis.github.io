@@ -23,7 +23,7 @@ body
   max-width: 1300px
   width: 100%
   margin: 0 auto
-  padding: 0 10px
+  padding: 0 15px
   box-sizing: border-box  
   @media screen and (max-width: 768px)
     padding: 0 16px
@@ -46,7 +46,7 @@ input,button
   h2
     font-size: 36px
     line-height: 44px
-  @media screen and(max-width: 1200px)
+  @media screen and(max-width: 1300px)
     h2
       font-size: 31px
       line-height: 42px
@@ -145,7 +145,7 @@ input,button
     margin-top: 48px
 
 .banner
-  @media screen and (max-width: 1200px)
+  @media screen and (max-width: 1300px)
     .banner__wrapp
       padding-left: 0
       padding-right: 0
@@ -274,7 +274,7 @@ input,button
     background: linear-gradient(141.49deg, rgba(47, 46, 46, 0.8) 0%, rgba(47, 46, 46, 0.08) 72.06%)
 
 .service-banner
-  @media screen and (max-width: 1200px)
+  @media screen and (max-width: 1300px)
     .service-banner__wrapp
       padding-left: 0
       padding-right: 0
@@ -376,7 +376,7 @@ input,button
       width: 100%
       text-align: center
 .about-banner
-  @media screen and (max-width: 1200px)
+  @media screen and (max-width: 1300px)
     .about-banner__wrapp
       padding-left: 0
       padding-right: 0
@@ -675,7 +675,7 @@ input,button
     font-size: 14px
     line-height: 22px
 .features
-  @media screen and ( max-width: 1200px )
+  @media screen and ( max-width: 1300px )
     .features__content
       width: 46%
   @media screen and ( max-width: 992px )
@@ -1130,7 +1130,7 @@ input,button
   line-height: 18px
   padding: 20px 0
 footer
-  @media screen and ( max-width: 1200px )
+  @media screen and ( max-width: 1300px )
     .footer__link
       font-size: 14px
       line-height: 18px
@@ -1211,8 +1211,9 @@ header
   display: flex
   align-items: center
   justify-content: flex-start
-  width: 14%
+  width: 190px
   margin-right: 40px
+  flex-shrink: 0
   img,svg
     max-width: 100%
     height: auto
@@ -1222,6 +1223,9 @@ header
     font-weight: 600
     font-size: 14px
     line-height: 20px
+.header__content
+  width: 100%
+  display: flex
 .header__nav
   padding-left: 40px
   border-left: 1px solid #FFFFFF
@@ -1376,7 +1380,7 @@ header
       font-weight: 600
       font-size: 14px
       text-transform: uppercase
-      margin-bottom: 6px
+      margin-bottom: 6px 
       border-radius: 10px
       transition: all 0.2s
       display: inline-block
@@ -1388,10 +1392,109 @@ header
       &:hover
         background-color: #1E1E1E
         color: #fff
+.header__burger
+  display: none
+  width: 40px
+  height: 40px
+  background: linear-gradient(127.48deg, #6d6d6d 0.03%, #000000 99.97%)
+  border-radius: 3px
+  border: none
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  padding: 0
+  &:focus
+    outline: none
+  span
+    height: 3px
+    width: 24px
+    display: block
+    background-color: #fff
+    margin-bottom: 5px
+    &:last-child
+      margin-bottom: 0
 
 header
-  @media screen and ( max-width: 1200px )
-    display: none
+  @media screen and ( max-width: 1300px )
+    .header__nav li a
+      padding: 17px 8px
+    .header__logo span
+      font-size: 12px
+    .header__language
+      margin-left: 32px
+  @media screen and ( max-width: 992px )
+    height: 80px
+    overflow: hidden
+    &.active
+      height: auto
+      height: 100%
+      z-index: 1000
+      overflow: auto
+      transition: all .6s
+      .header__burger
+        position: relative
+        span
+          position: absolute
+          left: 20%
+          margin-bottom: 0
+          transform: rotate(0deg)
+          transition: all 0.6s
+          &:nth-child(1)
+            transform: rotate(-45deg)
+          &:nth-child(2)
+            transform: rotate(45deg)
+          &:last-child
+            display: none
+    &.default
+      height: 80px
+      transition: all .6s
+      .header__burger
+        span
+          transition: all 0.6s
+          &:nth-child(1)
+            transform: rotate(0)
+          &:nth-child(2)
+            transform: rotate(0)
+    .header__burger
+      display: flex
+    .header__wrapp
+      flex-wrap: wrap
+      justify-content: space-between
+    .header__content
+      width: 100%
+      display: block
+      padding-top: 30px
+      padding-bottom: 40px
+    .header__nav
+      padding-left: 0
+      width: 100%
+      border-left: none
+      margin-bottom: 35px
+    .header__nav li
+      width: 100%
+      border-bottom: 1px solid #777777
+      a
+        padding: 15px 20px
+        width: 100%
+        font-size: 18px
+        line-height: 27px
+      &:first-child
+        a
+          padding-left: 20px
+    .header__info
+      justify-content: space-between
+    .header__nav li.header__nav__toggler .header__nav__dropdown
+      left: 0
+      width: 100%
+      top: 61px
+      z-index: 2
+    .header__language .header__language__dropdown
+      left: auto
+      right: 0
+  @media screen and ( max-width: 768px )
+    .header__contacts__content p
+      font-size: 9px
+      
 
 
 //*** STATISTICS ***//
@@ -1456,7 +1559,7 @@ header
       right: 0
       top: 0
 .statistics
-  @media screen and ( max-width: 1200px )
+  @media screen and ( max-width: 1300px )
     .section-heading h2
       font-size: 29px
     .statistics__circle
@@ -1527,7 +1630,7 @@ header
   justify-content: space-between
   align-items: center
 .work-area__map
-  flex-shrink: 1
+  flex-shrink: 0
   width: 56%
   svg,img
     max-width: 100%
@@ -1542,7 +1645,7 @@ header
   &:last-child
     margin-bottom: 0
 .work-area__list__letter
-  flex-shrink: 1
+  flex-shrink: 0
   margin-right: 12px
   color: #F4F4F5
   font-weight: 600
@@ -1559,7 +1662,7 @@ header
     &:last-child
       margin-bottom: 0
 .work-area
-  @media screen and ( max-width: 1200px )
+  @media screen and ( max-width: 1300px )
     .section-heading h2
       font-size: 28px
   @media screen and ( max-width: 992px )
@@ -1690,7 +1793,7 @@ header
       font-size: 18px
 
 .news
-  @media screen and ( max-width: 1200px )
+  @media screen and ( max-width: 1300px )
     padding-top: 80px
     .news__item__preview
       height: 220px
@@ -1813,7 +1916,7 @@ header
     font-weight: 400
 
 .client-get
-  @media screen and ( max-width: 1200px )
+  @media screen and ( max-width: 1300px )
     .client-get__item
       width: 31.5%
   @media screen and ( max-width: 992px )
@@ -1982,7 +2085,7 @@ header
     &:last-child
       margin-bottom: 0
 .faq
-  @media screen and ( max-width: 1200px )
+  @media screen and ( max-width: 1300px )
     .faq__list
       width: 80%
   @media screen and ( max-width: 992px )
@@ -2108,7 +2211,7 @@ header
       transition: all 0.2s
 
 .new
-  @media screen and ( max-width: 1200px )
+  @media screen and ( max-width: 1300px )
     .new__container
       width: 80%
   @media screen and ( max-width: 992px )
@@ -2188,7 +2291,7 @@ header
   font-size: 14px
 
 .similar-news
-  @media screen and ( max-width:  1200px)
+  @media screen and ( max-width:  1300px)
     .similar-news__item__preview
       height: 220px
   @media screen and ( max-width: 992px )

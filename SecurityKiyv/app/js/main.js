@@ -82,7 +82,16 @@ if (contactsToggle) {
   contactsToggle.addEventListener('click', toggleDropdownContacts);
 }
 
+// for header-mob
+let header_toggler = document.getElementById('header_burger');
+let header_block = document.querySelector('header');
 
+function showHeader() {
+  header_block.classList.toggle('active');
+  header_block.classList.toggle('default');
+}
+
+header_toggler.addEventListener('click', showHeader);
 
 
 
