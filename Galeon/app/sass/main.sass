@@ -1,0 +1,1075 @@
+// MAIN ELEMENTS
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap')
+$font_main_regular: 'Gilroy Regular', sans-serif
+$font_main_bold: 'Gilroy Bold', sans-serif
+$font_main_light: 'Gilroy Light', sans-serif
+$font_heading: 'Lora', serif
+
+$color_bg_white: #fff
+$color_bg_grey: linear-gradient(180deg, rgba(235, 239, 245, 0.3) 0%, #EBEFF5 100%)
+$color_font_white: #fff 
+$color_font_black: #242B45
+ 
+       
+body
+  background: $color_bg_white
+  font-family: $font_main_regular
+  color: $color_font_black
+  overflow-x: hidden
+  padding-top: 73px 
+  font-size: 14px
+
+*, :after, :before
+  box-sizing: border-box
+
+.mainContainer
+  max-width: 1300px
+  width: 100%
+  margin: 0 auto
+  padding: 0 10px
+  box-sizing: border-box  
+  @media screen and (max-width: 768px)
+    padding: 0 16px
+
+input,button, textarea
+  font-family: $font_main_regular
+  color: $color_font_black
+  font-size: 14px
+
+.bg-grey
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #EBEFF5 100%)
+
+.section-heading
+  font-weight: 400
+  margin-bottom: 56px
+  font-family: $font_heading
+  text-align: center
+  h2,h1
+    font-size: 48px
+    line-height: 67px
+  @media screen and ( max-width: 1300px )
+    h2,h1
+      font-size: 38px
+      line-height: 58px
+  @media screen and ( max-width: 768px )
+    margin-bottom: 40px
+    h2,h1
+      font-size: 24px
+      line-height: 34px
+    
+    
+
+.text-center
+  text-align: center
+.text-left
+  text-align: left
+.text-right
+  text-align: right
+
+.btn-main
+  height: 56px
+  border-radius: 15px
+  font-size: 18px
+  background: #FEAE16
+  color: #fff
+  font-weight: 600
+  cursor: pointer
+  border: none
+  transition: all 0.2s
+  display: inline-block
+  border: none
+  transition: all 0.2s
+  &:hover
+    @media screen and ( min-width: 992px)
+      background-color: #215369
+
+
+//*** BANNER ***//
+.banner-parallax
+  position: relative
+  .banner-parallax__call
+    position: absolute
+    left: 0 !important
+    width: 100%
+    height: auto !important
+    top: 34% !important
+.banner
+  padding-top: 79px
+  .section-heading
+    margin-bottom: 40px
+.banner__img
+  background-size: cover
+  background-position: center center
+  background-repeat: no-repeat
+.banner__img__wrapp
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  height: 100%
+.banner__call
+  height: 132px
+  display: inline-block
+  width: 132px
+  background: #215369
+  border: none
+  border-radius: 50%
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  &::before
+    content: ''
+    position: absolute
+    left: -16px
+    right: -16px
+    border: 1px dashed #FFFFFF
+    background: transparent
+    width: 164px
+    height: 164px
+    border-radius: 50%
+  &::after
+    content: ''
+    position: absolute
+    left: -16px
+    right: -16px
+    border: 2px dashed #FFFFFF
+    background: transparent
+    width: 164px
+    height: 164px
+    filter: blur(5px)
+    border-radius: 50%
+  span
+    position: absolute
+    width: 100%
+    color: #FFFFFF
+    font-size: 14px
+    font-weight: 600
+    line-height: 20px
+    left: 0
+    top: 48px
+    opacity: 0
+    transition: all 0.5s
+  svg,img
+    transition: all 0.2s
+  &:hover
+    @media screen and ( min-width: 992px)
+      span
+        opacity: 1
+      svg,img
+        opacity: 0
+
+.banner
+  @media screen and (max-width: 1300px)
+    padding-top: 49px
+.banner-parallax
+  @media screen and ( max-width: 992px )
+    .banner__img__wrapp
+      padding-right: 20px
+    .banner__call
+      width: 102px
+      height: 102px
+    .banner__call::before
+      width: 134px
+      height: 134px
+    .banner__call::after
+      width: 134px
+      height: 134px
+  @media screen and ( max-width: 768px )
+    .banner__img__wrapp
+      padding-right: 10px
+    .banner__call
+      width: 82px
+      height: 82px
+    .banner__call::before
+      width: 114px
+      height: 114px
+    .banner__call::after
+      width: 114px
+      height: 114px
+    
+    
+
+//*** HEADER ***//
+header
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  z-index: 30
+  background: rgba(255, 255, 255, 0.5)
+  backdrop-filter: blur(50px)
+.header__wrapp
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 16px 0
+.header__content
+  display: flex
+  justify-content: flex-end
+  align-items: center
+.header__tel
+  font-weight: 600
+  font-size: 16px
+  margin-right: 40px
+  color: #242B45
+.header__socials
+  margin-right: 40px
+  a
+    margin-right: 18px
+    &:last-child
+      margin-right: 0
+.header__link
+  display: inline-block
+  transition: all 0.2s
+  height: 40px
+  color: #ffffff
+  font-size: 16px
+  font-weight: bold
+  border: none
+  background-color: #215369
+  border-radius: 20px
+  position: relative
+  overflow: hidden
+  width: 156px
+  &:hover
+    @media screen and ( min-width: 992px)
+      background-color: #FEAE16
+  span
+    display: inline-block
+    position: relative
+    transform: translateX(100%)
+    animation: marquee 7.5s linear -3.75s infinite forwards
+
+@keyframes marquee
+  0%
+    transform: translateX(100%)
+  100%
+    transform: translateX(-100%)
+
+header
+  @media screen and ( max-width: 768px )
+    .header__tel
+      display: none
+    .header__socials
+      display: none
+    
+
+//*** CATALOG ***//
+.catalog
+  padding-top: 156px
+  padding-bottom: 116px
+.catalog__content
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+  margin-bottom: 85px
+.catalog__link
+  text-align: center
+  button
+    padding: 0 33px
+.product__gallery
+  width: 50%
+  margin-right: 80px
+.product__gallery-main
+  margin-bottom: 16px
+  .swiper-pagination
+    display: none
+.product__gallery-main__item
+  height: 360px
+  background-size: cover
+  background-position: center center
+  background-repeat: no-repeat
+  border-radius: 5px
+.product__gallery-thumbs__item
+  height: 80px
+  width: 80px
+  background-size: cover
+  background-position: center center
+  background-repeat: no-repeat
+  opacity: 0.5
+  border-radius: 5px
+  cursor: pointer
+  transition: all 0.2s
+  &.swiper-slide-thumb-active
+    opacity: 1
+  &:hover
+    @media screen and ( min-width: 992px)
+      opacity: 0.8
+.product__gallery__nav
+  display: flex
+  justify-content: space-between
+  align-items: center
+  position: absolute
+  left: 0
+  top: 45%
+  z-index: 10
+  width: 100%
+  padding: 0 13px
+  button
+    border: none
+    background: transparent
+    transition: all 0.2s
+    width: 48px
+    height: 48px
+    padding: 0
+    border-radius: 5px
+    &:hover
+      @media screen and ( min-width: 992px)
+        background: #FFFFFF
+        svg
+          path
+            fill: #242B45
+    &.swiper-button-disabled
+      opacity: 0.5
+      &:hover
+        @media screen and ( min-width: 992px)
+          background: transparent
+          svg
+            path
+              fill: #fff 
+.catalog__content__info
+  width: 41%
+.catalog__content__details
+  margin-bottom: 40px
+  h5
+    font-weight: 600
+    font-size: 24px
+    margin-bottom: 16px
+  ul
+    li
+      font-weight: 500
+      font-size: 18px
+      margin-bottom: 2px
+      line-height: 30px
+      display: block
+.catalog__content__plate
+  border-radius: 10px
+  background: #FFFFFF
+  overflow: hidden
+.catalog__content__plate__price
+  width: 100%
+  padding: 15px 24px
+  background: #215369
+  display: flex
+  justify-content: space-between
+  align-items: center
+  color: #fff
+  b
+    font-weight: bold
+    font-size: 24px
+  span
+    font-weight: bold
+    font-size: 24px
+    span
+      vertical-align: baseline
+      margin-left: 12px
+      font-size: 18px
+      font-weight: 400
+.catalog__content__plate__wrapp
+  padding: 24px 24px 46px 24px
+.catalog__content__plate__item
+  margin-bottom: 16px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &:last-child
+    margin-bottom: 0
+  .catalog__content__plate__descr
+    color: #8E8E8E
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
+    display: inline-block
+    width: 20%
+    flex-shrink: 0
+  .catalog__content__plate__info
+    display: block
+    width: 100%
+    border-radius: 10px
+    height: 48px
+    border: 1px solid #C4C4C4
+    line-height: 48px
+    padding: 0 12px
+    font-weight: 500
+    font-size: 16px
+    background-repeat: no-repeat
+    background-size: 20px
+    background-position: 96% center
+  &.time
+    .catalog__content__plate__info
+      background-image: url('../img/time-icon.svg')
+  &.summ
+    .catalog__content__plate__info:first-child
+      background-size: 10px
+      background-position: 89% center
+      background-image: url('../img/dollar-icon.svg')
+    .catalog__content__plate__info:last-child
+      background-size: 12px
+      background-position: 89% center
+      background-image: url('../img/money-icon.svg')
+  .catalog__content__plate__info-group
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .catalog__content__plate__info
+      width: 47%
+.catalog
+  @media screen and ( max-width: 1300px )
+    padding: 90px 0
+    .product__gallery
+      margin-right: 40px
+    .product__gallery-thumbs__item
+      height: 60px
+      width: 70px
+    .catalog__content
+      margin-bottom: 55px
+  @media screen and ( max-width: 992px )
+    .product__gallery
+      margin-right: 25px
+    .catalog__content__info
+      width: 45%
+    .catalog__content__details h5
+      font-size: 22px
+    .catalog__content__details ul li
+      font-size: 16px
+    .catalog__content__plate__price b
+      font-size: 21px
+    .catalog__content__plate__item .catalog__content__plate__descr
+      font-size: 14px
+  @media screen and ( max-width: 768px )
+    padding-bottom: 100px
+    padding-top: 80px
+    .catalog__content
+      display: block
+    .product__gallery
+      width: 100%
+      margin-right: 0
+      margin-bottom: 32px
+    .product__gallery-main
+      margin-bottom: 0
+    .product__gallery-thumbs
+      display: none
+    .catalog__content__info
+      width: 100%
+    .catalog__content__details h5
+      font-size: 18px
+      line-height: 25px
+      margin-bottom: 16px
+    .catalog__content__details ul li
+      font-weight: 500
+      font-size: 14px
+      line-height: 23px
+    .catalog__content__details
+      margin-bottom: 35px
+    .catalog__content__plate__price span
+      font-size: 21px
+      span
+        font-size: 16px
+        margin-left: 7px
+    .catalog__content__plate__item
+      display: block
+    .catalog__content__plate__wrapp
+      padding: 16px
+    .catalog__content__plate__item .catalog__content__plate__descr
+      font-size: 15px
+      width: 100%
+      margin-bottom: 8px
+    .catalog__content
+      margin-bottom: 24px
+    .button_su
+      width: 100%
+      .button_su_inner
+        width: 100%
+    .product__gallery__nav
+      padding: 0
+
+    
+    
+
+//*** REVIEWS ***//
+.reviews
+  padding: 156px 0
+  width: 100%
+  overflow: hidden
+  .section-heading
+    margin-bottom: 0
+.reviews__slider
+  .swiper-container
+    width: 100%
+    overflow: visible
+    height: 100%
+  .swiper-wrapper
+    width: max-content
+    margin-bottom: 56px
+  .swiper-slide
+    text-align: center
+    background: transparent
+    width: 416px
+  .swiper-pagination
+    position: static
+    &.swiper-pagination-progressbar
+      background: #F4F4F5
+      height: 1px
+      .swiper-pagination-progressbar-fill
+        height: 3px
+        top: auto
+        bottom: 0
+        background: #1E1E1E
+.reviews__slide__wrapp
+  background: #F4F4F5
+  border-radius: 10px
+  height: 245px
+  overflow: hidden
+  padding: 32px
+  padding-bottom: 24px
+  text-align: left
+  transition: all 0.2s
+  &:hover
+    @media screen and ( min-width:  993px)
+      background: #1E1E1E
+      color: #FFFFFF
+      button
+        color: #FFFFFF
+        border-color: #fff
+.reviews__slide__name
+  font-weight: 600
+  font-size: 18px
+  line-height: 22px
+  margin-bottom: 16px
+.reviews__slide__text
+  font-weight: normal
+  font-size: 16px
+  line-height: 26px
+  height: 105px
+  overflow: hidden
+  margin-bottom: 23px
+.reviews__slide__link
+  font-weight: 500
+  font-size: 16px
+  padding: 0
+  background: transparent
+  padding-bottom: 1px
+  border: none
+  border-bottom: 1px dashed #1E1E1E
+  color: #1E1E1E
+  transition: all 0.2s
+  padding: 0
+.reviews__nav
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  margin-bottom: 58px
+  button
+    border: none
+    background: transparent
+    transition: all 0.2s
+    width: 48px
+    height: 48px
+    padding: 0
+    border-radius: 5px
+    border: 1px solid transparent
+    &:first-child
+      margin-right: 98px
+    &:hover
+      @media screen and ( min-width: 992px)
+        background: #242B45
+        border-color: #242B45
+        svg
+          path
+            fill: #fff
+    &.swiper-button-disabled
+      opacity: 0.5
+      &:hover
+        @media screen and ( min-width: 992px)
+          background: transparent
+          border-color: transparent
+          svg
+            path
+              fill: #242B45
+.reviews
+  @media screen and ( max-width: 1300px )
+    padding: 90px 0
+  @media screen and ( max-width: 768px )
+    padding: 100px 0
+    .section-heading
+      text-align: center
+      h2
+        br
+          display: none
+    .reviews__nav
+      top: 429px
+      z-index: 5
+      width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+      display: none
+      button
+        border: 1px solid #000
+        width: 50px
+        height: 50px
+        background-color: #fff
+        &.next
+          margin-right: -12px
+        &.prev
+          margin-left: -12px
+    .section-heading
+      margin-bottom: 36px
+    .reviews__slider .swiper-slide
+      width: 302px
+    .reviews__slide__text
+      font-size: 14px
+      line-height: 21px
+      margin-bottom: 16px
+    .reviews__slide__link
+      font-size: 15px
+    .reviews__slide__wrapp
+      padding: 16px
+      height: auto
+    .reviews__slide__name
+      margin-bottom: 9px
+    .reviews__slider .swiper-wrapper
+      margin-bottom: 40px
+  @media screen and ( max-width: 359px )
+    padding: 60px 0
+    .reviews__slider .swiper-slide
+      width: 265px
+    .reviews__slide__wrapp
+      padding-left: 15px
+      padding-right: 15px
+
+
+//*** REQUEST ***//
+.request-feedback
+  padding-top: 156px
+  padding-bottom: 124px
+  background: linear-gradient(180deg, rgba(235, 239, 245, 0.3) 0%, #EBEFF5 100%)
+  .section-heading
+    margin-bottom: 24px
+.request-feedback__wrapp
+  margin: 0 auto
+  width: 48%
+.request-feedback__descr
+  text-align: center
+  margin-bottom: 56px
+  font-weight: 600
+  font-size: 18px
+  line-height: 25px
+.request-feedback__form
+  input
+    display: block
+    width: 100%
+    margin-bottom: 16px
+    border-radius: 10px
+    height: 56px
+    padding: 0 16px
+    font-weight: 500
+    font-size: 16px
+    transition: all 0.2s
+    background: #fff
+    border: 1px solid transparent
+    &::placeholder
+      color: rgba(36, 43, 69, 0.5)
+    &:focus
+      border: 1px solid #215369
+      background: #fff
+      &::placeholder
+        color: transparent
+  textarea
+    width: 100%
+    margin-bottom: 24px
+    border-radius: 10px
+    background: #fff
+    padding: 16px
+    font-size: 16px
+    transition: all 0.2s
+    border: 1px solid transparent
+    height: 116px
+    resize: none
+    &::placeholder
+      color: rgba(36, 43, 69, 0.5)
+    &:focus
+      border: 1px solid #215369
+      background: #fff
+      &::placeholder
+        color: transparent
+
+.request-feedback
+  @media screen and ( max-width: 1300px )
+    padding: 90px 0
+  @media screen and ( max-width: 992px)
+    .request-feedback__wrapp
+      width: 75%
+  @media screen and ( max-width: 768px )
+    padding: 100px 0
+    .section-heading
+      margin-bottom: 16px
+    .request-feedback__descr
+      width: 75%
+      margin: 0 auto
+      font-size: 13px
+      line-height: 22px
+      font-weight: 400
+      margin-bottom: 24px
+    .request-feedback__wrapp
+      width: 100%
+    .request-feedback__form input
+      font-size: 14px
+    .request-feedback__form textarea
+      font-size: 14px
+    .button_su
+      width: 100%
+      .button_su_inner
+        width: 100%
+    
+    
+    
+
+//*** FOOTER ***//
+footer
+  background-color: #215369
+.footer__wrapp
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  padding-top: 65px
+  padding-bottom: 105px
+  color: #fff
+  a
+    color: #fff
+.footer__info
+  margin-right: 30px
+  b
+    display: block
+    font-size: 24px
+    font-weight: bold
+    margin-bottom: 8px
+  p
+    font-weight: 500
+    font-size: 14px
+    margin-bottom: 30px
+  a
+    font-weight: bold
+    font-size: 36px
+    display: block
+    padding-bottom: 10px
+    border-bottom: 3px solid #FFFFFF
+    &:focus
+      outline: none
+.footer__contacts
+  display: flex
+  justify-content: flex-end
+  align-items: flex-start
+.footer__contacts__item
+  margin-right: 105px
+  &:last-child
+    margin-right: 0
+  p
+    font-weight: 500
+    font-size: 14px
+    line-height: 20px
+    margin-bottom: 20px
+  a
+    display: block
+    font-weight: 600
+    font-size: 18px
+    line-height: 25px
+    margin-bottom: 6px
+
+footer
+  @media screen and ( max-width: 1300px )
+    .footer__info a
+      font-size: 26px
+  @media screen and ( max-width: 992px )
+    .footer__info a
+      font-size: 23px
+    .footer__contacts__item a
+      font-size: 16px
+    .footer__contacts__item p
+      margin-bottom: 13px
+  @media screen and ( max-width: 768px )
+    .footer__wrapp
+      display: block
+      padding: 80px 0
+    .footer__info
+      margin-right: 0
+      margin-bottom: 56px
+    .footer__info a
+      font-size: 21px
+      display: inline-block
+    .footer__contacts
+      display: block
+    .footer__contacts__item
+      width: 100%
+      margin-right: 0
+      margin-bottom: 55px
+      &:last-child
+        margin-bottom: 0
+    
+    
+    
+
+//*** POPUP ***//
+.popup_container
+  position: fixed
+  top: -200%
+  left: 0
+  z-index: 10000
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 100%
+  min-width: 100vw
+  min-height: 100vh
+  padding: 10px
+  opacity: 0
+  box-sizing: border-box
+  &.active
+    top: 0
+    opacity: 1
+    transition: top 0.2s ease-in-out, opacity 1s ease-in-out
+.popup_background
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 100
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.7)
+.popup
+  position: relative
+  z-index: 200
+  width: 100%
+  max-width: 624px
+  margin: auto
+  background-color: #FFFFFF
+  border-radius: 20px
+.popup_close
+  position: absolute
+  top: 24px
+  right: 24px
+  cursor: pointer
+  transition: all 0.2s ease-in-out
+  img
+    width: 16px
+    height: auto
+.request-popup__content
+  padding: 40px 53px
+.request-popup__heading
+  text-align: center
+  margin-bottom: 40px
+  b
+    margin-bottom: 16px
+    font-size: 36px
+    line-height: 50px
+    font-family: $font_heading
+    display: block
+  p
+    margin-bottom: 40px
+    font-weight: 600
+    font-size: 14px
+    line-height: 20px
+.request-popup__form
+  input
+    width: 100%
+    display: block
+    height: 56px
+    margin-bottom: 16px
+    background: #F3F6FA
+    border-radius: 10px
+    font-size: 14px
+    padding: 0 12px
+    transition: all 0.2s
+    border: 1px solid transparent
+    &:last-child
+      margin-bottom: 0
+    &::placeholder
+      color: #777777
+    &:focus
+      border: 1px solid #215369
+      box-sizing: border-box
+      background: #fff
+      &::placeholder
+        color: transparent
+  button
+    margin-top: 24px
+  select
+    width: 100%
+    border-radius: 10px
+    border: 1px solid #C4C4C4
+    background: #FFFFFF
+    height: 48px
+    padding: 0 12px
+    font-weight: 500
+    font-size: 16px
+    margin-bottom: 16px
+    -webkit-appearance: none
+    -moz-appearance: none
+    text-indent: 1px
+    text-overflow: ''
+    background-image: url('../img/time-icon.svg')
+    background-repeat: no-repeat
+    background-size: 20px
+    background-position: 98% center
+.review-popup__name
+  font-weight: 600
+  font-size: 24px
+  line-height: 29px
+  margin-bottom: 16px
+.review-popup__descr
+  font-size: 16px
+  font-weight: 400
+  line-height: 26px
+  margin-bottom: 100px
+.review-popup__nav
+  display: flex
+  justify-content: space-between
+  align-items: center
+  button
+    color: #9195A2
+    font-size: 16px
+    font-weight: 600
+    transition: all 0.2s
+    border: none
+    padding: 0
+    background-color: transparent
+    svg,img
+      margin-right: 18px
+      vertical-align: middle
+    &.next
+      svg,img
+        margin-right: 0
+        margin-left: 18px
+    &:hover
+      @media screen and ( min-width: 992px)
+        color: $color_font_black
+        svg
+          path
+            fill: $color_font_black
+
+.request-popup
+  @media screen and ( max-width: 768px )
+    .request-popup__heading b
+      font-size: 24px
+      line-height: 34px
+    .request-popup__content
+      padding: 40px 20px
+    .button_su
+      width: 100%
+    .button_su_inner
+      font-weight: 600
+      width: 100%
+    .request-popup__heading
+      margin-bottom: 30px
+    .request-popup__heading p
+      margin-bottom: 25px
+
+.button_su
+  overflow: hidden
+  position: relative
+  display: block
+  border-radius: 15px
+  padding: 0
+  border: none
+  margin: 0 auto
+.su_button_circle
+  border-radius: 1000px
+  position: absolute
+  left: 0
+  top: 0
+  width: 0px
+  height: 0px
+  margin-left: 0px
+  margin-top: 0px
+  pointer-events: none
+  /*animation-timing-function: ease-in-out; */
+.button_su_inner
+  display: inline-block
+  background: #FEAE16
+  color: #fff
+  font-size: 18px
+  font-weight: 600
+  width: 210px
+  height: 56px
+  line-height: 56px
+  text-align: center
+  border-radius: 15px
+  transition: 400ms
+  text-decoration: none
+  z-index: 10
+.button_text_container
+  position: relative
+  z-index: 100
+.explode-circle
+  animation: explode 0.5s forwards
+.desplode-circle
+  animation: desplode 0.5s forwards
+
+@keyframes explode 
+  0% 
+    width: 0px
+    height: 0px
+    margin-left: 0px
+    margin-top: 0px
+    background-color: rgba(42, 53, 80,0.2)
+  100% 
+    width: 500px
+    height: 500px
+    margin-left: -250px
+    margin-top: -250px
+    background-color: #215369
+
+@keyframes desplode
+  0%
+    width: 500px
+    height: 500px
+    margin-left: -250px
+    margin-top: -250px
+    background-color: #215369
+  100%
+    width: 0px
+    height: 0px
+    margin-left: 0px
+    margin-top: 0px
+    background-color: rgba(129, 80, 108,0.6)
+
+.page
+  opacity: 0
+
+.preloader
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  margin: auto
+  width: 100vw
+  height: 100vh
+  background: #fff
+  visibility: hidden
+  opacity: 0
+  transition: all 0.5s ease
+  z-index: 99999999999999
+.preloader_inner
+  position: absolute
+  text-align: center
+  right: 100px
+  top: 60px
+  font-size: 78px
+  font-weight: 600
+  font-family: $font_heading
+  color: $color_bg_grey
+  opacity: 0.7
+.preloader_icon
+  position: absolute
+  left: 0
+  top: 55%
+  width: 100%
+  text-align: center
+
+.show
+  visibility:visible !important
+  opacity:1 !important
+  transition:all 0.5s ease

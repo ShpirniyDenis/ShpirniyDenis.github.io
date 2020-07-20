@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="content_language" content="ru">
+  <meta name="description" content="Grain Market"> 
+  <title>Galeon</title>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/reset.css"> 
+  <link rel="stylesheet" href="libs/swiperjs/swiper.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+</head> 
+
+<style type="text/css">
+  .parallaxParent {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .parallaxParent>* {
+    height: 200%;
+    position: relative;
+    top: -100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+</style>
+
+<body>
+<div class="preloader">
+  <div class="preloader_inner">100%</div>
+  <div class="preloader_icon">
+  </div>
+</div>
+<div class="page">
+<header>
+  <div class="mainContainer">
+    <div class="header__wrapp">
+      <a href="#" class="header__logo">
+        <img src="img/logo.svg" alt="logo">
+      </a>
+      <div class="header__content">
+        <a href="tel:+380984777774" class="header__tel">+38(098) 477 77 74</a>
+        <div class="header__socials">
+          <a href="">
+            <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.35689 2.98875H9V0.12675C8.71652 0.08775 7.74161 0 6.6062 0C4.23715 0 2.61428 1.49025 2.61428 4.22925V6.75H0V9.9495H2.61428V18H5.81952V9.95025H8.32806L8.72627 6.75075H5.81877V4.5465C5.81952 3.62175 6.06849 2.98875 7.35689 2.98875Z"
+                fill="#242B45" />
+            </svg>
+          </a>
+          <a href="">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17.9543 5.29207C17.9121 4.33565 17.7574 3.67813 17.5358 3.10837C17.3072 2.50359 16.9555 1.96214 16.4947 1.51202C16.0445 1.0549 15.4994 0.699693 14.9015 0.474704C14.3283 0.253148 13.6741 0.0984845 12.7175 0.0563161C11.7538 0.0105764 11.4478 0 9.0035 0C6.55919 0 6.25324 0.0105764 5.29308 0.0527448C4.33648 0.0949132 3.67883 0.249714 3.1091 0.471132C2.50407 0.699693 1.96251 1.05133 1.51231 1.51202C1.0551 1.96214 0.699964 2.50717 0.474794 3.10494C0.253196 3.67813 0.0985033 4.33208 0.0563268 5.28849C0.0105784 6.25205 0 6.55794 0 9.00179C0 11.4456 0.0105784 11.7515 0.0527549 12.7115C0.0949313 13.6679 0.249761 14.3254 0.471359 14.8952C0.699964 15.5 1.0551 16.0414 1.51231 16.4916C1.96251 16.9487 2.50764 17.3039 3.10553 17.5289C3.67883 17.7504 4.33291 17.9051 5.28964 17.9473C6.24967 17.9896 6.55576 18 9.00007 18C11.4444 18 11.7503 17.9896 12.7105 17.9473C13.6671 17.9051 14.3247 17.7504 14.8945 17.5289C16.1044 17.0612 17.061 16.1048 17.5288 14.8952C17.7502 14.322 17.9051 13.6679 17.9472 12.7115C17.9894 11.7515 18 11.4456 18 9.00179C18 6.55794 17.9964 6.25205 17.9543 5.29207ZM16.333 12.6412C16.2943 13.5203 16.1466 13.995 16.0235 14.3114C15.721 15.0956 15.0985 15.718 14.3142 16.0204C13.9976 16.1435 13.5194 16.2911 12.6436 16.3297C11.694 16.3721 11.4092 16.3825 9.00707 16.3825C6.60494 16.3825 6.31658 16.3721 5.37042 16.3297C4.49117 16.2911 4.01638 16.1435 3.69985 16.0204C3.30955 15.8762 2.95427 15.6476 2.66591 15.3487C2.36696 15.0569 2.13836 14.7052 1.99411 14.315C1.87101 13.9985 1.72333 13.5203 1.68472 12.6448C1.64241 11.6953 1.63197 11.4105 1.63197 9.00879C1.63197 6.60711 1.64241 6.3188 1.68472 5.37297C1.72333 4.49389 1.87101 4.01918 1.99411 3.70271C2.13836 3.31235 2.36696 2.95728 2.66948 2.66883C2.96128 2.36995 3.31298 2.14139 3.70342 1.9973C4.01995 1.87423 4.49832 1.72657 5.37399 1.68783C6.32358 1.64567 6.60851 1.63509 9.01051 1.63509C11.4162 1.63509 11.701 1.64567 12.6472 1.68783C13.5264 1.72657 14.0012 1.87423 14.3177 1.9973C14.708 2.14139 15.0633 2.36995 15.3517 2.66883C15.6506 2.96072 15.8792 3.31235 16.0235 3.70271C16.1466 4.01918 16.2943 4.49732 16.333 5.37297C16.3752 6.32238 16.3858 6.60711 16.3858 9.00879C16.3858 11.4105 16.3752 11.6918 16.333 12.6412Z"
+                fill="#242B45" />
+              <path
+                d="M9 5C6.79171 5 5 6.79159 5 9C5 11.2084 6.79171 13 9 13C11.2084 13 13 11.2084 13 9C13 6.79159 11.2084 5 9 5ZM9 11.5947C7.56737 11.5947 6.4053 10.4327 6.4053 9C6.4053 7.56725 7.56737 6.4053 9 6.4053C10.4327 6.4053 11.5947 7.56725 11.5947 9C11.5947 10.4327 10.4327 11.5947 9 11.5947Z"
+                fill="#242B45" />
+              <path
+                d="M15 4C15 4.55223 14.5523 5 13.9999 5C13.4477 5 13 4.55223 13 4C13 3.44764 13.4477 3 13.9999 3C14.5523 3 15 3.44764 15 4Z"
+                fill="#242B45" />
+            </svg>
+          </a>
+          <a href="">
+            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.84784 10.5451L7.517 15.0122C7.99034 15.0122 8.19534 14.817 8.44118 14.5827L10.6604 12.5467L15.2588 15.7794C16.1022 16.2306 16.6964 15.993 16.9239 15.0346L19.9423 1.45712L19.9431 1.45632C20.2106 0.259523 19.4923 -0.208475 18.6706 0.085124L0.928504 6.60589C-0.282359 7.05709 -0.264025 7.70508 0.722666 7.99868L5.25861 9.35308L15.7947 3.02431C16.2905 2.70911 16.7414 2.88351 16.3705 3.19871L7.84784 10.5451Z"
+                fill="#242B45" />
+            </svg>
+          </a>
+        </div>
+        <button class="header__link click-item" data-action="popup-open" data-label="#rent-popup">
+          <span>Арендовать яхту</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="banner">
+    <div class="banner__heading">
+      <div class="section-heading">
+        <h1>Сделайте для себя<br> незабываемый отдых</h1>
+      </div>
+    </div>
+  </section>
+
+  <section id="parallax1" class="parallaxParent banner-parallax">
+    <div style="background-image: url(img/banner-parallax.jpeg);"></div>
+    <div class="banner-parallax__call">
+    <div class="mainContainer">
+      <div class="banner__img__wrapp">
+        <button class="banner__call click-item" data-action="popup-open" data-label="#request-popup">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M6.03333 12.9833C8.43333 17.7 12.3 21.5667 17.0167 23.9667L20.6833 20.3C21.15 19.8333 21.8 19.7 22.3833 19.8833C24.25 20.5 26.25 20.8333 28.3333 20.8333C28.7754 20.8333 29.1993 21.0089 29.5118 21.3215C29.8244 21.634 30 22.058 30 22.5V28.3333C30 28.7754 29.8244 29.1993 29.5118 29.5118C29.1993 29.8244 28.7754 30 28.3333 30C20.8189 30 13.6122 27.0149 8.29864 21.7014C2.98511 16.3878 0 9.18113 0 1.66667C0 1.22464 0.175595 0.800716 0.488155 0.488155C0.800716 0.175595 1.22464 0 1.66667 0H7.5C7.94203 0 8.36595 0.175595 8.67851 0.488155C8.99107 0.800716 9.16667 1.22464 9.16667 1.66667C9.16667 3.75 9.5 5.75 10.1167 7.61667C10.3 8.2 10.1667 8.85 9.7 9.31667L6.03333 12.9833Z"
+              fill="white" />
+          </svg>
+          <span>Заказать<br> звонок</span>
+        </button>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="catalog bg-grey">
+    <div class="mainContainer">
+      <div class="catalog__item">
+        <div class="section-heading">
+          <h2>Galeon 390 Fly</h2>
+        </div>
+        <div class="catalog__content">
+          <div class="product__gallery">
+            <div class="swiper-container product__gallery-main">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide product__gallery-main__item" style="background-image: url(img/slide1.png);">
+                </div>
+                <div class="swiper-slide product__gallery-main__item" style="background-image: url(img/slide2.png);">
+                </div>
+                <div class="swiper-slide product__gallery-main__item" style="background-image: url(img/slide3.png);">
+                </div>
+                <div class="swiper-slide product__gallery-main__item" style="background-image: url(img/slide4.png);">
+                </div>
+                <div class="swiper-slide product__gallery-main__item" style="background-image: url(img/slide5.png);">
+                </div>
+                <div class="swiper-slide product__gallery-main__item" style="background-image: url(img/slide6.png);">
+                </div>
+                <div class="swiper-slide product__gallery-main__item" style="background-image: url(img/slide7.png);">
+                </div>
+                <div class="swiper-slide product__gallery-main__item" style="background-image: url(img/slide8.png);">
+                </div>
+                <div class="swiper-slide product__gallery-main__item" style="background-image: url(img/slide1.png);">
+                </div>
+                <div class="swiper-slide product__gallery-main__item" style="background-image: url(img/slide2.png);">
+                </div>
+                <div class="swiper-slide product__gallery-main__item" style="background-image: url(img/slide3.png);">
+                </div>
+              </div>
+              <!-- Add Arrows -->
+              <div class="product__gallery__nav">
+                <button class="prev">
+                  <svg width="15" height="22" viewBox="0 0 15 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M13.6667 3.33333L6.00002 11L13.6667 18.6667L11.3334 21L1.33335 11L11.3334 1L13.6667 3.33333Z" fill="white"
+                      stroke="white" />
+                  </svg>
+                </button>
+                <button class="next">
+                  <svg width="15" height="22" viewBox="0 0 15 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M1.33329 3.33333L8.99996 11L1.33329 18.6667L3.66663 21L13.6666 11L3.66663 1L1.33329 3.33333Z" fill="white"
+                      stroke="white" />
+                  </svg>
+                </button>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="swiper-container product__gallery-thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide product__gallery-thumbs__item" style="background-image: url(img/slide1.png);">
+                </div>
+                <div class="swiper-slide product__gallery-thumbs__item" style="background-image: url(img/slide2.png);">
+                </div>
+                <div class="swiper-slide product__gallery-thumbs__item" style="background-image: url(img/slide3.png);">
+                </div>
+                <div class="swiper-slide product__gallery-thumbs__item" style="background-image: url(img/slide4.png);">
+                </div>
+                <div class="swiper-slide product__gallery-thumbs__item" style="background-image: url(img/slide5.png);">
+                </div>
+                <div class="swiper-slide product__gallery-thumbs__item" style="background-image: url(img/slide6.png);">
+                </div>
+                <div class="swiper-slide product__gallery-thumbs__item" style="background-image: url(img/slide7.png);">
+                </div>
+                <div class="swiper-slide product__gallery-thumbs__item" style="background-image: url(img/slide8.png);">
+                </div>
+                <div class="swiper-slide product__gallery-thumbs__item" style="background-image: url(img/slide1.png);">
+                </div>
+                <div class="swiper-slide product__gallery-thumbs__item" style="background-image: url(img/slide2.png);">
+                </div>
+                <div class="swiper-slide product__gallery-thumbs__item" style="background-image: url(img/slide3.png);">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__content__info">
+            <div class="catalog__content__details">
+              <h5>Характеристики</h5>
+                <ul>
+                  <li>Galeon 390 Fly</li>
+                  <li>Глиссирующая яхта с флайбриджем</li>
+                  <li>Длина 11.99</li>
+                  <li>Вместимость 10 человек</li>
+                </ul>
+            </div>
+            <div class="catalog__content__plate">
+              <div class="catalog__content__plate__price">
+                <b>Цена:</b>
+                <span>300$ <span>в час</span></span>
+              </div>
+              <div class="catalog__content__plate__wrapp">
+                <div class="catalog__content__plate__item time">
+                  <div class="catalog__content__plate__descr">
+                    Время:
+                  </div>
+                  <div class="catalog__content__plate__info">
+                    <span>1 час</span>
+                  </div>
+                </div>
+                <div class="catalog__content__plate__item summ">
+                  <div class="catalog__content__plate__descr">
+                    Цена:
+                  </div>
+                  <div class="catalog__content__plate__info-group">
+                    <div class="catalog__content__plate__info">
+                      <span>300</span>
+                    </div>
+                    <div class="catalog__content__plate__info">
+                      <span>8 129</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="button_su click-item" data-action="popup-open" data-label="#rent-popup">
+          <span class="su_button_circle"></span>
+            <div class="button_su_inner">
+              <span class="button_text_container">
+                Арендовать яхту
+              </span>
+            </div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="mainContainer">
+        <div class="section-heading">
+          <h2>Отзывы наших<br> клиентов</h2>
+        </div>
+      <div class="reviews__nav">
+        <button class="prev">
+          <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M12.667 2.33333L5.00033 10L12.667 17.6667L10.3337 20L0.333659 10L10.3337 3.74844e-07L12.667 2.33333Z"
+              fill="#1E1E1E" />
+          </svg>
+        </button>
+        <button class="next">
+          <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M0.333007 2.33333L7.99967 10L0.333008 17.6667L2.66634 20L12.6663 10L2.66634 -1.01993e-07L0.333007 2.33333Z"
+              fill="#1E1E1E" />
+          </svg>
+        </button>
+      </div>
+      <div class="reviews__slider">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide reviews__slide">
+              <div class="reviews__slide__wrapp">
+                <div class="reviews__slide__name">Павел</div>
+                <div class="reviews__slide__text">Хочу выразить огромную благодарность сотрудникам агентства за быстро
+                  найденный
+                  автомобиль. Жаль конечно, что угонщиков
+                  взять не удалось. Но...Хочу выразить огромную благодарность сотрудникам агентства за быстро найденный
+                  автомобиль.
+                  Жаль конечно, что угонщиков
+                  взять не удалось. Но...</div>
+                <button href="#" class="reviews__slide__link click-item" data-action="popup-open" data-label="#review-popup">
+                  Читать отзыв полностью
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide reviews__slide">
+              <div class="reviews__slide__wrapp">
+                <div class="reviews__slide__name">Артур</div>
+                <div class="reviews__slide__text">Хочу выразить огромную благодарность сотрудникам агентства за быстро
+                  найденный
+                  автомобиль. Жаль конечно, что угонщиков
+                  взять не удалось. Но...Хочу выразить огромную благодарность сотрудникам агентства за быстро найденный
+                  автомобиль.
+                  Жаль конечно, что угонщиков
+                  взять не удалось. Но...</div>
+                <button href="#" class="reviews__slide__link click-item" data-action="popup-open" data-label="#review-popup">
+                  Читать отзыв полностью
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide reviews__slide">
+              <div class="reviews__slide__wrapp">
+                <div class="reviews__slide__name">Виктор</div>
+                <div class="reviews__slide__text">Хочу выразить огромную благодарность сотрудникам агентства за быстро
+                  найденный
+                  автомобиль. Жаль конечно, что угонщиков
+                  взять не удалось. Но...Хочу выразить огромную благодарность сотрудникам агентства за быстро найденный
+                  автомобиль.
+                  Жаль конечно, что угонщиков
+                  взять не удалось. Но...</div>
+                <button href="#" class="reviews__slide__link click-item" data-action="popup-open" data-label="#review-popup">
+                  Читать отзыв полностью
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide reviews__slide">
+              <div class="reviews__slide__wrapp">
+                <div class="reviews__slide__name">Паша 228</div>
+                <div class="reviews__slide__text">Хочу выразить огромную благодарность сотрудникам агентства за быстро
+                  найденный
+                  автомобиль. Жаль конечно, что угонщиков
+                  взять не удалось. Но...Хочу выразить огромную благодарность сотрудникам агентства за быстро найденный
+                  автомобиль.
+                  Жаль конечно, что угонщиков
+                  взять не удалось. Но...</div>
+                <button href="#" class="reviews__slide__link click-item" data-action="popup-open" data-label="#review-popup">
+                  Читать отзыв полностью
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide reviews__slide">
+              <div class="reviews__slide__wrapp">
+                <div class="reviews__slide__name">Ольга</div>
+                <div class="reviews__slide__text">Хочу выразить огромную благодарность сотрудникам агентства за быстро
+                  найденный
+                  автомобиль. Жаль конечно, что угонщиков
+                  взять не удалось. Но...Хочу выразить огромную благодарность сотрудникам агентства за быстро найденный
+                  автомобиль.
+                  Жаль конечно, что угонщиков
+                  взять не удалось. Но...</div>
+                <button href="#" class="reviews__slide__link click-item" data-action="popup-open" data-label="#review-popup">
+                  Читать отзыв полностью
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="request-feedback bg-grey">
+    <div class="mainContainer">
+      <div class="section-heading">
+        <h2>Обратная связь</h2>
+      </div>
+      <div class="request-feedback__wrapp">
+        <div class="request-feedback__descr">
+          <p>Оставьте заявку на обратный звонок, или напишите нам вопрос, который Вас интересует и мы свяжемся с Вами</p>
+        </div>
+        <form action="#" class="request-feedback__form">
+          <input type="text" placeholder="Имя" required>
+          <input type="text" placeholder="Телефон" required>
+          <textarea name="comment" placeholder="Введите ваше сообщение"></textarea>
+          <button class="button_su">
+            <span class="su_button_circle"></span>
+            <div class="button_su_inner">
+              <span class="button_text_container">
+                Отправить
+              </span>
+            </div>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="mainContainer">
+    <div class="footer__wrapp">
+      <div class="footer__info">
+        <b>Есть вопросы?</b>
+        <p>Просто напиши нам</p>
+        <a href="mailto:galeon390@gmail.com">galeon390@gmail.com</a>
+      </div>
+      <div class="footer__contacts">
+        <div class="footer__contacts__item">
+          <p>Контакты</p>
+          <a href="tel:+380984777774">+38(098) 477 77 74</a>
+          <a href="tel:+380984777774">+38(098) 477 77 74</a>
+          <a href="mailto:galeon360@gmail.com">galeon360@gmail.com</a>
+        </div>
+        <div class="footer__contacts__item">
+          <p>Мы в соц-сетях</p>
+          <a href="">Instagram</a>
+          <a href="">Telegram</a>
+          <a href="">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+
+<!-- REQUEST-POPUP -->
+<div id="request-popup" class="popup_container click-obj">
+  <div class="popup_background click-item" data-action="popup-close"></div>
+  <div class="popup request-popup">
+    <div class="popup_close click-item" data-action="popup-close">
+      <img src="img/popup-close.svg" alt="" />
+    </div>
+    <div class="request-popup__content">
+      <div class="request-popup__heading">
+        <b>Обратная связь</b>
+        <p>Оставьте заявку на обратный звонок, и мы свяжемся с Вами</p>
+      </div>
+      <form class="request-popup__form" id="request-popup-form">
+        <input type="text" placeholder="Имя" name="name" required>
+        <input type="text" placeholder="Телефон" name="phone" required>
+        <button class="button_su">
+          <span class="su_button_circle"></span>
+          <div class="button_su_inner">
+            <span class="button_text_container">
+              Отправить
+            </span>
+          </div>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- REQUEST-POPUP -->
+<div id="rent-popup" class="popup_container click-obj">
+  <div class="popup_background click-item" data-action="popup-close"></div>
+  <div class="popup request-popup rent-popup">
+    <div class="popup_close click-item" data-action="popup-close">
+      <img src="img/popup-close.svg" alt="" />
+    </div>
+    <div class="request-popup__content">
+      <div class="request-popup__heading">
+        <b>Аренда яхты</b>
+      </div>
+      <form class="request-popup__form" id="rent-popup-form">
+        <select name="rent-popup-time">
+          <option value="1" selected>1 час</option>
+          <option value="2">2 часа</option>
+          <option value="3">3 часа</option>
+          <option value="4">4 часа</option>
+          <option value="5">5 часов</option>
+          <option value="6">6 часов</option>
+          <option value="7">7 часов</option>
+          <option value="8">8 часов</option>
+        </select>
+        <input type="text" placeholder="Имя" name="name" required>
+        <input type="text" placeholder="Телефон" name="phone" required>
+        <button class="button_su">
+          <span class="su_button_circle"></span>
+          <div class="button_su_inner">
+            <span class="button_text_container">
+              Арендовать яхту
+            </span>
+          </div>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- REVIEW-POPUP -->
+<div id="review-popup" class="popup_container click-obj">
+  <div class="popup_background click-item" data-action="popup-close"></div>
+  <div class="popup request-popup review-popup">
+    <div class="popup_close click-item" data-action="popup-close">
+      <img src="img/popup-close.svg" alt="" />
+    </div>
+    <div class="request-popup__content">
+      <div class="review-popup__text">
+        <div class="review-popup__name"></div>
+        <div class="review-popup__descr"></div>
+      </div>
+      <div class="review-popup__nav">
+        <button class="prev">
+          <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6667 2.33333L5.00002 10L12.6667 17.6667L10.3334 20L0.333354 10L10.3334 -1.01993e-07L12.6667 2.33333Z" fill="#9195A2"/>
+          </svg>
+          Назад
+        </button>
+        <button class="next">
+          Дальше
+          <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M0.333251 2.33333L7.99992 10L0.333252 17.6667L2.66659 20L12.6666 10L2.66658 -1.01993e-07L0.333251 2.33333Z"
+              fill="#9195A2" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="libs/swiperjs/swiper.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+  var galleryThumbs = new Swiper('.product__gallery-thumbs', {
+      spaceBetween: 8,
+      loop: false,
+      freeMode: true,
+      slidesPerView: 'auto',
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+    });
+    var galleryTop = new Swiper('.product__gallery-main', {
+      spaceBetween: 10,
+      loop: false,
+      //loopedSlides: 5,
+      navigation: {
+        prevEl: '.product__gallery__nav .prev',
+        nextEl: '.product__gallery__nav .next',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+      },
+      thumbs: {
+        swiper: galleryThumbs,
+      },
+    });
+
+    var swiperReviews = new Swiper('.reviews .swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      //loop: true,
+      pagination: {
+        el: '.reviews .swiper-pagination',
+        clickable: true,
+        type: 'progressbar',
+      },
+      navigation: {
+        nextEl: '.reviews .next',
+        prevEl: '.reviews .prev',
+      },
+      breakpoints: {
+      768: {
+        spaceBetween: 24,
+      },
+    }
+    });
+
+</script>
+</body>
+</html>
