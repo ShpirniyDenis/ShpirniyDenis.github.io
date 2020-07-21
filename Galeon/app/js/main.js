@@ -39,38 +39,27 @@ function clickItemHandler(event) {
 };
 document.addEventListener('click', clickItemHandler);
 
-// for header-mob
-let header_toggler = document.getElementById('header_burger');
-let header_block = document.querySelector('header');
-
-function showHeader() {
-  header_block.classList.toggle('active');
-  header_block.classList.toggle('default');
-}
-
+// for buttons
 $(".button_su_inner").mouseenter(function (e) {
   var parentOffset = $(this).offset();
-
   var relX = e.pageX - parentOffset.left;
   var relY = e.pageY - parentOffset.top;
   $(this).prev(".su_button_circle").css({ "left": relX, "top": relY });
   $(this).prev(".su_button_circle").removeClass("desplode-circle");
   $(this).prev(".su_button_circle").addClass("explode-circle");
-
 });
 
 $(".button_su_inner").mouseleave(function (e) {
-
   var parentOffset = $(this).offset();
-
   var relX = e.pageX - parentOffset.left;
   var relY = e.pageY - parentOffset.top;
   $(this).prev(".su_button_circle").css({ "left": relX, "top": relY });
   $(this).prev(".su_button_circle").removeClass("explode-circle");
   $(this).prev(".su_button_circle").addClass("desplode-circle");
-
 });
 
+
+// for reviews
 $('.reviews__slide__link').click(function () {
   $('.reviews__slide').removeClass('modal-slide');
   $(this).closest('.reviews__slide').addClass('modal-slide');
@@ -88,6 +77,7 @@ $('.review-popup__nav .prev').click(function () {
   $('.modal-slide').prev().find('.reviews__slide__link').click();
 });
 
+// for preloader
 loader();
 function loader(_success) {
   var obj = document.querySelector('.preloader'),
@@ -111,6 +101,7 @@ function loader(_success) {
       }, 20);
 }
 
+// for parallax
 var controller = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter", duration: "200%" } });
 
 if ($(window).width() >= 992 ) {
@@ -119,6 +110,7 @@ if ($(window).width() >= 992 ) {
     .addTo(controller);
 }
 
+// for calculate-price
 $('#catalog-time').change(function () {
   let time = $(this).val();
   let price = 300;
@@ -127,6 +119,7 @@ $('#catalog-time').change(function () {
   $('#catalog-currency span').text((time * price) * currency).formatCurrency();
 });
 
+// for sliders
 var galleryThumbs = new Swiper('.product__gallery-thumbs', {
   spaceBetween: 8,
   loop: false,
