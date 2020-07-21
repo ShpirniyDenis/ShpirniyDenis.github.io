@@ -18,25 +18,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
 </head> 
 
-<style type="text/css">
-  .parallaxParent {
-    height: 100vh;
-    overflow: hidden;
-  }
-
-  .parallaxParent>* {
-    height: 200%;
-    position: relative;
-    top: -100%;
-    background-position: center top;
-    background-repeat: no-repeat;
-  }
-</style>
-
 <body>
 <div class="preloader">
-  <div class="preloader_inner">100%</div>
-  <div class="preloader_icon">
+  <div class="preloader__inner"><b>100</b> <span>%</span></div>
+  <div class="preloader__spinner">
+    <div class="mainContainer">
+      <div class="preloader__spinner__icon"></div>
+    </div>
   </div>
 </div>
 <div class="page">
@@ -95,7 +83,7 @@
   </section>
 
   <section id="parallax1" class="parallaxParent banner-parallax">
-    <div style="background-image: url(img/banner-parallax.jpeg);"></div>
+    <div class="banner-parallax-img" style="background-image: url(img/banner-parallax.jpeg);"></div>
     <div class="banner-parallax__call">
     <div class="mainContainer">
       <div class="banner__img__wrapp">
@@ -109,6 +97,18 @@
         </button>
       </div>
     </div>
+    </div>
+  </section>
+
+  <section class="mobile-scrollbtn">
+    <div class="mainContainer">
+      <a href="#">
+        <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M16 16L14.6 14.6L9 20.2L9 -3.0598e-07L7 -3.93402e-07L7 20.2L1.4 14.6L-6.99382e-07 16L8 24L16 16Z"
+            fill="#215369" />
+        </svg>
+      </a>
     </div>
   </section>
 
@@ -211,8 +211,19 @@
                   <div class="catalog__content__plate__descr">
                     Время:
                   </div>
-                  <div class="catalog__content__plate__info">
-                    <span>1 час</span>
+                  <div class="catalog__content__plate__select">
+                    <select name="rent-time" id="catalog-time">
+                      <option value="1" selected>1 час</option>
+                      <option value="2">2 часа</option>
+                      <option value="3">3 часа</option>
+                      <option value="4">4 часа</option>
+                      <option value="5">5 часов</option>
+                      <option value="6">6 часов</option>
+                      <option value="7">7 часов</option>
+                      <option value="8">8 часов</option>
+                      <option value="9">9 часов</option>
+                      <option value="10">10 часов</option>
+                    </select>
                   </div>
                 </div>
                 <div class="catalog__content__plate__item summ">
@@ -220,11 +231,11 @@
                     Цена:
                   </div>
                   <div class="catalog__content__plate__info-group">
-                    <div class="catalog__content__plate__info">
+                    <div class="catalog__content__plate__info" id="catalog-price">
                       <span>300</span>
                     </div>
-                    <div class="catalog__content__plate__info">
-                      <span>8 129</span>
+                    <div class="catalog__content__plate__info" id="catalog-currency">
+                      <span>8 100</span>
                     </div>
                   </div>
                 </div>
@@ -412,6 +423,7 @@
       <img src="img/popup-close.svg" alt="" />
     </div>
     <div class="request-popup__content">
+      <div class="request-popup__main">
       <div class="request-popup__heading">
         <b>Обратная связь</b>
         <p>Оставьте заявку на обратный звонок, и мы свяжемся с Вами</p>
@@ -429,6 +441,11 @@
         </button>
       </form>
     </div>
+    <div class="request-popup__ty" style="display: none;">
+      <b>Ваша заявка успешно отправлена</b>
+      <p>Мы свяжемся с вами в ближайшее время</p>
+    </div>
+    </div>
   </div>
 </div>
 
@@ -440,6 +457,7 @@
       <img src="img/popup-close.svg" alt="" />
     </div>
     <div class="request-popup__content">
+      <div class="request-popup__main">
       <div class="request-popup__heading">
         <b>Аренда яхты</b>
       </div>
@@ -453,6 +471,8 @@
           <option value="6">6 часов</option>
           <option value="7">7 часов</option>
           <option value="8">8 часов</option>
+          <option value="9">9 часов</option>
+          <option value="10">10 часов</option>
         </select>
         <input type="text" placeholder="Имя" name="name" required>
         <input type="text" placeholder="Телефон" name="phone" required>
@@ -465,6 +485,11 @@
           </div>
         </button>
       </form>
+    </div>
+    <div class="request-popup__ty" style="display: none;">
+      <b>Ваша заявка успешно отправлена</b>
+      <p>Мы свяжемся с вами в ближайшее время</p>
+    </div>
     </div>
   </div>
 </div>
@@ -502,54 +527,8 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/jquery.formatCurrency-1.4.0.js"></script>
 <script src="libs/swiperjs/swiper.min.js"></script>
 <script src="js/main.js"></script>
-<script>
-  var galleryThumbs = new Swiper('.product__gallery-thumbs', {
-      spaceBetween: 8,
-      loop: false,
-      freeMode: true,
-      slidesPerView: 'auto',
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-    });
-    var galleryTop = new Swiper('.product__gallery-main', {
-      spaceBetween: 10,
-      loop: false,
-      //loopedSlides: 5,
-      navigation: {
-        prevEl: '.product__gallery__nav .prev',
-        nextEl: '.product__gallery__nav .next',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-      },
-      thumbs: {
-        swiper: galleryThumbs,
-      },
-    });
-
-    var swiperReviews = new Swiper('.reviews .swiper-container', {
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-      //loop: true,
-      pagination: {
-        el: '.reviews .swiper-pagination',
-        clickable: true,
-        type: 'progressbar',
-      },
-      navigation: {
-        nextEl: '.reviews .next',
-        prevEl: '.reviews .prev',
-      },
-      breakpoints: {
-      768: {
-        spaceBetween: 24,
-      },
-    }
-    });
-
-</script>
 </body>
 </html>

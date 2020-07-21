@@ -91,31 +91,41 @@ $('.review-popup__nav .prev').click(function () {
 loader();
 function loader(_success) {
   var obj = document.querySelector('.preloader'),
-    inner = document.querySelector('.preloader_inner'),
+    inner = document.querySelector('.preloader__inner b'),
     page = document.querySelector('.page');
-  obj.classList.add('show');
-  page.classList.remove('show');
-  var w = 0,
-    t = setInterval(function () {
-      w = w + 1;
-      inner.textContent = w + '%';
-      if (w === 100) {
-        obj.classList.remove('show');
-        page.classList.add('show');
-        clearInterval(t);
-        w = 0;
-        if (_success) {
-          return _success();
+    obj.classList.add('show');
+    page.classList.remove('show');
+    var w = 0,
+      t = setInterval(function () {
+        w = w + 1;
+        inner.textContent = w;
+        if (w === 100) {
+          obj.classList.remove('show');
+          page.classList.add('show');
+          clearInterval(t);
+          w = 0;
+          if (_success) {
+            return _success();
+          }
         }
-      }
-    }, 20);
+      }, 20);
 }
 
 var controller = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter", duration: "200%" } });
 
-new ScrollMagic.Scene({ triggerElement: "#parallax1" })
-  .setTween("#parallax1 > div", { y: "80%", ease: Linear.easeNone })
-  .addTo(controller);
+if ($(window).width() >= 992 ) {
+  new ScrollMagic.Scene({ triggerElement: "#parallax1" })
+    .setTween("#parallax1 > div", { y: "80%", ease: Linear.easeNone })
+    .addTo(controller);
+}
+
+$('#catalog-time').change(function () {
+  let time = $(this).val();
+  let price = 300;
+  let currency = 27;
+  $('#catalog-price span').text(time * price);
+  $('#catalog-currency span').text((time * price) * currency).formatCurrency();
+});
 
 var galleryThumbs = new Swiper('.product__gallery-thumbs', {
   spaceBetween: 8,
@@ -127,8 +137,10 @@ var galleryThumbs = new Swiper('.product__gallery-thumbs', {
 });
 
 var galleryTop = new Swiper('.product__gallery-main', {
-  spaceBetween: 10,
+  spaceBetween: 16,
   loop: false,
+  slidesPerView: 'auto',
+  freeMode: true,
   //loopedSlides: 5,
   navigation: {
     prevEl: '.product__gallery__nav .prev',
@@ -141,6 +153,11 @@ var galleryTop = new Swiper('.product__gallery-main', {
   thumbs: {
     swiper: galleryThumbs,
   },
+  breakpoints: {
+    768: {
+      spaceBetween: 10,
+    },
+  }
 });
 
 var swiperReviews = new Swiper('.reviews .swiper-container', {
