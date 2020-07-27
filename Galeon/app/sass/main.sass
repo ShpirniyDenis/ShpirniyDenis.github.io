@@ -273,14 +273,24 @@ header
   span
     display: inline-block
     position: relative
-    transform: translateX(100%)
-    animation: marquee 7.5s linear -3.75s infinite forwards
+    animation: wt-btn_sign-marquee 2s linear infinite
+    padding: 0 15px
+    &:after
+      content: 'Арендовать яхту'
+      position: absolute
+      left: 100%
+      width: max-content
+      padding: 0 15px
 
-@keyframes marquee
-  0%
-    transform: translateX(100%)
-  100%
-    transform: translateX(-100%)
+
+@keyframes wt-btn_sign-marquee 
+	0% 
+		transform: translate3d(0, 0, 0)
+	100% 
+		transform: translate3d(-100%, 0, 0)
+	
+
+
 
 header
   @media screen and ( max-width: 768px )
@@ -885,7 +895,7 @@ footer
 //*** POPUP ***//
 .popup_container
   position: fixed
-  top: -200%
+  top: 0
   left: 0
   z-index: 10000
   display: flex
@@ -898,10 +908,18 @@ footer
   padding: 10px
   opacity: 0
   box-sizing: border-box
+  transition: all 0.3s ease-in-out
+  z-index: -10
   &.active
-    top: 0
     opacity: 1
-    transition: top 0.2s ease-in-out, opacity 1s ease-in-out
+    transition: all 0.3s ease-in-out
+    transition-delay: 0.1
+    z-index: 999999
+    .popup
+      bottom: 0
+      transition: all 0.6s ease-in-out
+      transition-delay: 0.1
+
 .popup_background
   position: absolute
   top: 0
@@ -909,7 +927,7 @@ footer
   z-index: 100
   width: 100%
   height: 100%
-  background-color: rgba(0, 0, 0, 0.7)
+  background-color: rgba(0, 0, 0, 0.6)
 .popup
   position: relative
   z-index: 200
@@ -917,7 +935,9 @@ footer
   max-width: 624px
   margin: auto
   background-color: #FFFFFF
+  bottom: -100vh
   border-radius: 20px
+  transition: all 0.6s ease-in-out
 .popup_close
   position: absolute
   top: 24px
@@ -1178,7 +1198,9 @@ footer
   height: 100%
   .mainContainer
     width: 100%
+    max-width: 100%
     height: 100%
+    padding: 0
     display: flex
     justify-content: center
     align-items: center
