@@ -78,7 +78,9 @@ $('.review-popup__nav .prev').click(function () {
 });
 
 // for preloader
-loader();
+window.onload = function () {
+  loader();
+};
 function loader(_success) {
   var obj = document.querySelector('.preloader'),
     inner = document.querySelector('.preloader__inner b'),
