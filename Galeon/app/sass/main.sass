@@ -1243,3 +1243,31 @@ footer
 @keyframes rotate 
   100% 
     transform: rotate(359deg)
+
+.request-popup__spinner 
+  padding-top: 60px
+  padding-bottom: 70px
+.spinner 
+  width: 60px
+  height: 60px
+  display: block
+  margin: 0 auto
+  color: #FEAE16
+  position: relative
+  box-sizing: border-box
+.spinner:after 
+  content: ""
+  width: 100%
+  height: 100%
+  display: inline-block
+  border: 4px solid #FEAE16
+  border-bottom-color: transparent
+  border-radius: 100%
+  background: transparent
+  animation: rotate .75s linear infinite
+  position: relative
+  box-sizing: border-box
+@keyframes spinner 
+  100% 
+    transform: rotate(359deg)
+  

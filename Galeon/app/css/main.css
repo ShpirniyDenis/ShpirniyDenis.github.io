@@ -1587,3 +1587,42 @@ footer {
   100% {
     -webkit-transform: rotate(359deg);
             transform: rotate(359deg); } }
+
+.request-popup__spinner {
+  padding-top: 60px;
+  padding-bottom: 70px; }
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+  color: #FEAE16;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.spinner:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  border: 4px solid #FEAE16;
+  border-bottom-color: transparent;
+  border-radius: 100%;
+  background: transparent;
+  -webkit-animation: rotate .75s linear infinite;
+          animation: rotate .75s linear infinite;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+@-webkit-keyframes spinner {
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg); } }
+
+@keyframes spinner {
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg); } }
