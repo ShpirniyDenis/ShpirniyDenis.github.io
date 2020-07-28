@@ -181,7 +181,7 @@ $("#rent-popup-form").submit(function () {
   let th = $(this);
   $.ajax({
     type: "POST",
-    url: "../contact.php",
+    url: "./contact.php",
     data: th.serialize()
   }).done(function () {
     setTimeout(function () {
@@ -199,7 +199,7 @@ $("#request-popup-form").submit(function () {
   let th = $(this);
   $.ajax({
     type: "POST",
-    url: "../contact.php",
+    url: "./contact.php",
     data: th.serialize()
   }).done(function () {
     setTimeout(function () {
