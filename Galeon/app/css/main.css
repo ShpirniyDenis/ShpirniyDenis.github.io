@@ -369,7 +369,11 @@ header {
   header .header__tel {
     display: none; }
   header .header__socials {
-    display: none; } }
+    display: none; }
+  header .header__link span:after, header .header__link span {
+    padding: 0 10px; }
+  header .header__link {
+    font-size: 14px; } }
 
 .catalog {
   padding-top: 156px;
