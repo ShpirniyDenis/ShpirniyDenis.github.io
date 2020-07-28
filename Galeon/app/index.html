@@ -374,10 +374,11 @@
         <div class="request-feedback__descr">
           <p>Оставьте заявку на обратный звонок, или напишите нам вопрос, который Вас интересует и мы свяжемся с Вами</p>
         </div>
-        <form action="#" class="request-feedback__form">
-          <input type="text" placeholder="Имя" required>
-          <input type="text" placeholder="Телефон" required>
-          <textarea name="comment" placeholder="Введите ваше сообщение"></textarea>
+        <form action="/contact.php" class="request-feedback__form" method="POST">
+          <input type="hidden" name="mail_type" value="contact_form">
+          <input type="text" name="name" placeholder="Имя" required>
+          <input type="text" name="phone" placeholder="Телефон" required>
+          <textarea name="message" placeholder="Введите ваше сообщение"></textarea>
           <button class="button_su">
             <span class="su_button_circle"></span>
             <div class="button_su_inner">
@@ -432,7 +433,8 @@
         <b>Обратная связь</b>
         <p>Оставьте заявку на обратный звонок, и мы свяжемся с Вами</p>
       </div>
-      <form class="request-popup__form" id="request-popup-form">
+      <form action="/contact.php" class="request-popup__form" id="request-popup-form" method="POST">
+        <input type="hidden" name="mail_type" value="call_request">
         <input type="text" placeholder="Имя" name="name" required>
         <input type="text" placeholder="Телефон" name="phone" required>
         <button class="button_su">
@@ -465,8 +467,9 @@
       <div class="request-popup__heading">
         <b>Аренда яхты</b>
       </div>
-      <form class="request-popup__form" id="rent-popup-form">
-        <select name="rent-popup-time">
+      <form action="/contact.php" class="request-popup__form" id="rent-popup-form" method="POST">
+        <input type="hidden" name="mail_type" value="yacht_rent">
+        <select name="duration">
           <option value="1" selected>1 час</option>
           <option value="2">2 часа</option>
           <option value="3">3 часа</option>
