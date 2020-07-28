@@ -1013,7 +1013,13 @@ header {
     .request-feedback .button_su {
       width: 100%; }
       .request-feedback .button_su .button_su_inner {
-        width: 100%; } }
+        width: 100%; }
+    .request-feedback .request-popup__ty, .request-feedback .request-popup__spinner {
+      padding-top: 40px;
+      padding-bottom: 40px; }
+    .request-feedback .request-popup__ty b {
+      font-size: 26px;
+      line-height: 37px; } }
 
 footer {
   background-color: #215369; }
@@ -1356,7 +1362,7 @@ footer {
     margin-bottom: 30px; }
   .request-popup .request-popup__heading p {
     margin-bottom: 25px; }
-  .request-popup .request-popup__ty {
+  .request-popup .request-popup__ty, .request-popup .request-popup__spinner {
     padding-top: 40px;
     padding-bottom: 40px; }
   .request-popup .request-popup__ty b {

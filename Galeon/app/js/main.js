@@ -212,3 +212,22 @@ $("#request-popup-form").submit(function () {
 });
 
 
+$("#request-feedback-form").submit(function () {
+  $('.request-feedback .request-popup__spinner').slideDown();
+  $('.request-feedback .request-popup__main').slideUp();
+  let th = $(this);
+  $.ajax({
+    type: "POST",
+    url: "./contact.php",
+    data: th.serialize()
+  }).done(function () {
+    setTimeout(function () {
+      $('.request-feedback .request-popup__spinner').slideUp();
+      $('.request-feedback .request-popup__ty').slideDown();
+      th.trigger("reset");
+    }, 1000);
+  });
+  return false;
+});
+
+
