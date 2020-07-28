@@ -373,7 +373,8 @@ header {
   header .header__link span:after, header .header__link span {
     padding: 0 10px; }
   header .header__link {
-    font-size: 14px; } }
+    font-size: 14px;
+    width: 173px; } }
 
 .catalog {
   padding-top: 156px;
