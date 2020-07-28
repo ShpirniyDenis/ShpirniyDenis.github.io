@@ -376,7 +376,9 @@ header {
     padding: 0 10px; }
   header .header__link {
     font-size: 14px;
-    width: 173px; } }
+    width: 173px;
+    display: block;
+    padding: 0; } }
 
 .catalog {
   padding-top: 156px;
