@@ -274,23 +274,21 @@ header
     display: inline-block
     position: relative
     animation: wt-btn_sign-marquee 3s linear infinite
-    padding: 0
+    padding: 0 15px
+    width: max-content
     &:after
       content: 'Арендовать яхту'
       position: absolute
       left: 100%
-      width: max-content
-      padding: 0
-      display: block
-      top: 0
-      margin-left: 15px
+      width: 100%
+      padding: 0 15px
 
 
 @keyframes wt-btn_sign-marquee 
 	0% 
 		transform: translate3d(0, 0, 0)
 	100% 
-		transform: translate3d(-100%, 0, 0)
+		transform: translate3d(-101%, 0, 0)
 
 
 header
@@ -299,10 +297,6 @@ header
       display: none
     .header__socials
       display: none
-    .header__link span:after, .header__link span
-      padding: 0 10px
-    .header__link
-      font-size: 14px
     
 
 //*** CATALOG ***//

@@ -339,44 +339,38 @@ header {
     position: relative;
     -webkit-animation: wt-btn_sign-marquee 3s linear infinite;
             animation: wt-btn_sign-marquee 3s linear infinite;
-    padding: 0; }
+    padding: 0 15px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content; }
     .header__link span:after {
       content: 'Арендовать яхту';
       position: absolute;
       left: 100%;
-      width: -webkit-max-content;
-      width: -moz-max-content;
-      width: max-content;
-      padding: 0;
-      display: block;
-      top: 0;
-      margin-left: 15px; }
+      width: 100%;
+      padding: 0 15px; }
 
 @-webkit-keyframes wt-btn_sign-marquee {
   0% {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0); }
   100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0); } }
+    -webkit-transform: translate3d(-101%, 0, 0);
+            transform: translate3d(-101%, 0, 0); } }
 
 @keyframes wt-btn_sign-marquee {
   0% {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0); }
   100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0); } }
+    -webkit-transform: translate3d(-101%, 0, 0);
+            transform: translate3d(-101%, 0, 0); } }
 
 @media screen and (max-width: 768px) {
   header .header__tel {
     display: none; }
   header .header__socials {
-    display: none; }
-  header .header__link span:after, header .header__link span {
-    padding: 0 10px; }
-  header .header__link {
-    font-size: 14px; } }
+    display: none; } }
 
 .catalog {
   padding-top: 156px;
