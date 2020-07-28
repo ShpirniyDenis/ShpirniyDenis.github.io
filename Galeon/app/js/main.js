@@ -214,7 +214,7 @@ $("#request-popup-form").submit(function () {
 
 $("#request-feedback-form").submit(function () {
   $('.request-feedback .request-popup__spinner').slideDown();
-  $('.request-feedback .request-popup__main').slideUp();
+  $('.request-feedback .request-feedback__main').slideUp();
   let th = $(this);
   $.ajax({
     type: "POST",
