@@ -347,7 +347,9 @@ header {
       width: -webkit-max-content;
       width: -moz-max-content;
       width: max-content;
-      padding: 0 15px; }
+      padding: 0 15px;
+      display: block;
+      top: 0; }
 
 @-webkit-keyframes wt-btn_sign-marquee {
   0% {
