@@ -339,7 +339,7 @@ header {
     position: relative;
     -webkit-animation: wt-btn_sign-marquee 3s linear infinite;
             animation: wt-btn_sign-marquee 3s linear infinite;
-    padding: 0 15px; }
+    padding: 0; }
     .header__link span:after {
       content: 'Арендовать яхту';
       position: absolute;
@@ -347,9 +347,10 @@ header {
       width: -webkit-max-content;
       width: -moz-max-content;
       width: max-content;
-      padding: 0 15px;
+      padding: 0;
       display: block;
-      top: 0; }
+      top: 0;
+      margin-left: 15px; }
 
 @-webkit-keyframes wt-btn_sign-marquee {
   0% {
@@ -375,10 +376,7 @@ header {
   header .header__link span:after, header .header__link span {
     padding: 0 10px; }
   header .header__link {
-    font-size: 14px;
-    width: 173px;
-    display: block;
-    padding: 0; } }
+    font-size: 14px; } }
 
 .catalog {
   padding-top: 156px;
