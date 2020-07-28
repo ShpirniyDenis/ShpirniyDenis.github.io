@@ -175,6 +175,32 @@ var swiperReviews = new Swiper('.reviews .swiper-container', {
   }
 });
 
+$("#rent-popup-form").submit(function () {
+  let th = $(this);
+  $.ajax({
+    type: "POST",
+    url: "/contact.php",
+    data: th.serialize()
+  }).done(function () {
+    $('#rent-popup .request-popup__form').slideUp();
+    $('#rent-popup .request-popup__ty ').slideDown();
+    th.trigger("reset");
+  });
+  return false;
+});
 
+$("#request-popup-form").submit(function () {
+  let th = $(this);
+  $.ajax({
+    type: "POST",
+    url: "/contact.php",
+    data: th.serialize()
+  }).done(function () {
+    $('#request-popup .request-popup__form').slideUp();
+    $('#request-popup .request-popup__ty ').slideDown();
+    th.trigger("reset");
+  });
+  return false;
+});
 
 

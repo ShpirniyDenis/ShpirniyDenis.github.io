@@ -433,7 +433,7 @@
         <b>Обратная связь</b>
         <p>Оставьте заявку на обратный звонок, и мы свяжемся с Вами</p>
       </div>
-      <form action="/contact.php" class="request-popup__form" id="request-popup-form" method="POST">
+      <form class="request-popup__form" id="request-popup-form">
         <input type="hidden" name="mail_type" value="call_request">
         <input type="text" placeholder="Имя" name="name" required>
         <input type="text" placeholder="Телефон" name="phone" required>
@@ -467,7 +467,7 @@
       <div class="request-popup__heading">
         <b>Аренда яхты</b>
       </div>
-      <form action="/contact.php" class="request-popup__form" id="rent-popup-form" method="POST">
+      <form class="request-popup__form" id="rent-popup-form">
         <input type="hidden" name="mail_type" value="yacht_rent">
         <select name="duration">
           <option value="1" selected>1 час</option>
