@@ -22,7 +22,7 @@ abstract class Mailer
     protected function initMail() : void
     {
         $this->mail = new PHPMailer(true);
-        $this->mail->SMTPDebug = SMTP::DEBUG_SERVER;
+        $this->mail->SMTPDebug = MAIL_DEBUG;
         $this->mail->isSMTP();
         $this->mail->Host = SMTP_SERVER;
         $this->mail->SMTPAuth = true;
