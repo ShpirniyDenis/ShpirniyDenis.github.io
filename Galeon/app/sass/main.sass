@@ -35,6 +35,9 @@ input,button, textarea
   font-family: $font_main_regular
   color: $color_font_black
   font-size: 14px
+  box-shadow: none !important
+  &:focus
+    box-shadow: none !important
 
 .bg-grey
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #EBEFF5 100%)
@@ -759,11 +762,13 @@ header
     transition: all 0.2s
     background: #fff
     border: 1px solid transparent
+    box-shadow: none !important
     &::placeholder
       color: rgba(36, 43, 69, 0.5)
     &:focus
       border: 1px solid #215369
       background: #fff
+      box-shadow: none !important
       &::placeholder
         color: transparent
   textarea
@@ -806,6 +811,7 @@ header
       width: 100%
     .request-feedback__form input
       font-size: 14px
+      box-shadow: none !important
     .request-feedback__form textarea
       font-size: 14px
     .button_su
@@ -989,6 +995,7 @@ footer
     padding: 0 12px
     transition: all 0.2s
     border: 1px solid transparent
+    box-shadow: none !important
     &:last-child
       margin-bottom: 0
     &::placeholder

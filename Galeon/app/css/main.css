@@ -26,7 +26,12 @@ body {
 input, button, textarea {
   font-family: "Gilroy Regular", sans-serif;
   color: #242B45;
-  font-size: 14px; }
+  font-size: 14px;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important; }
+  input:focus, button:focus, textarea:focus {
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important; }
 
 .bg-grey {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#EBEFF5));
@@ -944,7 +949,9 @@ header {
   -o-transition: all 0.2s;
   transition: all 0.2s;
   background: #fff;
-  border: 1px solid transparent; }
+  border: 1px solid transparent;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important; }
   .request-feedback__form input::-webkit-input-placeholder {
     color: rgba(36, 43, 69, 0.5); }
   .request-feedback__form input::-moz-placeholder {
@@ -957,7 +964,9 @@ header {
     color: rgba(36, 43, 69, 0.5); }
   .request-feedback__form input:focus {
     border: 1px solid #215369;
-    background: #fff; }
+    background: #fff;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important; }
     .request-feedback__form input:focus::-webkit-input-placeholder {
       color: transparent; }
     .request-feedback__form input:focus::-moz-placeholder {
@@ -1029,7 +1038,9 @@ header {
     .request-feedback .request-feedback__wrapp {
       width: 100%; }
     .request-feedback .request-feedback__form input {
-      font-size: 14px; }
+      font-size: 14px;
+      -webkit-box-shadow: none !important;
+              box-shadow: none !important; }
     .request-feedback .request-feedback__form textarea {
       font-size: 14px; }
     .request-feedback .button_su {
@@ -1257,7 +1268,9 @@ footer {
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
-  border: 1px solid transparent; }
+  border: 1px solid transparent;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important; }
   .request-popup__form input:last-child {
     margin-bottom: 0; }
   .request-popup__form input::-webkit-input-placeholder {
