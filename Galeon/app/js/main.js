@@ -231,3 +231,14 @@ $("#request-feedback-form").submit(function () {
 });
 
 
+
+$('.header__socials a').on("mousemove", function (e) {
+  console.log(e.clientX);
+  var x = e.pageX - $(this).offset().left;
+  var y = e.pageY - $(this).offset().top;
+  var newposX = x - 10;
+  var newposY = y - 10;
+  $(this).find("svg").css("transform", "translate3d(" + newposX + "px," + newposY + "px,0px)");
+}).on("mouseleave", function () {
+  $(this).find("svg").css('transform', 'translate3d(25px, 22px, 0)');
+});
