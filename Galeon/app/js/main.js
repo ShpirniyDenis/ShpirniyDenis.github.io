@@ -184,6 +184,11 @@ $("#rent-popup-form").submit(function () {
     url: "./contact.php",
     data: th.serialize()
   }).done(function () {
+    dataLayer.push({
+      'event': 'GAevent',
+      'eventCategory': 'Form',
+      'eventAction': 'Submit'
+    });
     setTimeout(function () {
       $('#rent-popup .request-popup__spinner').slideUp();
       $('#rent-popup .request-popup__ty').slideDown();
@@ -202,6 +207,11 @@ $("#request-popup-form").submit(function () {
     url: "./contact.php",
     data: th.serialize()
   }).done(function () {
+    dataLayer.push({
+      'event': 'GAevent',
+      'eventCategory': 'Form',
+      'eventAction': 'Submit'
+    });
     setTimeout(function () {
       $('#request-popup .request-popup__spinner').slideUp();
       $('#request-popup .request-popup__ty').slideDown();
@@ -221,6 +231,11 @@ $("#request-feedback-form").submit(function () {
     url: "./contact.php",
     data: th.serialize()
   }).done(function () {
+    dataLayer.push({
+      'event': 'GAevent',
+      'eventCategory': 'Form',
+      'eventAction': 'Submit'
+    });
     setTimeout(function () {
       $('.request-feedback .request-popup__spinner').slideUp();
       $('.request-feedback .request-popup__ty').slideDown();
