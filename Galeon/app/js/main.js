@@ -115,8 +115,8 @@ if ($(window).width() >= 992 ) {
 // for calculate-price
 $('#catalog-time').change(function () {
   let time = $(this).val();
-  let price = 300;
-  let currency = 27;
+  let price = 250;
+  let currency = 27.3;
   $('#catalog-price span').text(time * price);
   $('#catalog-currency span').text((time * price) * currency).formatCurrency();
 });
