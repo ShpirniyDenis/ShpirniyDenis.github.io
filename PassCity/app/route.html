@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="content_language" content="ru">
+  <meta name="description" content="Pass City - результат поиска"> 
+  <title>Pass City - результат поиска</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="libs/swiperjs/swiper.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head> 
+ 
+<body>
+
+<header>
+  <div class="mainContainer">
+    <div class="header__wrapp">
+      <a href="" class="header__logo">
+        <img src="img/header-logo.png" alt="logo">
+      </a>
+      <div class="header__info">
+        <div class="header__language">
+          <span>RU</span>
+        </div>
+        <button class="header__support">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M1 11.6667C1 12.1382 1.1873 12.5903 1.5207 12.9237C1.8541 13.2571 2.30628 13.4444 2.77778 13.4444H13.4444L17 17V2.77778C17 2.30628 16.8127 1.8541 16.4793 1.5207C16.1459 1.1873 15.6937 1 15.2222 1H2.77778C2.30628 1 1.8541 1.1873 1.5207 1.5207C1.1873 1.8541 1 2.30628 1 2.77778V11.6667Z"
+              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <circle r="1" transform="matrix(-1 0 0 1 13 7)" fill="white" />
+            <circle r="1" transform="matrix(-1 0 0 1 9 7)" fill="white" />
+            <circle r="1" transform="matrix(-1 0 0 1 5 7)" fill="white" />
+          </svg>
+          Служба поддержки
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ROUTE-BANNER -->
+<section class="route-banner">
+  <div class="mainContainer">
+    <div class="route-banner__content">
+      <div class="route-banner__info">
+        <span>Билеты на автобус:</span>
+        <p>Киев - Одесса</p>
+      </div>
+      <button class="add_favorites">
+        <img src="img/icons/star-icon.svg" alt="">
+        Добавить в избранное
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ROUTE-SECTION -->
+<section class="route-section">
+  <div class="mainContainer">
+    <div class="searchbar">
+      <div class="searchbar__wrapp">
+        <div class="searchbar__item from">
+          <input type="text" placeholder="Откуда?" value="Киев">
+        </div>
+        <span class="delimiter">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.5" clip-path="url(#clip0)">
+              <path d="M0.666504 2.66675V6.66675H4.6665" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M15.3335 13.3333V9.33325H11.3335" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M13.6598 5.99989C13.3217 5.04441 12.7471 4.19016 11.9895 3.51683C11.232 2.84351 10.3162 2.37306 9.32765 2.14939C8.3391 1.92572 7.31 1.95612 6.33638 2.23774C5.36275 2.51936 4.47634 3.04303 3.75984 3.75989L0.666504 6.66655M15.3332 9.33322L12.2398 12.2399C11.5233 12.9567 10.6369 13.4804 9.6633 13.762C8.68967 14.0437 7.66058 14.0741 6.67203 13.8504C5.68348 13.6267 4.7677 13.1563 4.01015 12.4829C3.25259 11.8096 2.67795 10.9554 2.33984 9.99989"
+                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+            <defs>
+              <clipPath id="clip0">
+                <rect width="16" height="16" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </span>
+        <div class="searchbar__item where">
+          <input type="text" placeholder="Куда?" value="Одесса">
+        </div>
+        <div class="searchbar__item date active">
+          <input type="text" placeholder="Дата">
+          <span class="data-value">12.08.Ср.</span>
+        </div>
+        <button class="btn-search">Найти билеты</button>
+      </div>
+      <div class="searchbar__dates">
+        <a href="#">11 Авг, вт</a>
+        <a href="#" class="active">12 Авг, ср</a>
+        <a href="#">13 Авг, чт</a>
+        <a href="#">14 Авг, пт</a>
+        <a href="#">15 Авг, сб</a>
+      </div>
+    </div>
+
+    <div class="route-results">
+      <div class="result active">
+        <div class="result-content">
+          <div class="result__info">
+            <div class="result__route">
+              <div class="result__route__item">
+                <div class="city">Киев Автовокзал</div>
+                <div class="street">пр-т Науки, 1/2</div>
+              </div>
+              <div class="result__route__item">
+                <div class="city">Одесса Автовокзал</div>
+                <div class="street">ул. Колонтаевская, 58</div>
+              </div>
+            </div>
+            <div class="result__date">
+              <div class="result__date__item">
+                <div class="time">06:10</div>
+                <div class="date">12 Авг, ср</div>
+              </div>
+              <div class="result__date__way">
+                <div class="result__date__way__wrapp">
+                  <span class="from"></span>
+                  <span class="time">7ч 55 мин</span>
+                  <span class="where"></span>
+                </div>
+                <figure>
+                  <svg width="530" height="14" viewBox="0 0 530 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 7L528 7.00005" stroke="#5ABDD4" stroke-width="2" />
+                    <circle cx="6" cy="7" r="5" stroke="#5ABDD4" stroke-width="2" />
+                    <path d="M522 1L528 7L522 13" stroke="#5ABDD4" stroke-width="2" />
+                  </svg>
+                </figure>
+              </div>
+              <div class="result__date__item">
+                <div class="time">14:05</div>
+                <div class="date">12 Авг, ср</div>
+              </div>
+            </div>
+            <div class="result__details">
+              <div class="number">№ 0211</div>
+              <div class="company">
+                <span>Перевозчик:</span>
+                <b>passcity</b>
+              </div>
+            </div>
+          </div>
+          <div class="result__price">
+            <p>Стоимость</p>
+            <div class="value">404.0 грн</div>
+            <p>Осталось билетов: <span>9</span></p>
+            <button class="main-btn">Оформить</button>
+          </div>
+        </div>
+        <div class="result-details">
+          <div class="result-details__way">
+            <div class="result-details__way__item">
+              <div class="time">06:10</div>
+              <i></i>
+              <div class="location">Киев</div>
+            </div>
+            <div class="result-details__way__item">
+              <div class="time">08:35</div>
+              <i></i>
+              <div class="location">Жашков</div>
+            </div>
+            <div class="result-details__way__item">
+              <div class="time">10:00</div>
+              <i></i>
+              <div class="location">Умань</div>
+            </div>
+            <div class="result-details__way__item">
+              <div class="time">11:45</div>
+              <i></i>
+              <div class="location">Любашевка</div>
+            </div>
+            <div class="result-details__way__item">
+              <div class="time">14:05</div>
+              <i></i>
+              <div class="location">Одеса</div>
+            </div>
+          </div>
+          <div class="result-details__auto">
+            <div class="result-details__auto__info">
+              <p>Модель автобуса:</p>
+              <div class="model">Mercedes-Benz 313D</div>
+            </div>
+            <div class="result-details__auto__hint">
+              <span>Перевозчик предоставляет обменный бланк</span>
+              <i></i>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="result-details-toggler">
+          <span>Подробнее</span>
+        </button>
+      </div>
+
+      <div class="result">
+        <div class="result-content">
+          <div class="result__info">
+            <div class="result__route">
+              <div class="result__route__item">
+                <div class="city">Киев Автовокзал</div>
+                <div class="street">пр-т Науки, 1/2</div>
+              </div>
+              <div class="result__route__item">
+                <div class="city">Одесса Автовокзал</div>
+                <div class="street">ул. Колонтаевская, 58</div>
+              </div>
+            </div>
+            <div class="result__date">
+              <div class="result__date__item">
+                <div class="time">08:00</div>
+                <div class="date">12 Авг, ср</div>
+              </div>
+              <div class="result__date__way">
+                <div class="result__date__way__wrapp">
+                  <span class="from"></span>
+                  <span class="time">6ч 0 мин</span>
+                  <span class="where"></span>
+                </div>
+                <figure>
+                  <svg width="530" height="14" viewBox="0 0 530 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 7L528 7.00005" stroke="#5ABDD4" stroke-width="2" />
+                    <circle cx="6" cy="7" r="5" stroke="#5ABDD4" stroke-width="2" />
+                    <path d="M522 1L528 7L522 13" stroke="#5ABDD4" stroke-width="2" />
+                  </svg>
+                </figure>
+              </div>
+              <div class="result__date__item">
+                <div class="time">14:00</div>
+                <div class="date">12 Авг, ср</div>
+              </div>
+            </div>
+            <div class="result__details">
+              <div class="number">№ 0243</div>
+              <div class="company">
+                <span>Перевозчик:</span>
+                <b>passcity</b>
+              </div>
+            </div>
+          </div>
+          <div class="result__price">
+            <p>Стоимость</p>
+            <div class="value">500.0 грн</div>
+            <p>Осталось билетов: <span>6</span></p>
+            <button class="main-btn">Оформить</button>
+          </div>
+        </div>
+        <div class="result-details">
+          <div class="result-details__way">
+            <div class="result-details__way__item">
+              <div class="time">06:10</div>
+              <i></i>
+              <div class="location">Киев</div>
+            </div>
+            <div class="result-details__way__item">
+              <div class="time">08:35</div>
+              <i></i>
+              <div class="location">Жашков</div>
+            </div>
+            <div class="result-details__way__item">
+              <div class="time">10:00</div>
+              <i></i>
+              <div class="location">Умань</div>
+            </div>
+            <div class="result-details__way__item">
+              <div class="time">11:45</div>
+              <i></i>
+              <div class="location">Любашевка</div>
+            </div>
+            <div class="result-details__way__item">
+              <div class="time">14:05</div>
+              <i></i>
+              <div class="location">Одеса</div>
+            </div>
+          </div>
+          <div class="result-details__auto">
+            <div class="result-details__auto__info">
+              <p>Модель автобуса:</p>
+              <div class="model">Mercedes-Benz 313D</div>
+            </div>
+            <div class="result-details__auto__hint">
+              <span>Перевозчик предоставляет обменный бланк</span>
+              <i></i>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="result-details-toggler">
+          <span>Подробнее</span>
+        </button>
+      </div>
+
+      <div class="result">
+        <div class="result-content">
+          <div class="result__info">
+            <div class="result__route">
+              <div class="result__route__item">
+                <div class="city">Киев Автовокзал</div>
+                <div class="street">пр-т Науки, 1/2</div>
+              </div>
+              <div class="result__route__item">
+                <div class="city">Одесса Автовокзал</div>
+                <div class="street">ул. Колонтаевская, 58</div>
+              </div>
+            </div>
+            <div class="result__date">
+              <div class="result__date__item">
+                <div class="time">06:10</div>
+                <div class="date">12 Авг, ср</div>
+              </div>
+              <div class="result__date__way">
+                <div class="result__date__way__wrapp">
+                  <span class="from"></span>
+                  <span class="time">7ч 55 мин</span>
+                  <span class="where"></span>
+                </div>
+                <figure>
+                  <svg width="530" height="14" viewBox="0 0 530 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 7L528 7.00005" stroke="#5ABDD4" stroke-width="2" />
+                    <circle cx="6" cy="7" r="5" stroke="#5ABDD4" stroke-width="2" />
+                    <path d="M522 1L528 7L522 13" stroke="#5ABDD4" stroke-width="2" />
+                  </svg>
+                </figure>
+              </div>
+              <div class="result__date__item">
+                <div class="time">14:05</div>
+                <div class="date">12 Авг, ср</div>
+              </div>
+            </div>
+            <div class="result__details">
+              <div class="number">№ 0211</div>
+              <div class="company">
+                <span>Перевозчик:</span>
+                <b>passcity</b>
+              </div>
+            </div>
+          </div>
+          <div class="result__price">
+            <p>Стоимость</p>
+            <div class="value">404.0 грн</div>
+            <p>Осталось билетов: <span>9</span></p>
+            <button class="main-btn">Оформить</button>
+          </div>
+        </div>
+        <div class="result-details">
+          <div class="result-details__way">
+            <div class="result-details__way__item">
+              <div class="time">06:10</div>
+              <i></i>
+              <div class="location">Киев</div>
+            </div>
+            <div class="result-details__way__item">
+              <div class="time">08:35</div>
+              <i></i>
+              <div class="location">Жашков</div>
+            </div>
+            <div class="result-details__way__item">
+              <div class="time">10:00</div>
+              <i></i>
+              <div class="location">Умань</div>
+            </div>
+            <div class="result-details__way__item">
+              <div class="time">11:45</div>
+              <i></i>
+              <div class="location">Любашевка</div>
+            </div>
+            <div class="result-details__way__item">
+              <div class="time">14:05</div>
+              <i></i>
+              <div class="location">Одеса</div>
+            </div>
+          </div>
+          <div class="result-details__auto">
+            <div class="result-details__auto__info">
+              <p>Модель автобуса:</p>
+              <div class="model">Mercedes-Benz 313D</div>
+            </div>
+            <div class="result-details__auto__hint">
+              <span>Перевозчик предоставляет обменный бланк</span>
+              <i></i>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="result-details-toggler">
+          <span>Подробнее</span>
+        </button>
+      </div>
+      
+      <div class="result">
+        <div class="result-content">
+          <div class="result__info">
+            <div class="result__route">
+              <div class="result__route__item">
+                <div class="city">Киев Автовокзал</div>
+                <div class="street">пр-т Науки, 1/2</div>
+              </div>
+              <div class="result__route__item">
+                <div class="city">Одесса Автовокзал</div>
+                <div class="street">ул. Колонтаевская, 58</div>
+              </div>
+            </div>
+            <div class="result__date">
+              <div class="result__date__item">
+                <div class="time">08:00</div>
+                <div class="date">12 Авг, ср</div>
+              </div>
+              <div class="result__date__way">
+                <div class="result__date__way__wrapp">
+                  <span class="from"></span>
+                  <span class="time">6ч 0 мин</span>
+                  <span class="where"></span>
+                </div>
+                <figure>
+                  <svg width="530" height="14" viewBox="0 0 530 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 7L528 7.00005" stroke="#5ABDD4" stroke-width="2" />
+                    <circle cx="6" cy="7" r="5" stroke="#5ABDD4" stroke-width="2" />
+                    <path d="M522 1L528 7L522 13" stroke="#5ABDD4" stroke-width="2" />
+                  </svg>
+                </figure>
+              </div>
+              <div class="result__date__item">
+                <div class="time">14:00</div>
+                <div class="date">12 Авг, ср</div>
+              </div>
+            </div>
+            <div class="result__details">
+              <div class="number">№ 0243</div>
+              <div class="company">
+                <span>Перевозчик:</span>
+                <b>passcity</b>
+              </div>
+            </div>
+          </div>
+          <div class="result__price">
+            <p>Стоимость</p>
+            <div class="value">500.0 грн</div>
+            <p>Осталось билетов: <span>6</span></p>
+            <button class="main-btn">Оформить</button>
+          </div>
+        </div>
+        <div class="result-details">
+          <div class="result-details__way">
+            <div class="result-details__way__item">
+              <div class="time">06:10</div>
+              <i></i>
+              <div class="location">Киев</div>
+            </div>
+            <div class="result-details__way__item">
+              <div class="time">08:35</div>
+              <i></i>
+              <div class="location">Жашков</div>
+            </div>
+            <div class="result-details__way__item">
+              <div class="time">10:00</div>
+              <i></i>
+              <div class="location">Умань</div>
+            </div>
+            <div class="result-details__way__item">
+              <div class="time">11:45</div>
+              <i></i>
+              <div class="location">Любашевка</div>
+            </div>
+            <div class="result-details__way__item">
+              <div class="time">14:05</div>
+              <i></i>
+              <div class="location">Одеса</div>
+            </div>
+          </div>
+          <div class="result-details__auto">
+            <div class="result-details__auto__info">
+              <p>Модель автобуса:</p>
+              <div class="model">Mercedes-Benz 313D</div>
+            </div>
+            <div class="result-details__auto__hint">
+              <span>Перевозчик предоставляет обменный бланк</span>
+              <i></i>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="result-details-toggler">
+          <span>Подробнее</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ACTUAL-TRIPS -->
+<section class="actual-trips bg-grey">
+  <div class="mainContainer">
+    <div class="section-heading">
+      <h2>Популярные маршруты</h2>
+    </div>
+
+    <div class="actual-trips__list">
+      <div class="actual-trips__item">
+        <div class="actual-trips__way">
+          <div class="from">
+            <img src="img/icons/from-icon.svg" alt="from">
+            <span>Чернигов</span>
+          </div>
+          <div class="delimiter">
+            <svg width="364" height="14" viewBox="0 0 360 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 7L358 7.00003" stroke="#5ABDD4" stroke-width="2" />
+              <path d="M352 1L358 7L352 13" stroke="#5ABDD4" stroke-width="2" />
+              <circle cx="6" cy="7" r="5" stroke="#5ABDD4" stroke-width="2" />
+            </svg>
+          </div>
+          <div class="where">
+            <img src="img/icons/location-icon.svg" alt="where">
+            <span>Киев</span>
+          </div>
+        </div>
+        <div class="actual-trips__time">
+          <img src="img/icons/time-icon.svg" alt="time">
+          <span>В пути: <b>1ч 45 мин</b></span>
+        </div>
+        <div class="actual-trips__price">
+          <img src="img/icons/price-icon.svg" alt="price">
+          <span>от: <b>120 грн</b></span>
+        </div>
+      </div>
+
+      <div class="actual-trips__item">
+        <div class="actual-trips__way">
+          <div class="from">
+            <img src="img/icons/from-icon.svg" alt="from">
+            <span>Киев</span>
+          </div>
+          <div class="delimiter">
+            <svg width="364" height="14" viewBox="0 0 360 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 7L358 7.00003" stroke="#5ABDD4" stroke-width="2" />
+              <path d="M352 1L358 7L352 13" stroke="#5ABDD4" stroke-width="2" />
+              <circle cx="6" cy="7" r="5" stroke="#5ABDD4" stroke-width="2" />
+            </svg>
+          </div>
+          <div class="where">
+            <img src="img/icons/location-icon.svg" alt="where">
+            <span>Одеса</span>
+          </div>
+        </div>
+        <div class="actual-trips__time">
+          <img src="img/icons/time-icon.svg" alt="time">
+          <span>В пути: <b>7ч 55 мин</b></span>
+        </div>
+        <div class="actual-trips__price">
+          <img src="img/icons/price-icon.svg" alt="price">
+          <span>от: <b>319 грн</b></span>
+        </div>
+      </div>
+
+      <div class="actual-trips__item">
+        <div class="actual-trips__way">
+          <div class="from">
+            <img src="img/icons/from-icon.svg" alt="from">
+            <span>Николаев</span>
+          </div>
+          <div class="delimiter">
+            <svg width="364" height="14" viewBox="0 0 360 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 7L358 7.00003" stroke="#5ABDD4" stroke-width="2" />
+              <path d="M352 1L358 7L352 13" stroke="#5ABDD4" stroke-width="2" />
+              <circle cx="6" cy="7" r="5" stroke="#5ABDD4" stroke-width="2" />
+            </svg>
+          </div>
+          <div class="where">
+            <img src="img/icons/location-icon.svg" alt="where">
+            <span>Днепр</span>
+          </div>
+        </div>
+        <div class="actual-trips__time">
+          <img src="img/icons/time-icon.svg" alt="time">
+          <span>В пути: <b>7ч 0 мин</b></span>
+        </div>
+        <div class="actual-trips__price">
+          <img src="img/icons/price-icon.svg" alt="price">
+          <span>от: <b>256 грн</b></span>
+        </div>
+      </div>
+
+      <div class="actual-trips__item">
+        <div class="actual-trips__way">
+          <div class="from">
+            <img src="img/icons/from-icon.svg" alt="from">
+            <span>Киев</span>
+          </div>
+          <div class="delimiter">
+            <svg width="364" height="14" viewBox="0 0 360 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 7L358 7.00003" stroke="#5ABDD4" stroke-width="2" />
+              <path d="M352 1L358 7L352 13" stroke="#5ABDD4" stroke-width="2" />
+              <circle cx="6" cy="7" r="5" stroke="#5ABDD4" stroke-width="2" />
+            </svg>
+          </div>
+          <div class="where">
+            <img src="img/icons/location-icon.svg" alt="where">
+            <span>Днепр</span>
+          </div>
+        </div>
+        <div class="actual-trips__time">
+          <img src="img/icons/time-icon.svg" alt="time">
+          <span>В пути: <b>9ч 40 мин</b></span>
+        </div>
+        <div class="actual-trips__price">
+          <img src="img/icons/price-icon.svg" alt="price">
+          <span>от: <b>302 грн</b></span>
+        </div>
+      </div>
+
+      <div class="actual-trips__item">
+        <div class="actual-trips__way">
+          <div class="from">
+            <img src="img/icons/from-icon.svg" alt="from">
+            <span>Николаев</span>
+          </div>
+          <div class="delimiter">
+            <svg width="364" height="14" viewBox="0 0 360 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 7L358 7.00003" stroke="#5ABDD4" stroke-width="2" />
+              <path d="M352 1L358 7L352 13" stroke="#5ABDD4" stroke-width="2" />
+              <circle cx="6" cy="7" r="5" stroke="#5ABDD4" stroke-width="2" />
+            </svg>
+          </div>
+          <div class="where">
+            <img src="img/icons/location-icon.svg" alt="where">
+            <span>Херсон</span>
+          </div>
+        </div>
+        <div class="actual-trips__time">
+          <img src="img/icons/time-icon.svg" alt="time">
+          <span>В пути: <b>1ч 5 мин</b></span>
+        </div>
+        <div class="actual-trips__price">
+          <img src="img/icons/price-icon.svg" alt="price">
+          <span>от: <b>46 грн</b></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+</main>
+
+<footer>
+  <div class="mainContainer">
+    <div class="footer__wrapp">
+      <div class="footer__info">
+        <a href="#" class="footer__logo">
+          <img src="img/footer-logo.png" alt="">
+        </a>
+        <div class="footer__info__descr">ООО "КоДрайв" © 2016 - 2020</div>
+      </div>
+      <div class="footer__nav">
+        <div class="footer__nav__item">
+          <div class="footer__nav__heading">
+            О компании
+          </div>
+          <ul>
+            <li><a href="">Обратная связь</a></li>
+            <li><a href="">Договор оферты</a></li>
+            <li><a href="">Политика<br> конфиденциальности</a></li>
+            <li><a href=""><b>Условия использования</b></a></li>
+          </ul>
+        </div>
+        <div class="footer__nav__item">
+          <div class="footer__nav__heading">
+            Пользователям
+          </div>
+          <ul>
+            <li><a href="">Авторизация</a></li>
+            <li><a href="">Акции</a></li>
+            <li><a href="">Блог</a></li>
+            <li><a href="">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__subscribe">
+        <form action="">
+          <b>Подписка</b>
+          <p>Подпишитесь на рассылку, чтобы первым получать интересные предложения, новости и скидки.</p>
+          <input type="text" placeholder="Email">
+        </form>
+        <div class="footer__socials">
+          <a href=""><img src="img/icons/fb-icon.svg" alt=""></a>
+          <a href=""><img src="img/icons/inst-icon.svg" alt=""></a>
+          <a href=""><img src="img/icons/tg-icon.svg" alt=""></a>
+          <a href=""><img src="img/icons/vb-icon.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="footer-pay">
+  <div class="mainContainer">
+    <div class="footer-pay__wrapp">
+      <p>Можно оплатить с помощью:</p>
+      <div class="footer-pay__list">
+        <img src="img/icons/master-card-icon.png" alt="">
+        <img src="img/icons/visa-icon.png" alt="">
+        <img src="img/icons/liqpay-icon.png" alt="">
+        <img src="img/icons/wayforpay-icon2.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// For showMore-toogler
+  let resultToggler = document.querySelectorAll('.result-details-toggler');
+
+  function showDetails() {
+    this.closest('.result').classList.toggle('active');
+  }
+
+  for (i = 0; i < resultToggler.length; i++) {
+    resultToggler[i].addEventListener('click', showDetails);
+  }
+</script>
+</body>
+</html>

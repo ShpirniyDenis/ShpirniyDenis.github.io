@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="content_language" content="ru">
+  <meta name="description" content="Pass City - пассажирские перевозки"> 
+  <title>Pass City - пассажирские перевозки</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="libs/swiperjs/swiper.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head> 
+ 
+<body>
+
+<header>
+  <div class="mainContainer">
+    <div class="header__wrapp">
+      <a href="" class="header__logo">
+        <img src="img/header-logo.png" alt="logo">
+      </a>
+      <div class="header__info">
+        <div class="header__language">
+          <span>RU</span>
+        </div>
+        <button class="header__support">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M1 11.6667C1 12.1382 1.1873 12.5903 1.5207 12.9237C1.8541 13.2571 2.30628 13.4444 2.77778 13.4444H13.4444L17 17V2.77778C17 2.30628 16.8127 1.8541 16.4793 1.5207C16.1459 1.1873 15.6937 1 15.2222 1H2.77778C2.30628 1 1.8541 1.1873 1.5207 1.5207C1.1873 1.8541 1 2.30628 1 2.77778V11.6667Z"
+              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <circle r="1" transform="matrix(-1 0 0 1 13 7)" fill="white" />
+            <circle r="1" transform="matrix(-1 0 0 1 9 7)" fill="white" />
+            <circle r="1" transform="matrix(-1 0 0 1 5 7)" fill="white" />
+          </svg>
+          Служба поддержки
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- MAIN-BANNER -->
+<section class="main-banner">
+  <div class="mainContainer">
+    <div class="main-banner__content">
+      <div class="searchbar-nav">
+        <button class="active">
+          <img src="img/icons/search-icon.svg" alt="">
+          Поиск билетов
+        </button>
+        <button>
+          <img src="img/icons/filter-icon.svg" alt="">
+          Расписание
+        </button>
+      </div>
+      <div class="searchbar">
+        <div class="searchbar__wrapp">
+          <div class="searchbar__item from">
+            <input type="text" placeholder="Откуда?">
+          </div>
+          <span class="delimiter">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g opacity="0.5" clip-path="url(#clip0)">
+                <path d="M0.666504 2.66675V6.66675H4.6665" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M15.3335 13.3333V9.33325H11.3335" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M13.6598 5.99989C13.3217 5.04441 12.7471 4.19016 11.9895 3.51683C11.232 2.84351 10.3162 2.37306 9.32765 2.14939C8.3391 1.92572 7.31 1.95612 6.33638 2.23774C5.36275 2.51936 4.47634 3.04303 3.75984 3.75989L0.666504 6.66655M15.3332 9.33322L12.2398 12.2399C11.5233 12.9567 10.6369 13.4804 9.6633 13.762C8.68967 14.0437 7.66058 14.0741 6.67203 13.8504C5.68348 13.6267 4.7677 13.1563 4.01015 12.4829C3.25259 11.8096 2.67795 10.9554 2.33984 9.99989"
+                  stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </g>
+              <defs>
+                <clipPath id="clip0">
+                  <rect width="16" height="16" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </span>
+          <div class="searchbar__item where">
+            <input type="text" placeholder="Куда?">
+          </div>
+          <div class="searchbar__item date">
+            <input type="text" placeholder="Дата">
+            <span class="data-value">10.08.Пн.</span>
+          </div>
+          <button class="btn-search">Найти билеты</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGULATIONS -->
+  <section class="regulations">
+    <div class="mainContainer">
+        <div class="regulations__list">
+          <div class="regulations__item">
+            <figure>
+              <img src="img/icons/bus-icon.svg" alt="">
+            </figure>
+            <p>Пассажирские перевозки возможны только при соблюдении правил карантина</p>
+          </div>
+          <div class="regulations__item">
+            <figure>
+              <img src="img/icons/mask-icon.svg" alt="">
+            </figure>
+            <p>Соблюдайте масочный режим,<br/> мойте руки и сохраняйте дистанцию</p>
+          </div>
+          <div class="regulations__item">
+            <figure>
+              <img src="img/icons/buy-icon.svg" alt="">
+            </figure>
+            <p>Покупайте билеты на автобус<br/> безопасно онлайн из дома</p>
+          </div>
+        </div>
+    </div>
+  </section>
+
+<!-- ACTUAL-TRIPS -->
+  <section class="actual-trips">
+    <div class="mainContainer">
+      <div class="section-heading">
+        <h2>Путешествуйте по Украине просто и выгодно</h2>
+        <p>Доступные поездки по Украине</p>
+      </div>
+
+      <div class="actual-trips__list">
+        <div class="actual-trips__item">
+          <div class="actual-trips__way">
+            <div class="from">
+              <img src="img/icons/from-icon.svg" alt="from">
+              <span>Чернигов</span>
+            </div>
+            <div class="delimiter">
+              <svg width="364" height="14" viewBox="0 0 360 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 7L358 7.00003" stroke="#5ABDD4" stroke-width="2" />
+                <path d="M352 1L358 7L352 13" stroke="#5ABDD4" stroke-width="2" />
+                <circle cx="6" cy="7" r="5" stroke="#5ABDD4" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="where">
+              <img src="img/icons/location-icon.svg" alt="where">
+              <span>Киев</span>
+            </div>
+          </div>
+          <div class="actual-trips__time">
+            <img src="img/icons/time-icon.svg" alt="time">
+            <span>В пути: <b>1ч 45 мин</b></span>
+          </div>
+          <div class="actual-trips__price">
+            <img src="img/icons/price-icon.svg" alt="price">
+            <span>от: <b>120 грн</b></span>
+          </div>
+        </div>
+
+        <div class="actual-trips__item">
+          <div class="actual-trips__way">
+            <div class="from">
+              <img src="img/icons/from-icon.svg" alt="from">
+              <span>Киев</span>
+            </div>
+            <div class="delimiter">
+              <svg width="364" height="14" viewBox="0 0 360 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 7L358 7.00003" stroke="#5ABDD4" stroke-width="2" />
+                <path d="M352 1L358 7L352 13" stroke="#5ABDD4" stroke-width="2" />
+                <circle cx="6" cy="7" r="5" stroke="#5ABDD4" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="where">
+              <img src="img/icons/location-icon.svg" alt="where">
+              <span>Одеса</span>
+            </div>
+          </div>
+          <div class="actual-trips__time">
+            <img src="img/icons/time-icon.svg" alt="time">
+            <span>В пути: <b>7ч 55 мин</b></span>
+          </div>
+          <div class="actual-trips__price">
+            <img src="img/icons/price-icon.svg" alt="price">
+            <span>от: <b>319 грн</b></span>
+          </div>
+        </div>
+
+        <div class="actual-trips__item">
+          <div class="actual-trips__way">
+            <div class="from">
+              <img src="img/icons/from-icon.svg" alt="from">
+              <span>Николаев</span>
+            </div>
+            <div class="delimiter">
+              <svg width="364" height="14" viewBox="0 0 360 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 7L358 7.00003" stroke="#5ABDD4" stroke-width="2" />
+                <path d="M352 1L358 7L352 13" stroke="#5ABDD4" stroke-width="2" />
+                <circle cx="6" cy="7" r="5" stroke="#5ABDD4" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="where">
+              <img src="img/icons/location-icon.svg" alt="where">
+              <span>Днепр</span>
+            </div>
+          </div>
+          <div class="actual-trips__time">
+            <img src="img/icons/time-icon.svg" alt="time">
+            <span>В пути: <b>7ч 0 мин</b></span>
+          </div>
+          <div class="actual-trips__price">
+            <img src="img/icons/price-icon.svg" alt="price">
+            <span>от: <b>256 грн</b></span>
+          </div>
+        </div>
+
+        <div class="actual-trips__item">
+          <div class="actual-trips__way">
+            <div class="from">
+              <img src="img/icons/from-icon.svg" alt="from">
+              <span>Киев</span>
+            </div>
+            <div class="delimiter">
+              <svg width="364" height="14" viewBox="0 0 360 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 7L358 7.00003" stroke="#5ABDD4" stroke-width="2" />
+                <path d="M352 1L358 7L352 13" stroke="#5ABDD4" stroke-width="2" />
+                <circle cx="6" cy="7" r="5" stroke="#5ABDD4" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="where">
+              <img src="img/icons/location-icon.svg" alt="where">
+              <span>Днепр</span>
+            </div>
+          </div>
+          <div class="actual-trips__time">
+            <img src="img/icons/time-icon.svg" alt="time">
+            <span>В пути: <b>9ч 40 мин</b></span>
+          </div>
+          <div class="actual-trips__price">
+            <img src="img/icons/price-icon.svg" alt="price">
+            <span>от: <b>302 грн</b></span>
+          </div>
+        </div>
+
+        <div class="actual-trips__item">
+          <div class="actual-trips__way">
+            <div class="from">
+              <img src="img/icons/from-icon.svg" alt="from">
+              <span>Николаев</span>
+            </div>
+            <div class="delimiter">
+              <svg width="364" height="14" viewBox="0 0 360 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 7L358 7.00003" stroke="#5ABDD4" stroke-width="2" />
+                <path d="M352 1L358 7L352 13" stroke="#5ABDD4" stroke-width="2" />
+                <circle cx="6" cy="7" r="5" stroke="#5ABDD4" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="where">
+              <img src="img/icons/location-icon.svg" alt="where">
+              <span>Херсон</span>
+            </div>
+          </div>
+          <div class="actual-trips__time">
+            <img src="img/icons/time-icon.svg" alt="time">
+            <span>В пути: <b>1ч 5 мин</b></span>
+          </div>
+          <div class="actual-trips__price">
+            <img src="img/icons/price-icon.svg" alt="price">
+            <span>от: <b>46 грн</b></span>
+          </div>
+        </div>
+      </div>
+      <div class="actual-trips__loadmore">
+        <button class="main-btn">Показать все рейсы</button>
+      </div>
+    </div>
+  </section>
+
+<!-- POPULAR-QUESTIONS -->
+  <section class="popular-questions bg-grey">
+    <div class="mainContainer">
+      <div class="section-heading">
+        <h2>Есть вопросы?</h2>
+      </div>
+      <div class="popular-questions__list">
+        <div class="popular-questions__item">
+          <figure>
+            <svg width="62" height="108" viewBox="0 0 62 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.7998 41.4L14.7998 45L18.3998 45L18.3998 41.4L14.7998 41.4Z" fill="white" />
+              <path d="M7.6001 41.4L7.6001 45L11.2001 45L11.2001 41.4L7.6001 41.4Z" fill="white" />
+              <path d="M22 41.4L22 45L25.6 45L25.6 41.4L22 41.4Z" fill="white" />
+              <path d="M29.2002 41.4L29.2002 45L32.8002 45L32.8002 41.4L29.2002 41.4Z" fill="white" />
+              <path d="M36.3999 41.4L36.3999 45L39.9999 45L39.9999 41.4L36.3999 41.4Z" fill="white" />
+              <path d="M43.6001 41.4L43.6001 45L47.2001 45L47.2001 41.4L43.6001 41.4Z" fill="white" />
+              <path d="M50.7998 41.4L50.7998 45L54.3998 45L54.3998 41.4L50.7998 41.4Z" fill="white" />
+              <path d="M9.3999 50.4L9.3999 97.2L12.9999 97.2L12.9999 50.4L9.3999 50.4Z" fill="white" />
+              <path d="M49 50.4L49 97.2L52.6 97.2L52.6 50.4L49 50.4Z" fill="white" />
+              <path d="M9.3999 12.6L9.3999 36L12.9999 36L12.9999 12.6L9.3999 12.6Z" fill="white" />
+              <path d="M49 12.6L49 36L52.6 36L52.6 12.6L49 12.6Z" fill="white" />
+              <path
+                d="M18.3999 1.8C18.3999 0.805953 17.5939 -7.51576e-07 16.5999 -7.08125e-07L2.1999 -7.86805e-08C1.20585 -3.52292e-08 0.399898 0.805954 0.399898 1.8L0.399902 106.2C0.399902 107.194 1.20585 108 2.1999 108L16.5999 108C17.594 108 18.3999 107.194 18.3999 106.2C18.3999 99.2412 24.0411 93.6 30.9999 93.6C37.9587 93.6 43.5999 99.2412 43.5999 106.2C43.5999 107.194 44.4059 108 45.3999 108L59.7999 108C60.794 108 61.5999 107.194 61.5999 106.2L61.5999 1.8C61.5999 0.805951 60.794 -2.63991e-06 59.7999 -2.59646e-06L45.3999 -1.96701e-06C44.4059 -1.92356e-06 43.5999 0.805952 43.5999 1.8C43.5999 8.7588 37.9587 14.4 30.9999 14.4C24.0411 14.4 18.3999 8.7588 18.3999 1.8ZM32.8042 17.8949C40.3223 17.0523 46.2565 11.1184 47.0991 3.6L57.9999 3.6L57.9999 104.4L47.0991 104.4C46.1026 95.5087 38.087 89.1085 29.1956 90.1051C21.6773 90.9477 15.7433 96.8818 14.9007 104.4L3.9999 104.4L3.9999 3.60001L14.9007 3.60001C15.8972 12.4913 23.9129 18.8914 32.8042 17.8949Z"
+                fill="white" />
+            </svg>
+          </figure>
+          <a href="">Как купить билет на<br /> автобус?</a>
+        </div>
+
+        <div class="popular-questions__item">
+          <figure>
+            <svg width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="52" cy="52" r="50" stroke="white" stroke-width="4" />
+              <rect x="50" y="24" width="4" height="8" fill="white" />
+              <rect x="50" y="40" width="4" height="40" fill="white" />
+            </svg>
+          </figure>
+          <a href="">Часто задаваемые<br /> вопросы</a>
+        </div>
+
+        <div class="popular-questions__item">
+          <figure>
+            <svg width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0)">
+                <path
+                  d="M102.851 63.2589H101.235V48.701C101.235 46.3963 100.088 44.3557 98.3362 43.1158V41.1337C98.3362 38.2584 95.9971 35.9193 93.1218 35.9193H91.915L96.5322 29.144C98.0799 26.873 97.4914 23.7661 95.2204 22.2183L63.8896 0.867171C62.7896 0.117289 61.4637 -0.159461 60.155 0.088812C58.847 0.336664 57.7136 1.07895 56.9639 2.1792L29.9215 41.8614H22.3963L24.2119 23.4824C24.2323 23.2753 24.3669 23.0958 24.5547 23.0251C26.8937 22.1432 28.9209 20.4962 30.2624 18.3876C30.3681 18.2216 30.5674 18.1267 30.7737 18.1476L42.5767 19.3137C43.423 19.3957 44.1759 18.7794 44.2594 17.9335C44.3429 17.0876 43.7251 16.3344 42.8792 16.2508L31.0762 15.0848C29.7062 14.9506 28.3996 15.582 27.6656 16.7354C26.6792 18.2858 25.1887 19.4965 23.469 20.145C22.1744 20.6331 21.2855 21.7958 21.1489 23.1797L19.3036 41.8612H17.3412L20.2125 12.7932C20.3159 11.7469 21.2497 10.9782 22.2972 11.0831L46.1488 13.4393C46.9946 13.5209 47.7479 12.905 47.8314 12.0591C47.9149 11.2132 47.2971 10.46 46.4512 10.3764L22.5997 8.02027C19.8651 7.75048 17.4197 9.75544 17.1495 12.4905L14.8351 35.9193H10.8937C8.01863 35.9193 5.67934 38.2584 5.67934 41.1337V42.4858C3.32717 43.5687 1.68945 45.9464 1.68945 48.701V101.16C1.68945 104.932 4.75775 108 8.52952 108H94.3952C98.1668 108 101.235 104.932 101.235 101.16V86.6025H102.851C104.759 86.6025 106.311 85.0506 106.311 83.1431V66.7185C106.311 64.8108 104.759 63.2589 102.851 63.2589ZM93.1218 38.9973C94.3001 38.9971 95.2584 39.9556 95.2584 41.1339V41.9179C94.9753 41.8821 94.6878 41.8616 94.3952 41.8616H87.8656L89.8175 38.9973H93.1218ZM59.5072 3.91227C59.7941 3.49145 60.2276 3.20752 60.7279 3.1126C60.8475 3.09003 60.9675 3.07864 61.0867 3.07864C61.4658 3.07864 61.8362 3.19212 62.1564 3.41023L93.4871 24.7613C94.3558 25.3534 94.5811 26.5418 93.9892 27.4105L84.1413 41.861H81.778L86.6061 34.7762C87.3891 33.6272 87.4537 32.165 86.774 30.9599C85.8708 29.3589 85.5046 27.4738 85.743 25.6515C85.9202 24.2958 85.3236 22.9724 84.1863 22.1974L67.9445 11.1291C66.8069 10.3539 65.3569 10.2828 64.1601 10.9437C62.5517 11.8317 60.6632 12.1804 58.8428 11.9256C57.4928 11.7361 56.1236 12.3458 55.3522 13.4774L36.0094 41.8612H33.6461L59.5072 3.91227ZM60.185 30.0455C53.4833 30.0455 47.982 35.2711 47.5338 41.8612H39.7335L57.895 15.2107C57.8952 15.2107 57.8952 15.2107 57.8952 15.2107C57.9984 15.059 58.1694 14.9688 58.3452 14.9688C58.3686 14.9688 58.392 14.9705 58.4154 14.9736C60.8914 15.32 63.4595 14.8462 65.6474 13.6382C65.8195 13.5428 66.0406 13.5565 66.211 13.6726L82.453 24.7411C82.623 24.8571 82.7165 25.0579 82.6911 25.2528C82.3669 27.7311 82.8652 30.2949 84.0935 32.4721C84.192 32.647 84.1799 32.871 84.0631 33.0429L78.0539 41.861H72.8368C72.3881 35.2711 66.8871 30.0455 60.185 30.0455ZM69.7505 41.8614H50.6196C51.0604 36.97 55.1809 33.1235 60.185 33.1235C65.1892 33.1233 69.3099 36.97 69.7505 41.8614ZM8.75712 41.1337C8.75712 39.9554 9.71541 38.9969 10.8937 38.9969H14.5311L14.2483 41.8612H8.75712V41.1337ZM4.76724 48.701C4.76724 46.6267 6.45495 44.939 8.52952 44.939H94.3952C96.4698 44.939 98.1573 46.6267 98.1573 48.701V52.9713H4.76724V48.701ZM98.1573 101.16C98.1573 103.235 96.4698 104.922 94.3952 104.922H8.52952C6.45495 104.922 4.76724 103.235 4.76724 101.16V96.8899H13.0659C13.916 96.8899 14.6047 96.201 14.6047 95.3511C14.6047 94.5013 13.9158 93.8123 13.0659 93.8123H4.76724V56.0491H98.1573V63.2589H83.5254H83.5252C78.9149 63.2589 74.9215 65.9462 73.0262 69.8361C73.0199 69.8492 73.0127 69.8619 73.0062 69.875C72.9901 69.9081 72.9762 69.9425 72.9606 69.9758C72.7349 70.4552 72.5387 70.9516 72.379 71.4637C72.3786 71.4652 72.3782 71.4665 72.3778 71.468C72.0371 72.5625 71.8534 73.7254 71.8534 74.9307C71.8534 81.3666 77.0893 86.6025 83.525 86.6025H83.5252H98.1571V93.8123H22.9197C22.0696 93.8123 21.3809 94.5013 21.3809 95.3511C21.3809 96.201 22.0698 96.8899 22.9197 96.8899H98.1573V101.16ZM103.233 83.1429C103.233 83.3534 103.062 83.5247 102.851 83.5247H83.5256C80.2677 83.5247 77.4272 81.7024 75.9702 79.0237C75.904 78.902 75.8407 78.7784 75.7802 78.6533C75.6593 78.4029 75.5503 78.1458 75.4539 77.8826C75.116 76.9616 74.9316 75.9672 74.9316 74.9307C74.9316 73.8942 75.1162 72.8998 75.4539 71.9788C75.5505 71.7158 75.6595 71.4587 75.7802 71.2081C75.8407 71.083 75.904 70.9594 75.9702 70.8377C77.4272 68.159 80.2677 66.3367 83.5256 66.3367H102.851C103.062 66.3367 103.233 66.508 103.233 66.7185V83.1429Z"
+                  fill="white" />
+                <path
+                  d="M83.8858 68.687C80.4429 68.687 77.6421 71.488 77.6421 74.9307C77.6421 78.3734 80.4429 81.1742 83.8858 81.1742C87.3288 81.1742 90.1296 78.3734 90.1296 74.9307C90.1296 71.488 87.3288 68.687 83.8858 68.687ZM83.8858 78.0964C82.1401 78.0964 80.7199 76.6762 80.7199 74.9307C80.7199 73.1852 82.1401 71.7647 83.8858 71.7647C85.6316 71.7647 87.0518 73.185 87.0518 74.9307C87.0518 76.6764 85.6316 78.0964 83.8858 78.0964Z"
+                  fill="white" />
+              </g>
+              <defs>
+                <clipPath id="clip0">
+                  <rect width="108" height="108" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </figure>
+          <a href="">Как оплатить билет<br /> на автобус?</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<!-- ABOUT-COMPANY -->
+  <section class="about-company">
+    <div class="mainContainer">
+      <div class="about-company__wrapp">
+        <div class="about-company__content">
+          <h2>Коротко о нашей компании</h2>
+          <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного
+          текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При
+          создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным
+          образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для
+          визуально-слухового восприятия.</p>
+          <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение
+          при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным
+          смыслом и придаст неповторимый колорит советских времен.Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру
+          сгенерировать несколько</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+</main>
+
+<footer>
+  <div class="mainContainer">
+    <div class="footer__wrapp">
+      <div class="footer__info">
+        <a href="#" class="footer__logo">
+          <img src="img/footer-logo.png" alt="">
+        </a>
+        <div class="footer__info__descr">ООО "КоДрайв" © 2016 - 2020</div>
+      </div>
+      <div class="footer__nav">
+        <div class="footer__nav__item">
+          <div class="footer__nav__heading">
+            О компании
+          </div>
+          <ul>
+            <li><a href="">Обратная связь</a></li>
+            <li><a href="">Договор оферты</a></li>
+            <li><a href="">Политика<br> конфиденциальности</a></li>
+            <li><a href=""><b>Условия использования</b></a></li>
+          </ul>
+        </div>
+        <div class="footer__nav__item">
+          <div class="footer__nav__heading">
+            Пользователям
+          </div>
+          <ul>
+            <li><a href="">Авторизация</a></li>
+            <li><a href="">Акции</a></li>
+            <li><a href="">Блог</a></li>
+            <li><a href="">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__subscribe">
+        <form action="">
+          <b>Подписка</b>
+          <p>Подпишитесь на рассылку, чтобы первым получать интересные предложения, новости и скидки.</p>
+          <input type="text" placeholder="Email">
+        </form>
+        <div class="footer__socials">
+          <a href=""><img src="img/icons/fb-icon.svg" alt=""></a>
+          <a href=""><img src="img/icons/inst-icon.svg" alt=""></a>
+          <a href=""><img src="img/icons/tg-icon.svg" alt=""></a>
+          <a href=""><img src="img/icons/vb-icon.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="footer-pay">
+  <div class="mainContainer">
+    <div class="footer-pay__wrapp">
+      <p>Можно оплатить с помощью:</p>
+      <div class="footer-pay__list">
+        <img src="img/icons/master-card-icon.png" alt="">
+        <img src="img/icons/visa-icon.png" alt="">
+        <img src="img/icons/liqpay-icon.png" alt="">
+        <img src="img/icons/wayforpay-icon2.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>

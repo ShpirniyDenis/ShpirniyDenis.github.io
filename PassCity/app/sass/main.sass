@@ -1,0 +1,821 @@
+// MAIN ELEMENTS
+$font_bold: 'Euclid Circular Bold', Arial, sans-serif
+$font_light: 'Euclid Circular Light', Arial, sans-serif
+$font_regular: 'Euclid Circular Regular', Arial, sans-serif
+$font_medium: 'Euclid Circular Medium', Arial, sans-serif
+$font_semibold: 'Euclid Circular Semibold', Arial, sans-serif
+$color_bg: linear-gradient(180deg, #595E79 0%, #192244 100%)
+$color_bg_second: rgba(255, 255, 255, 0.1)
+$color_white: #fff
+$color_grey: rgba(255, 255, 255, 0.5)
+$color_yellow: #F5BC33
+ 
+       
+body   
+  background: $color_bg
+  font-family: $font_regular 
+  color: $color_white
+  overflow-x: hidden
+  background-repeat: no-repeat
+  padding-top: 63px
+
+*, :after, :before
+  box-sizing: border-box
+
+.mainContainer
+  max-width: 1264px
+  width: 100%
+  margin: 0 auto
+  padding: 0 20px
+  box-sizing: border-box  
+  @media screen and (max-width: 768px)
+    padding: 0 16px
+
+.bg-grey
+  background-color: $color_bg_second
+.section-heading
+  text-align: center
+  margin-bottom: 56px
+  h2
+    font-size: 35px
+    line-height: 48px
+    font-family: $font_medium
+    margin-bottom: 16px
+    color: $color_white
+  p
+    font-size: 18px
+    line-height: 32px
+    color: $color_grey
+
+.main-btn
+  height: 56px
+  font-size: 16px
+  font-family: $font_medium
+  color: $color_white
+  padding: 5px 37px
+  border: none
+  transition: all 0.2s
+  background-color: $color_yellow
+  &:focus
+    outline: none
+
+.text-left
+  text-align: left
+.text-right
+  text-align: right
+.text-center
+  text-align: center
+
+.hidden
+  display: none !important
+
+
+header
+  position: fixed
+  left: 0
+  top: 0
+  z-index: 10
+  width: 100%
+  background: rgba(255, 255, 255, 0.05)
+  backdrop-filter: blur(100px)
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+.header__wrapp
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 16px 0
+.header__info
+  display: flex
+  justify-content: flex-start
+  align-items: center
+.header__language
+  margin-right: 36px
+  position: relative
+  padding-right: 15px
+  &::after
+    content: ''
+    width: 10px
+    height: 8px
+    right: 0
+    top: 6px
+    position: absolute
+    background-image: url('../img/icons/arrow-down.svg')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    display: inline-block
+  span
+    font-size: 16px
+    font-family: $font_medium
+.header__support
+  background-color: transparent
+  border: none
+  font-size: 16px
+  font-family: $font_medium
+  color: $color_white
+  svg
+    margin-right: 8px
+    vertical-align: middle
+
+/* REGULATIONS */
+.regulations__list
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+.regulations__item
+  border: 1px solid rgba(255, 255, 255, 0.2)
+  width: 32%
+  padding: 24px 39px 44px 39px
+  text-align: center
+  figure
+    margin-bottom: 20px
+    height: 56px
+    width: 56px
+    text-align: center
+    line-height: 56px
+    width: 100%
+    img
+      max-width: 100%
+      height: auto
+      max-height: 100%
+  p
+    font-size: 14px
+    line-height: 20px
+    color: $color_grey
+
+/* ACTUAL-TRIPS */
+.actual-trips
+  padding: 124px 0
+  &.bg-grey
+    padding: 116px 0 124px
+    .actual-trips__list
+      margin-bottom: 0
+.actual-trips__list
+  margin-bottom: 56px
+.actual-trips__item
+  background: rgba(255, 255, 255, 0.2)
+  backdrop-filter: blur(50px)
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 32px 24px
+  margin-bottom: 16px
+  &:last-child
+    margin-bottom: 0
+.actual-trips__way
+  width: 49.5%
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  .from
+    font-size: 14px
+    font-family: $font_medium
+    margin-right: 24px
+    flex-shrink: 0
+    img
+      margin-right: 16px
+    span
+      vertical-align: middle
+  .where
+    font-size: 14px
+    font-family: $font_medium
+    margin-left: 24px
+    flex-shrink: 0
+    min-width: 17%
+    img
+      margin-right: 16px
+    span
+      vertical-align: middle
+  .delimiter
+    width: 100%
+    svg
+      width: 100%
+      max-width: 100%
+.actual-trips__time
+  img
+    margin-right: 15px
+  span
+    font-size: 14px
+    color: $color_grey
+    vertical-align: middle
+    b
+      margin-left: 6px
+      display: inline-block
+      color: $color_white
+      font-family: $font_medium
+      vertical-align: baseline
+.actual-trips__price
+  width: 13.4%
+  img
+    margin-right: 12px
+  span
+    font-size: 14px
+    color: $color_grey
+    vertical-align: middle
+    b
+      margin-left: 6px
+      display: inline-block
+      color: $color_white
+      font-family: $font_medium
+      vertical-align: baseline
+.actual-trips__loadmore
+  text-align: center
+
+/* OPULAR-QUESTIONS */
+.popular-questions
+  padding: 116px 0 180px
+.popular-questions__list
+  display: flex
+  justify-content: center
+  align-items: stretch
+.popular-questions__item
+  width: 25.5%
+  border: 1px solid rgba(255, 255, 255, 0.5)
+  text-align: center
+  padding: 56px
+  margin: 0 23px
+  transition: all 0.2s
+  &:hover
+    background-color: #fff
+    a
+      color: #393D5C
+    svg
+      path, rect
+        fill: #393D5C
+      circle
+        stroke: #393D5C
+  figure
+    margin-bottom: 56px
+    height: 108px
+    width: 108px
+    text-align: center
+    line-height: 108px
+    width: 100%
+    svg
+      max-width: 100%
+      height: auto
+      max-height: 100%
+      path, rect, circle
+        transition: all 0.3s
+  a
+    font-size: 18px
+    line-height: 24px
+    font-family: $font_medium
+    display: block
+    color: $color_white
+
+/* ABOUT-COMPANY */
+.about-company
+  padding: 116px 0 160px
+  background: url('../img/bg-about-company.svg')
+  background-repeat: no-repeat
+  background-position: right 63%
+.about-company__content
+  width: 46.8%
+  h2
+    font-size: 36px
+    line-height: 48px
+    font-family: $font_medium
+    margin-bottom: 40px
+  p
+    font-size: 16px
+    line-height: 24px
+    margin-bottom: 25px
+    color: $color_grey
+    &:last-child
+      margin-bottom: 0
+
+/* FOOTER */
+footer
+  background-color: #192244
+  padding: 80px 0 65px
+.footer__wrapp
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+.footer__info
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+.footer__logo
+  img
+    max-width: 100%
+    height: auto
+.footer__info__descr
+  font-size: 14px
+  line-height: 24px
+  color: $color_grey
+
+.footer__nav
+  display: flex
+  justify-content:  flex-start
+  align-items: flex-start
+.footer__nav__heading
+  font-size: 18px
+  line-height: 21px
+  margin-bottom: 24px
+  font-family: $font_medium
+.footer__nav__item
+  margin-right: 75px
+  &:last-child
+    margin-right: 0
+  ul
+    list-style: none
+    padding: 0
+    li
+      margin-bottom: 14px
+      &:last-child
+        margin-bottom: 0
+      a
+        font-size: 14px
+        line-height: 24px
+        color: $color_white
+        b
+          font-size: 16px
+  
+.footer__subscribe
+  width: 392px
+  form
+    b
+      display: block
+      margin-bottom: 24px
+      font-family: $font_medium
+      font-size: 18px
+      line-height: normal
+    p
+      font-size: 14px
+      line-height: 20px
+      margin-bottom: 12px
+    input
+      display: block
+      width: 100%
+      border: none
+      background-color: transparent
+      border-bottom: 1px solid #FFFFFF
+      height: 45px
+      font-size: 18px
+      font-family: $font_medium
+      color: $color_white
+      margin-bottom: 37px
+      background-image: url('../img/icons/arrow-right.svg')
+      background-repeat: no-repeat
+      background-position: 98% 50%
+      &::placeholder
+        color: rgba(255, 255, 255, 0.2)
+        font-size: 18px
+        font-family: $font_medium
+      &:focus
+        &::placeholder
+          color: transparent
+.footer__socials
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+  a
+    margin-right: 32px
+    display: inline-block
+    max-width: 24px
+    &:last-child
+      margin-right: 0
+    svg
+      width: 100%
+      height: auto
+
+.footer-pay
+  background: rgba(255, 255, 255, 0.1)
+  padding: 16px 0
+.footer-pay__wrapp
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  p
+    margin-right: 16px
+    font-size: 14px
+    line-height: 24px
+    color: $color_grey
+.footer-pay__list
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  img
+    margin-right: 16px
+    max-height: 24px
+    width: auto
+
+/* MAIN-BANNER */
+.main-banner
+  padding: 164px 0 190px
+  background-image: url('../img/main-banner-bg.svg')
+  background-repeat: no-repeat
+  background-position: center center
+.searchbar-nav
+  display: flex
+  justify-content: flex-start
+  align-items: flex-end
+  margin-bottom: 24px
+  button
+    width: 208px
+    height: 56px
+    background: rgba(255, 255, 255, 0.05)
+    backdrop-filter: blur(50px)
+    border: none
+    padding: 5px 16px
+    font-size: 14px
+    font-family: $font_medium
+    margin-right: 24px
+    color: $color_white
+    &:last-child
+      margin-right: 0
+    img
+      margin-right: 16px
+    &.active
+      background: rgba(255, 255, 255, 0.15)
+.searchbar__wrapp
+  display: flex
+  align-items: flex-end
+  justify-content: flex-start
+  .btn-search
+    width: 184px
+    height: 80px
+    border: none
+    background-color: $color_yellow
+    font-size: 16px
+    font-family: $font_medium
+    color: $color_white
+    width: 15.2%
+    transition: all 0.2s
+  .delimiter
+    width: 32px
+    height: 32px
+    text-align: center
+    line-height: 36px
+    border-radius: 50%
+    margin-left: -16px
+    margin-right: -16px
+    background-color:#787C91
+    margin-bottom: 22px
+    flex-shrink: 0
+    z-index: 2
+  .searchbar__item
+    width: 30%
+    border-right: 1px solid #787C91
+    &:last-child
+      border-right: none
+    input
+      width: 100%
+      height: 80px
+      padding-left: 24px
+      background: rgba(255, 255, 255, 0.03)
+      border: none
+      padding-left: 62px
+      padding-right: 30px
+      font-size: 16px
+      color: $color_white
+      cursor: pointer
+      transition: all 0.2s
+      &::placeholder
+        color: $color_grey
+      &:focus
+        &::placeholder
+          color: transparent
+      &:hover
+        background: rgba(255, 255, 255, 0.08)
+    &.from
+      input
+        background-image: url('../img/icons/from-icon.svg')
+        background-repeat: no-repeat
+        background-position: 24px 50%
+    &.where
+      input
+        background-image: url('../img/icons/location-icon.svg')
+        background-repeat: no-repeat
+        background-position: 35px 50%
+        padding-left: 68px
+    &.date
+      width: 25.5%
+      position: relative
+      border-right: none
+      input
+        background-image: url('../img/icons/date-icon.svg')
+        background-repeat: no-repeat
+        background-position: 16px 50%
+        padding-left: 52px
+        padding-right: 100px
+      .data-value
+        position: absolute
+        right: 24px
+        top: 31px
+        color: $color_grey
+        font-size: 16px
+        font-family: $font_medium
+      &.active
+        .data-value
+          color: $color_white
+    
+
+/* ROUTE-BANNER */
+.route-banner
+  padding: 56px 0
+  background: #FFFFFF
+  background-image: url('../img/route-bg.svg')
+.route-banner__content
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+.route-banner__info
+  span
+    display: block
+    margin-bottom: 16px
+    color: rgba(57, 61, 92, 0.5)
+    font-size: 14px
+    line-height: 24px
+  p
+    color: #393D5C
+    font-size: 36px
+    line-height: 48px
+    font-family: $font_medium
+.add_favorites
+  border: none
+  height: 48px
+  background: #7E8DF6
+  padding: 5px 24px 5px 16px
+  font-size: 14px
+  color: $color_white
+  font-family: $font_medium
+  transition: all 0.2s
+  img
+    margin-right: 17px
+
+
+.route-section
+  padding-top: 24px
+  .searchbar
+    margin-bottom: 56px
+  .searchbar__wrapp
+    margin-bottom: 16px
+  .searchbar__wrapp .searchbar__item input
+    background-color: rgba(255, 255, 255, 0.15)
+    &:hover
+      background-color: rgba(255, 255, 255, 0.25)
+
+.searchbar__dates
+  display: flex
+  align-items: flex-end
+  justify-content: flex-start
+  a
+    display: inline-block
+    padding: 12px 24px
+    font-size: 14px
+    line-height: 24px
+    color: $color_white
+    font-family: $font_medium
+    margin-right: 8px
+    background: rgba(255, 255, 255, 0.05)
+    transition: all 0.2s
+    &.active
+      background: rgba(255, 255, 255, 0.2)
+    &:hover
+      background: rgba(255, 255, 255, 0.2)
+
+.route-results
+  .result
+    background: rgba(255, 255, 255, 0.15)
+    margin-bottom: 24px
+    transition: all 0.6s
+  .result-content
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    padding: 0 40px 0 32px
+  .result__info
+    width: 75.5%
+    padding: 32px 0
+  .result__route
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 24px
+  .result__route__item
+    .city
+      font-size: 24px
+      line-height: 32px
+      margin-bottom: 2px
+      font-family: $font_medium
+    .street
+      font-size: 14px
+      line-height: 24px
+      color: $color_grey
+  .result__date
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 24px
+  .result__date__item
+    flex-shrink: 0
+    width: 18.8%
+    &:last-child
+      div
+        text-align: right
+    .time
+      font-size: 24px
+      line-height: 32px
+      font-family: $font_medium
+      margin-bottom: 7px
+    .date
+      font-size: 14px
+      color: $color_grey
+      line-height: normal
+  .result__date__way
+    width: 100%
+    padding-top: 5px
+    figure
+      width: 100%
+      text-align: center
+  .result__date__way__wrapp
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 12px
+    .from
+      width: 24px
+      height: 24px
+      background-position: center
+      background-image: url('../img/icons/from-icon.svg')
+      background-size: contain
+      background-repeat: no-repeat
+    .where
+      width: 24px
+      height: 24px
+      background-position: center
+      background-image: url('../img/icons/location-icon.svg')
+      background-size: contain
+      background-repeat: no-repeat
+    .time
+      font-size: 14px
+      line-height: 24px
+      font-family: $font_medium
+      color: $color_grey
+      background-image: url('../img/icons/time-icon.svg')
+      background-repeat: no-repeat
+      background-position: left top
+      background-size: 22px
+      padding-left: 32px
+  .result__details
+    display: flex
+    justify-content: flex-start
+    align-items: flex-end
+    .number
+      width: 19.7%
+      font-size: 18px
+      line-height: 24px
+      font-family: $font_semibold
+    .company
+      font-size: 14px
+      columns: $color_grey
+      line-height: 24px
+      b
+        font-weight: 600
+        color: $color_white
+        display: inline-block
+        margin-left: 8px
+        text-transform: uppercase
+        font-family: $font_semibold
+  .result__price
+    padding-left: 40px
+    padding: 32px 0
+    padding-left: 40px
+    border-left: 1px solid rgba(255, 255, 255, 0.2)
+    width: 21.5%
+    .main-btn
+      width: 100%
+    p
+      font-size: 14px
+      line-height: 24px
+      color: $color_grey
+      margin-bottom: 28px
+      span
+        font-size: 14px
+        line-height: 24px
+        color: $color_white
+        font-family: $font_semibold
+        vertical-align: baseline
+        margin-left: 4px
+      &:first-child
+        margin-bottom: 8px
+    .value
+      color: $color_yellow
+      font-size: 24px
+      line-height: 32px
+      font-family: $font_semibold
+      margin-bottom: 16px
+  .result-details__way
+    padding: 32px
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+    border-top: 1px solid rgba(255, 255, 255, 0.2)
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      width: 100%
+      top: 47.5%
+      left: 33px
+      width: calc(100% - 66px)
+      display: block
+      height: 2px
+      background-color: transparent
+      border-bottom: 2px dashed #5ABDD4
+  .result-details__way__item
+    .time
+      font-size: 14px
+      line-height: 24px
+      font-family: $font_medium
+      margin-bottom: 10px
+    i
+      background: #5ABDD4
+      width: 12px
+      height: 12px
+      display: inline-block
+      border-radius: 50%
+      margin-bottom: 16px
+    .location
+      font-size: 18px
+      line-height: 24px
+      font-family: $font_medium
+    &:last-child
+      text-align: right
+  .result-details__auto
+    padding: 32px
+    display: flex
+    justify-content: space-between
+    align-items: center
+  .result-details__auto__info
+    p
+      font-size: 14px
+      line-height: 24px
+      color: $color_grey
+      margin-bottom: 8px
+    .model
+      font-size: 18px
+      line-height: 24px
+      font-family: $font_semibold
+  .result-details__auto__hint
+    font-size: 14px
+    line-height: 24px
+    color: $color_grey
+    i
+      width: 20px
+      height: 20px
+      display: inline-block
+      background-image: url('../img/icons/question-icon.svg')
+      background-position: center
+      background-repeat: no-repeat
+      background-size: contain
+      margin-left: 12px
+      cursor: pointer
+  .result-details-toggler
+    width: 100%
+    background-color: #fff
+    border: none
+    text-align: center
+    color: #393D5C
+    font-size: 14px
+    line-height: 16px
+    font-family: $font_medium
+    display: block
+    padding: 12px 0
+    span
+      position: relative
+      &::after
+        content: ''
+        display: inline-block
+        margin-left: 8px
+        width: 10px
+        height: 8px
+        background-image: url('../img/icons/toggler-down.svg')
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+        margin-top: 2px
+        transition: all .2s
+    &:focus
+      outline: none
+  .result-details
+    max-height: 0px
+    overflow: hidden
+    transition: all .2s
+.result
+  max-height: min-content
+  border: 1px solid transparent
+  &.active
+    height: auto
+    border-color:#FFFFFF
+    transition: all 0.6s
+    .result-details
+      max-height: 500px
+      transition: all .4s
+    .result-details-toggler span::after
+      transform: rotate(180deg)
+      transition: all .4s
