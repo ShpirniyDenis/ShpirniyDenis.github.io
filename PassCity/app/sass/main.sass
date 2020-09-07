@@ -966,3 +966,163 @@ footer
     font-size: 18px
     line-height: 24px
     font-family: $font_medium
+
+
+/* ORDERING */
+.ordering
+  padding-top: 56px
+  padding-bottom: 120px
+.ordering__wrapp
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+.ordering__content
+  width: 66%
+.ordering__nav
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+  position: relative
+  margin-bottom: 56px
+.ordering__nav__item
+  position: relative
+  width: 33.3%
+  &:first-child
+    &::after
+      border: 2px dashed #ffffff
+      bottom: 7px
+  &.active
+    i
+      width: 18px
+      height: 18px
+  &::after
+    content: ''
+    position: absolute
+    bottom: 8px
+    left: 0
+    width: 100%
+    border: 1px dashed #797D93
+    height: 2px
+    display: block
+  span
+    display: block
+    font-size: 14px
+    line-height: 24px
+    font-family: $font_medium
+    margin-bottom: 12px
+  i
+    display: inline-block
+    width: 12px
+    height: 12px
+    background-color: #fff
+    border-radius: 50%
+    z-index: 1
+    position: relative
+
+.ordering__info
+  padding: 32px
+  background: rgba(255, 255, 255, 0.15)
+  backdrop-filter: blur(50px)
+  margin-bottom: 56px
+.ordering__route
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+  margin-bottom: 24px
+.ordering__route__item
+  .city
+    font-size: 24px
+    line-height: 32px
+    font-family: $font_medium
+.ordering__date
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  margin-bottom: 24px
+.ordering__date__item
+  flex-shrink: 0
+  width: 13.8%
+  &:last-child
+    text-align: right
+  .time
+    font-size: 24px
+    line-height: 32px
+    margin-bottom: 7px
+    font-family: $font_medium
+  .date
+    font-size: 14px
+    color: $color_grey
+    font-family: $font_medium
+    line-height: normal
+.ordering__date__way
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+  svg
+    width: 100%
+  .time
+    font-size: 14px
+    line-height: 24px
+    font-family: $font_medium
+    background-image: url(../img/icons/time-icon.svg)
+    background-repeat: no-repeat
+    background-position: left top
+    background-size: 22px
+    padding-left: 32px
+    flex-shrink: 0
+    margin: 0 16px
+.ordering__details
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  .number
+    width: 13.8%
+    font-size: 18px
+    line-height: 24px
+    font-family: $font_semibold
+  .company
+    span
+      font-size: 14px
+      line-height: 24px
+      color: $color_grey
+    b
+      display: inline-block
+      vertical-align: baseline
+      font-size: 14px
+      line-height: 24px
+      font-family: $font_semibold
+      text-transform: uppercase
+.ordering__places__wrapp
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  margin-bottom: 56px
+.ordering__places__heading
+  p
+    margin-bottom: 8px
+    font-size: 18px
+    line-height: 24px
+    font-family: $font_medium
+  span
+    font-size: 14px
+    line-height: 24px
+    color: $color_grey
+    span
+      color: $color_white
+.ordering__places__descr
+  display: flex
+  justify-content: flex-start
+  align-items: center
+.ordering__places__descr__item
+  margin-right: 40px
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  &:last-child
+    margin-right: 
+  svg
+    margin-right: 12px
+  span
+    font-size: 14px
+    line-height: 24px
