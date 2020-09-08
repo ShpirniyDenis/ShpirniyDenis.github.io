@@ -287,29 +287,20 @@
               <input type="text" placeholder="Имя" required>
               <input type="text" placeholder="Фамилия" required>
               <input type="text" placeholder="Телефон" required>
-              <div class="checkbox-wrapp">
-                <div class="checkbox-group">
-                  <input type="checkbox" id="payCheck">
-                  <label for="payCheck">
-                    Оплата онлайн
-                  </label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                
                 </div>
-                <div class="checkbox-group">
-                  <input type="checkbox" id="nalCheck" checked>
-                  <label for="nalCheck">
-                    Оплата наличными
-                  </label>
+                <div class="checkbox-item">
+                
                 </div>
               </div>
-              <div class="checkbox-group oferta">
-                <input type="checkbox" id="ofertaCheck">
-                <label for="ofertaCheck">
-                  Я принимаю условия публичной оферты и даю согласия на обработку персональных даных
-                </label>
+              <div class="checkbox-item">
+              
               </div>
               <div class="btn-group">
                 <a href="#">Назад</a>
-                <button type="submit" class=" click-item" data-action="popup-open" data-label="#order-popup">Оформить</button>
+                <button type="submit">Оформить</button>
               </div>
             </form>
           </div>
@@ -388,83 +379,5 @@
   </div>
 </div>
 
-<!-- REQUEST-POPUP -->
-<div id="order-popup" class="popup_container click-obj">
-  <div class="popup_background click-item" data-action="popup-close"></div>
-  <div class="popup order-popup ">
-    <div class="popup_close click-item" data-action="popup-close">
-      <img src="img/popup-close.svg" alt="" />
-    </div>
-    <div class="order-popup__content">
-      <div class="order-popup__heading">
-        Номер посадочного талона отправлен на<br/> ваш мобильный
-      </div>
-      <div class="order-popup__info">
-        <div class="order-popup__route">
-          <div class="order-popup__route__item">
-            <div class="city">Киев</div>
-          </div>
-          <div class="order-popup__route__item">
-            <div class="city">Одеса</div>
-          </div>
-        </div>
-        <div class="order-popup__date">
-          <div class="order-popup__date__item">
-            <div class="time">06:10</div>
-            <div class="date">12 Авг, ср</div>
-          </div>
-          <div class="order-popup__date__way">
-            <div class="from">
-              <svg width="206" height="12" viewBox="0 0 206 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 6L206 6.00002" stroke="#5ABDD4" />
-                <circle cx="6" cy="6" r="5" stroke="#5ABDD4" stroke-width="2" />
-              </svg>
-            </div>
-            <div class="time">
-              7ч 55 мин
-            </div>
-            <div class="where">
-              <svg width="209" height="14" viewBox="0 0 209 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 7L206 7.00002" stroke="#5ABDD4" />
-                <path d="M201 1L207 7L201 13" stroke="#5ABDD4" stroke-width="2" />
-              </svg>
-          </div>
-          </div>
-          <div class="order-popup__date__item">
-            <div class="time">06:10</div>
-            <div class="date">12 Авг, ср</div>
-          </div>
-        </div>
-        <div class="order-popup__details">
-          <div class="number">№ 0211</div>
-          <div class="company">
-            <span>Перевозчик:</span>
-            <b>passcity</b>
-          </div>
-          <div class="places">
-            <span>Место:</span>
-            <b>18</b>
-          </div>
-        </div>
-      </div>
-      <div class="order-popup__number">
-        №: 245 346
-      </div>
-      <div class="order-popup__download">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M19 13V17C19 17.5304 18.7893 18.0391 18.4142 18.4142C18.0391 18.7893 17.5304 19 17 19H3C2.46957 19 1.96086 18.7893 1.58579 18.4142C1.21071 18.0391 1 17.5304 1 17V13"
-            stroke="#7E8DF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M5 8L10 13L15 8" stroke="#7E8DF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M10 13V1" stroke="#7E8DF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-        <span>Скачать</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script src="js/main.js"></script>
 </body>
 </html>
