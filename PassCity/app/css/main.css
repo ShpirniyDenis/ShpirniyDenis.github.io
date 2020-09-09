@@ -203,9 +203,23 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 32px 24px;
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+  position: relative; }
   .actual-trips__item:last-child {
     margin-bottom: 0; }
+
+.actual-trips__plug {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+  .actual-trips__plug:hover {
+    background: rgba(255, 255, 255, 0.2); }
 
 .actual-trips__way {
   width: 49.5%;
@@ -1584,6 +1598,8 @@ footer {
 
 .ordering__places__table {
   margin-bottom: 56px; }
+  .ordering__places__table svg {
+    width: 100%; }
 
 .ordering__places__table-descr {
   font-size: 14px;
@@ -2248,6 +2264,72 @@ footer {
   font-family: "Euclid Circular Medium", Arial, sans-serif;
   width: 208px;
   cursor: pointer;
-  margin: 0 auto; }
+  margin: 0 auto;
+  border: none; }
   .order-popup__download svg {
     margin-right: 35px; }
+
+@media screen and (max-width: 1200px) {
+  .searchbar__wrapp .searchbar__item {
+    width: 28%; }
+  .searchbar__wrapp .btn-search {
+    width: 18.2%; }
+  .popular-questions__item {
+    width: 28.5%; }
+  .popular-questions__item {
+    padding-left: 15px;
+    padding-right: 15px; }
+  .about-company {
+    background-size: 60%; }
+  .about-company__content {
+    width: 56.8%; }
+  .footer__wrapp {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .footer__subscribe {
+    width: 50%; }
+  .footer__info {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 30px; }
+  .footer__logo {
+    margin-bottom: 10px; }
+  .result__date__way figure svg {
+    width: 100%; }
+  .route-results .result__price {
+    padding-left: 22px;
+    width: 25.5%; }
+  .route-results .result-content {
+    padding-right: 24px; }
+  .route-results .result__info {
+    width: 71.5%; }
+  .instruction__content {
+    margin-bottom: 70px; }
+  .faq-list {
+    width: 90%; }
+  .ordering__request__form .checkbox-wrapp {
+    display: block;
+    padding-bottom: 0;
+    margin-bottom: 0; }
+  .ordering__request__form .checkbox-group {
+    margin-bottom: 20px; }
+  .ordering__request__form .btn-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .ordering__request__form .btn-group a {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    text-align: center; }
+  .ordering__request__form .btn-group button {
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 20px; } }
