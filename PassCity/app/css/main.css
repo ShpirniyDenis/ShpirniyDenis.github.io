@@ -665,7 +665,9 @@ footer {
       width: 100%;
       height: 80px;
       padding-left: 24px;
-      background: rgba(255, 255, 255, 0.03);
+      background: rgba(255, 255, 255, 0.15);
+      -webkit-backdrop-filter: blur(50px);
+              backdrop-filter: blur(50px);
       border: none;
       padding-left: 62px;
       padding-right: 30px;
@@ -685,18 +687,20 @@ footer {
         color: rgba(255, 255, 255, 0.5); }
       .searchbar__wrapp .searchbar__item input::placeholder {
         color: rgba(255, 255, 255, 0.5); }
-      .searchbar__wrapp .searchbar__item input:focus::-webkit-input-placeholder {
-        color: transparent; }
-      .searchbar__wrapp .searchbar__item input:focus::-moz-placeholder {
-        color: transparent; }
-      .searchbar__wrapp .searchbar__item input:focus:-ms-input-placeholder {
-        color: transparent; }
-      .searchbar__wrapp .searchbar__item input:focus::-ms-input-placeholder {
-        color: transparent; }
-      .searchbar__wrapp .searchbar__item input:focus::placeholder {
-        color: transparent; }
+      .searchbar__wrapp .searchbar__item input:focus {
+        background: rgba(255, 255, 255, 0.25); }
+        .searchbar__wrapp .searchbar__item input:focus::-webkit-input-placeholder {
+          color: transparent; }
+        .searchbar__wrapp .searchbar__item input:focus::-moz-placeholder {
+          color: transparent; }
+        .searchbar__wrapp .searchbar__item input:focus:-ms-input-placeholder {
+          color: transparent; }
+        .searchbar__wrapp .searchbar__item input:focus::-ms-input-placeholder {
+          color: transparent; }
+        .searchbar__wrapp .searchbar__item input:focus::placeholder {
+          color: transparent; }
       .searchbar__wrapp .searchbar__item input:hover {
-        background: rgba(255, 255, 255, 0.08); }
+        background: rgba(255, 255, 255, 0.25); }
     .searchbar__wrapp .searchbar__item.from input {
       background-image: url("../img/icons/from-icon.svg");
       background-repeat: no-repeat;
@@ -767,11 +771,23 @@ footer {
   font-size: 14px;
   color: #fff;
   font-family: "Euclid Circular Medium", Arial, sans-serif;
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s; }
-  .add_favorites img {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .add_favorites svg {
     margin-right: 17px; }
+    .add_favorites svg path {
+      fill: #7E8DF6;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+  .add_favorites:hover svg path {
+    fill: #fff; }
 
 .route-section {
   padding-top: 24px; }
@@ -782,6 +798,8 @@ footer {
   .route-section .searchbar__wrapp .searchbar__item input {
     background-color: rgba(255, 255, 255, 0.15); }
     .route-section .searchbar__wrapp .searchbar__item input:hover {
+      background-color: rgba(255, 255, 255, 0.25); }
+    .route-section .searchbar__wrapp .searchbar__item input:focus {
       background-color: rgba(255, 255, 255, 0.25); }
 
 .searchbar__dates {
@@ -817,9 +835,11 @@ footer {
 .route-results .result {
   background: rgba(255, 255, 255, 0.15);
   margin-bottom: 24px;
-  -webkit-transition: all 0.6s;
-  -o-transition: all 0.6s;
-  transition: all 0.6s; }
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .route-results .result:hover {
+    background: rgba(255, 255, 255, 0.25); }
 
 .route-results .result-content {
   display: -webkit-box;
@@ -1635,7 +1655,24 @@ footer {
   .ordering__promo__form .form-group {
     width: 73%;
     position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.5); }
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+    .ordering__promo__form .form-group::-webkit-input-placeholder {
+      color: transparent; }
+    .ordering__promo__form .form-group::-moz-placeholder {
+      color: transparent; }
+    .ordering__promo__form .form-group:-ms-input-placeholder {
+      color: transparent; }
+    .ordering__promo__form .form-group::-ms-input-placeholder {
+      color: transparent; }
+    .ordering__promo__form .form-group::placeholder {
+      color: transparent; }
+    .ordering__promo__form .form-group:hover {
+      border-color: #fff; }
+    .ordering__promo__form .form-group:focus {
+      border-color: #fff; }
     .ordering__promo__form .form-group i {
       position: absolute;
       right: 17px;
@@ -1648,19 +1685,12 @@ footer {
       background-color: transparent;
       font-size: 14px;
       color: #fff;
-      font-family: "Euclid Circular Regular", Arial, sans-serif; }
+      font-family: "Euclid Circular Regular", Arial, sans-serif;
+      -webkit-transition: all 0.2w;
+      -o-transition: all 0.2w;
+      transition: all 0.2w; }
       .ordering__promo__form .form-group input:focus {
         outline: none; }
-        .ordering__promo__form .form-group input:focus::-webkit-input-placeholder {
-          color: transparent; }
-        .ordering__promo__form .form-group input:focus::-moz-placeholder {
-          color: transparent; }
-        .ordering__promo__form .form-group input:focus:-ms-input-placeholder {
-          color: transparent; }
-        .ordering__promo__form .form-group input:focus::-ms-input-placeholder {
-          color: transparent; }
-        .ordering__promo__form .form-group input:focus::placeholder {
-          color: transparent; }
       .ordering__promo__form .form-group input::-webkit-input-placeholder {
         color: rgba(255, 255, 255, 0.5); }
       .ordering__promo__form .form-group input::-moz-placeholder {
@@ -1760,7 +1790,11 @@ footer {
     background: rgba(57, 61, 92, 0.1);
     font-size: 16px;
     color: #393D5C;
-    padding-left: 16px; }
+    padding-left: 16px;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    border: 1px solid transparent; }
     .ordering__request__form input::-webkit-input-placeholder {
       color: #9295A5; }
     .ordering__request__form input::-moz-placeholder {
@@ -1771,16 +1805,22 @@ footer {
       color: #9295A5; }
     .ordering__request__form input::placeholder {
       color: #9295A5; }
-    .ordering__request__form input:focus::-webkit-input-placeholder {
-      color: transparent; }
-    .ordering__request__form input:focus::-moz-placeholder {
-      color: transparent; }
-    .ordering__request__form input:focus:-ms-input-placeholder {
-      color: transparent; }
-    .ordering__request__form input:focus::-ms-input-placeholder {
-      color: transparent; }
-    .ordering__request__form input:focus::placeholder {
-      color: transparent; }
+    .ordering__request__form input:focus {
+      border: 1px solid rgba(57, 61, 92, 0.2);
+      background: #fff; }
+      .ordering__request__form input:focus::-webkit-input-placeholder {
+        color: transparent; }
+      .ordering__request__form input:focus::-moz-placeholder {
+        color: transparent; }
+      .ordering__request__form input:focus:-ms-input-placeholder {
+        color: transparent; }
+      .ordering__request__form input:focus::-ms-input-placeholder {
+        color: transparent; }
+      .ordering__request__form input:focus::placeholder {
+        color: transparent; }
+    .ordering__request__form input:hover {
+      border: 1px solid rgba(57, 61, 92, 0.2);
+      background: #fff; }
   .ordering__request__form .checkbox-group.oferta label {
     font-size: 12px;
     line-height: 16px; }
@@ -1789,10 +1829,10 @@ footer {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
@@ -1802,16 +1842,27 @@ footer {
       background-color: #F5BC33;
       border: none;
       height: 56px;
-      padding: 5px 51px;
+      padding: 5px 5px;
+      width: 48%;
       font-size: 16px;
       font-family: "Euclid Circular Medium", Arial, sans-serif;
-      color: #fff;
-      margin-left: 59px; }
+      color: #fff; }
     .ordering__request__form .btn-group a {
-      color: #9C9EAD;
+      background-color: transparent;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+      border: none;
+      height: 56px;
+      text-align: center;
+      line-height: 56px;
+      width: 48%;
       font-size: 16px;
-      line-height: 24px;
-      font-family: "Euclid Circular Medium", Arial, sans-serif; }
+      font-family: "Euclid Circular Medium", Arial, sans-serif;
+      color: rgba(57, 61, 92, 0.5);
+      display: block; }
+      .ordering__request__form .btn-group a:hover {
+        background-color: #EBECEF; }
 
 .checkbox-wrapp {
   display: -webkit-box;
