@@ -160,3 +160,303 @@ input
       &.active
         .data-value
           color: $color_white
+
+
+.actual-trips
+  padding-bottom: 116px
+.actual-trips__item
+  background: rgba(255, 255, 255, 0.2)
+  backdrop-filter: blur(30px)
+  margin-bottom: 16px
+  position: relative
+  .actual-trips__plug
+    width: 100%
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+.actual-trips__price
+  padding: 16px
+  img
+    margin-right: 15px
+  span
+    font-size: 16px
+    line-height: 24px
+    color: $color_grey
+    b
+      vertical-align: baseline
+      display: inline-block
+      margin-left: 5px
+      font-size: 16px
+      line-height: 24px
+      color: $color_white
+      font-family: $font_medium
+
+.actual-trips__way
+  padding: 16px
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+  .from
+    font-size: 16px
+    line-height: 24px
+    font-family: $font_medium
+    margin-bottom: 12px
+    img
+      margin-right: 14px
+      width: 24px
+  .where
+    font-size: 16px
+    line-height: 24px
+    font-family: $font_medium
+    img
+      margin-right: 14px
+      width: 24px
+  .time
+    .delimiter
+      margin-left: 6px
+      &:first-child
+        margin-bottom: 8px
+      &:last-child
+        margin-bottom: 12px
+    .time__value
+      margin-bottom: 8px
+      span
+        font-size: 16px
+        line-height: 24px
+        color: $color_grey
+        b
+          vertical-align: baseline
+          display: inline-block
+          margin-left: 5px
+          font-size: 16px
+          line-height: 24px
+          color: $color_white
+          font-family: $font_medium
+      img
+        margin-right: 14px
+        width: 24px
+.actual-trips__loadmore
+  margin-top: 40px
+  .main-btn
+    width: 100%
+
+.popular-questions
+  padding: 56px 0 116px
+.popular-questions__item
+  padding: 24px
+  text-align: center
+  border: 1px solid rgba(255, 255, 255, 0.5)
+  margin-bottom: 24px
+  &:last-child
+    margin-bottom: 0
+  figure
+    margin-bottom: 24px
+    height: 80px
+    width: 80px
+    text-align: center
+    width: 100%
+    svg
+      max-width: 100%
+      height: auto
+      max-height: 100%
+  a
+    font-size: 18px
+    line-height: 24px
+    font-family: $font_medium
+    display: block
+    color: $color_white
+
+
+footer
+  padding: 80px 0 56px
+.footer__info
+  text-align: center
+  margin-bottom: 40px
+.footer__logo
+  margin-bottom: 24px
+  display: inline-block
+.footer__info__descr
+  font-size: 14px
+  line-height: 24px
+  color: $color_grey
+.footer__nav__item
+  margin-bottom: 40px
+  ul
+    li
+      font-size: 14px
+      line-height: 24px
+      margin-bottom: 14px
+      a
+        color: $color_white
+      &:last-child
+        margin-bottom: 0
+.footer__nav__heading
+  margin-bottom: 24px
+  font-family: $font_medium
+  font-size: 18px
+  line-height: 24px
+.footer__subscribe
+  form
+    b
+      display: block
+      margin-bottom: 16px
+      font-family: $font_medium
+      font-size: 18px
+      line-height: normal
+    p
+      font-size: 12px
+      line-height: 20px
+      margin-bottom: 20px
+    input
+      display: block
+      width: 100%
+      border: none
+      background-color: transparent
+      border-bottom: 1px solid #FFFFFF
+      height: 45px
+      font-size: 18px
+      font-family: $font_medium
+      color: $color_white
+      margin-bottom: 40px
+      background-image: url('../img/icons/arrow-right.svg')
+      background-repeat: no-repeat
+      background-position: 98% 50%
+      &::placeholder
+        color: rgba(255, 255, 255, 0.2)
+        font-size: 18px
+        font-family: $font_medium
+      &:focus
+        &::placeholder
+          color: transparent
+.footer__socials
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+  a
+    margin-right: 32px
+    display: inline-block
+    max-width: 24px
+    &:last-child
+      margin-right: 0
+    svg
+      width: 100%
+      height: auto
+
+.footer-pay
+  background: rgba(255, 255, 255, 0.1)
+  padding: 16px 0 33px
+.footer-pay__wrapp
+  p
+    font-size: 14px
+    line-height: 24px
+    color: $color_grey
+    margin-bottom: 22px
+.footer-pay__list
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  img
+    margin-right: 16px
+    max-height: 24px
+    width: auto
+    max-width: 80px
+    &:last-child
+      margin-right: 0
+
+header
+  width: 100%
+  position: fixed
+  left: 0
+  top: 0
+  z-index: 10
+.header__preview
+  width: 100%
+  background: rgba(255, 255, 255, 0.05)
+  backdrop-filter: blur(100px)
+  padding-top: 48px
+  padding-bottom: 16px
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+.header__preview__wrapp
+  display: flex
+  align-items: center
+  justify-content: space-between
+.heder__toggler
+  padding: 7px 4px
+  border: none
+  background-color: transparent
+  span
+    width: 24px
+    height: 2px
+    background-color: #fff
+    margin-bottom: 6px
+    display: block
+    border-radius: 6px
+    &:last-child
+      margin-bottom: 0
+
+.header__content
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  z-index: 30
+  background: linear-gradient(180deg, #595E79 0%, #192244 100%)
+  transform: translateX(105%)
+  transition: all 0.4s
+  &.active
+    transform: translateX(0)
+  .mainContainer
+    height: 100%
+  button.close
+    position: absolute
+    top: 48px
+    right: 16px
+    padding: 7px
+    background-color: transparent
+    border: none
+.header__content__wrapp
+  display: flex
+  flex-direction: column
+  height: 100%
+  padding-top: 45%
+  padding-bottom: 25%
+.header__menu
+  width: 100%
+  li
+    display: block
+    width: 100%
+    margin-bottom: 8px
+    a
+      width: 100%
+      display: block
+      padding: 12px
+      font-size: 16px
+      line-height: 24px
+      font-family: $font_medium
+      color: $color_white
+      background: rgba(255, 255, 255, 0.1)
+      img
+        width: 20px
+        margin-right: 12px
+.header__language
+  margin-top: auto
+  display: flex
+  justify-content: flex-start
+  li
+    &.active
+      a
+        background: #ffffff
+        color: #393D5C
+    a
+      display: inline-block
+      width: 48px
+      height: 56px
+      margin-right: 12px
+      background: rgba(255, 255, 255, 0.1)
+      font-size: 18px
+      line-height: 24px
+      color: $color_white
+      font-family: $font_medium
+      text-transform: uppercase
+      text-align: center
+      line-height: 56px
