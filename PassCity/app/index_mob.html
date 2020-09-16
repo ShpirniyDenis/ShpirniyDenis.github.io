@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="content_language" content="ru">
+  <meta name="description" content="Pass City - пассажирские перевозки"> 
+  <title>Pass City - пассажирские перевозки</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/main_mob.css">
+</head>  
+ 
+<body>
+
+<main>
+
+<!-- MAIN-BANNER -->
+<section class="main-banner">
+  <div class="main-banner__content">
+    <div class="mainContainer">
+      <div class="searchbar-nav">
+        <button class="active">
+          <img src="img/icons/search-icon.svg" alt="">
+          Поиск билетов
+        </button>
+        <button>
+          <img src="img/icons/filter-icon.svg" alt="">
+          Расписание
+        </button>
+      </div>
+    </div>
+    <div class="searchbar">
+      <div class="searchbar__wrapp">
+        <div class="searchbar__item from">
+          <input type="text" placeholder="Откуда?">
+
+          <span class="delimiter">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g opacity="0.5" clip-path="url(#clip0)">
+                <path d="M0.666504 2.66675V6.66675H4.6665" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M15.3335 13.3333V9.33325H11.3335" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M13.6598 5.99989C13.3217 5.04441 12.7471 4.19016 11.9895 3.51683C11.232 2.84351 10.3162 2.37306 9.32765 2.14939C8.3391 1.92572 7.31 1.95612 6.33638 2.23774C5.36275 2.51936 4.47634 3.04303 3.75984 3.75989L0.666504 6.66655M15.3332 9.33322L12.2398 12.2399C11.5233 12.9567 10.6369 13.4804 9.6633 13.762C8.68967 14.0437 7.66058 14.0741 6.67203 13.8504C5.68348 13.6267 4.7677 13.1563 4.01015 12.4829C3.25259 11.8096 2.67795 10.9554 2.33984 9.99989"
+                  stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </g>
+              <defs>
+                <clipPath id="clip0">
+                  <rect width="16" height="16" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </span>
+        </div>
+        <div class="searchbar__item where">
+          <input type="text" placeholder="Куда?">
+        </div>
+        <div class="searchbar__item date">
+          <input type="text" placeholder="Дата">
+          <span class="data-value">10.08.Пн.</span>
+        </div>
+        <div class="mainContainer">
+          <button class="btn-search">Найти билеты</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACTUAL-TRIPS -->
+<section class="actual-trips">
+  <div class="mainContainer">
+    <div class="section-heading">
+      <h2>Путешествуйте по Украине просто и выгодно</h2>
+      <p>Доступные поездки по Украине</p>
+    </div>
+
+    <div class="actual-trips__list">
+      <div class="actual-trips__item">
+        <div class="actual-trips__way">
+          <div class="from">
+            <img src="img/icons/from-icon.svg" alt="from">
+            <span>Чернигов</span>
+          </div>
+          <div class="delimiter">
+            <svg width="364" height="14" viewBox="0 0 360 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 7L358 7.00003" stroke="#5ABDD4" stroke-width="2" />
+              <path d="M352 1L358 7L352 13" stroke="#5ABDD4" stroke-width="2" />
+              <circle cx="6" cy="7" r="5" stroke="#5ABDD4" stroke-width="2" />
+            </svg>
+          </div>
+          <div class="where">
+            <img src="img/icons/location-icon.svg" alt="where">
+            <span>Киев</span>
+          </div>
+        </div>
+        <div class="actual-trips__time">
+          <img src="img/icons/time-icon.svg" alt="time">
+          <span>В пути: <b>1ч 45 мин</b></span>
+        </div>
+        <div class="actual-trips__price">
+          <img src="img/icons/price-icon.svg" alt="price">
+          <span>от: <b>120 грн</b></span>
+        </div>
+        <a href="route.html" class="actual-trips__plug"></a>
+      </div>
+    </div>
+    <div class="actual-trips__loadmore">
+      <button class="main-btn">Показать все рейсы</button>
+    </div>
+  </div>
+</section>
+ 
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>
