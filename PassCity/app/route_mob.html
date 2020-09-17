@@ -45,24 +45,24 @@
     </div>
     <div class="route__searchbar__nav">
       <div class="route__searchbar__nav__list">
-        <div class="route__searchbar__nav__item">
+        <button class="route__searchbar__nav__item calendar">
           <img src="img/mobile/icons/calendar-white-icon.svg" alt="">
-        </div>
-        <div class="route__searchbar__nav__item">
+        </button>
+        <button class="route__searchbar__nav__item">
           11 Авг, вт
-        </div>
-        <div class="route__searchbar__nav__item active">
+        </button>
+        <button class="route__searchbar__nav__item active">
           12 Авг, ср
-        </div>
-        <div class="route__searchbar__nav__item">
+        </button>
+        <button class="route__searchbar__nav__item">
           13 Авг, вт
-        </div>
-        <div class="route__searchbar__nav__item">
+        </button>
+        <button class="route__searchbar__nav__item">
           14 Авг, вт
-        </div>
-        <div class="route__searchbar__nav__item">
+        </button>
+        <button class="route__searchbar__nav__item">
           15 Авг, вт
-        </div>
+        </button>
       </div>
     </div>
 
@@ -95,9 +95,9 @@
           <div class="result__price">
             404.0 грн
           </div>
-          <a class="result__link" href="#">
+          <button class="result__submit click-item" data-action="popup-open" data-label="#route-popup">
             Оформить
-          </a>
+          </button>
         </div>
 
         <div class="result__item">
@@ -127,9 +127,9 @@
           <div class="result__price">
             500.0 грн
           </div>
-          <a class="result__link" href="#">
+          <button class="result__submit click-item" data-action="popup-open" data-label="#route-popup">
             Оформить
-          </a>
+          </button>
         </div>
 
         <div class="result__item">
@@ -159,9 +159,9 @@
           <div class="result__price">
             404.0 грн
           </div>
-          <a class="result__link" href="#">
+          <button class="result__submit click-item" data-action="popup-open" data-label="#route-popup">
             Оформить
-          </a>
+          </button>
         </div>
 
         <div class="result__item">
@@ -191,9 +191,9 @@
           <div class="result__price">
             500.0 грн
           </div>
-          <a class="result__link" href="#">
+          <button class="result__submit click-item" data-action="popup-open" data-label="#route-popup">
             Оформить
-          </a>
+          </button>
         </div>
 
       </div>
@@ -271,17 +271,66 @@
 <div id="route-popup" class="popup_container click-obj">
   <div class="popup_background click-item" data-action="popup-close"></div>
   <div class="popup route-popup">
-    <div class="route-popup__content">
+    <div class="route-popup__wrapp">
       <div class="route-popup__heading">
         <span>Подробнее</span>
-        <div class="popup_close click-item" data-action="popup-close">
-          <img src="img/popup-close.svg" alt="" />
+        <div class="route-popup__close click-item" data-action="popup-close">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M19.3334 2.54663L17.4534 0.666626L10 8.11996L2.54669 0.666626L0.666687 2.54663L8.12002 9.99996L0.666687 17.4533L2.54669 19.3333L10 11.88L17.4534 19.3333L19.3334 17.4533L11.88 9.99996L19.3334 2.54663Z"
+              fill="#393D5C" />
+          </svg>
         </div>
       </div>
       <div class="route-popup__content">
         <div class="route-popup__sticker">
           <img src="img/mobile/route-sticker.svg" alt="">
           <p>Покупайте билеты на автобус безопасно онлайн из дома</p>
+        </div>
+
+        <div class="route-popup__info">
+          <div class="route-popup__info__item">
+            <div class="city">Киев Автовокзал</div>
+            <div class="street">пр-т Науки, 1/2</div>
+            <div class="time">06:10 <span>12 Авг, ср</span></div>
+          </div>
+          <div class="route-popup__info__item">
+            <div class="city">Одесса Автовокзал</div>
+            <div class="street">ул. Колонтаевская, 58</div>
+            <div class="time">14:05 <span>12 Авг, ср</span></div>
+          </div>
+        </div>
+        <div class="route-popup__price">
+          <span>Стоимость:</span>
+          <b>404.0 грн</b>
+        </div>
+        <div class="route-popup__details">
+          <p>В пути: <span>7ч 55 мин</span></p>
+          <p>Билетов: <span>9</span></p>
+          <p>Перевозчик: <span>PASSCITY</span></p>
+        </div>
+        <a href="order_mob.html" class="route-popup__submit">Оформить</a>
+        <div class="route-popup__way">
+          <div class="route-popup__way__item">
+            <div class="city">Киев</div>
+            <div class="time">06:10</div>
+          </div>
+          <div class="route-popup__way__item">
+            <div class="city">Жашков</div>
+            <div class="time">08:35</div>
+          </div>
+          <div class="route-popup__way__item">
+            <div class="city">Умань</div>
+            <div class="time">10:00</div>
+          </div>
+          <div class="route-popup__way__item">
+            <div class="city">Любашевка</div>
+            <div class="time">11:45</div>
+          </div>
+          <div class="route-popup__way__item">
+            <div class="city">Одесса</div>
+            <div class="time">08:35</div>
+          </div>
         </div>
       </div>
       
