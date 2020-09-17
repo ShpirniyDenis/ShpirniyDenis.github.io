@@ -418,7 +418,8 @@ header
 .header__content__wrapp
   display: flex
   flex-direction: column
-  height: 100%
+  height: 100vh
+  overflow: auto
   padding-top: 45%
   padding-bottom: 25%
 .header__menu
@@ -470,7 +471,7 @@ header
   position: fixed
   top: -200%
   left: 0
-  z-index: 10000
+  z-index: 0
   display: flex
   align-items: center
   justify-content: center
@@ -482,6 +483,7 @@ header
   box-sizing: border-box
   &.active
     top: 0
+    z-index: 10000
     opacity: 1
     transition: top 0.2s ease-in-out, opacity 1s ease-in-out
 .popup_background
@@ -502,12 +504,12 @@ header
   background-color: #FFFFFF
 .popup_close
   position: absolute
-  top: 24px
+  top: 54px
   right: 24px
   cursor: pointer
-  transition: all 0.2s ease-in-out
+  z-index: 1
   img
-    width: 16px
+    width: 20px
     height: auto
 .support-popup
   color: #fff
@@ -516,6 +518,8 @@ header
   padding: 120px 16px 88px
   background: rgba(57, 61, 92, 0.9)
   backdrop-filter: blur(30px)
+  height: 100vh
+  overflow: auto
 .support-popup__heading
   text-align: center
   font-size: 24px
@@ -733,3 +737,158 @@ header
     line-height: 24px
     color: $color_white
     font-family: $font_medium
+
+
+.route__back
+  background: rgba(255, 255, 255, 0.05)
+  backdrop-filter: blur(100px)
+  margin-top: -96px
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+  margin-bottom: 64px
+  a
+    padding: 50px 12px 22px
+    font-size: 14px
+    line-height: 24px
+    font-family: $font_medium
+    display: flex
+    align-items: center
+    color: $color_white
+    svg
+      margin-right: 16px
+.route__searchbar__wrapp
+  background: #FFFFFF
+  padding-left: 50px
+  padding-top: 15px
+  padding-bottom: 15px
+  padding-right: 16px
+  background-image: url('../img/mobile/icons/route-searchbar-delimiter.svg')
+  background-repeat: no-repeat
+  background-position: 16px 27px
+  background-size: 18px
+.route__searchbar__item
+  span
+    display: block
+    color: rgba(57, 61, 92, 0.5)
+    font-size: 12px
+    line-height: 16px
+    margin-bottom: 2px
+  p
+    color: #393D5C
+    font-size: 18px
+    line-height: 24px
+    font-family: $font_medium
+.route__searchbar__delimiter
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: -4px
+  margin-bottom: -4px
+  img
+    flex-shrink: 0
+    margin-left: 16px
+  &::before
+    content: ''
+    width: 100%
+    height: 1px
+    background-color: rgba(57, 61, 92, 0.2)
+    display: block
+.route__searchbar__nav
+  padding-left: 16px
+  overflow: auto
+  padding: 16px 0 16px 16px
+.route__searchbar__nav__list
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  width: max-content
+.route__searchbar__nav__item
+  background: rgba(255, 255, 255, 0.05)
+  backdrop-filter: blur(50px)
+  height: 44px
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 3px 16px
+  color: $color_white
+  font-size: 14px
+  font-family: $font_medium
+  margin-right: 8px
+  &.active
+    background: #FFFFFF
+    color: #393D5C
+
+.route-results
+  padding-top: 16px
+  padding-bottom: 60px
+.result__item
+  background: rgba(255, 255, 255, 0.15)
+  backdrop-filter: blur(30px)
+  margin-bottom: 16px
+.result__info
+  padding: 16px
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+.result__route
+  position: relative
+  background-image: url('../img/mobile/icons/result-route-delimiter.svg')
+  background-position: 0 6px
+  background-repeat: no-repeat
+  background-size: 12px 
+.result__route__item
+  margin-bottom: 40px
+  padding-left: 20px
+  .city
+    font-size: 16px
+    line-height: 24px
+    margin-bottom: 2px
+  .street
+    font-size: 12px
+    line-height: 16px
+    color: $color_grey
+    margin-bottom: 4px
+  .time
+    font-size: 24px
+    line-height: 32px
+    font-family: $font_medium
+  &:last-child
+    margin-bottom: 0
+.result__details
+  display: flex
+  flex-direction: column
+  text-align: right
+  button
+    margin-top: auto
+    border: none
+    background-color: transparent
+    text-align: right
+.result__details__content
+  p
+    margin-bottom: 6px
+    color: $color_grey
+    font-size: 12px
+    line-height: 16px
+    text-align: right
+    span
+      vertical-align: baseline
+      font-family: $font_medium
+      color: $color_white
+      margin-left: 3px
+.result__price
+  text-align: center
+  padding: 16px
+  color: #F5BC33
+  font-size: 24px
+  line-height: 32px
+  font-family: $font_semibold
+.result__link
+  width: 100%
+  height: 48px
+  display: block
+  background: #F5BC33
+  text-align: center
+  font-size: 16px
+  line-height: 48px
+  font-family: $font_medium
+  color: $color_white
