@@ -2024,7 +2024,7 @@ footer {
 
 .popup_container {
   position: fixed;
-  top: -200%;
+  top: 0;
   left: 0;
   z-index: 10000;
   display: -webkit-box;
@@ -2046,13 +2046,28 @@ footer {
   padding: 10px;
   opacity: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: -10; }
   .popup_container.active {
-    top: 0;
     opacity: 1;
-    -webkit-transition: top 0.2s ease-in-out, opacity 1s ease-in-out;
-    -o-transition: top 0.2s ease-in-out, opacity 1s ease-in-out;
-    transition: top 0.2s ease-in-out, opacity 1s ease-in-out; }
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition-delay: 0.1;
+         -o-transition-delay: 0.1;
+            transition-delay: 0.1;
+    z-index: 999999; }
+    .popup_container.active .popup {
+      bottom: 0;
+      -webkit-transition: all 0.6s ease-in-out;
+      -o-transition: all 0.6s ease-in-out;
+      transition: all 0.6s ease-in-out;
+      -webkit-transition-delay: 0.1;
+           -o-transition-delay: 0.1;
+              transition-delay: 0.1; }
 
 .popup_background {
   position: absolute;
@@ -2069,7 +2084,11 @@ footer {
   width: 100%;
   max-width: 656px;
   margin: auto;
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  bottom: -100vh;
+  -webkit-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out; }
 
 .popup_close {
   position: absolute;
