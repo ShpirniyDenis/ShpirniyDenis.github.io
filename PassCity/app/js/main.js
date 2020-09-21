@@ -38,3 +38,23 @@ function clickItemHandler(event) {
   }
 };
 document.addEventListener('click', clickItemHandler);
+
+// For header-language
+let languageWrapp = document.querySelector('.header__language');
+let languageToggle = document.querySelector('.header__language__dropdown__toggle');
+let languageDropdown = document.querySelector('.header__language__dropdown__container')
+
+let toggleDropdownLanguage = function () {
+  languageDropdown.classList.toggle('show');
+  languageWrapp.classList.toggle('active');
+}
+
+languageToggle.addEventListener('click', toggleDropdownLanguage);
+
+$(document).mouseup(function (e) {
+  let container = $(".header__language");
+  if (container.has(e.target).length === 0) {
+    languageDropdown.classList.remove('show');
+    languageWrapp.classList.remove('active');
+  }
+});

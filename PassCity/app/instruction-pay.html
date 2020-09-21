@@ -22,8 +22,13 @@
         <img src="img/header-logo.png" alt="logo">
       </a>
       <div class="header__info">
-        <div class="header__language">
-          <span>RU</span>
+        <div class="header__language header__language__dropdown">
+          <span class="header__language__dropdown__toggle">ru</span>
+          <div class="header__language__dropdown__container">
+            <a href="#" class="active">ru</a>
+            <a href="#">ua</a>
+            <a href="#">en</a>
+          </div>
         </div>
         <button class="header__support click-item" data-action="popup-open" data-label="#request-popup">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,10 +61,13 @@
         <p>Все действия производятся на защищенной странице банка.</p>
         <p>Также для клиентов банка «Приватбанк» доступна оплата через Приват 24.</p>
       </div>
-      <a href="index.html" class="main-btn public-link">Перейти к поиску билетов</a>
+      <a href="index.html" class="main-btn public-link cb-outro-social-item">
+        <span class="cb-outro-social-item-title"><span data-text="Перейти к поиску билетов">Перейти к поиску
+            билетов</span></span>
+      </a>
     </div>
   </section>
- 
+  
 </main>
 
 <footer>
@@ -100,7 +108,10 @@
         <form action="">
           <b>Подписка</b>
           <p>Подпишитесь на рассылку, чтобы первым получать интересные предложения, новости и скидки.</p>
-          <input type="text" placeholder="Email">
+          <div class="form-group">
+            <input type="text" placeholder="Email" required>
+            <button type="submit"></button>
+          </div>
         </form>
         <div class="footer__socials">
           <a href=""><img src="img/icons/fb-icon.svg" alt=""></a>
@@ -199,13 +210,15 @@
         <input type="text" placeholder="ФИО" required>
         <input type="text" placeholder="Email" required>
         <input type="text" placeholder="Сообщение">
-        <button>Отправить</button>
+        <button type="submit" class="support-popup__btn cb-outro-social-item">
+          <span class="cb-outro-social-item-title"><span data-text="Отправить">Отправить</span></span>
+        </button type="submit">
       </form>
     </div>
   </div>
 </div>
 
-
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

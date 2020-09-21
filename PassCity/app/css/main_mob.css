@@ -849,7 +849,7 @@ header {
 
 .faq__preview {
   padding: 20px 16px;
-  padding-right: 30px;
+  padding-right: 40px;
   font-size: 14px;
   line-height: 16px;
   font-family: "Euclid Circular Medium", Arial, sans-serif;
@@ -1099,7 +1099,10 @@ header {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: right; }
+  text-align: right;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0; }
   .result__details button {
     margin-top: auto;
     border: none;
@@ -1805,3 +1808,14 @@ header {
   font-family: "Euclid Circular Medium", Arial, sans-serif;
   background: #7E8DF6;
   text-align: center; }
+
+@media screen and (max-width: 768px) {
+  .result__info {
+    padding-left: 6px;
+    padding-right: 13px; }
+  .result__route__item {
+    padding-left: 20px; }
+  .result__details__content p {
+    font-size: 10px; }
+  .result__details__content {
+    padding-top: 5px; } }
