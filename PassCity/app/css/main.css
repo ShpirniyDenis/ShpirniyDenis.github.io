@@ -1695,7 +1695,8 @@ footer {
   background: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
-  padding: 32px 32px 56px; }
+  padding: 32px 32px 56px;
+  width: 66%; }
 
 .ordering__promo__heading {
   font-size: 18px;
@@ -2654,8 +2655,12 @@ footer {
     padding-bottom: 0;
     text-align: center; } }
 
-.ordering__places__container {
+.ordering__places {
   width: 807px;
+  margin-top: -222px; }
+
+.ordering__places__container {
+  width: 100%;
   background-image: url("../img/places-wrapp.svg");
   background-repeat: no-repeat;
   background-size: contain;
