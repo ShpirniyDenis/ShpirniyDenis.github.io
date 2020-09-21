@@ -1,12 +1,23 @@
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#595E79), to(#192244));
-  background: -o-linear-gradient(top, #595E79 0%, #192244 100%);
-  background: linear-gradient(180deg, #595E79 0%, #192244 100%);
   font-family: "Euclid Circular Regular", Arial, sans-serif;
   color: #fff;
   overflow-x: hidden;
   background-repeat: no-repeat;
   padding-top: 95px; }
+  body:before {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    content: '';
+    display: block;
+    background: -webkit-gradient(linear, left top, left bottom, from(#595E79), to(#192244));
+    background: -o-linear-gradient(top, #595E79 0%, #192244 100%);
+    background: linear-gradient(180deg, #595E79 0%, #192244 100%); }
+  body main, body footer, body .footer-pay {
+    position: relative;
+    z-index: 1; }
 
 *, :after, :before {
   -webkit-box-sizing: border-box;

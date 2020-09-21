@@ -12,12 +12,24 @@ $color_yellow: #F5BC33
  
        
 body   
-  background: $color_bg
+  //background: $color_bg
   font-family: $font_regular 
   color: $color_white
   overflow-x: hidden
   background-repeat: no-repeat
   padding-top: 63px
+  &:before
+    width: 100%
+    height: 100%
+    position: fixed
+    top: 0
+    left: 0
+    content: ''
+    display: block
+    background: linear-gradient(180deg, #595E79 0%, #192244 100%)
+  main, footer, .footer-pay
+    position: relative
+    z-index: 1
 
 *, :after, :before
   box-sizing: border-box
@@ -146,7 +158,7 @@ header
     width: 10px
     height: 8px
     right: 0
-    top: 9px
+    top: 7px
     position: absolute
     background-image: url('../img/icons/arrow-down.svg')
     background-repeat: no-repeat
@@ -154,12 +166,12 @@ header
     background-size: contain
     display: inline-block
   span
-    font-size: 16px
+    font-size: 12px
     font-family: $font_medium
 .header__support
   background-color: transparent
   border: none
-  font-size: 16px
+  font-size: 12px
   font-family: $font_medium
   color: $color_white
   svg
@@ -1082,8 +1094,7 @@ footer
   width: 33.3%
   &:first-child
     &::after
-      border: 2px dashed #ffffff
-      bottom: 7px
+      border: 1px dashed #ffffff
   &:last-child
     &::after
       width: 111%

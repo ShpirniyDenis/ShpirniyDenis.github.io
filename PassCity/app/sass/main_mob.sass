@@ -12,12 +12,24 @@ $color_yellow: #F5BC33
  
        
 body   
-  background: $color_bg
+  //background: $color_bg
   font-family: $font_regular 
   color: $color_white
   overflow-x: hidden
   background-repeat: no-repeat
   padding-top: 95px
+  &:before
+    width: 100%
+    height: 100%
+    position: fixed
+    top: 0
+    left: 0
+    content: ''
+    display: block
+    background: linear-gradient(180deg, #595E79 0%, #192244 100%)
+  main, footer, .footer-pay
+    position: relative
+    z-index: 1
 
 *, :after, :before
   box-sizing: border-box
