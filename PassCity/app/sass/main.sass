@@ -1943,3 +1943,92 @@ footer
     padding-top: 0
     padding-bottom: 0
     text-align: center
+
+.ordering__places__container
+  width: 807px
+  background-image: url('../img/places-wrapp.svg')
+  background-repeat: no-repeat
+  background-size: contain
+  height: 201px
+  position: relative
+.ordering__places__list
+  position: absolute
+  right: 10px
+  top: 10px
+  display: flex
+.ordering__places__item
+  display: block
+  &:nth-child(2)
+    margin-bottom: 39px
+  input
+    padding: 0
+    height: initial
+    width: initial
+    margin: 0
+    cursor: pointer
+    opacity: 0
+    position: absolute
+    top: 0
+    left: 0
+    &:checked+label
+      &::before
+        background-color:#7E8DF6
+      .close
+        opacity: 1
+    &:disabled+label
+      pointer-events: none
+      svg
+        path
+          fill: rgba(255, 255, 255, 0.15)
+  label
+    width: 100%
+    height: 100%
+    cursor: pointer
+    display: block
+    position: relative
+    .close
+      position: absolute
+      width: 24px
+      height: 24px
+      display: block
+      background-size: contain
+      z-index: 3
+      cursor: pointer
+      right: -7px
+      top: -7px
+      border-radius: 50%
+      transition: all 0.2s
+      background-repeat: no-repeat
+      background-position: center
+      background-image: url('../img/place-close-icon.svg')
+      background-color: #393D5C
+      opacity: 0
+      &:hover
+        background-color: #FA6348
+    &::before
+      content: ''
+      width: 97%
+      height: 91%
+      position: absolute
+      left: 1px
+      top: 1px
+      display: block
+      border-radius: 6px
+      background-color: transparent
+      transition: all 0.2s
+    &:hover
+      &::before
+        background-color: rgba(255, 255, 255, 0.2)
+    svg
+      max-width: 100%
+      position: relative
+      z-index: 2
+.ordering__places__row
+  margin-left: 19px
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  &:last-child, &:nth-child(7)
+    .ordering__places__item
+      &:nth-child(2)
+        margin-bottom: 0
