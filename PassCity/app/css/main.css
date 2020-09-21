@@ -2762,3 +2762,7 @@ footer {
           justify-content: flex-end; }
   .ordering__places__row:last-child .ordering__places__item:nth-child(2), .ordering__places__row:nth-child(7) .ordering__places__item:nth-child(2) {
     margin-bottom: 0; }
+
+@media (max-width: 1260px) {
+  .ordering__places {
+    margin-top: 30px; } }
