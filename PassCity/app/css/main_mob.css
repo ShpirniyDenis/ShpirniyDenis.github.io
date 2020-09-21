@@ -337,6 +337,24 @@ footer {
   line-height: 20px;
   margin-bottom: 20px; }
 
+.footer__subscribe form .form-group {
+  position: relative; }
+
+.footer__subscribe form button {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  display: inline-block;
+  z-index: 2;
+  background-image: url("../img/icons/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+  padding: 0; }
+
 .footer__subscribe form input {
   display: block;
   width: 100%;
@@ -347,10 +365,7 @@ footer {
   font-size: 18px;
   font-family: "Euclid Circular Medium", Arial, sans-serif;
   color: #fff;
-  margin-bottom: 40px;
-  background-image: url("../img/icons/arrow-right.svg");
-  background-repeat: no-repeat;
-  background-position: 98% 50%; }
+  margin-bottom: 40px; }
   .footer__subscribe form input::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.2);
     font-size: 18px;
@@ -1142,7 +1157,7 @@ header {
     outline: none; }
 
 .route-popup__wrapp {
-  height: 100vh;
+  height: 100%;
   overflow: auto; }
 
 .route-popup__heading {
