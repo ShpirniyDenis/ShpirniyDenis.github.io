@@ -634,9 +634,9 @@
 </div>
 
 
-<div id="route-popup" class="popup_container click-obj">
-  <div class="popup_background click-item" data-action="popup-close"></div>
-  <div class="popup route-popup">
+
+<div class="route__modal">
+  <div class="route__modal__container">
     <div class="route-popup__wrapp">
       <div class="route-popup__heading">
         <span>Подробнее</span>
@@ -653,7 +653,7 @@
           <img src="img/mobile/route-sticker.svg" alt="">
           <p>Покупайте билеты на автобус безопасно онлайн из дома</p>
         </div>
-
+      
         <div class="route-popup__info">
           <div class="route-popup__info__item">
             <div class="city">Киев Автовокзал</div>
@@ -675,7 +675,6 @@
           <p>Билетов: <span>9</span></p>
           <p>Перевозчик: <span>PASSCITY</span></p>
         </div>
-        <button data-action="popup-close" class="route-popup__submit violet">Продолжить</button>
         <div class="route-popup__way">
           <div class="route-popup__way__item">
             <div class="city">Киев</div>
@@ -698,8 +697,10 @@
             <div class="time">08:35</div>
           </div>
         </div>
+        <div class="route-popup__submit__wrapp">
+          <button class="route-popup__submit violet">Продолжить</button>
+        </div>
       </div>
-
     </div>
   </div>
 </div>
@@ -756,5 +757,19 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="js/main.js"></script>
+
+<script>
+  $('.result__info').click(function () {
+    $('.route__modal').addClass('active');
+  });
+
+  $('.route-popup__close').click(function () {
+    $('.route__modal').removeClass('active');
+  })
+
+  $('.route-popup__submit').click(function () {
+      $('.route__modal').removeClass('active');
+    })
+</script>
 </body>
 </html>

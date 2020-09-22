@@ -149,7 +149,11 @@ input {
     cursor: pointer;
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
-    transition: all 0.2s; }
+    transition: all 0.2s;
+    border-radius: 0;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
     .searchbar__wrapp .searchbar__item input::-webkit-input-placeholder {
       color: rgba(255, 255, 255, 0.5); }
     .searchbar__wrapp .searchbar__item input::-moz-placeholder {
@@ -376,7 +380,10 @@ footer {
   font-size: 18px;
   font-family: "Euclid Circular Medium", Arial, sans-serif;
   color: #fff;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
   .footer__subscribe form input::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.2);
     font-size: 18px;
@@ -511,9 +518,9 @@ header {
 
 .header__content {
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0;
-  width: 100%;
+  width: 78%;
   height: 100%;
   z-index: 30;
   background: -webkit-gradient(linear, left top, left bottom, from(#595E79), to(#192244));
@@ -1170,9 +1177,33 @@ header {
   .result__submit:focus {
     outline: none; }
 
+.route__modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: translateX(105%);
+      -ms-transform: translateX(105%);
+          transform: translateX(105%); }
+  .route__modal.active {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0); }
+
+.route__modal__container {
+  height: 100vh;
+  overflow: auto; }
+
 .route-popup__wrapp {
   height: 100%;
-  overflow: auto; }
+  overflow: auto;
+  position: relative; }
 
 .route-popup__heading {
   display: -webkit-box;
@@ -1187,16 +1218,24 @@ header {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 52px 16px 20px;
-  border-bottom: 1px solid rgba(57, 61, 92, 0.2); }
+  padding: 42px 16px 20px;
+  border-bottom: 1px solid rgba(57, 61, 92, 0.2);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px); }
   .route-popup__heading span {
     color: #393D5C;
     font-size: 16px;
     line-height: 24px; }
 
 .route-popup__content {
-  padding: 24px 16px 60px;
-  color: #393D5C; }
+  color: #393D5C;
+  padding: 110px 16px 113px; }
 
 .route-popup__sticker {
   height: 96px;
@@ -1275,20 +1314,10 @@ header {
     font-family: "Euclid Circular Semibold", Arial, sans-serif; }
 
 .route-popup__details {
-  position: relative; }
-  .route-popup__details::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: 1;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.4)), color-stop(115.81%, #FFFFFF));
-    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.4) 0%, #FFFFFF 115.81%);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, #FFFFFF 115.81%);
-    height: 20px;
-    width: 100%; }
+  border-bottom: 1px dashed rgba(57, 61, 92, 0.2);
+  padding-bottom: 10px; }
   .route-popup__details p {
-    color: rgba(57, 61, 92, 0.5);
+    color: rgba(25, 36, 119, 0.5);
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 12px; }
@@ -1299,6 +1328,29 @@ header {
       font-family: "Euclid Circular Medium", Arial, sans-serif;
       vertical-align: baseline; }
 
+.route-popup__submit__wrapp {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 30px;
+  background-color: #fff;
+  padding-top: 0;
+  width: 100%;
+  z-index: 2;
+  padding-left: 16px;
+  padding-right: 16px; }
+  .route-popup__submit__wrapp::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -32px;
+    z-index: 1;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), color-stop(93.81%, #FFFFFF));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, #FFFFFF 93.81%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, #FFFFFF 93.81%);
+    height: 32px;
+    width: 100%; }
+
 .route-popup__submit {
   background: #F5BC33;
   display: block;
@@ -1308,8 +1360,7 @@ header {
   color: #fff;
   font-size: 16px;
   font-family: "Euclid Circular Medium", Arial, sans-serif;
-  text-align: center;
-  margin-bottom: 24px; }
+  text-align: center; }
   .route-popup__submit.violet {
     background: #7E8DF6;
     border: none;
