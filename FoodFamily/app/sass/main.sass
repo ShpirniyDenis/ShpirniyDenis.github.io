@@ -1,0 +1,168 @@
+// MAIN ELEMENTS
+$font_bold: 'Gilroy Bold', Arial, sans-serif
+$font_semibold: 'Gilroy Semibold', Arial, sans-serif
+$font_light: 'Gilroy Light', Arial, sans-serif
+$font_regular: 'Gilroy Regular', Arial, sans-serif
+$font_medium: 'Gilroy Medium', Arial, sans-serif
+$color_second: #359080
+        
+body   
+  //background: $color_bg
+  font-family: $font_regular 
+  overflow-x: hidden
+  background-repeat: no-repeat
+
+*, :after, :before
+  box-sizing: border-box
+
+input
+  font-family: $font_regular
+
+.mainContainer
+  max-width: 1264px
+  width: 100%
+  margin: 0 auto
+  padding: 0 20px
+  box-sizing: border-box  
+  @media screen and (max-width: 768px)
+    padding: 0 16px
+
+.bg-second
+  background-color: $color_second
+
+.text-left
+  text-align: left
+.text-right
+  text-align: right
+.text-center
+  text-align: center
+
+.hidden
+  display: none !important
+
+.home-banner
+  padding: 160px 0
+  .select-box
+    margin: 0 auto
+    width: max-content
+    margin-bottom: 56px
+  h1
+    color: #ffffff
+    text-align: center
+    font-size: 48px
+    line-height: 64px
+    font-family: $font_semibold
+    margin-bottom: 40px
+.home-banner__catalog
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+.home-banner__catalog__item
+  background: #FFFFFF
+  border-radius: 15px
+  width: 18.5%
+  padding: 32px 12px 32px
+  text-align: center
+  figure
+    height: 72px
+    margin-bottom: 24px
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    img
+      max-width: 100%
+      max-height: 100%
+  p
+    color: #2B4A45
+    font-size: 16px
+    line-height: 24px
+    font-family: $font_semibold
+
+.select-box
+  display: flex
+  justify-content: flex-start
+  align-items: center
+.select-box__text
+  color: rgba(255, 255, 255, 0.5)
+  font-size: 24px
+  font-family: $font_semibold
+  margin-right: 24px
+.select-box__toggler
+  select
+    width: 288px
+    height: 64px
+    border: 1px solid rgba(255, 255, 255, 0.2)
+    border-radius: 15px
+    background-color: transparent
+    color: #FFFFFF
+    font-family: $font_semibold
+    font-size: 24px
+    padding: 5px 16px
+
+
+
+.how-work
+  padding: 120px 0
+.how-work__heading
+  text-align: center
+  color: #2B4A45
+  font-size: 72px
+  line-height: 80px
+  font-family: $font_bold
+
+
+.about-service
+  padding: 156px 0 87px
+  h2
+    text-align: center
+    margin-bottom: 88px
+    font-size: 28px
+    line-height: 40px
+    font-family: $font_bold
+    color: rgba(255, 255, 255, 0.5)
+    span
+      color: #fff
+.about-service__list
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  margin-bottom: 75px
+.about-service__item
+  width: 47%
+.about-service__item__preview
+  width: 100%
+  height: 296px
+  border-radius: 20px
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  margin-bottom: 20px
+.about-service__item__descr
+  display: flex
+  justify-content: space-between
+  align-items: center
+  span
+    color: #FFFFFF
+    font-size: 24px
+    line-height: 40px
+    font-family: $font_semibold
+  a
+    padding: 15px 25px
+    display: inline-block
+    border-radius: 15px
+    border: 1px solid rgba(255, 255, 255, 0.5)
+    color: #FFFFFF
+    font-size: 16px
+    font-family: $font_semibold
+    transition: all 0.2s
+    &:hover
+      background-color: #fff
+      color: #359080
+.about-service__descr
+  color: rgba(255, 255, 255, 0.8)
+  font-size: 14px
+  line-height: 18px
+  a
+    vertical-align: baseline
+    color: #fff 
+    font-family: $font_semibold
