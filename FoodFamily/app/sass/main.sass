@@ -122,6 +122,7 @@ input
     color: rgba(255, 255, 255, 0.5)
     span
       color: #fff
+      vertical-align: baseline
 .about-service__list
   display: flex
   justify-content: space-between
@@ -166,3 +167,558 @@ input
     vertical-align: baseline
     color: #fff 
     font-family: $font_semibold
+
+
+
+.about-application
+  padding: 156px 0 156px
+  h2
+    text-align: center
+    font-size: 28px
+    line-height: 38px
+    font-family: $font_bold
+    margin-bottom: 80px
+    color: rgba(43, 74, 69, 0.5)
+    span
+      color: #2B4A45
+      vertical-align: baseline
+.about-application__list
+  display: flex
+  justify-content: center
+  align-items: center
+.about-application__item
+  margin: 0 12px
+  min-width: 196px
+  display: flex
+  justify-content: center
+  align-items: center
+  border: 1px solid rgba(43, 74, 69, 0.2)
+  border-radius: 15px
+  padding: 17px 5px
+  transition: all 0.3s
+  svg
+    margin-right: 22px
+    path
+      transition: all 0.3s
+  p
+    color: rgba(43, 74, 69, 0.5)
+    font-size: 12px
+    line-height: 16px
+    margin-bottom: 4px
+    transition: all 0.3s
+  b
+    display: block
+    color: #2B4A45
+    font-size: 18px
+    line-height: 24px
+    font-family: $font_semibold
+    transition: all 0.3s
+  &:hover
+    background-color: #2B4A45
+    p,b
+      color: #ffffff
+    svg
+      path
+        fill: #fff
+
+
+footer
+  .mainContainer
+    padding: 156px 0 68px
+    border-top: 1px solid rgba(43, 74, 69, 0.2)
+.footer__ty
+  color: #2B4A45
+  font-size: 24px
+  line-height: 34px
+  font-family: $font_bold
+  margin-bottom: 80px
+.footer__contacts
+  margin-bottom: 80px
+.footer__contacts__item
+  margin-bottom: 24px
+  font-size: 36px
+  line-height: 48px
+  font-family: $font_bold
+  display: block
+  width: max-content
+  &:last-child
+    margin-bottom: 0
+  &.email
+    padding-bottom: 4px
+    border-bottom: 2px solid #D9663B
+    color: #D9663B
+  &.phone
+    color: #2B4A45
+
+.footer__info
+  display: flex
+  justify-content: space-between
+  align-items: center
+.footer__socials
+  a
+    display: inline-block
+    color: #2B4A45
+    font-size: 18px
+    line-height: 24px
+    font-family: $font_bold
+    margin-right: 40px
+    &:last-child
+      margin-right: 0
+.footer__creator
+  color: rgba(43, 74, 69, 0.5)
+  font-size: 18px
+  line-height: 24px
+  font-family: $font_bold
+  a
+    vertical-align: baseline
+    color: #2B4A45
+    margin-left: 14px
+
+header
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  z-index: 30
+.header__wrapp
+  display: flex
+  align-items: center
+  padding: 16px 0
+.logo
+  margin-right: 28px
+.header__nav
+  li
+    display: inline-block
+    a
+      color: #FFFFFF
+      font-size: 16px
+      line-height: 24px
+      font-family: $font_semibold
+      padding: 5px 12px 
+.header__info
+  margin-left: auto
+  a
+    display: inline-block
+    color: #FFFFFF
+    font-size: 16px
+    font-family: $font_bold
+    padding: 5px 16px
+    &.active
+      border-radius: 24px
+      padding: 16px 33px
+      margin-left: 16px
+      background: #D9663B
+    &:focus
+      outline: none
+
+.about-service-page
+  padding-bottom: 156px
+.about-service__content
+  padding-top: 160px
+  padding-bottom: 156px
+  margin-bottom: 115px
+  .about-service__list
+    align-items: stretch
+    margin-bottom: 0
+  .about-service__item__descr
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    min-height: 290px
+    span
+      display: block
+      margin-bottom: 16px
+    .descr
+      color: rgba(255, 255, 255, 0.5)
+      font-family: $font_medium
+      font-size: 18px
+      line-height: 24px
+      margin-bottom: 40px
+    a
+      margin-top: auto
+  .about-service__heading
+    text-align: center
+    margin-bottom: 88px
+    font-size: 28px
+    line-height: 40px
+    font-family: $font_bold
+    color: rgba(255, 255, 255, 0.5)
+    span
+      color: #fff
+      vertical-align: baseline
+  .about-service__descr
+    color: rgba(43, 74, 69, 0.8)
+    font-size: 14px
+    line-height: 18px
+    a
+      color: #2B4A45
+      vertical-align: baseline
+
+
+.blog__heading
+  padding: 156px 0 64px
+  color: rgba(255, 255, 255, 0.5)
+  font-size: 48px
+  line-height: 56px
+  font-family: $font_bold
+  margin-bottom: 64px
+  span
+    vertical-align: baseline
+    color: #ffffff
+.blog__list
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+  flex-wrap: wrap
+.blog__item
+  border-radius: 10px
+  background: #FFFFFF
+  border: 1px solid rgba(43, 74, 69, 0.1)
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1)
+  width: 32%
+  margin-bottom: 40px
+  overflow: hidden
+  .preview
+    display: block
+    width: 100%
+    height: 292px
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+  .content
+    padding: 24px
+    .heading
+      color: #2B4A45
+      font-size: 18px
+      line-height: 24px
+      display: block
+      font-family: $font_semibold
+      margin-bottom: 24px
+    time
+      color: rgba(43, 74, 69, 0.5)
+      font-size: 14px
+      line-height: 24px
+      font-family: $font_semibold
+.blog__loadmore
+  text-align: center
+  button
+    display: inline-block
+    padding: 14px 28px
+    color: #2B4A45
+    font-size: 16px
+    font-family: $font_semibold
+    border-radius: 15px
+    background: rgba(53, 144, 128, 0.2)
+    border: none
+    transition: all 0.2s
+    &:hover
+      background: #D9663B
+      color: #fff
+
+.blog-article
+  .mainContainer
+    position: relative
+  .blog__heading
+    text-align: center
+    font-size: 36px
+    line-height: 56px
+    font-family: $font_bold
+    color: #fff
+    padding-bottom: 56px
+    padding-top: 164px
+    margin-bottom: 56px
+  .back
+    position: absolute
+    top: -65px
+    left: 25px
+    color: #FFFFFF
+    font-size: 16px
+    font-family: $font_semibold
+    svg
+      margin-right: 14px
+      vertical-align: text-top
+
+.blog__article
+  width: 66%
+  margin: 0 auto
+  time
+    color: #2B4A45
+    font-size: 18px
+    line-height: 24px
+    font-family: $font_semibold
+    margin-bottom: 40px
+    display: block
+    img
+      margin-right: 8px
+      vertical-align: top
+.blog__article__preview
+  width: 100%
+  height: 340px
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  margin-bottom: 24px
+.blog__article__content
+  color: #2B4A45
+  font-size: 14px
+  line-height: 24px
+  font-family: $font_medium
+  margin-bottom: 40px
+  p
+    margin-bottom: 22px
+    &:last-child
+      margin-bottom: 0
+
+.blog__article__share
+  padding: 11px 0
+  border-top: 1px solid #D8D8D8
+  border-bottom: 1px solid #D8D8D8
+  margin-bottom: 32px
+  span
+    color: rgba(43, 74, 69, 0.5)
+    font-size: 14px
+    line-height: 24px
+    font-family: $font_medium
+    margin-right: 24px
+    vertical-align: baseline
+  a
+    margin-right: 16px
+    font-size: 14px
+    line-height: 24px
+    color: #D9663B
+    font-family: $font_semibold
+
+.blog__article__nav
+  display: flex
+  justify-content: space-between
+.blog__article__nav__item
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  transition: all 0.2s
+  .icon
+    border: 1px solid rgba(43, 74, 69, 0.2)
+    width: 40px
+    height: 40px
+    margin-right: 12px
+    border-radius: 10px
+    text-align: center
+    line-height: 40px
+    transition: all 0.2s
+  span
+    color: rgba(43, 74, 69, 0.5)
+    font-size: 14px
+    line-height: 24px
+    font-family: $font_semibold
+    transition: all 0.2s
+  &.next
+    .icon
+      order: 1
+      margin-right: 0
+      margin-left: 12px
+      svg
+        path
+          transition: all 0.2s
+    span
+      color: #359080
+  &:hover
+    span
+      color: #D9663B
+    .icon
+      background-color:#D9663B
+      border-color: #D9663B
+      svg
+        path
+          fill: #fff
+          fill-opacity: 1
+
+.invite-banner
+  padding-top: 116px
+  min-height: 100vh
+.invite-banner__form
+  width: 40%
+  margin: 0 auto
+  background: rgba(255, 255, 255, 0.9)
+  border-radius: 15px
+  backdrop-filter: blur(50px)
+  overflow: hidden
+  padding: 40px
+  form
+    input, select
+      width: 100%
+      display: block
+      margin-bottom: 12px
+      height: 56px
+      background: rgba(43, 74, 69, 0.05)
+      border-radius: 10px
+      padding: 5px 12px
+      border: none
+      font-size: 14px
+      font-family: $font_semibold
+      color: #2B4A45
+      &::placeholder
+        color: rgba(43, 74, 69, 0.4)
+  button
+    background: #359080
+    display: block
+    width: 100%
+    border-radius: 15px
+    height: 48px
+    color: #FFFFFF
+    font-size: 16px
+    font-family: $font_semibold
+    margin-top: 24px
+    border: none
+    transition: all 0.2s
+    &:hover
+      background: #D9663B
+.invite-banner__form__heading
+  text-align: center
+  color: #359080
+  font-size: 24px
+  line-height: 32px
+  font-family: $font_bold
+  margin-bottom: 6px
+.invite-banner__form__descr
+  text-align: center
+  color: #2B4A45
+  font-size: 14px
+  line-height: 24px
+  font-family: $font_semibold
+  margin-bottom: 24px
+  span
+    vertical-align: baseline
+    color: #359080
+
+.invite-advantage
+  padding: 156px 0
+.invite-advantage__heading
+  text-align: center
+  color: rgba(43, 74, 69, 0.5)
+  font-size: 28px
+  line-height: 40px
+  font-family: $font_bold
+  margin-bottom: 80px
+  span
+    vertical-align: baseline
+    color: #2B4A45
+.invite-advantage__list
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+.invite-advantage__item
+  width: 32.2%
+  border: 1px solid rgba(43, 74, 69, 0.2)
+  border-radius: 40px
+  padding: 40px 24px
+  text-align: center
+  figure
+    height: 80px
+    text-align: center
+    margin-bottom: 36px
+    img
+      max-height: 80px
+      max-width: 90%
+  b
+    display: block
+    text-align: center
+    margin-bottom: 16px
+    color: #2B4A45
+    font-size: 18px
+    line-height: 24px
+    font-family: $font_bold
+  p
+    color: rgba(43, 74, 69, 0.5)
+    font-size: 16px
+    line-height: 24px
+    font-family: $font_semibold
+
+.invite-about
+  padding: 156px 0
+.invite-about__heading
+  text-align: center
+  color: #FFFFFF
+  font-size: 48px
+  line-height: 56px
+  font-family: $font_bold
+  margin-bottom: 116px
+.invite-about__item
+  margin-bottom: 116px
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+  &:last-child
+    margin-bottom: 0
+  &:nth-last-child(odd)
+    .invite-about__item__icon
+      order: 1
+      margin-right: 0
+      margin-left: 64px
+.invite-about__item__icon
+  width: 564px
+  height: 380px
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  border: 1px solid rgba(255, 255, 255, 0.2)
+  border-radius: 40px
+  margin-right: 64px
+  flex-shrink: 0
+  .number
+    position: absolute
+    top: 40px
+    left: 40px
+    color: #FFFFFF
+    font-size: 24px
+    line-height: 40px
+    font-family: $font_bold
+.invite-about__item__text
+  font-size: 24px
+  line-height: 40px
+  color: #FFFFFF
+  font-family: $font_bold
+  width: 100%
+  padding-top: 80px
+  display: flex
+  flex-direction: column
+  a
+    border: 1px solid rgba(255, 255, 255, 0.5)
+    display: block
+    border-radius: 15px
+    width: max-content
+    padding: 12px 22px
+    font-size: 16px
+    font-family: $font_semibold
+    line-height: 24px
+    color: #fff
+    margin-top: auto
+    transition: all 0.2s
+    &:hover
+      background-color: #fff
+      color: #359080
+
+.invite-company
+  padding: 115px 0 150px
+
+.company-about
+  padding: 232px 0 180px
+.company-about__heading
+  text-align: center
+  font-size: 48px
+  line-height: 56px
+  font-family: $font_bold
+  margin-bottom: 40px
+  color: rgba(255, 255, 255, 0.5)
+  span
+    color: #ffffff
+    vertical-align: baseline
+.company-about__descr
+  text-align: center
+  color: rgba(255, 255, 255, 0.5)
+  font-size: 18px
+  line-height: 24px
+  font-family: $font_medium
+
+.company-delivery
+  padding: 156px 0
