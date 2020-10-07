@@ -226,6 +226,8 @@ footer
   .mainContainer
     padding: 156px 0 68px
     border-top: 1px solid rgba(43, 74, 69, 0.2)
+  &.grey-footer
+    background-color: #fafafa
 .footer__ty
   color: #2B4A45
   font-size: 24px
@@ -722,3 +724,937 @@ header
 
 .company-delivery
   padding: 156px 0
+
+.company-about-img
+  video
+    width: 100%
+    height: 800px
+
+
+
+
+.restaurants-nav
+  padding: 160px 0 40px
+.restaurants-heading
+  margin-bottom: 40px
+  .select-box
+    .select-box__toggler select
+      width: auto
+      height: auto
+      background-color: transparent
+      border: none
+      padding-left: 0
+      font-size: 36px
+      line-height: 48px
+      font-family: $font_bold
+    .select-box__text
+      margin-right: 7px
+      font-size: 36px
+      line-height: 48px
+      font-family: $font_bold
+
+.restaurants-nav__wrapp
+  display: flex
+  justify-content: space-between
+  align-items: center
+.restaurants-currency
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  .heading
+    color: #FFFFFF
+    font-size: 16px
+    line-height: 24px
+    font-family: $font_semibold
+    margin-right: 10px
+  a
+    display: inline-block
+    width: 48px
+    height: 48px
+    border: 1px solid rgba(255, 255, 255, 0.2)
+    border-radius: 15px
+    text-align: center
+    line-height: 48px
+    margin-right: 8px
+    transition: all 0.2s
+    &:hover
+      background: #D9663B
+      border-color: #D9663B
+    &:last-child
+      margin-right: 0
+    &:focus
+      outline: none
+
+.restaurants-sort
+  max-width: 69%
+  overflow: auto
+.restaurants-sort__wrapp
+  width: max-content
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  a
+    padding: 2px 16px 2px 12px
+    background: rgba(255, 255, 255, 0.2)
+    border-radius: 15px
+    display: block
+    color: #FFFFFF
+    font-size: 16px
+    font-family: $font_medium
+    height: 48px
+    line-height: 46px
+    margin-right: 8px
+    transition: all 0.2s
+    img
+      margin-right: 10px
+    &.active
+      background: #D9663B
+    &:hover
+      background-color: #D9663B
+    &:focus
+      outline: none
+.restaurants-results
+  padding-top: 40px
+  padding-bottom: 20px
+.restaurants-results__list
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+.restaurants-result
+  width: 23%
+  background: #FFFFFF
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1)
+  border-radius: 15px
+  margin-bottom: 20px
+  position: relative
+  overflow: hidden
+  &.disabled
+    .link
+      background: rgba(43, 74, 69, 0.7)
+    .date
+      position: relative
+      z-index: 3
+      color: #FFFFFF
+      span
+        color: #FFFFFF
+      svg
+        path
+          stroke: rgba(255, 255, 255, 0.8)
+  .date
+    padding: 12px 18px
+    color: #2B4A45
+    font-size: 14px
+    line-height: 24px
+    font-family: $font_semibold
+    span
+      vertical-align: baseline
+      color: #359080
+      margin-right: 5px
+    svg
+      margin-right: 6px
+      vertical-align: bottom
+  .preview
+    height: 146px
+    width: 100%
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+  .content
+    padding: 16px 18px
+  .name
+    color: #2B4A45
+    font-size: 24px
+    line-height: 32px
+    font-family: $font_semibold
+    margin-bottom: 18px
+  .delivery-item
+    margin-bottom: 12px
+    color: #2B4A45
+    font-size: 14px
+    line-height: 24px
+    font-family: $font_medium
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    .icon
+      min-width: 20px
+      margin-right: 10px
+    &:last-child
+      margin-bottom: 0
+  .link
+    position: absolute
+    z-index: 2
+    left: 0
+    right: 0
+    width: 100%
+    height: 100%
+    padding: 15px 19px
+    display: flex
+    justify-content: center
+    align-items: center
+    span
+      color: #fff
+      line-height: 24px
+      font-size: 16px
+      font-family: $font_semibold
+
+.restaurant__top
+  padding-top: 170px
+  padding-bottom: 15px
+  position: relative
+  background-color: #fafafa
+.restaurant__preview
+  position: absolute
+  width: 100%
+  height: 336px
+  top: 0
+  left: 0
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  &::after
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 140px
+    background: linear-gradient(180deg, rgba(27, 45, 42, 0.9) 0%, rgba(27, 45, 42, 0) 100%)
+.restaurant__top__wrapp
+  position: relative
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+.restaurant__info
+  width: 66%
+  background: rgba(255, 255, 255, 0.8)
+  backdrop-filter: blur(50px)
+  border-radius: 15px
+  padding: 32px
+.restaurant__info__top
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 24px
+  .back
+    color: #2B4A45
+    font-family: $font_semibold
+    line-height: 24px
+    font-size: 16px
+    img
+      margin-right: 14px
+  .rating
+    a
+      display: inline-block
+      color: #2B4A45
+      line-height: 20px
+      font-size: 16px
+      font-family: $font_semibold
+      border-bottom: 2px solid #2B4A45
+      margin-right: 22px
+      &:focus
+        outline: none
+    img
+      margin-right: 12px
+    .text
+      font-size: 18px
+      line-height: 24px
+      color: #D9B63B
+      font-family: $font_bold
+      span
+        color: #848a89
+        vertical-align: baseline
+.restaurant__info__content
+  .name
+    color: #2B4A45
+    font-size: 36px
+    line-height: 48px
+    font-family: $font_bold
+    margin-bottom: 24px
+  .details
+    margin-bottom: 30px
+  .details__item
+    display: block
+    width: 100%
+    margin-bottom: 16px
+    color: #2B4A45
+    line-height: 24px
+    font-size: 18px
+    font-family: $font_semibold
+    span
+      margin-right: 7px
+      &.time
+        color: #359080
+    &:last-child
+      margin-bottom: 0
+    .icon
+      display: inline-block
+      width: 22px
+      margin-right: 10px
+      img
+        max-width: 100%
+        height: auto
+
+.restaurant__info__bottom
+  display: flex
+  justify-content: space-between
+  align-items: center
+  .menu
+    max-width: 65%
+    a
+      display: inline-block
+      color: #2B4A45
+      font-family: $font_medium
+      font-size: 14px
+      line-height: 16px
+      padding: 12px
+      background: rgba(43, 74, 69, 0.1)
+      border-radius: 15px
+      margin-right: 8px
+      transition: all 0.2s
+      &.active
+        background: #2B4A45
+        color: #fff
+      &:hover
+        background: #2B4A45
+        color: #fff
+  .search
+    width: 32%
+    display: flex
+    justify-content: flex-end
+    input
+      display: block
+      height: 40px
+      width: 40px
+      border-radius: 10px
+      background-color: rgba(43, 74, 69, 0.1)
+      background-image: url('../img/icons/search-icon.svg')
+      background-position: 10px 10px
+      background-repeat: no-repeat
+      background-size: 19px
+      padding-left: 0
+      border: 1px solid transparent
+      cursor: pointer
+      transition: all 0.4s
+      color: transparent
+      &:hover
+        background-color: #fff
+        border: 1px solid #2B4A45
+      &:focus
+        width: 100%
+        background-color: #fff
+        border: 1px solid #2B4A45
+        padding-left: 44px
+        color: #2B4A45
+
+.restaurant__order
+  width: 32%
+  background: rgba(255, 255, 255, 0.8)
+  border: 1px solid rgba(43, 74, 69, 0.2)
+  backdrop-filter: blur(50px)
+  border-radius: 15px
+  overflow: hidden
+  padding: 32px 0 24px
+  .heading
+    text-align: center
+    color: #2B4A45
+    line-height: 24px
+    font-size: 18px
+    font-family: $font_semibold
+    margin-bottom: 24px
+  .submit
+    padding: 8px 24px 0
+    button
+      width: 100%
+      height: 48px
+      border-radius: 15px
+      background: #D9663B
+      color: #FFFFFF
+      font-size: 16px
+      font-family: $font_semibold
+      transition: all 0.2s
+      border: none
+      &:hover
+        background-color: #359080
+.restaurant__order__list
+  padding-bottom: 40px
+  border-bottom: 1px solid rgba(43, 74, 69, 0.2)
+.restaurant__order__item
+  margin-bottom: 16px
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  padding: 0 24px
+  .img
+    width: 40px
+    height: 40px
+    border-radius: 10px
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    margin-right: 16px
+  .info
+    margin-right: 10px
+    width: 65%
+    .name
+      margin-bottom: 8px
+      color: #2B4A45
+      font-size: 14px
+      line-height: 16px
+      font-family: $font_medium
+    .price
+      color: #D9663B
+      font-size: 14px
+      line-height: 16px
+      font-family: $font_semibold
+  .count
+    font-size: 16px
+    line-height: 24px
+    font-family: $font_semibold
+    color: #2B4A45
+    padding-top: 3px
+  .delete
+    background-color: transparent
+    border: none
+    padding: 0
+    margin-left: auto
+  &:last-child
+    margin-bottom: 0
+.restaurant__order__delivery
+  padding: 16px 26px
+  color: #2B4A45
+  font-size: 16px
+  line-height: 24px
+  font-family: $font_semibold
+  padding-bottom: 0
+  img
+    margin-right: 12px
+.restaurant__order__price
+  padding: 16px 24px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  border-top: 1px solid rgba(43, 74, 69, 0.2)
+  margin-top: 16px
+  span
+    color: #2B4A45
+    font-size: 16px
+    line-height: 24px
+    font-family: $font_semibold
+    &.value
+      font-size: 18px
+      color: #D9663B
+
+.catalog
+  padding-bottom: 120px
+.catalog-section
+  background-color: #fafafa
+.catalog__wrapp
+  padding-bottom: 56px
+  margin-bottom: 56px
+  border-bottom: 1px solid rgba(43, 74, 69, 0.2)
+  width: 66%
+  &:last-child
+    border-bottom: none
+    margin-bottom: 0
+    padding-bottom: 0
+  .loadmore
+    margin: 0 auto
+    background: rgba(53, 144, 128, 0.2)
+    border: none
+    border-radius: 15px
+    padding: 12px 44px
+    color: #2B4A45
+    font-size: 16px
+    line-height: 24px
+    font-family: $font_semibold
+    display: block
+    width: max-content
+    margin-top: 16px
+    transition: all 0.2s
+    &:focus
+      outline: none
+    &:hover
+      background: #D9663B
+      color: #fff
+.catalog__heading
+  text-align: center
+  margin-bottom: 40px
+  color: #2B4A45
+  font-size: 36px
+  line-height: 48px
+  font-family: $font_bold
+.catalog__list
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+  flex-wrap: wrap
+.catalog__item
+  background: #FFFFFF
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1)
+  border-radius: 15px
+  width: 32%
+  overflow: hidden
+  margin-bottom: 24px
+  .preview
+    width: 100%
+    height: 180px
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+  .info
+    padding: 12px
+    height: 100px
+    overflow: hidden
+    .name
+      color: #2B4A45
+      font-size: 16px
+      line-height: 24px
+      margin-bottom: 4px
+      font-family: $font_semibold
+    .descr
+      color: #2B4A45
+      font-size: 12px
+      line-height: 16px
+      font-family: $font_medium
+  .size
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    margin-top: 4px
+    margin-bottom: 8px
+    padding-left: 12px
+    padding-right: 12px
+  .size__item
+    width: 48%
+    &.not-select
+      width: 100%
+      input
+        &:checked+label
+          background: rgba(43, 74, 69, 0.1)
+          color: #2B4A45
+    label
+      width: 100%
+      height: 40px
+      text-align: center
+      line-height: 40px
+      border-radius: 15px
+      background: rgba(43, 74, 69, 0.1)
+      color: #2B4A45
+      font-size: 14px
+      font-family: $font_semibold
+      display: block
+      transition: all 0.2s
+      cursor: pointer
+    input
+      display: none
+      &:checked+label
+        background: #2B4A45
+        color: #fff
+  .details
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 12px
+    padding-bottom: 12px
+    .price
+      color: #D9663B
+      font-size: 14px
+      line-height: 16px
+      font-family: $font_bold
+    .buy
+      span
+        color: #2B4A45
+        display: inline-block
+        font-size: 14px
+        font-family: $font_semibold
+        margin-right: 12px
+        vertical-align: text-top
+      button
+        width: 40px
+        height: 40px
+        border-radius: 15px
+        background: rgba(217, 102, 59, 0.2)
+        text-align: center
+        line-height: 50px
+        border: none
+        padding: 0
+        transition: all 0.2s
+        svg
+          path
+            transition: all 0.4s
+        &:hover
+          background-color: #D9663B
+          svg
+            path
+              fill: #fff
+
+.review__eval__list
+  display: flex
+  justify-content: flex-end
+  flex-direction: row-reverse
+  input[type="radio"]
+    display: none
+  label
+    padding-left: 15px 
+    cursor: pointer
+    svg
+      transition: all 0.5s
+      path
+        transition: all 0.5s
+    &:last-child  
+      margin-left: 0
+  label:hover, label:hover ~ label 
+    svg  
+      path
+        fill:#D9B63B 
+        stroke:#D9B63B
+  input[type="radio"]:checked ~ label
+    svg
+      path
+        fill:#D9B63B
+        stroke:#D9B63B
+
+.reviews__heading
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 40px
+  h2
+    color: #2B4A45
+    font-size: 36px
+    line-height: 48px
+    font-family: $font_semibold
+  .count
+    color: rgba(43, 74, 69, 0.5)
+    font-size: 18px
+    line-height: 24px
+    font-family: $font_semibold
+    span
+      color: #2B4A45
+.review__eval
+  margin-bottom: 35px
+  p
+    color: #2B4A45
+    font-size: 16px
+    line-height: 24px
+    margin-bottom: 20px
+    font-family: $font_semibold
+
+.review__text
+  margin-bottom: 40px
+  label
+    display: block
+    width: 100%
+    margin-bottom: 12px
+    color: #2B4A45
+    font-size: 16px
+    line-height: 24px
+    font-family: $font_semibold
+  textarea
+    resize: none
+    display: block
+    height: 96px
+    width: 100%
+    border-radius: 15px
+    border: 1px solid rgba(43, 74, 69, 0.2)
+    padding: 12px
+    background-color: transparent
+    font-family: $font_medium
+    &::placeholder
+      font-family: $font_medium
+      color: rgba(43, 74, 69, 0.4)
+.reviews__item
+  width: 100%
+  margin-bottom: 16px
+  border: 1px solid rgba(43, 74, 69, 0.2)
+  border-radius: 15px
+  padding: 24px 16px
+  .info
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 15px
+    .name
+      color: #2B4A45
+      font-size: 16px
+      line-height: 24px
+      font-family: $font_semibold
+    .date
+      color: rgba(43, 74, 69, 0.5)
+      font-size: 14px
+      line-height: 24px
+      font-family: $font_semibold
+  .rating
+    margin-bottom: 20px
+    svg
+      margin-right: 8px
+      width: 20px
+  .descr
+    color: #2B4A45
+    font-size: 14px
+    line-height: 24px
+.reviews__loadmore
+  margin: 0 auto
+  margin-top: 40px
+  width: max-content
+  border-radius: 15px
+  background: rgba(53, 144, 128, 0.2)
+  display: block
+  padding: 12px 28px
+  color: #2B4A45
+  font-size: 16px
+  line-height: 24px
+  font-family: $font_semibold
+  transition: all 0.2s
+  border: none
+  &:focus
+    outline: none
+  &:hover
+    background: #D9663B
+    color: #fff
+
+.restaurant-about
+  padding: 156px 0
+  p
+    color: rgba(43, 74, 69, 0.8)
+    font-size: 14px
+    line-height: 18px
+    margin-bottom: 80px
+    a
+      vertical-align: baseline
+      color: #2B4A45
+      font-size: 14px
+      font-family: $font_semibold
+    &:last-child
+      margin-bottom: 0
+.restaurant-about__heading
+  margin-bottom: 24px
+
+.restaurant__empty
+  padding-top: 68px
+  padding-bottom: 98px
+  text-align: center
+  span
+    color: rgba(43, 74, 69, 0.5)
+    font-size: 36px
+    line-height: 48px
+    font-family: $font_bold
+
+
+.eval__heading
+  background: #359080
+  padding-top: 160px
+  padding-bottom: 40px
+  text-align: center
+  color: #FFFFFF
+  font-size: 36px
+  line-height: 48px
+  font-family: $font_bold
+.eval__container
+  padding-top: 56px
+  padding-bottom: 140px
+.eval__descr
+  text-align: center
+  margin-bottom: 64px
+  color: rgba(43, 74, 69, 0.5)
+  font-size: 18px
+  line-height: 24px
+  font-family: $font_semibold
+.eval__list
+  display: flex
+  justify-content: center
+  flex-direction: row-reverse
+  margin-bottom: 100px
+  input[type="radio"]
+    display: none
+  label
+    padding-left: 15px 
+    cursor: pointer
+    svg
+      transition: all 0.5s
+      path
+        transition: all 0.5s
+    &:last-child  
+      margin-left: 0
+  label:hover, label:hover ~ label 
+    svg  
+      path
+        fill: #E0AB36
+        stroke: #E0AB36
+        fill-opacity: 1
+  input[type="radio"]:checked ~ label
+    svg
+      path
+        fill: #E0AB36
+        stroke: #E0AB36
+        fill-opacity: 1
+.eval__submit
+  margin: 0 auto
+  height: 48px
+  display: block
+  width: max-content
+  padding: 5px 67px
+  border-radius: 15px
+  background: rgba(217, 102, 59, 0.2)
+  color: #D9663B
+  font-size: 16px
+  font-family: $font_semibold
+  border: none
+  transition: all 0.2s
+  &:hover
+    background: #D9663B
+    color: #fff
+
+
+.tracker__heading
+  background: #359080
+  padding: 160px 0 40px
+  color: rgba(255, 255, 255, 0.5)
+  font-size: 36px
+  line-height: 48px
+  font-family: $font_bold
+  span
+    vertical-align: baseline
+    color: #fff
+    margin-left: 6px
+.tracker__wrapp
+  position: relative
+.tracker__card
+  background: #359080
+  width: 416px
+  border-radius: 20px
+.tracker__card__info
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  padding-bottom: 22px
+  border-bottom: 1px solid rgba(43, 74, 69, 0.2)
+  margin-bottom: 22px
+  .box
+    display: flex
+    justify-content: flex-start
+    width: 49%
+    align-items: center
+    .icon
+      background: rgba(217, 102, 59, 0.2)
+      display: inline-block
+      border-radius: 15px
+      width: 48px
+      height: 48px
+      line-height: 61px
+      text-align: center
+      flex-shrink: 0
+      margin-right: 12px
+    .text
+      p
+        margin-bottom: 2px
+        color: rgba(43, 74, 69, 0.5)
+        font-size: 12px
+        line-height: 16px
+        font-family: $font_medium
+      span
+        display: block
+        color: #2B4A45
+        font-size: 24px
+        line-height: 32px
+        text-overflow: ellipsis
+        white-space: nowrap
+        max-width: 128px
+        overflow: hidden
+        font-family: $font_semibold
+.tracker__card__wrapp
+  border: 1px solid rgba(43, 74, 69, 0.2)
+  background: #FFFFFF
+  border-radius: 20px
+  padding: 24px
+.tracker__card__item
+  margin-bottom: 24px
+  color: #2B4A45
+  font-size: 16px
+  line-height: 22px
+  font-family: $font_medium
+  &:last-child
+    margin-bottom: 0
+  &::before
+    content: ''
+    width: 24px
+    display: inline-block
+    vertical-align: bottom
+    height: 24px
+    border-radius: 8px
+    background: rgba(43, 74, 69, 0.1)
+    margin-right: 12px
+  &.ready
+    &::before
+      background-color: rgba(53, 144, 128, 0.2)
+      background-image: url('../img/icons/check-icon.svg')
+      background-position: center
+      background-repeat: no-repeat
+      background-size: 14px
+  &.during
+    &::before
+      background-color: rgba(53, 144, 128, 0.2)
+      background-image: url('../img/icons/during-icon.svg')
+      background-position: center
+      background-repeat: no-repeat
+      background-size: 20px
+  
+.tracker__card__courier
+  padding: 24px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  .info
+    display: flex
+    align-items: center
+  .avatar
+    flex-shrink: 0
+    width: 72px
+    height: 72px
+    border-radius: 15px
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    margin-right: 16px
+  .heading
+    margin-bottom: 4px
+    color: #FFFFFF
+    font-size: 12px
+    line-height: 16px
+    font-family: $font_medium
+  .name
+    color: #FFFFFF
+    font-size: 18px
+    line-height: 24px
+    font-family: $font_semibold
+    margin-bottom: 7px
+  .rating
+    svg
+      margin-right: 10px
+      vertical-align: text-bottom
+    span
+      font-size: 14px
+      line-height: 24px
+      font-family: $font_medium
+      color: rgba(255, 255, 255, 0.5)
+      span
+        color: #fff
+        vertical-align: baseline
+  .nav
+    a
+      display: inline-block
+      width: 48px
+      height: 48px
+      border-radius: 15px
+      background: rgba(255, 255, 255, 0.2)
+      text-align: center
+      line-height: 58px
+      margin-right: 8px
+      transition: all 0.2s
+      &:hover
+        background-color: #D9663B
+      &:last-child
+        margin-right: 0
+  

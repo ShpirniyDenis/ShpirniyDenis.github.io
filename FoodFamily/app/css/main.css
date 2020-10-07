@@ -301,6 +301,9 @@ footer .mainContainer {
   padding: 156px 0 68px;
   border-top: 1px solid rgba(43, 74, 69, 0.2); }
 
+footer.grey-footer {
+  background-color: #fafafa; }
+
 .footer__ty {
   color: #2B4A45;
   font-size: 24px;
@@ -940,3 +943,1211 @@ header {
 
 .company-delivery {
   padding: 156px 0; }
+
+.company-about-img video {
+  width: 100%;
+  height: 800px; }
+
+.restaurants-nav {
+  padding: 160px 0 40px; }
+
+.restaurants-heading {
+  margin-bottom: 40px; }
+  .restaurants-heading .select-box .select-box__toggler select {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border: none;
+    padding-left: 0;
+    font-size: 36px;
+    line-height: 48px;
+    font-family: "Gilroy Bold", Arial, sans-serif; }
+  .restaurants-heading .select-box .select-box__text {
+    margin-right: 7px;
+    font-size: 36px;
+    line-height: 48px;
+    font-family: "Gilroy Bold", Arial, sans-serif; }
+
+.restaurants-nav__wrapp {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.restaurants-currency {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .restaurants-currency .heading {
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Gilroy Semibold", Arial, sans-serif;
+    margin-right: 10px; }
+  .restaurants-currency a {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    text-align: center;
+    line-height: 48px;
+    margin-right: 8px;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+    .restaurants-currency a:hover {
+      background: #D9663B;
+      border-color: #D9663B; }
+    .restaurants-currency a:last-child {
+      margin-right: 0; }
+    .restaurants-currency a:focus {
+      outline: none; }
+
+.restaurants-sort {
+  max-width: 69%;
+  overflow: auto; }
+
+.restaurants-sort__wrapp {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .restaurants-sort__wrapp a {
+    padding: 2px 16px 2px 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    display: block;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: "Gilroy Medium", Arial, sans-serif;
+    height: 48px;
+    line-height: 46px;
+    margin-right: 8px;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+    .restaurants-sort__wrapp a img {
+      margin-right: 10px; }
+    .restaurants-sort__wrapp a.active {
+      background: #D9663B; }
+    .restaurants-sort__wrapp a:hover {
+      background-color: #D9663B; }
+    .restaurants-sort__wrapp a:focus {
+      outline: none; }
+
+.restaurants-results {
+  padding-top: 40px;
+  padding-bottom: 20px; }
+
+.restaurants-results__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
+
+.restaurants-result {
+  width: 23%;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden; }
+  .restaurants-result.disabled .link {
+    background: rgba(43, 74, 69, 0.7); }
+  .restaurants-result.disabled .date {
+    position: relative;
+    z-index: 3;
+    color: #FFFFFF; }
+    .restaurants-result.disabled .date span {
+      color: #FFFFFF; }
+    .restaurants-result.disabled .date svg path {
+      stroke: rgba(255, 255, 255, 0.8); }
+  .restaurants-result .date {
+    padding: 12px 18px;
+    color: #2B4A45;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "Gilroy Semibold", Arial, sans-serif; }
+    .restaurants-result .date span {
+      vertical-align: baseline;
+      color: #359080;
+      margin-right: 5px; }
+    .restaurants-result .date svg {
+      margin-right: 6px;
+      vertical-align: bottom; }
+  .restaurants-result .preview {
+    height: 146px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .restaurants-result .content {
+    padding: 16px 18px; }
+  .restaurants-result .name {
+    color: #2B4A45;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "Gilroy Semibold", Arial, sans-serif;
+    margin-bottom: 18px; }
+  .restaurants-result .delivery-item {
+    margin-bottom: 12px;
+    color: #2B4A45;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "Gilroy Medium", Arial, sans-serif;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    .restaurants-result .delivery-item .icon {
+      min-width: 20px;
+      margin-right: 10px; }
+    .restaurants-result .delivery-item:last-child {
+      margin-bottom: 0; }
+  .restaurants-result .link {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px 19px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .restaurants-result .link span {
+      color: #fff;
+      line-height: 24px;
+      font-size: 16px;
+      font-family: "Gilroy Semibold", Arial, sans-serif; }
+
+.restaurant__top {
+  padding-top: 170px;
+  padding-bottom: 15px;
+  position: relative;
+  background-color: #fafafa; }
+
+.restaurant__preview {
+  position: absolute;
+  width: 100%;
+  height: 336px;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  .restaurant__preview::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 140px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(27, 45, 42, 0.9)), to(rgba(27, 45, 42, 0)));
+    background: -o-linear-gradient(top, rgba(27, 45, 42, 0.9) 0%, rgba(27, 45, 42, 0) 100%);
+    background: linear-gradient(180deg, rgba(27, 45, 42, 0.9) 0%, rgba(27, 45, 42, 0) 100%); }
+
+.restaurant__top__wrapp {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.restaurant__info {
+  width: 66%;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  border-radius: 15px;
+  padding: 32px; }
+
+.restaurant__info__top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 24px; }
+  .restaurant__info__top .back {
+    color: #2B4A45;
+    font-family: "Gilroy Semibold", Arial, sans-serif;
+    line-height: 24px;
+    font-size: 16px; }
+    .restaurant__info__top .back img {
+      margin-right: 14px; }
+  .restaurant__info__top .rating a {
+    display: inline-block;
+    color: #2B4A45;
+    line-height: 20px;
+    font-size: 16px;
+    font-family: "Gilroy Semibold", Arial, sans-serif;
+    border-bottom: 2px solid #2B4A45;
+    margin-right: 22px; }
+    .restaurant__info__top .rating a:focus {
+      outline: none; }
+  .restaurant__info__top .rating img {
+    margin-right: 12px; }
+  .restaurant__info__top .rating .text {
+    font-size: 18px;
+    line-height: 24px;
+    color: #D9B63B;
+    font-family: "Gilroy Bold", Arial, sans-serif; }
+    .restaurant__info__top .rating .text span {
+      color: #848a89;
+      vertical-align: baseline; }
+
+.restaurant__info__content .name {
+  color: #2B4A45;
+  font-size: 36px;
+  line-height: 48px;
+  font-family: "Gilroy Bold", Arial, sans-serif;
+  margin-bottom: 24px; }
+
+.restaurant__info__content .details {
+  margin-bottom: 30px; }
+
+.restaurant__info__content .details__item {
+  display: block;
+  width: 100%;
+  margin-bottom: 16px;
+  color: #2B4A45;
+  line-height: 24px;
+  font-size: 18px;
+  font-family: "Gilroy Semibold", Arial, sans-serif; }
+  .restaurant__info__content .details__item span {
+    margin-right: 7px; }
+    .restaurant__info__content .details__item span.time {
+      color: #359080; }
+  .restaurant__info__content .details__item:last-child {
+    margin-bottom: 0; }
+  .restaurant__info__content .details__item .icon {
+    display: inline-block;
+    width: 22px;
+    margin-right: 10px; }
+    .restaurant__info__content .details__item .icon img {
+      max-width: 100%;
+      height: auto; }
+
+.restaurant__info__bottom {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .restaurant__info__bottom .menu {
+    max-width: 65%; }
+    .restaurant__info__bottom .menu a {
+      display: inline-block;
+      color: #2B4A45;
+      font-family: "Gilroy Medium", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 16px;
+      padding: 12px;
+      background: rgba(43, 74, 69, 0.1);
+      border-radius: 15px;
+      margin-right: 8px;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+      .restaurant__info__bottom .menu a.active {
+        background: #2B4A45;
+        color: #fff; }
+      .restaurant__info__bottom .menu a:hover {
+        background: #2B4A45;
+        color: #fff; }
+  .restaurant__info__bottom .search {
+    width: 32%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+    .restaurant__info__bottom .search input {
+      display: block;
+      height: 40px;
+      width: 40px;
+      border-radius: 10px;
+      background-color: rgba(43, 74, 69, 0.1);
+      background-image: url("../img/icons/search-icon.svg");
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      background-size: 19px;
+      padding-left: 0;
+      border: 1px solid transparent;
+      cursor: pointer;
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+      color: transparent; }
+      .restaurant__info__bottom .search input:hover {
+        background-color: #fff;
+        border: 1px solid #2B4A45; }
+      .restaurant__info__bottom .search input:focus {
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #2B4A45;
+        padding-left: 44px;
+        color: #2B4A45; }
+
+.restaurant__order {
+  width: 32%;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(43, 74, 69, 0.2);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 32px 0 24px; }
+  .restaurant__order .heading {
+    text-align: center;
+    color: #2B4A45;
+    line-height: 24px;
+    font-size: 18px;
+    font-family: "Gilroy Semibold", Arial, sans-serif;
+    margin-bottom: 24px; }
+  .restaurant__order .submit {
+    padding: 8px 24px 0; }
+    .restaurant__order .submit button {
+      width: 100%;
+      height: 48px;
+      border-radius: 15px;
+      background: #D9663B;
+      color: #FFFFFF;
+      font-size: 16px;
+      font-family: "Gilroy Semibold", Arial, sans-serif;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+      border: none; }
+      .restaurant__order .submit button:hover {
+        background-color: #359080; }
+
+.restaurant__order__list {
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(43, 74, 69, 0.2); }
+
+.restaurant__order__item {
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 24px; }
+  .restaurant__order__item .img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 16px; }
+  .restaurant__order__item .info {
+    margin-right: 10px;
+    width: 65%; }
+    .restaurant__order__item .info .name {
+      margin-bottom: 8px;
+      color: #2B4A45;
+      font-size: 14px;
+      line-height: 16px;
+      font-family: "Gilroy Medium", Arial, sans-serif; }
+    .restaurant__order__item .info .price {
+      color: #D9663B;
+      font-size: 14px;
+      line-height: 16px;
+      font-family: "Gilroy Semibold", Arial, sans-serif; }
+  .restaurant__order__item .count {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Gilroy Semibold", Arial, sans-serif;
+    color: #2B4A45;
+    padding-top: 3px; }
+  .restaurant__order__item .delete {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin-left: auto; }
+  .restaurant__order__item:last-child {
+    margin-bottom: 0; }
+
+.restaurant__order__delivery {
+  padding: 16px 26px;
+  color: #2B4A45;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Gilroy Semibold", Arial, sans-serif;
+  padding-bottom: 0; }
+  .restaurant__order__delivery img {
+    margin-right: 12px; }
+
+.restaurant__order__price {
+  padding: 16px 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid rgba(43, 74, 69, 0.2);
+  margin-top: 16px; }
+  .restaurant__order__price span {
+    color: #2B4A45;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Gilroy Semibold", Arial, sans-serif; }
+    .restaurant__order__price span.value {
+      font-size: 18px;
+      color: #D9663B; }
+
+.catalog {
+  padding-bottom: 120px; }
+
+.catalog-section {
+  background-color: #fafafa; }
+
+.catalog__wrapp {
+  padding-bottom: 56px;
+  margin-bottom: 56px;
+  border-bottom: 1px solid rgba(43, 74, 69, 0.2);
+  width: 66%; }
+  .catalog__wrapp:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0; }
+  .catalog__wrapp .loadmore {
+    margin: 0 auto;
+    background: rgba(53, 144, 128, 0.2);
+    border: none;
+    border-radius: 15px;
+    padding: 12px 44px;
+    color: #2B4A45;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Gilroy Semibold", Arial, sans-serif;
+    display: block;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin-top: 16px;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+    .catalog__wrapp .loadmore:focus {
+      outline: none; }
+    .catalog__wrapp .loadmore:hover {
+      background: #D9663B;
+      color: #fff; }
+
+.catalog__heading {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2B4A45;
+  font-size: 36px;
+  line-height: 48px;
+  font-family: "Gilroy Bold", Arial, sans-serif; }
+
+.catalog__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.catalog__item {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  width: 32%;
+  overflow: hidden;
+  margin-bottom: 24px; }
+  .catalog__item .preview {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .catalog__item .info {
+    padding: 12px;
+    height: 100px;
+    overflow: hidden; }
+    .catalog__item .info .name {
+      color: #2B4A45;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 4px;
+      font-family: "Gilroy Semibold", Arial, sans-serif; }
+    .catalog__item .info .descr {
+      color: #2B4A45;
+      font-size: 12px;
+      line-height: 16px;
+      font-family: "Gilroy Medium", Arial, sans-serif; }
+  .catalog__item .size {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    padding-left: 12px;
+    padding-right: 12px; }
+  .catalog__item .size__item {
+    width: 48%; }
+    .catalog__item .size__item.not-select {
+      width: 100%; }
+      .catalog__item .size__item.not-select input:checked + label {
+        background: rgba(43, 74, 69, 0.1);
+        color: #2B4A45; }
+    .catalog__item .size__item label {
+      width: 100%;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 15px;
+      background: rgba(43, 74, 69, 0.1);
+      color: #2B4A45;
+      font-size: 14px;
+      font-family: "Gilroy Semibold", Arial, sans-serif;
+      display: block;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+      cursor: pointer; }
+    .catalog__item .size__item input {
+      display: none; }
+      .catalog__item .size__item input:checked + label {
+        background: #2B4A45;
+        color: #fff; }
+  .catalog__item .details {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 12px;
+    padding-bottom: 12px; }
+    .catalog__item .details .price {
+      color: #D9663B;
+      font-size: 14px;
+      line-height: 16px;
+      font-family: "Gilroy Bold", Arial, sans-serif; }
+    .catalog__item .details .buy span {
+      color: #2B4A45;
+      display: inline-block;
+      font-size: 14px;
+      font-family: "Gilroy Semibold", Arial, sans-serif;
+      margin-right: 12px;
+      vertical-align: text-top; }
+    .catalog__item .details .buy button {
+      width: 40px;
+      height: 40px;
+      border-radius: 15px;
+      background: rgba(217, 102, 59, 0.2);
+      text-align: center;
+      line-height: 50px;
+      border: none;
+      padding: 0;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+      .catalog__item .details .buy button svg path {
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        transition: all 0.4s; }
+      .catalog__item .details .buy button:hover {
+        background-color: #D9663B; }
+        .catalog__item .details .buy button:hover svg path {
+          fill: #fff; }
+
+.review__eval__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse; }
+  .review__eval__list input[type="radio"] {
+    display: none; }
+  .review__eval__list label {
+    padding-left: 15px;
+    cursor: pointer; }
+    .review__eval__list label svg {
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s; }
+      .review__eval__list label svg path {
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s; }
+    .review__eval__list label:last-child {
+      margin-left: 0; }
+  .review__eval__list label:hover svg path, .review__eval__list label:hover ~ label svg path {
+    fill: #D9B63B;
+    stroke: #D9B63B; }
+  .review__eval__list input[type="radio"]:checked ~ label svg path {
+    fill: #D9B63B;
+    stroke: #D9B63B; }
+
+.reviews__heading {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px; }
+  .reviews__heading h2 {
+    color: #2B4A45;
+    font-size: 36px;
+    line-height: 48px;
+    font-family: "Gilroy Semibold", Arial, sans-serif; }
+  .reviews__heading .count {
+    color: rgba(43, 74, 69, 0.5);
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "Gilroy Semibold", Arial, sans-serif; }
+    .reviews__heading .count span {
+      color: #2B4A45; }
+
+.review__eval {
+  margin-bottom: 35px; }
+  .review__eval p {
+    color: #2B4A45;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    font-family: "Gilroy Semibold", Arial, sans-serif; }
+
+.review__text {
+  margin-bottom: 40px; }
+  .review__text label {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    color: #2B4A45;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Gilroy Semibold", Arial, sans-serif; }
+  .review__text textarea {
+    resize: none;
+    display: block;
+    height: 96px;
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid rgba(43, 74, 69, 0.2);
+    padding: 12px;
+    background-color: transparent;
+    font-family: "Gilroy Medium", Arial, sans-serif; }
+    .review__text textarea::-webkit-input-placeholder {
+      font-family: "Gilroy Medium", Arial, sans-serif;
+      color: rgba(43, 74, 69, 0.4); }
+    .review__text textarea::-moz-placeholder {
+      font-family: "Gilroy Medium", Arial, sans-serif;
+      color: rgba(43, 74, 69, 0.4); }
+    .review__text textarea:-ms-input-placeholder {
+      font-family: "Gilroy Medium", Arial, sans-serif;
+      color: rgba(43, 74, 69, 0.4); }
+    .review__text textarea::-ms-input-placeholder {
+      font-family: "Gilroy Medium", Arial, sans-serif;
+      color: rgba(43, 74, 69, 0.4); }
+    .review__text textarea::placeholder {
+      font-family: "Gilroy Medium", Arial, sans-serif;
+      color: rgba(43, 74, 69, 0.4); }
+
+.reviews__item {
+  width: 100%;
+  margin-bottom: 16px;
+  border: 1px solid rgba(43, 74, 69, 0.2);
+  border-radius: 15px;
+  padding: 24px 16px; }
+  .reviews__item .info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 15px; }
+    .reviews__item .info .name {
+      color: #2B4A45;
+      font-size: 16px;
+      line-height: 24px;
+      font-family: "Gilroy Semibold", Arial, sans-serif; }
+    .reviews__item .info .date {
+      color: rgba(43, 74, 69, 0.5);
+      font-size: 14px;
+      line-height: 24px;
+      font-family: "Gilroy Semibold", Arial, sans-serif; }
+  .reviews__item .rating {
+    margin-bottom: 20px; }
+    .reviews__item .rating svg {
+      margin-right: 8px;
+      width: 20px; }
+  .reviews__item .descr {
+    color: #2B4A45;
+    font-size: 14px;
+    line-height: 24px; }
+
+.reviews__loadmore {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 15px;
+  background: rgba(53, 144, 128, 0.2);
+  display: block;
+  padding: 12px 28px;
+  color: #2B4A45;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Gilroy Semibold", Arial, sans-serif;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  border: none; }
+  .reviews__loadmore:focus {
+    outline: none; }
+  .reviews__loadmore:hover {
+    background: #D9663B;
+    color: #fff; }
+
+.restaurant-about {
+  padding: 156px 0; }
+  .restaurant-about p {
+    color: rgba(43, 74, 69, 0.8);
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 80px; }
+    .restaurant-about p a {
+      vertical-align: baseline;
+      color: #2B4A45;
+      font-size: 14px;
+      font-family: "Gilroy Semibold", Arial, sans-serif; }
+    .restaurant-about p:last-child {
+      margin-bottom: 0; }
+
+.restaurant-about__heading {
+  margin-bottom: 24px; }
+
+.restaurant__empty {
+  padding-top: 68px;
+  padding-bottom: 98px;
+  text-align: center; }
+  .restaurant__empty span {
+    color: rgba(43, 74, 69, 0.5);
+    font-size: 36px;
+    line-height: 48px;
+    font-family: "Gilroy Bold", Arial, sans-serif; }
+
+.eval__heading {
+  background: #359080;
+  padding-top: 160px;
+  padding-bottom: 40px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 36px;
+  line-height: 48px;
+  font-family: "Gilroy Bold", Arial, sans-serif; }
+
+.eval__container {
+  padding-top: 56px;
+  padding-bottom: 140px; }
+
+.eval__descr {
+  text-align: center;
+  margin-bottom: 64px;
+  color: rgba(43, 74, 69, 0.5);
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Gilroy Semibold", Arial, sans-serif; }
+
+.eval__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-bottom: 100px; }
+  .eval__list input[type="radio"] {
+    display: none; }
+  .eval__list label {
+    padding-left: 15px;
+    cursor: pointer; }
+    .eval__list label svg {
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s; }
+      .eval__list label svg path {
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s; }
+    .eval__list label:last-child {
+      margin-left: 0; }
+  .eval__list label:hover svg path, .eval__list label:hover ~ label svg path {
+    fill: #E0AB36;
+    stroke: #E0AB36;
+    fill-opacity: 1; }
+  .eval__list input[type="radio"]:checked ~ label svg path {
+    fill: #E0AB36;
+    stroke: #E0AB36;
+    fill-opacity: 1; }
+
+.eval__submit {
+  margin: 0 auto;
+  height: 48px;
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 5px 67px;
+  border-radius: 15px;
+  background: rgba(217, 102, 59, 0.2);
+  color: #D9663B;
+  font-size: 16px;
+  font-family: "Gilroy Semibold", Arial, sans-serif;
+  border: none;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+  .eval__submit:hover {
+    background: #D9663B;
+    color: #fff; }
+
+.tracker__heading {
+  background: #359080;
+  padding: 160px 0 40px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 36px;
+  line-height: 48px;
+  font-family: "Gilroy Bold", Arial, sans-serif; }
+  .tracker__heading span {
+    vertical-align: baseline;
+    color: #fff;
+    margin-left: 6px; }
+
+.tracker__wrapp {
+  position: relative; }
+
+.tracker__card {
+  background: #359080;
+  width: 416px;
+  border-radius: 20px; }
+
+.tracker__card__info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(43, 74, 69, 0.2);
+  margin-bottom: 22px; }
+  .tracker__card__info .box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 49%;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .tracker__card__info .box .icon {
+      background: rgba(217, 102, 59, 0.2);
+      display: inline-block;
+      border-radius: 15px;
+      width: 48px;
+      height: 48px;
+      line-height: 61px;
+      text-align: center;
+      -webkit-flex-shrink: 0;
+          -ms-flex-negative: 0;
+              flex-shrink: 0;
+      margin-right: 12px; }
+    .tracker__card__info .box .text p {
+      margin-bottom: 2px;
+      color: rgba(43, 74, 69, 0.5);
+      font-size: 12px;
+      line-height: 16px;
+      font-family: "Gilroy Medium", Arial, sans-serif; }
+    .tracker__card__info .box .text span {
+      display: block;
+      color: #2B4A45;
+      font-size: 24px;
+      line-height: 32px;
+      -o-text-overflow: ellipsis;
+         text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 128px;
+      overflow: hidden;
+      font-family: "Gilroy Semibold", Arial, sans-serif; }
+
+.tracker__card__wrapp {
+  border: 1px solid rgba(43, 74, 69, 0.2);
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 24px; }
+
+.tracker__card__item {
+  margin-bottom: 24px;
+  color: #2B4A45;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "Gilroy Medium", Arial, sans-serif; }
+  .tracker__card__item:last-child {
+    margin-bottom: 0; }
+  .tracker__card__item::before {
+    content: '';
+    width: 24px;
+    display: inline-block;
+    vertical-align: bottom;
+    height: 24px;
+    border-radius: 8px;
+    background: rgba(43, 74, 69, 0.1);
+    margin-right: 12px; }
+  .tracker__card__item.ready::before {
+    background-color: rgba(53, 144, 128, 0.2);
+    background-image: url("../img/icons/check-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 14px; }
+  .tracker__card__item.during::before {
+    background-color: rgba(53, 144, 128, 0.2);
+    background-image: url("../img/icons/during-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px; }
+
+.tracker__card__courier {
+  padding: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .tracker__card__courier .info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .tracker__card__courier .avatar {
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 16px; }
+  .tracker__card__courier .heading {
+    margin-bottom: 4px;
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 16px;
+    font-family: "Gilroy Medium", Arial, sans-serif; }
+  .tracker__card__courier .name {
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "Gilroy Semibold", Arial, sans-serif;
+    margin-bottom: 7px; }
+  .tracker__card__courier .rating svg {
+    margin-right: 10px;
+    vertical-align: text-bottom; }
+  .tracker__card__courier .rating span {
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "Gilroy Medium", Arial, sans-serif;
+    color: rgba(255, 255, 255, 0.5); }
+    .tracker__card__courier .rating span span {
+      color: #fff;
+      vertical-align: baseline; }
+  .tracker__card__courier .nav a {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    line-height: 58px;
+    margin-right: 8px;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+    .tracker__card__courier .nav a:hover {
+      background-color: #D9663B; }
+    .tracker__card__courier .nav a:last-child {
+      margin-right: 0; }
