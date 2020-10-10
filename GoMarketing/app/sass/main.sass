@@ -1,0 +1,738 @@
+// MAIN ELEMENTS
+$font_bold: 'Montserrat Bold', Arial, sans-serif
+$font_light: 'Montserrat Light', Arial, sans-serif
+$font_regular: 'Montserrat Regular', Arial, sans-serif
+$font_black: 'Montserrat Black', Arial, sans-serif
+
+
+html
+  overflow-x: hidden
+body   
+  font-family: $font_regular 
+  overflow-x: hidden
+  background-repeat: no-repeat
+  position: relative
+  &::before
+    //content: ''
+    background-image: url('../img/bg-blur.png')
+    background-repeat: no-repeat
+    background-position: top right
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    display: block
+
+*, :after, :before
+  box-sizing: border-box
+
+input
+  font-family: $font_regular
+
+.mainContainer
+  max-width: 1388px
+  width: 100%
+  margin: 0 auto
+  padding: 0 20px
+  box-sizing: border-box  
+  @media screen and (max-width: 768px)
+    padding: 0 16px
+
+.bg-black
+  background-color: #060606
+
+.hidden
+  display: none !important
+
+
+header
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  .mainContainer
+    position: relative
+    z-index: 1
+.header__wrapp
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 33px 0
+  a.phone
+    color: #000000
+    font-size: 20px
+    line-height: 24px
+    font-family: $font_bold
+    &:focus
+      outline: none
+  
+
+.banner
+  padding: 133px 0 65px
+  position: relative
+  .mainContainer
+    position: relative
+    z-index: 1
+  &::before
+    content: ''
+    display: block
+    width: 1088.06px
+    height: 1026.29px
+    position: absolute
+    background-image: url(../img/blur-banner.png)
+    background-size: contain
+    background-position: top right
+    background-repeat: no-repeat
+    top: -1%
+    right: 0
+    opacity: 0.8
+.banner__wrapp
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+.banner__heading
+  color: #000000
+  text-transform: uppercase
+  font-size: 50px
+  line-height: 60px
+  font-family: $font_black
+  margin-bottom: 21px
+.banner__descr
+  color: #000000
+  font-size: 20px
+  line-height: 24px
+  font-family: $font_regular
+.banner__img
+  max-width: 561px
+  flex-shrink: 0
+  img
+    max-width: 100%
+    height: auto
+.banner__content
+  padding-top: 77px
+
+
+.request
+  margin-top: -145px
+  margin-bottom: -165px
+  &.second
+    margin-top: 0
+    margin-bottom: 0
+    .request__form
+      width: 49%
+      .heading
+        margin-bottom: 50px
+.request__wrapp
+  background: #3DE197
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 68px 155px 68px 111px
+  position: relative
+  z-index: 5
+.request__form
+  width: 42%
+  position: relative
+  .arrow
+    position: absolute
+    top: 0
+    right: 0
+  .heading
+    color: #000000
+    text-transform: uppercase
+    font-size: 30px
+    line-height: 33px
+    font-family: $font_black
+    margin-bottom: 6px
+  .descr
+    color: #000000
+    font-family: $font_black
+    font-size: 18px
+    line-height: 22px
+    text-transform: uppercase
+    margin-bottom: 20px
+  form
+    display: flex
+    justify-content: space-between
+    align-items: center
+    input
+      height: 55px
+      background-color: #fff
+      width: 53%
+      border: none
+      transition: all 0.2s
+      color: #000000
+      font-size: 15px
+      padding-left: 42px
+      background-image: url('../img/call.svg')
+      background-repeat: no-repeat
+      background-size: 15px
+      background-position: 19px 22px
+      &:focus
+        outline: none
+        &::placeholder
+          color: transparent
+      &::placeholder
+        color: #949494
+    button
+      width: 43%
+      background: #060606
+      border: none
+      height: 55px
+      font-size: 14px
+      color: #ffffff
+      font-family: $font_bold
+      transition: all 0.2s
+      &:hover
+        background: #2D2D2D
+
+.request__info
+  width: 34%
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+.request__avatar
+  flex-shrink: 0
+  margin-left: 3px
+  margin-top: 5px
+  position: relative
+  &::after
+    content: ''
+    display: block
+    width: 79px
+    height: 79px
+    background-image: url('../img/avatar-icon.svg')
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+    position: absolute
+    right: -18px
+    bottom: -18px
+  span
+    display: block
+    border-radius: 50%
+    width: 151px
+    height: 151px
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+.request__details
+  .heading
+    margin-bottom: 35px
+    p
+      color: #000000
+      text-transform: uppercase
+      font-size: 20px
+      line-height: 24px
+      font-family: $font_black
+      margin-bottom: 4px
+    span
+      display: block
+      color: #000000
+      font-size: 14px
+      line-height: 17px
+  .list
+    .item
+      margin-bottom: 7px
+      p
+        color: #000000
+        font-size: 20px
+        line-height: 24px
+        font-family: $font_black
+        margin-bottom: 2px
+      span
+        display: block
+        font-size: 14px
+        line-height: 17px
+        color: #000000
+      &:last-child
+        margin-bottom: 0
+
+.about
+  padding-top: 310px
+.about__wrapp
+  border-bottom: 1px solid rgba(255,255,255, 0.4)
+  padding-bottom: 89px
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  padding-right: 100px
+  position: relative
+  .element
+    position: absolute
+    right: 0
+    top: -50px
+    svg
+      max-width: 134px
+  .text
+    .heading
+      text-transform: uppercase
+      margin-bottom: 14px
+      color: #3DE197
+      font-size: 40px
+      line-height: 48px
+      font-family: $font_black
+    .descr
+      color: #FFFFFF
+      text-transform: uppercase
+      font-size: 30px
+      line-height: 33px
+      font-family: $font_black
+  .descr
+    color: #FFFFFF
+    font-size: 20px
+    line-height: 24px
+  
+.steps
+  .mainContainer
+      position: relative
+      z-index: 1
+.step
+  padding-bottom: 104px
+  padding-top: 104px
+  border-bottom: 1px solid rgba(255,255,255, 0.4)
+  &:first-child
+    position: relative
+    &::before
+      content: ''
+      display: block
+      width: 1287.25px
+      height: 1176px
+      position: absolute
+      background-image: url(../img/blur-st1.png)
+      background-size: contain
+      background-position: top right
+      background-repeat: no-repeat
+      top: -60%
+      right: -12%
+      opacity: 0.8
+  &:last-child
+    position: relative
+    border-bottom: none
+    padding-bottom: 115px
+    &::before
+      content: ''
+      display: block
+      width: 1356px
+      height: 1136.05px
+      position: absolute
+      background-image: url(../img/blur-st2.png)
+      background-size: contain
+      background-position: top right
+      background-repeat: no-repeat
+      top: -20%
+      right: -13%
+      opacity: 0.9
+.step__wrapp
+  display: flex
+  margin-bottom: 30px
+  justify-content: space-between
+  align-items: flex-start
+  position: relative
+  z-index: 1
+.step__content
+  .number
+    margin-bottom: 33px
+    font-size: 35px
+    font-family: $font_black
+    line-height: 40px
+    color: inherit
+    text-transform: uppercase
+    -webkit-text-fill-color: transparent
+    -webkit-text-stroke-width: 1px
+    -webkit-text-stroke-color: #3DE197
+  .heading
+    margin-bottom: 14px
+    color: #FFFFFF
+    font-size: 35px
+    line-height: 40px
+    font-family: $font_black
+  .preheading
+    margin-bottom: 80px
+    font-size: 24px
+    font-family: $font_black
+    text-transform: uppercase
+    line-height: 29px
+    color: rgba(255,255,255, 0.4)
+  .descr
+    color: #FFFFFF
+    font-size: 14px
+    line-height: 17px
+    font-family: $font_light
+.step__list
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  position: relative
+  z-index: 1
+  .item
+    color: #FFFFFF
+    font-size: 14px
+    line-height: 17px
+    font-family: $font_light
+    max-width: 23%
+    .icon
+      margin-bottom: 17px
+
+.partners
+  padding: 132px 0 70px
+  position: relative
+  overflow: hidden
+  .mainContainer
+    position: relative
+    z-index: 1
+  &::before
+    content: ''
+    display: block
+    width: 1287.25px
+    height: 1176px
+    position: absolute
+    background-image: url(../img/blur-clients.png)
+    opacity: 0.89
+    right: -182px
+    top: 12%
+.partners__heading
+  margin-bottom: 90px
+  color: #060606
+  text-transform: uppercase
+  font-size: 40px
+  font-family: $font_black
+  line-height: 48px
+  span
+    vertical-align: baseline
+    -webkit-text-fill-color: transparent
+    -webkit-text-stroke-width: 1px
+    -webkit-text-stroke-color: #060606
+.partners__list
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  align-items: stretch
+.partners__item
+  width: 17%
+  margin-bottom: 65px
+  p
+    color: #060606
+    font-size: 14px
+    line-height: 17px
+    font-family: $font_light
+  .logo
+    height: 60px
+    margin-bottom: 14px
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    img
+      max-height: 60px
+      width: auto
+      max-width: 100%
+
+.benefits
+  padding: 140px 0 130px
+  position: relative
+  .mainContainer
+    position: relative
+    z-index: 1
+  &::before
+    content: ''
+    display: block
+    width: 1287.25px
+    height: 1176px
+    position: absolute
+    background-image: url(../img/blur-benefits.png)
+    background-size: contain
+    background-position: top right
+    background-repeat: no-repeat
+    top: -26%
+    right: 0
+  .heading
+    margin-bottom: 89px
+    color: #3DE197
+    text-transform: uppercase
+    font-size: 40px
+    line-height: 48px
+    font-family: $font_black
+    span
+      display: block
+      width: 100%
+      -webkit-text-fill-color: transparent
+      -webkit-text-stroke-width: 1px
+      -webkit-text-stroke-color: #3DE197
+.benefits__list
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+.benefits__item
+  width: 30%
+  .head
+    margin-bottom: 40px
+    color: #FFFFFF
+    text-transform: uppercase
+    font-size: 30px
+    font-family: $font_black
+    line-height: 33px
+  .wrp
+    p
+      display: block
+      position: relative
+      padding-left: 30px
+      color: #FFFFFF
+      font-size: 14px
+      line-height: 17px
+      font-family: $font_light
+      margin-bottom: 8px
+      &::before
+        position: absolute
+        content: ''
+        left: 0
+        top: 8px
+        display: block
+        width: 20px
+        background-color: #fff
+        height: 1px
+
+.services
+  padding-bottom: 110px
+  .mainContainer
+    position: relative
+    z-index: 1
+.services__heading
+  color: #3DE197
+  text-transform: uppercase
+  font-size: 40px
+  line-height: 48px
+  font-family: $font_black
+  margin-bottom: 90px
+  span
+    vertical-align: baseline
+    display: block
+    -webkit-text-fill-color: transparent
+    -webkit-text-stroke-width: 1px
+    -webkit-text-stroke-color: #3DE197
+.services__list
+  display: flex
+  justify-content: space-between
+  align-items: stertch
+  flex-wrap: wrap
+.services__item
+  width: 31%
+  background: #1A1A1A
+  padding: 45px 52px
+  margin-bottom: 40px
+  .icon
+    margin-bottom: 12px
+  .heading
+    color: #FFFFFF
+    text-transform: uppercase
+    font-size: 24px
+    line-height: 29px
+    font-family: $font_black
+    margin-bottom: 30px
+  .descr
+    font-size: 14px
+    line-height: 25px
+    font-family: $font_light
+    color: #FFFFFF
+
+
+footer
+  padding-top: 140px
+  padding-bottom: 39px
+  position: relative
+  .mainContainer
+    position: relative
+    z-index: 1
+  &::before
+    content: ''
+    display: block
+    width: 1637.15px
+    height: 1498.78px
+    position: absolute
+    background-image: url(../img/blur-footer.png)
+    background-size: contain
+    background-position: top right
+    background-repeat: no-repeat
+    top: -155%
+    right: 0
+    opacity: 0.8
+.footer__content
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  padding-bottom: 34px
+  border-bottom: 1px solid rgba(255,255,255, 0.4)
+.footer__info
+  .heading
+    color: #3DE197
+    text-transform: uppercase
+    font-size: 40px
+    line-height: 48px
+    font-family: $font_black
+    margin-bottom: 3px
+  .descr
+    font-family: $font_black
+    text-transform: uppercase
+    font-size: 24px
+    line-height: 29px
+    color: rgba(255,255,255, 0.3)
+    margin-bottom: 90px
+  .links
+    a
+      color: #FFFFFF
+      font-family: $font_black
+      text-transform: uppercase
+      font-size: 24px
+      line-height: 29px
+      &:first-child
+        margin-right: 58px
+.footer__bottom
+  padding-top: 31px
+  .descr
+    font-size: 14px
+    font-family: $font_light
+    line-height: 17px
+    color: rgba(255,255,255, 0.5)
+    img
+      margin-right: 10px
+
+
+@media screen and ( min-width: 1440px )
+  footer::before
+    top: auto
+    right: auto
+    bottom: 0
+    left: -5%
+  .step:first-child::before
+    right: -22%
+  .step:last-child::before
+    right: -21%
+
+@media screen and ( max-width: 1440px )
+  .mainContainer
+    max-width: 1210px
+  .banner__img
+    max-width: 477px
+  .banner__heading
+    font-size: 45px
+    line-height: 54px
+    margin-bottom: 28px
+  .banner__descr
+    font-size: 18px
+    line-height: 22px
+  .banner__content
+    padding-top: 58px
+  .banner
+    padding: 113px 0 165px
+  .request
+    margin-top: -212px
+    margin-bottom: -119px
+  .request__wrapp
+    padding: 68px 82px 68px 100px
+  .request__form
+    width: 48%
+  .about__wrapp .descr
+    font-size: 18px
+    line-height: 22px
+  .about__wrapp
+    padding-right: 70px
+  .about
+    padding-top: 240px
+  .request__info
+    width: 38%
+  .step__img
+    img
+      max-width: 400px
+  .partners__heading
+    margin-bottom: 80px
+  .partners__item
+    width: 22%
+    margin-bottom: 50px
+  .benefits__list
+    display: block
+  .benefits__item
+    width: 100%
+    margin-bottom: 59px
+    display: flex
+    justify-content: space-between
+    &:last-child
+      margin-bottom: 0
+  .benefits__item .head
+    width: 25%
+  .benefits__item .list
+    width: 70%
+    display: flex
+    .wrp
+      width: 281px
+      &:first-child
+        margin-right: 19px
+        flex-shrink: 0
+  .services__heading
+    margin-bottom: 83px
+  .services__item
+    padding: 45px
+  .request.second .request__form
+    width: 53%
+  footer
+    padding-top: 120px
+  .footer__info .links a
+    display: block
+    margin-right: 0
+    margin-bottom: 17px
+    &:last-child
+      margin-bottom: 0
+  .footer__img
+    img
+      max-width: 377px
+  .footer__info .descr
+    margin-bottom: 75px
+  
+
+@media screen and ( max-width: 1200px )
+  .banner__img
+    max-width: 288px
+  .banner__heading
+    font-size: 29px
+    line-height: 36px
+  .banner__descr
+    font-size: 17px
+  .request
+    margin-top: -144px
+  .request__wrapp
+    padding: 28px 20px 28px 20px
+    display: block
+  .request__form
+    width: 100%
+    margin-bottom: 30px
+  .request__info
+    width: 100%
+  .about__wrapp
+    display: block
+  .about__wrapp .text .descr
+    margin-bottom: 20px
+  .step__img img
+    max-width: 300px
+    display: none
+  .step__list
+    flex-wrap: wrap
+    .item
+      max-width: 46%
+      width: 46%
+  .step__content .descr
+    br
+      display: none
+  .benefits__item
+    display: block
+  .benefits__item .list
+    width: 100%
+  .benefits__item .head
+    width: 100%
+  .services__item
+    width: 48%
+  .request.second .request__form
+    width: 100%
+  .footer__info .heading
+    font-size: 35px
+  .footer__info .descr
+    font-size: 22px

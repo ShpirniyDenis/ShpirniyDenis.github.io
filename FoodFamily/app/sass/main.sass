@@ -299,6 +299,8 @@ header
       padding: 5px 12px 
 .header__info
   margin-left: auto
+  display: flex
+  align-items: center
   a
     display: inline-block
     color: #FFFFFF
@@ -312,6 +314,29 @@ header
       background: #D9663B
     &:focus
       outline: none
+  button
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    background: rgba(255, 255, 255, 0.2)
+    text-align: center
+    line-height: 48px
+    margin-left: 16px
+    border: none
+    padding: 0
+    transition: all 0.2s
+    svg
+      height: 100%
+      path
+        transition: all 0.2s
+    &.profile, &.history
+      &:hover
+        background: #FFFFFF
+        svg
+          path
+            stroke: #359080
+    &.track
+      background: #FFFFFF
 
 .about-service-page
   padding-bottom: 156px
@@ -1525,6 +1550,9 @@ header
   background: #359080
   width: 416px
   border-radius: 20px
+  position: absolute
+  right: 0
+  top: -97px
 .tracker__card__info
   display: flex
   justify-content: space-between
@@ -1658,3 +1686,265 @@ header
       &:last-child
         margin-right: 0
   
+
+.tracker-pickup
+  width: 100%
+  height: 100vh
+  background-image: url('../img/tracker-pickup-bg.jpg')
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  display: flex
+  justify-content: center
+  align-items: center
+.tracker-pickup__modal
+  margin: 0 auto
+  padding: 40px 43px
+  background-color: #fff
+  width: 52%
+  border-radius: 20px
+  .heading
+    text-align: center
+    margin-bottom: 26px
+    color: #2B4A45
+    font-size: 24px
+    line-height: 32px
+    font-family: $font_semibold
+  .img
+    text-align: center
+    img
+      max-width: 313px
+  .back
+    margin: 0 auto
+    padding: 16px 67px
+    color: #D9663B
+    font-size: 16px
+    font-family: $font_semibold
+    background: rgba(217, 102, 59, 0.2)
+    border-radius: 15px
+    display: block
+    width: max-content
+    transition: all 0.2s
+    &:hover
+      background: #D9663B
+      color: #fff
+  .info
+    margin-bottom: 40px
+    .info-item
+      margin-bottom: 24px
+      color: rgba(43, 74, 69, 0.5)
+      font-size: 14px
+      line-height: 16px
+      font-family: $font_semibold
+      span
+        margin-left: 5px
+        vertical-align: baseline
+        color: #2B4A45
+        font-size: 14px
+        line-height: 16px
+        font-family: $font_semibold
+      .icon
+        width: 18px
+        margin-right: 15px
+        display: inline-block
+        img
+          max-width: 100%
+          height: auto
+      &:last-child
+        margin-bottom: 0
+
+.cabinet-section
+  position: fixed
+  right: 0
+  top: 0
+  height: 100vh
+  width: 424px
+  z-index: 99
+  background-color: #fff
+  display: flex
+  align-items: center
+  padding: 37px 40px
+.cabinet-section__close
+  position: absolute
+  right: 27px
+  top: 27px
+  background: transparent
+  padding: 10px
+  border: none
+  svg
+    path
+      transition: all 0.2s
+  &:hover
+    svg
+      path
+        fill: #000
+.cabinet-section__wrapp
+  width: 100%
+.cabinet-section__container
+  width: 100%
+  &.uppass
+    .cabinet-section__form
+      .form-group.email-code
+        margin-bottom: 30px
+      .submit
+        margin-top: 26px
+  &.registration
+    .cabinet-section__form
+      .form-group
+        margin-bottom: 22px
+  .heading
+    margin-bottom: 32px
+    display: block
+    text-align: left
+    font-size: 24px
+    line-height: 32px
+    color: #359080
+    font-family: $font_bold
+.cabinet-section__form
+  .form-group__wrapp
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    .form-group
+      width: 48%
+  .form-group
+    position: relative
+    margin-bottom: 16px
+    input
+      display: block
+      width: 100%
+      height: 56px
+      border-radius: 10px
+      background: rgba(43, 74, 69, 0.05)
+      padding: 5px 12px
+      color: #2B4A45
+      font-size: 14px
+      font-family: $font_semibold
+      border: none
+      &::placeholder
+        color: rgba(43, 74, 69, 0.4)
+        font-family: $font_semibold
+    .pass-show
+      position: absolute
+      top: 19px
+      right: 22px
+      background: transparent
+      border: none
+      padding: 0
+  .forgot
+    display: block
+    margin-top: 30px
+    color: #359080
+    font-size: 14px
+    line-height: 24px
+    font-family: $font_medium
+    border: none
+    background: transparent
+  .label
+    margin-bottom: 12px
+    color: rgba(43, 74, 69, 0.8)
+    font-size: 14px
+    line-height: 24px
+    font-family: $font_medium
+    span
+      vertical-align: baseline
+      color: rgba(43, 74, 69, 0.8)
+      font-family: $font_semibold
+  .submit
+    width: 100%
+    height: 48px
+    padding: 5px
+    text-align: center
+    margin-bottom: 24px
+    border-radius: 15px
+    border: none
+    color: #FFFFFF
+    font-size: 16px
+    font-family: $font_semibold
+    transition: all 0.2s
+    background: #359080
+    margin-top: 40px
+    &:hover
+      background: #2B4A45
+  .form-check
+    display: block
+    position: relative
+    margin-top: 19px
+    input
+      padding: 0
+      height: initial
+      width: initial
+      margin: 0
+      cursor: pointer
+      opacity: 0
+      position: absolute
+      top: 0
+      left: 0
+      &:checked+label
+        &:after
+          opacity: 1
+        &:before
+          background: #359080
+          border-color: #EBECEF
+    label
+      position: relative
+      cursor: pointer
+      width: 100%
+      display: block
+      color: rgba(43, 74, 69, 0.8)
+      font-size: 14px
+      line-height: 17px
+      font-family: $font_medium
+      display: flex
+      &:before
+        content: ''
+        -webkit-appearance: none
+        background: rgba(43, 74, 69, 0.05)
+        box-sizing: border-box
+        width: 24px
+        height: 24px
+        display: inline-block
+        position: relative
+        vertical-align: middle
+        cursor: pointer
+        transition: all 0.2s
+        margin-right: 10px
+        margin-top: -3px
+        border-radius: 5px
+        border: 2px solid transparent
+        box-sizing: border-box
+        flex-shrink: 0
+      &:after
+        content: ""
+        background-color: transparent
+        position: absolute
+        left: 9px
+        top: 1px
+        width: 7px
+        border-bottom: 2px solid #fff
+        height: 13px
+        border-right: 2px solid #fff
+        transform: rotate(45deg)
+        display: inline-block
+        opacity: 0
+        transition: all .2s
+.btn-socials
+  display: flex
+  justify-content: space-between
+  align-items: center
+  a
+    display: block
+    width: 47%
+    padding: 15px 5px
+    border-radius: 15px
+    border: 1px solid rgba(53, 144, 128, 0.2)
+    color: #359080
+    font-size: 16px
+    font-family: $font_semibold
+    transition: all 0.2s
+    text-align: center
+    &:focus
+      outline: none
+    &:hover
+      background-color: #359080
+      color: #fff
