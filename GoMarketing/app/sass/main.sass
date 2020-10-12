@@ -59,6 +59,10 @@ header
   justify-content: space-between
   align-items: center
   padding: 33px 0
+  .logo
+    max-width: 124px
+    img
+      max-width: 100%
   a.phone
     color: #000000
     font-size: 20px
@@ -111,6 +115,8 @@ header
     height: auto
 .banner__content
   padding-top: 77px
+.banner__link
+  display: none
 
 
 .request
@@ -343,12 +349,15 @@ header
     -webkit-text-fill-color: transparent
     -webkit-text-stroke-width: 1px
     -webkit-text-stroke-color: #3DE197
+    span
+      vertical-align: baseline
   .heading
     margin-bottom: 14px
     color: #FFFFFF
     font-size: 35px
     line-height: 40px
     font-family: $font_black
+    text-transform: uppercase
   .preheading
     margin-bottom: 80px
     font-size: 24px
@@ -737,3 +746,256 @@ footer
     font-size: 35px
   .footer__info .descr
     font-size: 22px
+
+@media screen and ( max-width: 992px )
+  .mainContainer
+    padding: 0 15px
+  .header__wrapp a.phone
+    font-size: 12px
+    line-height: 15px
+  .header__wrapp .logo
+    max-width: 75px
+  .header__wrapp
+    padding: 14px 0
+  .banner
+    padding: 80px 0 50px
+  .banner__wrapp
+    display: block
+  .banner__content
+    padding-top: 0
+  .banner__heading
+    font-size: 26px
+    line-height: 29px
+    margin-bottom: 10px
+    br
+      display: none
+  .banner__descr
+    font-size: 12px
+    line-height: 15px
+    font-family: $font_light
+    margin-bottom: 10px
+  .banner__img
+    width: 85%
+    margin: 0 auto
+  .request
+    margin: 0
+  .banner__link
+    display: block
+    width: 100%
+    border: none
+    background: #060606
+    padding: 20px 15px
+    text-align: center
+    font-size: 14px
+    font-family: $font_bold
+    color: #fff
+    margin-top: -52px
+  .request
+    .mainContainer
+      padding: 0
+  .request__wrapp
+    padding: 46px 15px 50px
+    position: relative
+  .request__form .heading
+    font-size: 22px
+    line-height: 29px
+    margin-bottom: 10px
+  .request__form .descr
+    font-size: 16px
+    line-height: 20px
+    margin-bottom: 200px
+  .request__details
+    order: 1
+  .request__avatar span
+    width: 86px
+    height: 86px
+    margin: 0
+    margin-right: 17px
+  .request__avatar::after
+    width: 46px
+    height: 46px
+    right: 9px
+    bottom: -9px
+  .request__details .heading
+    margin-bottom: 15px
+  .request__details .heading p
+    font-size: 16px
+    line-height: 20px
+    margin-bottom: 0
+  .request__details .heading span
+    font-size: 12px
+    line-height: 15px
+    font-family: $font_light
+  .request__details .list .item p
+    font-size: 16px
+    line-height: 20px
+    margin-bottom: 0
+  .request__details .list .item span
+    font-size: 12px
+    line-height: 15px
+    font-family: $font_light
+  .request__details .list
+    display: flex
+  .request__details .list .item 
+    margin: 0
+    &:first-child
+      width: 65px
+      margin-right: 13px
+      flex-shrink: 0
+  .request__avatar
+    margin: 0
+  .request__info
+    position: absolute
+    left: 0
+    padding: 0 15px
+    top: 222px
+  .request__form
+    margin-bottom: 0
+  .request__form form
+    display: block
+  .request__form form input
+    width: 100%
+    font-size: 14px
+    margin-bottom: 11px
+    &::placeholder
+      font-size: 14px
+  .request__form form button
+    width: 100%
+  .request__form .descr
+    max-width: 183px
+  .request__form .arrow
+    transform: rotate(90deg)
+    top: 72px
+    svg
+      width: 42px
+  .about
+    padding-top: 45px
+  .about__wrapp
+    padding-right: 0
+    padding-bottom: 50px
+  .about__wrapp .text .heading
+    font-size: 22px
+    line-height: 26px
+    margin-bottom: 0
+    br
+      display: none
+  .about__wrapp .text .descr
+    font-size: 16px
+    line-height: 20px
+    margin-bottom: 24px
+    max-width: 205px
+    br
+      display: none
+  .about__wrapp .descr
+    font-size: 14px
+    line-height: 17px
+    br
+      display: none
+  .step
+    padding-top: 45px
+    padding-bottom: 45px
+  .step__img
+    text-align: right
+    width: 100%
+    margin-bottom: -50px
+  .step__img img
+    max-width: 185px
+    display: inline-block
+  .step__content
+    order: 1
+  .step__wrapp
+    flex-direction: column
+  .step__content .number
+    font-size: 45px
+    line-height: 55px
+    margin-bottom: 14px
+    span
+      display: none
+  .step__content .heading
+    font-size: 22px
+    line-height: 26px
+    margin-bottom: 7px
+    max-width: 84%
+    br
+      display: none
+  .step__content .preheading
+    font-size: 16px
+    line-height: 20px
+    margin-bottom: 45px
+  .step__content .descr
+    font-size: 12px
+    line-height: 15px
+  .step__list
+    display: block
+  .step__list .item
+    width: 100%
+    max-width: 100%
+    margin-bottom: 17px
+    svg
+      margin-bottom: 7px
+    br
+      display: none
+    &:last-child
+      margin-bottom: 0
+  .step:last-child
+    padding-bottom: 46px
+  .partners
+    padding: 44px 0 10px
+  .partners__heading
+    font-size: 22px
+    line-height: 26px
+    margin-bottom: 35px
+  .partners__item
+    width: 43%
+    margin-bottom: 32px
+    &:last-child
+      margin-bottom: 0
+  .partners__item .logo img
+    max-height: 50px
+  .partners__item .logo
+    height: 50px
+    margin-bottom: 7px
+  .partners__item p
+    font-size: 10px
+    line-height: 12px
+    font-family: $font_light
+  .benefits
+    padding: 44px 0 70px
+  .benefits .heading
+    font-size: 22px
+    line-height: 26px
+    margin-bottom: 40px
+  .benefits__item .head
+    margin-bottom: 21px
+    font-size: 16px
+    line-height: 20px
+  .benefits__item .list
+    display: block
+  .benefits__item .list .wrp
+    margin-right: 0
+    width: 100%
+    p
+      padding-left: 36px
+  .benefits__item
+    margin-bottom: 40px
+  .services__heading
+    font-size: 22px
+    line-height: 26px
+    margin-bottom: 45px
+  .services__list
+    display: block
+  .services__item
+    width: 100%
+    margin-bottom: 21px
+    padding: 32px
+    &:last-child
+      margin-bottom: 0
+  .services__item .heading
+    margin-bottom: 25px
+    font-size: 16px
+    line-height: 20px
+  .services__item .descr
+    font-size: 12px
+    line-height: 22px
+  .services
+    padding-bottom: 50px
