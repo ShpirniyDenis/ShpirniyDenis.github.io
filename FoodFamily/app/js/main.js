@@ -40,16 +40,23 @@ document.addEventListener('click', clickItemHandler);
 
 
 
-  $('.in-link').click(function (event) {
+$('.in-link, .ord-link').click(function (event) {
     event.preventDefault();
     if ($(this).hasClass('registration')) {
       $('.cabinet-section__container.registration').show();
+      $('.cabinet-section').removeClass('v2');
     } else if ($(this).hasClass('login')) {
       $('.cabinet-section__container.login').show();
+      $('.cabinet-section').removeClass('v2');
     } else if ($(this).hasClass('profile')) {
       $('.cabinet-section__container.user').show();
+      $('.cabinet-section').addClass('v2');
     } else if ($(this).hasClass('history')) {
       $('.cabinet-section__container.history').show();
+      $('.cabinet-section').addClass('v2');
+    } else if ($(this).hasClass('order')) {
+      $('.cabinet-section__container.order').show();
+      $('.cabinet-section').addClass('v2');
     }
     $('.cabinet-section').addClass('active');
     $('body').addClass('show-modal');
@@ -63,7 +70,7 @@ document.addEventListener('click', clickItemHandler);
   });
 
   $(document).click(function (event) {
-    if (!$(event.target).closest(".cabinet-section,.in-link").length) {
+    if (!$(event.target).closest(".cabinet-section,.in-link, .ord-link").length) {
       $('.cabinet-section__container').hide();
       $('.cabinet-section').removeClass('active');
       $('body').removeClass('show-modal');
@@ -102,12 +109,14 @@ document.addEventListener('click', clickItemHandler);
 
     $('.cabinet-section__container.user').slideUp(0);
     $(currentLink).slideDown(300);
+    $('.cabinet-section').removeClass('v2');
   });
 
   $('.edit-name .cabinet-section__form, .edit-location .cabinet-section__form, .edit-phone .cabinet-section__form, .edit-pass .cabinet-section__form, .edit-card .cabinet-section__form').submit(function (event) {
     event.preventDefault();
     $('.cabinet-section__container').slideUp(0);
     $('.cabinet-section__container.user').slideDown(300);
+    $('.cabinet-section').addClass('v2');
   });
 
 
