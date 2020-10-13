@@ -1,7 +1,30 @@
 body {
   font-family: "Gilroy Regular", Arial, sans-serif;
   overflow-x: hidden;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  position: relative; }
+  body::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    -webkit-backdrop-filter: blur(0);
+            backdrop-filter: blur(0);
+    z-index: -1;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
+  body.show-modal {
+    position: relative; }
+    body.show-modal::before {
+      background: rgba(43, 74, 69, 0.8);
+      -webkit-backdrop-filter: blur(10px);
+              backdrop-filter: blur(10px);
+      z-index: 40; }
 
 *, :after, :before {
   -webkit-box-sizing: border-box;
@@ -2273,6 +2296,7 @@ header {
   right: 0;
   top: 0;
   height: 100vh;
+  overflow: auto;
   width: 424px;
   z-index: 99;
   background-color: #fff;
@@ -2284,7 +2308,17 @@ header {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 37px 40px; }
+  padding: 37px 40px;
+  -webkit-transform: translateX(105%);
+      -ms-transform: translateX(105%);
+          transform: translateX(105%);
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s; }
+  .cabinet-section.active {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0); }
 
 .cabinet-section__close {
   position: absolute;
@@ -2305,6 +2339,28 @@ header {
 
 .cabinet-section__container {
   width: 100%; }
+  .cabinet-section__container.profile {
+    min-height: 100vh;
+    padding-top: 28px; }
+    .cabinet-section__container.profile .heading {
+      margin-bottom: 28px; }
+  .cabinet-section__container.address-success .heading {
+    margin-bottom: 80px; }
+  .cabinet-section__container .success-container {
+    text-align: center; }
+    .cabinet-section__container .success-container img {
+      margin-bottom: 80px;
+      max-width: 156px; }
+    .cabinet-section__container .success-container button {
+      width: 100%;
+      border: none;
+      background-color: #359080;
+      height: 48px;
+      text-align: center;
+      color: #FFFFFF;
+      font-size: 16px;
+      font-family: "Gilroy Semibold", Arial, sans-serif;
+      border-radius: 15px; }
   .cabinet-section__container.uppass .cabinet-section__form .form-group.email-code {
     margin-bottom: 30px; }
   .cabinet-section__container.uppass .cabinet-section__form .submit {
@@ -2518,3 +2574,199 @@ header {
     .btn-socials a:hover {
       background-color: #359080;
       color: #fff; }
+
+.cabinet-section__history .history-item {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 12px;
+  background: rgba(43, 74, 69, 0.05);
+  border-radius: 10px; }
+
+.cabinet-section__history .info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 15px; }
+  .cabinet-section__history .info .logo {
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 12px;
+    border-radius: 10px; }
+  .cabinet-section__history .info .text .heaing {
+    color: #2B4A45;
+    font-family: "Gilroy Semibold", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 2px; }
+  .cabinet-section__history .info .text ul li {
+    color: #2B4A45;
+    font-family: "Gilroy Medium", Arial, sans-serif;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 16px; }
+    .cabinet-section__history .info .text ul li:last-child {
+      margin-bottom: 0; }
+
+.cabinet-section__history .details {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+  .cabinet-section__history .details .date {
+    width: 80px;
+    margin-right: 12px;
+    color: rgba(43, 74, 69, 0.4);
+    font-family: "Gilroy Semibold", Arial, sans-serif;
+    font-size: 12px;
+    line-height: 16px; }
+  .cabinet-section__history .details .price {
+    color: #D9663B;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "Gilroy Semibold", Arial, sans-serif; }
+  .cabinet-section__history .details button {
+    padding: 0;
+    border: none;
+    background: transparent;
+    margin-left: auto;
+    color: #359080;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "Gilroy Semibold", Arial, sans-serif; }
+
+.cabinet-section__user .info__list {
+  margin-bottom: 32px; }
+
+.cabinet-section__user .info__item {
+  margin-bottom: 8px;
+  background: rgba(43, 74, 69, 0.05);
+  border-radius: 10px;
+  position: relative;
+  padding: 16px; }
+  .cabinet-section__user .info__item:last-child {
+    margin-bottom: 0; }
+  .cabinet-section__user .info__item .container {
+    width: 100%;
+    margin-bottom: 12px; }
+    .cabinet-section__user .info__item .container:last-child {
+      margin-bottom: 0; }
+    .cabinet-section__user .info__item .container .label {
+      color: rgba(43, 74, 69, 0.5);
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 8px; }
+    .cabinet-section__user .info__item .container .value {
+      color: #2B4A45;
+      font-size: 14px;
+      line-height: 24px;
+      font-family: "Gilroy Semibold", Arial, sans-serif;
+      padding-right: 85px; }
+  .cabinet-section__user .info__item .edit {
+    position: absolute;
+    border: none;
+    background: transparent;
+    bottom: 15px;
+    right: 14px;
+    padding: 0;
+    color: #359080;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "Gilroy Semibold", Arial, sans-serif; }
+
+.cabinet-section__user .info__card {
+  margin-bottom: 32px; }
+  .cabinet-section__user .info__card .label {
+    margin-bottom: 16px;
+    color: rgba(43, 74, 69, 0.5);
+    font-size: 14px;
+    line-height: 16px; }
+  .cabinet-section__user .info__card button {
+    width: 100%;
+    height: 48px;
+    text-align: center;
+    border: 1px solid rgba(53, 144, 128, 0.2);
+    background: transparent;
+    padding: 0;
+    border-radius: 15px;
+    color: #359080;
+    font-size: 16px;
+    font-family: "Gilroy Semibold", Arial, sans-serif;
+    background-image: url("../img/icons/plus-vector.svg");
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: 17px 17px; }
+
+.cabinet-section__user .info__promo {
+  margin-bottom: 40px; }
+  .cabinet-section__user .info__promo .label {
+    margin-bottom: 16px;
+    color: rgba(43, 74, 69, 0.5);
+    font-size: 14px;
+    line-height: 16px; }
+  .cabinet-section__user .info__promo .value {
+    width: 100%;
+    height: 56px;
+    padding-left: 12px;
+    line-height: 56px;
+    color: rgba(43, 74, 69, 0.4);
+    font-size: 14px;
+    font-family: "Gilroy Semibold", Arial, sans-serif;
+    border-radius: 10px;
+    background: rgba(43, 74, 69, 0.05); }
+
+.cabinet-section__user .exit {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #359080;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Gilroy Semibold", Arial, sans-serif; }
+  .cabinet-section__user .exit svg, .cabinet-section__user .exit img {
+    margin-right: 12px;
+    vertical-align: top; }
+
+button.add-phone {
+  width: 100%;
+  height: 48px;
+  text-align: center;
+  border: 1px solid rgba(53, 144, 128, 0.2);
+  background: transparent;
+  padding: 0;
+  border-radius: 15px;
+  color: #359080;
+  font-size: 16px;
+  font-family: "Gilroy Semibold", Arial, sans-serif;
+  background-image: url("../img/icons/plus-vector.svg");
+  background-repeat: no-repeat;
+  background-size: 14px;
+  background-position: 17px 17px; }
+
+.edit-card .heading {
+  margin-bottom: 24px; }
+
+.edit-card .edit-card__descr {
+  margin-bottom: 32px;
+  color: #359080;
+  font-size: 14px;
+  line-height: 19px;
+  font-family: "Gilroy Medium", Arial, sans-serif; }

@@ -11,9 +11,28 @@ body
   font-family: $font_regular 
   overflow-x: hidden
   background-repeat: no-repeat
+  position: relative
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: transparent
+    backdrop-filter: blur(0)
+    z-index: -1
+    transition: all 0.5s
+  &.show-modal
+    position: relative
+    &::before
+      background: rgba(43, 74, 69, 0.8)
+      backdrop-filter: blur(10px)
+      z-index: 40
 
 *, :after, :before
-  box-sizing: border-box
+  box-sizing: border-box 
 
 input
   font-family: $font_regular
@@ -1758,12 +1777,17 @@ header
   right: 0
   top: 0
   height: 100vh
+  overflow: auto
   width: 424px
   z-index: 99
   background-color: #fff
   display: flex
   align-items: center
   padding: 37px 40px
+  transform: translateX(105%)
+  transition: all 0.6s
+  &.active
+    transform: translateX(0)
 .cabinet-section__close
   position: absolute
   right: 27px
@@ -1782,6 +1806,29 @@ header
   width: 100%
 .cabinet-section__container
   width: 100%
+  &.profile
+    min-height: 100vh
+    padding-top: 28px
+    .heading
+      margin-bottom: 28px
+  &.address-success
+    .heading
+      margin-bottom: 80px
+  .success-container
+    text-align: center
+    img
+      margin-bottom: 80px
+      max-width: 156px
+    button
+      width: 100%
+      border: none
+      background-color: #359080
+      height: 48px
+      text-align: center
+      color: #FFFFFF
+      font-size: 16px
+      font-family: $font_semibold
+      border-radius: 15px
   &.uppass
     .cabinet-section__form
       .form-group.email-code
@@ -1948,3 +1995,179 @@ header
     &:hover
       background-color: #359080
       color: #fff
+
+.cabinet-section__history
+  .history-item
+    width: 100%
+    margin-bottom: 8px
+    padding: 12px
+    background: rgba(43, 74, 69, 0.05)
+    border-radius: 10px
+  .info
+    display: flex
+    justify-content: flex-start
+    margin-bottom: 15px
+    .logo
+      flex-shrink: 0
+      width: 80px
+      height: 80px
+      background-size: cover
+      background-position: center
+      background-repeat: no-repeat
+      margin-right: 12px
+      border-radius: 10px
+    .text
+      .heaing
+        color: #2B4A45
+        font-family: $font_semibold
+        font-size: 16px
+        line-height: 24px
+        margin-bottom: 2px
+      ul
+        li
+          color: #2B4A45
+          font-family: $font_medium
+          margin-bottom: 4px
+          font-size: 12px
+          line-height: 16px
+          &:last-child
+            margin-bottom: 0
+  .details
+    display: flex
+    justify-content: flex-start
+    align-items: flex-end
+    .date
+      width: 80px
+      margin-right: 12px
+      color: rgba(43, 74, 69, 0.4)
+      font-family: $font_semibold
+      font-size: 12px
+      line-height: 16px
+    .price
+      color: #D9663B
+      font-size: 18px
+      line-height: 24px
+      font-family: $font_semibold
+    button
+      padding: 0
+      border: none
+      background: transparent
+      margin-left: auto
+      color: #359080
+      font-size: 14px
+      line-height: 24px
+      font-family: $font_semibold
+
+.cabinet-section__user
+  .info__list
+    margin-bottom: 32px
+  .info__item
+    margin-bottom: 8px
+    background: rgba(43, 74, 69, 0.05)
+    border-radius: 10px
+    position: relative
+    padding: 16px
+    &:last-child
+      margin-bottom: 0
+    .container
+      width: 100%
+      margin-bottom: 12px
+      &:last-child
+        margin-bottom: 0
+      .label
+        color: rgba(43, 74, 69, 0.5)
+        font-size: 14px
+        line-height: 16px
+        margin-bottom: 8px
+      .value
+        color: #2B4A45
+        font-size: 14px
+        line-height: 24px
+        font-family: $font_semibold
+        padding-right: 85px
+    .edit
+      position: absolute
+      border: none
+      background: transparent
+      bottom: 15px
+      right: 14px
+      padding: 0
+      color: #359080
+      font-size: 14px
+      line-height: 24px
+      font-family: $font_semibold
+  .info__card
+    margin-bottom: 32px
+    .label
+      margin-bottom: 16px
+      color: rgba(43, 74, 69, 0.5)
+      font-size: 14px
+      line-height: 16px
+    button
+      width: 100%
+      height: 48px
+      text-align: center
+      border: 1px solid rgba(53, 144, 128, 0.2)
+      background: transparent
+      padding: 0
+      border-radius: 15px
+      color: #359080
+      font-size: 16px
+      font-family: $font_semibold
+      background-image: url('../img/icons/plus-vector.svg')
+      background-repeat: no-repeat
+      background-size: 14px
+      background-position: 17px 17px
+  .info__promo
+    margin-bottom: 40px
+    .label
+      margin-bottom: 16px
+      color: rgba(43, 74, 69, 0.5)
+      font-size: 14px
+      line-height: 16px
+    .value
+      width: 100%
+      height: 56px
+      padding-left: 12px
+      line-height: 56px
+      color: rgba(43, 74, 69, 0.4)
+      font-size: 14px
+      font-family: $font_semibold
+      border-radius: 10px
+      background: rgba(43, 74, 69, 0.05)
+  .exit
+    padding: 0
+    border: none
+    background: transparent
+    color: #359080
+    font-size: 16px
+    line-height: 24px
+    font-family: $font_semibold
+    svg,img
+      margin-right: 12px
+      vertical-align: top
+button.add-phone
+  width: 100%
+  height: 48px
+  text-align: center
+  border: 1px solid rgba(53, 144, 128, 0.2)
+  background: transparent
+  padding: 0
+  border-radius: 15px
+  color: #359080
+  font-size: 16px
+  font-family: $font_semibold
+  background-image: url('../img/icons/plus-vector.svg')
+  background-repeat: no-repeat
+  background-size: 14px
+  background-position: 17px 17px
+
+.edit-card
+  .heading
+    margin-bottom: 24px
+  .edit-card__descr
+    margin-bottom: 32px
+    color: #359080
+    font-size: 14px
+    line-height: 19px
+    font-family: $font_medium
