@@ -50,7 +50,7 @@
               d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
               stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
-        </button>
+        </button> 
         <button class="history in-link">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8 6H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -513,10 +513,10 @@
       <div class="restaurant__top__wrapp">
         <div class="restaurant__info">
           <div class="restaurant__info__top">
-            <a href="" class="back">
+            <button class="back click-item" data-action="popup-open" data-label="#rent-popup">
               <img src="img/icons/back-icon.svg" alt="">
               Назад
-            </a>
+            </button>
             <div class="rating">
               <a href="#rating-section">Отзывы</a>
               <img src="img/icons/star-icon.svg" alt="">
@@ -1240,6 +1240,29 @@
     </div>
   </div>
 </footer>
+
+
+
+<!-- REQUEST-POPUP -->
+<div id="rent-popup" class="popup_container click-obj">
+  <div class="popup_background click-item" data-action="popup-close"></div>
+  <div class="popup request-popup leave-popup">
+    <div class="popup_close click-item" data-action="popup-close">
+      <img src="img/popup-close.svg" alt="" />
+    </div>
+    <div class="leave-popup__content">
+      <div class="heading">Вийти з цього закладу?</div>
+      <div class="img">
+        <img src="img/icons/leave-icon.svg" alt="leave">
+      </div>
+      <div class="descr">Якщо ви вийдете з цього закладу то вибрані вами<br/> продукти пропадуть</div>
+      <div class="nav">
+        <a href="restaurants.html" class="active">Так, вийти</a>
+        <button class="click-item" data-action="popup-close">Ні, залишитись</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="js/main.js"></script>

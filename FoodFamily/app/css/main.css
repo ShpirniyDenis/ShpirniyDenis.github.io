@@ -158,7 +158,38 @@ input {
   color: #2B4A45;
   font-size: 72px;
   line-height: 80px;
+  margin-bottom: 80px;
   font-family: "Gilroy Bold", Arial, sans-serif; }
+
+.how-work__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 140px; }
+  .how-work__container:last-child {
+    margin-bottom: 0; }
+
+.how-work__image {
+  margin-right: 55px; }
+
+.how-work__text {
+  color: rgba(43, 74, 69, 0.5);
+  font-family: "Gilroy Bold", Arial, sans-serif;
+  font-size: 36px;
+  line-height: 44px;
+  padding-top: 100px; }
+  .how-work__text span {
+    vertical-align: baseline;
+    color: #2B4A45; }
 
 .about-service {
   padding: 156px 0 87px; }
@@ -1301,7 +1332,10 @@ header {
     color: #2B4A45;
     font-family: "Gilroy Semibold", Arial, sans-serif;
     line-height: 24px;
-    font-size: 16px; }
+    font-size: 16px;
+    background: transparent;
+    padding: 0;
+    border: 0; }
     .restaurant__info__top .back img {
       margin-right: 14px; }
   .restaurant__info__top .rating a {
@@ -3140,3 +3174,143 @@ button.add-phone {
       display: -webkit-flex !important;
       display: -ms-flexbox !important;
       display: flex !important; }
+
+.popup_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 10px;
+  opacity: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: -10; }
+  .popup_container.active {
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition-delay: 0.1;
+         -o-transition-delay: 0.1;
+            transition-delay: 0.1;
+    z-index: 999999; }
+    .popup_container.active .popup {
+      bottom: 0;
+      -webkit-transition: all 0.6s ease-in-out;
+      -o-transition: all 0.6s ease-in-out;
+      transition: all 0.6s ease-in-out;
+      -webkit-transition-delay: 0.1;
+           -o-transition-delay: 0.1;
+              transition-delay: 0.1; }
+
+.popup_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); }
+
+.popup {
+  position: relative;
+  z-index: 200;
+  width: 100%;
+  max-width: 624px;
+  margin: auto;
+  background-color: #FFFFFF;
+  bottom: -100vh;
+  border-radius: 20px;
+  -webkit-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out; }
+
+.popup_close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  .popup_close img {
+    width: 16px;
+    height: auto; }
+
+.leave-popup {
+  padding: 40px;
+  max-width: 600px; }
+
+.leave-popup__content .heading {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #2B4A45;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "Gilroy Semibold", Arial, sans-serif; }
+
+.leave-popup__content .img {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 60px; }
+
+.leave-popup__content .descr {
+  color: #2B4A45;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Gilroy Semibold", Arial, sans-serif;
+  margin-bottom: 40px; }
+
+.leave-popup__content .nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .leave-popup__content .nav a {
+    display: block;
+    padding: 12px 53px;
+    color: #D9663B;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Gilroy Semibold", Arial, sans-serif;
+    background: rgba(217, 102, 59, 0.2);
+    border-radius: 15px;
+    margin-bottom: 20px; }
+  .leave-popup__content .nav button {
+    padding: 0;
+    background: transparent;
+    border: none;
+    color: #D9663B;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Gilroy Semibold", Arial, sans-serif; }
