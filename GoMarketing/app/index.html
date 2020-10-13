@@ -62,7 +62,7 @@
               маркетингу
             </div>
             <form id="request-form">
-              <input type="text" placeholder="+380 (97) 000 00 00" required>
+              <input type="tel" class="phone" placeholder="+380 (97) 000 00 00" name="Phone" required>
               <button>Отправить заявку</button>
             </form>
             <div class="arrow">
@@ -563,10 +563,17 @@
             <div class="heading">
               ХОТИТЕ КОМПЛЕКСНЫЙ АУДИТ ВАШЕГО МАРКЕТИНГА?
             </div>
-            <form id="request-form">
-              <input type="text" placeholder="+380 (97) 000 00 00" required>
+            <form id="request-form2">
+              <input type="tel" class="phone" placeholder="+380 (97) 000 00 00" name="Phone" required>
               <button>Получить аудит</button>
             </form>
+            <div class="arrow">
+              <svg width="54" height="45" viewBox="0 0 54 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1 26.4605L1 18.5395L38.8182 18.5395L25.375 5.77778L30.3977 1L53 22.5L30.3977 44L25.375 39.2222L38.8182 26.4605L1 26.4605Z"
+                  stroke="black" />
+              </svg>
+            </div>
           </div>
 
           <div class="request__info">
@@ -618,5 +625,9 @@
     </div>
   </footer>
 
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery.inputmask.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
