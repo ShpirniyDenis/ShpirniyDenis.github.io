@@ -573,7 +573,7 @@
           <div class="about-service__item__preview" style="background-image: url('img/about-service1.jpg');"></div>
           <div class="about-service__item__descr">
             <span>Курєрам</span>
-            <a href="">Дізнатись більше</a>
+            <a href="invite-courier.html">Дізнатись більше</a>
           </div>
         </div>
 
@@ -581,7 +581,7 @@
           <div class="about-service__item__preview" style="background-image: url('img/about-service2.jpg');"></div>
           <div class="about-service__item__descr">
             <span>Закладам</span>
-            <a href="">Дізнатись більше</a>
+            <a href="invite-restaurant.html">Дізнатись більше</a>
           </div>
         </div>
       </div>
@@ -661,101 +661,6 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script>
-  $('.in-link').click(function(event){
-    event.preventDefault();
-    if ($(this).hasClass('registration')) {
-      $('.cabinet-section__container.registration').show();
-    } else if ($(this).hasClass('login')) {
-      $('.cabinet-section__container.login').show();
-    } else if ($(this).hasClass('profile')) {
-      $('.cabinet-section__container.user').show();
-    } else if ($(this).hasClass('history')) {
-      $('.cabinet-section__container.history').show();
-    }
-    $('.cabinet-section').addClass('active');
-    $('body').addClass('show-modal');
-  });
-
-  $('.log-modal-close').click(function (event) {
-    event.preventDefault();
-    $('.cabinet-section__container').hide();
-    $('.cabinet-section').removeClass('active');
-    $('body').removeClass('show-modal');
-  });
-
-  $(document).click(function (event) {
-    if (!$(event.target).closest(".cabinet-section,.in-link").length) {
-      $('.cabinet-section__container').hide();
-      $('.cabinet-section').removeClass('active');
-      $('body').removeClass('show-modal');
-    }
-  });
-
-  $('.pass-show').click(function(){
-    $(this).closest('.form-group').find('input').attr('type', 'text');
-  });
-
-  $('.registration .cabinet-section__form').submit(function (event) {
-    event.preventDefault();
-    $('.cabinet-section__container.registration').slideUp(0);
-    $('.cabinet-section__container.address').slideDown(300);
-  });
-
-  $('.address .cabinet-section__form').submit(function (event) {
-    event.preventDefault();
-    $('.cabinet-section__container.address').slideUp(0);
-    $('.cabinet-section__container.address-success').slideDown(300);
-  });
-
-  $('.uppass .cabinet-section__form').submit(function (event) {
-    event.preventDefault();
-    $('.cabinet-section__container.uppass').slideUp(0);
-    $('.cabinet-section__container.login').slideDown(300);
-  });
-
-  $('.login .forgot').click(function () {
-    $('.cabinet-section__container.login').slideUp(0);
-    $('.cabinet-section__container.uppass').slideDown(300);
-  });
-
-  $('.profile .edit, .info__card button').click(function () {
-    let currentLink = $(this).attr('link');
-
-    $('.cabinet-section__container.user').slideUp(0);
-    $(currentLink).slideDown(300);
-  });
-
-  $('.edit-name .cabinet-section__form, .edit-location .cabinet-section__form, .edit-phone .cabinet-section__form, .edit-pass .cabinet-section__form, .edit-card .cabinet-section__form').submit(function (event) {
-    event.preventDefault();
-    $('.cabinet-section__container').slideUp(0);
-    $('.cabinet-section__container.user').slideDown(300);
-  });
-
-
-  // For order-tabs
-    let tabs = document.querySelectorAll(".order__nav button");
-    let tabContent = document.querySelectorAll(".order__tab");
-    tabs.forEach(function (tab) {
-      tab.addEventListener("click", function () {
-        tabs.forEach(function (item) {
-          item.classList.remove("active");
-        });
-        this.classList.add("active");
-        let tabName = this.getAttribute("data-tab");
-        selectTabContent(tabName);
-      });
-
-      function selectTabContent(tabName) {
-        tabContent.forEach(function (item) {
-          item.classList.contains(tabName) ?
-            item.classList.add("active") :
-            item.classList.remove("active");
-        });
-      }
-    });
-
-
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>

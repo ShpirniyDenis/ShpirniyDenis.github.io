@@ -2709,7 +2709,8 @@ header {
     background-image: url("../img/icons/plus-vector.svg");
     background-repeat: no-repeat;
     background-size: 14px;
-    background-position: 17px 17px; }
+    background-position: 17px 17px;
+    cursor: pointer; }
 
 .cabinet-section__user .info__promo {
   margin-bottom: 40px; }

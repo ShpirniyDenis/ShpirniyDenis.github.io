@@ -19,23 +19,491 @@
 <header>
   <div class="mainContainer">
     <div class="header__wrapp">
-      <a href="#" class="logo">
+      <a href="index.html" class="logo">
         <img src="img/heaser-logo.png" alt="logo">
       </a>
       <ul class="header__nav">
-        <li><a href="#">Головна</a></li>
-        <li><a href="#">Ми пропонуємо</a></li>
-        <li><a href="#">Про нас</a></li>
-        <li><a href="#">Блог</a></li>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="about.html">Ми пропонуємо</a></li>
+        <li><a href="company.html">Про нас</a></li>
+        <li><a href="blog.html">Блог</a></li>
       </ul>
       <div class="header__info">
-        <a href="#">Реєстрація</a>
-        <a href="#">Вхід</a>
+        <!-- if logIn-->
+        <!-- if track-->
+        <button class="track" style="display: none;">
+          <a href="tracker-page.html">
+            <svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9 19C7.14348 19 5.36301 18.2625 4.05025 16.9497C2.7375 15.637 2 13.8565 2 12C2 10.1435 2.7375 8.36301 4.05025 7.05025C5.36301 5.7375 7.14348 5 9 5C10.8565 5 12.637 5.7375 13.9497 7.05025C15.2625 8.36301 16 10.1435 16 12C16 13.8565 15.2625 15.637 13.9497 16.9497C12.637 18.2625 10.8565 19 9 19ZM16.03 6.39L17.45 4.97C17 4.46 16.55 4 16.04 3.56L14.62 5C13.07 3.74 11.12 3 9 3C6.61305 3 4.32387 3.94821 2.63604 5.63604C0.948211 7.32387 0 9.61305 0 12C0 14.3869 0.948211 16.6761 2.63604 18.364C4.32387 20.0518 6.61305 21 9 21C14 21 18 16.97 18 12C18 9.88 17.26 7.93 16.03 6.39ZM8 13H10V7H8V13ZM12 0H6V2H12V0Z"
+                fill="#359080" />
+            </svg>
+          </a>
+        </button>
+        <!-- endif-->
+        <button class="profile in-link" style="display: none;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"
+              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
+              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <button class="history in-link" style="display: none;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 6H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M8 12H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M8 18H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 6H3.01" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 12H3.01" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 18H3.01" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <!-- endif-->
+        <!-- if !logIn-->
+        <a href="#" class="in-link registration">Реєстрація</a>
+        <a href="#" class="in-link login">Вхід</a>
+        <!-- endif-->
         <a href="tel:77-66" class="active">Тел. 77-66</a>
       </div>
     </div>
   </div>
 </header>
+
+<div class="cabinet-section">
+  <div class="cabinet-section__wrapp">
+
+    <div class="cabinet-section__container profile order" style="display: none;">
+      <div class="heading">Оформити заказ</div>
+      <form action="" class="cabinet-section__form">
+        <div class="order__products">
+          <div class="order__product">
+            <div class="name">Chicken Spicy, 30см</div>
+            <div class="count">
+              <button type="button" class="minus">
+                <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 2H5.71429H4.28571H0V0H4.28571L5.71429 0L10 0V2Z" fill="#D9663B" />
+                </svg>
+              </button>
+              <input type="disabled" value="1">
+              <button type="button" class="plus">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 5.71429H5.71429V10H4.28571V5.71429H0V4.28571H4.28571V0H5.71429V4.28571H10V5.71429Z"
+                    fill="#D9663B" />
+                </svg>
+              </button>
+            </div>
+            <div class="price">125 грн</div>
+            <button type="button" class="delete">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10 1.00714L8.99286 0L5 3.99286L1.00714 0L0 1.00714L3.99286 5L0 8.99286L1.00714 10L5 6.00714L8.99286 10L10 8.99286L6.00714 5L10 1.00714Z"
+                  fill="#2B4A45" fill-opacity="0.5" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="order__product">
+            <div class="name">Кардіні, 40см</div>
+            <div class="count">
+              <button type="button" class="minus">
+                <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 2H5.71429H4.28571H0V0H4.28571L5.71429 0L10 0V2Z" fill="#D9663B" />
+                </svg>
+              </button>
+              <input type="disabled" value="2">
+              <button type="button" class="plus">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 5.71429H5.71429V10H4.28571V5.71429H0V4.28571H4.28571V0H5.71429V4.28571H10V5.71429Z"
+                    fill="#D9663B" />
+                </svg>
+              </button>
+            </div>
+            <div class="price">270 грн</div>
+            <button type="button" class="delete">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10 1.00714L8.99286 0L5 3.99286L1.00714 0L0 1.00714L3.99286 5L0 8.99286L1.00714 10L5 6.00714L8.99286 10L10 8.99286L6.00714 5L10 1.00714Z"
+                  fill="#2B4A45" fill-opacity="0.5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="order__promo">
+          <input type="text" placeholder="Введіть промокод">
+        </div>
+        <div class="order__delivery">
+          <div class="text">Доставка: <span>Безкоштовна доставка від 540 грн.</span></div>
+          <div class="price">45 грн</div>
+        </div>
+        <div class="order__summ">
+          <div class="text">Разом до оплати:</div>
+          <div class="price">450 грн</div>
+        </div>
+        <div class="order__data">
+          <div class="order__nav">
+            <button class="active" type="button" data-tab="type1">Доставка</button>
+            <button type="button" data-tab="type2">Самовивіз</button>
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Імя" required>
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="+38" required>
+          </div>
+
+          <div class="form-wrapp-order form-group order__tab type1 active">
+            <input type="text" placeholder="Вулиця"  required>
+            <input type="text" placeholder="Будинок"  required>
+            <input type="text" placeholder="Квартира"  required>
+          </div>
+          <div class="form-wrapp-order form-group order__tab type2">
+
+          </div>
+          <div class="form-select">
+            <div class="text">Доставити о:</div>
+            <select>
+              <option value="">Як можна швидше</option>
+              <option value="">12:00</option>
+              <option value="">13:00</option>
+              <option value="">14:00</option>
+            </select>
+          </div>
+          <div class="form-counter">
+            <div class="text">Кількість приборів:</div>
+            <div class="counter-group">
+              <button type="button" class="minus">
+                <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 2H8H6H0V0H6L8 0L14 0V2Z" fill="#2B4A45" />
+                </svg>
+              </button>
+              <input type="disabled" value="1">
+              <button type="button" class="plus">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" fill="#2B4A45" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="form-group other">
+            <input type="text" placeholder="Ваші побажання">
+          </div>
+          <div class="pay-type">
+            <div class="pay__item">
+              <input type="radio" id="payType1" name="payType" checked>
+              <label for="payType1">Оплата готівкою</label>
+            </div>
+            <div class="pay__item">
+              <input type="radio" id="payType2" name="payType">
+              <label for="payType2">Оплата картою</label>
+            </div>
+          </div>
+          <button type="submit">Замовити</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="cabinet-section__container profile history" style="display: none;">
+      <div class="heading">Закази</div>
+      <div class="cabinet-section__history">
+        <div class="history-item">
+          <div class="info">
+            <div class="logo" style="background-image: url('img/logo-history.jpg');"></div>
+            <div class="text">
+              <div class="heaing">Kroppizza</div>
+              <ul>
+                <li>1х Chicken Spicy, 30см</li>
+                <li>2х Кардіні, 40см</li>
+              </ul>
+            </div>
+          </div>
+          <div class="details">
+            <div class="date">24.09.2020</div>
+            <div class="price">450 грн</div>
+            <button>Повторити</button>
+          </div>
+        </div>
+        <div class="history-item">
+          <div class="info">
+            <div class="logo" style="background-image: url('img/logo-history.jpg');"></div>
+            <div class="text">
+              <div class="heaing">Kroppizza</div>
+              <ul>
+                <li>1х Chicken Spicy, 30см</li>
+                <li>2х Кардіні, 40см</li>
+                <li>1х Chicken Spicy, 30см</li>
+                <li>2х Кардіні, 40см</li>
+                <li>1х Chicken Spicy, 30см</li>
+                <li>2х Кардіні, 40см</li>
+              </ul>
+            </div>
+          </div>
+          <div class="details">
+            <div class="date">24.09.2020</div>
+            <div class="price">1 350 грн</div>
+            <button>Повторити</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cabinet-section__container profile user" style="display: none;">
+      <div class="heading">Профіль</div>
+      <div class="cabinet-section__user">
+        <div class="info__list">
+          <div class="info__item">
+            <button class="edit" link=".edit-name" type="button">Редагувати</button>
+            <div class="container">
+              <div class="label">Імя</div>
+              <div class="value">Стас</div>
+            </div>
+            <div class="container">
+              <div class="label">Email</div>
+              <div class="value">stasinyoyo@gmail.com</div>
+            </div>
+          </div>
+          <div class="info__item">
+            <button class="edit" link=".edit-location" type="button">Редагувати</button>
+            <div class="container">
+              <div class="label">Ваша адреса</div>
+              <div class="value">ул. Лобановского 6а</div>
+            </div>
+          </div>
+          <div class="info__item">
+            <button class="edit" link=".edit-phone" type="button">Редагувати</button>
+            <div class="container">
+              <div class="label">Телефон</div>
+              <div class="value">+380 50 435 26 50</div>
+            </div>
+          </div>
+          <div class="info__item">
+            <button class="edit" link=".edit-pass" type="button">Редагувати</button>
+            <div class="container">
+              <div class="label">Пароль</div>
+              <div class="value">********</div>
+            </div>
+          </div>
+        </div>
+        <div class="info__card">
+          <div class="label">Банківська карта</div>
+          <button link=".edit-card">Добавити картку</button>
+        </div>
+        <div class="info__promo">
+          <div class="label">Промо-код</div>
+          <div class="value">код</div>
+        </div>
+        <button class="exit log-modal-close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9"
+              stroke="#359080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M16 17L21 12L16 7" stroke="#359080" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M21 12H9" stroke="#359080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span>Вийти</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="cabinet-section__container edit-name" style="display: none;">
+      <div class="heading">Редагувати інформацію</div>
+      <form action="" class="cabinet-section__form">
+        <div class="form-group">
+          <input type="text" placeholder="Введите имя" value="Стас" required>
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Введите фамилию" value="stasinyoyo@gmail.com" required>
+        </div>
+        <button class="submit" type="submit">Зберегти</button>
+      </form>
+    </div>
+
+    <div class="cabinet-section__container edit-location" style="display: none;">
+      <div class="heading">Вкажіть адрес доставки</div>
+      <form action="" class="cabinet-section__form">
+        <div class="form-group">
+          <input type="text" placeholder="вулиця" value="Лесная" required>
+        </div>
+        <div class="form-group__wrapp">
+          <div class="form-group">
+            <input type="text" placeholder="будинок" value="17-Б">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="квартира">
+          </div>
+        </div>
+        <button class="submit" type="submit">Підтвердити адресу</button>
+      </form>
+    </div>
+
+    <div class="cabinet-section__container edit-phone" style="display: none;">
+      <div class="heading">Редагувати телефон</div>
+      <form action="" class="cabinet-section__form">
+        <div class="form-group">
+          <input type="text" placeholder="+380 *" value="+380 50 435 26 50" required>
+        </div>
+        <button class="add-phone" type="button">Добавити телефон</button>
+        <button class="submit" type="submit">Підтвердити адресу</button>
+      </form>
+    </div>
+
+    <div class="cabinet-section__container edit-pass" style="display: none;">
+      <div class="heading">Редагувати пароль</div>
+      <form action="" class="cabinet-section__form">
+        <div class="label">Старий пароль</div>
+        <div class="form-group">
+          <input type="password" placeholder="новий пароль" value="Ilovedesign1996" required>
+          <button class="pass-show" type="button"><img src="img/icons/eye-icon.svg" alt=""></button>
+        </div>
+        <div class="label"><span>пароль</span> не менше 8 символів</div>
+        <div class="form-group">
+          <input type="password" placeholder="новий пароль" required>
+          <button class="pass-show" type="button"><img src="img/icons/eye-icon.svg" alt=""></button>
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="повторити новий пароль" required>
+          <button class="pass-show" type="button"><img src="img/icons/eye-icon.svg" alt=""></button>
+        </div>
+        <button class="submit" type="submit">Відновити</button>
+      </form>
+    </div>
+
+    <div class="cabinet-section__container edit-card" style="display: none;">
+      <div class="heading">Добавити карту</div>
+      <div class="edit-card__descr">
+        Ця карта буде використовуватися в якості способу оплати за умовчанням для ваших наступних замовлень.
+      </div>
+      <form action="" class="cabinet-section__form">
+        <div class="form-group">
+          <div class="label">Імя на карті</div>
+          <input type="text" placeholder="Devid Brock" required>
+        </div>
+        <div class="form-group">
+          <div class="label">Номер карти</div>
+          <input type="text" placeholder="4242  4242  4242  4242" required>
+        </div>
+        <div class="form-group__wrapp">
+          <div class="form-group">
+            <div class="label">ММ/ГГ</div>
+            <input type="text" placeholder="ММ/ГГ" required>
+          </div>
+          <div class="form-group">
+            <div class="label">CVC</div>
+            <input type="text" placeholder="CVC" required>
+          </div>
+        </div>
+        <button class="submit" type="submit">Добавити</button>
+      </form>
+    </div>
+
+    <div class="cabinet-section__container login" style="display: none;">
+      <div class="heading">Вхід</div>
+      <form action="" class="cabinet-section__form">
+        <div class="form-group">
+          <input type="text" placeholder="ваш email *" required>
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="пароль *" required>
+          <button class="pass-show" type="button"><img src="img/icons/eye-icon.svg" alt=""></button>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="remember">
+          <label for="remember">Запамятати мене</label>
+        </div>
+        <button class="forgot" type="button">Забув пароль?</button>
+        <button class="submit" type="submit">Увійти</button>
+        <div class="btn-socials">
+          <a href="#">Googl</a>
+          <a href="#">Facebook</a>
+        </div>
+      </form>
+    </div>
+    <div class="cabinet-section__container uppass" style="display: none;">
+      <div class="heading">Відновити пароль</div>
+      <form action="" class="cabinet-section__form">
+        <div class="label">Введіть код який ми відправили на ваш Email</div>
+        <div class="form-group email-code">
+          <input type="text" placeholder="код*" required>
+        </div>
+        <div class="label"><span>пароль</span> не менше 8 символів</div>
+        <div class="form-group">
+          <input type="password" placeholder="новий пароль" required>
+          <button class="pass-show" type="button"><img src="img/icons/eye-icon.svg" alt=""></button>
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="повторити новий пароль" required>
+          <button class="pass-show" type="button"><img src="img/icons/eye-icon.svg" alt=""></button>
+        </div>
+        <button class="submit" type="submit">Відновити</button>
+      </form>
+    </div>
+
+    <div class="cabinet-section__container registration" style="display: none;">
+      <div class="heading">Реєстрація</div>
+      <form action="" class="cabinet-section__form">
+        <div class="form-group">
+          <input type="text" placeholder="Імя *" required>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="ваш email *" required>
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="+380 *" required>
+        </div>
+        <div class="label"><span>пароль</span> не менше 8 символів</div>
+        <div class="form-group">
+          <input type="password" placeholder="ваш пароль *" required>
+          <button class="pass-show" type="button"><img src="img/icons/eye-icon.svg" alt=""></button>
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="повторити пароль *" required>
+          <button class="pass-show" type="button"><img src="img/icons/eye-icon.svg" alt=""></button>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="confidence">
+          <label for="confidence">Я прочитав і погоджуюсь з політикою конфіденційності*</label>
+        </div>
+        <button class="submit" type="submit">Зареєструватись</button>
+      </form>
+    </div>
+
+    <div class="cabinet-section__container address" style="display: none;">
+      <div class="heading">Вкажіть адрес доставки</div>
+      <form action="" class="cabinet-section__form">
+        <div class="form-group">
+          <input type="text" placeholder="вулиця" required>
+        </div>
+        <div class="form-group__wrapp">
+          <div class="form-group">
+            <input type="text" placeholder="будинок">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="квартира">
+          </div>
+        </div>
+        <button class="submit" type="submit">Підтвердити адресу</button>
+      </form>
+    </div>
+
+    <div class="cabinet-section__container address-success" style="display: none;">
+      <div class="heading">Адрусу успішно добавлено в ваш профіль</div>
+      <div class="success-container">
+        <img src="img/success-map.svg" alt="">
+        <button class="log-modal-close">Готово</button>
+      </div>
+    </div>
+
+  </div>
+  <button class="cabinet-section__close log-modal-close">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M14 1.4L12.6 0L7 5.6L1.4 0L0 1.4L5.6 7L0 12.6L1.4 14L7 8.4L12.6 14L14 12.6L8.4 7L14 1.4Z" fill="#BDBDBD" />
+    </svg>
+  </button>
+</div>
 
 <main>
 
@@ -314,5 +782,7 @@
   </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
