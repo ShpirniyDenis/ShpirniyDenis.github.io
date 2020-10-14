@@ -1,0 +1,4 @@
+
+RewriteEngine On
+RewriteCond %{http://gomarketing.com.ua} /index.html HTTP [NC]
+RewriteRule (.*)index.html$ /$1 [R=301,L]

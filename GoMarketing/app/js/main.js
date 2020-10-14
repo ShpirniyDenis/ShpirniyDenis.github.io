@@ -9,7 +9,21 @@ $(function () {
         url: "mail.php", //Change
         data: th.serialize()
       }).done(function () {
-        window.location.href = "ty.html";
+        window.location.href = "thanks";
+      });
+      return false;
+    });
+  });
+
+  $(document).ready(function () {
+    $("#request-form2").submit(function () { //Change
+      var th = $(this);
+      $.ajax({
+        type: "POST",
+        url: "mail.php", //Change
+        data: th.serialize()
+      }).done(function () {
+        window.location.href = "thanks";
       });
       return false;
     });
