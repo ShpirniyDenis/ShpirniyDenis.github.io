@@ -82,6 +82,16 @@ input
   width: 18.5%
   padding: 32px 12px 32px
   text-align: center
+  position: relative
+  transition: all 0.2s
+  &:hover
+    transform: scale(1.1)
+  .link
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
   figure
     height: 72px
     margin-bottom: 24px
@@ -368,10 +378,10 @@ header
         transition: all 0.2s
     &.profile, &.history
       &:hover
-        background: #FFFFFF
+        background: #2B4A45
         svg
           path
-            stroke: #359080
+            stroke: #fff
     &.track
       background: #FFFFFF
 
@@ -890,6 +900,11 @@ header
   margin-bottom: 20px
   position: relative
   overflow: hidden
+  transition: all 0.2s
+  border: 1px solid transparent
+  &:hover
+    box-shadow: none
+    border: 1px solid rgba(43, 74, 69, 0.2)
   &.disabled
     .link
       background: rgba(43, 74, 69, 0.7)
@@ -1262,6 +1277,11 @@ header
   width: 32%
   overflow: hidden
   margin-bottom: 24px
+  transition: all 0.2s
+  border: 1px solid transparent
+  &:hover
+    box-shadow: none
+    border: 1px solid rgba(43, 74, 69, 0.2)
   .preview
     width: 100%
     height: 180px
@@ -2233,6 +2253,15 @@ button.add-phone
         border-radius: 3px
         border: none
         background-color: #f7e0d8
+        transition: all 0.2s
+        display: flex
+        justify-content: center
+        align-items: center
+        &:hover
+          background-color: #D9663B
+          svg
+            path
+              fill: #fff
       input
         width: 20px
         margin-left: 10px
@@ -2403,6 +2432,14 @@ button.add-phone
         align-items: center
         border: none
         background-color: transparent
+        display: flex
+        justify-content: center
+        align-items: center
+        &:hover
+          background-color: #D9663B
+          svg
+            path
+              fill: #fff
       input
         width: 20px
         margin-left: 10px
@@ -2548,3 +2585,84 @@ button.add-phone
       font-size: 16px
       line-height: 24px
       font-family: $font_semibold
+
+
+
+.button_su
+  overflow: hidden
+  position: relative
+  display: block
+  border-radius: 15px
+  padding: 0
+  border: none
+  margin: 0 auto
+.su_button_circle
+  border-radius: 1000px
+  position: absolute
+  left: 0
+  top: 0
+  width: 0px
+  height: 0px
+  margin-left: 0px
+  margin-top: 0px
+  pointer-events: none
+  /*animation-timing-function: ease-in-out; */
+.button_su_inner
+  display: inline-block
+  background: #FEAE16
+  color: #fff
+  font-size: 18px
+  font-weight: 600
+  width: 210px
+  height: 56px
+  line-height: 56px
+  text-align: center
+  border-radius: 15px
+  transition: 400ms
+  text-decoration: none
+  z-index: 10
+  display: flex
+  justify-content: center
+  align-items: center
+.button_text_container
+  position: relative
+  z-index: 100
+  height: 18px
+  line-height: 18px
+  display: inline-block
+.explode-circle
+  @media screen and ( min-width: 992px)
+    animation: explode 0.5s forwards
+.desplode-circle
+  @media screen and ( min-width: 992px)
+    animation: desplode 0.5s forwards
+
+
+
+@keyframes explode 
+  0% 
+    width: 0px
+    height: 0px
+    margin-left: 0px
+    margin-top: 0px
+    background-color: rgba(42, 53, 80,0.2)
+  100% 
+    width: 500px
+    height: 500px
+    margin-left: -250px
+    margin-top: -250px
+    background-color: #215369
+
+@keyframes desplode
+  0%
+    width: 500px
+    height: 500px
+    margin-left: -250px
+    margin-top: -250px
+    background-color: #215369
+  100%
+    width: 0px
+    height: 0px
+    margin-left: 0px
+    margin-top: 0px
+    background-color: rgba(129, 80, 108,0.6)
