@@ -24,7 +24,9 @@ body
     backdrop-filter: blur(0)
     z-index: -1
     transition: all 0.5s
-  &.show-modal
+  &.show-select
+    overflow: hidden
+  &.show-modal, &.show-select
     position: relative
     &::before
       background: rgba(43, 74, 69, 0.8)
@@ -44,7 +46,7 @@ input
   padding: 0 20px
   box-sizing: border-box  
   @media screen and (max-width: 768px)
-    padding: 0 16px
+    padding: 0 24px
 
 .bg-second
   background-color: $color_second
@@ -61,7 +63,7 @@ input
 
 .home-banner
   padding: 160px 0
-  .select-box
+  .select-box, .link-select
     margin: 0 auto
     width: max-content
     margin-bottom: 56px
@@ -84,8 +86,9 @@ input
   text-align: center
   position: relative
   transition: all 0.2s
-  &:hover
-    transform: scale(1.1)
+  @media (min-width: 992px)
+    &:hover
+      transform: scale(1.1)
   .link
     position: absolute
     left: 0
@@ -107,6 +110,69 @@ input
     line-height: 24px
     font-family: $font_semibold
 
+.link-select
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  &.active
+    position: relative
+    z-index: 99
+    .link-select__list
+      opacity: 1
+    .link-select__toggler
+      &::after
+        transform: rotate(-90deg)
+.link-select__content
+  position: relative
+.link-select__text
+  color: rgba(255, 255, 255, 0.5)
+  font-size: 24px
+  font-family: $font_semibold
+  margin-right: 24px
+.link-select__toggler
+  width: 288px
+  height: 64px
+  display: flex
+  align-items: center
+  border: 1px solid rgba(255, 255, 255, 0.2)
+  border-radius: 15px
+  background-color: transparent
+  color: #FFFFFF
+  font-family: $font_semibold
+  font-size: 24px
+  padding: 5px 16px
+  position: relative
+  cursor: pointer
+  &::after
+    content: ''
+    display: inline-block
+    width: 24px
+    height: 24px
+    position: absolute
+    right: 20px
+    top: 20px
+    background-position: center
+    background-repeat: no-repeat
+    background-size: 16px
+    transition: all 0.2s
+    background-image: url('../img/icons/select-toggler.svg')
+.link-select__list
+  position: absolute
+  left: 15px
+  top: 75px
+  opacity: 0
+  transition: all 0.4s
+  .link
+    display: block
+    width: 100%
+    color: #FFFFFF
+    font-family: $font_semibold
+    font-size: 24px
+    line-height: 32px
+    margin-bottom: 32px
+    cursor: pointer
+    &:last-child
+      margin-bottom: 0
 .select-box
   display: flex
   justify-content: flex-start
@@ -203,16 +269,22 @@ input
     font-size: 16px
     font-family: $font_semibold
     transition: all 0.2s
-    &:hover
-      background-color: #fff
-      color: #359080
+    @media (min-width: 992px)
+      &:hover
+        background-color: #fff
+        color: #359080
+.about-service
+  .about-service__descr
+    color: rgba(255, 255, 255, 0.8)
+    a
+      color: #fff
 .about-service__descr
-  color: rgba(255, 255, 255, 0.8)
+  color: rgba(43, 74, 69, 0.8)
   font-size: 14px
   line-height: 18px
   a
     vertical-align: baseline
-    color: #fff 
+    color: #2B4A45 
     font-family: $font_semibold
 
 
@@ -260,13 +332,14 @@ input
     line-height: 24px
     font-family: $font_semibold
     transition: all 0.3s
-  &:hover
-    background-color: #2B4A45
-    p,b
-      color: #ffffff
-    svg
-      path
-        fill: #fff
+  @media (min-width: 992px)
+    &:hover
+      background-color: #2B4A45
+      p,b
+        color: #ffffff
+      svg
+        path
+          fill: #fff
 
 
 footer
@@ -335,6 +408,13 @@ header
   padding: 16px 0
 .logo
   margin-right: 28px
+  display: block
+  width: 73px
+  height: 48px
+  background-image: url('../img/heaser-logo.png')
+  background-repeat: no-repeat
+  background-position: left
+  background-size: contain
 .header__nav
   li
     display: inline-block
@@ -377,11 +457,12 @@ header
       path
         transition: all 0.2s
     &.profile, &.history
-      &:hover
-        background: #2B4A45
-        svg
-          path
-            stroke: #fff
+      @media (min-width: 992px)
+        &:hover
+          background: #2B4A45
+          svg
+            path
+              stroke: #fff
     &.track
       background: #FFFFFF
 
@@ -485,9 +566,9 @@ header
     background: rgba(53, 144, 128, 0.2)
     border: none
     transition: all 0.2s
-    &:hover
-      background: #D9663B
-      color: #fff
+//    &:hover
+//      background: #D9663B
+//      color: #fff
 
 .blog-article
   .mainContainer
@@ -595,16 +676,16 @@ header
           transition: all 0.2s
     span
       color: #359080
-  &:hover
-    span
-      color: #D9663B
-    .icon
-      background-color:#D9663B
-      border-color: #D9663B
-      svg
-        path
-          fill: #fff
-          fill-opacity: 1
+//  &:hover
+//    span
+//      color: #D9663B
+//    .icon
+//      background-color:#D9663B
+//      border-color: #D9663B
+//      svg
+//        path
+//          fill: #fff
+//          fill-opacity: 1
 
 .invite-banner
   padding-top: 116px
@@ -632,20 +713,21 @@ header
       color: #2B4A45
       &::placeholder
         color: rgba(43, 74, 69, 0.4)
-  button
-    background: #359080
-    display: block
-    width: 100%
-    border-radius: 15px
-    height: 48px
-    color: #FFFFFF
-    font-size: 16px
-    font-family: $font_semibold
-    margin-top: 24px
-    border: none
-    transition: all 0.2s
-    &:hover
-      background: #D9663B
+    button
+      background: #359080
+      display: block
+      width: 100%
+      border-radius: 15px
+      height: 48px
+      color: #FFFFFF
+      font-size: 16px
+      font-family: $font_semibold
+      margin-top: 24px
+      border: none
+      transition: all 0.2s
+      @media (min-width: 992px)
+        &:hover
+          background: #D9663B
 .invite-banner__form__heading
   text-align: center
   color: #359080
@@ -761,16 +843,17 @@ header
     display: block
     border-radius: 15px
     width: max-content
-    padding: 12px 22px
+    padding: 11px 22px
     font-size: 16px
     font-family: $font_semibold
     line-height: 24px
     color: #fff
     margin-top: auto
     transition: all 0.2s
-    &:hover
-      background-color: #fff
-      color: #359080
+    @media (min-width: 992px)
+      &:hover
+        background-color: #fff
+        color: #359080
 
 .invite-company
   padding: 115px 0 150px
@@ -849,9 +932,10 @@ header
     line-height: 48px
     margin-right: 8px
     transition: all 0.2s
-    &:hover
-      background: #D9663B
-      border-color: #D9663B
+    @media (min-width: 992px)
+      &:hover
+        background: #D9663B
+        border-color: #D9663B
     &:last-child
       margin-right: 0
     &:focus
@@ -881,8 +965,9 @@ header
       margin-right: 10px
     &.active
       background: #D9663B
-    &:hover
-      background-color: #D9663B
+    @media (min-width: 992px)
+      &:hover
+        background-color: #D9663B
     &:focus
       outline: none
 .restaurants-results
@@ -902,9 +987,10 @@ header
   overflow: hidden
   transition: all 0.2s
   border: 1px solid transparent
-  &:hover
-    box-shadow: none
-    border: 1px solid rgba(43, 74, 69, 0.2)
+  @media (min-width: 992px)
+    &:hover
+      box-shadow: none
+      border: 1px solid rgba(43, 74, 69, 0.2)
   &.disabled
     .link
       background: rgba(43, 74, 69, 0.7)
@@ -975,7 +1061,14 @@ header
       font-size: 16px
       font-family: $font_semibold
 
-.restaurant__top
+.restaurant__catalog__wrapp
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  position: relative
+.restaurant__catalog__container
+  width: 66%
+.restaurant__catalog
   padding-top: 170px
   padding-bottom: 15px
   position: relative
@@ -1004,7 +1097,7 @@ header
   justify-content: space-between
   align-items: flex-start
 .restaurant__info
-  width: 66%
+  width: 100%
   background: rgba(255, 255, 255, 0.8)
   backdrop-filter: blur(50px)
   border-radius: 15px
@@ -1096,9 +1189,10 @@ header
       &.active
         background: #2B4A45
         color: #fff
-      &:hover
-        background: #2B4A45
-        color: #fff
+      @media (min-width: 992px)
+        &:hover
+          background: #2B4A45
+          color: #fff
   .search
     width: 32%
     display: flex
@@ -1118,9 +1212,10 @@ header
       cursor: pointer
       transition: all 0.4s
       color: transparent
-      &:hover
-        background-color: #fff
-        border: 1px solid #2B4A45
+      @media (min-width: 992px)
+        &:hover
+          background-color: #fff
+          border: 1px solid #2B4A45
       &:focus
         width: 100%
         background-color: #fff
@@ -1136,6 +1231,10 @@ header
   border-radius: 15px
   overflow: hidden
   padding: 32px 0 24px
+  order: 2
+  position: sticky
+  right: 0
+  top: 30px
   .heading
     text-align: center
     color: #2B4A45
@@ -1155,8 +1254,9 @@ header
       font-family: $font_semibold
       transition: all 0.2s
       border: none
-      &:hover
-        background-color: #359080
+      @media (min-width: 992px)
+        &:hover
+          background-color: #359080
 .restaurant__order__list
   padding-bottom: 40px
   border-bottom: 1px solid rgba(43, 74, 69, 0.2)
@@ -1234,7 +1334,7 @@ header
   padding-bottom: 56px
   margin-bottom: 56px
   border-bottom: 1px solid rgba(43, 74, 69, 0.2)
-  width: 66%
+  width: 100%
   &:last-child
     border-bottom: none
     margin-bottom: 0
@@ -1255,9 +1355,10 @@ header
     transition: all 0.2s
     &:focus
       outline: none
-    &:hover
-      background: #D9663B
-      color: #fff
+    @media (min-width: 992px)
+      &:hover
+        background: #D9663B
+        color: #fff
 .catalog__heading
   text-align: center
   margin-bottom: 40px
@@ -1279,9 +1380,10 @@ header
   margin-bottom: 24px
   transition: all 0.2s
   border: 1px solid transparent
-  &:hover
-    box-shadow: none
-    border: 1px solid rgba(43, 74, 69, 0.2)
+  @media (min-width: 992px)
+    &:hover
+      box-shadow: none
+      border: 1px solid rgba(43, 74, 69, 0.2)
   .preview
     width: 100%
     height: 180px
@@ -1369,11 +1471,12 @@ header
         svg
           path
             transition: all 0.4s
-        &:hover
-          background-color: #D9663B
-          svg
-            path
-              fill: #fff
+        @media (min-width: 992px)
+          &:hover
+            background-color: #D9663B
+            svg
+              path
+                fill: #fff
 
 .review__eval__list
   display: flex
@@ -1390,11 +1493,12 @@ header
         transition: all 0.5s
     &:last-child  
       margin-left: 0
-  label:hover, label:hover ~ label 
-    svg  
-      path
-        fill:#D9B63B 
-        stroke:#D9B63B
+  @media (min-width: 992px)
+    label:hover, label:hover ~ label 
+      svg  
+        path
+          fill:#D9B63B 
+          stroke:#D9B63B
   input[type="radio"]:checked ~ label
     svg
       path
@@ -1496,9 +1600,10 @@ header
   border: none
   &:focus
     outline: none
-  &:hover
-    background: #D9663B
-    color: #fff
+  @media (min-width: 992px)
+    &:hover
+      background: #D9663B
+      color: #fff
 
 .restaurant-about
   padding: 156px 0
@@ -1588,9 +1693,10 @@ header
   font-family: $font_semibold
   border: none
   transition: all 0.2s
-  &:hover
-    background: #D9663B
-    color: #fff
+  @media (min-width: 992px)
+    &:hover
+      background: #D9663B
+      color: #fff
 
 
 .tracker__heading
@@ -1741,8 +1847,9 @@ header
       line-height: 58px
       margin-right: 8px
       transition: all 0.2s
-      &:hover
-        background-color: #D9663B
+      @media (min-width: 992px)
+        &:hover
+          background-color: #D9663B
       &:last-child
         margin-right: 0
   
@@ -1785,9 +1892,10 @@ header
     display: block
     width: max-content
     transition: all 0.2s
-    &:hover
-      background: #D9663B
-      color: #fff
+    @media (min-width: 992px)
+      &:hover
+        background: #D9663B
+        color: #fff
   .info
     margin-bottom: 40px
     .info-item
@@ -1827,6 +1935,10 @@ header
   transition: all 0.6s
   &.active
     transform: translateX(0)
+    transition: all 0.6s
+  &.default
+    transform: translateX(105%)
+    transition: all 0.6s
   &.v2
     align-items: flex-start
 .cabinet-section__close
@@ -1839,13 +1951,34 @@ header
   svg
     path
       transition: all 0.2s
-  &:hover
-    svg
-      path
-        fill: #000
+  @media (min-width: 992px)
+    &:hover
+      svg
+        path
+          fill: #000
 .cabinet-section__container
   width: 424px
   padding: 37px 40px
+  &.edit-container
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    position: relative
+  .edit-back
+    position: absolute
+    left: 31px
+    top: 32px
+    width: 20px
+    height: 20px
+    display: inline-block
+    background-position: center
+    background-color: transparent
+    background-repeat: no-repeat
+    padding: 0
+    border: none
+    background-size: 10px
+    background-image: url('../img/icons/edit-back.svg')
   &.profile
     min-height: 100vh
     .heading
@@ -1950,8 +2083,9 @@ header
     transition: all 0.2s
     background: #359080
     margin-top: 40px
-    &:hover
-      background: #2B4A45
+    @media (min-width: 992px)
+      &:hover
+        background: #2B4A45
   .form-check
     display: block
     position: relative
@@ -2031,9 +2165,10 @@ header
     text-align: center
     &:focus
       outline: none
-    &:hover
-      background-color: #359080
-      color: #fff
+    @media (min-width: 992px)
+      &:hover
+        background-color: #359080
+        color: #fff
 
 .cabinet-section__history
   .history-item
@@ -2228,9 +2363,10 @@ button.add-phone
     display: block
     width: max-content
     transition: all 0.2s
-    &:hover
-      background: #D9663B
-      color: #fff
+    @media (min-width: 992px)
+      &:hover
+        background: #D9663B
+        color: #fff
   .order__products
     margin-bottom: 24px
   .order__product
@@ -2257,11 +2393,12 @@ button.add-phone
         display: flex
         justify-content: center
         align-items: center
-        &:hover
-          background-color: #D9663B
-          svg
-            path
-              fill: #fff
+        @media (min-width: 992px)
+          &:hover
+            background-color: #D9663B
+            svg
+              path
+                fill: #fff
       input
         width: 20px
         margin-left: 10px
@@ -2435,11 +2572,12 @@ button.add-phone
         display: flex
         justify-content: center
         align-items: center
-        &:hover
-          background-color: #D9663B
-          svg
-            path
-              fill: #fff
+        @media (min-width: 992px)
+          &:hover
+            background-color: #D9663B
+            svg
+              path
+                fill: #fff
       input
         width: 20px
         margin-left: 10px
@@ -2666,3 +2804,437 @@ button.add-phone
     margin-left: 0px
     margin-top: 0px
     background-color: rgba(129, 80, 108,0.6)
+
+
+
+.invite-btn
+  display: none
+  width: 70%
+  margin: 0 auto
+  background: #359080
+  border-radius: 15px
+  color: #FFFFFF
+  font-size: 16px
+  font-family: $font_semibold
+  height: 48px
+  border: none
+.invite-form__back
+  display: none
+.invite-form__heading
+  display: none
+
+@media screen and ( max-width: 992px )
+  .invite-banner
+    padding-top: 195px
+    min-height: auto
+    padding-bottom: 215px
+    position: relative
+    .mainContainer
+      position: relative
+      z-index: 2
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(180deg, rgba(27, 45, 42, 0.9) 0%, rgba(27, 45, 42, 0) 100%)
+  .invite-form
+    position: fixed
+    left: 0
+    top: 0
+    background-color: #fff
+    width: 100%
+    height: 100%
+    padding: 30px 24px
+    overflow: auto
+    display: none
+    &.active
+      display: block
+  .invite-form__back
+    text-align: right
+    margin-bottom: 15px
+  .invite-banner__form form button
+    margin-top: 70px
+  .invite-form__heading
+    display: block
+    margin-bottom: 32px
+    color: #359080
+    font-family: $font_bold
+    font-size: 24px
+    line-height: 32px 
+  .invite-form__back
+    display: block
+  .invite-btn
+    display: block
+  .invite-banner__form
+    width: 100%
+    background: transparent
+    padding: 0
+    backdrop-filter: none
+  .invite-banner__form__heading
+    margin-bottom: 8px
+    color: #FFFFFF
+    font-size: 36px
+    line-height: 44px
+  .invite-banner__form__descr
+    font-size: 18px
+    font-family: $font_medium
+    line-height: 24px
+    color: #FFFFFF
+    margin-bottom: 180px
+    span
+      color: #FFFFFF
+  .invite-advantage
+    padding: 80px 0
+  .invite-advantage__heading
+    font-size: 18px
+    line-height: 24px
+    margin-bottom: 55px
+    br
+      display: none
+  .invite-advantage__list
+    display: block
+  .invite-advantage__item
+    width: 100%
+    margin-bottom: 32px
+    padding: 40px 16px
+    &:last-child
+      margin-bottom: 0
+  .invite-advantage__item p
+    font-size: 14px
+    line-height: 24px
+  .invite-about
+    padding: 80px 0
+  .invite-about__heading
+    margin-bottom: 48px
+    font-size: 28px
+    line-height: 56px
+  .invite-about__item
+    flex-direction: column
+    margin-bottom: 40px
+  .invite-about__item__icon
+    width: 100%
+    height: 240px
+    margin-left: 0 !important
+    margin-right: 0 !important
+    margin-bottom: 16px
+    img
+      max-height: 52%
+      width: auto
+  .invite-about__item__text
+    padding-top: 0
+    order: 1
+  .invite-about__item__icon .number
+    top: auto
+    bottom: 24px
+    left: 24px
+  .invite-about__item__text
+    font-size: 18px
+    line-height: 32px
+  .invite-about__item__text a
+    margin: 0 auto
+    margin-top: 40px
+  .invite-company
+    display: none
+  footer .mainContainer
+    padding: 80px 24px
+  .footer__ty
+    margin-bottom: 55px
+    color: #2B4A45
+    font-size: 14px
+    line-height: 24px
+    br
+      display: none
+  .footer__contacts__item
+    font-size: 24px
+    line-height: 40px
+    &.email
+      margin-bottom: 12px
+  .footer__contacts
+    margin-bottom: 55px
+  .footer__info
+    display: block
+  .footer__socials
+    margin-bottom: 24px
+    a
+      margin-right: 20px
+      font-size: 16px
+      line-height: 24px
+      &:last-child
+        margin-right: 0
+  .footer__creator
+    font-size: 14px
+    line-height: 24px
+  .order
+    width: 100%
+  .cabinet-section__container
+    width: 100%
+    padding: 33px 24px
+  .cabinet-section
+    width: 100%
+    height: 100%
+    display: block
+  .cabinet-section__wrapp
+    width: 100%
+  .cabinet-section__user .info__item .container .label
+    display: none
+  .cabinet-section__user .info__item .edit
+    background-position: center
+    background-repeat: no-repeat
+    background-image: url('../img/icons/edit-mob.svg')
+    width: 24px
+    height: 24px
+    bottom: 17px
+    right: 17px
+    span
+      display: none
+  header
+    .logo
+      background-image: url('../img/logo-mob.svg')
+    .header__nav
+      display: none
+    .header__info a.active
+      display: none
+  .cabinet-section__user .info__item
+    padding-left: 12px
+    &.wrap
+      padding: 0
+      background: transparent
+      margin: 0
+      border-radius: 0
+      .edit
+        display: none
+      .container
+        margin-bottom: 8px
+        background: rgba(43, 74, 69, 0.05)
+        border-radius: 10px
+        position: relative
+        padding: 16px
+        position: relative
+        .edit
+          display: block
+        .value
+          font-size: 14px
+  .cabinet-section__user .info__item .container .value
+    font-size: 16px
+    padding-right: 45px
+  .cabinet-section__container.edit-container, .cabinet-section__container
+    display: block
+    padding-top: 100px
+    padding-bottom: 40px
+  .cabinet-section__container.profile.history, .cabinet-section__container.profile.user, .cabinet-section__container.profile.order
+    padding-top: 30px
+  .order .order__product
+    flex-wrap: wrap
+    padding-bottom: 12px
+    margin-bottom: 12px
+    border-bottom: 1px solid rgba(43, 74, 69, 0.2)
+    .count
+      order: 4
+      width: 100%
+      margin-right: 0
+      margin-top: 8px
+      button
+        width: 32px
+        height: 32px
+      input
+        font-size: 16px
+        font-weight: $font_medium
+    .delete
+      margin-left: 18px
+    .name
+      margin-right: auto
+  .order .order__promo input
+    height: 48px
+  .order .order__delivery
+    padding: 8px 0
+    span
+      display: none
+  .order .order__summ
+    margin-bottom: 18px
+  .order .order__summ .price
+    font-size: 18px
+    line-height: 18px
+  .order .form-group.form-wrapp-order
+    flex-wrap: wrap
+    margin-top: 8px
+    margin-bottom: 16px
+  .order .form-group.form-wrapp-order input
+    width: 49%
+  .order .form-group.form-wrapp-order input:first-child
+    width: 100%
+    margin-bottom: 8px
+  .order .form-select
+    display: block
+  .order .form-select .text
+    width: 100%
+    text-align: left
+    margin-bottom: 8px
+    color: rgba(43, 74, 69, 0.5)
+    font-family: $font_medium
+    font-size: 14px
+    line-height: 24px
+  .order .form-counter
+    display: block
+  .order .form-counter .text
+    width: 100%
+    text-align: left
+    margin-bottom: 8px
+    color: rgba(43, 74, 69, 0.5)
+    font-family: $font_medium
+    font-size: 14px
+    line-height: 24px
+  .order .form-select select
+    width: 100%
+  .order .form-counter .counter-group
+    width: 100%
+  .order .pay-type .pay__item
+    width: 49%
+  .order .pay-type .pay__item label
+    border-radius: 12px
+    font-size: 14px
+    height: 40px
+    line-height: 40px
+    text-transform: capitalize
+    span
+      display: none
+  .order .pay-type .pay__item input:checked + label
+    font-size: 16px
+  .order .pay-type
+    margin-bottom: 24px
+  .order .order__products
+    margin-bottom: 16px
+  .order .order__promo input
+    font-size: 16px
+  .order .order__product .name
+    font-family: $font_semibold
+    font-size: 14px
+    line-height: 24px
+  .order .form-counter .counter-group input
+    font-family: $font_semibold
+
+  .home-banner
+    padding-top: 100px
+    padding-bottom: 0
+    .mainContainer
+      padding: 0
+    .link-select
+      display: none
+    &.bg-second
+      background-color: #fff
+  .home-banner h1
+    color: #2B4A45
+    font-size: 24px
+    line-height: 32px
+    text-align: left
+    margin-bottom: 40px
+    padding: 0 24px
+    font-family: $font_bold
+    br
+      display: none
+  .how-work__image
+    img
+      max-width: 100%
+  .about-service__list
+    display: block
+  .home-banner__catalog
+    display: block
+    background: #359080
+    border-radius: 25px 25px 0px 0px
+    padding: 24px 24px 80px
+  .home-banner__catalog__item
+    width: 100%
+    margin-bottom: 8px
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    padding: 16px
+    padding-left: 24px
+    &:last-child
+      margin-bottom: 0
+  .home-banner__catalog__item figure
+    margin-bottom: 0
+    height: 48px
+    width: 48px
+    text-align: center
+    margin-right: 24px
+  .home-banner__catalog__item p
+    font-size: 18px
+    line-height: 24px
+  .how-work
+    padding: 80px 0
+  .how-work__heading
+    margin-bottom: 64px
+    font-size: 28px
+    line-height: 40px
+  .how-work__container
+    flex-direction: column
+    margin-bottom: 70px
+    &:last-child
+      margin-bottom: 0
+  .how-work__text
+    order: 0
+    padding-top: 0
+    font-size: 18px
+    line-height: 24px
+    width: 70%
+    margin-bottom: 32px
+  .how-work__image
+    order: 1
+    margin-right: 0
+    text-align: center
+    img
+      max-width: 100%
+      height: auto
+  .about-service
+    padding: 80px 0
+  .about-service h2
+    margin-bottom: 56px
+    font-size: 18px
+    line-height: 24px
+    br
+      display: none
+  .about-service__item
+    width: 100%
+    margin-bottom: 56px
+    &:last-child
+      margin-bottom: 0
+  .about-service__item__preview
+    border-radius: 15px
+    height: 208px
+    margin-bottom: 24px
+  .about-service__item__descr
+    display: block
+    text-align: center
+  .about-service__item__descr span
+    display: block
+    width: 100%
+    text-align: center
+    margin-bottom: 24px
+    font-size: 18px
+    line-height: 24px
+  .about-application
+    padding: 80px 0
+  .about-application h2
+    margin-bottom: 56px
+    font-size: 18px
+    line-height: 24px
+    br
+      display: none
+  .about-application__list
+    display: block
+  .about-application__item
+    width: max-content
+    margin: 0 auto
+    margin-bottom: 24px
+    &:last-child
+      margin-bottom: 0
+  footer .mainContainer
+    padding-top: 0
+    border-top: none
+  .footer__ty
+    padding-top: 80px
+    border-top: 1px solid rgba(43, 74, 69, 0.2)
+  

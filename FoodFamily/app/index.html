@@ -20,7 +20,6 @@
   <div class="mainContainer">
     <div class="header__wrapp">
       <a href="index.html" class="logo">
-        <img src="img/heaser-logo.png" alt="logo">
       </a>
       <ul class="header__nav">
         <li><a href="index.html">Головна</a></li>
@@ -508,16 +507,17 @@
   <section class="home-banner bg-second">
     <div class="mainContainer">
       <h1>Доставка Ваших улюблених страв,<br> продуктів та різноманітних товарів</h1>
-      <div class="select-box">
-        <div class="select-box__text">Оберіть місто</div>
-        <div class="select-box__toggler">
-          <select name="" id="">
-              <option value="">Кропивницький</option>
-              <option value="">Кропивницький</option>
-              <option value="">Кропивницький</option>
-              <option value="">Кропивницький</option>
-              <option value="">Кропивницький</option>
-          </select>
+      <div class="link-select">
+        <div class="link-select__text">Оберіть місто</div>
+        <div class="link-select__content">
+          <div class="link-select__toggler">
+            Кропивницький
+          </div>
+          <div class="link-select__list">
+            <div class="link">Александрия</div>
+            <div class="link">Кам'янське</div>
+            <div class="link">Умань</div>
+          </div>
         </div>
       </div>
       <div class="home-banner__catalog">
@@ -694,5 +694,25 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="js/main.js"></script>
+
+<script>
+  $('.link-select__toggler').click(function(){
+    $('body').addClass('show-select');
+    $('.link-select').addClass('active');
+  });
+
+  $(document).click(function (event) {
+    if (!$(event.target).closest(".link-select").length) {
+      $('.link-select').removeClass('active');
+      $('body').removeClass('show-select');
+    }
+  });
+
+  $('.link-select__list .link').click(function () {
+    $('.link-select').removeClass('active');
+    $('body').removeClass('show-select');
+    $('.link-select__toggler').text($(this).text());
+  });
+</script>
 </body>
 </html>

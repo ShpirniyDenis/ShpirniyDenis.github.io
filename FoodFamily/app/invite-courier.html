@@ -516,7 +516,16 @@
         <div class="invite-banner__form__descr">
           і почни співпрацювати з <span>FoodFamily</span>
         </div>
-        <form action="">
+        <button class="invite-btn">Заповнити анкету</button>
+        <form action="" class="invite-form">
+          <div class="invite-form__back">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M10 8.5858L2.22183 0.807617L0.807617 2.22183L8.5858 10L0.807617 17.7782L2.22183 19.1924L10 11.4142L17.7782 19.1924L19.1924 17.7782L11.4142 10L19.1924 2.22185L17.7782 0.807636L10 8.5858Z"
+                fill="#2B4A45" fill-opacity="0.3" />
+            </svg>
+          </div>
+          <div class="invite-form__heading">Анкета</div>
           <input type="text" name="name" placeholder="Імя та прізвіще" required>
           <input type="email" name="email" placeholder="Email" required>
           <input type="text" name="phone" placeholder="Телефон" required>
@@ -669,10 +678,20 @@
         Design & Development <a href="#">easyagency</a>
       </div>
     </div>
-  </div>
+  </div> 
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="js/main.js"></script>
+
+<script>
+  $('.invite-btn').click(function () {
+    $('.invite-form').addClass('active');
+  });
+
+  $('.invite-form .invite-form__back').click(function () {
+    $('.invite-form').removeClass('active');
+  });
+</script>
 </body>
 </html>

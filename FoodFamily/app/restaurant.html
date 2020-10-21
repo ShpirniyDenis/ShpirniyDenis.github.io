@@ -193,11 +193,11 @@
           <div class="pay-type">
             <div class="pay__item">
               <input type="radio" id="payType1" name="payType" checked>
-              <label for="payType1">Оплата готівкою</label>
+              <label for="payType1"><span>Оплата</span> готівкою</label>
             </div>
             <div class="pay__item">
               <input type="radio" id="payType2" name="payType">
-              <label for="payType2">Оплата картою</label>
+              <label for="payType2"><span>Оплата</span> картою</label>
             </div>
           </div>
           <button type="submit">Замовити</button>
@@ -253,33 +253,35 @@
       <div class="heading">Профіль</div>
       <div class="cabinet-section__user">
         <div class="info__list">
-          <div class="info__item">
-            <button class="edit" link=".edit-name" type="button">Редагувати</button>
+          <div class="info__item wrap">
+            <button class="edit" link=".edit-name" type="button"><span>Редагувати</span></button>
             <div class="container">
               <div class="label">Імя</div>
               <div class="value">Стас</div>
+              <button class="edit" link=".edit-name" type="button"></button>
             </div>
             <div class="container">
               <div class="label">Email</div>
               <div class="value">stasinyoyo@gmail.com</div>
+              <button class="edit" link=".edit-name" type="button"></button>
             </div>
           </div>
           <div class="info__item">
-            <button class="edit" link=".edit-location" type="button">Редагувати</button>
+            <button class="edit" link=".edit-location" type="button"><span>Редагувати</span></button>
             <div class="container">
               <div class="label">Ваша адреса</div>
               <div class="value">ул. Лобановского 6а</div>
             </div>
           </div>
           <div class="info__item">
-            <button class="edit" link=".edit-phone" type="button">Редагувати</button>
+            <button class="edit" link=".edit-phone" type="button"><span>Редагувати</span></button>
             <div class="container">
               <div class="label">Телефон</div>
               <div class="value">+380 50 435 26 50</div>
             </div>
           </div>
           <div class="info__item">
-            <button class="edit" link=".edit-pass" type="button">Редагувати</button>
+            <button class="edit" link=".edit-pass" type="button"><span>Редагувати</span></button>
             <div class="container">
               <div class="label">Пароль</div>
               <div class="value">********</div>
@@ -308,7 +310,8 @@
       </div>
     </div>
 
-    <div class="cabinet-section__container edit-name" style="display: none;">
+    <div class="cabinet-section__container edit-name edit-container" style="display: none;">
+      <button class="edit-back"></button>
       <div class="heading">Редагувати інформацію</div>
       <form action="" class="cabinet-section__form">
         <div class="form-group">
@@ -321,7 +324,8 @@
       </form>
     </div>
 
-    <div class="cabinet-section__container edit-location" style="display: none;">
+    <div class="cabinet-section__container edit-location edit-container" style="display: none;">
+      <button class="edit-back"></button>
       <div class="heading">Вкажіть адрес доставки</div>
       <form action="" class="cabinet-section__form">
         <div class="form-group">
@@ -339,7 +343,8 @@
       </form>
     </div>
 
-    <div class="cabinet-section__container edit-phone" style="display: none;">
+    <div class="cabinet-section__container edit-phone edit-container" style="display: none;">
+      <button class="edit-back"></button>
       <div class="heading">Редагувати телефон</div>
       <form action="" class="cabinet-section__form">
         <div class="form-group">
@@ -350,7 +355,8 @@
       </form>
     </div>
 
-    <div class="cabinet-section__container edit-pass" style="display: none;">
+    <div class="cabinet-section__container edit-pass edit-container" style="display: none;">
+      <button class="edit-back"></button>
       <div class="heading">Редагувати пароль</div>
       <form action="" class="cabinet-section__form">
         <div class="label">Старий пароль</div>
@@ -371,7 +377,8 @@
       </form>
     </div>
 
-    <div class="cabinet-section__container edit-card" style="display: none;">
+    <div class="cabinet-section__container edit-card edit-container" style="display: none;">
+      <button class="edit-back"></button>
       <div class="heading">Добавити карту</div>
       <div class="edit-card__descr">
         Ця карта буде використовуватися в якості способу оплати за умовчанням для ваших наступних замовлень.
@@ -507,56 +514,10 @@
 
 <main class="catalog-section">
 
-  <section class="restaurant__top">
+  <section class="restaurant__catalog">
     <div class="restaurant__preview" style="background-image: url('img/restaurant-review1.jpg');"></div>
     <div class="mainContainer">
-      <div class="restaurant__top__wrapp">
-        <div class="restaurant__info">
-          <div class="restaurant__info__top">
-            <button class="back click-item" data-action="popup-open" data-label="#rent-popup">
-              <img src="img/icons/back-icon.svg" alt="">
-              Назад
-            </button>
-            <div class="rating">
-              <a href="#rating-section">Отзывы</a>
-              <img src="img/icons/star-icon.svg" alt="">
-              <span class="text">9 <span>/ 10</span></span>
-            </div>
-          </div>
-
-          <div class="restaurant__info__content">
-            <div class="name">Kroppizza</div>
-            <div class="details">
-              <div class="details__item">
-                <div class="icon"><img src="img/icons/location-icon.svg" alt=""></div>
-                <span>Адреса:</span>
-                Кропивницький, Тараса карпи, 84
-              </div>
-              <div class="details__item">
-                <div class="icon"><img src="img/icons/clock-icon.svg" alt=""></div>
-                <span class="time">Відчинено</span>
-                09:00 - 22:45
-              </div>
-              <div class="details__item">
-                <div class="icon"><img src="img/icons/delivery-time.svg" alt=""></div>
-                Час доставки до 30 хв
-              </div>
-            </div>
-          </div>
-
-          <div class="restaurant__info__bottom">
-            <div class="menu">
-              <a href="#" class="active">Піца</a>
-              <a href="#">Суші-сети</a>
-              <a href="#">Роли</a>
-              <a href="#">WOK конструктор</a>
-            </div>
-            <div class="search">
-              <input type="text" name="search">
-            </div>
-          </div>
-        </div>
-
+      <div class="restaurant__catalog__wrapp">
         <div class="restaurant__order">
           <div class="heading">Ваше замовлення</div>
           <!-- if empty-->
@@ -604,372 +565,417 @@
           </div>
           <!-- endif-->
         </div>
-      </div>
-    </div>
-  </section>
+      <div class="restaurant__catalog__container">
+      <div class="restaurant__top__wrapp">
+        <div class="restaurant__info">
+          <div class="restaurant__info__top">
+            <button class="back click-item" data-action="popup-open" data-label="#rent-popup">
+              <img src="img/icons/back-icon.svg" alt="">
+              Назад
+            </button>
+            <div class="rating">
+              <a href="#rating-section">Отзывы</a>
+              <img src="img/icons/star-icon.svg" alt="">
+              <span class="text">9 <span>/ 10</span></span>
+            </div>
+          </div>
 
-  <section class="catalog">
-    <div class="mainContainer">
-      <div class="catalog__wrapp">
-        <div class="catalog__heading">Піца</div>
-        <div class="catalog__list">
-          <div class="catalog__item">
-            <div class="preview" style="background-image: url('img/catalog-preview1.jpg');"></div>
-            <div class="info">
-              <div class="name">Chicken Spicy</div>
-              <div class="descr">Піца з Вершковим соусом, копченою куркою, соковитою шинкою та соусом світ чілі</div>
-            </div>
-            <div class="size">
-              <div class="size__item">
-                <input type="radio" id="it1_size1" name="it1_size" checked>
-                <label for="it1_size1">30 см</label>
-              </div>
-              <div class="size__item">
-                <input type="radio" id="it1_size2" name="it1_size">
-                <label for="it1_size2">40 см</label>
-              </div>
-            </div>
+          <div class="restaurant__info__content">
+            <div class="name">Kroppizza</div>
             <div class="details">
-              <div class="price">125 грн</div>
-              <div class="buy">
-                <span>1</span>
-                <button>
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
-                      fill="#D9663B" />
-                  </svg>
-                </button>
+              <div class="details__item">
+                <div class="icon"><img src="img/icons/location-icon.svg" alt=""></div>
+                <span>Адреса:</span>
+                Кропивницький, Тараса карпи, 84
+              </div>
+              <div class="details__item">
+                <div class="icon"><img src="img/icons/clock-icon.svg" alt=""></div>
+                <span class="time">Відчинено</span>
+                09:00 - 22:45
+              </div>
+              <div class="details__item">
+                <div class="icon"><img src="img/icons/delivery-time.svg" alt=""></div>
+                Час доставки до 30 хв
               </div>
             </div>
           </div>
 
-          <div class="catalog__item">
-            <div class="preview" style="background-image: url('img/catalog-preview2.jpg');"></div>
-            <div class="info">
-              <div class="name">Chicken Spicy</div>
-              <div class="descr">Піца з Вершковим соусом, копченою куркою, соковитою шинкою та соусом світ чілі</div>
+          <div class="restaurant__info__bottom">
+            <div class="menu">
+              <a href="#" class="active">Піца</a>
+              <a href="#">Суші-сети</a>
+              <a href="#">Роли</a>
+              <a href="#">WOK конструктор</a>
             </div>
-            <div class="size">
-              <div class="size__item">
-                <input type="radio" id="it2_size1" name="it2_size" checked>
-                <label for="it2_size1">30 см</label>
-              </div>
-              <div class="size__item">
-                <input type="radio" id="it2_size2" name="it2_size">
-                <label for="it2_size2">40 см</label>
-              </div>
-            </div>
-            <div class="details">
-              <div class="price">125 грн</div>
-              <div class="buy">
-                <span>1</span>
-                <button>
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
-                      fill="#D9663B" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="catalog__item">
-            <div class="preview" style="background-image: url('img/catalog-preview3.jpg');"></div>
-            <div class="info">
-              <div class="name">Chicken Spicy</div>
-              <div class="descr">Піца з Вершковим соусом, копченою куркою, соковитою шинкою та соусом світ чілі</div>
-            </div>
-            <div class="size">
-              <div class="size__item">
-                <input type="radio" id="it3_size1" name="it3_size" checked>
-                <label for="it3_size1">30 см</label>
-              </div>
-              <div class="size__item">
-                <input type="radio" id="it3_size2" name="it3_size">
-                <label for="it3_size2">40 см</label>
-              </div>
-            </div>
-            <div class="details">
-              <div class="price">125 грн</div>
-              <div class="buy">
-                <span>1</span>
-                <button>
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
-                      fill="#D9663B" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="catalog__item">
-            <div class="preview" style="background-image: url('img/catalog-preview4.jpg');"></div>
-            <div class="info">
-              <div class="name">Chicken Spicy</div>
-              <div class="descr">Піца з Вершковим соусом, копченою куркою, соковитою шинкою та соусом світ чілі</div>
-            </div>
-            <div class="size">
-              <div class="size__item">
-                <input type="radio" id="it4_size1" name="it4_size" checked>
-                <label for="it4_size1">30 см</label>
-              </div>
-              <div class="size__item">
-                <input type="radio" id="it4_size2" name="it4_size">
-                <label for="it4_size2">40 см</label>
-              </div>
-            </div>
-            <div class="details">
-              <div class="price">125 грн</div>
-              <div class="buy">
-                <span>1</span>
-                <button>
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
-                      fill="#D9663B" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="catalog__item">
-            <div class="preview" style="background-image: url('img/catalog-preview5.jpg');"></div>
-            <div class="info">
-              <div class="name">Chicken Spicy</div>
-              <div class="descr">Піца з Вершковим соусом, копченою куркою, соковитою шинкою та соусом світ чілі</div>
-            </div>
-            <div class="size">
-              <div class="size__item">
-                <input type="radio" id="it5_size1" name="it5_size" checked>
-                <label for="it5_size1">30 см</label>
-              </div>
-              <div class="size__item">
-                <input type="radio" id="it5_size2" name="it5_size">
-                <label for="it5_size2">40 см</label>
-              </div>
-            </div>
-            <div class="details">
-              <div class="price">125 грн</div>
-              <div class="buy">
-                <span>1</span>
-                <button>
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
-                      fill="#D9663B" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="catalog__item">
-            <div class="preview" style="background-image: url('img/catalog-preview6.jpg');"></div>
-            <div class="info">
-              <div class="name">Chicken Spicy</div>
-              <div class="descr">Піца з Вершковим соусом, копченою куркою, соковитою шинкою та соусом світ чілі</div>
-            </div>
-            <div class="size">
-              <div class="size__item">
-                <input type="radio" id="it6_size1" name="it6_size" checked>
-                <label for="it6_size1">30 см</label>
-              </div>
-              <div class="size__item">
-                <input type="radio" id="it6_size2" name="it6_size">
-                <label for="it6_size2">40 см</label>
-              </div>
-            </div>
-            <div class="details">
-              <div class="price">125 грн</div>
-              <div class="buy">
-                <span>1</span>
-                <button>
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
-                      fill="#D9663B" />
-                  </svg>
-                </button>
-              </div>
+            <div class="search">
+              <input type="text" name="search">
             </div>
           </div>
         </div>
-        <button class="loadmore">Показати всі</button>
       </div>
-
-      <div class="catalog__wrapp">
-        <div class="catalog__heading">Суші-сети</div>
-        <div class="catalog__list">
-          <div class="catalog__item">
-            <div class="preview" style="background-image: url('img/catalog-preview7.jpg');"></div>
-            <div class="info">
-              <div class="name">Chicken Spicy</div>
-              <div class="descr">Рол Каліфорнія з креветкою, макі рол з авокадо, макі рол зогірком, імбир, васабі</div>
-            </div>
-            <div class="size">
-              <div class="size__item not-select">
-                <input type="radio" id="it7_size1" name="it7_size" checked>
-                <label for="it7_size1">400 гр</label>
+      <div class="catalog">
+          <div class="catalog__wrapp">
+            <div class="catalog__heading">Піца</div>
+            <div class="catalog__list">
+              <div class="catalog__item">
+                <div class="preview" style="background-image: url('img/catalog-preview1.jpg');"></div>
+                <div class="info">
+                  <div class="name">Chicken Spicy</div>
+                  <div class="descr">Піца з Вершковим соусом, копченою куркою, соковитою шинкою та соусом світ чілі</div>
+                </div>
+                <div class="size">
+                  <div class="size__item">
+                    <input type="radio" id="it1_size1" name="it1_size" checked>
+                    <label for="it1_size1">30 см</label>
+                  </div>
+                  <div class="size__item">
+                    <input type="radio" id="it1_size2" name="it1_size">
+                    <label for="it1_size2">40 см</label>
+                  </div>
+                </div>
+                <div class="details">
+                  <div class="price">125 грн</div>
+                  <div class="buy">
+                    <span>1</span>
+                    <button>
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
+                          fill="#D9663B" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="catalog__item">
+                <div class="preview" style="background-image: url('img/catalog-preview2.jpg');"></div>
+                <div class="info">
+                  <div class="name">Chicken Spicy</div>
+                  <div class="descr">Піца з Вершковим соусом, копченою куркою, соковитою шинкою та соусом світ чілі</div>
+                </div>
+                <div class="size">
+                  <div class="size__item">
+                    <input type="radio" id="it2_size1" name="it2_size" checked>
+                    <label for="it2_size1">30 см</label>
+                  </div>
+                  <div class="size__item">
+                    <input type="radio" id="it2_size2" name="it2_size">
+                    <label for="it2_size2">40 см</label>
+                  </div>
+                </div>
+                <div class="details">
+                  <div class="price">125 грн</div>
+                  <div class="buy">
+                    <span>1</span>
+                    <button>
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
+                          fill="#D9663B" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="catalog__item">
+                <div class="preview" style="background-image: url('img/catalog-preview3.jpg');"></div>
+                <div class="info">
+                  <div class="name">Chicken Spicy</div>
+                  <div class="descr">Піца з Вершковим соусом, копченою куркою, соковитою шинкою та соусом світ чілі</div>
+                </div>
+                <div class="size">
+                  <div class="size__item">
+                    <input type="radio" id="it3_size1" name="it3_size" checked>
+                    <label for="it3_size1">30 см</label>
+                  </div>
+                  <div class="size__item">
+                    <input type="radio" id="it3_size2" name="it3_size">
+                    <label for="it3_size2">40 см</label>
+                  </div>
+                </div>
+                <div class="details">
+                  <div class="price">125 грн</div>
+                  <div class="buy">
+                    <span>1</span>
+                    <button>
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
+                          fill="#D9663B" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="catalog__item">
+                <div class="preview" style="background-image: url('img/catalog-preview4.jpg');"></div>
+                <div class="info">
+                  <div class="name">Chicken Spicy</div>
+                  <div class="descr">Піца з Вершковим соусом, копченою куркою, соковитою шинкою та соусом світ чілі</div>
+                </div>
+                <div class="size">
+                  <div class="size__item">
+                    <input type="radio" id="it4_size1" name="it4_size" checked>
+                    <label for="it4_size1">30 см</label>
+                  </div>
+                  <div class="size__item">
+                    <input type="radio" id="it4_size2" name="it4_size">
+                    <label for="it4_size2">40 см</label>
+                  </div>
+                </div>
+                <div class="details">
+                  <div class="price">125 грн</div>
+                  <div class="buy">
+                    <span>1</span>
+                    <button>
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
+                          fill="#D9663B" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="catalog__item">
+                <div class="preview" style="background-image: url('img/catalog-preview5.jpg');"></div>
+                <div class="info">
+                  <div class="name">Chicken Spicy</div>
+                  <div class="descr">Піца з Вершковим соусом, копченою куркою, соковитою шинкою та соусом світ чілі</div>
+                </div>
+                <div class="size">
+                  <div class="size__item">
+                    <input type="radio" id="it5_size1" name="it5_size" checked>
+                    <label for="it5_size1">30 см</label>
+                  </div>
+                  <div class="size__item">
+                    <input type="radio" id="it5_size2" name="it5_size">
+                    <label for="it5_size2">40 см</label>
+                  </div>
+                </div>
+                <div class="details">
+                  <div class="price">125 грн</div>
+                  <div class="buy">
+                    <span>1</span>
+                    <button>
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
+                          fill="#D9663B" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="catalog__item">
+                <div class="preview" style="background-image: url('img/catalog-preview6.jpg');"></div>
+                <div class="info">
+                  <div class="name">Chicken Spicy</div>
+                  <div class="descr">Піца з Вершковим соусом, копченою куркою, соковитою шинкою та соусом світ чілі</div>
+                </div>
+                <div class="size">
+                  <div class="size__item">
+                    <input type="radio" id="it6_size1" name="it6_size" checked>
+                    <label for="it6_size1">30 см</label>
+                  </div>
+                  <div class="size__item">
+                    <input type="radio" id="it6_size2" name="it6_size">
+                    <label for="it6_size2">40 см</label>
+                  </div>
+                </div>
+                <div class="details">
+                  <div class="price">125 грн</div>
+                  <div class="buy">
+                    <span>1</span>
+                    <button>
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
+                          fill="#D9663B" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="details">
-              <div class="price">215 грн</div>
-              <div class="buy">
-                <span>1</span>
-                <button>
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
-                      fill="#D9663B" />
-                  </svg>
-                </button>
-              </div>
-            </div>
+            <button class="loadmore">Показати всі</button>
           </div>
       
-          <div class="catalog__item">
-            <div class="preview" style="background-image: url('img/catalog-preview8.jpg');"></div>
-            <div class="info">
-              <div class="name">Set Duet</div>
-              <div class="descr">Рол Каліфорнія з тунцем, рол Футо макі з лососем, імбир, васабі</div>
-            </div>
-            <div class="size">
-              <div class="size__item not-select">
-                <input type="radio" id="it8_size1" name="it8_size" checked>
-                <label for="it8_size1">400 гр</label>
+          <div class="catalog__wrapp">
+            <div class="catalog__heading">Суші-сети</div>
+            <div class="catalog__list">
+              <div class="catalog__item">
+                <div class="preview" style="background-image: url('img/catalog-preview7.jpg');"></div>
+                <div class="info">
+                  <div class="name">Chicken Spicy</div>
+                  <div class="descr">Рол Каліфорнія з креветкою, макі рол з авокадо, макі рол зогірком, імбир, васабі</div>
+                </div>
+                <div class="size">
+                  <div class="size__item not-select">
+                    <input type="radio" id="it7_size1" name="it7_size" checked>
+                    <label for="it7_size1">400 гр</label>
+                  </div>
+                </div>
+                <div class="details">
+                  <div class="price">215 грн</div>
+                  <div class="buy">
+                    <span>1</span>
+                    <button>
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
+                          fill="#D9663B" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="details">
-              <div class="price">235 грн</div>
-              <div class="buy">
-                <span>1</span>
-                <button>
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
-                      fill="#D9663B" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
       
-          <div class="catalog__item">
-            <div class="preview" style="background-image: url('img/catalog-preview9.jpg');"></div>
-            <div class="info">
-              <div class="name">Set Цукідзі</div>
-              <div class="descr">Рол Філадельфія з лососем, рол Каліфорнія з вугрем, імбир, васабі</div>
-            </div>
-            <div class="size">
-              <div class="size__item not-select">
-                <input type="radio" id="it9_size1" name="it9_size" checked>
-                <label for="it9_size1">500 гр</label>
+              <div class="catalog__item">
+                <div class="preview" style="background-image: url('img/catalog-preview8.jpg');"></div>
+                <div class="info">
+                  <div class="name">Set Duet</div>
+                  <div class="descr">Рол Каліфорнія з тунцем, рол Футо макі з лососем, імбир, васабі</div>
+                </div>
+                <div class="size">
+                  <div class="size__item not-select">
+                    <input type="radio" id="it8_size1" name="it8_size" checked>
+                    <label for="it8_size1">400 гр</label>
+                  </div>
+                </div>
+                <div class="details">
+                  <div class="price">235 грн</div>
+                  <div class="buy">
+                    <span>1</span>
+                    <button>
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
+                          fill="#D9663B" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="details">
-              <div class="price">235 грн</div>
-              <div class="buy">
-                <span>1</span>
-                <button>
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
-                      fill="#D9663B" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
       
-          <div class="catalog__item">
-            <div class="preview" style="background-image: url('img/catalog-preview10.jpg');"></div>
-            <div class="info">
-              <div class="name">Set Окінава</div>
-              <div class="descr">Рол Каліфорнія з креветкою, рол Каліфорнія з лососем, рол Футо макі з креветкою,</div>
-            </div>
-            <div class="size">
-              <div class="size__item not-select">
-                <input type="radio" id="it10_size1" name="it10_size" checked>
-                <label for="it10_size1">950 гр</label>
+              <div class="catalog__item">
+                <div class="preview" style="background-image: url('img/catalog-preview9.jpg');"></div>
+                <div class="info">
+                  <div class="name">Set Цукідзі</div>
+                  <div class="descr">Рол Філадельфія з лососем, рол Каліфорнія з вугрем, імбир, васабі</div>
+                </div>
+                <div class="size">
+                  <div class="size__item not-select">
+                    <input type="radio" id="it9_size1" name="it9_size" checked>
+                    <label for="it9_size1">500 гр</label>
+                  </div>
+                </div>
+                <div class="details">
+                  <div class="price">235 грн</div>
+                  <div class="buy">
+                    <span>1</span>
+                    <button>
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
+                          fill="#D9663B" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="details">
-              <div class="price">520 грн</div>
-              <div class="buy">
-                <span>1</span>
-                <button>
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
-                      fill="#D9663B" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
       
-          <div class="catalog__item">
-            <div class="preview" style="background-image: url('img/catalog-preview11.jpg');"></div>
-            <div class="info">
-              <div class="name">Chicken Spicy</div>
-              <div class="descr">Рол Каліфорнія з креветкою, макі рол з авокадо, макі рол зогірком, імбир, васабі</div>
-            </div>
-            <div class="size">
-              <div class="size__item not-select">
-                <input type="radio" id="it11_size1" name="it11_size" checked>
-                <label for="it11_size1">400 гр</label>
+              <div class="catalog__item">
+                <div class="preview" style="background-image: url('img/catalog-preview10.jpg');"></div>
+                <div class="info">
+                  <div class="name">Set Окінава</div>
+                  <div class="descr">Рол Каліфорнія з креветкою, рол Каліфорнія з лососем, рол Футо макі з креветкою,</div>
+                </div>
+                <div class="size">
+                  <div class="size__item not-select">
+                    <input type="radio" id="it10_size1" name="it10_size" checked>
+                    <label for="it10_size1">950 гр</label>
+                  </div>
+                </div>
+                <div class="details">
+                  <div class="price">520 грн</div>
+                  <div class="buy">
+                    <span>1</span>
+                    <button>
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
+                          fill="#D9663B" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="details">
-              <div class="price">275 грн</div>
-              <div class="buy">
-                <span>1</span>
-                <button>
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
-                      fill="#D9663B" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
       
-          <div class="catalog__item">
-            <div class="preview" style="background-image: url('img/catalog-preview12.jpg');"></div>
-            <div class="info">
-              <div class="name">Set Duet</div>
-              <div class="descr">Рол Каліфорнія з тунцем, рол Футо макі з лососем, імбир, васабі</div>
-            </div>
-            <div class="size">
-              <div class="size__item not-select">
-                <input type="radio" id="it12_size1" name="it12_size" checked>
-                <label for="it12_size1">500 гр</label>
+              <div class="catalog__item">
+                <div class="preview" style="background-image: url('img/catalog-preview11.jpg');"></div>
+                <div class="info">
+                  <div class="name">Chicken Spicy</div>
+                  <div class="descr">Рол Каліфорнія з креветкою, макі рол з авокадо, макі рол зогірком, імбир, васабі</div>
+                </div>
+                <div class="size">
+                  <div class="size__item not-select">
+                    <input type="radio" id="it11_size1" name="it11_size" checked>
+                    <label for="it11_size1">400 гр</label>
+                  </div>
+                </div>
+                <div class="details">
+                  <div class="price">275 грн</div>
+                  <div class="buy">
+                    <span>1</span>
+                    <button>
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
+                          fill="#D9663B" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="catalog__item">
+                <div class="preview" style="background-image: url('img/catalog-preview12.jpg');"></div>
+                <div class="info">
+                  <div class="name">Set Duet</div>
+                  <div class="descr">Рол Каліфорнія з тунцем, рол Футо макі з лососем, імбир, васабі</div>
+                </div>
+                <div class="size">
+                  <div class="size__item not-select">
+                    <input type="radio" id="it12_size1" name="it12_size" checked>
+                    <label for="it12_size1">500 гр</label>
+                  </div>
+                </div>
+                <div class="details">
+                  <div class="price">280 грн</div>
+                  <div class="buy">
+                    <span>1</span>
+                    <button>
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
+                          fill="#D9663B" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="details">
-              <div class="price">280 грн</div>
-              <div class="buy">
-                <span>1</span>
-                <button>
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M14.4 14.4C14.8774 14.4 15.3352 14.5896 15.6728 14.9272C16.0104 15.2648 16.2 15.7226 16.2 16.2C16.2 16.6774 16.0104 17.1352 15.6728 17.4728C15.3352 17.8104 14.8774 18 14.4 18C13.401 18 12.6 17.19 12.6 16.2C12.6 15.201 13.401 14.4 14.4 14.4ZM0 0H2.943L3.789 1.8H17.1C17.3387 1.8 17.5676 1.89482 17.7364 2.0636C17.9052 2.23239 18 2.46131 18 2.7C18 2.853 17.955 3.006 17.892 3.15L14.67 8.973C14.364 9.522 13.77 9.9 13.095 9.9H6.39L5.58 11.367L5.553 11.475C5.553 11.5347 5.5767 11.5919 5.6189 11.6341C5.6611 11.6763 5.71833 11.7 5.778 11.7H16.2V13.5H5.4C4.401 13.5 3.6 12.69 3.6 11.7C3.6 11.385 3.681 11.088 3.816 10.836L5.04 8.631L1.8 1.8H0V0ZM5.4 14.4C5.87739 14.4 6.33523 14.5896 6.67279 14.9272C7.01036 15.2648 7.2 15.7226 7.2 16.2C7.2 16.6774 7.01036 17.1352 6.67279 17.4728C6.33523 17.8104 5.87739 18 5.4 18C4.401 18 3.6 17.19 3.6 16.2C3.6 15.201 4.401 14.4 5.4 14.4ZM13.5 8.1L16.002 3.6H4.626L6.75 8.1H13.5Z"
-                      fill="#D9663B" />
-                  </svg>
-                </button>
-              </div>
-            </div>
+            <button class="loadmore">Показати всі</button>
           </div>
         </div>
-        <button class="loadmore">Показати всі</button>
       </div>
-
+      </div>
     </div>
   </section>
 

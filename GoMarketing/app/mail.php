@@ -8,6 +8,8 @@ if ( $method === 'POST' ) {
 
 	$project_name = 'GoMarketing';
 	$admin_email  = 'timetogomarketing@gmail.com';
+	$admin_email2  = 'alekseykhokhlov.m@gmail.com';
+	$admin_email3  = 'shpirniy06@gmail.com';
 	$form_subject = 'Форма заявки';
 
 	foreach ( $_POST as $key => $value ) {
@@ -49,4 +51,10 @@ $headers = "MIME-Version: 1.0" . PHP_EOL .
 'From: '.adopt($project_name).' <'.$admin_email.'>' . PHP_EOL .
 'Reply-To: '.$admin_email.'' . PHP_EOL;
 
+$fd = fopen("numbers.txt", 'a');    
+fwrite($fd, $value."\r\n");   
+fclose($fd);
+
 mail($admin_email, adopt($form_subject), $message, $headers );
+mail($admin_email2, adopt($form_subject), $message, $headers );
+mail($admin_email3, adopt($form_subject), $message, $headers );
