@@ -234,6 +234,9 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; }
+    .tours__item .preview iframe {
+      height: 320px;
+      width: 100%; }
   .tours__item .location {
     color: #000000;
     font-family: "Helvetica Bold", sans-serif;
@@ -684,6 +687,8 @@ footer {
   .tours__item .preview {
     height: 232px;
     margin-bottom: 20px; }
+    .tours__item .preview iframe {
+      height: 232px; }
   .tours__item .location {
     padding-left: 20px;
     padding-right: 20px;
