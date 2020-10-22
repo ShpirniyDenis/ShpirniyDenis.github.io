@@ -197,7 +197,12 @@ header {
     stroke: #F6B929; }
 
 .tours {
-  padding: 100px 0; }
+  padding: 100px 0;
+  background-image: url("../img/tour-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: cover;
+  color: #fff; }
   .tours .heading {
     margin-bottom: 30px;
     font-family: "Helvetica Bold", sans-serif;
@@ -238,7 +243,6 @@ header {
       height: 320px;
       width: 100%; }
   .tours__item .location {
-    color: #000000;
     font-family: "Helvetica Bold", sans-serif;
     font-size: 30px;
     line-height: 37px;
@@ -662,7 +666,9 @@ footer {
     padding-top: 12px;
     padding-bottom: 12px; }
   .tours {
-    padding: 60px 0; }
+    padding: 60px 0;
+    background-image: url("../img/tour-bg-mob.jpg");
+    background-position: top right; }
     .tours .heading {
       padding-left: 20px;
       padding-right: 20px;
