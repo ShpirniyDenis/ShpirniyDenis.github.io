@@ -18,17 +18,48 @@
   <header>
     <div class="mainContainer">
       <div class="header__wrapp">
-        <a href="#" class="logo">
-          <img src="img/logo.svg" alt="logo">
-        </a>
+        <div class="header__container">
+          <a href="#" class="logo">
+            <img src="img/logo.svg" alt="logo">
+          </a>
+          <div class="header__toggler">
+            <button class="show">
+              <svg width="50" height="28" viewBox="0 0 50 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="50" height="4" rx="2" fill="#EEE809" />
+                <rect y="12" width="50" height="4" rx="2" fill="#EEE809" />
+                <rect y="24" width="50" height="4" rx="2" fill="#EEE809" />
+              </svg>
+            </button>
+            <button class="close">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 2L16 16L30 30" stroke="#EEE809" stroke-width="4" stroke-linecap="round" />
+                <path d="M2 30L16 16L2 2" stroke="#EEE809" stroke-width="4" stroke-linecap="round" />
+              </svg>
+            </button>
+            <button class="video-close">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 2L16 16L30 30" stroke="#EEE809" stroke-width="4" stroke-linecap="round" />
+                <path d="M2 30L16 16L2 2" stroke="#EEE809" stroke-width="4" stroke-linecap="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
         <div class="menu">
           <ul class="nav">
             <li>
-              <a href="#">Віртуальні тури</a>
-              <a href="#">Про компанію</a>
-              <a href="#">Продукція</a>
+              <a href="#tours-section" class="lnk">Віртуальні тури</a>
+              <a href="#about-section" class="lnk">Про компанію</a>
+              <a href="#production-section" class="lnk">Продукція</a>
+              <a href="#" class="video-link">Відеоурок</a>
             </li>
           </ul>
+          <div class="socials">
+            <a href="#"><img src="img/icons/fb.svg" alt=""></a>
+            <a href="#"><img src="img/icons/tg.svg" alt=""></a>
+            <a href="#"><img src="img/icons/insta.svg" alt=""></a>
+            <a href="#"><img src="img/icons/viber.svg" alt=""></a>
+            <a href="#"><img src="img/icons/youtube.svg" alt=""></a>
+          </div>
         </div>
       </div>
     </div>
@@ -42,7 +73,7 @@
             <h1>Віртуальні тури 360</h1>
             <h2>Демополя компанії EURALIS створені, щоб ви могли ознайомитися з особливостями гібридів та їх ростом із будь-якої точки
             України.</h2>
-            <a href="#">
+            <a href="#tours-section" class="lnk">
               Дивитися поля
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -76,7 +107,7 @@
       </div>
     </section>
 
-    <section class="tours">
+    <section class="tours" id="tours-section">
       <div class="mainContainer">
         <div class="heading"><h2>Тури</h2></div>
         <div class="descr">Демополя доступні он-лайн. Повертайте зображення на екрані, озирніться навколо себе, ніби стоїте на реальному полі,
@@ -106,7 +137,7 @@
       </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about-section">
       <div class="mainContainer">
         <div class="heading"><h2>Про компанію</h2></div>
         <div class="descr">
@@ -118,7 +149,7 @@
       </div>
     </section>
 
-    <section class="production">
+    <section class="production" id="production-section">
       <div class="mainContainer">
         <div class="heading">
           <h2>Продукція</h2>

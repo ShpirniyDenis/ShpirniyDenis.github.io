@@ -46,6 +46,8 @@ header
   align-items: center
   padding-top: 60px
   padding-bottom: 20px
+  .header__toggler, a.video-link, .socials
+    display: none
   .menu
     transition: all 1.3s
     .nav
@@ -59,9 +61,12 @@ header
         transition: all 0.2s
         &:last-child
           margin-right: 0
-        &:hover
-          text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3)
-          color: #DFD708
+        @media screen and (min-width: 992px)
+          &:hover
+            text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3)
+            color: #DFD708
+        &:focus
+          outline: none
 
 .banner
   padding-top: 249px
@@ -144,6 +149,8 @@ header
       vertical-align: middle
     &:hover
       background:#005443
+    &:focus
+      outline: none
 .play-video
   border: none
   background: transparent
@@ -609,7 +616,7 @@ footer
     &::after
       display: none
   .production
-    padding-top: 40px
+    padding-top: 0
     padding-bottom: 60px
     background: none
     .descr
@@ -736,3 +743,63 @@ footer
     right: 30px
     svg
       width: 28px
+  .header__wrapp .header__toggler, .header__wrapp a.video-link, .header__wrapp .socials
+    display: block
+  .header__container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+  .header__wrapp
+    display: block
+  .header__wrapp .menu
+    width: 100%
+    margin-top: 90px
+  .header__toggler
+    button
+      margin-top: 10px
+      border: none
+      background-color: transparent
+    .close, .video-close
+      display: none
+  .header__wrapp .menu .nav a
+    display: block
+    width: 100%
+    margin-bottom: 40px
+    font-size: 34px
+    line-height: 42px
+    font-family: $font_bold
+    text-align: center
+    &:last-child
+      margin-bottom: 0
+  .header__wrapp .menu .nav
+    margin-bottom: 80px
+  .header__wrapp .menu .socials
+    display: flex
+    justify-content: space-between
+    align-items: center
+  .header__wrapp .menu
+    display: none
+  header
+    z-index: 99
+    &.active
+      background-color: #006A55
+      position: fixed
+      height: 100%
+      overflow: scroll
+      .header__wrapp .menu
+        display: block
+      .header__toggler button
+        &.show
+          display: none
+        &.close
+          display: block
+    &.video-play
+      background: rgba(0, 106, 85, 0.83)
+      .header__toggler button
+        &.video-close
+          display: block
+        &.show
+          display: none
+  .banner.video-active .close-section
+    display: none
