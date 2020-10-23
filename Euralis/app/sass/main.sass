@@ -185,6 +185,9 @@ header
     font-family: $font_thin
     margin-bottom: 30px
     width: 54%
+    p
+      font-size: 15px
+      margin-top: 15px
 .tours__list
   display: flex
   justify-content: space-between
@@ -198,6 +201,9 @@ header
     background-size: cover
     background-repeat: no-repeat
     background-position: center
+    display: block
+    &:focus
+      outline: none
     iframe
       height: 320px
       width: 100%
@@ -583,6 +589,7 @@ footer
   .tours__item .preview
     height: 232px
     margin-bottom: 20px
+    display: block
     iframe
       height: 232px
   .tours__item .location

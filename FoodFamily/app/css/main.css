@@ -4367,4 +4367,20 @@ button.add-phone {
     font-size: 13px;
     line-height: 22px; }
   .restaurant-about {
-    padding: 90px 0; } }
+    padding: 90px 0; }
+  .tracker__image {
+    width: 100%; }
+    .tracker__image img {
+      max-width: 100%;
+      height: auto;
+      border-top: 1px solid rgba(43, 74, 69, 0.2); }
+  .tracker__heading {
+    display: none; }
+  .tracker__card {
+    position: static; }
+  .tracker__wrapp {
+    padding-top: 85px; }
+  .tracker__card {
+    width: 100%; }
+  .tracker__card__wrapp {
+    background: #359080; } }

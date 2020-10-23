@@ -215,6 +215,9 @@ header {
     font-family: "Helvetica Thin", sans-serif;
     margin-bottom: 30px;
     width: 54%; }
+    .tours .descr p {
+      font-size: 15px;
+      margin-top: 15px; }
 
 .tours__list {
   display: -webkit-box;
@@ -238,7 +241,10 @@ header {
     margin-bottom: 20px;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center; }
+    background-position: center;
+    display: block; }
+    .tours__item .preview:focus {
+      outline: none; }
     .tours__item .preview iframe {
       height: 320px;
       width: 100%; }
@@ -692,7 +698,8 @@ footer {
       margin-bottom: 0; }
   .tours__item .preview {
     height: 232px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    display: block; }
     .tours__item .preview iframe {
       height: 232px; }
   .tours__item .location {
