@@ -148,7 +148,20 @@ input, button, textarea {
   -webkit-box-align: stretch;
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
-          align-items: stretch; }
+          align-items: stretch;
+  position: relative; }
+  .menu__list::after {
+    content: '';
+    right: -47px;
+    top: 50%;
+    position: absolute;
+    margin-top: -16px;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url("../img/slide-right.svg");
+    background-repeat: no-repeat;
+    background-position: center; }
 
 .menu__item {
   width: 24%;
@@ -182,7 +195,7 @@ input, button, textarea {
             justify-content: center;
     padding-bottom: 27px; }
     .menu__item .preview img {
-      max-width: 80%; }
+      max-width: 70%; }
   .menu__item .name {
     margin-bottom: 17px;
     color: #42413D;
