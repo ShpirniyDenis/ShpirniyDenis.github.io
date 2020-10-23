@@ -1,0 +1,27 @@
+
+@font-face {
+  font-family: 'Philosopher Bold';
+  src: url('../fonts/Philosopher/PhilosopherBold/PhilosopherBold.eot');
+  src: url('../fonts/Philosopher/PhilosopherBold/PhilosopherBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Philosopher/PhilosopherBold/PhilosopherBold.woff') format('woff'),
+    url('../fonts/Philosopher/PhilosopherBold/PhilosopherBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'Philosopher Regular';
+  src: url('../fonts/Philosopher/PhilosopherRegular/PhilosopherRegular.eot');
+  src: url('../fonts/Philosopher/PhilosopherRegular/PhilosopherRegular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Philosopher/PhilosopherRegular/PhilosopherRegular.woff') format('woff'),
+    url('../fonts/Philosopher/PhilosopherRegular/PhilosopherRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Legend';
+  src: url('../fonts/Legend/Legend.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

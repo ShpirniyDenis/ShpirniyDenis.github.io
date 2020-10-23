@@ -1,0 +1,281 @@
+// MAIN ELEMENTS
+$font_regular: 'Philosopher Regular', sans-serif
+$font_bold: 'Philosopher Bold', sans-serif
+$font_other: 'Legend', sans-serif
+ 
+       
+body
+  background: #fff
+  font-family: $font_regular
+  color: #42413D
+  overflow-x: hidden
+
+*, :after, :before
+  box-sizing: border-box
+
+.mainContainer
+  max-width: 1332px
+  width: 100%
+  margin: 0 auto
+  padding: 0 10px
+  box-sizing: border-box  
+
+input,button, textarea
+  font-family: $font_regular
+  color: #272727
+  font-size: 14px
+  box-shadow: none !important
+  &:focus
+    box-shadow: none !important
+
+
+.header
+  position: absolute
+  width: 100%
+  left: 0
+  top: 0
+.header__wrapp
+  padding: 16px 0
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  .logo
+    margin-right: auto
+  .nav
+    a
+      padding: 5px 32px
+      color: #42413D
+      font-size: 18px
+      line-height: 20px
+  .info
+    margin-left: 13%
+    text-align: right
+    a
+      display: block
+      margin-bottom: 4px
+      color: #42413D
+      font-size: 20px
+      line-height: 22px
+      font-family: $font_bold
+    p
+      color: #898989
+      font-size: 16px
+      line-height: 18px
+
+
+
+.banner
+  padding-top: 263px
+  padding-bottom: 169px
+  background-image: url('../img/banner.jpg')
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  text-align: center
+  color: #fff
+  .heading
+    display: inline-block
+    margin-bottom: 24px
+    font-size: 24px
+    line-height: 24px
+    font-family: $font_other
+  h1
+    margin-bottom: 32px
+    font-size: 80px
+    line-height: 80px
+    font-family: $font_other
+  h2
+    font-size: 26px
+    line-height: 36px
+    font-family: $font_regular
+
+.menu
+  padding-top: 104px
+.menu__heading
+  text-align: center
+  font-size: 64px
+  line-height: 64px
+  color: #42413D
+  margin-bottom: 28px
+  font-family: $font_other
+.menu__nav
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  width: 82%
+  margin: 0 auto
+  a
+    padding-bottom: 12px
+    border-bottom: 1px solid transparent
+    font-size: 16px
+    color: #9D9D9D
+    line-height: 22px
+    display: inline-block
+    &.active
+      color: #D52D22
+      border-color: #D52D22
+    &:focus
+      outline: none
+.menu__container
+  background-color: #F7F6F5
+  padding: 56px 
+.menu__list
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+.menu__item
+  width: 24%
+  padding: 24px 24px 13px
+  background: #FFFFFF
+  border: 1px solid #DADADA
+  border-radius: 10px
+  position: relative
+  .link
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    &:focus
+      outline: none
+  .preview
+    width: 100%
+    height: 200px
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    padding-bottom: 27px
+    img
+      max-width: 80%
+  .name
+    margin-bottom: 17px
+    color: #42413D
+    font-size: 20px
+    line-height: 22px
+    font-family: $font_bold
+  .info
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .price
+      color: #42413D
+      font-size: 32px
+      line-height: 36px
+      font-family: $font_bold
+      span
+        vertical-align: baseline
+        font-size: 20px
+        line-height: 22px
+    a
+      border-radius: 100px
+      background: #F7F6F5
+      color: #42413D
+      font-size: 16px
+      line-height: 22px
+      padding: 12px 25px
+      border: none
+      transition: all 0.2s
+      position: relative
+      z-index: 1
+      &:hover
+        background-color: #D52D22
+        color: #fff
+
+
+.about
+  padding: 104px 0 129px
+  .preview
+    text-align: center
+    max-width: 100%
+  .content
+    margin-top: -56px
+    h2
+      margin-bottom: 24px
+      font-size: 64px
+      line-height: 64px
+      font-family: $font_other
+    p
+      font-size: 26px
+      line-height: 36px
+
+
+.delivery__container
+  background-color: #D72D27
+.delivery__wrapp
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+  color: #fff
+  .img
+    margin-top: -100px
+    margin-right: -55px
+  .content
+    padding-bottom: 72px
+    h2
+      margin-bottom: 24px
+      font-size: 64px
+      line-height: 64px
+      font-family: $font_other
+    p
+      font-size: 26px
+      line-height: 29px
+      margin-bottom: 32px
+    .links
+      a
+        margin-right: 20px
+
+.contacts
+  padding: 104px 0
+  background-image: url('../img/contacts-bg.jpg')
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  color: #fff
+  .heading
+    font-family: $font_other
+    margin-bottom: 24px
+    font-size: 64px
+    line-height: 64px
+  .wrapp
+    margin-bottom: 40px
+    &:last-child
+      margin-bottom: 0
+    span
+      display: block
+      margin-bottom: 24px
+      font-size: 32px
+      line-height: 36px
+      font-family: $font_bold
+    p
+      margin-bottom: 8px
+      font-size: 26px
+      line-height: 36px
+    a
+      display: block
+      font-size: 32px
+      line-height: 45px
+      font-family: $font_bold
+      color: #fff
+      &:focus
+        outline: none
+
+footer
+  background: #F7F6F5
+.footer__wrapp
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 19px 0
+  color: #898989
+  .descr
+    font-size: 16px
+    line-height: 18px
+  .links
+    a
+      font-size: 16px
+      line-height: 18px
+      font-family: $font_bold
+      margin-right: 32px
+      color: #898989
+      &:last-child
+        margin-right: 0

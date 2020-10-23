@@ -1,0 +1,344 @@
+body {
+  background: #fff;
+  font-family: "Philosopher Regular", sans-serif;
+  color: #42413D;
+  overflow-x: hidden; }
+
+*, :after, :before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.mainContainer {
+  max-width: 1332px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+input, button, textarea {
+  font-family: "Philosopher Regular", sans-serif;
+  color: #272727;
+  font-size: 14px;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important; }
+  input:focus, button:focus, textarea:focus {
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important; }
+
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0; }
+
+.header__wrapp {
+  padding: 16px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .header__wrapp .logo {
+    margin-right: auto; }
+  .header__wrapp .nav a {
+    padding: 5px 32px;
+    color: #42413D;
+    font-size: 18px;
+    line-height: 20px; }
+  .header__wrapp .info {
+    margin-left: 13%;
+    text-align: right; }
+    .header__wrapp .info a {
+      display: block;
+      margin-bottom: 4px;
+      color: #42413D;
+      font-size: 20px;
+      line-height: 22px;
+      font-family: "Philosopher Bold", sans-serif; }
+    .header__wrapp .info p {
+      color: #898989;
+      font-size: 16px;
+      line-height: 18px; }
+
+.banner {
+  padding-top: 263px;
+  padding-bottom: 169px;
+  background-image: url("../img/banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff; }
+  .banner .heading {
+    display: inline-block;
+    margin-bottom: 24px;
+    font-size: 24px;
+    line-height: 24px;
+    font-family: "Legend", sans-serif; }
+  .banner h1 {
+    margin-bottom: 32px;
+    font-size: 80px;
+    line-height: 80px;
+    font-family: "Legend", sans-serif; }
+  .banner h2 {
+    font-size: 26px;
+    line-height: 36px;
+    font-family: "Philosopher Regular", sans-serif; }
+
+.menu {
+  padding-top: 104px; }
+
+.menu__heading {
+  text-align: center;
+  font-size: 64px;
+  line-height: 64px;
+  color: #42413D;
+  margin-bottom: 28px;
+  font-family: "Legend", sans-serif; }
+
+.menu__nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 82%;
+  margin: 0 auto; }
+  .menu__nav a {
+    padding-bottom: 12px;
+    border-bottom: 1px solid transparent;
+    font-size: 16px;
+    color: #9D9D9D;
+    line-height: 22px;
+    display: inline-block; }
+    .menu__nav a.active {
+      color: #D52D22;
+      border-color: #D52D22; }
+    .menu__nav a:focus {
+      outline: none; }
+
+.menu__container {
+  background-color: #F7F6F5;
+  padding: 56px; }
+
+.menu__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
+
+.menu__item {
+  width: 24%;
+  padding: 24px 24px 13px;
+  background: #FFFFFF;
+  border: 1px solid #DADADA;
+  border-radius: 10px;
+  position: relative; }
+  .menu__item .link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; }
+    .menu__item .link:focus {
+      outline: none; }
+  .menu__item .preview {
+    width: 100%;
+    height: 200px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 27px; }
+    .menu__item .preview img {
+      max-width: 80%; }
+  .menu__item .name {
+    margin-bottom: 17px;
+    color: #42413D;
+    font-size: 20px;
+    line-height: 22px;
+    font-family: "Philosopher Bold", sans-serif; }
+  .menu__item .info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .menu__item .info .price {
+      color: #42413D;
+      font-size: 32px;
+      line-height: 36px;
+      font-family: "Philosopher Bold", sans-serif; }
+      .menu__item .info .price span {
+        vertical-align: baseline;
+        font-size: 20px;
+        line-height: 22px; }
+    .menu__item .info a {
+      border-radius: 100px;
+      background: #F7F6F5;
+      color: #42413D;
+      font-size: 16px;
+      line-height: 22px;
+      padding: 12px 25px;
+      border: none;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+      position: relative;
+      z-index: 1; }
+      .menu__item .info a:hover {
+        background-color: #D52D22;
+        color: #fff; }
+
+.about {
+  padding: 104px 0 129px; }
+  .about .preview {
+    text-align: center;
+    max-width: 100%; }
+  .about .content {
+    margin-top: -56px; }
+    .about .content h2 {
+      margin-bottom: 24px;
+      font-size: 64px;
+      line-height: 64px;
+      font-family: "Legend", sans-serif; }
+    .about .content p {
+      font-size: 26px;
+      line-height: 36px; }
+
+.delivery__container {
+  background-color: #D72D27; }
+
+.delivery__wrapp {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: #fff; }
+  .delivery__wrapp .img {
+    margin-top: -100px;
+    margin-right: -55px; }
+  .delivery__wrapp .content {
+    padding-bottom: 72px; }
+    .delivery__wrapp .content h2 {
+      margin-bottom: 24px;
+      font-size: 64px;
+      line-height: 64px;
+      font-family: "Legend", sans-serif; }
+    .delivery__wrapp .content p {
+      font-size: 26px;
+      line-height: 29px;
+      margin-bottom: 32px; }
+    .delivery__wrapp .content .links a {
+      margin-right: 20px; }
+
+.contacts {
+  padding: 104px 0;
+  background-image: url("../img/contacts-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff; }
+  .contacts .heading {
+    font-family: "Legend", sans-serif;
+    margin-bottom: 24px;
+    font-size: 64px;
+    line-height: 64px; }
+  .contacts .wrapp {
+    margin-bottom: 40px; }
+    .contacts .wrapp:last-child {
+      margin-bottom: 0; }
+    .contacts .wrapp span {
+      display: block;
+      margin-bottom: 24px;
+      font-size: 32px;
+      line-height: 36px;
+      font-family: "Philosopher Bold", sans-serif; }
+    .contacts .wrapp p {
+      margin-bottom: 8px;
+      font-size: 26px;
+      line-height: 36px; }
+    .contacts .wrapp a {
+      display: block;
+      font-size: 32px;
+      line-height: 45px;
+      font-family: "Philosopher Bold", sans-serif;
+      color: #fff; }
+      .contacts .wrapp a:focus {
+        outline: none; }
+
+footer {
+  background: #F7F6F5; }
+
+.footer__wrapp {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 19px 0;
+  color: #898989; }
+  .footer__wrapp .descr {
+    font-size: 16px;
+    line-height: 18px; }
+  .footer__wrapp .links a {
+    font-size: 16px;
+    line-height: 18px;
+    font-family: "Philosopher Bold", sans-serif;
+    margin-right: 32px;
+    color: #898989; }
+    .footer__wrapp .links a:last-child {
+      margin-right: 0; }
