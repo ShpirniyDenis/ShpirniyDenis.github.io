@@ -95,7 +95,8 @@ header {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .banner .mainContainer {
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
@@ -996,7 +997,7 @@ footer {
     padding-bottom: 12px; }
   .tours {
     padding: 60px 0;
-    background-image: url("../img/tour-bg-mob.jpg");
+    background-image: url("../img/tour-bg-mob2.jpg");
     background-position: top right; }
     .tours .heading {
       padding-left: 20px;
@@ -1304,4 +1305,6 @@ footer {
   .banner.video-active .close-section {
     display: none; }
   .footer__info .links a {
-    margin-bottom: 45px; } }
+    margin-bottom: 45px; }
+  .close-section {
+    display: none; } }
