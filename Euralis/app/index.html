@@ -15,7 +15,7 @@
 </head> 
 
 <body>
-  <header>
+  <header class="animation-container header">
     <div class="mainContainer">
       <div class="header__wrapp">
         <div class="header__container">
@@ -68,11 +68,11 @@
   </header>
 
   <main>
-    <section class="banner">
+    <section class="banner animation-container">
       <div class="mainContainer">
         <div class="banner__wrapp">
           <div class="banner__content">
-            <h1>Віртуальні тури 360</h1>
+            <h1>Віртуальні тури <span>360</span></h1>
             <h2>Демополя компанії EURALIS створені, щоб ви могли ознайомитися з особливостями гібридів та їх ростом із будь-якої точки
             України.</h2>
             <a href="#tours-section" class="lnk">
@@ -96,7 +96,7 @@
           </button>
         </div>
       </div>
-      <video id="video-banner" loop playsinline poster="img/banner-2.jpg">
+      <video id="video-banner" loop playsinline poster="img/banner.jpg">
         <source src="video/6.mp4" type="video/mp4">
       </video>
       <div class="close-section">
@@ -109,16 +109,16 @@
       </div>
     </section>
 
-    <section class="tours" id="tours-section">
+    <section class="tours animation-container" id="tours-section">
       <div class="mainContainer">
         <div class="heading"><h2>Тури</h2></div>
         <div class="descr">Демополя доступні он-лайн. Повертайте зображення на екрані, озирніться навколо себе, ніби стоїте на реальному полі,
         обирайте цікавий вам гібрид і розглядайте його з усіх доступних ракурсів.
-        <p>Щоб переглянути віртуальний тур, натисніть на зображення*</p>
         </div>
         <div class="tours__list">
           <div class="tours__item">
             <a href="https://af.l-ark.com/fields360/tour-01/" target="_blank" class="preview" style="background-image: url('img/tour1.jpg');">
+              <img src="img/icons/tour-icon.svg" alt="">
             </a>
             <div class="location">Тернопіль</div>
             <div class="content">
@@ -128,6 +128,7 @@
           </div>
           <div class="tours__item">
             <a href="https://af.l-ark.com/fields360/tour-02/" target="_blank" class="preview" style="background-image: url('img/tour2.jpg');">
+              <img src="img/icons/tour-icon.svg" alt="">
             </a>
             <div class="location">Вінниця</div>
             <div class="content">
@@ -139,7 +140,7 @@
       </div>
     </section>
 
-    <section class="about" id="about-section">
+    <section class="about animation-container" id="about-section">
       <div class="mainContainer">
         <div class="heading"><h2>Про компанію</h2></div>
         <div class="descr">
@@ -151,17 +152,17 @@
       </div>
     </section>
 
-    <section class="production" id="production-section">
+    <section class="production animation-container" id="production-section">
       <div class="mainContainer">
         <div class="heading">
           <h2>Продукція</h2>
           <img src="img/production-mob.png" alt="production">
         </div>
         <div class="descr">
-          <p>Компанія EURALIS Semences Україна пропонує фермерам гібридне насіння кукурудзи від раннього до середньопізнього ФАО,
-          насіння соняшнику, що відповідає потребам фермерів у всіх сегментах ринку, а також насіння сої, сорго та озимого ріпаку.</p>
-          <p>Компанія щорічно закладає широку мережу демонстраційних та технологічних випробувань гібридів по всій Україні, а відділ
-          наукових розробок і досліджень тестує новостворені гібриди та досліджує їхню адаптивність до нашого клімату.</p>
+          <p>Компанія EURALIS Semences Україна пропонує<br/> фермерам гібридне насіння кукурудзи від<br /> раннього до середньопізнього ФАО,
+          насіння<br /> соняшнику, що відповідає потребам фермерів<br /> у всіх сегментах ринку, а також насіння сої,<br /> сорго та озимого ріпаку.</p>
+          <p>Компанія щорічно закладає широку мережу<br /> демонстраційних та технологічних<br /> випробувань гібридів по всій Україні, а відділ<br />
+          наукових розробок і досліджень тестує<br /> новостворені гібриди та досліджує їхню<br /> адаптивність до нашого клімату.</p>
         </div>
         <button type="button" class="click-item" data-action="popup-open" data-label="#products-popup">
           Завантажити
@@ -229,15 +230,15 @@
             <div class="heading">Контакти</div>
             <div class="content">
               <div class="contacts">
-                <a href="#">
+                <a href="tel:380443534573">
                   <div class="icon"><img src="img/icons/phone.svg" alt=""></div>
                   38 (044) 353 45 73
                 </a>
-                <a href="#">
+                <a href="https://goo.gl/maps/ukrLJt3bRZhgjJfHA" target="_blank">
                   <div class="icon"><img src="img/icons/location.svg" alt=""></div>
                   Київ, вул. Смольна, 9
                 </a>
-                <a href="#">
+                <a href="mailto:kiev.seeds@euralis.com">
                   <div class="icon"><img src="img/icons/mail.svg" alt=""></div>
                   kiev.seeds@euralis.com
                 </a>
@@ -252,7 +253,7 @@
                   <a href="https://www.clicknseed.com/HP/HPInternet.aspx?context=uk" target="_blank">
                     <img src="img/icons/nseed.svg" alt="">
                   </a>
-                  <span>Завантажуй додаток безкоштовно в офіційному онлайн-магазині</span>
+                  <span>Завантажуй додаток<br/> безкоштовно в<br /> офіційному <br />онлайн-магазині</span>
                 </div>
                 <div class="links">
                   <a href="#">

@@ -101,3 +101,38 @@ $('header .video-close').click(function () {
   $('#video-banner').get(0).pause();
   $('.banner').removeClass('video-active');
 });
+
+
+// for animations
+(function () {
+  var elements;
+  var windowHeight;
+
+  function init() {
+    elements = document.querySelectorAll('.animation-container');
+    windowHeight = window.innerHeight;
+  }
+
+  function checkPosition() {
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+      var positionFromTop = elements[i].getBoundingClientRect().top;
+
+      if (window.screen.width > 992) {
+        if (positionFromTop + 200 - windowHeight <= 0) {
+          element.classList.add('active');
+        }
+      } else {
+        if (positionFromTop + 100 - windowHeight <= 0) {
+          element.classList.add('active');
+        }
+      }
+    }
+  }
+
+  window.addEventListener('scroll', checkPosition);
+  window.addEventListener('resize', init);
+
+  init();
+  checkPosition();
+})();
