@@ -42,7 +42,7 @@ document.addEventListener('click', clickItemHandler);
 // for scrolling to anchor
 document.querySelectorAll('a.lnk').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    $('header').removeClass('active');
+    $('header').removeClass('shown');
     e.preventDefault();
     if (window.screen.width > 992) {
       document.querySelector(this.getAttribute('href')).scrollIntoView({
@@ -80,17 +80,17 @@ $('#video-pause').click(function () {
 })
 
 $('header .show').click(function () {
-  $('header').addClass('active');
+  $('header').addClass('shown');
 });
 
 $('header .close').click(function () {
-  $('header').removeClass('active');
+  $('header').removeClass('shown');
 });
 
 
 $('.video-link').click(function (e) {
   e.preventDefault();
-  $('header').removeClass('active');
+  $('header').removeClass('shown');
   $('header').addClass('video-play');
   $('#video-banner').get(0).play();
   $('.banner').addClass('video-active');

@@ -42,6 +42,7 @@ header
   z-index: 10
   &.video-active
     .menu
+      transform: translateY(-20px)
       opacity: 0
 .header__wrapp
   display: flex
@@ -53,6 +54,9 @@ header
     display: none
   .menu
     transition: all 1.3s
+    transition: opacity 0.5s ease-out,transform .5s ease-out
+    transform: translateY(0)
+    opacity: 1
     .nav
       a
         text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3)
@@ -80,10 +84,16 @@ header
   background-position: top center
   background-size: cover
   position: relative
+  .mainContainer
+    transform: translateX(0)
+    opacity: 1
   &.video-active
     .mainContainer
+      transform: translateX(-80px)
       opacity: 0
+      transition: opacity 0.5s ease-out,transform .5s ease-out
     .close-section
+      transform: translateX(0)
       opacity: 1
   .close-section
     position: absolute
@@ -97,8 +107,9 @@ header
     align-items: flex-start
     padding-top: 26px
     opacity: 0
-    transition: all 2s
+    transform: translateX(100%)
     z-index: 20
+    transition: opacity 0.5s ease-out,transform .5s ease-out
     button
       border: none
       padding: 0
@@ -637,7 +648,16 @@ footer
       .heading, .descr, button
         transform: translateY(0)
         opacity: 1
-
+  &.footer
+    .mainContainer
+      transform: translateY(20px)
+      opacity: 0
+      transition: opacity 1s ease-out,transform .5s ease-out
+      transition-delay: 0.4s
+    &.active
+      .mainContainer
+        transform: translateY(0)
+        opacity: 1
 
   
 @media screen and ( max-width: 1200px )
@@ -941,7 +961,7 @@ footer
     display: none
   header
     z-index: 99
-    &.active
+    &.shown
       background-color: #006A55
       position: fixed
       height: 100%
