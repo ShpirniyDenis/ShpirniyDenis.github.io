@@ -70,14 +70,13 @@ header
 
 .banner
   padding-top: 249px
-  padding-bottom: 193px
+  padding-bottom: 183px
   min-height: 700px
   background-image: url('../img/banner-2.jpg')
   background-repeat: no-repeat
   background-position: top center
   background-size: cover
   position: relative
-  min-height: 100vh
   &.video-active
     .mainContainer
       opacity: 0
@@ -125,7 +124,7 @@ header
     line-height: 98px
     color: #ffffff
     font-family: $font_bold
-    margin-bottom: 20px
+    margin-bottom: 15px
   h2
     letter-spacing: 0.015em
     font-size: 20px
@@ -275,7 +274,7 @@ header
       background:#005443
 
 .about
-  padding-top: 290px
+  padding-top: 297px
   padding-bottom: 100px
   background-image: url('../img/about-bg.jpg')
   background-repeat: no-repeat
@@ -295,7 +294,7 @@ header
     position: relative
     z-index: 1
   .heading
-    margin-bottom: 40px
+    margin-bottom: 36px
     color: #FFFFFF
     font-size: 50px
     line-height: 61px
@@ -361,6 +360,14 @@ footer
     .socials
       a
         margin-right: 60px
+        svg
+          path
+            transition: all 0.2s
+        @media screen and (min-width: 992px)
+          &:hover
+            svg
+              path
+                fill: #F5B929
         &:last-child
           margin-right: 0
     .contacts
@@ -369,6 +376,11 @@ footer
         margin-bottom: 30px
         color: #FFFFFF
         font-size: 19px
+        transition: all 0.2s
+        @media screen and (min-width: 992px)
+          &:hover
+            text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3)
+            color: #DFD708
         .icon
           width: 24px
           margin-right: 18px
@@ -641,7 +653,7 @@ footer
       width: 100%
       padding-left: 20px
       padding-right: 20px
-      margin-bottom: 40px
+      margin-bottom: 30px
       color: #272727
       font-size: 20px
       line-height: 24px
@@ -651,13 +663,13 @@ footer
     .mainContainer
       padding: 0
     .heading
-      background-image: url('../img/production-bg-mob.png')
+      background: #aeb1b3
       background-repeat: no-repeat
       background-size: cover
       padding-top: 40px
       background-position: bottom center
-      padding-bottom: 53px
-      margin-bottom: 18px
+      padding-bottom: 79px
+      margin-bottom: 20px
       h2
         padding-left: 20px
         padding-right: 20px

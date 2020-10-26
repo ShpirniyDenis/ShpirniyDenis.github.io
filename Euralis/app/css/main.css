@@ -77,14 +77,13 @@ header {
 
 .banner {
   padding-top: 249px;
-  padding-bottom: 193px;
+  padding-bottom: 183px;
   min-height: 700px;
   background-image: url("../img/banner-2.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
-  position: relative;
-  min-height: 100vh; }
+  position: relative; }
   .banner.video-active .mainContainer {
     opacity: 0; }
   .banner.video-active .close-section {
@@ -154,7 +153,7 @@ header {
     line-height: 98px;
     color: #ffffff;
     font-family: "Helvetica Bold", sans-serif;
-    margin-bottom: 20px; }
+    margin-bottom: 15px; }
   .banner__content h2 {
     letter-spacing: 0.015em;
     font-size: 20px;
@@ -318,7 +317,7 @@ header {
       background: #005443; }
 
 .about {
-  padding-top: 290px;
+  padding-top: 297px;
   padding-bottom: 100px;
   background-image: url("../img/about-bg.jpg");
   background-repeat: no-repeat;
@@ -340,7 +339,7 @@ header {
     position: relative;
     z-index: 1; }
   .about .heading {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
     color: #FFFFFF;
     font-size: 50px;
     line-height: 61px;
@@ -431,13 +430,27 @@ footer {
       width: 260px; }
     .footer__details .wrapp .socials a {
       margin-right: 60px; }
+      .footer__details .wrapp .socials a svg path {
+        -webkit-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s; }
+      @media screen and (min-width: 992px) {
+        .footer__details .wrapp .socials a:hover svg path {
+          fill: #F5B929; } }
       .footer__details .wrapp .socials a:last-child {
         margin-right: 0; }
     .footer__details .wrapp .contacts a {
       display: block;
       margin-bottom: 30px;
       color: #FFFFFF;
-      font-size: 19px; }
+      font-size: 19px;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+      @media screen and (min-width: 992px) {
+        .footer__details .wrapp .contacts a:hover {
+          text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+          color: #DFD708; } }
       .footer__details .wrapp .contacts a .icon {
         width: 24px;
         margin-right: 18px;
@@ -751,7 +764,7 @@ footer {
       width: 100%;
       padding-left: 20px;
       padding-right: 20px;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       color: #272727;
       font-size: 20px;
       line-height: 24px; }
@@ -762,13 +775,13 @@ footer {
     .production .mainContainer {
       padding: 0; }
     .production .heading {
-      background-image: url("../img/production-bg-mob.png");
+      background: #aeb1b3;
       background-repeat: no-repeat;
       background-size: cover;
       padding-top: 40px;
       background-position: bottom center;
-      padding-bottom: 53px;
-      margin-bottom: 18px; }
+      padding-bottom: 79px;
+      margin-bottom: 20px; }
       .production .heading h2 {
         padding-left: 20px;
         padding-right: 20px;
