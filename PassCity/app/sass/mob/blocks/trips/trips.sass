@@ -1,0 +1,76 @@
+.actual-trips
+  padding-bottom: 116px
+.actual-trips__item
+  background: rgba(255, 255, 255, 0.2)
+  backdrop-filter: blur(30px)
+  margin-bottom: 16px
+  position: relative
+  .actual-trips__plug
+    width: 100%
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+.actual-trips__price
+  padding: 16px
+  img
+    margin-right: 15px
+  span
+    font-size: 16px
+    line-height: 24px
+    color: $color_grey
+    b
+      vertical-align: baseline
+      display: inline-block
+      margin-left: 5px
+      font-size: 16px
+      line-height: 24px
+      color: $color_white
+      font-family: $font_medium
+
+.actual-trips__way
+  padding: 16px
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+  .from
+    font-size: 16px
+    line-height: 24px
+    font-family: $font_medium
+    margin-bottom: 12px
+    img
+      margin-right: 14px
+      width: 24px
+  .where
+    font-size: 16px
+    line-height: 24px
+    font-family: $font_medium
+    img
+      margin-right: 14px
+      width: 24px
+  .time
+    .delimiter
+      margin-left: 6px
+      &:first-child
+        margin-bottom: 8px
+      &:last-child
+        margin-bottom: 12px
+    .time__value
+      margin-bottom: 8px
+      span
+        font-size: 16px
+        line-height: 24px
+        color: $color_grey
+        b
+          vertical-align: baseline
+          display: inline-block
+          margin-left: 5px
+          font-size: 16px
+          line-height: 24px
+          color: $color_white
+          font-family: $font_medium
+      img
+        margin-right: 14px
+        width: 24px
+.actual-trips__loadmore
+  margin-top: 40px
+  .main-btn
+    width: 100%

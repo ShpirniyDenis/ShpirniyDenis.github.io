@@ -1,0 +1,26 @@
+.contacts-info
+  background: rgba(255, 255, 255, 0.15)
+  backdrop-filter: blur(50px)
+.contacts-info__wrapp
+  padding: 24px 0
+.contacts-info__item
+  padding: 0 16px
+  &:first-child
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+    margin-bottom: 24px
+  &:last-child
+    .contacts-info__text:last-child
+      margin-bottom: 0
+.contacts-info__text
+  margin-bottom: 24px
+  span
+    display: block
+    font-size: 14px
+    line-height: 16px
+    color: $color_grey
+    margin-bottom: 8px
+  a, div
+    font-size: 18px
+    line-height: 24px
+    color: $color_white
+    font-family: $font_medium

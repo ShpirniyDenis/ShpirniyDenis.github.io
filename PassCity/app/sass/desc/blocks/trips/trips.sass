@@ -1,0 +1,87 @@
+.actual-trips
+  padding: 124px 0
+  &.bg-grey
+    padding: 116px 0 124px
+    .actual-trips__list
+      margin-bottom: 0
+.actual-trips__list
+  margin-bottom: 56px
+.actual-trips__item
+  background: rgba(255, 255, 255, 0.2)
+  backdrop-filter: blur(50px)
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 32px 24px
+  margin-bottom: 16px
+  position: relative
+  &:last-child
+    margin-bottom: 0
+.actual-trips__plug
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background-color: transparent
+  transition: all 0.2s
+  &:hover
+    background: rgba(255, 255, 255, 0.2)
+.actual-trips__way
+  width: 49.5%
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  .from
+    font-size: 14px
+    font-family: $font_medium
+    margin-right: 24px
+    flex-shrink: 0
+    img
+      margin-right: 16px
+    span
+      vertical-align: middle
+  .where
+    font-size: 14px
+    font-family: $font_medium
+    margin-left: 24px
+    flex-shrink: 0
+    min-width: 17%
+    img
+      margin-right: 16px
+    span
+      vertical-align: middle
+  .delimiter
+    width: 100%
+    svg
+      width: 100%
+      max-width: 100%
+.actual-trips__time
+  img
+    margin-right: 15px
+  span
+    font-size: 14px
+    color: $color_grey
+    vertical-align: middle
+    b
+      margin-left: 6px
+      display: inline-block
+      color: $color_white
+      font-family: $font_medium
+      vertical-align: baseline
+.actual-trips__price
+  width: 13.4%
+  img
+    margin-right: 12px
+  span
+    font-size: 14px
+    color: $color_grey
+    vertical-align: middle
+    b
+      margin-left: 6px
+      display: inline-block
+      color: $color_white
+      font-family: $font_medium
+      vertical-align: baseline
+.actual-trips__loadmore
+  text-align: center

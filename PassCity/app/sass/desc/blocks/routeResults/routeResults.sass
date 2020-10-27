@@ -1,0 +1,257 @@
+.route-results
+  .result
+    background: rgba(255, 255, 255, 0.15)
+    margin-bottom: 24px
+    transition: all 0.4s
+    &:hover
+      background: rgba(255, 255, 255, 0.25)
+  .result-content
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    padding: 0 40px 0 32px
+  .result__info
+    width: 75.5%
+    padding: 32px 0
+  .result__route
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 24px
+  .result__route__item
+    .city
+      font-size: 24px
+      line-height: 32px
+      margin-bottom: 2px
+      font-family: $font_medium
+    .street
+      font-size: 14px
+      line-height: 24px
+      color: $color_grey
+  .result__date
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 24px
+  .result__date__item
+    flex-shrink: 0
+    width: 18.8%
+    &:last-child
+      div
+        text-align: right
+    .time
+      font-size: 24px
+      line-height: 32px
+      font-family: $font_medium
+      margin-bottom: 7px
+    .date
+      font-size: 14px
+      color: $color_grey
+      line-height: normal
+  .result__date__way
+    width: 100%
+    padding-top: 5px
+    figure
+      width: 100%
+      text-align: center
+  .result__date__way__wrapp
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 12px
+    .from
+      width: 24px
+      height: 24px
+      background-position: center
+      background-image: url('../img/icons/from-icon.svg')
+      background-size: contain
+      background-repeat: no-repeat
+    .where
+      width: 24px
+      height: 24px
+      background-position: center
+      background-image: url('../img/icons/location-icon.svg')
+      background-size: contain
+      background-repeat: no-repeat
+    .time
+      font-size: 14px
+      line-height: 24px
+      font-family: $font_medium
+      color: $color_grey
+      background-image: url('../img/icons/time-icon.svg')
+      background-repeat: no-repeat
+      background-position: left top
+      background-size: 22px
+      padding-left: 32px
+  .result__details
+    display: flex
+    justify-content: flex-start
+    align-items: flex-end
+    .number
+      width: 19.7%
+      font-size: 18px
+      line-height: 24px
+      font-family: $font_semibold
+    .company
+      font-size: 14px
+      columns: $color_grey
+      line-height: 24px
+      b
+        font-weight: 600
+        color: $color_white
+        display: inline-block
+        margin-left: 8px
+        text-transform: uppercase
+        font-family: $font_semibold
+  .result__price
+    padding-left: 40px
+    padding: 32px 0
+    padding-left: 40px
+    border-left: 1px solid rgba(255, 255, 255, 0.2)
+    width: 21.5%
+    .main-btn
+      width: 100%
+    p
+      font-size: 14px
+      line-height: 24px
+      color: $color_grey
+      margin-bottom: 28px
+      span
+        font-size: 14px
+        line-height: 24px
+        color: $color_white
+        font-family: $font_semibold
+        vertical-align: baseline
+        margin-left: 4px
+      &:first-child
+        margin-bottom: 8px
+    .value
+      color: $color_yellow
+      font-size: 24px
+      line-height: 32px
+      font-family: $font_semibold
+      margin-bottom: 16px
+  .result-details__way
+    padding: 32px
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+    border-top: 1px solid rgba(255, 255, 255, 0.2)
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      width: 100%
+      top: 47.5%
+      left: 33px
+      width: calc(100% - 66px)
+      display: block
+      height: 2px
+      background-color: transparent
+      border-bottom: 2px dashed #5ABDD4
+  .result-details__way__item
+    .time
+      font-size: 14px
+      line-height: 24px
+      font-family: $font_medium
+      margin-bottom: 10px
+    i
+      background: #5ABDD4
+      width: 12px
+      height: 12px
+      display: inline-block
+      border-radius: 50%
+      margin-bottom: 16px
+    .location
+      font-size: 18px
+      line-height: 24px
+      font-family: $font_medium
+    &:last-child
+      text-align: right
+  .result-details__auto
+    padding: 32px
+    display: flex
+    justify-content: space-between
+    align-items: center
+  .result-details__auto__info
+    p
+      font-size: 14px
+      line-height: 24px
+      color: $color_grey
+      margin-bottom: 8px
+    .model
+      font-size: 18px
+      line-height: 24px
+      font-family: $font_semibold
+  .result-details__auto__hint
+    font-size: 14px
+    line-height: 24px
+    color: $color_grey
+    i
+      width: 20px
+      height: 20px
+      display: inline-block
+      background-image: url('../img/icons/question-icon.svg')
+      background-position: center
+      background-repeat: no-repeat
+      background-size: contain
+      margin-left: 12px
+      cursor: pointer
+  .result-details-toggler
+    width: 100%
+    background-color: #fff
+    border: none
+    text-align: center
+    color: #393D5C
+    font-size: 14px
+    line-height: 16px
+    font-family: $font_medium
+    display: block
+    padding: 12px 0
+    span
+      position: relative
+      &::after
+        content: ''
+        display: inline-block
+        margin-left: 8px
+        width: 10px
+        height: 8px
+        background-image: url('../img/icons/toggler-down.svg')
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+        margin-top: 2px
+        transition: all .2s
+    &:focus
+      outline: none
+  .result-details
+    max-height: 0px
+    overflow: hidden
+    transition: all .2s
+.result
+  max-height: min-content
+  border: 1px solid transparent
+  &.active
+    height: auto
+    border-color:#FFFFFF
+    transition: all 0.6s
+    .result-details
+      max-height: 500px
+      transition: all .4s
+    .result-details-toggler span::after
+      transform: rotate(180deg)
+      transition: all .4s
+
+@media screen and ( max-width: 1200px )
+  .result__date__way
+    figure
+      svg
+        width: 100%
+  .route-results .result__price
+    padding-left: 22px
+    width: 25.5%
+  .route-results .result-content
+    padding-right: 24px
+  .route-results .result__info
+    width: 71.5%

@@ -1,0 +1,156 @@
+.support-popup
+  color: #fff
+  background-color: transparent
+.support-popup__content
+  padding: 120px 16px 88px
+  background: rgba(57, 61, 92, 0.9)
+  backdrop-filter: blur(30px)
+  height: 100vh
+  overflow: auto
+.support-popup__heading
+  text-align: center
+  font-size: 24px
+  line-height: 32px
+  font-family: $font_medium
+  margin-bottom: 24px
+.support-popup__descr
+  margin-bottom: 24px
+  span
+    font-size: 14px
+    line-height: 24px
+    color: $color_grey
+    margin-bottom: 8px
+  p
+    font-size: 14px
+    line-height: 24px
+    font-family: $font_medium
+.support-popup__links
+  margin-bottom: 32px
+.support-popup__links__item
+  font-size: 16px
+  line-height: 24px
+  color: $color_white
+  font-family: $font_medium
+  margin-bottom: 8px
+  text-align: left
+  display: block
+  background: rgba(255, 255, 255, 0.1)
+  width: 100%
+  padding: 12px 16px
+  svg
+    margin-right: 12px
+    vertical-align: sub
+    path
+      stroke: #fff
+  &:last-child
+    margin-bottom: 0
+.support-popup__socials
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  a
+    margin-right: 8px
+    height: 48px
+    width: 48px
+    display: flex
+    justify-content: center
+    align-items: center
+    background: rgba(255, 255, 255, 0.1)
+    &:last-child
+      margin-right: 0
+.support-popup__form
+  margin-bottom: 40px
+  input
+    width: 100%
+    margin-bottom: 8px
+    display: block
+    height: 56px
+    background: rgba(255, 255, 255, 0.15)
+    backdrop-filter: blur(50px)
+    padding-left: 12px
+    font-size: 16px
+    border: none
+    color: $color_white
+    &::placeholder
+      color: $color_grey
+    &:focus
+      &::placeholder
+        color: transparent
+  button
+    width: 100%
+    height: 48px
+    background: #7E8DF6
+    border: none
+    font-size: 16px
+    margin-top: 16px
+    color: #fff
+    font-family: $font_medium
+
+.support-popup__info__wrapp
+  padding-bottom: 16px
+  border-bottom: 2px dashed rgba(57, 61, 92, 0.2)
+.support-popup__info
+  background: #FFFFFF
+  margin-bottom: 72px
+  .result__route__item .city
+    color: #393D5C
+  .result__route__item .street
+    color: rgba(57, 61, 92, 0.5)
+  .result__route__item .time
+    color: #393D5C
+    span
+      color: rgba(57, 61, 92, 0.5)
+      font-size: 12px
+      line-height: 24px
+      font-family: $font_regular
+      vertical-align: baseline
+      margin-left: 3px
+  .result__details__content p
+    color: rgba(57, 61, 92, 0.5)
+    span
+      color: #393D5C
+.support-popup__info__number
+  width: 100%
+  padding: 21px 16px
+  text-align: center
+  color: #393D5C
+  font-size: 24px
+  line-height: 32px
+  font-family: $font_semibold
+  background-image: url('../img/mobile/support-code.png')
+  background-position: center center
+  background-size: 88%
+  background-repeat: no-repeat
+  position: relative
+  &::before
+    content: ''
+    display: inline-block
+    width: 32px
+    height: 32px
+    border-radius: 50%
+    background: #3A3E5D
+    position: absolute
+    top: -18px;
+    left: -18px
+  &::after
+    content: ''
+    display: inline-block
+    width: 32px
+    height: 32px
+    border-radius: 50%
+    background: #3A3E5D
+    position: absolute
+    top: -18px;
+    right: -18px
+
+.support-popup__link
+  display: block
+  width: 64%
+  margin: 0 auto
+  padding: 12px
+  font-size: 16px
+  line-height: 24px
+  color: $color_white
+  font-family: $font_medium
+  background: #7E8DF6
+  text-align: center

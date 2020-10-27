@@ -1,0 +1,51 @@
+.faq-list
+  margin: 0 auto
+  margin-bottom: 48px
+  width: 50%
+.faq__item
+  background: rgba(255, 255, 255, 0.2)
+  margin-bottom: 8px
+  width: 100%
+  &.active
+    .faq-list__content
+      max-height: 600px
+      transition: all 1s
+      padding: 5px 22px 30px 22px
+      line-height: 23px
+      font-size: 14px
+      opacity: 1
+    .faq__preview
+      &::after
+        transition: all 0.2s
+        transform: rotate(180deg)
+.faq__preview
+  padding: 20px 16px
+  font-size: 16px
+  font-family: $font_medium
+  position: relative
+  cursor: pointer
+  &::after
+    content: ''
+    display: inline-block
+    position: absolute
+    right: 18px
+    top: 25px
+    background-image: url('../img/icons/faq-arrow.svg')
+    width: 14px
+    height: 10px
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    transition: all 0.2s
+.faq-list__content
+  max-height: 0
+  overflow: hidden
+  transition: all 0.2s
+  padding: 0
+  line-height: 23px
+  font-size: 8px
+  opacity: 0
+
+@media screen and ( max-width: 1200px )
+  .faq-list
+    width: 90%
