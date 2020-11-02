@@ -129,3 +129,13 @@ $('header .video-close').click(function () {
   init();
   checkPosition();
 })();
+
+$(document).ready(function () {
+  $('#video-banner').on('ended', function () {
+    $('#video-pause').removeClass('active');
+    $('#video-banner').get(0).pause();
+    $('.banner').removeClass('video-active');
+    $('header').removeClass('video-active');
+    $('header').removeClass('video-play');
+  });
+});

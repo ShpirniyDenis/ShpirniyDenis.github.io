@@ -79,10 +79,6 @@ header
   padding-top: 249px
   padding-bottom: 183px
   min-height: 700px
-  background-image: url('../img/banner.jpg')
-  background-repeat: no-repeat
-  background-position: top center
-  background-size: cover
   position: relative
   overflow: hidden
   .banner__preview
@@ -94,12 +90,16 @@ header
     height: 100%
     z-index: 1
     transition: all 0.4s
+    background-repeat: no-repeat
+    background-position: top center
+    background-size: cover
   .mainContainer
     transform: translateX(0)
     opacity: 1
   &.video-active
     video
       z-index: 20
+      opacity: 1
     .banner__preview
       opacity: 0
     .mainContainer
@@ -140,7 +140,9 @@ header
     font-family: 'object-fit: cover;'
     position: absolute
     top: 0
-    left: 0 
+    left: 0
+    opacity: 0
+    transition: all 0.5s
   .banner__wrapp
     display: flex
     justify-content: flex-start
@@ -674,6 +676,12 @@ footer
         transform: translateY(0)
         opacity: 1
 
+@media screen and ( min-width: 1600px )
+  .production .preview
+    width: 53%
+    bottom: 10px
+    img
+      width: 100%
 @media screen and ( min-width: 1500px )
   .production .preview
     width: 53%
