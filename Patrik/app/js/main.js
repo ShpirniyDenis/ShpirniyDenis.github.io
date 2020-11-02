@@ -1,103 +1,79 @@
-
-function clickItemHandler(event) {
-  if (!event.target.closest('.click-item')) return;
-  let item = event.target.closest('.click-item');
-
-  let obj = {
-    'toggle': function (target) {
-      target.closest('.click-obj').classList.toggle('active');
-    },
-
-    'remove': function (target) {
-      target.closest('.click-obj').remove();
-    },
-
-    'popup-open': function (target) {
-      if (!document.querySelector(target.dataset.label)) return;
-      document.querySelector(target.dataset.label).classList.add('active');
-    },
-
-    'menu-open': function (target) {
-      target.closest('.header__cabinet__menu').classList.toggle('active');
-    },
-
-    'popup-close': function (target) {
-      if (target.dataset.label) {
-        document.querySelector(target.dataset.label).classList.remove('active')
-      } else {
-        target.closest('.popup_container').classList.remove('active');
-      }
-    },
-  }
-
-  if (item.dataset.action) {
-    let actions = item.dataset.action.split(' ');
-    actions.forEach(action => obj[action](item))
-  } else {
-    obj['toggle'](item);
-  }
-};
-document.addEventListener('click', clickItemHandler);
-
 // for scrolling to anchor
 document.querySelectorAll('a.lnk').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    $('header').removeClass('active');
     e.preventDefault();
-    if (window.screen.width > 992) {
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth',
-        block: 'end'
-      });
-    } else {
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
   });
 });
 
-$('.play-video').click(function () {
-  if (!$(this).hasClass('active')) {
-    $(this).addClass('active');
-    $('#video-banner').get(0).play();
-    $('.banner').addClass('video-active');
-    $('header').addClass('video-active');
-  } else {
-    $(this).removeClass('active');
-    $('#video-banner').get(0).pause();
-    $('.banner').removeClass('video-active');
-    $('header').removeClass('video-active');
-  }
-})
+//for menu-catalog
 
-$('#video-pause').click(function () {
-    $(this).removeClass('active');
-    $('#video-banner').get(0).pause();
-    $('.banner').removeClass('video-active');
-    $('header').removeClass('video-active');
-})
-
-$('header .show').click(function () {
-  $('header').addClass('active');
+var sliderMenu = new Swiper('.menu__slider', {
+  direction: 'horizontal',
+  slidesPerView: 1,
+  loop: false,
+  watchSlidesProgress: true,
+  watchSlidesVisibility: true,
+  navigation: {
+    nextEl: '.menu__slider__btn.next',
+    prevEl: '.menu__slider__btn.prev',
+  },
+  breakpoints: {
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    }
+  },
 });
 
-$('header .close').click(function () {
-  $('header').removeClass('active');
-});
+$('.menu__nav button').click(function () {
+  let productType = $(this).attr('data-type');
 
+  let preloader = '<div class="menu__preloader">'
+    + '<span class="spinner"></span>'
+    + '</div>';
+  
+  let slide = '<div class="menu__item swiper-slide">'
+    + '<a href="#" class="link"></a>'
+    + '<div class="preview">'
+    + '<img src="img/menu_it2.png" alt="">'
+    + '</div>'
+    + '<div class="name">Бургер "Чери" + картофель фри</div>'
+    + '<div class="info">'
+    + '<div class="price">125 <span>грн</span></div>'
+    + '<a href="#">Замовити</a>'
+    + '</div>'
+    + '</div>';
 
-$('.video-link').click(function (e) {
-  e.preventDefault();
-  $('header').removeClass('active');
-  $('header').addClass('video-play');
-  $('#video-banner').get(0).play();
-  $('.banner').addClass('video-active');
-});
+  $('.menu__nav button').removeClass('active');
+  $(this).addClass('active');
 
-$('header .video-close').click(function () {
-  $('header').removeClass('video-play');
-  $('#video-banner').get(0).pause();
-  $('.banner').removeClass('video-active');
+  $('.menu__list').html(preloader);
+  $('.menu__slider__nav').hide();
+
+  setTimeout(function () {
+    for (let i = 0; i < 7; i++) {
+      $('.menu__list').append(slide);
+    }
+    
+    sliderMenu.update();
+    $('.menu__preloader').hide();
+    $('.menu__slider__nav').show();
+  }, 2000);
+
 });

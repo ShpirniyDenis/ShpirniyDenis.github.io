@@ -59,17 +59,10 @@ document.querySelectorAll('a.lnk').forEach(anchor => {
 });
 
 $('.play-video').click(function () {
-  if (!$(this).hasClass('active')) {
     $(this).addClass('active');
     $('#video-banner').get(0).play();
     $('.banner').addClass('video-active');
     $('header').addClass('video-active');
-  } else {
-    $(this).removeClass('active');
-    $('#video-banner').get(0).pause();
-    $('.banner').removeClass('video-active');
-    $('header').removeClass('video-active');
-  }
 })
 
 $('#video-pause').click(function () {

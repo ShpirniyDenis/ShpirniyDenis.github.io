@@ -67,6 +67,8 @@
     </div>
   </header>
 
+
+
   <main>
     <section class="banner animation-container">
       <div class="mainContainer">
@@ -96,9 +98,10 @@
           </button>
         </div>
       </div>
-      <video id="video-banner" loop playsinline poster="img/banner.jpg">
-        <source src="video/6.mp4" type="video/mp4">
+      <video id="video-banner" controls loop playsinline poster="img/banner.jpg">
+        <source src="video/1.mp4" type="video/mp4">
       </video>
+      <div class="banner__preview"></div>
       <div class="close-section">
         <button id="video-pause">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,22 +120,24 @@
         </div>
         <div class="tours__list">
           <div class="tours__item">
-            <a href="https://af.l-ark.com/fields360/tour-02" target="_blank" class="preview" style="background-image: url('img/tour1.jpg');">
-              <img src="img/icons/tour-icon.svg" alt="">
-            </a>
-            <div class="location">Тернопіль</div>
-            <div class="content">
-              Віртуальне демополе у Тернопільській області містить 10 гібридів кукурудзи та 5 гібридів соняшнику. Ознайомтеся з
-              особливостями їх росту, просто сидячи за своїм комп’ютером або тримаючи планшет чи смартфон.
-            </div>
-          </div>
-          <div class="tours__item">
-            <a href="http://dev.l-ark.com/fields360_2/tour-01" target="_blank" class="preview" style="background-image: url('img/tour2.jpg');">
+            <a href="https://dev.l-ark.com/fields360_2/tour-01/" target="_blank" class="preview"
+              style="background-image: url('img/tour2.jpg');">
               <img src="img/icons/tour-icon.svg" alt="">
             </a>
             <div class="location">Вінниця</div>
             <div class="content">
               Віртуальне демополе у Вінницькій області містить 10 гібридів кукурудзи та 5 гібридів соняшнику. Ознайомтеся з
+              особливостями їх росту, просто сидячи за своїм комп’ютером або тримаючи планшет чи смартфон.
+            </div>
+          </div>
+
+          <div class="tours__item">
+            <a href="https://af.l-ark.com/fields360/tour-02/" target="_blank" class="preview" style="background-image: url('img/tour1.jpg');">
+              <img src="img/icons/tour-icon.svg" alt="">
+            </a>
+            <div class="location">Тернопіль</div>
+            <div class="content">
+              Віртуальне демополе у Тернопільській області містить 10 гібридів кукурудзи та 5 гібридів соняшнику. Ознайомтеся з
               особливостями їх росту, просто сидячи за своїм комп’ютером або тримаючи планшет чи смартфон.
             </div>
           </div>
@@ -159,7 +164,7 @@
           <img src="img/production-mob.png" alt="production">
         </div>
         <div class="descr">
-          <p>Компанія EURALIS Semences Україна пропонує<br/> фермерам гібридне насіння кукурудзи від<br /> раннього до середньопізнього ФАО,
+          <p>Компанія Євраліс Семенс Україна пропонує<br/> фермерам гібридне насіння кукурудзи від<br /> раннього до середньопізнього ФАО,
           насіння<br /> соняшнику, що відповідає потребам фермерів<br /> у всіх сегментах ринку, а також насіння сої,<br /> сорго та озимого ріпаку.</p>
           <p>Компанія щорічно закладає широку мережу<br /> демонстраційних та технологічних<br /> випробувань гібридів по всій Україні, а відділ<br />
           наукових розробок і досліджень тестує<br /> новостворені гібриди та досліджує їхню<br /> адаптивність до нашого клімату.</p>
@@ -449,7 +454,9 @@
   </div>
 
 
+  <script src="http://www.youtube.com/player_api?enablejsapi=1&version=3"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="js/main.js"></script>
+
 </body>
 </html>

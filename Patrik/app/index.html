@@ -9,8 +9,9 @@
   <meta name="description" content="Шалений патрік"> 
   <title>Шалений патрік</title>
   <link rel="shortcut icon" href="img/logo.png">
+  <link rel="stylesheet" href="libs/swiperjs/swiper.min.css">
   <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/reset.css"> 
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
 </head> 
 
@@ -23,10 +24,10 @@
         </a>
         <ul class="nav">
           <li>
-            <a href="">Меню</a>
-            <a href="">Про ресторан</a>
-            <a href="">Доставка</a>
-            <a href="">Контакти</a>
+            <a href="#menu" class="lnk">Меню</a>
+            <a href="#about" class="lnk">Про ресторан</a>
+            <a href="#delivery" class="lnk">Доставка</a>
+            <a href="#contacts" class="lnk">Контакти</a>
           </li>
         </ul>
         <div class="info">
@@ -49,79 +50,114 @@
       </div>
     </section>
 
-    <section class="menu">
+    <section class="menu" id="menu">
       <div class="mainContainer">
         <div class="menu__heading"><h2>меню</h2></div>
         <ul class="menu__nav">
-          <li><a href="">Все</a></li>
-          <li><a href="" class="active">Бургер-меню</a></li>
-          <li><a href="">Основні страви</a></li>
-          <li><a href="">Салати</a></li>
-          <li><a href="">Пиво</a></li>
-          <li><a href="">Гарячі закуски</a></li>
-          <li><a href="">STARтери</a></li>
-          <li><a href="">Крафт-бургери</a></li>
-          <li><a href="">Десерти</a></li>
-          <li><a href="">Напої</a></li>
-          <li><a href="">Гарніри</a></li>
+          <li><button data-type="burgers" class="active">Бургер-меню</button></li>
+          <li><button data-type="main">Основні страви</button></li>
+          <li><button data-type="salads">Салати</button></li>
+          <li><button data-type="beer">Пиво</button></li>
+          <li><button data-type="hot-appetizers">Гарячі закуски</button></li>
+          <li><button data-type="starters">STARтери</button></li>
+          <li><button data-type="craft-burgers">Крафт-бургери</button></li>
+          <li><button data-type="desserts">Десерти</button></li>
+          <li><button data-type="drinks">Напої</button></li>
+          <li><button data-type="dishes">Гарніри</button></li>
         </ul>
       </div>
       <div class="menu__container">
         <div class="mainContainer">
-          <div class="menu__list">
-            <div class="menu__item">
-              <a href="#" class="link"></a>
-              <div class="preview">
-                <img src="img/menu_it2.png" alt="">
-              </div>
-              <div class="name">Бургер "Чери" + картофель фри</div>
-              <div class="info">
-                <div class="price">125 <span>грн</span></div>
-                <a href="#">Замовити</a>
+          <div class="menu__slider__wrapp">
+            <div class="menu__slider swiper-container">
+              <div class="menu__list swiper-wrapper">
+                <div class="menu__item swiper-slide">
+                  <a href="#" class="link"></a>
+                  <div class="preview">
+                    <img src="img/menu_it2.png" alt="">
+                  </div>
+                  <div class="name">Бургер "Чери" + картофель фри</div>
+                  <div class="info">
+                    <div class="price">125 <span>грн</span></div>
+                    <a href="#">Замовити</a>
+                  </div>
+                </div>
+
+                <div class="menu__item swiper-slide">
+                  <a href="#" class="link"></a>
+                  <div class="preview">
+                    <img src="img/menu_it1.png" alt="">
+                  </div>
+                  <div class="name">Бургер "Эль Греко" + картофель фри</div>
+                  <div class="info">
+                    <div class="price">125 <span>грн</span></div>
+                    <a href="#">Замовити</a>
+                  </div>
+                </div>
+
+                <div class="menu__item swiper-slide">
+                  <a href="#" class="link"></a>
+                  <div class="preview">
+                    <img src="img/menu_it3.png" alt="">
+                  </div>
+                  <div class="name">Фишбургер + картофель фри</div>
+                  <div class="info">
+                    <div class="price">125 <span>грн</span></div>
+                    <a href="#">Замовити</a>
+                  </div>
+                </div>
+
+                <div class="menu__item swiper-slide">
+                  <a href="#" class="link"></a>
+                  <div class="preview">
+                    <img src="img/menu_it4.png" alt="">
+                  </div>
+                  <div class="name">Бургер "Порк Техас" + картофель фри</div>
+                  <div class="info">
+                    <div class="price">125 <span>грн</span></div>
+                    <a href="#">Замовити</a>
+                  </div>
+                </div>
+
+                <div class="menu__item swiper-slide">
+                  <a href="#" class="link"></a>
+                  <div class="preview">
+                    <img src="img/menu_it4.png" alt="">
+                  </div>
+                  <div class="name">Бургер "Порк Техас" + картофель фри</div>
+                  <div class="info">
+                    <div class="price">125 <span>грн</span></div>
+                    <a href="#">Замовити</a>
+                  </div>
+                </div>
+
+                <div class="menu__item swiper-slide">
+                  <a href="#" class="link"></a>
+                  <div class="preview">
+                    <img src="img/menu_it4.png" alt="">
+                  </div>
+                  <div class="name">Бургер "Порк Техас" + картофель фри</div>
+                  <div class="info">
+                    <div class="price">125 <span>грн</span></div>
+                    <a href="#">Замовити</a>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <div class="menu__item">
-              <a href="#" class="link"></a>
-              <div class="preview">
-                <img src="img/menu_it1.png" alt="">
-              </div>
-              <div class="name">Бургер "Эль Греко" + картофель фри</div>
-              <div class="info">
-                <div class="price">125 <span>грн</span></div>
-                <a href="#">Замовити</a>
-              </div>
-            </div>
-
-            <div class="menu__item">
-              <a href="#" class="link"></a>
-              <div class="preview">
-                <img src="img/menu_it3.png" alt="">
-              </div>
-              <div class="name">Фишбургер + картофель фри</div>
-              <div class="info">
-                <div class="price">125 <span>грн</span></div>
-                <a href="#">Замовити</a>
-              </div>
-            </div>
-
-            <div class="menu__item">
-              <a href="#" class="link"></a>
-              <div class="preview">
-                <img src="img/menu_it4.png" alt="">
-              </div>
-              <div class="name">Бургер "Порк Техас" + картофель фри</div>
-              <div class="info">
-                <div class="price">125 <span>грн</span></div>
-                <a href="#">Замовити</a>
-              </div>
+            <div class="menu__slider__nav">
+              <button class="menu__slider__btn prev">
+                <img src="img/slide-right.svg" alt="">
+              </button>
+              <button class="menu__slider__btn next">
+                <img src="img/slide-right.svg" alt="">
+              </button>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
       <div class="mainContainer">
         <div class="preview">
           <img src="img/about.png" alt="">
@@ -134,7 +170,7 @@
       </div>
     </section>
 
-    <section class="delivery">
+    <section class="delivery" id="delivery">
       <div class="delivery__container">
       <div class="mainContainer">
         <div class="delivery__wrapp">
@@ -158,7 +194,7 @@
       </div>
     </section>
 
-    <section class="contacts">
+    <section class="contacts" id="contacts">
       <div class="mainContainer">
         <div class="heading"><h2>контакти</h2></div>
         <div class="wrapp">
@@ -185,5 +221,10 @@
       </div>
     </footer>
   </main>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="libs/swiperjs/swiper.min.js"></script>
+<script src="js/main.js"></script>
+
 </body>
 </html>

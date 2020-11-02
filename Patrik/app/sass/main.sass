@@ -47,6 +47,8 @@ input,button, textarea
       color: #42413D
       font-size: 18px
       line-height: 20px
+      &:focus
+        outline: none
   .info
     margin-left: 13%
     text-align: right
@@ -104,40 +106,55 @@ input,button, textarea
   align-items: flex-start
   width: 82%
   margin: 0 auto
-  a
+  button
+    padding: 0
+    background-color: transparent
+    border: none
     padding-bottom: 12px
     border-bottom: 1px solid transparent
     font-size: 16px
     color: #9D9D9D
     line-height: 22px
     display: inline-block
+    transition: all 0.2s
     &.active
       color: #D52D22
       border-color: #D52D22
     &:focus
       outline: none
+    &:hover
+      color: #D52D22
+      border-color: #D52D22
 .menu__container
   background-color: #F7F6F5
-  padding: 56px 
-.menu__list
-  display: flex
-  justify-content: space-between
-  align-items: stretch
+  padding: 56px 0
+.menu__slider__wrapp
   position: relative
-  &::after
-    content: ''
+
+.menu__slider__btn
+  top: 50%
+  position: absolute
+  margin-top: -16px
+  display: inline-block
+  width: 32px
+  height: 32px
+  border: none
+  background: transparent
+  padding: 0
+  img
+    max-width: 100%
+  &.prev
+    right: auto
+    left: -47px
+    img
+      transform: rotateZ(180deg)
+  &.next
+    left: auto
     right: -47px
-    top: 50%
-    position: absolute
-    margin-top: -16px
-    display: inline-block
-    width: 32px
-    height: 32px
-    background-image: url('../img/slide-right.svg')
-    background-repeat: no-repeat
-    background-position: center
+  &.swiper-button-disabled
+    display: none
 .menu__item
-  width: 24%
+  //width: 24%
   padding: 24px 24px 13px
   background: #FFFFFF
   border: 1px solid #DADADA
@@ -200,6 +217,8 @@ input,button, textarea
   .preview
     text-align: center
     max-width: 100%
+    img
+      max-width: 100%
   .content
     margin-top: -56px
     h2
@@ -292,3 +311,30 @@ footer
       color: #898989
       &:last-child
         margin-right: 0
+
+.menu__list
+  min-height: 346px
+.menu__preloader
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+.spinner
+  width: 90px
+  height: 90px
+  display: block
+  margin: 0 auto
+  color: #D52D22
+.spinner:after 
+  content: ""
+  width: 100%
+  height: 100%
+  display: inline-block
+  border: 4px solid currentColor
+  border-bottom-color: transparent
+  border-radius: 100%
+  background: transparent
+  animation: rotate .75s linear infinite
+@keyframes rotate 
+  100% 
+    transform: rotate(359deg)
