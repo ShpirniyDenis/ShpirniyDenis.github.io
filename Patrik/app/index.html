@@ -20,8 +20,21 @@
     <div class="mainContainer">
       <div class="header__wrapp">
         <a href="#" class="logo">
-          <img src="img/logo.png" alt="">
         </a>
+        <div class="toggler">
+          <div class="open">
+            <svg width="28" height="10" viewBox="0 0 28 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="28" y1="1" x2="-8.74228e-08" y2="0.999998" stroke="white" stroke-width="2" />
+              <line x1="28" y1="9" x2="-8.74228e-08" y2="9" stroke="white" stroke-width="2" />
+            </svg>
+          </div>
+          <div class="close">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M25 1L1 25" stroke="#42413D" stroke-width="2" />
+              <path d="M0.999999 1L25 25" stroke="#42413D" stroke-width="2" />
+            </svg>
+          </div>
+        </div>
         <ul class="nav">
           <li>
             <a href="#menu" class="lnk">Меню</a>
@@ -33,6 +46,22 @@
         <div class="info">
           <a href="+380660006466">+38 (066) 000-64-66</a>
           <p>Щодня з 15:00 до 22:45</p>
+        </div>
+        <div class="mobile-container">
+          <div class="mobile-container__nav">
+            <a href="#menu" class="lnk">Меню</a>
+            <a href="#about" class="lnk">Про ресторан</a>
+            <a href="#delivery" class="lnk">Доставка</a>
+            <a href="#contacts" class="lnk">Контакти</a>
+          </div>
+          <div class="mobile-container__contacts">
+            <a href="tel:380660006466">+38 (066) 000-64-66</a>
+            <p>Щодня з 15:00 до 22:45</p>
+          </div>
+          <div class="mobile-container__socials">
+            <a href="#" target="_blank">Instagram</a>
+            <a href="#" target="_blank">Facebook</a>
+          </div>
         </div>
       </div>
     </div>
@@ -53,18 +82,20 @@
     <section class="menu" id="menu">
       <div class="mainContainer">
         <div class="menu__heading"><h2>меню</h2></div>
-        <ul class="menu__nav">
-          <li><button data-type="burgers" class="active">Бургер-меню</button></li>
-          <li><button data-type="main">Основні страви</button></li>
-          <li><button data-type="salads">Салати</button></li>
-          <li><button data-type="beer">Пиво</button></li>
-          <li><button data-type="hot-appetizers">Гарячі закуски</button></li>
-          <li><button data-type="starters">STARтери</button></li>
-          <li><button data-type="craft-burgers">Крафт-бургери</button></li>
-          <li><button data-type="desserts">Десерти</button></li>
-          <li><button data-type="drinks">Напої</button></li>
-          <li><button data-type="dishes">Гарніри</button></li>
-        </ul>
+        <div class="menu__wrapp">
+          <ul class="menu__nav">
+            <li><button data-type="burgers" class="active">Бургер-меню</button></li>
+            <li><button data-type="main">Основні страви</button></li>
+            <li><button data-type="salads">Салати</button></li>
+            <li><button data-type="beer">Пиво</button></li>
+            <li><button data-type="hot-appetizers">Гарячі закуски</button></li>
+            <li><button data-type="starters">STARтери</button></li>
+            <li><button data-type="craft-burgers">Крафт-бургери</button></li>
+            <li><button data-type="desserts">Десерти</button></li>
+            <li><button data-type="drinks">Напої</button></li>
+            <li><button data-type="dishes">Гарніри</button></li>
+          </ul>
+        </div>
       </div>
       <div class="menu__container">
         <div class="mainContainer">
@@ -148,6 +179,7 @@
               <button class="menu__slider__btn prev">
                 <img src="img/slide-right.svg" alt="">
               </button>
+              <div class="menu__pagination"></div>
               <button class="menu__slider__btn next">
                 <img src="img/slide-right.svg" alt="">
               </button>
@@ -159,9 +191,7 @@
 
     <section class="about" id="about">
       <div class="mainContainer">
-        <div class="preview">
-          <img src="img/about.png" alt="">
-        </div>
+        <div class="preview"></div>
         <div class="content">
           <h2>про <br/>ресторан</h2>
           <p>Ресторан «Шалений Патрік» — це неординарний, уважний <br/> і веселий персонал, різноманітність цікавих напоїв,<br /> смачної їжі і,

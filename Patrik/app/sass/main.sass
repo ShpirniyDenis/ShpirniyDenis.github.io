@@ -39,8 +39,16 @@ input,button, textarea
   display: flex
   justify-content: flex-end
   align-items: center
+  .toggler
+    display: none
   .logo
     margin-right: auto
+    background-image: url('../img/logo.png')
+    width: 47px
+    height: 62px
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
   .nav
     a
       padding: 5px 32px
@@ -217,6 +225,11 @@ input,button, textarea
   .preview
     text-align: center
     max-width: 100%
+    height: 565px
+    background-image: url('../img/about.png')
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
     img
       max-width: 100%
   .content
@@ -338,3 +351,258 @@ footer
 @keyframes rotate 
   100% 
     transform: rotate(359deg)
+
+.menu__pagination
+  display: none
+.mobile-container
+  display: none
+
+@media (max-width: 1390px)
+  .menu__slider__btn.prev
+    z-index: 10
+    left: -7px
+  .menu__slider__btn.next
+    right: -7px
+    z-index: 10
+@media (max-width: 1200px)
+  .menu__nav
+    width: 97%
+@media (max-width: 992px)
+  .mainContainer
+    padding: 0 12px
+  header
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    .nav
+      display: none
+    .info
+      display: none
+  .header__wrapp .logo
+    background-image: url('../img/logo_mob.png')
+  .header__wrapp
+    padding: 22px 0
+  .header__wrapp .toggler
+    display: block
+    width: 56px
+    height: 56px
+    border-radius: 50%
+    border: 1px solid #FFFFFF
+    div
+      justify-content: center
+      align-items: center
+      display: flex
+      width: 100%
+      height: 100%
+    .close
+      display: none
+  .menu__wrapp
+    width: 100%
+    overflow: auto
+    margin-left: -12px
+    width: calc(100% + 24px)
+  .menu__nav
+    width: 100%
+    width: max-content
+    li
+      padding: 0 16px
+  .delivery__wrapp .img
+    width: 49%
+  .menu__slider__nav
+    width: 100%
+  .menu__pagination
+    display: block
+  .menu__slider__btn
+    position: static
+    margin-top: 0
+  .menu__slider__nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 21px
+    height: 32px
+  .swiper-pagination-bullet
+    width: 12px
+    height: 12px
+    margin: 0 6px
+    opacity: 1
+    background: #D5D5D5
+  .swiper-pagination-bullet-active
+    background: #D52D22
+  .menu__slider__btn.swiper-button-disabled
+    opacity: 0
+    display: block
+  .mobile-container
+    width: 100%
+  header
+    &.active
+      position: fixed
+      overflow: auto
+      background: #fff
+      height: 100%
+      z-index: 100
+      .toggler
+        .close
+          display: flex
+        .open
+          display: none
+      .mobile-container
+        display: block
+      .header__wrapp
+        flex-wrap: wrap
+      .logo
+        opacity: 0
+      .mobile-container__nav
+        border-bottom: 1px solid #E7E7E7
+        a
+          display: block
+          text-align: center
+          margin-bottom: 48px
+          color: #42413D
+          font-size: 32px
+          line-height: 36px
+          font-family: $font_bold
+      .mobile-container__contacts
+        padding-top: 40px
+        padding-bottom: 40px
+        border-bottom: 1px solid #E7E7E7
+        text-align: center
+        a
+          color: #42413D
+          font-size: 24px
+          line-height: 27px
+          font-family: $font_bold
+        p
+          color: #898989
+          font-size: 16px
+          line-height: 21px
+          margin-top: 8px
+      .mobile-container__socials
+        padding: 24px 0
+        text-align: center
+        a
+          padding: 0 16px
+          color: #898989
+          font-size: 16px
+          line-height: 18px
+          font-family: $font_bold
+@media (max-width: 768px)
+  .banner
+    padding: 204px 0
+    background-image: url(../img/banner_mob.jpg)
+  .banner .heading
+    font-size: 18px
+    line-height: 18px
+    margin-bottom: 16px
+  .banner h1
+    font-size: 56px
+    line-height: 56px
+    margin-bottom: 24px
+  .banner h2
+    font-size: 20px
+    line-height: 28px
+    br
+      display: none
+  .menu
+    padding-top: 72px
+  .menu__heading
+    font-size: 40px
+    line-height: 40px
+  .menu__heading
+    margin-bottom: 20px
+  .menu__container
+    padding: 42px 0
+  .menu__item
+    padding: 21px 21px 8px
+  .menu__item .preview
+    height: 234px
+    align-items: center
+  .menu__item .preview img
+    max-width: 100%
+    max-height: 95%
+  .about
+    padding: 72px 0
+  .about .preview
+    background-image: url('../img/about_mob.png')
+    border-radius: 30px
+    background-size: cover
+    height: 240px
+    margin-bottom: 32px
+  .about .content
+    margin-top: 0
+  .about .content h2
+    font-size: 40px
+    line-height: 40px
+    margin-bottom: 16px
+    br
+      display: none
+  .about .content p
+    font-size: 20px
+    line-height: 28px
+    br
+      display: none
+  .delivery__container
+    padding-top: 48px
+  .delivery__wrapp
+    display: block
+  .delivery__wrapp .img
+    margin-top: 0
+  .delivery__wrapp .content h2
+    text-align: center
+    margin-bottom: 12px
+    font-size: 40px
+    line-height: 40px
+  .delivery__wrapp .content p
+    font-size: 20px
+    line-height: 28px
+    margin-bottom: 25px
+    text-align: center
+  .delivery__wrapp .links
+    text-align: center
+  .delivery__wrapp .content
+    padding-bottom: 20px
+  .delivery__wrapp .img
+    width: 100%
+    text-align: center
+    img
+      max-height: 170px
+  .contacts
+    padding: 72px 0 190px
+    background-image: url('../img/contacts-bg_mob.jpg')
+  .contacts .heading
+    font-size: 40px
+    line-height: 40px
+    margin-bottom: 25px
+  .contacts .wrapp span
+    font-size: 24px
+    line-height: 27px
+    margin-bottom: 20px
+  .contacts .wrapp p
+    font-size: 20px
+    line-height: 28px
+    margin-bottom: 12px
+  .contacts .wrapp a
+    font-size: 24px
+    line-height: 34px
+    margin-bottom: 24px
+  .footer__wrapp
+    flex-direction: column
+    padding: 0
+    .descr
+      order: 1
+  footer
+    .mainContainer
+      padding: 0
+  .links
+    width: 100%
+    padding: 20px 0
+    display: flex
+    justify-content: center
+  .descr
+    width: 100%
+    padding: 20px 0
+    background-color: #fff
+    text-align: center
+  

@@ -2,6 +2,7 @@
 document.querySelectorAll('a.lnk').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
+    $('header').removeClass('active');
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth',
       block: 'start'
@@ -36,7 +37,11 @@ var sliderMenu = new Swiper('.menu__slider', {
     },
     320: {
       slidesPerView: 1,
-      spaceBetween: 20
+      spaceBetween: 20,
+      pagination: {
+        el: '.menu__pagination',
+        clickable: true,
+      },
     }
   },
 });
@@ -76,4 +81,11 @@ $('.menu__nav button').click(function () {
     $('.menu__slider__nav').show();
   }, 2000);
 
+});
+
+$('.toggler .open').click(function () {
+  $('header').addClass('active');
+});
+$('.toggler .close').click(function () {
+  $('header').removeClass('active');
 });
