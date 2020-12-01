@@ -4873,6 +4873,37 @@ button.add-phone {
     font-family: "Gilroy Bold", Arial, sans-serif;
     height: 48px; }
 
+.launch-modal__ty .heading {
+  text-align: center;
+  margin-bottom: 12px;
+  color: #2B4A45;
+  font-size: 48px;
+  line-height: 57px;
+  font-family: "Gilroy Semibold", Arial, sans-serif; }
+
+.launch-modal__ty .descr {
+  margin-bottom: 35px;
+  color: rgba(43, 74, 69, 0.5);
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  font-family: "Gilroy Medium", Arial, sans-serif; }
+
+.launch-modal__ty button {
+  display: block;
+  margin: 0 auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border: none;
+  background: #D9663B;
+  border-radius: 24px;
+  padding: 5px 32px;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-family: "Gilroy Bold", Arial, sans-serif;
+  height: 48px; }
+
 @media screen and (max-width: 1280px) {
   .launch-banner .heading h1 {
     font-size: 92px;
