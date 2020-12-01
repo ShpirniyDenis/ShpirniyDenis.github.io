@@ -5124,9 +5124,9 @@ button.add-phone {
   .launch-modal__container .descr, .launch-modal__ty .descr {
     font-size: 18px;
     line-height: 25px; }
-  .launch-modal__container form {
+  .launch-modal__container form .form-wrapp {
     display: block; }
-    .launch-modal__container form input {
+    .launch-modal__container form .form-wrapp input {
       width: 100%;
       margin-bottom: 20px;
       text-align: center; } }
