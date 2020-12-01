@@ -3772,23 +3772,25 @@ button.add-phone
     text-align: center
     font-family: $font_medium
   form
-    display: flex
-    justify-content: space-between
-    margin-bottom: 32px
-    input
-      width: 31%
-      border: none
-      border-bottom: 1px solid #D8D8D8
-      transition: all 0.2s
-      color: rgba(43, 74, 69, 0.5)
-      font-size: 14px
-      font-family: $font_semibold
-      &:focus
-        outline: none
-      &::placeholder
+    .form-wrapp
+      display: flex
+      justify-content: space-between
+      margin-bottom: 32px
+      input
+        width: 31%
+        border: none
+        border-bottom: 1px solid #D8D8D8
+        transition: all 0.2s
         color: rgba(43, 74, 69, 0.5)
         font-size: 14px
         font-family: $font_semibold
+        height: 40px
+        &:focus
+          outline: none
+        &::placeholder
+          color: rgba(43, 74, 69, 0.5)
+          font-size: 14px
+          font-family: $font_semibold
     button
       display: block
       margin: 0 auto
@@ -4038,6 +4040,18 @@ button.add-phone
       background: #D9663B
   .launch-banner .heading h1
     font-size: 55px
+  .launch-modal__container .heading, .launch-modal__ty .heading
+    font-size: 32px
+    line-height: 42px
+  .launch-modal__container .descr, .launch-modal__ty .descr
+    font-size: 18px
+    line-height: 25px
+  .launch-modal__container form
+    display: block
+    input
+      width: 100%
+      margin-bottom: 20px
+      text-align: center
 @media screen and ( max-width: 350px )
   .launch-reviews .launch-reviews__nav
     width: 100%
