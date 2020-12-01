@@ -1,0 +1,609 @@
+body
+    padding-top: 200px
+
+.result-list
+    width: 100%
+
+.result-item
+    background: #FFFFFF
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15)
+    border-radius: 5px
+    width: 100%
+    margin-bottom: 20px
+    .result-wrapp
+        display: flex
+        justify-content: flex-start
+        align-items: stretch
+        position: relative
+    .result-item__labels
+        position: absolute
+        left: 0
+        top: 0
+        z-index: 1
+        width: 100%
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        flex-wrap: wrap
+        span
+            border-radius: 5px 0
+            color: #fff
+            font-weight: 800
+            font-size: 10px
+            text-transform: uppercase
+            display: block
+            width: max-content
+            padding: 3px 5px 1px
+            margin-right: 15px
+            background: rgb(239, 65, 55)
+    .result__info
+        width: 24%
+        border-right: 1px solid #DDE2E5
+        padding: 12px 20px 20px
+        display: flex
+        flex-direction: column
+    .result__logo
+        width: 100%
+        height: 72px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 2px
+        img
+            max-height: 90%
+            width: auto
+            max-width: 100%
+    .result__name
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 5px
+        h5
+            width: auto
+            width: min-content
+            text-align: center
+            color: #24282C
+            font-size: 15px
+            line-height: 22px
+            font-weight: 400
+            margin: 0
+        span
+            margin-left: 6px
+            margin-right: -16px
+    .result__rating
+        text-align: center
+        margin-bottom: 2px
+        line-height: normal
+        i
+            width: 17px
+            height: 17px
+    .result__reviews
+        text-align: center
+        margin-bottom: 8px
+        a
+            font-size: 14px
+            line-height: 21px
+            color: #009BEB
+    .result__togglers
+        margin-top: auto
+        text-align: center
+        button
+            background-color: transparent
+            border: 0
+            padding: 0
+            width: 32px
+            height: 32px
+            background: #EAF0F4
+            border-radius: 50%
+            margin-right: 10px
+            &:last-child
+                margin-right: 0
+            &:focus
+                outline: none
+            &.result-item__remind
+                span.active
+                    display: none
+    .result__details
+        width: 46%
+        display: flex
+        flex-direction: column
+        padding: 23px 15px 20px
+        border-right: 1px solid #DDE2E5
+    .result__params
+        width: 100%
+        margin-bottom: 16px
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+    .result__param
+        &.price
+            display: none
+        .heading
+            color: #24282C
+            font-size: 15px
+            line-height: 22px
+            span
+                vertical-align: baseline
+                font-size: 22px
+            i
+                margin-right: -16px
+        .descr
+            color: #999DA6
+            font-size: 13px
+            line-height: 19px
+    .result__options
+        margin-bottom: 13px
+        .heading
+            font-weight: bold
+            font-size: 15px
+            line-height: 22px
+            color: #24282C
+            margin-bottom: 6px
+    .result__options__list
+        display: flex
+        justify-content: space-between
+        align-items: stretch
+        .result__option
+            border-radius: 10px
+            padding: 14px 8px
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            width: 38%
+            p
+                font-weight: bold
+                font-size: 13px
+                line-height: 14px
+                margin: 0
+            .icon
+                width: 32px
+                height: 32px
+                background: #FFFFFF
+                border-radius: 50%
+                margin-right: 8px
+                flex-shrink: 0
+                background-repeat: no-repeat
+                background-position: center
+                background-size: 20px
+            &.violet, &.red
+                display: none
+            &.green
+                background: #E0F4F4
+                color: #499797
+                .icon
+                    background-image: url('../img/param1.svg')
+            &.pink
+                background: #FFE8F9
+                color: #C93F8D
+                .icon
+                    background-image: url('../img/param2.svg')
+            &.red
+                background: #FFF3F1
+                color: #FF3827
+                .icon
+                    background-image: url('../img/param3.svg')
+            &.violet
+                background: #F4F2FF
+                color: #5357B3
+                .icon
+                    background-image: url('../img/param4.svg')
+        .params__more
+            border: 1px solid #DDE2E5
+            width: 19%
+            padding: 0
+            border-radius: 10px
+            color: #999DA6
+            font-weight: bold
+            font-size: 13px
+            line-height: 14px
+            background: transparent
+            &:focus
+                outline: none
+    .result__more
+        width: 100%
+        margin-top: auto
+        a
+            width: 100%
+            display: block
+            padding: 5px 10px
+            border-radius: 32px
+            border: 1px solid #DDE2E5
+            color: #009BEB
+            font-size: 15px
+            line-height: 22px
+            text-align: center
+            transition: all 0.2s
+            &:hover
+                text-decoration: none
+            &:focus
+                outline: none
+    .result__order
+        width: 30%
+        padding: 20px 15px
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+    .result__price
+        text-align: center
+        margin-bottom: 5px
+        .old
+            margin-bottom: -2px
+            span
+                color: #999DA6
+                font-size: 18px
+                line-height: 27px
+                text-decoration: line-through
+                span
+                    font-size: 13px
+                    vertical-align: baseline
+            b
+                padding: 0 4px
+                font-size: 13px
+                font-weight: bold
+                color: #FFFFFF
+                background: #EF4137
+                border-radius: 30px
+                margin-left: 3px
+        .value
+            width: 100%
+            color: #24282C
+            font-weight: bold
+            font-size: 32px
+            line-height: 47px
+            span
+                font-size: 15px
+                line-height: 22px
+                vertical-align: baseline
+    .result__submit
+        background: #ffad3d
+        border: 1px solid transparent
+        border-bottom: 3px solid #e4962a
+        position: relative
+        transition: all .2s
+        box-shadow: 0 4px 4px rgba(0,0,0,.25)
+        color: #fff
+        padding: 13px
+        font-weight: bold
+        font-size: 16px
+        border-radius: 3px
+        margin-bottom: 16px
+        &:hover
+            border-color: #d49844
+            box-shadow: 0 3px 3px rgba(0,0,0,.15)
+            background-color: #ffa11f
+    .result__pay-methods
+        display: flex
+        justify-content: space-between
+        .icon
+            width: 32px
+            height: 32px
+            background-size: contain
+            background-position: center
+            border: 1px solid #DDE2E5
+            border-radius: 8px
+            background-repeat: no-repeat
+            &.diya
+                background-image: url('../img/pay-method1.svg')
+                background-size: 80%
+            &.doc
+                background-image: url('../img/pay-method2.svg')
+                background-size: 45%
+            &.google
+                background-image: url('../img/pay-method3.svg')
+                background-size: 65%
+            &.apple
+                background-image: url('../img/pay-method4.svg')
+                background-size: 55%
+            &.privat
+                background-image: url('../img/pay-method5.svg')
+                background-size: 75%
+    .result__nav
+        padding: 16px
+        padding-top: 20px
+        display: none
+        .more
+            padding: 9px 37px 9px 20px
+            border-radius: 32px
+            border: 1px solid #DDE2E5
+            color: #009BEB
+            font-size: 15px
+            background-color: transparent
+
+    @media screen and (max-width: 1200px)
+        .result__order
+            width: 27%
+        .result__pay-methods .icon
+            width: 24px
+            height: 24px
+        .result__param .heading span
+            font-size: 18px
+        .result__param .heading
+            font-size: 13px
+        .result__param .descr
+            font-size: 12px
+        .result__options__list
+            flex-wrap: wrap
+        .result__options__list .result__option
+            width: 48%
+        .result__options__list .params__more
+            margin-top: 10px
+            width: 100%
+            padding: 5px 0
+        .result__info
+            width: 26%
+            padding: 12px 15px 20px
+        .result__details
+            width: 47%
+    @media screen and (max-width: 768px)
+        .result-wrapp
+            display: block
+        .result__info
+            width: 100%
+            border: none
+            flex-direction: row-reverse
+            justify-content: space-between
+            align-items: center
+            padding-top: 32px
+            padding-bottom: 14px
+            .result__togglers
+                position: absolute
+                right: 16px
+                bottom: 16px
+            .result__logo
+                width: 44%
+                margin-bottom: 0
+                flex-shrink: 0
+            .result__info__main
+                width: 52%
+            .result__name
+                justify-content: flex-start
+                margin-bottom: 2px
+                h5
+                    text-align: left
+                    width: auto
+            .result__rating
+                text-align: left
+            .result__reviews
+                margin-bottom: 0
+                text-align: left
+        .result__details
+            width: 100%
+            border: none
+            padding-top: 0
+            padding-bottom: 8px
+            .result__more
+                display: none
+        .result__params
+            display: block
+            padding: 12px
+            background: #F6F7FB
+            border-radius: 5px
+            .result__param
+                display: flex
+                justify-content: flex-start
+                margin-bottom: 10px
+                align-items: center
+                &:last-child
+                    margin-bottom: 0
+                .heading
+                    order: 1
+                    font-size: 15px
+                    line-height: 22px
+                    span
+                        font-size: 22px
+                .descr
+                    color: #24282C
+                    font-size: 15px
+                    line-height: 22px
+                    width: 48%
+                &.price
+                    .heading
+                        .old
+                            margin-bottom: 2px
+                            span
+                                color: #999DA6
+                                font-size: 18px
+                                line-height: 27px
+                                text-decoration: line-through
+                                span
+                                    font-size: 13px
+                                    vertical-align: baseline
+                            b
+                                padding: 0 4px
+                                font-size: 13px
+                                font-weight: bold
+                                color: #FFFFFF
+                                background: #EF4137
+                                border-radius: 30px
+                                margin-left: 3px
+                        .value
+                            color: #24282C
+                            font-weight: bold
+                            font-size: 15px
+                            span
+                                font-size: 32px
+                                margin-right: 3px
+        .result__options__list .params__more
+            display: none
+        .result__options__list .result__option.red, .result__options__list .result__option.violet
+            display: flex
+        .result__options__list .result__option
+            margin-bottom: 8px
+            width: 49%
+            padding: 12px 8px
+        .result__options__list .result__option p
+            font-size: 14px
+            font-weight: bold
+        .result__options
+            margin-bottom: 0
+        .result__order
+            width: 100%
+            padding-top: 0
+            padding-bottom: 0
+            .result__price, .result__pay-methods
+                display: none
+        .result__submit
+            padding: 10px
+            margin-bottom: 0
+        .result__togglers button
+            width: 40px
+            height: 40px
+        .result__nav
+            display: block
+    @media screen and (max-width: 359px)
+        .result__info .result__togglers
+            bottom: 20px
+            button
+                width: 32px
+                height: 32px
+                margin-right: 3px
+
+
+
+.result-second
+    @media screen and (min-width: 768px)
+        .result-wrapp
+            display: block
+        .result__info
+            width: 100%
+            display: block
+            padding: 12px
+            position: relative
+            border: none
+        .result__logo
+            height: 60px
+            justify-content: flex-start
+            width: 75%
+        .result__name
+            display: block
+            h5
+                display: none
+        .result__rating
+            text-align: left
+            margin-bottom: 8px
+        .result__reviews
+            text-align: left
+            margin-bottom: 0
+        .result__info__main
+            display: flex
+            flex-wrap: wrap
+            width: 75%
+            .result__rating
+                order: 0
+                width: 100%
+            .result__reviews
+                order: 1
+            .result__name
+                order: 2
+                margin-bottom: 0
+        .result__togglers
+            display: block !important
+            width: 32px
+            position: absolute
+            top: 12px
+            right: 16px
+            button
+                margin-bottom: 8px
+                margin-right: 0
+                &:last-child
+                    margin-bottom: 0
+        .result__details
+            display: block
+            width: 100%
+            width: 100%
+            border: none
+            padding-top: 0
+            padding-bottom: 8px
+            .result__more
+                display: none
+        .result__params
+            display: block
+            padding: 12px
+            background: #F6F7FB
+            border-radius: 5px
+            margin-bottom: 12px
+            .result__param
+                display: flex
+                justify-content: flex-start
+                margin-bottom: 10px
+                align-items: center
+                &:first-child
+                    display: none
+                &:nth-child(3)
+                    display: none
+                &:last-child
+                    margin-bottom: 0
+                .heading
+                    order: 1
+                    font-size: 15px
+                    line-height: 22px
+                    span
+                        font-size: 22px
+                .descr
+                    color: #999DA6
+                    font-size: 13px
+                    line-height: 19px
+                    width: 48%
+                &.price
+                    .heading
+                        .old
+                            margin-bottom: 2px
+                            span
+                                color: #999DA6
+                                font-size: 13px
+                                line-height: 27px
+                                text-decoration: line-through
+                                span
+                                    font-size: 13px
+                                    vertical-align: baseline
+                            b
+                                padding: 0 4px
+                                font-size: 13px
+                                font-weight: bold
+                                color: #FFFFFF
+                                background: #EF4137
+                                border-radius: 30px
+                                margin-left: 3px
+                        .value
+                            color: #24282C
+                            font-weight: bold
+                            font-size: 15px
+                            span
+                                font-size: 32px
+                                margin-right: 3px
+        .result__options__list .params__more
+            display: none
+        .result__options__list .result__option p
+            display: none
+        .result__options__list .result__option
+            display: flex
+            padding: 12px 8px
+            justify-content: center
+            align-items: center
+            width: auto
+        .result__options__list .result__option .icon
+            margin-right: 0
+        .result__options__list .result__option.violet, .result__options__list .result__option.red
+            display: flex
+        .result__options
+            margin-bottom: 0
+        .result__order
+            width: 100%
+            padding-top: 8px
+            padding-bottom: 16px
+            .result__price
+                display: none
+            .result__submit
+                padding: 10px
+                margin-bottom: 0
+            .result__pay-methods
+                display: none
+        .result__nav
+            display: block
+            padding-top: 0
+            padding-bottom: 16px
+            .more
+                width: 100%
+                padding: 4px
+
+

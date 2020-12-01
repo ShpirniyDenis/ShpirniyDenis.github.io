@@ -4432,3 +4432,665 @@ button.add-phone {
     line-height: 50px; }
     .tracker__card__courier .nav a svg {
       width: 47%; } }
+
+.launch {
+  background-color: #fafafa; }
+  .launch .mainContainer {
+    max-width: 1400px; }
+
+.launch-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%; }
+  .launch-header .wrapp {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 24px 64px; }
+    .launch-header .wrapp button {
+      color: #FFFFFF;
+      font-size: 16px;
+      height: 48px;
+      padding: 5px 32px;
+      font-family: "Gilroy Bold", Arial, sans-serif;
+      background: #D9663B;
+      border-radius: 24px;
+      border: none; }
+      .launch-header .wrapp button:focus {
+        outline: none; }
+
+.launch-banner {
+  padding: 151px 0 80px; }
+  .launch-banner .heading {
+    padding: 0 68px; }
+    .launch-banner .heading h1 {
+      color: #2B4A45;
+      font-family: "Gilroy Semibold", Arial, sans-serif;
+      font-size: 104px;
+      line-height: 124px;
+      margin-bottom: 20px; }
+    .launch-banner .heading .descr {
+      color: #93A29F;
+      font-size: 48px;
+      line-height: 55px;
+      font-family: "Gilroy Light", Arial, sans-serif;
+      width: 41%; }
+  .launch-banner .preview {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+    .launch-banner .preview .preview-item {
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 20px; }
+      .launch-banner .preview .preview-item:first-child {
+        height: 482px;
+        width: 43.1%;
+        margin-bottom: -20px; }
+      .launch-banner .preview .preview-item:last-child {
+        height: 606px;
+        width: 53.9%;
+        margin-top: -55px; }
+
+.launch-advantages {
+  padding-bottom: 20px; }
+  .launch-advantages .launch-advantages__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    padding: 0 68px; }
+    .launch-advantages .launch-advantages__list .item {
+      padding: 40px 32px;
+      border-radius: 10px;
+      background: #359080;
+      margin-bottom: 40px;
+      width: 48.5%;
+      min-height: 232px; }
+      .launch-advantages .launch-advantages__list .item:nth-child(2) {
+        margin-top: -20px; }
+      .launch-advantages .launch-advantages__list .item:nth-child(4) {
+        margin-top: -20px; }
+      .launch-advantages .launch-advantages__list .item .heading {
+        margin-bottom: 16px;
+        color: #FFFFFF;
+        font-family: "Gilroy Medium", Arial, sans-serif;
+        font-size: 28px;
+        line-height: 33px; }
+      .launch-advantages .launch-advantages__list .item p {
+        margin: 0;
+        color: #98CCC3;
+        font-size: 24px;
+        line-height: 34px;
+        font-family: "Gilroy Regular", Arial, sans-serif; }
+
+.launch-about {
+  padding: 60px 0 24px; }
+  .launch-about .heading {
+    margin-bottom: 99px;
+    color: #2B4A45;
+    font-size: 48px;
+    line-height: 57px;
+    font-family: "Gilroy Semibold", Arial, sans-serif;
+    width: 60%;
+    padding: 0 68px; }
+  .launch-about .launch-about__list {
+    padding: 0 68px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .launch-about .launch-about__item {
+    width: 48.5%;
+    margin-bottom: 96px; }
+    .launch-about .launch-about__item:nth-child(1) {
+      margin-top: -40px; }
+    .launch-about .launch-about__item:nth-child(3) {
+      margin-top: -40px; }
+    .launch-about .launch-about__item .preview {
+      width: 100%;
+      height: 389px;
+      border-radius: 20px;
+      margin-bottom: 22px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover; }
+    .launch-about .launch-about__item p {
+      margin: 0;
+      color: #93A29F;
+      font-size: 24px;
+      font-family: "Gilroy Medium", Arial, sans-serif;
+      line-height: 34px; }
+
+.launch-variants {
+  padding: 120px 0 100px; }
+  .launch-variants .heading {
+    color: #2B4A45;
+    font-size: 48px;
+    line-height: 57px;
+    font-family: "Gilroy Semibold", Arial, sans-serif;
+    padding: 0 68px; }
+  .launch-variants .wrapp {
+    padding: 0 68px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .launch-variants .launch-variants-list {
+    padding: 0;
+    list-style: none;
+    width: 31%;
+    margin-top: 76px; }
+    .launch-variants .launch-variants-list li {
+      display: block;
+      margin-bottom: 24px;
+      color: rgba(43, 74, 69, 0.5);
+      font-size: 14px;
+      line-height: 24px;
+      font-family: "Gilroy Semibold", Arial, sans-serif; }
+      .launch-variants .launch-variants-list li:last-child {
+        margin-bottom: 0; }
+  .launch-variants .launch-variant__content {
+    width: 65%; }
+  .launch-variants .launch-variant__item {
+    height: initial;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .launch-variants .launch-variant__item .content {
+      border-radius: 20px;
+      width: 100%;
+      background: #FFFFFF;
+      margin-bottom: 32px;
+      padding-bottom: 30px;
+      height: 100%; }
+      .launch-variants .launch-variant__item .content ul li {
+        height: 48px;
+        width: 100%;
+        display: block;
+        background-image: url("../img/launch/launch-check.svg");
+        background-size: 18px;
+        background-position: center center;
+        background-repeat: no-repeat; }
+        .launch-variants .launch-variant__item .content ul li span {
+          display: none; }
+    .launch-variants .launch-variant__item button {
+      height: 48px;
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content;
+      margin: 0 auto;
+      display: block;
+      padding: 5px 32px;
+      color: #FFFFFF;
+      font-size: 16px;
+      font-family: "Gilroy Bold", Arial, sans-serif;
+      border-radius: 24px;
+      background: #D9663B;
+      border: none;
+      -webkit-flex-shrink: 0;
+          -ms-flex-negative: 0;
+              flex-shrink: 0; }
+      .launch-variants .launch-variant__item button:focus {
+        outline: none; }
+    .launch-variants .launch-variant__item .heading {
+      padding: 24px 0;
+      text-align: center;
+      color: #2B4A45;
+      font-size: 18px;
+      line-height: 24px;
+      font-family: "Gilroy Semibold", Arial, sans-serif;
+      border-bottom: 1px solid #E7E7E7; }
+
+.launch-reviews .content {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 80px 68px; }
+
+.launch-reviews .heading {
+  margin-bottom: 57px;
+  color: #2B4A45;
+  font-size: 48px;
+  line-height: 40px;
+  font-family: "Gilroy Semibold", Arial, sans-serif; }
+
+.launch-reviews .launch-reviews__item {
+  height: initial;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .launch-reviews .launch-reviews__item .icon {
+    margin-bottom: 40px; }
+  .launch-reviews .launch-reviews__item .text {
+    margin-bottom: 40px;
+    color: #93A29F;
+    font-size: 24px;
+    line-height: 36px;
+    font-family: "Gilroy Medium", Arial, sans-serif; }
+  .launch-reviews .launch-reviews__item .profile {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: auto; }
+    .launch-reviews .launch-reviews__item .profile .avatar {
+      width: 64px;
+      height: 64px;
+      margin-right: 16px; }
+    .launch-reviews .launch-reviews__item .profile .name {
+      margin-bottom: 2px;
+      color: #2B4A45;
+      font-size: 18px;
+      line-height: 24px;
+      font-family: "Gilroy Semibold", Arial, sans-serif; }
+    .launch-reviews .launch-reviews__item .profile .info {
+      color: rgba(43, 74, 69, 0.5);
+      font-size: 14px;
+      line-height: 24px;
+      font-family: "Gilroy Semibold", Arial, sans-serif; }
+
+.launch-reviews .launch-reviews__list {
+  margin-bottom: 56px; }
+
+.launch-reviews .launch-reviews__nav {
+  width: 82%; }
+  .launch-reviews .launch-reviews__nav .launch-reviews__nav__togglers {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .launch-reviews .launch-reviews__nav .launch-reviews__nav__btn {
+    border: none;
+    background: transparent;
+    padding: 0; }
+    .launch-reviews .launch-reviews__nav .launch-reviews__nav__btn svg path {
+      stroke: #359080; }
+    .launch-reviews .launch-reviews__nav .launch-reviews__nav__btn.swiper-button-disabled svg path {
+      stroke: #879794; }
+    .launch-reviews .launch-reviews__nav .launch-reviews__nav__btn.prev {
+      margin-right: 20px; }
+  .launch-reviews .launch-reviews__nav .swiper-pagination-progressbar {
+    width: 100%;
+    height: 1px;
+    width: 100%;
+    position: relative;
+    background: #D8D8D8;
+    margin-bottom: 20px; }
+    .launch-reviews .launch-reviews__nav .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+      background: #359080; }
+
+.launch-variants__pagination {
+  display: none; }
+
+.launch-modal__container .heading {
+  text-align: center;
+  margin-bottom: 12px;
+  color: #2B4A45;
+  font-size: 48px;
+  line-height: 57px;
+  font-family: "Gilroy Semibold", Arial, sans-serif; }
+
+.launch-modal__container .descr {
+  margin-bottom: 35px;
+  color: rgba(43, 74, 69, 0.5);
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  font-family: "Gilroy Medium", Arial, sans-serif; }
+
+.launch-modal__container form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 32px; }
+  .launch-modal__container form input {
+    width: 31%;
+    border: none;
+    border-bottom: 1px solid #D8D8D8;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    color: rgba(43, 74, 69, 0.5);
+    font-size: 14px;
+    font-family: "Gilroy Semibold", Arial, sans-serif; }
+    .launch-modal__container form input:focus {
+      outline: none; }
+    .launch-modal__container form input::-webkit-input-placeholder {
+      color: rgba(43, 74, 69, 0.5);
+      font-size: 14px;
+      font-family: "Gilroy Semibold", Arial, sans-serif; }
+    .launch-modal__container form input::-moz-placeholder {
+      color: rgba(43, 74, 69, 0.5);
+      font-size: 14px;
+      font-family: "Gilroy Semibold", Arial, sans-serif; }
+    .launch-modal__container form input:-ms-input-placeholder {
+      color: rgba(43, 74, 69, 0.5);
+      font-size: 14px;
+      font-family: "Gilroy Semibold", Arial, sans-serif; }
+    .launch-modal__container form input::-ms-input-placeholder {
+      color: rgba(43, 74, 69, 0.5);
+      font-size: 14px;
+      font-family: "Gilroy Semibold", Arial, sans-serif; }
+    .launch-modal__container form input::placeholder {
+      color: rgba(43, 74, 69, 0.5);
+      font-size: 14px;
+      font-family: "Gilroy Semibold", Arial, sans-serif; }
+  .launch-modal__container form button {
+    display: block;
+    margin: 0 auto;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    border: none;
+    background: #D9663B;
+    border-radius: 24px;
+    padding: 5px 32px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: "Gilroy Bold", Arial, sans-serif;
+    height: 48px; }
+
+@media screen and (max-width: 1280px) {
+  .launch-banner .heading h1 {
+    font-size: 92px;
+    line-height: 108px; }
+  .launch-banner .heading .descr {
+    width: 43%; }
+  .launch-about .heading {
+    width: 70%; }
+  .launch-variants .launch-variants-list {
+    width: 36%; }
+  .launch-variants .launch-variant__item button {
+    padding: 5px;
+    width: 100%; }
+  .launch-variants .launch-variant__content {
+    width: 62%; } }
+
+@media screen and (max-width: 1200px) {
+  .launch-header .wrapp {
+    padding-left: 0;
+    padding-right: 0; }
+  .launch-banner .heading {
+    padding-left: 0;
+    padding-right: 0; }
+  .launch-banner .heading h1 {
+    font-size: 78px;
+    line-height: 98px; }
+  .launch-banner .heading .descr {
+    width: 46%;
+    font-size: 42px;
+    line-height: 52px; }
+  .launch-banner .preview .preview-item:first-child {
+    height: 390px; }
+  .launch-banner .preview .preview-item:last-child {
+    height: 495px; }
+  .launch-advantages .launch-advantages__list {
+    padding-left: 0;
+    padding-right: 0; }
+  .launch-advantages .launch-advantages__list .item .heading {
+    font-size: 25px;
+    line-height: 29px; }
+  .launch-about .heading {
+    padding-left: 0;
+    padding-right: 0; }
+  .launch-about .launch-about__list {
+    padding-left: 0;
+    padding-right: 0; }
+  .launch-variants .launch-variants-list {
+    display: none; }
+  .launch-variants .launch-variant__content {
+    width: 100%; }
+  .launch-variants .heading {
+    margin-bottom: 30px;
+    padding-left: 0;
+    padding-right: 0; }
+  .launch-variants .wrapp {
+    display: block;
+    padding-left: 0;
+    padding-right: 0; }
+  .launch-variants .launch-variant__item .content ul li span {
+    display: block; }
+  .launch-variants .launch-variant__item .content ul li {
+    height: auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 56px;
+    background-position: 20px 50%;
+    color: rgba(43, 74, 69, 0.5);
+    font-family: "Gilroy Semibold", Arial, sans-serif;
+    font-size: 14px; } }
+
+@media screen and (max-width: 992px) {
+  .launch-header .wrapp {
+    padding: 29px 0; }
+  .launch-banner {
+    padding: 118px 0 40px; }
+  .launch-banner .heading h1 {
+    font-size: 56px;
+    line-height: 67px;
+    margin-bottom: 20px; }
+  .launch-banner .heading .descr {
+    width: 100%;
+    margin-bottom: 32px;
+    font-size: 32px;
+    line-height: 37px; }
+  .launch-banner .preview {
+    display: block; }
+  .launch-banner .preview .preview-item:last-child {
+    margin-top: 0;
+    width: 100%; }
+  .launch-banner .preview .preview-item:first-child {
+    display: none; }
+  .launch-advantages .launch-advantages__list .item:nth-child(2) {
+    margin-top: 0; }
+  .launch-advantages .launch-advantages__list .item:nth-child(4) {
+    margin-top: 0; }
+  .launch-advantages .launch-advantages__list {
+    display: block; }
+  .launch-advantages .launch-advantages__list .item {
+    width: 100%;
+    min-height: auto;
+    padding: 32px 20px;
+    margin-bottom: 24px; }
+    .launch-advantages .launch-advantages__list .item:last-child {
+      margin-bottom: 0; }
+  .launch-advantages {
+    padding-bottom: 0; }
+  .launch-about {
+    padding: 64px 0 72px; }
+  .launch-about .heading {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 24px; }
+  .launch-about .launch-about__item:nth-child(1) {
+    margin-top: 0; }
+  .launch-about .launch-about__item:nth-child(3) {
+    margin-top: 0; }
+  .launch-about .launch-about__list {
+    display: block; }
+  .launch-about .launch-about__item {
+    width: 100%;
+    margin-bottom: 60px; }
+    .launch-about .launch-about__item:last-child {
+      margin-bottom: 0; }
+  .launch-reviews .launch-reviews__nav {
+    width: 100%; } }
+
+@media screen and (max-width: 768px) {
+  .launch-banner {
+    padding: 139px 0 40px; }
+  .launch .mainContainer {
+    padding: 0 12px; }
+  .launch-banner .preview .preview-item:last-child {
+    height: 280px;
+    margin-left: -12px;
+    width: -webkit-calc(100% + 24px);
+    width: calc(100% + 24px); }
+  .launch-advantages .launch-advantages__list .item .heading {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 12px; }
+  .launch-advantages .launch-advantages__list .item p {
+    font-size: 20px;
+    line-height: 28px; }
+  .launch-about .heading {
+    width: 100%; }
+  .launch-about .launch-about__item .preview {
+    height: 280px;
+    margin-bottom: 16px; }
+  .launch-about .launch-about__item p {
+    font-size: 20px;
+    line-height: 28px; }
+  .launch-about .launch-about__item {
+    margin-bottom: 40px; }
+    .launch-about .launch-about__item:last-child {
+      margin-bottom: 0; }
+  .launch-reviews .content {
+    margin-left: -12px;
+    width: -webkit-calc(100% + 24px);
+    width: calc(100% + 24px);
+    padding: 72px 12px; }
+  .launch-reviews .heading {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 32px; }
+  .launch-reviews .launch-reviews__item .icon {
+    margin-bottom: 32px; }
+  .launch-reviews .launch-reviews__item .text {
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 30px; }
+  .launch-reviews .launch-reviews__list {
+    margin-bottom: 40px; }
+  .launch-reviews .launch-reviews__nav {
+    width: 79%; }
+  .launch-variants {
+    padding: 72px 0; }
+  .launch-variants .heading {
+    margin-bottom: 32px;
+    font-size: 32px;
+    line-height: 38px; }
+  .launch-variants .launch-variant__item {
+    height: auto;
+    background: #fff;
+    padding: 32px 20px;
+    border-radius: 20px; }
+  .launch-variants .launch-variant__item .content {
+    background: none;
+    padding: 0; }
+  .launch-variants .launch-variant__item .heading {
+    padding: 0;
+    border: none;
+    text-align: left;
+    margin-bottom: 24px; }
+  .launch-variants .launch-variant__item .content ul li {
+    padding-left: 36px;
+    background-position: left 50%; }
+  .launch-variants .launch-variant__item .content {
+    margin-bottom: 8px; }
+  .launch-variants__pagination {
+    display: block;
+    text-align: center;
+    margin-top: 20px; }
+    .launch-variants__pagination .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      margin: 0 6px;
+      opacity: 1;
+      background: #D5D5D5; }
+    .launch-variants__pagination .swiper-pagination-bullet-active {
+      background: #D9663B; }
+  .launch-banner .heading h1 {
+    font-size: 55px; } }
+
+@media screen and (max-width: 350px) {
+  .launch-reviews .launch-reviews__nav {
+    width: 100%; }
+  .launch-banner .heading h1 {
+    font-size: 47px;
+    line-height: 58px; }
+  .launch-header .wrapp button {
+    padding: 5px 19px; } }
