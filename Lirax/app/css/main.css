@@ -10,6 +10,18 @@
     margin-bottom: 28px;
     font-weight: 400; }
 
+.main1625.intm-banner section:before {
+  background: url(../img/banner-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.main1625.intm-banner section {
+  padding: 165px 0 125px; }
+  .main1625.intm-banner section .btn {
+    margin-bottom: 28px;
+    font-weight: 400; }
+
 .int-services {
   padding: 72px 0 88px; }
   .int-services .heading {
@@ -297,6 +309,305 @@
 .int-rates .widget-tarifs-block .tarif-list {
   margin-bottom: 5px; }
 
+.intm-solutions {
+  padding: 72px 0; }
+  .intm-solutions .heading {
+    text-align: center;
+    margin-bottom: 32px; }
+    .intm-solutions .heading h2 {
+      font-size: 40px;
+      line-height: 47px;
+      padding: 0;
+      font-weight: 400;
+      text-align: center;
+      color: #424242;
+      margin: 0; }
+  .intm-solutions .intm-solutions__wrapp {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .intm-solutions .intm-solutions__content {
+    width: 41%; }
+    .intm-solutions .intm-solutions__content ul {
+      padding: 0;
+      margin: 0;
+      list-style: none; }
+      .intm-solutions .intm-solutions__content ul li {
+        color: #424242;
+        font-size: 22px;
+        line-height: 26px;
+        display: block;
+        width: 100%;
+        margin-bottom: 32px;
+        padding-left: 24px;
+        position: relative; }
+        .intm-solutions .intm-solutions__content ul li::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 8px;
+          width: 12px;
+          height: 12px;
+          background-image: url("../img/check-icon.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain; }
+        .intm-solutions .intm-solutions__content ul li:last-child {
+          margin-bottom: 0; }
+  .intm-solutions .intm-solutions__preview {
+    width: 50%;
+    height: 503px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px; }
+
+.intm-process {
+  padding: 79px 0 56px;
+  background: #0BBEDF; }
+  .intm-process .intm-process__wrapp {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 50px; }
+  .intm-process .intm-process__content {
+    width: 54%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .intm-process .intm-process__content .number {
+      color: #FFFFFF;
+      font-size: 103px;
+      line-height: 144px;
+      margin-right: 24px;
+      font-weight: 400; }
+    .intm-process .intm-process__content .descr {
+      color: #FFFFFF;
+      font-size: 16px;
+      line-height: 26px; }
+  .intm-process .intm-process__gift {
+    width: 36%;
+    background: #9A0E6F;
+    padding: 30px;
+    color: #FFFFFF;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .intm-process .intm-process__gift .descr span {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: 400; }
+    .intm-process .intm-process__gift .descr p {
+      margin: 0;
+      padding: 0;
+      font-size: 18px;
+      line-height: 21px; }
+    .intm-process .intm-process__gift .icon {
+      -webkit-flex-shrink: 0;
+          -ms-flex-negative: 0;
+              flex-shrink: 0;
+      margin-left: 37px; }
+  .intm-process .intm-process__img {
+    width: 100%; }
+    .intm-process .intm-process__img img {
+      max-width: 100%;
+      height: auto; }
+
+.intm-operators {
+  padding: 105px 0 0;
+  background: #07ABD6; }
+  .intm-operators .intm-operators__content {
+    width: 69%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 60px; }
+    .intm-operators .intm-operators__content .number {
+      color: #FFFFFF;
+      font-size: 103px;
+      line-height: 144px;
+      margin-right: 24px;
+      font-weight: 400; }
+    .intm-operators .intm-operators__content .descr {
+      color: #FFFFFF;
+      font-size: 16px;
+      line-height: 26px; }
+  .intm-operators .intm-operators__previews {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .intm-operators .intm-operators__preview {
+    max-width: 47%; }
+    .intm-operators .intm-operators__preview img {
+      max-width: 100%;
+      height: auto; }
+
+.intm-schema {
+  padding: 79px 0 33px;
+  background: #0BBEDF; }
+  .intm-schema .intm-schema__content {
+    width: 69%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 60px; }
+    .intm-schema .intm-schema__content .number {
+      color: #FFFFFF;
+      font-size: 103px;
+      line-height: 144px;
+      margin-right: 24px;
+      font-weight: 400; }
+    .intm-schema .intm-schema__content .descr {
+      color: #FFFFFF;
+      font-size: 16px;
+      line-height: 26px; }
+  .intm-schema .intm-schema__img img {
+    max-width: 100%;
+    height: auto; }
+
+.intm-consultation {
+  padding: 72px 0; }
+  .intm-consultation .heading {
+    text-align: center;
+    margin-bottom: 16px; }
+    .intm-consultation .heading h2 {
+      margin: 0;
+      font-size: 40px;
+      line-height: 47px;
+      padding: 0;
+      font-weight: 400;
+      text-align: center;
+      color: #424242;
+      margin: 0; }
+  .intm-consultation .intm-consultation__form .form-group {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    min-width: 700px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content; }
+    .intm-consultation .intm-consultation__form .form-group input {
+      padding: 16px 3px;
+      color: #424242;
+      font-size: 14px;
+      line-height: 16px;
+      border: none;
+      width: 48%;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      border: none;
+      border-bottom: 1px solid #E2E2E2;
+      background: transparent; }
+      .intm-consultation .intm-consultation__form .form-group input:focus {
+        outline: none; }
+      .intm-consultation .intm-consultation__form .form-group input::-webkit-input-placeholder {
+        color: #424242;
+        font-size: 14px;
+        line-height: 16px; }
+      .intm-consultation .intm-consultation__form .form-group input::-moz-placeholder {
+        color: #424242;
+        font-size: 14px;
+        line-height: 16px; }
+      .intm-consultation .intm-consultation__form .form-group input:-ms-input-placeholder {
+        color: #424242;
+        font-size: 14px;
+        line-height: 16px; }
+      .intm-consultation .intm-consultation__form .form-group input::-ms-input-placeholder {
+        color: #424242;
+        font-size: 14px;
+        line-height: 16px; }
+      .intm-consultation .intm-consultation__form .form-group input::placeholder {
+        color: #424242;
+        font-size: 14px;
+        line-height: 16px; }
+  .intm-consultation .intm-consultation__form .btn {
+    display: block;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0 auto;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 12px 24px;
+    font-weight: 400;
+    background: #0EADCE;
+    border-radius: 21px;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+    .intm-consultation .intm-consultation__form .btn:hover {
+      background: #10c1e6; }
+
 @media screen and (max-width: 1200px) {
   .int-partners .int-partners__list .int-partners__item {
     width: 21%;
@@ -331,16 +642,37 @@
         -ms-flex-order: 1;
             order: 1; }
   .int-example .int-example__wrapp .preview {
-    max-width: 100%; } }
+    max-width: 100%; }
+  .intm-solutions .intm-solutions__content ul li {
+    font-size: 18px;
+    line-height: 24px; }
+  .intm-process .intm-process__wrapp {
+    display: block; }
+  .intm-process .intm-process__content {
+    width: 100%;
+    margin-bottom: 20px; }
+  .intm-process .intm-process__gift {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+  .intm-operators .intm-operators__content {
+    width: 100%; }
+  .intm-schema .intm-schema__content {
+    width: 100%; } }
 
 @media screen and (max-width: 768px) {
   .main1625.int-banner section {
+    padding: 200px 0; }
+  .main1625.intm-banner section {
     padding: 200px 0; }
   .main1625 section h1 {
     font-size: 28px;
     line-height: 33px;
     margin-bottom: 24px; }
   .main1625.int-banner section .btn {
+    margin-bottom: 0;
+    padding: 12px 0; }
+  .main1625.intm-banner section .btn {
     margin-bottom: 0;
     padding: 12px 0; }
   .int-services {
@@ -415,4 +747,108 @@
     width: 100%;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    padding: 12px 3px; } }
+    padding: 12px 3px; }
+  .main1625.intm-banner section {
+    padding: 205px 0 230px; }
+  .intm-solutions {
+    padding: 40px 0; }
+  .intm-solutions .heading h2 {
+    font-size: 28px;
+    line-height: 33px; }
+  .intm-solutions .heading {
+    margin-bottom: 20px; }
+  .intm-solutions .intm-solutions__wrapp {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; }
+  .intm-solutions .intm-solutions__preview {
+    width: 100%;
+    margin-bottom: 24px;
+    height: 320px; }
+  .intm-solutions .intm-solutions__content {
+    width: 100%; }
+  .intm-solutions .intm-solutions__content ul li {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 22px; }
+  .intm-solutions .intm-solutions__content ul li::before {
+    top: 5px; }
+  .intm-process .intm-process__content {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .intm-process .intm-process__content .number {
+    margin-right: 12px;
+    font-size: 30px;
+    line-height: 42px; }
+  .intm-process .intm-process__gift {
+    padding: 24px 20px; }
+  .intm-process .intm-process__gift .icon {
+    margin-left: 17px; }
+    .intm-process .intm-process__gift .icon img {
+      width: 96px; }
+  .intm-process .intm-process__img {
+    display: none; }
+  .intm-process .intm-process__wrapp {
+    margin-bottom: 0; }
+  .intm-process {
+    padding: 20px 0; }
+  .intm-operators {
+    padding: 20px 0 0; }
+  .intm-operators .intm-operators__content .number {
+    margin-right: 12px;
+    font-size: 30px;
+    line-height: 42px; }
+  .intm-operators .intm-operators__content {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: 20px; }
+  .intm-operators .intm-operators__previews {
+    display: block; }
+  .intm-operators .intm-operators__preview {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 17px; }
+    .intm-operators .intm-operators__preview:last-child {
+      margin-bottom: 0; }
+  .intm-schema {
+    padding: 20px 0; }
+  .intm-schema .intm-schema__content .number {
+    margin-right: 12px;
+    font-size: 30px;
+    line-height: 42px; }
+  .intm-schema .intm-schema__content {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: 0; }
+  .intm-schema__img {
+    display: none; }
+  .intm-consultation {
+    padding: 40px 0 40px; }
+  .intm-consultation .heading h2 {
+    font-size: 28px;
+    line-height: 33px; }
+  .intm-consultation .intm-consultation__form .form-group {
+    width: 100%;
+    display: block;
+    min-width: 100%; }
+  .intm-consultation .intm-consultation__form .form-group input {
+    width: 100%;
+    display: block;
+    margin-bottom: 6px; }
+    .intm-consultation .intm-consultation__form .form-group input:last-child {
+      margin-bottom: 0; }
+  .intm-consultation .intm-consultation__form .form-group {
+    margin-bottom: 32px; }
+  .intm-consultation .intm-consultation__form .btn {
+    width: 100%; }
+  .intm-solutions .intm-solutions__content ul li {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; } }
