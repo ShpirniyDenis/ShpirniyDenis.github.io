@@ -1,0 +1,40 @@
+
+@font-face {
+  font-family: 'Stratos Bold';
+  src: url('../fonts/Stratos/StratosLCWeb-Bold.ttf');
+  src: url('../fonts/Stratos/StratosLCWeb-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Stratos/StratosLCWeb-Bold.woff') format('woff'),
+    url('../fonts/Stratos/StratosLCWeb-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'Stratos Regular';
+  src: url('../fonts/Stratos/StratosLCWeb-Regular.eot');
+  src: url('../fonts/Stratos/StratosLCWeb-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Stratos/StratosLCWeb-Regular.woff') format('woff'),
+    url('../fonts/Stratos/StratosLCWeb-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Stratos Light';
+  src: url('../fonts/Stratos/StratosLCWeb-Light.eot');
+  src: url('../fonts/Stratos/StratosLCWeb-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Stratos/StratosLCWeb-Light.woff') format('woff'),
+    url('../fonts/Stratos/StratosLCWeb-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Stratos Medium';
+  src: url('../fonts/Stratos/StratosLCWeb-Medium.eot');
+  src: url('../fonts/Stratos/StratosLCWeb-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Stratos/StratosLCWeb-Medium.woff') format('woff'),
+    url('../fonts/Stratos/StratosLCWeb-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
