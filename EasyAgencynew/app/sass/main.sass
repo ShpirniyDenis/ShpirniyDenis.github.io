@@ -2998,3 +2998,147 @@ footer
     font-size: 24px
     line-height: 30px
     margin-top: 32px
+
+
+header
+  &.active
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: #F44B11
+    overflow: auto
+    .header__logo
+      svg
+        path, circle
+          fill: #fff
+    .header__invite
+      color: #fff
+      &::before
+        background-color: #fff
+    .header__language
+      color: rgba(255, 255, 255, 0.6)
+      &::after
+        background: #fff
+      &.active
+        color: #FFFFFF
+    .header__presintation-link
+      background: #fff
+      svg
+        path
+          stroke: #F44B11
+      span
+        color: #F44B11
+    .header__burger::before
+      background: #fff
+      top: 26px
+      transform: rotate(45deg)
+    .header__burger::after
+      background: #fff
+      top: 26px
+      transform: rotate(-45deg)
+    .header__burger
+      span
+        color: #fff
+    .popup-menu
+      display: block
+.popup-menu
+  display: none
+  background: #F44B11
+  width: 100%
+  padding: 60px 12% 20px 12%
+  .popup-menu__wrapp
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 80px
+  .popup-menu__link
+    margin-bottom: 48px
+    color: #FFFFFF
+    font-size: 64px
+    line-height: 81px
+    font-family: $font_medium
+    display: block
+    &:last-child
+      margin-bottom: 0
+  .popup-menu__contacts
+    margin-bottom: 100px
+    .tel
+      margin-bottom: 12px
+      color: #FFFFFF
+      font-size: 40px
+      line-height: 50px
+      font-family: $font_medium
+      display: block
+    .mail
+      margin-bottom: 40px
+      color: #FFFFFF
+      font-size: 20px
+      line-height: 25px
+      font-family: $font_medium
+      display: block
+    .location
+      font-size: 24px
+      line-height: 30px
+      margin-bottom: 22px
+      color: #FFFFFF
+      display: block
+    .popup-menu__socials
+      display: flex
+      justify-content: flex-start
+      align-items: flex-start
+      a
+        margin-right: 40px
+        color: #FFFFFF
+        font-size: 14px
+        line-height: 18px
+        &:last-child
+          margin-right: 0
+  .popup-menu__info
+    padding-top: 20px
+  .popup-menu__info-link
+    margin-bottom: 64px
+    .heading
+      display: block
+      color: #FFFFFF
+      font-size: 48px
+      line-height: 60px
+      font-family: $font_medium
+      margin-bottom: 20px
+    .descr
+      font-size: 18px
+      line-height: 23px
+      color: #FFFFFF
+      max-width: 59%
+    &:last-child
+      margin-bottom: 0
+  .popup-menu__label
+    color: rgba(255, 255, 255, 0.6)
+    font-size: 14px
+    line-height: 18px
+@media screen and ( max-width:  1600px)
+  .popup-menu
+    padding: 80px 8% 20px 8%
+  .popup-menu .popup-menu__link
+    font-size: 52px
+    line-height: 70px
+    margin-bottom: 31px
+  .popup-menu .popup-menu__contacts .tel
+    font-size: 38px
+  .popup-menu .popup-menu__contacts .mail
+    font-size: 18px
+  .popup-menu .popup-menu__contacts .location
+    font-size: 20px
+  .popup-menu .popup-menu__info-link .heading
+    font-size: 38px
+    line-height: 48px
+    margin-bottom: 16px
+  .popup-menu .popup-menu__info-link .descr
+    font-size: 16px
+  .popup-menu .popup-menu__contacts
+    margin-bottom: 70px
+  .popup-menu .popup-menu__info-link
+    margin-bottom: 45px
+    &:last-child
+      margin-bottom: 0
