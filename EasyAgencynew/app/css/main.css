@@ -86,6 +86,8 @@ header {
 
 .header__logo {
   margin-right: 80px; }
+  .header__logo:focus {
+    outline: none; }
 
 .header__invite {
   font-size: 14px;
