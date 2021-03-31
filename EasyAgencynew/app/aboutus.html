@@ -54,12 +54,12 @@
     <div class="popup-menu">
       <div class="popup-menu__wrapp">
         <div class="popup-menu__links">
-          <a href="#" class="popup-menu__link">О нас</a>
-          <a href="#" class="popup-menu__link">Портфолио</a>
-          <a href="#" class="popup-menu__link">Услуги</a>
-          <a href="#" class="popup-menu__link">Вакансии</a>
-          <a href="#" class="popup-menu__link">Блог</a>
-          <a href="#" class="popup-menu__link">Контакты</a>
+          <a href="aboutus.html" class="popup-menu__link">О нас</a>
+          <a href="portfolio.html" class="popup-menu__link">Портфолио</a>
+          <a href="services.html" class="popup-menu__link">Услуги</a>
+          <a href="vacancies.html" class="popup-menu__link">Вакансии</a>
+          <a href="blog.html" class="popup-menu__link">Блог</a>
+          <a href="contacts.html" class="popup-menu__link">Контакты</a>
         </div>
         <div class="popup-menu__info">
           <div class="popup-menu__contacts">
@@ -159,34 +159,46 @@
     <div class="mainContainer">
       <div class="heading"><h2>Клиенты</h2></div>
     </div>
+
     <div class="clients__list__wrapp">
-      <div class="clients__list">
-        <div class="clients__item">
-          <img src="img/clients/ukasko.png" alt="">
-        </div>
-        <div class="clients__item">
-          <img src="img/clients/syngenta.png" alt="">
-        </div>
-        <div class="clients__item">
-          <img src="img/clients/denovo.png" alt="">
-        </div>
-        <div class="clients__item">
-          <img src="img/clients/foodfamily.png" alt="">
-        </div>
-        <div class="clients__item">
-          <img src="img/clients/rentflot.png" alt="">
-        </div>
-        <div class="clients__item">
-          <img src="img/clients/nashformat.png" alt="">
-        </div>
-        <div class="clients__item">
-          <img src="img/clients/ukasko.png" alt="">
-        </div>
-        <div class="clients__item">
-          <img src="img/clients/syngenta.png" alt="">
-        </div>
-        <div class="clients__item">
-          <img src="img/clients/denovo.png" alt="">
+      <div class="clients-slider swiper-container">
+        <div class="clients-slider__list swiper-wrapper">
+          <div class="clients__item swiper-slide">
+            <img src="img/clients/ukasko.png" alt="">
+          </div>
+          <div class="clients__item swiper-slide">
+            <img src="img/clients/syngenta.png" alt="">
+          </div>
+          <div class="clients__item swiper-slide">
+            <img src="img/clients/denovo.png" alt="">
+          </div>
+          <div class="clients__item swiper-slide">
+            <img src="img/clients/foodfamily.png" alt="">
+          </div>
+          <div class="clients__item swiper-slide">
+            <img src="img/clients/rentflot.png" alt="">
+          </div>
+          <div class="clients__item swiper-slide">
+            <img src="img/clients/nashformat.png" alt="">
+          </div>
+          <div class="clients__item swiper-slide">
+            <img src="img/clients/ukasko.png" alt="">
+          </div>
+          <div class="clients__item swiper-slide">
+            <img src="img/clients/syngenta.png" alt="">
+          </div>
+          <div class="clients__item swiper-slide">
+            <img src="img/clients/denovo.png" alt="">
+          </div>
+          <div class="clients__item swiper-slide">
+            <img src="img/clients/foodfamily.png" alt="">
+          </div>
+          <div class="clients__item swiper-slide">
+            <img src="img/clients/rentflot.png" alt="">
+          </div>
+          <div class="clients__item swiper-slide">
+            <img src="img/clients/nashformat.png" alt="">
+          </div>
         </div>
       </div>
     </div>
@@ -413,6 +425,18 @@
         el: '.reviews-slider__pagination',
         clickable: true,
     },
+  });
+
+
+  let sliderClients = new Swiper('.clients-slider', {
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 24,
+    speed: 1e3,
+    autoplay: {
+      delay: 2500
+    }
   });
 </script>
 

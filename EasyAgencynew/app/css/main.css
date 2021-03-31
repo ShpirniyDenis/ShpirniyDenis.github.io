@@ -1720,8 +1720,7 @@ footer .info {
     height: 360px;
     background: #FFF8F4;
     text-align: center;
-    line-height: 360px;
-    margin-right: 24px; }
+    line-height: 360px; }
     .clients-section .clients__item img {
       max-width: 70%;
       height: auto; }
@@ -1736,11 +1735,11 @@ footer .info {
   .clients-section {
     padding-top: 40px; }
   .clients-section .clients__item {
-    width: 260px;
-    height: 260px;
-    line-height: 260px; }
+    width: 290px;
+    height: 290px;
+    line-height: 290px; }
     .clients-section .clients__item img {
-      max-width: 50%; } }
+      max-width: 40%; } }
 
 @media screen and (max-width: 1300px) {
   .clients-section .heading {
@@ -1768,7 +1767,7 @@ footer .info {
   .clients-section .clients__item {
     width: 180px;
     height: 180px;
-    margin-right: 16px; } }
+    line-height: 180px; } }
 
 .company-directions-section {
   padding-top: 60px; }
@@ -3956,16 +3955,20 @@ header.active {
       color: #F44B11; }
   header.active .header__burger::before {
     background: #fff;
-    top: 26px;
+    top: 30px;
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
-            transform: rotate(45deg); }
+            transform: rotate(45deg);
+    width: 83%;
+    left: 3px; }
   header.active .header__burger::after {
     background: #fff;
-    top: 26px;
+    top: 30px;
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg); }
+            transform: rotate(-45deg);
+    width: 83%;
+    left: 3px; }
   header.active .header__burger span {
     color: #fff; }
   header.active .popup-menu {
