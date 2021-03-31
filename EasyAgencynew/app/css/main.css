@@ -404,7 +404,10 @@ header {
     padding: 125px 0 210px; }
   .banner-section .banner__wrapp::after {
     width: 570px;
-    height: 570px; } }
+    height: 570px; }
+  .banner-section .content h1 {
+    font-size: 75px;
+    line-height: 100px; } }
 
 @media screen and (max-width: 1300px) {
   .banner-section .banner__wrapp::after {
