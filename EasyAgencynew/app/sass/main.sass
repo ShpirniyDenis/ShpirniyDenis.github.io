@@ -17,7 +17,9 @@ body
   color: $color_black
   overflow-x: hidden
   padding-top: 145px
-
+@media screen and ( max-width:1600px)
+  body
+    padding-top: 130px
 @media screen and ( max-width:992px)
   body
     padding-top: 110px
@@ -236,21 +238,54 @@ header
       line-height: 23px
     .delimiter
       position: absolute
-      bottom: 0
-      left: 50%
+      bottom: -17px 
+      left: 46%
       width: 2px
       height: 40px
       background-color: #1D1D1F
+      transform: scaleY(0)
+      animation: scroll 4s linear infinite
+      @keyframes scroll 
+        0% 
+          transform: scaleY(0)
+          transform-origin: top
+        7% 
+          transform: scaleY(0.8)
+          transform-origin: top
+        12% 
+          transform: scaleY(1)
+          transform-origin: top
+        35% 
+          transform: none
+          transform-origin: bottom
+        68% 
+          transform: none
+          transform-origin: bottom
+        78% 
+          transform: scaleY(0)
+          transform-origin: bottom
+        100% 
+          transform: scaleY(0)
+          transform-origin: bottom
     a
       color: #1D1D1F
       font-size: 14px
       line-height: 18px
+
 
 @media screen and ( max-width:  1600px)
   .skills-section .wrapp
     padding-left: 0
   .banner-section .banner__wrapp
     padding-left: 0
+  .banner-section .bottom .delimiter
+    left: 50%
+  .banner-section .content
+    padding: 125px 0 210px
+  .banner-section .banner__wrapp::after
+    width: 570px
+    height: 570px
+  
 @media screen and ( max-width:  1300px)
   .banner-section .banner__wrapp::after
     width: 550px
