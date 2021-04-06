@@ -264,9 +264,20 @@ header {
     font-size: 20px;
     line-height: 25px; }
   .banner-section .content h1 {
+    font-family: "Stratos Medium", Arial, sans-serif;
+    position: relative;
+    display: inline-block;
     font-size: 80px;
     line-height: 101px;
-    font-family: "Stratos Medium", Arial, sans-serif; }
+    background: -o-radial-gradient(50% 504px, circle 358px, #fff 99%, #000 100%) fixed;
+    background: radial-gradient(circle 358px at 50% 504px, #fff 99%, #000 100%) fixed;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear; }
 
 .banner-section .banner__wrapp {
   position: relative;
@@ -407,7 +418,13 @@ header {
     height: 570px; }
   .banner-section .content h1 {
     font-size: 75px;
-    line-height: 100px; } }
+    line-height: 100px;
+    background: -o-radial-gradient(50% 413px, circle 287px, #fff 99%, #000 100%) fixed;
+    background: radial-gradient(circle 287px at 50% 413px, #fff 99%, #000 100%) fixed;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent; } }
 
 @media screen and (max-width: 1300px) {
   .banner-section .banner__wrapp::after {
@@ -419,7 +436,13 @@ header {
     top: 50%; }
   .banner-section .content h1 {
     font-size: 61px;
-    line-height: 80px; }
+    line-height: 80px;
+    background: -o-radial-gradient(50% 460px, circle 277px, #fff 99%, #000 100%) fixed;
+    background: radial-gradient(circle 277px at 50% 460px, #fff 99%, #000 100%) fixed;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent; }
   .banner-section .content .label {
     font-size: 18px; }
   .banner-section .content {
@@ -430,7 +453,15 @@ header {
     padding: 155px 0 250px; }
   .banner-section .banner__wrapp::after {
     width: 450px;
-    height: 450px; } }
+    height: 450px; }
+  .banner-section .content h1 {
+    background: -o-radial-gradient(50.1% 481px, circle 227px, #fff 99%, #000 100%) fixed;
+    background: radial-gradient(circle 227px at 50.1% 481px, #fff 99%, #000 100%) fixed;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    min-height: 240px; } }
 
 @media screen and (max-width: 768px) {
   .banner-section .content {
@@ -443,7 +474,14 @@ header {
     top: 30%; }
   .banner-section .content h1 {
     font-size: 40px;
-    line-height: 50px; }
+    line-height: 50px;
+    background: -o-radial-gradient(50.2% 291px, circle 152px, #fff 99%, #000 100%) fixed;
+    background: radial-gradient(circle 152px at 50.2% 291px, #fff 99%, #000 100%) fixed;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    min-height: 200px; }
   .banner-section .bottom {
     display: block; }
   .banner-section .bottom a {
@@ -458,7 +496,13 @@ header {
 @media screen and (max-width: 359px) {
   .banner-section .content h1 {
     font-size: 35px;
-    line-height: 47px; }
+    line-height: 47px;
+    background: -o-radial-gradient(50.1% 264px, circle 150px, #fff 99%, #000 100%) fixed;
+    background: radial-gradient(circle 150px at 50.1% 264px, #fff 99%, #000 100%) fixed;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent; }
     .banner-section .content h1 br {
       display: none; }
   .banner-section .content {

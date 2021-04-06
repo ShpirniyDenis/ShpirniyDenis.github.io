@@ -210,9 +210,17 @@ header
       font-size: 20px
       line-height: 25px
     h1
+      font-family: $font_medium
+      position: relative
+      display: inline-block
       font-size: 80px
       line-height: 101px
-      font-family: $font_medium
+      background: radial-gradient(circle 358px at 50% 504px, #fff 99%, #000 100%) fixed
+      background-clip: text
+      -webkit-background-clip: text
+      color: transparent
+      -webkit-text-fill-color: transparent
+      transition: all 0.3s linear
   .banner__wrapp
     position: relative
     padding-left: 8%
@@ -288,6 +296,11 @@ header
   .banner-section .content h1
     font-size: 75px
     line-height: 100px
+    background: radial-gradient(circle 287px at 50% 413px, #fff 99%, #000 100%) fixed
+    background-clip: text
+    -webkit-background-clip: text
+    color: transparent
+    -webkit-text-fill-color: transparent
   
 @media screen and ( max-width:  1300px)
   .banner-section .banner__wrapp::after
@@ -298,6 +311,11 @@ header
   .banner-section .content h1
     font-size: 61px
     line-height: 80px
+    background: radial-gradient(circle 277px at 50% 460px, #fff 99%, #000 100%) fixed
+    background-clip: text
+    -webkit-background-clip: text
+    color: transparent
+    -webkit-text-fill-color: transparent
   .banner-section .content .label
     font-size: 18px
   .banner-section .content
@@ -308,6 +326,13 @@ header
   .banner-section .banner__wrapp::after
     width: 450px
     height: 450px
+  .banner-section .content h1
+    background: radial-gradient(circle 227px at 50.1% 481px, #fff 99%, #000 100%) fixed
+    background-clip: text
+    -webkit-background-clip: text
+    color: transparent
+    -webkit-text-fill-color: transparent
+    min-height: 240px
 @media screen and ( max-width: 768px)
   .banner-section .content
     padding: 140px 0 85px
@@ -320,6 +345,12 @@ header
   .banner-section .content h1
     font-size: 40px
     line-height: 50px
+    background: radial-gradient(circle 152px at 50.2% 291px, #fff 99%, #000 100%) fixed
+    background-clip: text
+    -webkit-background-clip: text
+    color: transparent
+    -webkit-text-fill-color: transparent
+    min-height: 200px
   .banner-section .bottom
     display: block
   .banner-section .bottom a
@@ -330,10 +361,16 @@ header
     margin: 0 auto
   .banner-section .bottom .descr
     margin-bottom: 65px
+
 @media screen and ( max-width: 359px)
   .banner-section .content h1
     font-size: 35px
     line-height: 47px
+    background: radial-gradient(circle 150px at 50.1% 264px, #fff 99%, #000 100%) fixed
+    background-clip: text
+    -webkit-background-clip: text
+    color: transparent
+    -webkit-text-fill-color: transparent
     br
       display: none
   .banner-section .content
