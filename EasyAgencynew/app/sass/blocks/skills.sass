@@ -1,0 +1,217 @@
+/***** SKILLS *****/
+.skills-section
+  padding-top: 60px
+  padding-bottom: 120px
+  .wrapp
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    padding-left: 8%
+    margin-bottom: 100px
+    .heading
+      .label
+        margin-bottom: 20px
+        color: #F44B11
+        font-size: 20px
+        line-height: 25px
+      h2
+        font-weight: 500
+        font-size: 64px
+        line-height: 81px
+        font-family: $font_medium
+    .list
+      flex-shrink: 0
+      margin-left: 113px
+      display: flex
+      align-items: flex-start
+      width: 58%
+      justify-content: space-between
+      padding-top: 70px
+      .list__item
+        font-size: 18px
+        line-height: 23px
+        margin-bottom: 20px
+        &:last-child
+          margin-bottom: 0
+        &.heading
+          margin-bottom: 24px
+          font-size: 24px
+          line-height: 30px
+          font-family: $font_medium
+.skills-container
+  width: 85%
+  margin: 0 auto
+  .skills-wrapp
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin-bottom: 40px
+    &:last-child
+      margin-bottom: 0
+  .skills-heading
+    font-size: 18px
+    line-height: 23px
+    width: 135px
+    margin-right: 70px
+  .skills-list
+    display: flex
+    justify-content: flex-start
+    align-items: stretch
+  .loadmore
+    background: #FFF8F4
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    border: none
+    padding: 24px 14px
+    width: 180px
+    font-family: $font_regular
+    span
+      font-size: 14px
+      line-height: 18px
+    svg
+      margin-bottom: 10px
+  .skills-item
+    background: #FFF8F4
+    width: 180px
+    padding: 24px 14px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin-right: 32px
+    .icon
+      margin-bottom: 10px
+      height: 40px
+      text-align: center
+      img
+        max-width: 90%
+        height: auto
+    p
+      font-size: 14px
+      line-height: 18px
+@media screen and ( max-width:  1600px)
+  .skills-section .wrapp
+    padding-left: 0
+  .skills-container
+    width: 100%
+  .skills-section .wrapp .heading h2
+    font-size: 60px
+    line-height: 76px
+  .skills-section .wrapp .list .list__item.heading
+    font-size: 22px
+  .skills-section .wrapp .list .list__item
+    font-size: 16px
+@media screen and ( max-width:  1300px)
+  .skills-section .wrapp .heading h2
+    font-size: 39px
+    line-height: 59px
+  .skills-section .wrapp .heading .label
+    font-size: 18px
+  .skills-section .wrapp .list .list__item.heading
+    font-size: 20px
+  .skills-section .wrapp .list .list__item
+    font-size: 14px
+  .skills-container .skills-item
+    width: 130px
+    padding: 10px 10px
+    margin-right: 16px
+  .skills-container .loadmore
+    width: 140px
+  .skills-container .skills-wrapp
+    margin-bottom: 24px
+  .skills-section
+    padding-bottom: 90px
+  .skills-container .skills-heading
+    font-size: 16px
+  .skills-container .skills-item p
+    font-size: 13px
+    text-align: center
+@media screen and ( max-width:  992px)
+  .skills-section .wrapp
+    display: block
+  .skills-section .wrapp .heading h2
+    br
+      display: none
+  .skills-section .wrapp .list
+    width: 100%
+    margin-left: 0
+  .skills-container .skills-wrapp
+    display: block
+    margin-bottom: 40px
+    &:last-child
+      margin-bottom: 0
+  .skills-container .skills-heading
+    width: 100%
+    margin-bottom: 20px
+  .skills-container .skills-list
+    justify-content: flex-end
+  .skills-container .skills-item
+    width: 20%
+  .skills-container .loadmore
+    width: 20%
+@media screen and ( max-width:  768px)
+  .skills-section
+    padding-top: 28px
+    padding-bottom: 56px
+  .skills-section .wrapp .heading .label
+    font-size: 16px
+    line-height: 20px
+    margin-bottom: 16px
+  .skills-section .wrapp .heading h2
+    font-size: 34px
+    line-height: 43px
+  .skills-section .wrapp .list
+    padding-top: 32px
+    display: block
+  .skills-section .wrapp .list .list__item.heading
+    font-size: 24px
+    line-height: 30px
+    margin-bottom: 24px
+  .skills-section .wrapp .list .list__item
+    font-size: 18px
+    line-height: 23px
+    margin-bottom: 20px
+    &:last-child
+      margin-bottom: 0
+  .skills-section .list__container
+    margin-bottom: 40px
+    &:last-child
+      margin-bottom: 0
+  .skills-section .wrapp
+    margin-bottom: 56px
+  .skills-container .skills-heading
+    margin-bottom: 20px
+    font-size: 18px
+    line-height: 23px
+  .skills-container .skills-list
+    flex-wrap: wrap
+    justify-content: space-between
+  .skills-container .skills-item
+    margin: 0
+    margin-bottom: 7px
+    width: 49%
+    padding: 24px
+  .skills-container .skills-item .icon
+    height: 32px
+    margin-bottom: 18px
+    img
+      max-width: 100%
+  .skills-container .loadmore
+    width: 100%
+    flex-direction: row
+    padding: 9px
+    svg
+      margin-bottom: 0
+      margin-right: 10px
+@media screen and ( max-width: 359px)
+  .skills-section .wrapp .heading h2
+    font-size: 30px
+    line-height: 39px
+  .skills-section .wrapp .heading .label
+    font-size: 14px
+  .skills-section .wrapp .list .list__item
+    font-size: 16px
+    line-height: 21px
+    margin-bottom: 15px

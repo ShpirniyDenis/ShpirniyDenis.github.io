@@ -1,0 +1,140 @@
+/***** CASE-PAGE *****/
+.case-page
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
+  position: relative
+  color: #FFFFFF
+  position: absolute
+  top: 80px
+  left: 0
+  width: 100%
+  min-height: calc(100vh - 80px)
+  &::before
+    width: 100%
+    height: 100%
+    position: absolute
+    background: rgba(0, 0, 0, 0.7)
+    left: 0
+    top: 0
+    content: ''
+  .back
+    position: absolute
+    right: 104px
+    top: 48px
+    width: 72px
+    height: 72px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+    background: #FFFFFF
+    z-index: 10
+    &:focus
+      outline: none
+  .mainContainer
+    position: relative
+    z-index: 1
+    min-height: calc(100vh - 80px)
+    padding-top: 120px
+    padding-bottom: 150px
+    display: flex
+    align-items: stretch
+  .wrapp
+    width: 33%
+    margin-left: 8%
+    display: flex
+    flex-direction: column
+  .info
+    margin-bottom: 32px
+    padding-bottom: 16px
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+    .heading
+      margin-bottom: 20px
+      font-size: 48px
+      line-height: 60px
+      font-family: $font_medium
+    .company
+      margin-bottom: 32px
+      font-size: 24px
+      line-height: 30px
+    .labels
+      display: flex
+      justify-content: flex-start
+      align-items: stretch
+      flex-wrap: wrap
+      .label
+        font-size: 16px
+        line-height: 20px
+        padding: 9px 16px
+        border-radius: 23px
+        border: 1px solid #FFFFFF
+        margin-right: 12px
+        margin-bottom: 16px
+  .descr
+    font-size: 18px
+    line-height: 31px
+    margin-bottom: 40px
+  .links
+    margin-top: auto
+    a
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      margin-bottom: 23px
+      color: #FFFFFF
+      font-size: 20px
+      line-height: 25px
+      svg
+        margin-right: 8px
+      &:last-child
+        margin-bottom: 0
+
+@media screen and ( max-width:  1600px)
+  .case-page .wrapp
+    margin-left: 0
+  .case-page .wrapp
+    width: 42%
+  .case-page .mainContainer
+    padding-bottom: 60px
+    padding-top: 80px
+  .case-page .info .company
+    font-size: 22px
+  .case-page .back
+    right: 48px
+    top: 48px
+    width: 62px
+    height: 62px
+@media screen and ( max-width:  1300px)
+  .case-page .wrapp
+    width: 100%
+@media screen and ( max-width: 992px)
+  .case-page .info .heading
+    font-size: 43px
+    line-height: 53px
+  .case-page .info .company
+    font-size: 20px
+  .case-page .back
+    right: 32px
+    top: 32px
+@media screen and ( max-width: 768px)
+  .case-page .mainContainer
+    padding-top: 56px
+    padding-bottom: 76px
+  .case-page .info .heading
+    font-size: 40px
+    line-height: 50px
+    margin-bottom: 8px
+  .case-page .info .company
+    margin-bottom: 29px
+    font-size: 20px
+    line-height: 25px
+  .case-page .descr
+    margin-bottom: 56px
+  .case-page .back
+    right: 20px
+    top: 20px
+    width: 40px
+    height: 40px
+    svg
+      width: 16px

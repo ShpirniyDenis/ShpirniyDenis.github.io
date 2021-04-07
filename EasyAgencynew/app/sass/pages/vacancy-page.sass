@@ -1,0 +1,158 @@
+/***** VACANCY-PAGE *****/  
+.vacancy-page
+  padding-bottom: 100px
+  .heading
+    margin-bottom: 60px
+    padding-left: 8%
+    h1
+      margin-bottom: 40px
+      font-size: 80px
+      line-height: 101px
+      font-family: $font_medium
+      margin-bottom: 24px
+    .back
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      margin-bottom: 55px
+      color: #F44B11
+      font-size: 18px
+      line-height: 23px
+      svg
+        margin-right: 16px
+  .info
+    display: flex
+    align-items: stretch
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-bottom: 60px
+    .info__item
+      width: 48%
+      margin-bottom: 40px
+      p
+        margin-bottom: 16px
+        font-size: 20px
+        line-height: 25px
+      span
+        font-size: 24px
+        line-height: 30px
+  .descr
+    font-size: 20px
+    line-height: 36px
+    margin-bottom: 40px
+    .title
+      margin-bottom: 20px
+      display: block
+      font-size: 24px
+      line-height: 30px
+      font-family: $font_medium
+  .list
+    margin-bottom: 40px
+    &:last-child
+      margin-bottom: 0
+    .title
+      margin-bottom: 20px
+      display: block
+      font-size: 24px
+      line-height: 30px
+      font-family: $font_medium
+    ul
+      list-style: disc
+      padding-left: 20px
+      font-size: 18px
+      line-height: 23px
+      li
+        margin-bottom: 15px
+        &:last-child
+          margin-bottom: 0
+  .content
+    width: 60%
+    margin-left: 8%
+  .respond
+    padding-left: 8%
+    margin-top: 80px
+    color: #F44B11
+    font-size: 32px
+    line-height: 40px
+    font-family: $font_medium
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    width: max-content
+    &:focus
+      outline: none
+    &::before
+      content: ''
+      width: 80px
+      height: 2px
+      margin-right: 24px
+      background: #F44B11
+      
+@media screen and ( max-width:  1600px)
+  .vacancy-page .heading
+    padding-left: 0
+  .vacancy-page .content
+    margin-left: 0
+  .vacancy-page .respond
+    padding-left: 0
+  .vacancy-page .heading h1
+    font-size: 69px
+    line-height: 90px
+  .vacancy-page .heading .back
+    margin-bottom: 40px
+  .vacancy-page .info .info__item span
+    font-size: 22px
+  .vacancy-page .info .info__item p
+    font-size: 18px
+  .vacancy-page .info
+    margin-bottom: 40px
+  .vacancy-page .descr
+    font-size: 18px
+    line-height: 34px
+@media screen and ( max-width:  1300px)
+  .vacancy-page .content
+    width: 85%
+  .vacancy-page .heading h1
+    font-size: 61px
+    line-height: 80px
+@media screen and ( max-width:  992px)
+  .vacancy-page .heading h1
+    font-size: 47px
+    line-height: 70px
+  .vacancy-page .content
+    width: 100%
+  .vacancy-page .info
+    margin-bottom: 20px
+  .vacancy-page .respond
+    font-size: 28px
+@media screen and ( max-width:  768px)
+  .vacancy-page .heading .back
+    font-size: 18px
+    margin-bottom: 16px
+  .vacancy-page .heading h1
+    margin-bottom: 40px
+    font-size: 40px
+    line-height: 50px
+  .vacancy-page .heading
+    margin-bottom: 40px
+  .vacancy-page .info .info__item p
+    font-size: 16px
+    line-height: 20px
+    margin-bottom: 12px
+  .vacancy-page .info .info__item span
+    font-size: 18px
+    line-height: 23px
+  .vacancy-page .info
+    margin-bottom: 10px
+  .vacancy-page .descr .title, .vacancy-page .list .title
+    margin-bottom: 20px
+    font-size: 20px
+    line-height: 25px
+  .vacancy-page .descr
+    margin-bottom: 32px
+    font-size: 18px
+    line-height: 32px
+  .vacancy-page .respond
+    font-size: 24px
+    line-height: 30px
+    margin-top: 32px

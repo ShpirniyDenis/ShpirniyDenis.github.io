@@ -1,0 +1,300 @@
+/***** CONTACTS *****/
+.contacts-section
+  margin-bottom: 120px
+  .wrapp
+    display: flex
+    justify-content: flex-start
+    align-items: flex-end
+    width: 84%
+    margin: 0 auto
+    .content
+      max-width: 617px
+      margin-right: 7%
+      .label
+        margin-bottom: 24px
+        color: #F44B11
+        font-size: 20px
+        line-height: 25px
+      .heading
+        margin-bottom: 80px
+        h2
+          margin-bottom: 24px
+          font-size: 80px
+          line-height: normal
+          font-family: $font_medium
+      .numbers
+        margin-bottom: 40px
+        a
+          margin-bottom: 12px
+          font-size: 20px
+          line-height: 25px   
+          font-family: $font_medium
+          display: block
+          color: #1D1D1F
+          &:last-child
+            margin-bottom: 0
+          &.phone
+            font-size: 40px
+            line-height: 50px
+      .info
+        .street
+          font-size: 24px
+          line-height: 30px
+          margin-bottom: 20px
+          color: #1D1D1F
+          display: block
+        .socials
+          display: flex
+          align-items: center
+          justify-content: flex-start
+          a
+            margin-right: 40px
+            color: #1D1D1F
+            font-size: 14px
+            line-height: 18px
+            &:last-child
+              margin-right: 0
+    .form
+      width: 50%
+      .form__heading
+        margin-bottom: 20px
+        font-size: 24px
+        line-height: 30px
+        font-family: $font_medium
+      .form_wrapp
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: stretch
+        flex-wrap: wrap
+      .form__group
+        width: 48%
+        margin-bottom: 32px
+        &.btn
+          margin-bottom: 0
+        &.textarea
+          width: 100%
+        input
+          width: 100%
+          background: transparent
+          border: none
+          border-bottom: 1px solid #FF7343
+          color: #1D1D1F
+          height: 60px
+          font-family: $font_regular
+          transition: all 0.3s
+          &::placeholder
+            color: #1D1D1F
+            font-size: 18px
+            line-height: 23px
+            transition: all 0.3s
+          &:focus
+            border-color: #1D1D1F
+            &::placeholder
+              color: transparent
+        textarea
+          width: 100%
+          background: transparent
+          border: none
+          border-bottom: 1px solid #FF7343
+          color: #1D1D1F
+          height: 90px
+          font-family: $font_regular
+          transition: all 0.3s
+          resize: none
+          &::placeholder
+            color: #1D1D1F
+            font-size: 18px
+            line-height: 23px
+            transition: all 0.3s
+            padding-top: 45px
+          &:focus
+            border-color: #1D1D1F
+            &::placeholder
+              color: transparent
+        .upload
+          color: #1D1D1F
+          font-size: 14px
+          line-height: 18px
+          display: flex
+          align-items: center
+          height: 100%
+          cursor: pointer
+        .submit
+          color: #F44B11
+          font-family: $font_medium
+          font-size: 32px
+          line-height: 40px
+          border: none
+          background: transparent
+          padding: 0
+          margin: 0
+          display: flex
+          justify-content: flex-end
+          align-items: center
+          width: 100%
+          &::before
+            content: ''
+            display: inline-block
+            margin-right: 24px
+            width: 80px
+            height: 2px
+            background: #F44B11
+            vertical-align: middle
+            transition: all 0.3s
+          &:hover
+            &::before
+              width: 0
+
+.contacts-map
+  .contacts-map__container
+    height: 661px
+  .marker 
+    margin-top: 20px
+    margin-left: 30px
+    position: relative
+  .pulse
+    width: 16px
+    height: 16px
+    border: 8px solid #F77C52
+    border-radius: 30px
+    background-color: #fff
+    z-index: 10
+    position: absolute
+    box-sizing: content-box
+  .dot
+    border: 13px solid #EE825D
+    background: transparent
+    border-radius: 60px
+    height: 70px
+    width: 70px
+    animation: pulse 3s ease-out
+    animation-iteration-count: infinite
+    position: absolute
+    top: -32px
+    left: -32px
+    z-index: 1
+    opacity: 0
+    box-sizing: content-box
+  @keyframes pulse 
+    0% 
+      transform: scale(0)
+      opacity: 0.0
+    25% 
+      transform: scale(0)
+      opacity: 0.1
+    50% 
+      transform: scale(0.1)
+      opacity: 0.3
+    75% 
+      transform: scale(0.5)
+      opacity: 0.5
+    100% 
+      transform: scale(1.5)
+      opacity: 0.0
+
+@media screen and ( max-width:  1600px)
+  .contacts-section .wrapp
+    width: 100%
+  .contacts-section .wrapp .content .heading h2
+    font-size: 69px
+    line-height: 90px
+  .contacts-section .wrapp .content .info .street
+    font-size: 21px
+  .contacts-section .wrapp .form .form__heading
+    font-size: 23px
+  .contacts-map__container
+    height: 561px
+@media screen and ( max-width:  1300px)
+  .contacts-section .wrapp .content .heading h2
+    font-size: 61px
+    line-height: 80px
+  .contacts-section .wrapp
+    flex-direction: column
+    flex-wrap: wrap
+  .contacts-section .wrapp .content
+    margin-right: 0
+    max-width: 100%
+    width: 100%
+    margin-bottom: 100px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: center
+  .contacts-section .wrapp .content .heading
+    width: 100%
+  .contacts-section .wrapp .content .numbers
+    margin-bottom: 0
+  .contacts-section .wrapp .form
+    width: 100%
+  .contacts-map .contacts-map__container
+    height: 520px
+@media screen and ( max-width:  992px)
+  .contacts-section .wrapp .content .heading
+    margin-bottom: 60px
+  .contacts-section .wrapp .content .heading h2
+    font-size: 47px
+    line-height: 70px
+    margin-bottom: 0
+  .contacts-section .wrapp .content
+    display: block
+  .contacts-section .wrapp .content .numbers
+    width: 100%
+    margin-bottom: 30px
+@media screen and ( max-width:  768px)
+  .contacts-section .wrapp .content .label
+    margin-bottom: 16px
+    font-size: 18px
+    line-height: 23px
+  .contacts-section .wrapp .content .heading h2
+    font-size: 40px
+    line-height: 50px
+    margin-bottom: 0
+  .contacts-section .wrapp .content .numbers a.phone
+    font-size: 32px
+    line-height: 40px
+    margin-bottom: 12px
+  .contacts-section .wrapp .content .numbers a:last-child
+    font-size: 20px
+    line-height: 25px
+  .contacts-section .wrapp .content .info .street
+    font-size: 20px
+    line-height: 25px
+    margin-bottom: 16px
+  .contacts-section .wrapp .content .info .socials
+    flex-wrap: wrap
+    a
+      margin-bottom: 16px
+  .contacts-section .wrapp .content
+    margin-bottom: 40px
+  .contacts-section .wrapp .form .form__heading
+    font-size: 20px
+    line-height: 25px
+    margin-bottom: 10px
+  .contacts-section .wrapp .form .form__group
+    width: 100%
+    margin-bottom: 10px
+    input,textarea
+      font-size: 16px
+      &::placeholder
+        font-size: 16px
+    textarea
+      &::placeholder
+        padding-top: 20px
+  .contacts-section .wrapp .form .form__group.btn
+    margin-top: 21px
+  .contacts-section .wrapp .form .form__group .upload
+    text-align: center
+    margin-bottom: 24px
+    display: block
+  .contacts-section .wrapp .form .form_wrapp
+    display: block
+  .contacts-section .wrapp .form .form__group .submit
+    justify-content: center
+    font-size: 24px
+    line-height: 30px
+  .contacts-section
+    margin-bottom: 56px
+  .contacts-map
+    .mainContainer
+      padding: 0

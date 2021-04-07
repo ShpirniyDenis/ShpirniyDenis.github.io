@@ -1,0 +1,242 @@
+/***** VACANCIES-PAGE *****/
+.vacancies-page
+  padding-bottom: 100px
+  .heading
+    margin-bottom: 100px
+    padding-left: 8%
+    h1
+      margin-bottom: 40px
+      font-size: 80px
+      line-height: 101px
+      font-family: $font_medium
+      margin-bottom: 24px
+    .label
+      margin-bottom: 24px
+      color: #F44B11
+      font-size: 20px
+      line-height: 25px
+    .descr
+      font-size: 24px
+      line-height: 30px
+      max-width: 48%
+  .vacancies__list
+    width: 84%
+    margin: 0 auto
+    margin-bottom: 80px
+    &:last-child
+      margin-bottom: 0
+    .vacancies__department
+      font-size: 48px
+      line-height: 60px
+      font-family: $font_medium
+      margin-bottom: 40px
+    .vacancies__item
+      margin-left: 3%
+      padding-bottom: 40px
+      margin-bottom: 40px
+      width: 90%
+      transition: all 0.2s
+      position: relative
+      &:hover
+        &::before
+          width: 20%
+      .vacancies__item__link
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        z-index: 1
+        &:focus
+          outline: none
+      &::before
+        content: ''
+        display: inline-block
+        width: 100%
+        height: 1px
+        position: absolute
+        left: 0
+        bottom: 0
+        background-color: #F44B11
+        transition: all 0.4s
+      .vacancies__item__btn
+        display: inline-block
+        width: 32px
+        height: 32px
+        position: absolute
+        right: 0
+        top: 30%
+        background-image: url('../img/arrow-right.svg')
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center center
+        span
+          display: none
+      &:last-child
+        margin-bottom: 0
+      .profession
+        margin-bottom: 20px
+        font-size: 24px
+        line-height: 30px
+        font-family: $font_medium
+      .info
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        font-size: 20px
+        line-height: 25px
+        span
+          &::after
+            content: ''
+            width: 4px
+            height: 4px
+            border-radius: 50%
+            background: #1D1D1F
+            display: inline-block
+            margin-left: 12px
+            margin-right: 12px
+            vertical-align: inherit
+          &:last-child
+            &::after
+              display: none
+  .vacancies__footer
+    width: 84%
+    margin: 0 auto
+    margin-top: 100px
+    p
+      font-size: 20px
+      line-height: 25px
+      margin-bottom: 32px
+    a
+      font-size: 40px
+      line-height: 50px
+      color: #1D1D1F
+      font-family: $font_medium
+
+@media screen and ( max-width:  1600px)
+  .vacancies-page .heading
+    padding-left: 0
+  .vacancies-page .vacancies__list
+    width: 100%
+  .vacancies-page .vacancies__footer
+    width: 100%
+  .vacancies-page .heading h1
+    font-size: 69px
+    line-height: 90px
+  .vacancies-page .heading .descr
+    font-size: 22px
+    line-height: 28px
+  .vacancies-page .heading
+    margin-bottom: 80px
+  .vacancies-page .vacancies__list .vacancies__department
+    font-size: 44px
+    margin-bottom: 35px
+  .vacancies-page .vacancies__list .vacancies__item .profession
+    font-size: 22px
+  .vacancies-page .vacancies__list .vacancies__item .info
+    font-size: 18px
+  .vacancies-page .vacancies__list .vacancies__item
+    padding-bottom: 35px
+    margin-bottom: 35px
+  .vacancies-page .vacancies__list
+    margin-bottom: 60px
+  .vacancies-page .vacancies__footer p
+    font-size: 18px
+    margin-bottom: 23px
+  .vacancies-page .vacancies__footer a
+    font-size: 36px
+@media screen and ( max-width:  1300px)
+  .vacancies-page .heading h1
+    font-size: 61px
+    line-height: 80px
+  .vacancies-page .heading .descr
+    width: 100%
+    max-width: 100%
+  .vacancies-page .vacancies__list .vacancies__department
+    font-size: 40px
+  .vacancies-page .vacancies__footer a
+    font-size: 31px
+  .vacancies-page .vacancies__list .vacancies__item .info
+    font-size: 14px
+@media screen and ( max-width:  992px)
+  .vacancies-page .heading h1
+    font-size: 47px
+    line-height: 70px
+  .vacancies-page .heading
+    margin-bottom: 60px
+  .vacancies-page .vacancies__list .vacancies__department
+    font-size: 34px
+  .vacancies-page .vacancies__footer a
+    font-size: 29px
+  .vacancies-page .vacancies__list .vacancies__item .info
+    display: block
+    span
+      display: block
+  .vacancies-page .vacancies__list .vacancies__item .info span::after
+    display: none
+  .vacancies-page .heading .descr
+    font-size: 20px
+  .vacancies-page .vacancies__footer p
+    font-size: 16px
+@media screen and ( max-width:  768px)
+  .vacancies-page .heading .label
+    font-size: 16px
+    line-height: 20px
+    margin-bottom: 16px
+  .vacancies-page .heading h1
+    margin-bottom: 16px
+    font-size: 40px
+    line-height: 50px
+  .vacancies-page .heading .descr
+    font-size: 20px
+    line-height: 30px
+  .vacancies-page .heading
+    margin-bottom: 40px
+  .vacancies-page .vacancies__list .vacancies__department
+    margin-bottom: 24px
+    font-size: 34px
+    line-height: 43px
+  .vacancies-page .vacancies__list .vacancies__item
+    margin-left: 0
+    width: 100%
+    padding-bottom: 32px
+  .vacancies-page .vacancies__list .vacancies__item .profession
+    margin-bottom: 16px
+    font-size: 20px
+    line-height: 25px
+  .vacancies-page .vacancies__list .vacancies__item .info
+    font-size: 18px
+    line-height: 23px
+    span
+      margin-bottom: 12px
+  .vacancies-page .vacancies__list
+    margin-bottom: 56px
+    &:last-child
+      margin-bottom: 0
+  .vacancies-page .vacancies__list .vacancies__item .vacancies__item__btn
+    display: block
+    position: static
+    font-size: 18px
+    line-height: 23px
+    color: #F44B11
+    padding-left: 38px
+    background-size: 25px
+    margin-top: 19px
+    width: auto
+    height: auto
+    background-position: left center
+    span
+      display: inline-block
+  .vacancies-page .vacancies__footer
+    margin-top: 56px
+  .vacancies-page .vacancies__footer p
+    font-size: 18px
+    line-height: 27px
+    margin-bottom: 12px
+  .vacancies-page .vacancies__footer a
+    display: block
+    width: 100%
+    font-size: 26px
+    line-height: 33px
+  .vacancies-page
+    padding-bottom: 56px

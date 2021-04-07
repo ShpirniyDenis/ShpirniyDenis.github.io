@@ -1,0 +1,241 @@
+/***** ABOUT *****/
+.about-section
+  padding-bottom: 60px
+  .about__heading
+    margin-bottom: 100px
+    padding-left: 8%
+    .label
+      color: #F44B11
+      font-size: 20px
+      line-height: 25px
+      margin-bottom: 24px
+    h1
+      color: #1D1D1F
+      font-size: 80px
+      line-height: 101px
+      font-family: $font_medium
+  .about__banner
+    width: 100%
+    height: 1000px
+    background-size: cover
+    background-position: center center
+    background-repeat: no-repeat
+    margin-bottom: 100px
+  .about__history
+    width: 84%
+    margin: 0 auto
+    margin-bottom: 100px
+    .heading
+      margin-bottom: 45px
+      color: #1D1D1F
+      font-size: 64px
+      line-height: 81px
+      font-family: $font_medium
+  .about__history__item
+    display: flex
+    margin-bottom: 95px
+    justify-content: space-between
+    width: 100%
+    &:last-child
+      margin-bottom: 0
+    .year
+      font-size: 56px
+      line-height: 71px
+      font-family: $font_medium
+      color: inherit;
+      -webkit-text-fill-color: transparent
+      -webkit-text-stroke-width: 2px
+      -webkit-text-stroke-color: #F44B11
+    .descr
+      display: flex
+      justify-content: flex-start
+      align-items: flex-start
+      svg
+        flex-shrink: 0
+        margin-right: 48px
+        margin-top: 10px
+      p
+        font-size: 32px
+        line-height: 40px
+        max-width: 672px
+        display: inline-block
+  .about__stages
+    .heading
+      font-size: 64px
+      line-height: 81px
+      font-family: $font_medium
+      padding-left: 8%
+      margin-bottom: 64px
+    .about__stages__list
+      display: flex
+      justify-content: space-between
+      align-items: stretch
+      width: 84%
+      margin: 0 auto
+      margin-bottom: 120px
+    .about__stages__item
+      width: 31%
+      .title
+        margin-bottom: 24px
+        font-size: 24px
+        line-height: 30px
+        font-family: $font_medium
+      p
+        font-size: 18px
+        line-height: 31px
+    .about__stages__previews
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      padding-top: 85px
+    .about__stages__preview
+      width: 30%
+      height: 746px
+      background-size: cover
+      background-position: center center
+      background-repeat: no-repeat
+      margin-top: -85px
+      &:nth-child(2)
+        margin-top: 0
+        
+@media screen and ( max-width:  1600px)
+  .about-section .about__heading
+    padding-left: 0
+  .about-section .about__history
+    width: 100%
+  .about-section .about__stages .heading
+    padding-left: 0
+  .about-section .about__stages .about__stages__list
+    width: 100%
+  .about-section .about__heading h1
+    font-size: 69px
+    line-height: 90px
+  .about-section .about__heading
+    margin-bottom: 60px
+  .about-section .about__banner
+    height: 700px
+    margin-bottom: 60px
+  .about-section .about__history .heading
+    font-size: 54px
+  .about-section .about__history__item .descr p
+    font-size: 28px
+    line-height: 38px
+    max-width: 600px
+  .about__history__list
+    width: 90%
+  .about-section .about__stages .heading
+    font-size: 54px
+  .about-section .about__stages .about__stages__list
+    margin-bottom: 75px
+  .about-section .about__stages .about__stages__preview
+    height: 550px
+  .about-section
+    padding-bottom: 40px
+@media screen and ( max-width:  1300px)
+  .about-section .about__heading h1
+    font-size: 61px
+    line-height: 80px
+  .about-section .about__banner
+    height: 560px
+  .about-section .about__history .heading, .about-section .about__stages .heading
+    font-size: 49px
+    line-height: 70px
+  .about__history__list
+    width: 100%
+    margin-bottom: 50px
+  .about-section .about__stages .about__stages__item p
+    font-size: 15px
+    line-height: 27px
+  .about-section .about__stages .about__stages__preview
+    height: 450px
+  .about-section .about__stages .about__stages__preview
+    margin-top: -65px
+  .about-section .about__stages .about__stages__previews
+    padding-top: 65px
+@media screen and ( max-width:  992px)
+  .about-section .about__heading h1
+    font-size: 47px
+    line-height: 70px
+  .about-section .about__banner
+    height: 435px
+  .about-section .about__history .heading, .about-section .about__stages .heading
+    font-size: 43px
+    line-height: 62px
+  .about-section .about__history__item .year
+    font-size: 46px
+  .about-section .about__history__item .descr p
+    max-width: 100%
+  .about-section .about__history__item .descr
+    width: 77%
+    p
+      font-size: 25px
+      line-height: 37px
+  .about-section .about__stages .about__stages__item p
+    font-size: 13px
+    line-height: 22px
+  .about-section .about__stages .about__stages__preview
+    height: 360px
+@media screen and ( max-width: 768px)
+  .about-section .about__heading .label
+    font-size: 16px
+    line-height: 20px
+    margin-bottom: 16px
+  .about-section .about__heading h1
+    font-size: 40px
+    line-height: 50px
+  .about-section .about__heading
+    margin-bottom: 40px
+  .about-section .about__banner
+    height: 320px
+    margin-bottom: 56px
+  .about-section .about__history .heading, .about-section .about__stages .heading
+    margin-bottom: 32px
+    font-size: 34px
+    line-height: 43px
+    h1,h2
+      br
+        display: none
+  .about-section .about__history__item .descr svg
+    display: none
+  .about-section .about__history__item
+    display: block
+    margin-bottom: 40px
+    &:last-child
+      margin-bottom: 0
+  .about-section .about__history__item .year
+    margin-bottom: 8px
+    font-size: 32px
+    line-height: 40px
+    -webkit-text-stroke-width: 1px
+  .about-section .about__history__item .descr
+    width: 100%
+    p
+      font-size: 20px
+      line-height: 25px
+  .about-section .about__history
+    margin-bottom: 56px
+  .about-section .about__stages .about__stages__list
+    display: block
+    margin-bottom: 40px
+  .about-section .about__stages .about__stages__item
+    width: 100%
+    margin-bottom: 40px
+    &:last-child
+      margin-bottom: 0
+  .about-section .about__stages .about__stages__item .title
+    margin-bottom: 16px
+    font-size: 24px
+    line-height: 30px
+  .about-section .about__stages .about__stages__item p
+    font-size: 18px
+    line-height: 31px
+  .about-section .about__stages .about__stages__preview
+    margin-top: 0
+    height: 480px
+    width: 100%
+  .about-section .about__stages .about__stages__previews
+    padding-top: 0
+  .about-section .about__stages .about__stages__preview:nth-child(n+2)
+    display: none
+  .about-section
+    padding-bottom: 20px

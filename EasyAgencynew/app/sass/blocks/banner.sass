@@ -1,0 +1,174 @@
+/***** BANNER *****/
+.banner-section
+  .content
+    padding: 230px 0 270px
+    position: relative 
+    z-index: 1
+    .label
+      margin-bottom: 24px
+      color: #F44B11
+      font-size: 20px
+      line-height: 25px
+    h1
+      font-family: $font_medium
+      position: relative
+      display: inline-block
+      font-size: 80px
+      line-height: 101px
+      background: radial-gradient(circle 358px at 50% 504px, #fff 99%, #000 100%) fixed
+      background-clip: text
+      -webkit-background-clip: text
+      color: transparent
+      -webkit-text-fill-color: transparent
+      transition: all 0.3s linear
+  .banner__wrapp
+    position: relative
+    padding-left: 8%
+    //padding-left: 124px
+    &::after
+      content: ''
+      position: absolute
+      width: 716px
+      height: 716px
+      display: block
+      border-radius: 50%
+      background: #F44B11
+      left: 50%
+      top: 0
+      transform: translateX(-50%)
+  .bottom
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    .descr
+      font-size: 18px
+      line-height: 23px
+    .delimiter
+      position: absolute
+      bottom: -17px 
+      left: 46%
+      width: 2px
+      height: 40px
+      background-color: #1D1D1F
+      transform: scaleY(0)
+      animation: scroll 4s linear infinite
+      @keyframes scroll 
+        0% 
+          transform: scaleY(0)
+          transform-origin: top
+        7% 
+          transform: scaleY(0.8)
+          transform-origin: top
+        12% 
+          transform: scaleY(1)
+          transform-origin: top
+        35% 
+          transform: none
+          transform-origin: bottom
+        68% 
+          transform: none
+          transform-origin: bottom
+        78% 
+          transform: scaleY(0)
+          transform-origin: bottom
+        100% 
+          transform: scaleY(0)
+          transform-origin: bottom
+    a
+      color: #1D1D1F
+      font-size: 14px
+      line-height: 18px
+
+@media screen and ( max-width:  1600px)
+  .skills-section .wrapp
+    padding-left: 0
+  .banner-section .banner__wrapp
+    padding-left: 0
+  .banner-section .bottom .delimiter
+    left: 50%
+  .banner-section .content
+    padding: 125px 0 210px
+  .banner-section .banner__wrapp::after
+    width: 570px
+    height: 570px
+  .banner-section .content h1
+    font-size: 75px
+    line-height: 100px
+    background: radial-gradient(circle 287px at 50% 413px, #fff 99%, #000 100%) fixed
+    background-clip: text
+    -webkit-background-clip: text
+    color: transparent
+    -webkit-text-fill-color: transparent
+@media screen and ( max-width:  1300px)
+  .banner-section .banner__wrapp::after
+    width: 550px
+    height: 550px
+    transform: translateX(-50%) translateY(-50%)
+    top: 50%
+  .banner-section .content h1
+    font-size: 61px
+    line-height: 80px
+    background: radial-gradient(circle 277px at 50% 460px, #fff 99%, #000 100%) fixed
+    background-clip: text
+    -webkit-background-clip: text
+    color: transparent
+    -webkit-text-fill-color: transparent
+  .banner-section .content .label
+    font-size: 18px
+  .banner-section .content
+    padding: 160px 0 250px
+@media screen and ( max-width: 992px)
+  .banner-section .content
+    padding: 155px 0 250px
+  .banner-section .banner__wrapp::after
+    width: 450px
+    height: 450px
+  .banner-section .content h1
+    background: radial-gradient(circle 227px at 50.1% 481px, #fff 99%, #000 100%) fixed
+    background-clip: text
+    -webkit-background-clip: text
+    color: transparent
+    -webkit-text-fill-color: transparent
+    min-height: 240px
+@media screen and ( max-width: 768px)
+  .banner-section .content
+    padding: 140px 0 85px
+  .banner-section .content .label
+    display: none
+  .banner-section .banner__wrapp::after
+    width: 300px
+    height: 300px
+    top: 30%
+  .banner-section .content h1
+    font-size: 40px
+    line-height: 50px
+    background: radial-gradient(circle 152px at 50.2% 291px, #fff 99%, #000 100%) fixed
+    background-clip: text
+    -webkit-background-clip: text
+    color: transparent
+    -webkit-text-fill-color: transparent
+    min-height: 200px
+  .banner-section .bottom
+    display: block
+  .banner-section .bottom a
+    display: none
+  .banner-section .bottom .delimiter
+    display: block
+    position: static
+    margin: 0 auto
+  .banner-section .bottom .descr
+    margin-bottom: 65px
+@media screen and ( max-width: 359px)
+  .banner-section .content h1
+    font-size: 35px
+    line-height: 47px
+    background: radial-gradient(circle 150px at 50.1% 264px, #fff 99%, #000 100%) fixed
+    background-clip: text
+    -webkit-background-clip: text
+    color: transparent
+    -webkit-text-fill-color: transparent
+    br
+      display: none
+  .banner-section .content
+    padding: 97px 0 85px

@@ -1,0 +1,87 @@
+/***** FOOTER *****/
+footer
+  .wrapp
+    padding: 80px 0
+    display: flex
+    justify-content: center
+    align-items: flex-end
+  .contacts
+    margin-right: 10%
+    a
+      color: #1D1D1F
+      font-size: 20px
+      line-height: 25px
+      font-family: $font_medium
+      display: block
+      text-align: center
+      &.phone
+        margin-bottom: 12px
+        font-size: 40px
+        line-height: 50px
+  .info
+    padding-bottom: 7px
+    .address
+      margin-bottom: 22px
+      font-size: 24px
+      line-height: 30px
+      color: #1D1D1F
+      display: block
+    .socials
+      display: flex
+      justify-content: center
+      a
+        display: inline-block
+        margin-right: 40px
+        color: #1D1D1F
+        font-size: 14px
+        line-height: 18px
+        &:last-child
+          margin-right: 0
+@media screen and ( max-width:  1300px)
+  footer .contacts a.phone
+    font-size: 32px
+  footer .contacts a
+    font-size: 18px
+  footer .info .address
+    font-size: 22px
+@media screen and ( max-width:  992px)
+  footer .wrapp
+    display: block
+  footer .contacts
+    margin-right: 0
+    margin-bottom: 40px
+  footer .info .address
+    text-align: center
+@media screen and ( max-width:  768px)
+  footer .wrapp
+    padding: 56px 0 40px
+  footer .contacts a.phone
+    font-size: 40px
+    line-height: 50px
+    margin-bottom: 12px
+  footer .contacts a
+    font-size: 20px
+    line-height: 25px
+  footer .contacts
+    margin-bottom: 32px
+  footer .info .address
+    font-size: 22px
+    line-height: 30px
+    margin-bottom: 24px
+  footer .info .socials
+    flex-wrap: wrap
+    a
+      display: inline-block
+      margin: 0 20px 16px
+@media screen and ( max-width:  359px)
+  footer .contacts a.phone
+    font-size: 33px
+    line-height: 46px
+  footer .contacts a
+    font-size: 18px
+  footer .info .address
+    font-size: 20px
+    line-height: 29px
+  footer .info .socials a
+    margin: 0 14px 16px
+    font-size: 13px

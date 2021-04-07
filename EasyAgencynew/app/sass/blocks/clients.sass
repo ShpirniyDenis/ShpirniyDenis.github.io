@@ -1,0 +1,69 @@
+/***** CLIENTS *****/
+.clients-section
+  padding-top: 60px
+  padding-bottom: 60px
+  overflow: hidden
+  .heading
+    font-size: 64px
+    line-height: 81px
+    font-family: $font_medium
+    margin-bottom: 64px
+    padding-left: 8%
+  .clients__list__wrapp
+    width: 100%
+    overflow: auto
+  .clients__list
+    width: max-content
+    display: flex
+    justify-content: flex-start
+    align-items: stretch
+  .clients__item
+    width: 360px
+    height: 360px
+    background: #FFF8F4
+    text-align: center
+    line-height: 360px
+    img
+      max-width: 70%
+      height: auto
+    &:last-child
+      margin-right: 0
+
+@media screen and ( max-width:  1600px)
+  .clients-section .heading
+    padding-left: 0
+    h1
+      font-size: 54px
+  .clients-section
+    padding-top: 40px
+  .clients-section .clients__item
+    width: 290px
+    height: 290px
+    line-height: 290px
+    img
+      max-width: 40%
+@media screen and ( max-width:  1300px)
+  .clients-section .heading
+    font-size: 49px
+    line-height: 70px
+    margin-bottom: 44px
+  .clients-section .clients__item
+    width: 220px
+    height: 220px
+    line-height: 220px
+@media screen and ( max-width:  992px)
+  .clients-section .heading
+    font-size: 43px
+    line-height: 62px
+@media screen and ( max-width:  768px)
+  .clients-section
+    padding-top: 36px
+    padding-bottom: 20px
+  .clients-section .heading
+    margin-bottom: 32px
+    font-size: 34px
+    line-height: 43px
+  .clients-section .clients__item
+    width: 180px
+    height: 180px
+    line-height: 180px
