@@ -85,10 +85,10 @@
 									</svg>
 								</a>
 							</div>
-						</div>
+						</div> 
 						<div class="contacts_right">
 							<div class="contacts_map">
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.137809013109!2d24.002492915709382!3d49.83986807939585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add832a61d435%3A0xff64ef99519df32a!2z0YPQuy4g0JPQvtC70L7QstCw0YbQutC-0LPQviwgMjPQkiwg0JvRjNCy0L7Qsiwg0JvRjNCy0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1sru!2sua!4v1621834642361!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+								<div class="contacts-map_container" id="map"></div>
 							</div>
 						</div>
 					</div>
@@ -349,5 +349,207 @@
 
 
 	<script src="assets/js/main.js"></script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDd1JxsBzPGjhusEs2PK4kP-ZxGllebT6A&callback=initMap"></script>
+<script type="text/javascript">
+
+function CustomMarker(latlng, map, args) {
+	this.latlng = latlng;	
+	this.args = args;	
+	this.setMap(map);	
+}
+
+CustomMarker.prototype = new google.maps.OverlayView();
+
+CustomMarker.prototype.draw = function() {
+	
+	var self = this;
+	
+	var div = this.div;
+	
+	if (!div) {
+	
+		div = this.div = document.createElement('div');
+		
+		div.className = 'marker';
+		
+		div.style.position = 'absolute';
+
+		div.innerHTML += '<div class="dot"></div><div class="pulse"></div>';
+		
+		if (typeof(self.args.marker_id) !== 'undefined') {
+			div.dataset.marker_id = self.args.marker_id;
+		}
+		
+		/*google.maps.event.addDomListener(div, "click", function(event) {
+			alert('You clicked on a custom marker!');			
+			google.maps.event.trigger(self, "click");
+		});*/
+		
+		var panes = this.getPanes();
+		panes.overlayImage.appendChild(div);
+	}
+	
+	var point = this.getProjection().fromLatLngToDivPixel(this.latlng);
+	
+	if (point) {
+		div.style.left = (point.x - 10) + 'px';
+		div.style.top = (point.y - 20) + 'px';
+	}
+};
+
+CustomMarker.prototype.remove = function() {
+	if (this.div) {
+		this.div.parentNode.removeChild(this.div);
+		this.div = null;
+	}	
+};
+
+CustomMarker.prototype.getPosition = function() {
+	return this.latlng;	
+};
+
+function initialize() {
+
+	var myLatlng = new google.maps.LatLng(49.839740,24.004945);
+	var mapOptions = {
+		center: { lat: 49.839740, lng: 24.004945 },
+      	zoom: 15,
+		mapTypeId: 'roadmap',
+		disableDefaultUI: true,
+		  styles: [
+        {
+          "featureType": "all",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#878787"
+            }
+          ]
+        },
+        {
+          "featureType": "all",
+          "elementType": "labels.text.stroke",
+          "stylers": [
+            
+            {
+              "color": "#000"
+            },
+            {
+              "lightness": 16
+            }
+          ]
+        },
+        
+        {
+          "featureType": "administrative",
+          "elementType": "geometry.fill",
+          "stylers": [
+            {
+              "color": "#878787"
+            },
+            {
+              "lightness": 20
+            }
+          ]
+        },
+        {
+          "featureType": "administrative",
+          "elementType": "geometry.stroke",
+          "stylers": [
+            {
+              "color": "#878787"
+            },
+            {
+              "lightness": 17
+            },
+            {
+              "weight": 0.2
+            }
+          ]
+        },
+        
+        {
+          "featureType": "landscape",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#fafafa"
+            }
+          ]
+        },
+        
+        {
+          "featureType": "road.highway",
+          "elementType": "geometry.fill",
+          "stylers": [
+            {
+              "color": "#DAE7FF"
+            },
+            {
+              "lightness": 17
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "geometry.stroke",
+          "stylers": [
+            {
+              "color": "#DAE7FF"
+            },
+            {
+              "lightness": 19
+            },
+            {
+              "weight": 0.2
+            }
+          ]
+        },
+        {
+          "featureType": "road.arterial",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#DAE7FF"
+            }
+          ]
+        },
+        {
+          "featureType": "road.local",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#DAE7FF"
+            },
+          ]
+        },
+        {
+          "featureType": "transit",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#f1f1f1"
+            }
+          ]
+        }
+      ]
+	}
+	
+	var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+	
+	
+	overlay = new CustomMarker( 
+		myLatlng, 
+		map,
+		{
+			marker_id: '123'
+		}
+	);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
 </body>
 </html>
