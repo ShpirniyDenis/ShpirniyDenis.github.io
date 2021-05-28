@@ -115,7 +115,7 @@
 										<textarea placeholder="Сообщение"></textarea>
 									</div>
 									<div class="mail_item mail_item-full mail_item-button">
-										<button class="button">отправить</button>
+										<button type="button" class="button click-item" data-action="form-success" data-message="Ваше письмо успешно отправлено!">отправить</button>
 									</div>
 								</div>
 							</form>
@@ -243,7 +243,7 @@
 			<div class="center-main-block">
 				<div class="threshold_content">
 					<div class="threshold_left"><span>© Все права защищены 2021. STV Group</span></div>
-					<div class="threshold_middle"><a href="#mainContainer" class="link_underline"><span>Наверх</span></a></div>
+					<div class="threshold_middle"><span class="link_underline click-item" data-action="scrollTop"><span>Наверх</span></span></div>
 					<div class="threshold_right"><span>Сделано в</span><img class="threshold_right_img" src="assets/img/e.svg" alt="" /></div>
 				</div>
 			</div>
@@ -269,14 +269,18 @@
 							<a href="map.html">Карта покрытия</a>
 							<a href="shop.html">E-Shop</a>
 						</div>
-						<div class="toggle-lang">
-							<button>РУ</button>
+						<div class="toggle-lang click-item" data-action="languageToggler">
+							<div class="toggle-lang_list">
+								<span class="active">Ру</span>
+								<a href="#">Укр</a>
+								<a href="#">Анг</a>
+							</div>
 						</div>
 						<div class="header_contacts">
 							<a href="tel:0674000003" class="phone">(067) 400-000-3</a>
 							<a href="mailto:info@stv.group" class="mail">info@stv.group</a>
 						</div>
-						<a href="#" class="header_callback click-item" data-action="popup-open" data-label="#question-popup">Задать вопрос</a>
+						<a href="#" class="header_callback click-item" data-action="questionPoup">Задать вопрос</a>
 					</div>
 				</div>
 			</div>
@@ -322,10 +326,8 @@
 		</div>
 	</div>
 
-	<div id="question-popup" class="popup_container click-obj">
-		<div class="popup_background click-item" data-action="popup-close" data-label="#question-popup"></div>
-		<div class="popup question-popup">
-		  <div class="popup_close click-item" data-action="popup-close" data-label="#question-popup">
+	<div id="question-popup" class="question-popup">
+		  <div class="popup_close click-item" data-action="questionPoup">
 			<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M5.11562 6.00011L0.557617 10.5581L1.44162 11.4421L5.99962 6.88411L10.5576 11.4421L11.4416 10.5581L6.88362 6.00011L11.4416 1.44211L10.5576 0.558105L5.99962 5.11611L1.44162 0.558105L0.557617 1.44211L5.11562 6.00011Z" fill="white"/>
 			</svg>				
@@ -340,11 +342,10 @@
 					<input type="text" placeholder="Телефон/Почта" name="contacts" required>
 					<textarea name="comment" placeholder="Сообщение"></textarea>
 				</div>
-				<button class="submit">отправить</button>
+				<button class="submit click-item" data-action="form-success" data-message="Ваш вопрос успешно отправлен!">отправить</button>
 			</form>
 		  </div>
-		</div>
-	</div>
+	  </div>
 
 
 	<script src="assets/js/main.js"></script>

@@ -41,12 +41,77 @@
 
 			<section class="main-block map_block">
 				<div class="center-main-block">
+					<div class="map_popup">
+						<button class="close click-item" data-action="map-popup-close">
+							<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17 1L1 17" stroke="#1D1D1D" stroke-width="2"/>
+								<path d="M1 1L17 17" stroke="#1D1D1D" stroke-width="2"/>
+							</svg>								
+						</button>
+						<div class="map_popup_city rend-element" data-value="name">Харьков</div>
+						<div class="map_popup_params">
+							<div class="map_popup_param">
+								<div class="label">Активная клиентская база</div>
+								<div class="value rend-element" data-value="clients">1551</div>
+							</div>
+							<div class="map_popup_param">
+								<div class="label">Площадь складких помещений</div>
+								<div class="value rend-element" data-value="space">2230 м²</div>
+							</div>
+							<div class="map_popup_param">
+								<div class="label">Свой/наемный транспорт</div>
+								<div class="value rend-element" data-value="transport">0/4 авт.</div>
+							</div>
+							<div class="map_popup_param">
+								<div class="label">Маршрутов доставок на день</div>
+								<div class="value rend-element" data-value="routes">4 шт</div>
+							</div>
+							<div class="map_popup_param">
+								<div class="label">Торговые команды</div>
+								<div class="value rend-element" data-value="teams">5</div>
+							</div>
+							<div class="map_popup_param">
+								<div class="label">Партнеры</div>
+								<div class="value rend-element" data-value="partners">12</div>
+							</div>
+							<div class="map_popup_param">
+								<div class="label">Филиалы</div>
+								<div class="value rend-element" data-value="branches">Ивано-франковская обл, Ивано-франковск</div>
+							</div>
+						</div>
+						<div class="map_popup_brands">
+							<div class="map_popup_brands_label">Бренды</div>
+							<div class="map_popup_brands_list">
+								<div class="map_popup_brand">
+									<img src="assets/img/brands/mini-brand.png" alt="">
+								</div>
+								<div class="map_popup_brand">
+									<img src="assets/img/brands/mini-brand.png" alt="">
+								</div>
+								<div class="map_popup_brand">
+									<img src="assets/img/brands/mini-brand.png" alt="">
+								</div>
+								<div class="map_popup_brand">
+									<img src="assets/img/brands/mini-brand.png" alt="">
+								</div>
+								<div class="map_popup_brand">
+									<img src="assets/img/brands/mini-brand.png" alt="">
+								</div>
+								<div class="map_popup_brand">
+									<img src="assets/img/brands/mini-brand.png" alt="">
+								</div>
+								<div class="map_popup_brand">
+									<img src="assets/img/brands/mini-brand.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div> 
 					<div class="map_content">
 						<div class="map_content_main">
 							<img src="assets/img/maps/main.svg" alt="">
 						</div>
 			            <div class="map_content_item map_content_item-Chernihiv">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Chernihiv.svg" alt="">
+			              <div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="chernigov"><img class="map_content_item_inside_map" src="assets/img/maps/Chernihiv.svg" alt="">
 			                <div class="map_content_item_content">
 			                  <p class="map_content_item_name">Чернігів</p>
 			                  <div class="map_content_item_icon">
@@ -55,18 +120,8 @@
 			                </div>
 			              </div>
 			            </div>
-			            <div class="map_content_item map_content_item-Kiev">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Kiev.svg" alt="">
-			                <div class="map_content_item_content">
-			                  <p class="map_content_item_name">Київ</p>
-			                  <div class="map_content_item_icon">
-			                  	<img src="assets/img/map-icon.svg" alt="" />
-			                  </div>
-			                </div>
-			              </div>
-			            </div>
 			            <div class="map_content_item map_content_item-Sume">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Sume.svg" alt="">
+			              <div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="summi"><img class="map_content_item_inside_map" src="assets/img/maps/Sume.svg" alt="">
 			                <div class="map_content_item_content">
 			                  <p class="map_content_item_name">Суми</p>
 			                  <div class="map_content_item_icon">
@@ -76,7 +131,7 @@
 			              </div>
 			            </div>
 			            <div class="map_content_item map_content_item-Poltava">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Poltava.svg" alt="">
+			              <div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="poltava"><img class="map_content_item_inside_map" src="assets/img/maps/Poltava.svg" alt="">
 			                <div class="map_content_item_content">
 			                  <p class="map_content_item_name">Полтава</p>
 			                  <div class="map_content_item_icon">
@@ -86,7 +141,7 @@
 			              </div>
 			            </div>
 			            <div class="map_content_item map_content_item-Chercasy">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Chercasy.svg" alt="">
+			              <div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="uman"><img class="map_content_item_inside_map" src="assets/img/maps/Chercasy.svg" alt="">
 			                <div class="map_content_item_content">
 			                  <p class="map_content_item_name">Умань</p>
 			                  <div class="map_content_item_icon">
@@ -101,8 +156,18 @@
 			                </div>
 			              </div>
 			            </div>
+						<div class="map_content_item map_content_item-Kiev">
+							<div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="kiev"><img class="map_content_item_inside_map" src="assets/img/maps/Kiev.svg" alt="">
+							  <div class="map_content_item_content">
+								<p class="map_content_item_name">Київ</p>
+								<div class="map_content_item_icon">
+									<img src="assets/img/map-icon.svg" alt="" />
+								</div>
+							  </div>
+							</div>
+						  </div>
 			            <div class="map_content_item map_content_item-Zhytomyr">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Zhytomyr.svg" alt="">
+			              <div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="zitomir"><img class="map_content_item_inside_map" src="assets/img/maps/Zhytomyr.svg" alt="">
 			                <div class="map_content_item_content">
 			                  <p class="map_content_item_name">Житомир</p>
 			                  <div class="map_content_item_icon">
@@ -112,7 +177,7 @@
 			              </div>
 			            </div>
 			            <div class="map_content_item map_content_item-Rivne">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Rivne.svg" alt="">
+			              <div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="rovno"><img class="map_content_item_inside_map" src="assets/img/maps/Rivne.svg" alt="">
 			                <div class="map_content_item_content">
 			                  <p class="map_content_item_name">Рівне</p>
 			                  <div class="map_content_item_icon">
@@ -122,7 +187,7 @@
 			              </div>
 			            </div>
 			            <div class="map_content_item map_content_item-Lutsk">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Lutsk.svg" alt="">
+			              <div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="lutsk"><img class="map_content_item_inside_map" src="assets/img/maps/Lutsk.svg" alt="">
 			                <div class="map_content_item_content">
 			                  <p class="map_content_item_name">Луцьк</p>
 			                  <div class="map_content_item_icon">
@@ -132,7 +197,7 @@
 			              </div>
 			            </div>
 			            <div class="map_content_item map_content_item-Lviv">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Lviv.svg" alt="">
+			              <div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="lvov"><img class="map_content_item_inside_map" src="assets/img/maps/Lviv.svg" alt="">
 			                <div class="map_content_item_content">
 			                  <p class="map_content_item_name">Львів</p>
 			                  <div class="map_content_item_icon">
@@ -142,7 +207,7 @@
 			              </div>
 			            </div>
 			            <div class="map_content_item map_content_item-Ternopil">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Ternopil.svg" alt="">
+			              <div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="ternopol"><img class="map_content_item_inside_map" src="assets/img/maps/Ternopil.svg" alt="">
 			                <div class="map_content_item_content">
 			                  <p class="map_content_item_name">Тернопіль</p>
 			                  <div class="map_content_item_icon">
@@ -152,7 +217,7 @@
 			              </div>
 			            </div>
 			            <div class="map_content_item map_content_item-Ivano-Frankivsk">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Ivano-Frankivsk.svg" alt="">
+			              <div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="frankovsk"><img class="map_content_item_inside_map" src="assets/img/maps/Ivano-Frankivsk.svg" alt="">
 			                <div class="map_content_item_content">
 			                  <p class="map_content_item_name">Івано-<br />Франківськ</p>
 			                  <div class="map_content_item_icon">
@@ -162,7 +227,7 @@
 			              </div>
 			            </div>
 			            <div class="map_content_item map_content_item-Mukachevo">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Mukachevo.svg" alt="">
+			              <div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="mucachevo"><img class="map_content_item_inside_map" src="assets/img/maps/Mukachevo.svg" alt="">
 			                <div class="map_content_item_content">
 			                  <p class="map_content_item_name">Мукачево</p>
 			                  <div class="map_content_item_icon">
@@ -172,7 +237,7 @@
 			              </div>
 			            </div>
 			            <div class="map_content_item map_content_item-Chernivtsi">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Chernivtsi.svg" alt="">
+			              <div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="chernivchi"><img class="map_content_item_inside_map" src="assets/img/maps/Chernivtsi.svg" alt="">
 			                <div class="map_content_item_content">
 			                  <p class="map_content_item_name">Чернівці</p>
 			                  <div class="map_content_item_icon">
@@ -182,7 +247,7 @@
 			              </div>
 			            </div>
 			            <div class="map_content_item map_content_item-Khmelnitsky">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Khmelnitsky.svg" alt="">
+			              <div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="hmelnitsky"><img class="map_content_item_inside_map" src="assets/img/maps/Khmelnitsky.svg" alt="">
 			                <div class="map_content_item_content">
 			                  <p class="map_content_item_name">Хмельницкий</p>
 			                  <div class="map_content_item_icon">
@@ -192,7 +257,7 @@
 			              </div>
 			            </div>
 			            <div class="map_content_item map_content_item-Vinnitsya">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Vinnitsya.svg" alt="">
+			              <div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="vinnitsa"><img class="map_content_item_inside_map" src="assets/img/maps/Vinnitsya.svg" alt="">
 			                <div class="map_content_item_content">
 			                  <p class="map_content_item_name">Вінниця</p>
 			                  <div class="map_content_item_icon">
@@ -202,7 +267,7 @@
 			              </div>
 			            </div>
 			            <div class="map_content_item map_content_item-Kharkov">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Kharkov.svg" alt="">
+			              <div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="harkiv"><img class="map_content_item_inside_map" src="assets/img/maps/Kharkov.svg" alt="">
 			                <div class="map_content_item_content">
 			                  <p class="map_content_item_name">Харків</p>
 			                  <div class="map_content_item_icon">
@@ -212,9 +277,9 @@
 			              </div>
 			            </div>
 			            <div class="map_content_item map_content_item-Marіupol">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Doneck.svg" alt="">
+			              <div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="donetsk"><img class="map_content_item_inside_map" src="assets/img/maps/Doneck.svg" alt="">
 			                <div class="map_content_item_content">
-			                  <p class="map_content_item_name">Луганськ</p>
+			                  <p class="map_content_item_name">Донецьк</p>
 			                  <div class="map_content_item_icon">
 			                  	<img src="assets/img/map-icon.svg" alt="" />
 			                  </div>
@@ -228,7 +293,7 @@
 			              </div>
 			            </div>
 			            <div class="map_content_item map_content_item-Dnepr">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Dnepr.svg" alt="">
+			              <div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="dnipro"><img class="map_content_item_inside_map" src="assets/img/maps/Dnepr.svg" alt="">
 			                <div class="map_content_item_content">
 			                  <p class="map_content_item_name">Дніпро</p>
 			                  <div class="map_content_item_icon">
@@ -244,7 +309,7 @@
 			              </div>
 			            </div>
 			            <div class="map_content_item map_content_item-Zaporizhzhia">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Zaporizhzhia.svg" alt="">
+			              <div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="zaporozhye"><img class="map_content_item_inside_map" src="assets/img/maps/Zaporizhzhia.svg" alt="">
 			                <div class="map_content_item_content">
 			                  <p class="map_content_item_name">Запоріжжя</p>
 			                  <div class="map_content_item_icon">
@@ -254,7 +319,7 @@
 			              </div>
 			            </div>
 			            <div class="map_content_item map_content_item-Kherson">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Kherson.svg" alt="">
+			              <div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="herson"><img class="map_content_item_inside_map" src="assets/img/maps/Kherson.svg" alt="">
 			                <div class="map_content_item_content">
 			                  <p class="map_content_item_name">Херсон</p>
 			                  <div class="map_content_item_icon">
@@ -264,7 +329,7 @@
 			              </div>
 			            </div>
 			            <div class="map_content_item map_content_item-Kropyvnitsky">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Kropyvnitsky.svg" alt="">
+			              <div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="kropivnitskiy"><img class="map_content_item_inside_map" src="assets/img/maps/Kropyvnitsky.svg" alt="">
 			                <div class="map_content_item_content">
 			                  <p class="map_content_item_name">Кропивницький</p>
 			                  <div class="map_content_item_icon">
@@ -274,7 +339,7 @@
 			              </div>
 			            </div>
 			            <div class="map_content_item map_content_item-Mykolaiv">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Mykolaiv.svg" alt="">
+			              <div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="mikolaiv"><img class="map_content_item_inside_map" src="assets/img/maps/Mykolaiv.svg" alt="">
 			                <div class="map_content_item_content">
 			                  <p class="map_content_item_name">Миколаїв</p>
 			                  <div class="map_content_item_icon">
@@ -284,7 +349,7 @@
 			              </div>
 			            </div>
 			            <div class="map_content_item map_content_item-Odessa">
-			              <div class="map_content_item_inside"><img class="map_content_item_inside_map" src="assets/img/maps/Odessa.svg" alt="">
+			              <div class="map_content_item_inside click-item" data-action="map-popup-open" data-brand="odessa"><img class="map_content_item_inside_map" src="assets/img/maps/Odessa.svg" alt="">
 			                <div class="map_content_item_content">
 			                  <p class="map_content_item_name">Одеса</p>
 			                  <div class="map_content_item_icon">
@@ -293,6 +358,26 @@
 			                </div>
 			              </div>
 			            </div>
+						<div class="map_content_item map_content_item-Lugansk">
+							<div class="map_content_item_inside">
+							  <div class="map_content_item_content">
+								<p class="map_content_item_name">Луганськ</p>
+								<div class="map_content_item_icon">
+									<img src="assets/img/map-icon.svg" alt="" />
+								</div>
+							  </div>
+							</div>
+						  </div>
+						  <div class="map_content_item map_content_item-Simferopol">
+							<div class="map_content_item_inside">
+							  <div class="map_content_item_content">
+								<p class="map_content_item_name">Cімферополь</p>
+								<div class="map_content_item_icon">
+									<img src="assets/img/map-icon.svg" alt="" />
+								</div>
+							  </div>
+							</div>
+						  </div>
 			          </div>
 					</div>
 				</div>
@@ -433,7 +518,7 @@
 			<div class="center-main-block">
 				<div class="threshold_content">
 					<div class="threshold_left"><span>© Все права защищены 2021. STV Group</span></div>
-					<div class="threshold_middle"><a href="#mainContainer" class="link_underline"><span>Наверх</span></a></div>
+					<div class="threshold_middle"><span class="link_underline click-item" data-action="scrollTop"><span>Наверх</span></span></div>
 					<div class="threshold_right"><span>Сделано в</span><img class="threshold_right_img" src="assets/img/e.svg" alt="" /></div>
 				</div>
 			</div>
@@ -459,14 +544,18 @@
 							<a href="map.html">Карта покрытия</a>
 							<a href="shop.html">E-Shop</a>
 						</div>
-						<div class="toggle-lang">
-							<button>РУ</button>
+						<div class="toggle-lang click-item" data-action="languageToggler">
+							<div class="toggle-lang_list">
+								<span class="active">Ру</span>
+								<a href="#">Укр</a>
+								<a href="#">Анг</a>
+							</div>
 						</div>
 						<div class="header_contacts">
 							<a href="tel:0674000003" class="phone">(067) 400-000-3</a>
 							<a href="mailto:info@stv.group" class="mail">info@stv.group</a>
 						</div>
-						<a href="#" class="header_callback click-item" data-action="popup-open" data-label="#question-popup">Задать вопрос</a>
+						<a href="#" class="header_callback click-item" data-action="questionPoup">Задать вопрос</a>
 					</div>
 				</div>
 			</div>
@@ -512,10 +601,8 @@
 		</div>
 	</div>
 
-	<div id="question-popup" class="popup_container click-obj">
-		<div class="popup_background click-item" data-action="popup-close" data-label="#question-popup"></div>
-		<div class="popup question-popup">
-		  <div class="popup_close click-item" data-action="popup-close" data-label="#question-popup">
+	<div id="question-popup" class="question-popup">
+		  <div class="popup_close click-item" data-action="questionPoup">
 			<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M5.11562 6.00011L0.557617 10.5581L1.44162 11.4421L5.99962 6.88411L10.5576 11.4421L11.4416 10.5581L6.88362 6.00011L11.4416 1.44211L10.5576 0.558105L5.99962 5.11611L1.44162 0.558105L0.557617 1.44211L5.11562 6.00011Z" fill="white"/>
 			</svg>				
@@ -530,11 +617,10 @@
 					<input type="text" placeholder="Телефон/Почта" name="contacts" required>
 					<textarea name="comment" placeholder="Сообщение"></textarea>
 				</div>
-				<button class="submit">отправить</button>
+				<button class="submit click-item" data-action="form-success" data-message="Ваш вопрос успешно отправлен!">отправить</button>
 			</form>
 		  </div>
-		</div>
-	</div>
+	  </div>
 
 
 	<script src="assets/js/main.js"></script>
