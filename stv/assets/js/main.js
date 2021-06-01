@@ -140,6 +140,53 @@ if(document.querySelector('.mission_block')){
     });
 }
 
+let brands_partners = [
+    {
+        label: 'danone',
+        logos: ['assets/img/brands/brand-1.png']
+    },
+    {
+        label: 'ferrero',
+        logos: ['assets/img/brands/brand-6.png']
+    },
+    {
+        label: 'jde',
+        logos: ['assets/img/brands/brand-8.png']
+    },
+    {
+        label: 'chumak',
+        logos: ['assets/img/brands/brand-10.png']
+    },
+    {
+        label: 'haribo',
+        logos: ['assets/img/brands/brand-15.png']
+    },
+    {
+        label: 'royalcanin',
+        logos: ['assets/img/brands/brand-16.png']
+    },
+    {
+        label: 'purina',
+        logos: ['assets/img/brands/brand-17.png']
+    },
+    {
+        label: 'yarych',
+        logos: ['assets/img/brands/brand-38.svg']
+    },
+    {
+        label: 'komo',
+        logos: ['assets/img/brands/brand-18.png', 'assets/img/brands/bchld/kaniv.jpg', 'assets/img/brands/bchld/klubsira.png']
+    },
+    {
+        label: 'mondelez',
+        logos: ['assets/img/brands/bchld/korona2.jpg', 'assets/img/brands/bchld/milka.png', 'assets/img/brands/bchld/barny.png', 'assets/img/brands/bchld/oreo.png', 'assets/img/brands/bchld/tuc.png', 'assets/img/brands/bchld/belvita.jpg', 'assets/img/brands/bchld/luks.png', 'assets/img/brands/bchld/dirol.png', 'assets/img/brands/bchld/halls2.png']
+    },
+    {
+        label: 'carlsberg',
+        logos: ['assets/img/brands/brand-5.png', 'assets/img/brands/bchld/baltika.jpg', 'assets/img/brands/bchld/taras.png', 'assets/img/brands/bchld/crimb.jpeg', 'assets/img/brands/bchld/kilkenny.png', 'assets/img/brands/bchld/kronenburg.png', 'assets/img/brands/bchld/garage.png', 'assets/img/brands/bchld/warsteiner.png', 'assets/img/brands/bchld/arsenal.jpg', 'assets/img/brands/bchld/vitrachok.jpeg']
+    },
+]
+
 let map_info = [
     {
         label: 'chernigov',
@@ -459,12 +506,22 @@ function clickItemHandler(event){
         },
         'partner-popup': function(target){
             let section = document.querySelector('.brands_box');
-            let brandImg = target.children[0].getAttribute('src');
-            let popupImages = document.querySelectorAll('.brand_popup_item img')
+            let name = target.dataset.name;
+            let popupList = document.querySelector('.brand_popup_list');
 
-            popupImages.forEach(element=>{
-                element.setAttribute('src', brandImg)
-            })
+            popupList.innerHTML = '';
+
+            brands_partners.filter(x => x.label === name).map(x =>{
+                x.logos.forEach(element =>{
+                    let div = document.createElement('div');
+                    let img = document.createElement('img');
+                    img.setAttribute('src', element);
+                    div.classList.add('brand_popup_item');
+                    div.append(img);
+                    popupList.append(div);
+                });
+                }
+            );
 
             target.classList.toggle('active');
             section.classList.toggle('active');

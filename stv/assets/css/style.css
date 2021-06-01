@@ -1914,6 +1914,11 @@ input[type="search"]::-webkit-search-results-decoration{ display: none; }
   margin-right: 24px;
   margin-bottom: 10px;
 }
+.brand_popup_item img{
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
 .brands_box:after{
   content: "";
   position: absolute;
