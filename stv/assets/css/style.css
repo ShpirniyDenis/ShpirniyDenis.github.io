@@ -3432,6 +3432,9 @@ input[type="search"]::-webkit-search-results-decoration{ display: none; }
   .button{
     padding: 20px 20px 17px;
   }
+  body.active-menu{
+    overflow: hidden;
+  }
 }
 @media screen and (max-width: 359px){
   h2, .h2{
@@ -3498,7 +3501,7 @@ input[type="search"]::-webkit-search-results-decoration{ display: none; }
     display: none;
   }
   .full-menu{
-    padding: 0 16px 60px;
+    padding: 0 16px 90px;
     display: flex;
     flex-direction: column;
   }
