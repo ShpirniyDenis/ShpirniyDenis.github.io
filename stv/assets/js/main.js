@@ -8,45 +8,48 @@ window.onload = function(){
 
     ticker();
 
-    new classMultiplyWrapper(Slider, {
-        selector: '.last_slider',
-        /*navigationArrows: {
-            left: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                    <g fill="#0A0A0A">
-                        <path d="M16 0C7.163 0 0 7.163 0 16s7.163 16 16 16 16-7.163 16-16S24.837 0 16 0zm0 .97C24.301.97 31.03 7.699 31.03 16c0 8.301-6.729 15.03-15.03 15.03C7.699 31.03.97 24.301.97 16 .97 7.699 7.699.97 16 .97z" transform="matrix(-1 0 0 1 32 0)"/>
-                        <path d="M14.237 10c-.288-.006-.55.17-.667.441-.113.273-.055.589.147.8l4.638 4.034c.378.317.567.56.567.729 0 .169-.189.411-.567.728l-4.638 4.035c-.271.29-.26.751.022 1.03.282.279.73.27 1.002-.023l5.461-5.035c.406-.374.432-1.007.058-1.413-.018-.02-.038-.04-.058-.058l-5.461-5.035c-.13-.145-.313-.227-.504-.233z" transform="matrix(-1 0 0 1 32 0)"/>
-                    </g>
-                </svg>`,
-            right: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                        <g fill="#0A0A0A">
-                            <path d="M16 0C7.163 0 0 7.163 0 16s7.163 16 16 16 16-7.163 16-16S24.837 0 16 0zm0 .97C24.301.97 31.03 7.699 31.03 16c0 8.301-6.729 15.03-15.03 15.03C7.699 31.03.97 24.301.97 16 .97 7.699 7.699.97 16 .97z"/>
-                            <path d="M14.237 10c-.288-.006-.55.17-.667.441-.113.273-.055.589.147.8l4.638 4.034c.378.317.567.56.567.729 0 .169-.189.411-.567.728l-4.638 4.035c-.271.29-.26.751.022 1.03.282.279.73.27 1.002-.023l5.461-5.035c.406-.374.432-1.007.058-1.413-.018-.02-.038-.04-.058-.058l-5.461-5.035c-.13-.145-.313-.227-.504-.233z"/>
-                        </g>
-                    </svg>`,
-        },*/
-        navigationArrows: true,
-        navigationDotters: false,
-        //infinity: false,
-        //mouseBlock: false,
-        multiDisplay: {
-            desktop: 2,
-            notebook: 2,
-            touch: 2,
-            mobile: 1,
-            marginRight: {
-                desktop: 72,
-                notebook: 72,
-                touch: 24,
-                mobile: 12,
-            },
-            multiShift: true,
-        }
-    });
+    if(window.innerWidth > 768){
+        new classMultiplyWrapper(Slider, {
+            selector: '.last_slider',
+            navigationArrows: true,
+            navigationDotters: false,
+            //infinity: false,
+            //mouseBlock: false,
+            multiDisplay: {
+                desktop: 2,
+                notebook: 2,
+                touch: 2,
+                mobile: 1,
+                marginRight: {
+                    desktop: 72,
+                    notebook: 72,
+                    touch: 24,
+                    mobile: 12,
+                },
+                multiShift: true,
+            }
+        });
+    }
 
+    if(window.innerWidth < 992){
+        new classMultiplyWrapper(Slider, {
+            selector: '.service_box',
+            navigationDotters: true,
+            navigationArrows: false,
+            multiDisplay: {
+                desktop: 1,
+                notebook: 1,
+                touch: 1,
+                mobile: 1,
+                multiShift: false,
+            }
+        });
+    }
 
     new classMultiplyWrapper(Slider, {
         selector: '.pr_slider',
         navigationArrows: true,
+        navigationDotters: true,
         multiDisplay: {
             desktop: 3,
             notebook: 3,
@@ -62,22 +65,24 @@ window.onload = function(){
         }
     });
 
-
-    new classMultiplyWrapper(Slider, {
-        selector: '.history_slider',
-        navigationArrows: true,
-        multiDisplay: {
-            desktop: 3,
-            notebook: 3,
-            touch: 2,
-            mobile: 1,
-            multiShift: true,
-        }
-    });
+    if(window.innerWidth > 992){
+        new classMultiplyWrapper(Slider, {
+            selector: '.history_slider',
+            navigationArrows: true,
+            multiDisplay: {
+                desktop: 3,
+                notebook: 3,
+                touch: 2,
+                mobile: 1,
+                multiShift: true,
+            }
+        });
+    }
 
 
     new classMultiplyWrapper(Slider, {
         selector: '.values_slider',
+        navigationDotters: true,
         navigationArrows: true,
     });
 
@@ -135,268 +140,268 @@ if(document.querySelector('.mission_block')){
     });
 }
 
+let map_info = [
+    {
+        label: 'chernigov',
+        name: 'Чернигов',
+        clients: '2550',
+        space: '1230 м²',
+        transport: '2/4 авт.',
+        routes: '1 шт',
+        teams:'15',
+        partners: '22',
+        branches: 'Черниговская обл, Чернигов',
+    },
+    {
+        label: 'kiev',
+        name: 'Киев',
+        clients: '7191',
+        space: '6590 м²',
+        transport: '5/15 авт.',
+        routes: '6 шт',
+        teams:'25',
+        partners: '167',
+        branches: 'Киевская обл, Киев',
+    },
+    {
+        label: 'poltava',
+        name: 'Полтава',
+        clients: '2260',
+        space: '6010 м²',
+        transport: '0/2 авт.',
+        routes: '3 шт',
+        teams:'5',
+        partners: '2',
+        branches: 'Полтавская обл, Полтава',
+    },
+    {
+        label: 'herson',
+        name: 'Херсон',
+        clients: '4925',
+        space: '2470 м²',
+        transport: '1/6 авт.',
+        routes: '1 шт',
+        teams:'18',
+        partners: '12',
+        branches: 'Херсонская обл, Херсон',
+    },
+    {
+        label: 'kropivnitskiy',
+        name: 'Кропивницкий',
+        clients: '7550',
+        space: '5230 м²',
+        transport: '5/1 авт.',
+        routes: '3 шт',
+        teams:'55',
+        partners: '37',
+        branches: 'Кропивницкая обл, Кропивницкий',
+    },
+    {
+        label: 'odessa',
+        name: 'Одесса',
+        clients: '1573',
+        space: '2231 м²',
+        transport: '1/14 авт.',
+        routes: '5 шт',
+        teams:'14',
+        partners: '8',
+        branches: 'Одесская обл, Одесса',
+    },
+    {
+        label: 'zaporozhye',
+        name: 'Запорожье',
+        clients: '4193',
+        space: '3230 м²',
+        transport: '3/8 авт.',
+        routes: '4 шт',
+        teams:'4',
+        partners: '31',
+        branches: 'Запорожская обл, Запорожье',
+    },
+    {
+        label: 'vinnitsa',
+        name: 'Винница',
+        clients: '1193',
+        space: '13230 м²',
+        transport: '0/8 авт.',
+        routes: '1 шт',
+        teams:'2',
+        partners: '11',
+        branches: 'Винницкая обл, Винница',
+    },
+    {
+        label: 'rovno',
+        name: 'Ровно',
+        clients: '193',
+        space: '3230 м²',
+        transport: '1/1 авт.',
+        routes: '1 шт',
+        teams:'2',
+        partners: '1',
+        branches: 'Ровенская обл, Ровно',
+    },
+    {
+        label: 'zitomir',
+        name: 'Житомир',
+        clients: '993',
+        space: '1230 м²',
+        transport: '4/1 авт.',
+        routes: '9 шт',
+        teams:'2',
+        partners: '1',
+        branches: 'Митомирская обл, Житомир',
+    },
+    {
+        label: 'lvov',
+        name: 'Львов',
+        clients: '5993',
+        space: '6230 м²',
+        transport: '14/21 авт.',
+        routes: '19 шт',
+        teams:'32',
+        partners: '17',
+        branches: 'Львовская обл, Львов',
+    },
+    {
+        label: 'hmelnitsky',
+        name: 'Хмельницкий',
+        clients: '2993',
+        space: '9310 м²',
+        transport: '1/11 авт.',
+        routes: '4 шт',
+        teams:'32',
+        partners: '8',
+        branches: 'Львовская обл, Львов',
+    },
+    {
+        label: 'ternopol',
+        name: 'Тернополь',
+        clients: '4300',
+        space: '3310 м²',
+        transport: '5/5 авт.',
+        routes: '2 шт',
+        teams:'2',
+        partners: '15',
+        branches: 'Львовская обл, Львов',
+    },
+    {
+        label: 'frankovsk',
+        name: 'Ивано-Франковск',
+        clients: '1700',
+        space: '7310 м²',
+        transport: '1/15 авт.',
+        routes: '6 шт',
+        teams:'22',
+        partners: '1',
+        branches: 'Львовская обл, Львов',
+    },
+    {
+        label: 'chernivchi',
+        name: 'Черновцы',
+        clients: '5500',
+        space: '3810 м²',
+        transport: '7/1 авт.',
+        routes: '3 шт',
+        teams:'12',
+        partners: '10',
+        branches: 'Львовская обл, Львов',
+    },
+    {
+        label: 'uman',
+        name: 'Черкассы',
+        clients: '7100',
+        space: '5110 м²',
+        transport: '17/21 авт.',
+        routes: '8 шт',
+        teams:'1',
+        partners: '30',
+        branches: 'Львовская обл, Львов',
+    },
+    {
+        label: 'mikolaiv',
+        name: 'Николаев',
+        clients: '1230',
+        space: '4110 м²',
+        transport: '1/7 авт.',
+        routes: '5 шт',
+        teams:'2',
+        partners: '7',
+        branches: 'Львовская обл, Львов',
+    },
+    {
+        label: 'lutsk',
+        name: 'Луцк',
+        clients: '2230',
+        space: '4110 м²',
+        transport: '1/7 авт.',
+        routes: '5 шт',
+        teams:'2',
+        partners: '7',
+        branches: 'Львовская обл, Львов',
+    },
+    {
+        label: 'mucachevo',
+        name: 'Мукачево',
+        clients: '4142',
+        space: '9490 м²',
+        transport: '3/5 авт.',
+        routes: '2 шт',
+        teams:'2',
+        partners: '9',
+        branches: 'Львовская обл, Львов',
+    },
+    {
+        label: 'summi',
+        name: 'Суммы',
+        clients: '4142',
+        space: '9490 м²',
+        transport: '3/5 авт.',
+        routes: '2 шт',
+        teams:'2',
+        partners: '9',
+        branches: 'Львовская обл, Львов',
+    },
+    {
+        label: 'dnipro',
+        name: 'Днепр',
+        clients: '5993',
+        space: '6230 м²',
+        transport: '14/21 авт.',
+        routes: '19 шт',
+        teams:'32',
+        partners: '17',
+        branches: 'Львовская обл, Львов',
+    },
+    {
+        label: 'harkiv',
+        name: 'Харьков',
+        clients: '4300',
+        space: '3310 м²',
+        transport: '5/5 авт.',
+        routes: '2 шт',
+        teams:'2',
+        partners: '15',
+        branches: 'Львовская обл, Львов',
+    },
+    {
+        label: 'donetsk',
+        name: 'Мариуполь',
+        clients: '4286',
+        space: '5924 м²',
+        transport: '4/15 авт.',
+        routes: '3 шт',
+        teams:'1',
+        partners: '10',
+        branches: 'Львовская обл, Львов',
+    }
+]
+
 
 function clickItemHandler(event){
     if(!event.target.closest('.click-item')) return;
     let item = event.target.closest('.click-item');
     let parent;
     if(event.target.closest('.click-obj')) parent = event.target.closest('.click-obj');
-
-    let map_info = [
-        {
-            label: 'chernigov',
-            name: 'Чернигов',
-            clients: '2550',
-            space: '1230 м²',
-            transport: '2/4 авт.',
-            routes: '1 шт',
-            teams:'15',
-            partners: '22',
-            branches: 'Черниговская обл, Чернигов',
-        },
-        {
-            label: 'kiev',
-            name: 'Киев',
-            clients: '7191',
-            space: '6590 м²',
-            transport: '5/15 авт.',
-            routes: '6 шт',
-            teams:'25',
-            partners: '167',
-            branches: 'Киевская обл, Киев',
-        },
-        {
-            label: 'poltava',
-            name: 'Полтава',
-            clients: '2260',
-            space: '6010 м²',
-            transport: '0/2 авт.',
-            routes: '3 шт',
-            teams:'5',
-            partners: '2',
-            branches: 'Полтавская обл, Полтава',
-        },
-        {
-            label: 'herson',
-            name: 'Херсон',
-            clients: '4925',
-            space: '2470 м²',
-            transport: '1/6 авт.',
-            routes: '1 шт',
-            teams:'18',
-            partners: '12',
-            branches: 'Херсонская обл, Херсон',
-        },
-        {
-            label: 'kropivnitskiy',
-            name: 'Кропивницкий',
-            clients: '7550',
-            space: '5230 м²',
-            transport: '5/1 авт.',
-            routes: '3 шт',
-            teams:'55',
-            partners: '37',
-            branches: 'Кропивницкая обл, Кропивницкий',
-        },
-        {
-            label: 'odessa',
-            name: 'Одесса',
-            clients: '1573',
-            space: '2231 м²',
-            transport: '1/14 авт.',
-            routes: '5 шт',
-            teams:'14',
-            partners: '8',
-            branches: 'Одесская обл, Одесса',
-        },
-        {
-            label: 'zaporozhye',
-            name: 'Запорожье',
-            clients: '4193',
-            space: '3230 м²',
-            transport: '3/8 авт.',
-            routes: '4 шт',
-            teams:'4',
-            partners: '31',
-            branches: 'Запорожская обл, Запорожье',
-        },
-        {
-            label: 'vinnitsa',
-            name: 'Винница',
-            clients: '1193',
-            space: '13230 м²',
-            transport: '0/8 авт.',
-            routes: '1 шт',
-            teams:'2',
-            partners: '11',
-            branches: 'Винницкая обл, Винница',
-        },
-        {
-            label: 'rovno',
-            name: 'Ровно',
-            clients: '193',
-            space: '3230 м²',
-            transport: '1/1 авт.',
-            routes: '1 шт',
-            teams:'2',
-            partners: '1',
-            branches: 'Ровенская обл, Ровно',
-        },
-        {
-            label: 'zitomir',
-            name: 'Житомир',
-            clients: '993',
-            space: '1230 м²',
-            transport: '4/1 авт.',
-            routes: '9 шт',
-            teams:'2',
-            partners: '1',
-            branches: 'Митомирская обл, Житомир',
-        },
-        {
-            label: 'lvov',
-            name: 'Львов',
-            clients: '5993',
-            space: '6230 м²',
-            transport: '14/21 авт.',
-            routes: '19 шт',
-            teams:'32',
-            partners: '17',
-            branches: 'Львовская обл, Львов',
-        },
-        {
-            label: 'hmelnitsky',
-            name: 'Хмельницкий',
-            clients: '2993',
-            space: '9310 м²',
-            transport: '1/11 авт.',
-            routes: '4 шт',
-            teams:'32',
-            partners: '8',
-            branches: 'Львовская обл, Львов',
-        },
-        {
-            label: 'ternopol',
-            name: 'Тернополь',
-            clients: '4300',
-            space: '3310 м²',
-            transport: '5/5 авт.',
-            routes: '2 шт',
-            teams:'2',
-            partners: '15',
-            branches: 'Львовская обл, Львов',
-        },
-        {
-            label: 'frankovsk',
-            name: 'Ивано-Франковск',
-            clients: '1700',
-            space: '7310 м²',
-            transport: '1/15 авт.',
-            routes: '6 шт',
-            teams:'22',
-            partners: '1',
-            branches: 'Львовская обл, Львов',
-        },
-        {
-            label: 'chernivchi',
-            name: 'Черновцы',
-            clients: '5500',
-            space: '3810 м²',
-            transport: '7/1 авт.',
-            routes: '3 шт',
-            teams:'12',
-            partners: '10',
-            branches: 'Львовская обл, Львов',
-        },
-        {
-            label: 'uman',
-            name: 'Черкассы',
-            clients: '7100',
-            space: '5110 м²',
-            transport: '17/21 авт.',
-            routes: '8 шт',
-            teams:'1',
-            partners: '30',
-            branches: 'Львовская обл, Львов',
-        },
-        {
-            label: 'mikolaiv',
-            name: 'Николаев',
-            clients: '1230',
-            space: '4110 м²',
-            transport: '1/7 авт.',
-            routes: '5 шт',
-            teams:'2',
-            partners: '7',
-            branches: 'Львовская обл, Львов',
-        },
-        {
-            label: 'lutsk',
-            name: 'Луцк',
-            clients: '2230',
-            space: '4110 м²',
-            transport: '1/7 авт.',
-            routes: '5 шт',
-            teams:'2',
-            partners: '7',
-            branches: 'Львовская обл, Львов',
-        },
-        {
-            label: 'mucachevo',
-            name: 'Мукачево',
-            clients: '4142',
-            space: '9490 м²',
-            transport: '3/5 авт.',
-            routes: '2 шт',
-            teams:'2',
-            partners: '9',
-            branches: 'Львовская обл, Львов',
-        },
-        {
-            label: 'summi',
-            name: 'Суммы',
-            clients: '4142',
-            space: '9490 м²',
-            transport: '3/5 авт.',
-            routes: '2 шт',
-            teams:'2',
-            partners: '9',
-            branches: 'Львовская обл, Львов',
-        },
-        {
-            label: 'dnipro',
-            name: 'Днепр',
-            clients: '5993',
-            space: '6230 м²',
-            transport: '14/21 авт.',
-            routes: '19 шт',
-            teams:'32',
-            partners: '17',
-            branches: 'Львовская обл, Львов',
-        },
-        {
-            label: 'harkiv',
-            name: 'Харьков',
-            clients: '4300',
-            space: '3310 м²',
-            transport: '5/5 авт.',
-            routes: '2 шт',
-            teams:'2',
-            partners: '15',
-            branches: 'Львовская обл, Львов',
-        },
-        {
-            label: 'donetsk',
-            name: 'Мариуполь',
-            clients: '4286',
-            space: '5924 м²',
-            transport: '4/15 авт.',
-            routes: '3 шт',
-            teams:'1',
-            partners: '10',
-            branches: 'Львовская обл, Львов',
-        }
-    ]
 
     let obj = {
         'toggle': function(target){
@@ -461,10 +466,11 @@ function clickItemHandler(event){
                 element.setAttribute('src', brandImg)
             })
 
-            target.classList.add('active');
-            section.classList.add('active');
+            target.classList.toggle('active');
+            section.classList.toggle('active');
 
             section.setAttribute('data-row', target.dataset.row);
+            section.setAttribute('data-row-sm', target.dataset.row_sm);
         },
         'partner-popup-close': function(){
             let section = document.querySelector('.brands_box.active');
@@ -489,6 +495,9 @@ function clickItemHandler(event){
             } else {
                 console.log('укажите селектор требуемого элемента в data-label нажимаемой кнопки')
             }
+        },
+        'footerTab': function(target){
+            target.closest('.footer_middle_column').classList.toggle('active');
         },
         'form-success': function(target){
             let body = document.querySelector('body');
@@ -1147,6 +1156,35 @@ function ticker(){
     })
 };
 
+
+function mapSelector(){
+    let select = document.querySelectorAll('.map-mobile .select_option.hover-item');
+    let popup = document.querySelector('.map_popup');
+    let rend = document.querySelectorAll('.rend-element');
+
+    select.forEach(item => {
+        if(item.dataset.value != 'выберите регион')
+        item.addEventListener('click', () => {
+            popup.classList.add('active');
+            map_info.filter(x => x.label === item.dataset.value).map(x =>{
+                setTimeout(() => {
+                    document.querySelector('.select_option.chosen').innerHTML = x.name;
+                }, 10);
+                for (var key in x) {
+                    rend.forEach(element =>{
+                        element.innerHTML = x[element.dataset.value];
+                    });
+                    }
+                }
+            );
+        })
+    });
+}
+if(document.querySelector('.map-mobile')){
+    setTimeout(() => {
+        mapSelector()
+    }, 1000);
+}
 
 function emulateSelector(select){
     let selects = document.querySelectorAll(select);
