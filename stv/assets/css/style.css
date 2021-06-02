@@ -1081,7 +1081,7 @@ input[type="search"]::-webkit-search-results-decoration{ display: none; }
   display: flex;
   align-items: center;
   min-width: 200vw;
-  animation: partners_stroke_line 30s linear;
+  animation: partners_stroke_line 40s linear;
   animation-iteration-count: infinite; 
 }
 @keyframes partners_stroke_line{
