@@ -5114,17 +5114,6 @@ body #bingc-active {
     position: relative;
     z-index: 3;
 }
-.about-advantages_item::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    background: #2E4A37;
-    opacity: 0.4;
-}
 .about-advantages_item::after{
     content: '';
     position: absolute;
@@ -5133,6 +5122,17 @@ body #bingc-active {
     left: 0;
     top: 0;
     z-index: 2;
+    background: #2E4A37;
+    opacity: 0.4;
+}
+.about-advantages_item::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
     background: radial-gradient(150.16% 150.16% at 50% 50%, #000000 0%, rgba(0, 0, 0, 0) 100%);
     opacity: 0.3;
 }
@@ -5365,27 +5365,27 @@ body #bingc-active {
 }
 
 
-.atelier-services{
+.atelier-portrait{
     margin: 100px 0 35px;
 }
-.atelier-services_list{
+.atelier-portrait_list{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
 }
-.atelier-services .about-heading{
+.atelier-portrait .about-heading{
     margin-bottom: 65px;
 }
-.atelier-services_item{
+.atelier-portrait_item{
     margin-bottom: 65px;
     width: 21.5%;
 }
-.atelier-services_item .icon{
+.atelier-portrait_item .icon{
     text-align: center;
     margin-bottom: 32px;
 }
-.atelier-services_item .descr{
+.atelier-portrait_item .descr{
     color: #000000;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -5415,6 +5415,7 @@ body #bingc-active {
     background-repeat: no-repeat;
     background-position: center center;
     margin-bottom: 18px;
+    display: none;
 }
 .atelier-individually_item:nth-child(3n){
     width: 100%;
@@ -5505,6 +5506,9 @@ body #bingc-active {
     color: #fff;
     background: #BE9948;
 }
+.atelier-howwork_btn:focus{
+    color: #FFFFFF;
+}
 
 
 
@@ -5564,4 +5568,340 @@ body #bingc-active {
     font-size: 20px;
     line-height: 24px;
     font-family: 'SolomonSansSemiBold';
+}
+
+
+
+
+
+.atelier-services{
+    margin: 80px 0;
+}
+.atelier-services .about-heading{
+    margin-bottom: 40px;
+}
+.atelier-services_list{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.atelier-services_item{
+    width: 33.4%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    padding: 80px 3%;
+}
+.atelier-services_item .content{
+    z-index: 3;
+    position: relative;
+    color: #FFFFFF;
+    text-align: center;
+}
+.atelier-services_item .heading{
+    margin-bottom: 29px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: 'SolomonSansSemiBold';
+    min-height: 96px;
+}
+.atelier-services_item .price{
+    font-size: 32px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: normal;
+    font-family: 'SolomonSansSemiBold';
+    margin-bottom: 20px;
+}
+.atelier-services_item .decr ul{
+    list-style: none;
+    margin: 0;
+}
+.atelier-services_item .decr ul li{
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+.atelier-services_item::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background: #2E4A37;
+    opacity: 0.4;
+}
+.atelier-services_item::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: radial-gradient(150.16% 150.16% at 50% 50%, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0.3;
+}
+
+
+
+
+
+.atelier-request{
+    margin: 80px 0;
+}
+
+.atelier-request_heading{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.atelier-request_heading .icon{
+    margin-bottom: 16px;
+}
+.atelier-request_heading_title{
+    color: #000000;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-family: 'SolomonSansSemiBold';
+}
+.atelier-request_form{
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.atelier-request_form input, .atelier-request_form textarea{
+    display: block;
+    width: 100%;
+    height: 38px;
+    margin-bottom: 14px;
+    text-align: center;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000000;
+    color: #000;
+    letter-spacing: 0.02em;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+.atelier-request_form input::placeholder, .atelier-request_form textarea::placeholder{
+    font-size: 12px;
+    color: #A3A3A3;
+    font-family: 'SolomonSansNormal';
+}
+.atelier-request_form input:focus, .atelier-request_form textarea:focus{
+    border-color: #BE9948;
+}
+.atelier-request_form textarea{
+    height: 68px;
+    resize: none;
+}
+.atelier-request_form .submit{
+    display: block;
+    margin: 0 auto;
+    margin-top: 48px;
+    outline: none;
+    transition: all 0.2s;
+    padding: 14px 71px;
+    background: #000000;
+    color: #FFFFFF;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: 'SolomonSansSemiBold';
+    border: none;
+    cursor: pointer;
+}
+.atelier-request_form .submit:hover{
+    background: #BE9948;
+}
+.atelier-request_socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.atelier-request_socials a{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 25px;
+}
+.atelier-request_socials a svg{
+    max-width: 100%;
+}
+
+
+
+@media screen and (max-width: 1200px){
+    .atelier-portrait_item{
+        width: 22.5%;
+    }
+    .atelier-portrait_item .descr{
+        font-size: 13px;
+    }
+    .atelier-individually_item{
+        height: 596px;
+    }
+    .atelier-howwork_item{
+        width: 22%;
+        margin-left: 2.5%;
+    }
+    .atelier-services_item{
+        padding: 60px 2%;
+    }
+    .atelier-services_item .heading{
+        font-size: 16px;
+        line-height: 23px;
+    }
+    .atelier-services_item .decr ul li{
+        font-size: 15px;
+        margin-bottom: 13px;
+    }
+}
+@media screen and (max-width: 992px){
+    .atelier-portrait_item{
+        width: 45.5%;
+        margin-bottom: 45px;
+    }
+    .atelier-individually_item{
+        height: 450px;
+    }
+    .atelier-howwork_item{
+        width: 29%;
+        margin-left: 3.5%;
+    }
+    .atelier-howwork_item:nth-child(1), .atelier-howwork_item:nth-child(5){
+        margin-left: 3.5%;
+    }
+    .atelier-howwork_item .number{
+        font-size: 54px;
+    }
+    .atelier-howwork_item .heading{
+        margin-bottom: 10px;
+    }
+    .atelier-howwork_btn{
+        margin-top: 75px;
+    }
+    .atelier-services_list{
+        display: block;
+    }
+    .atelier-services_item{
+        width: 100%;
+        border-bottom: 4px solid #000;
+    }
+    .atelier-services_item:last-child{
+        border-bottom: none;
+    }
+    .atelier-services_item .heading{
+        min-height: auto;
+        max-width: 70%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .atelier-portrait{
+        margin: 50px 0 35px;
+    }
+    .atelier-portrait .about-heading{
+        margin-bottom: 35px;
+    }
+    .atelier-portrait_item .icon{
+        margin-bottom: 22px;
+    }
+    .atelier-individually_list{
+        padding: 0;
+    }
+    .atelier-individually_item{
+        height: 250px;
+        margin-bottom: 5px;
+    }
+    .atelier-individually_loadmore:hover{
+        background: transparent;
+        color: #000;
+    }
+    .atelier-individually{
+        margin-bottom: 50px;
+    }
+    .atelier-howwork .about-heading{
+        margin-bottom: 30px;
+    }
+    .atelier-howwork_list{
+        display: block;
+    }
+    .atelier-howwork_item:nth-child(1), .atelier-howwork_item:nth-child(5){
+        margin-left: 0;
+    }
+    .atelier-howwork_item{
+        margin-left: 0;
+        width: 100%;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .atelier-howwork_btn{
+        margin: 0 auto;
+        margin-top: 30px;
+        display: block;
+        width: max-content;
+    }
+    .atelier-individually .about-heading{
+        margin-bottom: 35px;
+    }
+    .atelier-howwork_list{
+        margin-bottom: 0;
+    }
+    .atelier-howwork{
+        margin-bottom: 50px;
+    }
+    .atelier-movie{
+        margin: 50px 0;
+        height: 350px;
+    }
+    .atelier-movie_plug{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .atelier-movie_plug button{
+        margin-bottom: 15px;
+    }
+    .atelier-movie_plug button svg{
+        width: 70px;
+        height: 70px;
+    }
+    .atelier-movie_plug .heading{
+        font-size: 18px;
+    }
+    .atelier-services{
+        margin: 50px 0;
+    }
+    .atelier-services .about-heading{
+        margin-bottom: 30px;
+    }
+    .atelier-services_item .heading{
+        max-width: 100%;
+    }
+    .atelier-services_item .decr ul li{
+        margin-bottom: 10px;
+    }
+    .atelier-services_item .decr ul li:last-child{
+        margin-bottom: 0;
+    }
+    .atelier-request_heading_title{
+        line-height: 26px;
+        font-size: 18px;
+    }
+    .atelier-request_form .submit:hover, .atelier-howwork_btn:hover{
+        background: #000;
+        color: #fff;
+    }
 }
