@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="content_language" content="ru">
+  <meta name="description" content=""> 
+  <title>kimberli</title>
+  <link rel="stylesheet" href="css/okay.css">
+  <link rel="stylesheet" href="css/media.css">
+</head> 
+
+<body>
+ 
+  <div id="fn_content" class="main">
+    
+    <div class="order">
+      <div class="container-fluid">
+        <div class="order_heading">оформлення замовлення</div>
+        <div class="order_wrapp">
+          <div class="order_dataset">
+            <div class="order_step">
+              <div class="order_step_heading">1. КОНТАКТНІ ДАНІ</div>
+              <button class="order_step_back">Редагувати</button>
+              <div class="order_step_contacts">
+                <div class="order_step_input-group">
+                  <input type="text" placeholder="Ім’я*" required>
+                  <span class="label">Ім’я*</span>
+                </div>
+                <div class="order_step_input-group">
+                  <input type="text" placeholder="Номер телефону*" required>
+                  <span class="label">Номер телефону*</span>
+                </div>
+                <div class="order_step_input-group">
+                  <input type="text" placeholder="Email*" required>
+                  <span class="label">Email*</span>
+                </div>
+                <div class="order_step_input-group">
+                  <input type="text" placeholder="Адреса*" required>
+                  <span class="label">Адреса*</span>
+                </div>
+                <button type="button">зберегти та продовжити</button>
+              </div>
+            </div>
+
+            <div class="order_step step-two">
+              <div class="order_step_heading">2. СПОСОБИ ДОСТАВКИ</div>
+              <div class="order_step_radio-group">
+                <input type="radio" name="delivery" id="courier" checked="true">
+                <label for="courier">Безкоштовна доставка кур’єром до дверей (безкоштовно)</label>
+              </div>
+              <div class="order_step_radio-group">
+                <input type="radio" name="delivery" id="pickup">
+                <label for="pickup">Самовивіз (безкоштовно)</label>
+              </div>
+            </div>
+
+            <div class="order_step step-two">
+              <div class="order_step_heading">3. СПОСОБИ оплати</div>
+              <div class="order_step_radio-group">
+                <input type="radio" name="pay" id="cash" checked="true">
+                <label for="cash">Оплата готівкою</label>
+              </div>
+              <div class="order_step_radio-group">
+                <input type="radio" name="pay" id="online">
+                <label for="online">Оплата онлайн</label>
+              </div>
+              <div class="order_step_radio-group">
+                <input type="radio" name="pay" id="privat">
+                <label for="privat">Оплата частинами для клієнтів ПриватБанку</label>
+              </div>
+              <div class="order_step_radio-group">
+                <input type="radio" name="pay" id="credit">
+                <label for="credit">Миттєва розстрочка для клієнтів ПриватБанку</label>
+              </div>
+            </div>
+
+            <div class="order_comment step-two">
+              <button type="button">
+                <div class="icon"></div>
+                <span>Додати коментар до замовлення</span>               
+              </button>
+              <div class="order_step_input-group">
+                <textarea type="text" placeholder="Коментар"></textarea>
+                <span class="label">Коментар</span>
+              </div>
+            </div>
+            <button type="submit" class="order_submit mob">оформити замовлення</button>
+          </div>
+          <div class="order_info">
+            <div class="order_products">
+              <div class="order_product">
+                <button class="close">
+                  <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1.6615" y1="1.09778" x2="12.1241" y2="11.5604" stroke="black" stroke-width="0.804817"/>
+                    <line x1="1.09241" y1="11.5604" x2="11.555" y2="1.0978" stroke="black" stroke-width="0.804817"/>
+                  </svg>                    
+                </button>
+                <a href="#" class="order_product_preview">
+                  <img src="img/order-product_preview.png" alt="">
+                </a>
+                <div class="order_product_details">
+                  <a href="#" class="order_product_name">золота каблучка з діамантами -к1124</a>
+                  <div class="order_product_count"></div>
+                  <div class="order_product_price">25 817 грн</div>
+                </div>
+              </div>
+              <div class="order_product">
+                <button class="close">
+                  <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1.6615" y1="1.09778" x2="12.1241" y2="11.5604" stroke="black" stroke-width="0.804817"/>
+                    <line x1="1.09241" y1="11.5604" x2="11.555" y2="1.0978" stroke="black" stroke-width="0.804817"/>
+                  </svg>                    
+                </button>
+                <a href="#" class="order_product_preview">
+                  <img src="img/order-product_preview.png" alt="">
+                </a>
+                <div class="order_product_details">
+                  <a href="#" class="order_product_name">золота каблучка з діамантами -к1124</a>
+                  <div class="order_product_count"></div>
+                  <div class="order_product_price">25 817 грн</div>
+                </div>
+              </div>
+              <div class="order_product">
+                <button class="close">
+                  <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1.6615" y1="1.09778" x2="12.1241" y2="11.5604" stroke="black" stroke-width="0.804817"/>
+                    <line x1="1.09241" y1="11.5604" x2="11.555" y2="1.0978" stroke="black" stroke-width="0.804817"/>
+                  </svg>                    
+                </button>
+                <a href="#" class="order_product_preview">
+                  <img src="img/order-product_preview.png" alt="">
+                </a>
+                <div class="order_product_details">
+                  <a href="#" class="order_product_name">золота каблучка з діамантами -к1124</a>
+                  <div class="order_product_count"></div>
+                  <div class="order_product_price">25 817 грн</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="order_nav">
+              <div class="order_price">
+                <span>Всього:</span>
+                <p>52300 грн</p>
+              </div>
+              <div class="order_promo">
+                <input type="text" placeholder="Промокод">
+                <button type="button">Застосувати</button>
+              </div>
+              <button type="submit" class="order_submit desk">оформити замовлення</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ </div>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+ <script>
+
+   $('.order_step_contacts button').on('click', function() {
+    $('.order').addClass('finally-step');
+   });
+
+   $('.order_comment button').on('click', function() {
+    $('.order_comment').toggleClass('active');
+   });
+
+   $('.order_step_back').on('click', function() {
+    $('.order').removeClass('finally-step');
+   });
+ </script>
+
+</body>
+</html>
