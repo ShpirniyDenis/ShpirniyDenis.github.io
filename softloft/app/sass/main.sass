@@ -1,0 +1,1021 @@
+
+
+body
+  font-family: 'Raleway' !important
+  font-weight: normal !important
+  &::after
+    display: none
+*
+  &::after
+    display: none
+*
+  font-family: 'Raleway' !important
+.cabinet-container
+  max-width: 1255px
+  width: 100%
+  margin: 0 auto
+  padding: 0 25px
+  font-family: 'Raleway'
+  font-weight: normal
+
+.login-section
+  padding: 100px 0
+.login_wrapp
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+.login_content
+  max-width: 472px
+  margin-right: 220px
+.login_title
+  margin-bottom: 20px
+  font-weight: 600
+  font-size: 40px
+  line-height: 47px
+  color: #3D3D3D
+
+.login_nav
+  display: flex
+  align-items: flex-end
+  justify-content: flex-start
+  margin-bottom: 30px
+  a
+    margin-right: 30px
+    padding-bottom: 6px
+    border-bottom: 2px solid transparent
+    color: #76767A
+    font-weight: 600
+    font-size: 18px
+    line-height: 21px
+    text-transform: uppercase
+    &:last-child
+      margin-right: 0
+    &.active
+      color: #3D3D3D
+      border-color: #4BBCC5
+    &:hover
+      text-decoration: none
+  
+.login_tab_heading
+  margin-bottom: 12px
+  color: #3D3D3D
+  font-weight: 600
+  font-size: 20px
+  line-height: 23px
+.login_tab_descr
+  color: #76767A
+  font-size: 14px
+  line-height: 16px
+  margin-bottom: 24px
+
+.cabinet-container .form-group
+  width: 100%
+  position: relative
+  margin-bottom: 24px
+  label
+    display: block
+    margin-bottom: 15px
+    color: #3D3D3D
+    font-size: 15px
+    line-height: 18px
+    font-weight: normal
+    .required
+      color: #F12121
+  input
+    display: block
+    width: 100%
+    border: 1px solid #CED4DA
+    height: 42px
+    border-radius: 4px
+    padding-left: 15px
+    transition: all 0.2s
+    font-size: 16px
+    &:focus
+      outline: none
+      border-color: #3D3D3D
+  textarea
+    display: block
+    width: 100%
+    border: 1px solid #CED4DA
+    height: 120px
+    border-radius: 4px
+    padding-left: 15px
+    padding-top: 10px
+    transition: all 0.2s
+    font-size: 16px
+    resize: none
+    &:focus
+      outline: none
+      border-color: #3D3D3D
+  select
+    display: block
+    width: 100%
+    border: 1px solid #CED4DA
+    height: 42px
+    border-radius: 4px
+    padding-left: 15px
+    transition: all 0.2s
+    font-size: 16px
+    &:focus
+      outline: none
+      border-color: #3D3D3D
+  .form-group_list
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    input
+      width: 48%
+  .pass-toggler
+    position: absolute
+    bottom: 10px
+    right: 16px
+    cursor: pointer
+    padding: 0
+    border: none
+    background: transparent
+    &:focus
+      outline: none
+    &.active
+      path
+        stroke: #828282
+
+.button-group
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  margin-top: 32px
+  .submit
+    padding: 11px 32px
+    color: #FFFFFF
+    font-weight: 600
+    font-size: 14px
+    text-transform: uppercase
+    margin-right: 24px
+    transition: all 0.2s
+    border: none
+    background: #4BBCC5
+    border-radius: 4px
+    &:focus
+      outline: none
+    &:hover
+      text-decoration: none
+      background: #2d939b
+  a.forgot
+    color: #4BBCC5
+    font-size: 16px
+
+.form-check-group
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  .form-check
+    margin-right: 16px
+    label
+      height: 18px
+      line-height: 18px
+    &:last-child
+      margin-right: 0
+.form-check
+  padding-left: 0
+  input
+    display: none
+    &:checked+label
+      &::after
+        opacity: 1
+  label
+    padding-left: 28px
+    color: #3D3D3D
+    font-weight: 600
+    font-size: 12px
+    line-height: 14px
+    position: relative
+    cursor: pointer
+    margin: 0
+    span
+      display: block
+    a
+      color: #4BBCC5
+      font-size: 12px
+    &::before
+      content: ''
+      position: absolute
+      display: inline-block
+      width: 18px
+      height: 18px
+      left: 0
+      top: 0
+      border-radius: 4px
+      border: 1px solid #DDDDDD
+    &::after
+      content: ''
+      position: absolute
+      display: inline-block
+      width: 18px
+      height: 18px
+      background-image: url('../img/check-icon.svg')
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: contain
+      left: 0
+      top: 0
+      opacity: 0
+      transition: opacity 0.4s
+    
+
+.login_delimiter
+  margin: 30px 0 24px
+  display: flex
+  justify-content: center
+  align-items: center
+  span
+    color: #3D3D3D
+    font-size: 15px
+    line-height: 18px
+    flex-shrink: 0
+    margin: 0 12px
+  &::after, &::before
+    content: ''
+    display: block
+    width: 100%
+    height: 1px
+    background-color: #CED4DA
+
+.login_socials
+  .heading
+    color: #3D3D3D
+    font-weight: 600
+    font-size: 20px
+    line-height: 23px
+    margin-bottom: 20px
+.login_socials_list
+  display: flex
+  justify-content: space-between
+  align-items: center
+  a
+    padding: 18px
+    border: none
+    width: 47%
+    background: #ECFAFB
+    border-radius: 80px
+    text-align: center
+    color: #4BBCC5
+    font-weight: 600
+    font-size: 16px
+    transition: all 0.2s
+    svg,img
+      margin-right: 8px
+      max-width: 24px
+      height: auto
+    span
+      vertical-align: middle
+    &:hover
+      text-decoration: none
+      background: #dcf0f1
+
+
+.login_instruction
+  padding-top: 25px
+  .heading
+    color: #3D3D3D
+    font-weight: 600
+    font-size: 20px
+    line-height: 23px
+    margin-bottom: 16px
+  ul
+    padding: 0
+    li
+      padding-left: 15px
+      display: block
+      color: #3D3D3D
+      font-size: 18px
+      line-height: 21px
+      margin-bottom: 10px
+      position: relative
+      &:last-child
+        margin-bottom: 0
+      &::before
+        position: absolute
+        content: ''
+        display: inline-block
+        width: 4px
+        height: 4px
+        background: #3D3D3D
+        border-radius: 50%
+        left: 0
+        top: 50%
+    
+
+    
+.cabinet-section
+  padding-top: 80px
+  padding-bottom: 100px
+.cabinet-header
+  display: none
+.cabinet_wrapp
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+.cabinet_nav
+  width: 30%
+.cabinet_nav_list
+  padding: 0
+  list-style: none
+  li
+    display: block
+    margin-bottom: 20px
+    a
+      color: #76767A
+      font-size: 16px
+      line-height: 19px
+      transition: all 0.2s
+      .icon
+        width: 24px
+        height: 24px
+        overflow: hidden
+        margin-right: 12px
+        display: inline-block
+        text-align: center
+        line-height: 24px
+        svg,img
+          max-width: 100%
+      span
+        vertical-align: sub
+      svg
+        path
+          transition: all 0.2s
+      &.active
+        color: #4BBCC5
+        font-weight: 600
+        pointer-events: none
+        svg
+          path
+            fill: #4BBCC5
+      &:hover
+        color: #4BBCC5
+        text-decoration: none
+        svg
+          path
+            fill: #4BBCC5
+    &:last-child
+      margin-bottom: 0
+    &:nth-child(4), &:nth-child(6)
+      a.active
+        svg
+          path
+            stroke: #4BBCC5
+            fill: transparent
+      a:hover
+        svg
+          path
+            stroke: #4BBCC5
+            fill: transparent
+
+
+.cabinet_content
+  width: 64%
+  position: relative
+.cabinet-back
+  display: block
+  color: #4BBCC5
+  font-weight: 600
+  font-size: 14px
+  line-height: 16px
+  position: absolute
+  top: -35px
+  left: 0
+  svg
+    margin-right: 10px
+  &:hover
+    text-decoration: none
+.cabinet_content_head
+  margin-bottom: 32px
+.cabinet_content_heading
+  margin-bottom: 16px
+  color: #3D3D3D
+  font-weight: 600
+  font-size: 30px
+  line-height: 35px
+  max-width: 660px
+  &:last-child
+    margin-bottom: 0
+.cabinet_content_descr
+  color: #76767A
+  font-size: 14px
+  line-height: 22px
+  max-width: 660px
+.cabinet_profile
+  max-width: 472px
+  width: 100%
+  .form-check
+    margin-bottom: 24px
+    label
+      height: 18px
+      line-height: 18px
+.cabinet_form_heading
+  color: #3D3D3D
+  font-weight: 600
+  font-size: 20px
+  line-height: 23px
+  margin-bottom: 20px
+
+.cabinet_mailing
+  margin-bottom: 32px
+  .heading
+    margin-bottom: 8px
+    color: #3D3D3D
+    font-weight: 600
+    font-size: 20px
+    line-height: 23px
+  .descr
+    color: #76767A
+    font-size: 16px
+    line-height: 26px
+    margin-bottom: 24px
+.cabinet_mailing_list
+  display: flex
+  justify-content: flex-start
+  align-items: stretch
+.cabinet_mailing_item
+  padding: 18px 31px
+  border-radius: 80px
+  background: #ECFAFB
+  margin-right: 12px
+  color: #4BBCC5
+  font-weight: 600
+  font-size: 16px
+  line-height: 19px
+  transition: all 0.2s
+  span
+    vertical-align: middle
+  svg
+    max-width: 24px
+    height: auto
+    margin-right: 8px
+  &:last-child
+    margin-right: 0
+  &:hover
+    background: #dcf0f1
+    text-decoration: none
+
+
+.cabinet_subscribe
+  .button-group
+    margin-bottom: 12px
+.empty-message
+  font-size: 14px
+  line-height: 22px
+  color: #76767A
+.subscribe-tags
+  margin-bottom: 20px
+  .heading
+    margin-bottom: 16px
+    color: #3D3D3D
+    font-weight: 600
+    font-size: 20px
+    line-height: 23px
+  .list
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    flex-wrap: wrap
+    a
+      padding: 8px 12px
+      display: inline-block
+      margin-right: 12px
+      margin-bottom: 12px
+      background: #ECFAFB
+      border-radius: 20px
+      color: #4BBCC5
+      font-weight: 600
+      font-size: 16px
+      transition: all 0.2s
+      &:hover
+        text-decoration: none
+        background: #dcf0f1
+      &:last-child
+        margin-right: 0
+  &:last-child
+    margin-bottom: 0
+
+.cabinet_subscribe_details
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  margin-bottom: 24px
+  p
+    display: inline-block
+    color: #3D3D3D
+    margin-right: 32px
+    font-weight: 600
+    font-size: 16px
+    margin-bottom: 0
+    &:last-child
+      margin-right: 0
+
+.cabinet_subscribe_create
+  max-width: 472px
+  .form-check-group
+    margin-bottom: 26px
+    margin-top: -12px
+
+  
+.subscribe-table
+  .descr
+    color: #76767A
+    font-size: 16px
+    line-height: 26px
+.subscribe-table_list
+  margin-bottom: 16px
+.subscribe-table_head
+  padding: 20px 8px
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  border-bottom: 1px solid #A9AEB3
+  div
+    color: #76767A
+    font-size: 14px
+    line-height: 16px
+.subscribe-table_item
+  border-bottom: 1px solid #CED4DA
+  display: flex
+  justify-content: flex-start
+  padding: 17px 8px
+  div
+    color: #3D3D3D
+    font-size: 16px
+    line-height: 19px
+  .btns
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    a
+      display: inline-block
+      margin-right: 12px
+      svg,img
+        max-width: 24px
+        height: auto
+      svg
+        path
+          transition: all 0.2s
+      &:focus
+        outline: nonr
+      &:last-child
+        margin-right: 0
+      &:hover
+        svg
+          path
+            fill: #2d939b
+
+.subscribe-table_head, .subscribe-table_item
+  .col-number
+    width: 4%
+  .col-name
+    width: 48%
+  .col-date
+    width: 25%
+    text-align: right
+  .col-btns
+    width: 23%
+    text-align: right
+  .col-title
+    display: none
+
+.cabinet_subscribe_districts
+  display: flex
+  justify-content: flex-start
+  flex-wrap: wrapp
+  margin-bottom: 12px
+  a
+    display: inline-block
+    margin-right: 12px
+    margin-bottom: 12px
+    padding: 8px 12px 8px 39px
+    color: #4BBCC5
+    font-weight: 600
+    font-size: 16px
+    background-image: url('../img/close-icon.svg')
+    background-repeat: no-repeat
+    background-position: 16px 13px
+    background-size: 13px
+    background-color: #ECFAFB
+    border-radius: 20px
+    &:hover
+      text-decoration: none
+      background-color: #dcf0f1
+
+
+.cabinet_settings_form
+  max-width: 472px
+  margin-bottom: 24px
+.delete-link
+  color: #4BBCC5
+  font-size: 14px
+  transition: all 0.2s
+  svg
+    margin-right: 10px
+  span
+    vertical-align: middle
+  &:hover,&:focus
+    outline: none
+    text-decoration: none
+
+
+
+
+.modal-delate_title
+  margin-bottom: 32px
+  font-size: 30px
+  line-height: 35px
+  color: #3D3D3D
+  font-weight: 600
+.modal-delate_cause
+  margin-bottom: 32px
+  .heading
+    margin-bottom: 16px
+    font-weight: 600
+    font-size: 20px
+    line-height: 23px
+    color: #3D3D3D
+  .descr
+    margin-bottom: 22px
+    font-size: 18px
+    line-height: 21px
+    color: #3D3D3D
+  ul
+    padding: 0
+    margin-bottom: 24px
+    li
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      margin-bottom: 20px
+      cursor: pointer
+      &:last-child
+        margin-bottom: 0
+      input
+        order: 0
+        width: 18px
+        height: 18px
+        margin: 0
+        margin-right: 11px
+      label
+        color: #3D3D3D
+        font-weight: normal
+        font-size: 16px
+        line-height: 19px
+        margin: 0
+  textarea
+    width: 100%
+    border: 1px solid #CED4DA
+    border-radius: 4px
+    padding-top: 20px
+    padding-left: 16px
+    font-size: 16px
+    height: 88px
+    resize: none
+    color: #000
+    &::placeholder
+      font-size: 15px
+      color: #76767A
+    &:focus
+      outline: none
+.modal-delate_instruction
+  margin-bottom: 32px
+  .heading
+    margin-bottom: 16px
+    font-weight: 600
+    font-size: 20px
+    line-height: 23px
+    color: #3D3D3D
+  ul
+    padding: 0
+    padding-left: 20px
+    li
+      color: #3D3D3D
+      font-size: 17px
+      line-height: 21px
+      margin-bottom: 12px
+      &:last-child
+        margin-bottom: 0
+
+.modal-delate_btns
+  button
+    width: 100%
+    display: block
+    margin-bottom: 16px
+    border: 1px solid #4BBCC5
+    border-radius: 4px
+    background: #4BBCC5
+    color: #FFFFFF
+    font-weight: 600
+    font-size: 14px
+    line-height: 16px
+    text-transform: uppercase
+    height: 42px
+    &[type="submit"]
+      color: #4BBCC5
+      background: #fff
+    &:focus
+      outline: none
+    &:last-child
+      margin-bottom: 0
+
+.modal-delate
+  .modal-dialog
+    width: 100%
+    max-width: 645px
+  .modal-body
+    padding: 40px
+
+  
+
+
+// for main
+@media screen and ( max-width:  1200px)
+  .cabinet_content
+    width: 56%
+  .cabinet_nav
+    width: 37%
+  .cabinet_nav_list li a
+    font-size: 15px
+  .cabinet_content_heading
+    font-size: 26px
+@media screen and ( max-width:  992px)
+  .cabinet_nav
+    position: absolute
+    z-index: 20
+    background: #fff
+    filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.08))
+    padding: 24px
+    width: auto
+    max-width: 100%
+    top: 66px
+    left: 10px
+    display: none
+    &.active
+      display: block
+  .cabinet_nav_list li a .icon
+    margin-right: 9px
+  .cabinet_wrapp
+    display: block
+  .cabinet_content
+    width: 100%
+  .cabinet-container
+    padding: 0 15px
+  .cabinet-section
+    padding-top: 60px
+    padding-bottom: 80px
+  .cabinet_content_head
+    margin-bottom: 24px
+  .cabinet_content_heading
+    font-size: 20px
+    line-height: 24px
+  .cabinet_content_descr
+    line-height: 25px
+  .cabinet_form_heading
+    margin-bottom: 16px
+    font-size: 16px
+  .cabinet-container .form-group textarea
+    height: 104px
+  .cabinet_mailing .heading
+    font-size: 16px
+    margin-bottom: 8px
+  .cabinet_mailing .descr
+    font-size: 14px
+    line-height: 20px
+    margin-bottom: 20px
+  .cabinet_mailing_item svg
+    margin-right: 3px
+  .cabinet_mailing_item
+    margin-right: 8px
+    padding: 18px 11px
+    margin-bottom: 8px
+    &:last-child
+      margin-right: 0
+  .cabinet_mailing_list
+    flex-wrap: wrap
+  .cabinet_mailing
+    margin-bottom: 24px
+  .cabinet-header
+    display: block
+    background: #fff
+    padding: 15px 15px
+    border-bottom: 1px solid #4BBCC5
+  .cabinet-burger
+    border: none
+    background: transparent
+    outline: none
+@media screen and ( max-width:  359px)
+  .cabinet_mailing_item
+    font-size: 13px
+    svg
+      max-width: 19px
+  .cabinet_nav
+    padding-left: 10px
+    padding-right: 10px
+  .cabinet_nav_list li a
+    font-size: 14px
+  
+
+// for login page
+@media screen and ( max-width:  1200px)
+  .login_content
+    max-width: 60%
+    margin-right: 30px
+  .login_wrapp
+    justify-content: space-between
+@media screen and ( max-width:  992px)
+  .login_instruction
+    display: none
+  .login_wrapp
+    display: block
+  .login_content
+    width: 100%
+    max-width: 100%
+    margin-right: 0
+  .login_title
+    font-size: 20px
+    line-height: 23px
+    margin-bottom: 20px
+  .login_nav
+    justify-content: space-between
+    margin-bottom: 24px
+    border-radius: 4px
+    border: 1px solid #CCCCCC
+    overflow: hidden
+    a
+      height: 40px
+      width: 50%
+      margin: 0
+      text-align: center
+      padding: 9px
+      border: none
+      font-size: 14px
+      text-transform: capitalize
+      color: #3D3D3D
+      &:last-child
+        border-left: 1px solid #CCCCCC
+      &.active
+        background: #4BBCC5
+        color: #fff
+  .login_delimiter
+    margin: 24px 0
+  .login_content
+    .button-group
+      flex-wrap: wrap
+      .form-check
+        width: 100%
+        margin-top: 15px
+      .form-check label span
+        display: inline-block
+      .form-check label
+        height: 18px
+        line-height: 18px
+  .login_tab_descr
+    margin-bottom: 16px
+  .login_tab_heading
+    margin-bottom: 8px
+  .login-section
+    padding: 60px 0 80px
+@media screen and ( max-width: 359px)
+  .login_nav a
+    font-size: 12px
+  .login_socials_list a svg, .login_socials_list a img
+    margin-right: 5px
+  .login_socials_list a
+    padding: 15px
+    font-size: 14px
+    width: 48%
+  
+  
+
+// for profile
+@media screen and ( max-width:  1200px)
+  .cabinet_profile
+    width: 100%
+    max-width: 100%
+  
+// for subscribes
+@media screen and ( max-width:  1200px)
+  .cabinet_subscribe_create
+    max-width: 100%
+  .subscribe-table_item div
+    font-size: 14px
+@media screen and ( max-width:  992px)
+  .subscribe-tags .heading
+    font-size: 16px
+  .subscribe-tags .list a
+    font-size: 13px
+  .cabinet_subscribe_details
+    display: block
+    margin-bottom: 20px
+  .cabinet_subscribe_details p
+    width: 100%
+    margin-bottom: 16px
+    display: block
+    font-size: 14px
+    &:last-child
+      margin-bottom: 0
+  .cabinet_subscribe_create .form-check-group
+    margin-bottom: 18px
+  .cabinet_subscribe_districts
+    flex-wrap: wrap
+  .subscribe-table_head
+    display: none
+  .cabinet_subscribe_create .form-check-group
+    .form-check label
+      font-size: 14px
+  .subscribe-table_item
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: 22px 8px
+  .subscribe-table_item .col-number
+    display: none
+  .subscribe-table_item .col-name
+    width: 100%
+    margin-bottom: 16px
+  .subscribe-table_item .col-date
+    width: 65%
+    text-align: left
+  .subscribe-table_item div
+    font-size: 16px
+    .col-title
+      display: block
+      width: 100%
+      margin-bottom: 10px
+      color: #76767A
+      font-size: 14px
+      line-height: 16px
+  .subscribe-table_item .col-btns
+    flex-wrap: wrap
+    width: 30%
+    text-align: left
+  .cabinet_subscribe .button-group
+    margin-bottom: 15px
+  .subscribe-table_item .btns a
+    margin-right: 10px
+    &:last-child
+      margin-right: 0
+  
+@media screen and ( max-width:  359px)
+  .cabinet_subscribe_districts a
+    font-size: 12px
+  .subscribe-table_item .col-date
+    width: 100%
+    margin-bottom: 16px
+  .subscribe-table_item .col-btns
+    width: 100%
+    justify-content: flex-start
+  .subscribe-table .descr
+    font-size: 15px
+
+
+// for settings
+@media screen and ( max-width: 992px)
+  .modal-delate .modal-dialog
+    width: auto
+  .modal-delate .modal-body
+    padding: 40px 15px
+  .modal-delate_title
+    margin-bottom: 20px
+    font-size: 20px
+    line-height: 23px
+  .modal-delate_cause .heading
+    font-size: 18px
+    line-height: 21px
+    margin-bottom: 8px
+  .modal-delate_cause .descr
+    margin-bottom: 22px
+    font-size: 18px
+    line-height: 21px
+  .modal-delate_cause ul li label
+    font-size: 15px
+  .modal-delate_cause textarea
+    height: 104px
+    padding-top: 14px
+  .modal-delate_instruction .heading
+    margin-bottom: 12px
+    font-size: 18px
+    line-height: 21px
+  .delete-link svg
+    margin-right: 5px
+@media screen and ( max-width: 359px)
+  .modal-delate_cause .heading
+    font-size: 17px
+  .modal-delate_cause .descr
+    font-size: 16px
+    line-height: 20px
+  .modal-delate_cause ul li
+    margin-bottom: 15px
+    label
+      font-size: 14px
+  .modal-delate_cause
+    margin-bottom: 22px
+  .modal-delate_instruction .heading
+    font-size: 17px
+    line-height: 21px
+  .modal-delate_instruction ul li
+    font-size: 16px
+  .modal-delate_btns button
+    font-size: 13px
