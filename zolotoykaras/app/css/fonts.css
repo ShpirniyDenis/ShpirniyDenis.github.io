@@ -1,0 +1,20 @@
+
+@font-face {
+  font-family: 'Comic Regular';
+  src: url('../fonts/comicsans/ComicSansMS.eot');
+  src: url('../fonts/comicsans/ComicSansMS.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/comicsans/ComicSansMS.woff') format('woff'),
+    url('../fonts/comicsans/ComicSansMS.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'Comic Bold';
+  src: url('../fonts/comicsans/ComicSansMS-Bold.eot');
+  src: url('../fonts/comicsans/ComicSansMS-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/comicsans/ComicSansMS-Bold.woff') format('woff'),
+    url('../fonts/comicsans/ComicSansMS-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal; 
+}
