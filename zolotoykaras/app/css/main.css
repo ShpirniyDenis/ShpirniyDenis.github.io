@@ -186,6 +186,8 @@ body {
 
 .services{
   margin-bottom: 140px;
+  width: 100%;
+  overflow: hidden;
 }
 .services .heading{
   text-align: center;
